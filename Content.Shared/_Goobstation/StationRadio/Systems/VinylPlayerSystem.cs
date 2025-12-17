@@ -91,7 +91,7 @@ public sealed class VinylPlayerSystem : EntitySystem
             [StationRadioSystem.AudioPathData] = vinyl.Comp.Song,
         };
 
-        _link.InvokePort(ent.Owner, ent.Comp.ServerPort, payload);
+        _link.InvokePort(ent.Owner, ent.Comp.MusicOutputPort, payload);
     }
 
     public void StopAudio(Entity<VinylPlayerComponent> ent)
@@ -106,7 +106,7 @@ public sealed class VinylPlayerSystem : EntitySystem
             [DeviceNetworkConstants.Command] = StationRadioSystem.StopAudioCommand
         };
 
-        _link.InvokePort(ent.Owner, ent.Comp.ServerPort, payload);
+        _link.InvokePort(ent.Owner, ent.Comp.MusicOutputPort, payload);
     }
 
     public void SetAudioState(Entity<VinylPlayerComponent> ent, AudioState state)
@@ -122,7 +122,7 @@ public sealed class VinylPlayerSystem : EntitySystem
             [StationRadioSystem.AudioStateData] = state,
         };
 
-        _link.InvokePort(ent.Owner, ent.Comp.ServerPort, payload);
+        _link.InvokePort(ent.Owner, ent.Comp.MusicOutputPort, payload);
     }
 
     private bool CheckForRadioRig(EntityUid uid)

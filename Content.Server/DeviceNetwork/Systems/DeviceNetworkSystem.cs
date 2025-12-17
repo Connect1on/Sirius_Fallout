@@ -6,6 +6,7 @@ using Robust.Shared.Random;
 using System.Buffers;
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
+using Content.Goobstation.Common.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.Examine;
 
@@ -219,16 +220,29 @@ namespace Content.Server.DeviceNetwork.Systems
 
             if (device.ReceiveFrequency == frequency) return;
 
+            var oldFrequency = device.ReceiveFrequency; // Goobstation
             var deviceNet = GetNetwork(device.DeviceNetId);
             deviceNet.Remove(device);
             device.ReceiveFrequency = frequency;
             deviceNet.Add(device);
+
+            // Goobstation start
+            var ev = new DeviceNetworkReceiveFrequencyChangedEvent(oldFrequency, device.ReceiveFrequency);
+            RaiseLocalEvent(uid, ref ev);
+            // Goobstation end
         }
 
         public void SetTransmitFrequency(EntityUid uid, uint? frequency, DeviceNetworkComponent? device = null)
         {
             if (Resolve(uid, ref device, false))
+            {
+                var oldFrequency = device.ReceiveFrequency; // Goobstation
                 device.TransmitFrequency = frequency;
+                // Goobstation start
+                var ev = new DeviceNetworkTransmitFrequencyChangedEvent(oldFrequency, device.ReceiveFrequency);
+                RaiseLocalEvent(uid, ref ev);
+                // Goobstation end
+            }
         }
 
         public void SetReceiveAll(EntityUid uid, bool receiveAll, DeviceNetworkComponent? device = null)
