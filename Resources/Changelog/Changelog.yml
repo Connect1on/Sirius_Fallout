@@ -4393,3 +4393,229 @@ Entries:
   id: 5818
   time: '2026-05-01T18:05:59.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/398
+- author: AthenaAI
+  changes:
+    - type: Fix
+      message: fix some rsi validator stuff.
+  id: 5819
+  time: '2026-05-01T21:05:05.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/401
+- author: Papa Yml Khan Bill Clinton
+  changes:
+    - type: Tweak
+      message: >-
+        I feed the masses what they desire. cars drop more metal and they now
+        drop a little electronic scrap and a shitload of normal scrap.
+  id: 5820
+  time: '2026-05-01T21:06:54.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/400
+- author: Dpellowski
+  changes:
+    - type: Fix
+      message: Revived people no longer show up
+  id: 5821
+  time: '2026-05-01T21:26:33.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/402
+- author: Dpellowski
+  changes:
+    - type: Tweak
+      message: Get rid of non ooc prefixs for supporters
+  id: 5822
+  time: '2026-05-02T01:09:57.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/403
+- author: AthenaAI
+  changes:
+    - type: Fix
+      message: Fixed health analyzer using the wrong gold material.
+    - type: Fix
+      message: >-
+        Fixed paper not being paper now paper acts like paper and burns like
+        paper and can be written like paper.
+    - type: Tweak
+      message: Adjusted hitboxes for the workbenches to be better match their sprites.
+    - type: Tweak
+      message: >-
+        Adjusted the sprite of the chemical set so its centered instead of being
+        somewhere to the left.
+    - type: Tweak
+      message: >-
+        Allowed workbenches, chemical set, and seed extractor be unachored.
+        Albeit workbenches and chemical set are heavy to move.
+  id: 5823
+  time: '2026-05-02T01:10:46.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/399
+- author: Dpellowski
+  changes:
+    - type: Fix
+      message: Aureus logic..
+  id: 5824
+  time: '2026-05-02T01:44:42.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/404
+- author: Chancerous
+  changes:
+    - type: Add
+      message: Gave BoS a brig
+    - type: Add
+      message: Gave BoS a codex room
+    - type: Add
+      message: Added C-27 armor blueprints
+    - type: Add
+      message: MP spawns are not present
+    - type: Add
+      message: Bugles to NCR
+    - type: Add
+      message: Cornolfdssduass's to the Legion
+    - type: Add
+      message: Caravan shotgun with 5 beanbag rounds to each faction
+    - type: Add
+      message: FoTA tactical map + starting gear to help them paramedic
+    - type: Tweak
+      message: Added windows so NCR can see into the prison
+    - type: Fix
+      message: BoS now starts with power (still need to turn on generators)
+    - type: Fix
+      message: Fixed many OOB areas
+  id: 5825
+  time: '2026-05-03T17:14:33.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/415
+- author: Fox
+  changes:
+    - type: Fix
+      message: Seed extractors
+  id: 5826
+  time: '2026-05-03T17:15:00.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/410
+- author: qevie
+  changes:
+    - type: Fix
+      message: fixed NCRMP spelling errors
+    - type: Tweak
+      message: renamed NCRMP dogtags
+  id: 5827
+  time: '2026-05-03T22:46:04.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/405
+- author: 3Ra3G
+  changes:
+    - type: Add
+      message: All sort of striped scarfs available for everyone
+    - type: Add
+      message: Coats,items, pre-war uniforms for the Vault
+    - type: Remove
+      message: Deleted Nitrile gloves because they already existed
+    - type: Tweak
+      message: Vault Pamphlet available for all Vault roles
+    - type: Tweak
+      message: Changed detective's coat to a slim coat
+    - type: Fix
+      message: Categorized some items that were uncategorized before
+    - type: Fix
+      message: Fox mask and bee mask
+  id: 5828
+  time: '2026-05-03T22:47:10.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/409
+- author: AthenaAI
+  changes:
+    - type: Add
+      message: Fixed some github shenanigans.
+  id: 5829
+  time: '2026-05-03T22:47:53.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/412
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: Added C27 natural welding eye protection
+    - type: Tweak
+      message: >-
+        Change C27 scream to a more silicon one (todo: add custom emotes for
+        them)
+    - type: Tweak
+      message: >-
+        C27 Blueprints cost increased, Mainly steel consumption the Heavy armor
+        increased to 220 steel and Medium stay cheap at 15 steel
+    - type: Fix
+      message: Fixed C27 not being targeted by mobs
+    - type: Fix
+      message: Fixed C27 Wastelander infinite sloths
+  id: 5830
+  time: '2026-05-03T22:50:40.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/414
+- author: AthenaAI
+  changes:
+    - type: Tweak
+      message: >-
+        Readded the offset to the workbenches so they are in 2 tiles but now
+        their construciton ghosts match wherever they are placed.
+  id: 5831
+  time: '2026-05-03T22:52:05.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/416
+- author: Sirius
+  changes:
+    - type: Add
+      message: >-
+        Vault-tec has provided Vault 14 with a pneumatic delivery system which
+        can transport chems from the Chemistry Lab to the Medical Treatment
+        facilities.
+    - type: Add
+      message: >-
+        Vault-tec's engineers have been hard at work on updating the safety
+        measures to protect their valued chemists. Now the chemistry lab has a
+        shower and sink to help rinse any nasty chemicals off of you!
+    - type: Add
+      message: >-
+        Storage has been severely limited for Chemists. Vault-tec's engineers
+        have fixed this by stripping some of the redundant, useless machinery
+        from behind the chemistry lab and replacing it with a storage shelf and
+        some additional PPE
+    - type: Add
+      message: >-
+        The Vault has been equipped with a non-functioning, decorative
+        cryogenics research lab. 
+    - type: Remove
+      message: >-
+        The chemist's breakroom reagent grinder has been replaced, and some of
+        the furniture shifted to provide a more comfortable space to relax.
+  id: 5832
+  time: '2026-05-03T23:06:32.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/418
+- author: Chancerous
+  changes:
+    - type: Fix
+      message: BoS wall rechargers
+    - type: Fix
+      message: Brig doors
+    - type: Fix
+      message: BoS shooting ranger (theres a button on the wall its a lil dark)
+    - type: Tweak
+      message: Brig is now controlled by the Knights (RP MAX LOSERS <3)
+    - type: Add
+      message: Gave vault overseer access terminal
+    - type: Add
+      message: Extra vault ID's to overseer
+  id: 5833
+  time: '2026-05-04T20:35:31.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/421
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: 'Added Legion PA textures made by @Nope1356 '
+  id: 5834
+  time: '2026-05-05T21:31:54.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/432
+- author: Torma25 on discord for the idea
+  changes:
+    - type: Add
+      message: bloatfly milk
+  id: 5835
+  time: '2026-05-05T21:32:44.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/430
+- author: Bradysgaming
+  changes:
+    - type: Add
+      message: Added the mask of greed.
+    - type: Add
+      message: Added base mask paths in mifits so they can be sorted properly
+    - type: Add
+      message: Added the helmet of peace
+  id: 5836
+  time: '2026-05-05T21:36:42.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/407
