@@ -448,6 +448,7 @@
     - N14StationRadioCircuitboard
     # #Misfits Add: Electrolyzer machine board so players can make electrolyzers via machine frame.
     - ElectrolysisUnitMachineCircuitboard
+    - CassetteTape
   - type: ActivatableUIRequiresPower
 
 - type: entity

@@ -7,8 +7,7 @@
 - type: latheRecipe
   id: CassetteTape
   result: CassetteTape
-  categories:
-  - Tools
+  category: N14Misc
   completetime: 2
   materials:
     Steel: 50
@@ -17,8 +16,7 @@
 - type: latheRecipe
   id: TapeRecorder
   result: TapeRecorder
-  categories:
-  - Tools
+  category: N14Misc
   completetime: 3
   materials:
     Steel: 250

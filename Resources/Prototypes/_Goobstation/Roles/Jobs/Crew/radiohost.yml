@@ -13,7 +13,7 @@
 - type: startingGear
   id: RadioHostGear
   equipment:
-    ears: ClothingHeadsetAltRadioHost
+    #ears: ClothingHeadsetAltRadioHost
     eyes: ClothingEyesGlassesSunglasses
     jumpsuit: ClothingUniformJumpsuitHawaiBlack
     shoes: ClothingShoesColorBlack

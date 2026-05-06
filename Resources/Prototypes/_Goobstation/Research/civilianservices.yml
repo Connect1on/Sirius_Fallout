@@ -17,9 +17,6 @@
   - StationRadioServerCircuitboard
   - StationRadioRigCircuitboard
   - StationRadioCircuitboard
-  position: 2,6
-  technologyPrerequisites:
-  - ExtendedCommunications
 
 - type: technology
   id: HONKWeapons
