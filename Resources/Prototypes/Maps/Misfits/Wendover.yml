@@ -28,6 +28,7 @@
         overflowJobs:
         - Wastelander
         availableJobs:
+          SuperMutantFollowerDoctor: [ 0, 1 ] # #Misfits Add: FOTA-aligned supermutant Doctor latejoin slot.
           Wastelander: [ -1, -1 ]
           SuperMutant: [ 0, 3 ] # #Misfits Change /Fix/: make the FEV Mutant role available for mid-round joins.
           SuperMutantGladiator: [ 0, 1 ] # #Misfits Add: Gladiator variant latejoin slot.
