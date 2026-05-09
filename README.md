@@ -2,11 +2,11 @@
 
 # Fallout-14
 
-**Fallout-14M** — это русский форк проекта **isfits: Nuclear Wasteland**, Проект объединяет лучшие наработки в сеттинге Fallout с возможностями движка Space Station 14.
+**Fallout-14M** - это русский форк проекта **isfits: Nuclear Wasteland**, Проект объединяет лучшие наработки в сеттинге Fallout с возможностями движка Space Station 14.
 
 ## О проекте
 
-Fallout 14 — это первый русскоязычный Fallout-форк для Space Station 14, использующий:
+Fallout 14 - это первый русскоязычный Fallout-форк для Space Station 14, использующий:
 
 * Ассеты из различных билдов Fallout13 (F13/SS13), таких как Desert Rose 2, Lone Star и др.
 * Уникальные материалы, созданные сообществом.
