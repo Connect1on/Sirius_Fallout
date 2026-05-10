@@ -4719,3 +4719,22 @@ Entries:
   id: 5848
   time: '2026-05-10T01:31:02.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/457
+- author: HungryCuban
+  changes:
+    - type: Tweak
+      message: >-
+        Changed plasma shooting sprites. Now there wont be a out of place green
+        line.
+    - type: Tweak
+      message: >-
+        Changed brotherhood ammunition blueprint. Removes the duplicated plasma
+        cell as well adding multiplasma cell and plasma shell (used for the
+        plasma caster).
+    - type: Tweak
+      message: >-
+        Changed plasma caster. The rate of fire was decreased however it use a
+        different ammunition dealing more damage but less capacity. specially
+        effective against PA. (Subject to change in the future)
+  id: 5849
+  time: '2026-05-10T01:32:39.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/453
