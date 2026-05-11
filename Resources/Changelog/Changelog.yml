@@ -4848,3 +4848,10 @@ Entries:
   id: 5861
   time: '2026-05-11T21:43:09.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/478
+- author: NajaTheNaja
+  changes:
+    - type: Fix
+      message: braslet -> bracelet
+  id: 5862
+  time: '2026-05-11T21:43:57.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/480
