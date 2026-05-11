@@ -5,11 +5,11 @@
   conserveEnergy: false # Forge-Add
   reactants:
     Sulfur:
-      amount: 1
+      amount: 5
     Carbon:
-      amount: 1
+      amount: 5
     Fertilizer:
-      amount: 1
+      amount: 5
   effects:
     - !type:CreateEntityReactionEffect
       entity: N14Gunpowder1

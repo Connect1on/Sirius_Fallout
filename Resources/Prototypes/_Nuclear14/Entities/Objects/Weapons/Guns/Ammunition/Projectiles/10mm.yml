@@ -11,9 +11,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 14
+        Piercing: 15
   # Misfits Add - 10mm hot pistol round; slightly better range retention than 9mm
   - type: BallisticDamageFalloff
-    falloffStartTiles: 4.0
-    maxFalloffTiles: 13.0
+    falloffStartTiles: 7.0
+    maxFalloffTiles: 14.0
     minDamageMultiplier: 0.50

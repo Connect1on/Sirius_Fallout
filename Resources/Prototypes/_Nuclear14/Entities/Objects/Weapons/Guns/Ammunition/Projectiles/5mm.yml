@@ -11,9 +11,9 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10 # Forge-Change
+        Piercing: 12 # Forge-Change
   # Misfits Add - 5mm varmint/minigun round; small caliber with notable energy loss
   - type: BallisticDamageFalloff
-    falloffStartTiles: 3.0
-    maxFalloffTiles: 10.0
-    minDamageMultiplier: 0.40
+    falloffStartTiles: 6.0
+    maxFalloffTiles: 12.0
+    minDamageMultiplier: 0.50
