@@ -4811,3 +4811,10 @@ Entries:
   id: 5857
   time: '2026-05-11T17:35:43.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/470
+- author: Bradysgaming
+  changes:
+    - type: Tweak
+      message: Made it 10x harder to gib someone
+  id: 5858
+  time: '2026-05-11T17:36:06.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/468
