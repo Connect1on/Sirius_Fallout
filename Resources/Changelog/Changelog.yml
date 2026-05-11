@@ -4855,3 +4855,26 @@ Entries:
   id: 5862
   time: '2026-05-11T21:43:57.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/480
+- author: Chancerous
+  changes:
+    - type: Add
+      message: More wildlife spawns around the map
+    - type: Add
+      message: A few extra random lootspawn crates around the map
+    - type: Tweak
+      message: Locked up the town bar
+    - type: Tweak
+      message: Missile Launcher is now just a tease
+    - type: Tweak
+      message: Changed snow bunker back to deathclaws
+    - type: Fix
+      message: Fixed up FoTA base tiles
+    - type: Fix
+      message: Fixed bartender door south of bar (was previously doctor)
+    - type: Fix
+      message: Fixed warp stairs being destructible
+    - type: Fix
+      message: Fixed some OOB areas
+  id: 5863
+  time: '2026-05-11T21:47:45.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/479
