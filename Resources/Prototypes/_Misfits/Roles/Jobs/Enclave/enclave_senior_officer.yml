@@ -25,7 +25,7 @@
       tracker: EnclaveJuniorOfficer
       min: 36000 # 10 hours
   startingGear: EnclaveSeniorOfficerGear
-  icon: "JobIconSeniorOfficer"
+  icon: "JobIconEnclaveSeniorOfficer"
   supervisors: job-supervisors-enclave-senior-officer
   alwaysUseSpawner: true
   accessGroups:
