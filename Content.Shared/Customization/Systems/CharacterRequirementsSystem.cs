@@ -113,7 +113,8 @@ public sealed class CharacterRequirementsSystem : EntitySystem
     /// </summary>
     public FormattedMessage GetRequirementsText(List<string> reasons)
     {
-        return FormattedMessage.FromMarkup(GetRequirementsMarkup(reasons));
+        // #Misfits Fix: Use permissive parser to handle any potential markup parse errors with non-ASCII characters
+        return FormattedMessage.FromMarkupPermissive(GetRequirementsMarkup(reasons));
     }
 
     /// <summary>
