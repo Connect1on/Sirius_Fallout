@@ -53,13 +53,6 @@ public abstract partial class SharedBuckleSystem
         SubscribeLocalEvent<BuckleComponent, StandAttemptEvent>(OnBuckleStandAttempt);
         SubscribeLocalEvent<BuckleComponent, ThrowPushbackAttemptEvent>(OnBuckleThrowPushbackAttempt);
         SubscribeLocalEvent<BuckleComponent, UpdateCanMoveEvent>(OnBuckleUpdateCanMove);
-        SubscribeLocalEvent<BuckleComponent, UnbuckleDoAfterEvent>(OnUnbuckleDoAfter); // WD EDIT
-
-        SubscribeLocalEvent<BuckleComponent, BuckleDoAfterEvent>(OnBuckleDoafter);
-        SubscribeLocalEvent<BuckleComponent, DoAfterAttemptEvent<BuckleDoAfterEvent>>((uid, comp, ev) =>
-        {
-            BuckleDoafterEarly((uid, comp), ev.Event, ev);
-        });
     }
 
     private void OnBuckleComponentShutdown(Entity<BuckleComponent> ent, ref ComponentShutdown args)
@@ -194,13 +187,6 @@ public abstract partial class SharedBuckleSystem
     {
         if (component.Buckled)
             args.Cancel();
-    }
-    private void OnUnbuckleDoAfter(EntityUid uid, BuckleComponent component, UnbuckleDoAfterEvent args)
-    {
-        if (args.Cancelled || !CanUnbuckle((uid, component), args.User, true, out var strap)) // Goobstation
-            return;
-
-        Unbuckle((uid, component), strap, args.User); // Goobstation
     }
 
     public bool IsBuckled(EntityUid uid, BuckleComponent? component = null)
@@ -449,15 +435,7 @@ public abstract partial class SharedBuckleSystem
 
         if (!CanUnbuckle(buckle, user, popup, out var strap))
             return false;
-        if (user != null && buckle.Owner != user && strap.Comp.UnbuckleDoafterTime > 0)
-        {
-            var doAfter = new DoAfterArgs(EntityManager, user.Value, TimeSpan.FromSeconds(strap.Comp.UnbuckleDoafterTime), new UnbuckleDoAfterEvent(), buckle.Owner, target: buckle.Owner)
-            {
-                BreakOnMove = true,
-                BreakOnDamage = true,
-            };
-            return _doAfter.TryStartDoAfter(doAfter);
-        }
+
         Unbuckle(buckle!, strap, user);
         return true;
     }
@@ -567,23 +545,5 @@ public abstract partial class SharedBuckleSystem
         RaiseLocalEvent(strap, ref unstrapAttempt);
         return !unstrapAttempt.Cancelled;
     }
-    private void OnBuckleDoafter(Entity<BuckleComponent> entity, ref BuckleDoAfterEvent args)
-    {
-        if (args.Cancelled || args.Handled || args.Target == null || args.Used == null)
-            return;
 
-        args.Handled = TryBuckle(args.Target.Value, args.User, args.Used.Value, popup: false);
-    }
-    private void BuckleDoafterEarly(Entity<BuckleComponent> entity, BuckleDoAfterEvent args, CancellableEntityEventArgs ev)
-    {
-        if (args.Target == null || args.Used == null)
-            return;
-
-        if (TryComp<CuffableComponent>(args.Target, out var targetCuffableComp) && targetCuffableComp.CuffedHandCount > 0
-            || _mobState.IsIncapacitated(args.Target.Value))
-        {
-            ev.Cancel();
-            TryBuckle(args.Target.Value, args.User, args.Used.Value, popup: false);
-        }
-    }
 }
