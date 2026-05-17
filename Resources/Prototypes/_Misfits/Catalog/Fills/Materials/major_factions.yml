@@ -20,7 +20,7 @@
     - id: N14Antidote
     - id: N14ChemicalSyringeAntidote
       amount: 2
-    - id: PortaFib
+    - id: Portafib
     - id: N14FixerCanisterFilled
     - id: N14RadXCanisterFilled
       amount: 2
@@ -28,7 +28,7 @@
 - type: entity
   id: MisfitsCrateMedicalLegion
   suffix: Filled, Medical, Legion
-  parent: CrateMedical
+  parent: N14CrateMedical
   components:
   - type: StorageFill
     contents:
@@ -39,6 +39,7 @@
     - id: Bloodpack
       amount: 4
     - id: N14HandheldHealthAnalyzer
+    - id: Portafib
     - id: N14Bitterdrink
       amount: 2
     - id: N14DirtyGauze10
@@ -47,7 +48,6 @@
       amount: 2
     - id: N14JunkAbraxoCleaner
       amount: 2
-
 
 # prison shit
 
@@ -116,6 +116,6 @@
       amount: 3
     - id: N14WeaponShotgunCaravan
     - id: MisfitsMagazineBox20GaugeBeanbag
-    - id: BoxHandcuffs
+    - id: BoxHandcuff
     - id: N14PoliceBaton
       amount: 2

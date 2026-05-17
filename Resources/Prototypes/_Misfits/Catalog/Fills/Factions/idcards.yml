@@ -42,7 +42,7 @@
 
 - type: entity
   name: prisoner box
-  parent: BoxCardboard
+  parent: BoxCardboardNormal
   id: BoxIDNCRPrisoner
   description: A box of spare prisoner bracelets.
   components:
@@ -81,7 +81,7 @@
 
 - type: entity
   name: slave box
-  parent: BoxCardboard
+  parent: BoxCardboardNormal
   id: BoxIDLegionSlave
   description: A box of spare collars.
   components:
@@ -184,3 +184,13 @@
     layers:
     - state: box
     - state: pda
+
+- type: entity
+  name: bigger cardboard box # not craftable, only for the slave / prisoner collars
+  parent: BoxCardboard
+  id: BoxCardboardNormal
+  description: A box made for normal sized objects.
+  components:
+  - type: Storage
+    MaxItemSize: Normal
+
