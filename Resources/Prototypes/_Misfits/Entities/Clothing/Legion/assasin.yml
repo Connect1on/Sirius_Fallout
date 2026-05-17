@@ -1,0 +1,51 @@
+- type: entity
+  parent: N14FalloutArmorBase
+  id: MisfitsExplorerAssasin
+  name: veteran legion explorer armor
+  description: "Armor that has been fighting the wasteland harsh envioroment for Caesar."
+  components:
+  - type: Sprite
+    sprite: _Misfits/Clothing/CaesarLegion/assasin.rsi
+  - type: Clothing
+    sprite: _Misfits/Clothing/CaesarLegion/assasin.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1.20
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: StaminaDamageResistance
+    coefficient: 0.85
+
+- type: entity
+  parent: ClothingHeadBase
+  id: MisfitsExplorerAssasinHelmet
+  name: veteran legion explorer helmet
+  description: "A helmet that was fitted with a gasmask."
+  components:
+  - type: Sprite
+    sprite: _Misfits/Clothing/CaesarLegion/assasinhelmeticon.rsi
+    scale: 0.3, 0.3
+  - type: Clothing
+    sprite: _Misfits/Clothing/CaesarLegion/assasinhelmet.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+        Radiation: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.90
+  - type: HideLayerClothing
+    force: true
+    slots:
+    - Hair
+    - FacialHair

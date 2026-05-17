@@ -29,6 +29,10 @@
     inverted: true
     departments:
     - Tribe
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - LanguageTribalGeneral
   - !type:CharacterJobRequirement
     jobs:
     - NCRFieldRanger
@@ -154,6 +158,7 @@
     - N14FrontalLisp
     - N14ScottishAccent
     - N14Liar
+    - N14TribalAccent # Misfits
   functions:
   - !type:TraitAddComponent
     components:
@@ -173,6 +178,7 @@
     - N14Stutter
     - N14ScottishAccent
     - N14Liar
+    - N14TribalAccent # Misfits
   functions:
   - !type:TraitAddComponent
     components:
@@ -189,6 +195,7 @@
     - N14Stutter
     - N14FrontalLisp
     - N14Liar
+    - N14TribalAccent # Misfits
   functions:
   - !type:TraitAddComponent
     components:

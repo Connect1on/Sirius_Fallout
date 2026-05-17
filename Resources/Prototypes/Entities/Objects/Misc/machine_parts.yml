@@ -38,7 +38,11 @@
         - CapacitorStockPart
     - type: Tag
       tags:
+        # Misfits Change: Make N14 Capacitors compatible with the other capacitors and vice versa
         - CapacitorStockPart
+        - N14Capacitor
+        - JunkItem
+        - Trash
 
 - type: entity
   id: MicroManipulatorStockPart

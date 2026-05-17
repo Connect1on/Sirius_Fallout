@@ -40,3 +40,9 @@ trait-name-N14RidingPerk = Riding
 trait-description-N14RidingPerk =
     You know how to saddle up wasteland pack animals.
     Brahmin and brahdo will let you ride them instead of throwing a fit the moment you reach for the straps.
+
+trait-name-LanguageTribalGeneral = Tribal Language
+trait-description-LanguageTribalGeneral = You can understand and speak the local Tribal language. Were you from the Tribe?
+
+trait-name-N14TribalAccent = Tribal Accent
+trait-description-N14TribalAccent = Ya be, or musta been membaa de tribe. Bird tribe be not gawnta ondastan ya tong.

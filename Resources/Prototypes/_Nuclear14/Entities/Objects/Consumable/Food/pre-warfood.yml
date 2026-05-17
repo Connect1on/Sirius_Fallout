@@ -312,6 +312,10 @@
   - type: PhysicalComposition
     materialComposition:
       Steel: 100
+  #Misfits Add: Allow people to use this tin can for grenades
+  - type: Tag
+    tags:
+    - Tincan
 
 - type: entity
   parent: N14FoodPacketTrash
