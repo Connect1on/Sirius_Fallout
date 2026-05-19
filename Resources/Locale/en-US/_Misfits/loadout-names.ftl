@@ -84,7 +84,7 @@ loadout-name-N14LoadoutOuterCoatLeatherJacket = leather jacket
 loadout-name-N14LoadoutOuterCoatLeatherJacketVault = leather jacket
 loadout-name-ClothingOuterCoatGentleVault = gentle coat
 loadout-name-ClothingOuterCoatInspector = detective coat
-loadout-name-N14ClothingOuterJacketBomberVault = bomber jacket 
+loadout-name-N14ClothingOuterJacketBomberVault = bomber jacket
 loadout-name-N14LoadoutOuterCoatLeatherDuster = leather duster
 loadout-name-N14LoadoutOuterCoatBattlecoat = battlecoat
 loadout-name-N14LoadoutOuterCoatBattlecoatTan = battlecoat (tan)
@@ -131,8 +131,8 @@ loadout-name-N14ClothingBootsCombat = combat boots
 
 # Head
 loadout-name-ClothingHeadHatFedoraChoc = brown fedora
-loadout-name-ClothingHeadHatFedoraBlack = black fedora  
-loadout-name-ClothingHeadHatFlatBrown = brown flat cap     
+loadout-name-ClothingHeadHatFedoraBlack = black fedora
+loadout-name-ClothingHeadHatFlatBrown = brown flat cap
 loadout-name-ClothingHeadHatFlatBlack = black flat cap
 loadout-name-N14LoadoutHeadHatTrucker = trucker hat
 loadout-name-N14LoadoutHeadHatArmyCap = army cap
@@ -156,6 +156,7 @@ loadout-name-N14ClothingTribalShemagh = shemagh
 loadout-name-N14ClothingTribalShamanHeadband = shaman headband
 loadout-name-N14ClothingTribalShamanHat = shaman hat
 loadout-name-N14ClothingTribalMuffaloskull = muffalo skull
+loadout-name-MisfitsClothingHeadAntlerSkull = antler skull
 
 # Eyes
 loadout-name-ClothingEyesGlassesHipsterVault = hipster glasses
@@ -317,6 +318,7 @@ loadout-name-LoadoutNCRCloakNCR = NCR cloak
 loadout-name-LoadoutNCRCloakNCRSnow = NCR snow cloak
 loadout-name-LoadoutNCRCloakNCRWoods = NCR woods cloak
 loadout-name-LoadoutNCRCloakNCRGhillie = NCR ghillie cloak
+loadout-name-LoadoutNCRBeltNCRHarness = NCR harness belt
 loadout-name-LoadoutNCRClothingNeckOldMantle = NCR old mantle
 loadout-name-LoadoutNCRNeckCloakRangerPoncho = NCR ranger poncho
 loadout-name-LoadoutNCRClothingUniformNCRCFUniform = NCRCF prisoner uniform

@@ -257,7 +257,7 @@
         - BoSMidSerf
         - CaesarLegionSlave
         - NCRPisoner
-        - VaultDweller  
+        - VaultDweller
         - VaultEngineer
         - Overseer
   items:
@@ -483,6 +483,28 @@
         - NCRPisoner
   items:
     - N14ClothingHeadHatArmyBeretSpecial
+
+- type: loadout
+  id: MisfitsLoadoutHeadAntlerSkull
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - Vault
+  items:
+    - MisfitsClothingHeadAntlerSkull
+
 
 # === Head: NCR soldiers ===
 

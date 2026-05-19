@@ -420,35 +420,39 @@
     - N14HandheldRadio
     - N14GeigerCounter
     - N14HandheldHealthAnalyzer
+    - N14RemoteSignaller
     #Misc
     - N14FlashlightLantern
     - N14GlowstickRed
-    - DoorElectronics
-    - CapacitorStockPart
     - MicroManipulatorStockPart
     - MatterBinStockPart
     - N14JunkComponentSensorModule #Misfits Add: For Modular Mines
     - N14JunkComponentCapacitor1
     - N14JunkComponentDiode1
     - N14JunkComponentFuse1
+    - N14JunkComponentSwitch
+    - N14JunkTimer
+    - CassetteTape
+    - TapeRecorder
     # Explosives - Misfits Add
     - N14LandMine        # Anti-Personnel Mine
     - LandMineKick       # Concussion Mine (non-lethal)
     - LandMineExplosive  # Explosive Mine (~4 tile radius)
     - LandMineModular    # Modular Mine (empty casing, add payload)
+    - N14ModularGrenade
     - N14ChemicalPayload
     - N14ExplosivePayload
     - N14FlashPayload
-    # #Misfits Add: Expose vanilla centrifuge machine board so players can rebuild MachineCentrifuge via machine frame.
-    - CentrifugeMachineCircuitboard
+    # #Misfits Add: Circuits
+    - N14JukeboxCircuitBoard
+    - N14ElectrolysisUnitMachineCircuitboard
+    - N14CentrifugeMachineCircuitboard
     - N14VinylPlayerCircuitboard
     - N14TapeDeckCircuitboard
     - N14StationRadioServerCircuitboard
     - N14StationRadioRigCircuitboard
     - N14StationRadioCircuitboard
-    # #Misfits Add: Electrolyzer machine board so players can make electrolyzers via machine frame.
-    - ElectrolysisUnitMachineCircuitboard
-    - CassetteTape
+    - N14DoorElectronics    
   - type: ActivatableUIRequiresPower
 
 - type: entity
@@ -637,6 +641,7 @@
 #    - N14WeaponSprayNozzle
 #    - N14ClothingBackpackWaterTank
     # Chemistry
+    - N14Vial
     - N14Beaker
     - N14LargeBeaker
     - N14Dropper

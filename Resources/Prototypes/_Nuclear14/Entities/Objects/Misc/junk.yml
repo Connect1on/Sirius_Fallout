@@ -107,6 +107,8 @@
   - type: PhysicalComposition
     materialComposition:
       Plastic: 50
+  - type: Item
+    storedRotation: 90
 
 - type: entity
   parent: N14JunkItemBase
@@ -380,6 +382,7 @@
   - type: Tag
     tags:
     - JunkKettle
+
 - type: entity
   parent: N14JunkItemBasePlastic
   id: N14JunkTimer
@@ -391,6 +394,16 @@
   - type: Tag
     tags: 
     - JunkTimer
+  - type: PayloadTrigger
+    components:
+    - type: OnUseTimerTrigger
+      delay: 5
+      delayOptions: [3, 5, 10, 15, 30]
+      initialBeepDelay: 0
+      beepSound:
+        path: /Audio/Machines/Nuke/general_beep.ogg
+        params:
+          volume: -2
 
 - type: entity
   parent: FoodTinBaseTrash
@@ -798,9 +811,17 @@
   components:
   - type: Tag # Corvax-Change
     tags:
+    # Misfits Change: Make N14 Capacitors compatible with the other capacitors and vice versa
+    - CapacitorStockPart
     - N14Capacitor
     - JunkItem
     - Trash
+  - type: MachinePart
+    part: Capacitor
+    rating: 1
+  - type: ReverseEngineering # Nyano
+    recipes:
+      - CapacitorStockPart
   - type: Sprite
     state: capacitor_1
 
@@ -865,6 +886,9 @@
   - type: Tag
     tags:
     - Mainboard
+  - type: Item
+    size: Small
+    storedRotation: 90
 
 - type: entity
   parent: N14JunkComponentElectronic
@@ -940,6 +964,8 @@
   - type: PhysicalComposition
     materialComposition:
       Circuitry: 20
+  - type: Item
+    size: Tiny
 
 - type: entity
   parent: N14JunkComponentElectronic
@@ -986,6 +1012,8 @@
     - JunkItem
     - Trash
     - Screw
+  - type: Item
+    size: Tiny
 
 - type: entity
   parent: N14JunkComponentElectronic
@@ -998,6 +1026,9 @@
   - type: Tag
     tags:
     - Sensor
+  - type: Item
+    size: Small
+    storedRotation: 90
 
 - type: entity
   parent: N14JunkComponentElectronic
@@ -1012,7 +1043,7 @@
     - SensorModule
 
 - type: entity
-  parent: N14JunkItemBasePlastic
+  parent: N14JunkComponentElectronic
   id: N14JunkComponentSwitch
   name: switch module #Misfits Change: Why was this called a sensor module if its a switch??
   description: An electronics switch.
@@ -1022,6 +1053,16 @@
   - type: Tag
     tags:
     - Switch
+    - SignalTrigger
+  - type: PayloadTrigger
+    components:
+    - type: TriggerOnSignal
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: BasicDevice
+    - type: WirelessNetworkConnection
+      range: 200
+    - type: DeviceLinkSink
 
 - type: entity
   parent: N14JunkComponentElectronic

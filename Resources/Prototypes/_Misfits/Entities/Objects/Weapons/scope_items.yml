@@ -14,12 +14,12 @@
 
 # ────────────────────────────────────────────────────────────────────────────
 # N14 Binoculars — RMC-style directional scope (DoAfter, PVS relay, zoom levels)
-# Must be wielded to activate. 2 second use delay. Locks view in cardinal direction.
+# Two handed. Little delay. Locks view in cardinal direction. We kinda Stalker meta now boys HEH -pierow
 - type: entity
   parent: BaseItem
   id: N14Binoculars
   name: binoculars
-  description: A pair of pre-war binoculars. Wield them and look through to see far in one direction.
+  description: A pair of pre-war binoculars. Wield them with two hands and look through to see far in one direction.
   components:
   - type: Item
     size: Small
@@ -32,18 +32,17 @@
     slots:
     - Belt
     - suitstorage
-  - type: Wieldable
   - type: Scope
     useInHand: true
     requireWielding: true
     zoomLevels:
-    - name: 4x
-      zoom: 1.0
-      offset: 15
+    - name: 5x
+      zoom: 1.2
+      offset: 17
       allowMovement: false
-      doAfter: 0.8
+      doAfter: 0.3
   - type: StaticPrice
-    price: 150
+    price: 100
   # #Misfits Removed - Binoculars TagPrototype not defined in Nuclear-14
   # - type: Tag
   #   tags:

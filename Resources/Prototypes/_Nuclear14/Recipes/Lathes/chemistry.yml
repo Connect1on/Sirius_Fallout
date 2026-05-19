@@ -1,4 +1,13 @@
 - type: latheRecipe
+  id: N14Vial
+  result: BaseChemistryEmptyVial
+  completetime: 2
+  category: N14Chemistry
+  materials:
+    Glass: 50
+    Wood: 25
+
+- type: latheRecipe
   id: N14Beaker
   result: Beaker
   completetime: 2

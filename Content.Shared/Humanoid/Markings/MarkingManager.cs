@@ -8,6 +8,9 @@ namespace Content.Shared.Humanoid.Markings
 {
     public sealed class MarkingManager
     {
+        private const string GhoulSpecies = "Ghoul";
+        private const string GlowingGhoulSpecies = "GhoulGlowing";
+
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
         private readonly List<MarkingPrototype> _index = new();
@@ -234,6 +237,13 @@ namespace Content.Shared.Humanoid.Markings
 
         public bool IsSpeciesWhitelisted(string species, MarkingPrototype prototype)
         {
+            if ((species == GhoulSpecies || species == GlowingGhoulSpecies) &&
+                (prototype.MarkingCategory == MarkingCategories.Hair ||
+                 prototype.MarkingCategory == MarkingCategories.FacialHair))
+            {
+                return true;
+            }
+
             if (prototype.SpeciesRestrictions == null)
                 return true;
 

@@ -41,3 +41,9 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Appearance
+  - type: Sprite
+    netsync: false
+    sprite: _Misfits/Objects/Weapons/Guns/Ammunition/Magazines/22lrdrum.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]

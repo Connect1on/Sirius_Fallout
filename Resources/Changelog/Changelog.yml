@@ -5131,3 +5131,233 @@ Entries:
   id: 5892
   time: '2026-05-15T02:54:45.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/521
+- author: qevie
+  changes:
+    - type: Tweak
+      message: Changed NCRMP timelocks.
+  id: 5893
+  time: '2026-05-16T01:39:36.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/524
+- author: NajaTheNaja
+  changes:
+    - type: Add
+      message: Added SM PA 2nd bag slot
+  id: 5894
+  time: '2026-05-16T01:40:08.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/522
+- author: Oli
+  changes:
+    - type: Add
+      message: 'NCR Harness to loadout '
+    - type: Tweak
+      message: antler skull appearing in game hopefully
+  id: 5895
+  time: '2026-05-16T01:42:19.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/527
+- author: Sirius
+  changes:
+    - type: Remove
+      message: >-
+        In strict adherence to their stance on anti-proliferation and usage of
+        nuclear weaponry, the Brotherhood has elected to dismantle one of its
+        bunker's nuclear silos, as well as the warhead contained within.
+    - type: Add
+      message: >-
+        With the materials the Brotherhood has gained from the dismantling of
+        one of its Silos, it was able to construct an enclosure, provide some
+        equipment to the medical bay in the form of a handheld health analyzer
+        and a doctors syringe, as well as some equipment to the brig in the form
+        of a baton and some handcuffs.
+    - type: Add
+      message: >-
+        Timmy the Deathclaw, a mostly tamed Deathclaw, was put into the recently
+        constructed enclosure. Unfortunately, it murdered and devoured all three
+        serfs responsible for its relocation into the enclosure. This means
+        Timmy is currently in the Scribe's custody out West while they figure
+        out how to make sure Timmy can't hurt anyone else again. Expect to see
+        Timmy soon!
+  id: 5896
+  time: '2026-05-16T02:05:09.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/528
+- author: pierow
+  changes:
+    - type: Tweak
+      message: 'Changed how binoculars works: Better zoom and far less delay! '
+  id: 5897
+  time: '2026-05-16T03:43:42.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/525
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: Added 80s sign armors pieces (three variations)
+    - type: Add
+      message: Added 80s pants
+    - type: Add
+      message: Added 80s spiked biker helmets (multiple colors)
+    - type: Add
+      message: >-
+        Added Legion Explorer veteran armor piece, upcoming loadout option for
+        veteran explorers
+    - type: Tweak
+      message: AM-180 sprites to behave like regular guns.
+  id: 5898
+  time: '2026-05-16T18:20:04.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/532
+- author: Tytos
+  changes:
+    - type: Tweak
+      message: many small tweaks to Wendover map
+  id: 5899
+  time: '2026-05-16T18:42:35.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/531
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: Added legion explorer veteran armor to their loadout
+  id: 5900
+  time: '2026-05-16T22:17:56.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/535
+- author: AthenaAI
+  changes:
+    - type: Add
+      message: >-
+        Adds over 30 new vinyls to the vinyls crate list all music from the
+        jukebox now playable over the airwaves.
+    - type: Tweak
+      message: The jukebox vinyls are x3 times more common than the other music ones.
+    - type: Tweak
+      message: Increased the vinyl crate vinyls from 12 -> 20.
+  id: 5901
+  time: '2026-05-17T04:06:53.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/540
+- author: paige404
+  changes:
+    - type: Add
+      message: >-
+        Added a -6 point Tribal Language perk available for wasteland denizens.
+        Available whether your character grew up in the tribe or not.
+    - type: Add
+      message: >-
+        Added a distinctive (Sulik-inspired) Tribal Accent available as a perk
+        for characters that speak the Tribal Language. Let _everyone_ know that
+        you grew up in the tribe.
+  id: 5902
+  time: '2026-05-17T04:08:10.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/539
+- author: Sirius
+  changes:
+    - type: Add
+      message: >-
+        The BoS, using some of the funds they recovered from the decommissioning
+        of one of their Nuclear Silos, has afforded the purchase of a new Access
+        Terminal and ID printer after the previous set was reportedly eaten by
+        Peter Poley during their brief detention in the BoS bunker. When asked
+        for comment, an eyewitness stated, "I don't want to talk about it."
+  id: 5903
+  time: '2026-05-17T04:09:49.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/534
+- author: Bradysgaming
+  changes:
+    - type: Add
+      message: Added in the Enclave Supermutant role. Service guarantees citizenship!
+    - type: Tweak
+      message: gave the sm pa a map, and changed its name to Experimental X-01
+  id: 5904
+  time: '2026-05-17T05:22:37.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/543
+- author: pierow
+  changes:
+    - type: Add
+      message: Peter Poley Plushie (he pro)
+  id: 5905
+  time: '2026-05-18T15:25:06.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/550
+- author: Ruzter7319
+  changes:
+    - type: Fix
+      message: >-
+        reduce mirelurk size so it do not get stuck everywhere and add the
+        ability to drag.
+  id: 5906
+  time: '2026-05-18T15:27:42.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/544
+- author: Sirius
+  changes:
+    - type: Add
+      message: >-
+        As part of Mayor Frost's campaign to reinvent the Bazaar, the recently
+        established Bar has seen part of the town's profits from the Shop
+        redirected into completely rebuilding it into an inn, complete with a
+        new separate kitchen and bar area.
+    - type: Remove
+      message: >-
+        Several unused aspects of the town have been removed to make room for
+        the rooms for the inn, including several redundant workshop areas.
+    - type: Tweak
+      message: >-
+        Lots of the map in this area, and around the town in general, use the
+        "no roof" marker for blocking weather game rules. The markers in the
+        newly built inn have been switched to the roofed variant.
+  id: 5907
+  time: '2026-05-18T16:12:43.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/548
+- author: Tytos
+  changes:
+    - type: Tweak
+      message: sewer between ncr and town now has real walls instead of gaslight walls
+    - type: Tweak
+      message: raider bunker has less insane loot.
+  id: 5908
+  time: '2026-05-18T16:13:38.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/549
+- author: Bradysgaming
+  changes:
+    - type: Remove
+      message: Removed Power Armor storage
+    - type: Fix
+      message: Fixed Power Armor eating topicals.
+  id: 5909
+  time: '2026-05-18T17:52:48.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/547
+- author: Tytos
+  changes:
+    - type: Tweak
+      message: Changed fucking a  lot of shit
+  id: 5910
+  time: '2026-05-18T23:26:15.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/554
+- author: Bradysgaming
+  changes:
+    - type: Add
+      message: Added Supermutant Muffalo Skull Helmet.
+    - type: Add
+      message: Added Supermutant Tribal Gloves
+    - type: Tweak
+      message: Replaced combat jumpsuit
+  id: 5911
+  time: '2026-05-19T22:24:16.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/546
+- author: Squagg
+  changes:
+    - type: Tweak
+      message: Reduced cost of backpacks/duffels/satchels to 0
+    - type: Add
+      message: Lets ghouls choose hair and facial hair options in character creation
+    - type: Tweak
+      message: Adds a 30s cooldown to warhorns
+    - type: Tweak
+      message: Reduces noise and interval of hotplates and grills
+    - type: Fix
+      message: Fixes bug that shows/announces dead NPCs on FoTA Tacmap
+    - type: Fix
+      message: Fixes ghoul's being stuck at 200 years old
+  id: 5912
+  time: '2026-05-19T22:27:39.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/555
+- author: Oli
+  changes:
+    - type: Tweak
+      message: Scissors to 2 from 4
+  id: 5913
+  time: '2026-05-19T22:28:26.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/557

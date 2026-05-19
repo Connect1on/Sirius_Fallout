@@ -15,7 +15,7 @@
       - Human
       - Ghoul
     - !type:CharacterDepartmentTimeRequirement
-      department: NCR
+      department: MilitaryPolice
       min: 108000 # 30 hours
   weight: 3
   startingGear: NCRMilitaryPoliceCaptainGear
