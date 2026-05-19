@@ -34,8 +34,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      1500: Critical
-      2000: Dead
+      999: Critical
+      1000: Dead
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: UgQualtothAbomination
@@ -55,7 +55,7 @@
     wideAnimation: WeaponArcBite
     damage:
       types:
-        Slash: 80
+        Slash: 55
         Blunt: 15
 
   # ── Movement ───────────────────────────────────────────────────────────────

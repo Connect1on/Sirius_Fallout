@@ -108,7 +108,7 @@ public sealed partial class FactionWarWindow : FancyWindow
         foreach (var player in data.OnlinePlayers)
         {
             _targetPlayerItems.Add(player);
-            TargetFactionSelector.AddItem($"{player.CharacterName} ({player.UserName})");
+            TargetFactionSelector.AddItem(player.CharacterName);
         }
 
         DeclareWarButton.Disabled = _targetPlayerItems.Count == 0;

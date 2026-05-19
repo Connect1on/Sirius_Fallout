@@ -8,7 +8,6 @@
           steps:
             - material: N14Paper
               amount: 2
-              doAfter: 2
     - node: cardboard
       entity: MaterialCardboard1
 
@@ -21,7 +20,6 @@
         - to: paper
           steps:
             - material: WoodPlank
-              doAfter: 2
     - node: paper
       entity: N14Paper
 

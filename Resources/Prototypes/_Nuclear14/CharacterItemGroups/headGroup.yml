@@ -48,7 +48,7 @@
     - type: loadout
       id: N14ClothingTribalShamanHeadband
     - type: loadout # Forge-Add
-      id: LoadoutClothingHeadHatBoSInquisitorBattleHelmet 
+      id: LoadoutClothingHeadHatBoSInquisitorBattleHelmet
     - type: loadout # Forge-Add
       id: LoadoutClothingHeadHatBoSInquisitorBattleHelmetHood
     - type: loadout # Forge-Add
@@ -56,7 +56,7 @@
     - type: loadout # Forge-Add
       id: ClothingHeadHatFlatBrown
     - type: loadout # Forge-Add
-      id: ClothingHeadHatFedoraBlack 
+      id: ClothingHeadHatFedoraBlack
     - type: loadout # Forge-Add
       id: ClothingHeadHatFedoraChoc
     - type: loadout # #Misfits Add - cosmetic boonies and general berets
@@ -105,3 +105,5 @@
       id: MisfitsLoadoutHeadDeputy
     - type: loadout
       id: MisfitsLoadoutHeadSheriff
+    - type: loadout
+      id: MisfitsClothingHeadAntlerSkull

@@ -4,7 +4,7 @@
   category: N14Lights
   completetime: 2
   materials:
-    Steel: 50
+    N14Copper: 50 #Misfits Change: Makes More sense
     Glass: 100 # Forge-Change
 
 - type: latheRecipe
@@ -13,7 +13,7 @@
   category: N14Lights
   completetime: 2
   materials:
-    Steel: 50
+    N14Copper: 50 #Misfits Change: Makes More sense
     Glass: 100 # Forge-Change
 
 - type: latheRecipe
@@ -22,7 +22,7 @@
   category: N14Lights
   completetime: 2
   materials:
-    Steel: 50
+    N14Copper: 50 #Misfits Change: Makes More sense
     Glass: 100 # Forge-Change
 
 - type: latheRecipe
@@ -31,7 +31,7 @@
   category: N14Lights
   completetime: 2
   materials:
-    Steel: 50
+    N14Copper: 50 #Misfits Change: Makes More sense
     Glass: 100 # Forge-Change
 
 - type: latheRecipe
@@ -40,7 +40,7 @@
   category: N14Lights
   completetime: 2
   materials:
-    Steel: 50
+    N14Copper: 50 #Misfits Change: Makes More sense
     Glass: 100 # Forge-Change
 
 - type: latheRecipe
@@ -49,7 +49,7 @@
   category: N14Lights
   completetime: 2
   materials:
-    Steel: 50
+    N14Copper: 50 #Misfits Change: Makes More sense
     Glass: 100 # Forge-Change
 
 - type: latheRecipe
@@ -75,7 +75,8 @@
   category: N14Lights
   completetime: 2
   materials:
-    Steel: 100
+    Steel: 50 
+    N14Copper: 50 #Misfits Change: Makes More sense
     Glass: 100
     Plastic: 100
 
@@ -144,60 +145,79 @@
 - type: latheRecipe
   id: N14JunkComponentScrew
   result: N14JunkComponentScrew
-  category: N14Parts
+  category: Parts
   completetime: 2
   materials:
-    Steel: 100 # Forge-Change
+    N14Copper: 100 # Forge-Change
 
 #Misfits Add: Recipes for some other useful junk.
 - type: latheRecipe
   id: N14JunkComponentGearSmall
   result: N14JunkComponentGearSmall
-  category: N14Parts
+  category: Parts
   completetime: 2
   materials:
-    Steel: 150 
+    N14Copper: 150 
 
 - type: latheRecipe
   id: N14JunkComponentGearLarge
   result: N14JunkComponentGearLarge
-  category: N14Parts
+  category: Parts
   completetime: 2
   materials:
-    Steel: 200
+    N14Copper: 200
 
 - type: latheRecipe
   id: N14JunkComponentSensorModule
   result: N14JunkComponentSensorModule
-  category: N14Parts
+  category: Parts
   completetime: 2
   materials:
     Circuitry: 100
-    Steel: 50
+    N14Copper: 50
 
 - type: latheRecipe
   id: N14JunkComponentCapacitor1
   result: N14JunkComponentCapacitor1
-  category: N14Parts
+  category: Parts
   completetime: 2
   materials:
     Circuitry: 50
-    Steel: 25
+    N14Copper: 25
 
 - type: latheRecipe
   id: N14JunkComponentDiode1
   result: N14JunkComponentDiode1
-  category: N14Parts
+  category: Parts
   completetime: 2
   materials:
     Circuitry: 50
-    Steel: 25
+    N14Copper: 25
 
 - type: latheRecipe
   id: N14JunkComponentFuse1
   result: N14JunkComponentFuse1
-  category: N14Parts
+  category: Parts
   completetime: 2
   materials:
     Circuitry: 50
-    Steel: 25
+    N14Copper: 25
+
+- type: latheRecipe
+  id: N14JunkComponentSwitch
+  result: N14JunkComponentSwitch
+  category: Parts
+  completetime: 2
+  materials:
+    Circuitry: 100
+    Plastic: 50
+    N14Copper: 25
+
+- type: latheRecipe
+  id: N14JunkTimer
+  result: N14JunkTimer
+  category: Parts
+  completetime: 2
+  materials:
+    Circuitry: 50
+    N14Copper: 25

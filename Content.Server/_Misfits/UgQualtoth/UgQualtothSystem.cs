@@ -14,6 +14,7 @@
 //       Stage 4 — full body polymorph into UgQualtothAbomination
 
 using Content.Server.Chat.Systems;
+using Content.Server.Chat.Managers;
 using Content.Server.DoAfter;
 using Content.Server.Humanoid;
 using Content.Shared._Misfits.UgQualtoth;
@@ -48,6 +49,7 @@ public sealed class UgQualtothSystem : EntitySystem
 {
     [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly DoAfterSystem _doAfter = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
@@ -554,6 +556,8 @@ public sealed class UgQualtothSystem : EntitySystem
             if (_proto.HasIndex<DamageModifierSetPrototype>(AbominationDamageModifier))
                 _damageable.SetDamageModifierSetId(uid, AbominationDamageModifier);
         }
+
+        _chatManager.DispatchServerAnnouncement(Loc.GetString("ug-qualtoth-stage4-announcement"));
     }
 
     // ──────────────────────────────────────────────────────────────────────────

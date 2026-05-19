@@ -702,6 +702,7 @@
   - type: Sprite
     sprite: _Nuclear14/Objects/Weapons/Guns/Shotguns/neostead.rsi
   - type: Wieldable
+  - type: GunRequiresWield
   - type: GunWieldBonus
     minAngle: -14
     maxAngle: -38
@@ -720,7 +721,7 @@
     whitelist:
       tags:
       - N14ShellShotgun12
-    capacity: 12
+    capacity: 10
     proto: N14ShellShotgun12
     soundInsert:
       path: /Audio/_Nuclear14/Weapons/Effects/Reload/Shotguns/shotgun_insert.ogg

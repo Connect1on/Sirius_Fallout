@@ -82,9 +82,8 @@ public sealed partial class ForceWarWindow : FancyWindow
 
         foreach (var player in _players)
         {
-            var label = $"{player.CharacterName} ({player.UserName})";
-            AggressorSelector.AddItem(label);
-            TargetSelector.AddItem(label);
+            AggressorSelector.AddItem(player.CharacterName);
+            TargetSelector.AddItem(player.CharacterName);
         }
 
         if (_players.Count > 1)

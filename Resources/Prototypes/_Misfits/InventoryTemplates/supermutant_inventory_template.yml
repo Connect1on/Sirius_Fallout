@@ -152,7 +152,7 @@
       uiWindowPos: 3,0
       strippingWindowPos: 0,5
       displayName: Back
-    - name: back2
+    - name: back2 # Misfits Change - power armor extra backpack slot
       slotTexture: back
       fullTextureName: template_small
       slotFlags: BACK
@@ -161,6 +161,7 @@
       uiWindowPos: 4,0
       strippingWindowPos: 2,6
       dependsOn: outerClothing
+      hideOnDepsMissing: true
       dependsOnComponents:
       - type: N14BosBackpackSlot
       displayName: Extra Back

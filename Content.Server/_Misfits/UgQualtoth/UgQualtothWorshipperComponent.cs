@@ -32,7 +32,7 @@ public sealed partial class UgQualtothWorshipperComponent : Component
 
     /// <summary>Cooldown between completed prayers.</summary>
     [DataField]
-    public TimeSpan PrayCooldown = TimeSpan.FromMinutes(5);
+    public TimeSpan PrayCooldown = TimeSpan.FromMinutes(20);
 
     /// <summary>Devotion gained per successful prayer.</summary>
     [DataField]
@@ -69,10 +69,10 @@ public sealed partial class UgQualtothWorshipperComponent : Component
 
     // ── Stage thresholds ────────────────────────────────────────────────────
 
-    [DataField] public float Stage1Threshold = 20f;
-    [DataField] public float Stage2Threshold = 60f;
-    [DataField] public float Stage3Threshold = 120f;
-    [DataField] public float Stage4Threshold = 250f;
+    [DataField] public float Stage1Threshold = 60f;
+    [DataField] public float Stage2Threshold = 120f;
+    [DataField] public float Stage3Threshold = 300f;
+    [DataField] public float Stage4Threshold = 500f;
 
     // ── Stage 4 species change ──────────────────────────────────────────────
 

@@ -101,3 +101,6 @@ ug-qualtoth-stage4-private =
 ug-qualtoth-stage4-emote =
     is consumed from the inside out in a cascade of splitting flesh — and then something
     entirely different rises from what remains.
+
+ug-qualtoth-stage4-announcement =
+    Wasteland reports say another worshipper of Ug-Qualtoth has completed a foul ascension. Identifiable features include a obelisk like structure protruding from the individuals head (KOS-ABLE, Combat-rules do not apply)

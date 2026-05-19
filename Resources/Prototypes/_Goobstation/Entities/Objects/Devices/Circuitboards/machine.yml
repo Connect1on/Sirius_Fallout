@@ -41,11 +41,9 @@
     state: service
   - type: MachineBoard
     prototype: TapeDeck
+    requirements:
+        Capacitor: 2
     tagRequirements:
-      N14Capacitor:
-        ExamineName: capacitor
-        DefaultPrototype: N14JunkComponentCapacitor1
-        Amount: 2
       N14Fuse: 
         ExamineName: fuse
         DefaultPrototype: N14JunkComponentFuse1
@@ -69,11 +67,9 @@
       Steel: 10
       Plastic: 10
       Cable: 5
+    requirements:
+        Capacitor: 2
     tagRequirements: 
-      N14Capacitor:
-        ExamineName: capacitor
-        DefaultPrototype: N14JunkComponentCapacitor1
-        Amount: 2
       N14Diode:
         ExamineName: diode
         DefaultPrototype: N14JunkComponentDiode1
@@ -97,11 +93,9 @@
       Steel: 5
       Glass: 5
       Cable: 3
+    requirements:
+        Capacitor: 1
     tagRequirements: 
-      N14Capacitor:
-        ExamineName: capacitor
-        DefaultPrototype: N14JunkComponentCapacitor1
-        Amount: 1
       N14Fuse: 
         ExamineName: fuse
         DefaultPrototype: N14JunkComponentFuse1

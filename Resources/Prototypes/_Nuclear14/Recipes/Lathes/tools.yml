@@ -44,7 +44,7 @@
   category: N14Parts
   completetime: 1
   materials:
-    Steel: 10
+    N14Copper: 10 #Misfits Change: Makes More sense
     Cloth: 1
 
 - type: latheRecipe
@@ -53,7 +53,7 @@
   category: N14Parts
   completetime: 1
   materials:
-    Steel: 20
+    N14Copper: 20 #Misfits Change: Makes More sense
     Cloth: 5
 
 - type: latheRecipe
@@ -62,7 +62,7 @@
   category: N14Parts
   completetime: 2
   materials:
-    Steel: 30
+    N14Copper: 30 #Misfits Change: Makes More sense
     Cloth: 10
 
 - type: latheRecipe
@@ -97,7 +97,7 @@
   category: N14Tools
   completetime: 2
   materials:
-    Steel: 200
+    N14Copper: 200 #Misfits Change: Makes More sense
     Plastic: 400
 
 - type: latheRecipe
@@ -106,7 +106,7 @@
   category: N14Tools
   completetime: 2
   materials:
-    Steel: 200
+    N14Copper: 200 #Misfits Change: Makes More sense
     Plastic: 200
 
 - type: latheRecipe
@@ -115,7 +115,8 @@
   category: N14Tools
   completetime: 2
   materials:
-    Steel: 600
+    N14Copper: 500 #Misfits Change: Makes More sense
+    Steel: 100
     Plastic: 200
 
 - type: latheRecipe
@@ -124,7 +125,8 @@
   category: N14Tools
   completetime: 2
   materials:
-    Plastic: 500
+    Plastic: 300
+    N14Copper: 200 #Misfits Change: Makes More sense
     Glass: 300
 
 - type: latheRecipe
@@ -133,7 +135,8 @@
   category: N14Tools
   completetime: 2
   materials:
-    Plastic: 500
+    Plastic: 300
+    N14Copper: 200 #Misfits Change: Makes More sense
     Glass: 300
 
 - type: latheRecipe
@@ -142,7 +145,8 @@
   category: N14Tools
   completetime: 2
   materials:
-    Plastic: 500
+    Plastic: 300
+    N14Copper: 200 #Misfits Change: Makes More sense
     Glass: 300
 
 - type: latheRecipe
@@ -170,7 +174,8 @@
   category: N14Tools
   completetime: 3
   materials:
-    Steel: 500
+    Steel: 300
+    N14Copper: 200 #Misfits Change: Makes More sense
     Plastic: 100
 
 - type: latheRecipe
@@ -256,5 +261,15 @@
   completetime: 2
   materials:
     N14Gold: 50
+    Plastic: 300
+    Circuitry: 100
+
+- type: latheRecipe
+  id: N14RemoteSignaller
+  result: RemoteSignaller
+  category: N14Tools
+  completetime: 2
+  materials:
+    N14Copper: 50
     Plastic: 300
     Circuitry: 100

@@ -212,9 +212,39 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - CaesarLegionPrimeDecanus    
+        - CaesarLegionPrimeDecanus
     - !type:CharacterPlaytimeRequirement
-      tracker: CaesarLegionPrimeDecanus 
+      tracker: CaesarLegionPrimeDecanus
       min: 72000 # unrobust primes should be filtered by the 20 hour mark
   items:
     - N14ClothingOuterPowerArmorLegion
+
+- type: loadout
+  id: LoadoutLegionExplorerVeteranArmor
+  category: Outer
+  cost: 6
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionExplorer
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionExplorer
+      min: 30000
+  items:
+    - MisfitsExplorerAssasin
+
+- type: loadout
+  id: LoadoutLegionExplorerVeteranHelmet
+  category: Head
+  cost: 6
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionExplorer
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionExplorer
+      min: 30000
+  items:
+    - MisfitsExplorerAssasinHelmet

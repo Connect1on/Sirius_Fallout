@@ -42,6 +42,7 @@ public sealed partial class BotanySystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<SeedComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<ProduceComponent, ExaminedEvent>(OnProduceExamined);
     }
 
     public bool TryGetSeed(SeedComponent comp, [NotNullWhen(true)] out SeedData? seed)
@@ -97,6 +98,26 @@ public sealed partial class BotanySystem : EntitySystem
             args.PushMarkup(Loc.GetString($"seed-component-plant-yield-text", ("seedYield", seed.Yield)));
             args.PushMarkup(Loc.GetString($"seed-component-plant-potency-text", ("seedPotency", seed.Potency)));
         }
+    }
+
+    private void OnProduceExamined(EntityUid uid, ProduceComponent component, ExaminedEvent args)
+    {
+        if (!args.IsInDetailsRange || !TryGetSeed(component, out var seed))
+            return;
+
+        foreach (var mutation in seed.Mutations)
+        {
+            if (mutation.Description == null || !mutation.AppliesToProduce)
+                continue;
+
+            args.PushMarkup(Loc.GetString(mutation.Description));
+        }
+
+        if (seed.Ligneous)
+            args.PushMarkup(Loc.GetString("mutation-plant-ligneous"));
+
+        if (seed.Teleporting)
+            args.PushMarkup(Loc.GetString("mutation-plant-teleporting"));
     }
 
     #region SeedPrototype prototype stuff

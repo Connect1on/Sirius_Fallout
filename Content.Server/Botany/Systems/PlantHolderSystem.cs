@@ -3,7 +3,6 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Server.Botany.Components;
 using Content.Server.Chemistry.Containers.EntitySystems;
 using Content.Server.Fluids.Components;
-using Content.Server.Ghost.Roles.Components;
 using Content.Server.Kitchen.Components;
 using Content.Server.Popups;
 using Content.Shared.Atmos;
@@ -112,6 +111,29 @@ public sealed class PlantHolderSystem : EntitySystem
                                 ? "plant-holder-component-plant-old-adjective"
                                 : "plant-holder-component-plant-unhealthy-adjective"))));
                 }
+
+                foreach (var mutation in component.Seed.Mutations)
+                {
+                    if (mutation.Description == null || !mutation.AppliesToPlant)
+                        continue;
+
+                    args.PushMarkup(Loc.GetString(mutation.Description));
+                }
+
+                if (!component.Seed.Viable)
+                    args.PushMarkup(Loc.GetString("mutation-plant-unviable"));
+
+                if (component.Seed.Ligneous)
+                    args.PushMarkup(Loc.GetString("mutation-plant-ligneous"));
+
+                if (component.Seed.TurnIntoKudzu)
+                    args.PushMarkup(Loc.GetString("mutation-plant-kudzu"));
+
+                if (component.Seed.CanScream)
+                    args.PushMarkup(Loc.GetString("mutation-plant-scream"));
+
+                if (component.Seed.Teleporting)
+                    args.PushMarkup(Loc.GetString("mutation-plant-teleporting"));
             }
             else
             {
@@ -662,14 +684,6 @@ public sealed class PlantHolderSystem : EntitySystem
 
         CheckLevelSanity(uid, component);
 
-        if (component.Seed.Sentient)
-        {
-            var ghostRole = EnsureComp<GhostRoleComponent>(uid);
-            EnsureComp<GhostTakeoverAvailableComponent>(uid);
-            ghostRole.RoleName = MetaData(uid).EntityName;
-            ghostRole.RoleDescription = Loc.GetString("station-event-random-sentience-role-description", ("name", ghostRole.RoleName));
-        }
-
         if (component.UpdateSpriteAfterUpdate)
             UpdateSprite(uid, component);
     }
@@ -887,7 +901,7 @@ public sealed class PlantHolderSystem : EntitySystem
         if (component.Seed != null)
         {
             EnsureUniqueSeed(uid, component);
-            _mutation.MutateSeed(ref component.Seed, severity);
+            _mutation.MutateSeed(uid, ref component.Seed, severity);
         }
     }
 

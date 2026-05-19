@@ -2,14 +2,14 @@
   id: CrateRadioStationVinyls
   parent: CrateGenericSteel
   name: vinyls crate
-  description: A crate with 12 vinyls so you'll NEVER play the same song twice, they come in sleeves!
+  description: A crate with 20 vinyls so you'll NEVER play the same song twice, they come in sleeves!
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
         tableId: RandomVinylSleeve
         rolls: !type:ConstantNumberSelector
-          value: 12
+          value: 20
 
 - type: entityTable
   id: RandomVinylDisk
@@ -96,6 +96,96 @@
     - !type:EntSelector
       id: VinylDiskBachCello
       weight: 0.6
+    - !type:EntSelector
+      id: VinylDiskAKissToBuildADreamOn
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskTexBenekeGuy
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskAintThatAKickInTheHead
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskPatrioticAmerica
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskAmericanSwing
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskColePorterAnything
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskBigIron
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskRoyBrownButcher
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskDannyKayeCivilization
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskBillieHolidayCrazy
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskPatrioticDixie
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskBillieHolidayEasy
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskGenericFox
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskPatrioticPresidential
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskPatrioticMontezuma
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskBobCrosbyHappy
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskInkspotsIDont
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskGenericJazzy
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskJingleJangleJingle
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskJoeCool
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskJohnnyGuitar
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskGenericSunning
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskRoyBrownMighty
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskSomethingsGottaGive
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskGenericSwing
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskBattleHymn
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskPatrioticStars
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskPatrioticWashington
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskBobCrosbyWay
+      weight: 2.0
+    - !type:EntSelector
+      id: VinylDiskPatrioticYankee
+      weight: 2.0
 
 - type: entityTable
   id: RandomVinylSleeve

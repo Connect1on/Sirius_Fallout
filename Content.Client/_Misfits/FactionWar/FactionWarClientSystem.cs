@@ -209,6 +209,9 @@ public sealed class FactionWarClientSystem : EntitySystem
     {
         EnsureForceWarWindow();
         _forceWarWindow!.OpenCentered();
+
+        // Populate the admin panel with the latest online players and active wars.
+        RaiseNetworkEvent(new FactionWarOpenPanelRequestEvent());
     }
 
     // ── Window lifecycle ───────────────────────────────────────────────────

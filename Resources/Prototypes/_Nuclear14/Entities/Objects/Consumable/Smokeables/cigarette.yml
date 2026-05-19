@@ -8,6 +8,7 @@
     scale: 0.5, 0.5
   - type: Tag
     tags:
+      - SuperMutantWearable
       - Cigarette
       - Trash
   - type: SpaceGarbage
@@ -17,6 +18,7 @@
     equippedPrefix: unlit
   - type: Item
     size: Tiny
+
 
 - type: entity
   parent: N14Cigarette
@@ -33,10 +35,11 @@
         maxVol: 20
   - type: Tag
     tags:
+      - SuperMutantWearable
       - Cigarette
       - Trash
       - Burnt
-      
+
 - type: entity
   parent: N14Cigarette
   id: N14CigaretteKool
@@ -47,13 +50,13 @@
     sprite: _Nuclear14/Objects/Consumable/Smokeables/Cigarettes/kool.rsi
   - type: Clothing
     sprite: _Nuclear14/Objects/Consumable/Smokeables/Cigarettes/kool.rsi
-    
+
 - type: entity
   parent: N14CigaretteKool
   id: N14CigaretteSalem
   description: A Salem brand cigarette.
   suffix: salem
-    
+
 - type: entity
   parent: N14Cigarette
   id: N14CigaretteMarlboro
@@ -64,7 +67,7 @@
     sprite: _Nuclear14/Objects/Consumable/Smokeables/Cigarettes/marl.rsi
   - type: Clothing
     sprite: _Nuclear14/Objects/Consumable/Smokeables/Cigarettes/marl.rsi
-    
+
 - type: entity
   parent: N14Cigarette
   id: N14CigaretteRepublic
@@ -75,7 +78,7 @@
     sprite: _Nuclear14/Objects/Consumable/Smokeables/Cigarettes/republic.rsi
   - type: Clothing
     sprite: _Nuclear14/Objects/Consumable/Smokeables/Cigarettes/republic.rsi
-    
+
 - type: entity
   parent: N14Cigarette
   id: N14CigaretteRollie
@@ -89,7 +92,7 @@
   - type: Construction
     graph: N14Cigarette
     node: cigarette
-    
+
 - type: entity
   parent: N14Cigarette
   id: N14CigaretteWinston

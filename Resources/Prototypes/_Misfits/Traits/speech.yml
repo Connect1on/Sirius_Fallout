@@ -1,0 +1,54 @@
+- type: trait
+  id: N14TribalAccent
+  category: Speech
+  points: 1
+  requirements:
+  - !type:CharacterLogicOrRequirement
+    requirements:
+    - !type:CharacterTraitRequirement
+      traits:
+      - LanguageTribal
+      - LanguageTribalGeneral
+    - !type:CharacterDepartmentRequirement
+      departments:
+      - Tribe
+  - !type:CharacterDepartmentRequirement
+    inverted: true
+    departments:
+    - Vault
+    - Enclave
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - N14Stutter
+    - N14FrontalLisp
+    - N14Liar
+    - N14ScottishAccent
+  functions:
+  - !type:TraitAddComponent
+    components:
+    - type: TribalAccent
+
+- type: trait
+  id: LanguageTribalGeneral
+  category: Speech
+  points: -6
+  requirements:
+  - !type:CharacterDepartmentRequirement
+    inverted: true
+    departments:
+    - Tribe
+    - Rangers
+    - Enclave
+    - Vault
+    - FollowersOfTheApocalypse
+  - !type:CharacterTraitRequirement
+    inverted: true
+    traits:
+    - LanguageTribal
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - Tribal
+    languagesUnderstood:
+    - Tribal
