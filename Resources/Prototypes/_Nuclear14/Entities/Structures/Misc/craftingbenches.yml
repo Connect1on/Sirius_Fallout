@@ -440,7 +440,7 @@
     - LandMineExplosive  # Explosive Mine (~4 tile radius)
     - LandMineModular    # Modular Mine (empty casing, add payload)
     - N14ModularGrenade
-    - N14ChemicalPayload
+    # - N14ChemicalPayload
     - N14ExplosivePayload
     - N14FlashPayload
     # #Misfits Add: Circuits
