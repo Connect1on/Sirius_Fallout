@@ -3,6 +3,7 @@ using Content.Shared.Examine;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Humanoid;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory.VirtualItem;
@@ -113,6 +114,11 @@ public sealed class WieldableSystem : EntitySystem
     private void OnRefreshMovementSpeedModifiers(EntityUid uid, WieldableComponent component, ref HeldRelayedEvent<RefreshMovementSpeedModifiersEvent> args)
     {
         if (!component.Wielded)
+            return;
+
+        if (HasComp<MeleeWeaponComponent>(uid) &&
+            TryComp<HumanoidAppearanceComponent>(args.Holder, out var humanoid) &&
+            (humanoid.Species == "SuperMutant" || humanoid.Species == "Nightkin"))
             return;
 
         var speedModifier = component.WieldedSpeedModifier;

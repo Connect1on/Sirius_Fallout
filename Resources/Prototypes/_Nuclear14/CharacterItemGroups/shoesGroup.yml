@@ -23,3 +23,9 @@
       id: MisfitsLoadoutShoesRaider
     - type: loadout
       id: ClothingShoesBootsLaceupVault
+    - type: loadout
+      id: N14LoadoutUniversalBootsCombatMK2
+    - type: loadout
+      id: N14LoadoutUniversalBootsFire
+    - type: loadout
+      id: N14LoadoutUniversalBootsMountie

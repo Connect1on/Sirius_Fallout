@@ -1,5 +1,7 @@
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
+using Content.Shared._Misfits.Special;
+using Content.Shared._Misfits.Special.Components;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Body.Part;
 using Content.Shared.Body.Organ;
@@ -140,6 +142,7 @@ public abstract partial class SharedSurgerySystem
                 foreach (var (key, compToAdd) in compsToAdd)
                     organ.OnAdd[key] = compToAdd;
 
+                Dirty(organId, organ);
                 EnsureComp<OrganEffectComponent>(organId);
                 RaiseLocalEvent(organId, new OrganComponentsModifyEvent(args.Body, true));
             }
@@ -161,6 +164,8 @@ public abstract partial class SharedSurgerySystem
                 RaiseLocalEvent(organId, new OrganComponentsModifyEvent(args.Body, false));
                 foreach (var key in compsToRemove.Keys)
                     organ.OnAdd.Remove(key);
+
+                Dirty(organId, organ);
             }
         }
 
@@ -257,7 +262,10 @@ public abstract partial class SharedSurgerySystem
             foreach (var (organSlotId, compsToRemove) in ent.Comp.RemoveOrganOnAdd)
             {
                 if (!organSlotIdToOrgan.TryGetValue(organSlotId, out var organ) || organ.OnAdd == null)
-                    continue;
+                {
+                    args.Cancelled = true;
+                    return;
+                }
 
                 if (compsToRemove.Keys.Any(key => organ.OnAdd.ContainsKey(key)))
                 {
@@ -784,8 +792,20 @@ public abstract partial class SharedSurgerySystem
         if (TryComp(user, out SurgerySpeedModifierComponent? surgerySpeedMod))
             speed *= surgerySpeedMod.SpeedModifier;
 
+        speed *= GetIntelligenceSurgerySpeed(user);
+
         return stepComp.Duration / speed;
     }
+
+    private float GetIntelligenceSurgerySpeed(EntityUid user)
+    {
+        if (!TryComp<SpecialComponent>(user, out var special))
+            return 1f;
+
+        var intelligence = _special.GetEffective(user, SpecialStat.Intelligence, special);
+        return MathF.Max(0.1f, 1f + (intelligence - SpecialProfile.DefaultValue) * 0.1f);
+    }
+
     private (Entity<SurgeryComponent> Surgery, int Step)? GetNextStep(EntityUid body, EntityUid part, Entity<SurgeryComponent?> surgery, List<EntityUid> requirements)
     {
         if (!Resolve(surgery, ref surgery.Comp))

@@ -8,6 +8,7 @@ trait-category-Speech = Speech
 trait-category-TraitsSpeechUncategorized = Uncategorized
 trait-category-TraitsSpeechAccents = Accents
 trait-category-TraitsSpeechLanguages = Languages
+trait-category-Special = S.P.E.C.I.A.L.
 trait-category-Visual = Visual
 trait-category-Language = Language
 

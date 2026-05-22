@@ -28,6 +28,11 @@ namespace Content.Shared.Lathe
         public List<LatheRecipePrototype> Queue = new();
 
         /// <summary>
+        /// Server-side actor matching each queued recipe. Used for player-stat production modifiers.
+        /// </summary>
+        public List<EntityUid?> QueueActors = new();
+
+        /// <summary>
         /// The sound that plays when the lathe is producing an item, if any
         /// </summary>
         [DataField]

@@ -1,0 +1,13 @@
+- type: specialTuning
+  id: MisfitsSpecialTuning
+  strengthMeleeDamageMultiplierPerPoint: 0.015
+  perceptionSpreadPenaltyAtOne: 0.15
+  perceptionSpreadReductionAtTen: 0.25
+  enduranceHealthPenaltyAtOne: 25
+  enduranceHealthBonusAtTen: 25
+  agilityMovementSpeedPenaltyAtOne: 0.10
+  agilityMovementSpeedBonusAtTen: 0.10
+  luckCriticalChancePerPoint: 0.005
+  luckSingleShotCriticalChanceAtTen: 0.3
+  luckCriticalDamageMultiplier: 1.5
+  luckLootChancePerPoint: 0.03

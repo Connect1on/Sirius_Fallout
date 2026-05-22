@@ -107,3 +107,31 @@
       id: MisfitsLoadoutHeadSheriff
     - type: loadout
       id: MisfitsClothingHeadAntlerSkull
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatCaravan
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatCaravanSuit
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatCaravanUniform
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatChinese
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatHoodBlackRobe
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatHoodGhillieCloak
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatHoodLeatherCloak
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatHoodLeatherRobe
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatHoodScribeTabard
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatMountie
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatTownGuard
+    - type: loadout
+      id: N14LoadoutUniversalHeadHatVancouver
+    - type: loadout
+      id: N14LoadoutUniversalHeadTribalCloakHood
+    - type: loadout
+      id: N14LoadoutUniversalHeadTribalCloakHoodBr

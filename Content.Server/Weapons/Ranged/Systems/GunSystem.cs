@@ -9,6 +9,7 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.Effects;
 using Content.Shared.Projectiles;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
@@ -233,6 +234,13 @@ public sealed partial class GunSystem : SharedGunSystem
                         {
                             dmg = new DamageSpecifier(dmg);
                             dmg += gunBonus.BonusDamage;
+                        }
+
+                        if (dmg != null && user != null)
+                        {
+                            var modifyDamage = new SpecialModifyHitscanDamageEvent(gunUid, dmg);
+                            RaiseLocalEvent(user.Value, ref modifyDamage);
+                            dmg = modifyDamage.Damage;
                         }
 
                         var hitName = ToPrettyString(hitEntity);

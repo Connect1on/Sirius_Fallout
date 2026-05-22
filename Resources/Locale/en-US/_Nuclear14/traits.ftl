@@ -338,3 +338,33 @@ trait-description-N14PowerArmorTraining =
     You have received formal training in the operation of power armor suits.
     Without this training, the weight distribution, servo-assisted limbs, and integrated systems
     of power armor are too complex to operate safely. [color=yellow]Required to equip any power armor.[/color]
+
+character-item-group-N14SpecialPerks = S.P.E.C.I.A.L.
+
+trait-name-N14SpecialStrength = Strength
+trait-description-N14SpecialStrength =
+    Hit harder and swing faster with melee weapons. You gain a little stamina resilience, but ranged weapons are slightly weaker.
+
+trait-name-N14SpecialPerception = Perception
+trait-description-N14SpecialPerception =
+    Ranged weapons hit harder, but melee attacks are slightly weaker.
+
+trait-name-N14SpecialEndurance = Endurance
+trait-description-N14SpecialEndurance =
+    Gain 20 health and more stamina resilience, but move a little slower.
+
+trait-name-N14SpecialCharisma = Charisma
+trait-description-N14SpecialCharisma =
+    Keep people moving with confidence. You walk and sprint slightly faster.
+
+trait-name-N14SpecialIntelligence = Intelligence
+trait-description-N14SpecialIntelligence =
+    Energy weapons hit harder, but other weapons are slightly weaker and less steady.
+
+trait-name-N14SpecialAgility = Agility
+trait-description-N14SpecialAgility =
+    Walk and sprint faster, but lose 10 health and deal slightly less ranged and melee damage.
+
+trait-name-N14SpecialLuck = Luck
+trait-description-N14SpecialLuck =
+    Deal slightly more ranged and melee damage, but lose a little stamina resilience.

@@ -12,7 +12,7 @@ public abstract partial class SharedHandsSystem
 
     private void RelayEvent<T>(Entity<HandsComponent> entity, ref T args) where T : EntityEventArgs
     {
-        var ev = new HeldRelayedEvent<T>(args);
+        var ev = new HeldRelayedEvent<T>(args, entity);
         foreach (var held in EnumerateHeld(entity, entity.Comp))
         {
             RaiseLocalEvent(held, ref ev);

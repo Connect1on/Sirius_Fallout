@@ -950,6 +950,34 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("speech_verb_preference");
 
+                    b.Property<int>("SpecialAgility")
+                        .HasColumnType("integer")
+                        .HasColumnName("special_agility");
+
+                    b.Property<int>("SpecialCharisma")
+                        .HasColumnType("integer")
+                        .HasColumnName("special_charisma");
+
+                    b.Property<int>("SpecialEndurance")
+                        .HasColumnType("integer")
+                        .HasColumnName("special_endurance");
+
+                    b.Property<int>("SpecialIntelligence")
+                        .HasColumnType("integer")
+                        .HasColumnName("special_intelligence");
+
+                    b.Property<int>("SpecialLuck")
+                        .HasColumnType("integer")
+                        .HasColumnName("special_luck");
+
+                    b.Property<int>("SpecialPerception")
+                        .HasColumnType("integer")
+                        .HasColumnName("special_perception");
+
+                    b.Property<int>("SpecialStrength")
+                        .HasColumnType("integer")
+                        .HasColumnName("special_strength");
+
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("text")

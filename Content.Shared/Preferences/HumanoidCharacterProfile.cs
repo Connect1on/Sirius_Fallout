@@ -8,6 +8,7 @@ using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Roles;
 using Content.Shared._Misfits.Chat; // #Misfits Add - name slur filter
+using Content.Shared._Misfits.Special;
 using Content.Shared._NC.Speech.Synthesis;
 using Content.Shared._NC.TTS; // Corvax-Fallout-Barks
 using Content.Shared.Speech; // #Misfits Add - vocal style
@@ -109,6 +110,9 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     /// Stores markings, eye colors, etc for the profile
     [DataField]
     public HumanoidCharacterAppearance Appearance { get; set; } = new();
+
+    [DataField]
+    public SpecialProfile Special { get; private set; } = SpecialProfile.Default();
 
     [DataField]
     public ClothingPreference Clothing { get; set; }
@@ -213,6 +217,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             other.BarkVoice, // Corvax-Fallout-Barks
             other.SpeechVerbPreference) // #Misfits Add - vocal style
     {
+        Special = SpecialProfile.EnsureValid(other.Special);
     }
 
     /// <summary>
@@ -386,6 +391,9 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         return new(this) { _traitPreferences = list };
     }
 
+    public HumanoidCharacterProfile WithSpecial(SpecialProfile special) =>
+        new(this) { Special = SpecialProfile.EnsureValid(special) };
+
     public HumanoidCharacterProfile WithLoadoutPreference(
         string loadoutId,
         bool pref,
@@ -426,6 +434,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             && _traitPreferences.SequenceEqual(other._traitPreferences)
             && LoadoutPreferences.SequenceEqual(other.LoadoutPreferences)
             && Appearance.MemberwiseEquals(other.Appearance)
+            && SpecialProfile.EnsureValid(Special).MemberwiseEquals(SpecialProfile.EnsureValid(other.Special))
             && FlavorText == other.FlavorText
             && BarkVoice == other.BarkVoice // Corvax-Fallout-Barks
             && SpeechVerbPreference == other.SpeechVerbPreference; // #Misfits Add - vocal style
@@ -596,6 +605,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
             .Distinct()
             .ToList();
 
+        var special = SpecialProfile.EnsureValid(Special);
+
         // #Misfits Add - vocal style: fall back to Default if the stored proto no longer exists
         if (!prototypeManager.HasIndex<SpeechVerbPrototype>(SpeechVerbPreference))
             SpeechVerbPreference = "Default";
@@ -626,6 +637,8 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
         _loadoutPreferences.Clear();
         _loadoutPreferences.UnionWith(loadouts);
+
+        Special = special;
     }
     
     // Corvax-TTS-Start
@@ -670,6 +683,7 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
         hashCode.Add((int) Sex);
         hashCode.Add((int) Gender);
         hashCode.Add(Appearance);
+        hashCode.Add(Special);
         hashCode.Add(BarkVoice); // Corvax-Fallout-Barks
         hashCode.Add(SpeechVerbPreference); // #Misfits Add - vocal style
         hashCode.Add((int) SpawnPriority);

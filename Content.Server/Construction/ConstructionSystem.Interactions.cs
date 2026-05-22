@@ -267,6 +267,9 @@ namespace Content.Server.Construction
 
                     user = interactUsing.User;
 
+                    if (!CanCraftWithIntelligence(interactUsing.User, !validation))
+                        return HandleResult.False;
+
                     var insert = interactUsing.Used;
 
                     // Since many things inherit this step, we delegate the "is this entity valid?" logic to them.
@@ -283,7 +286,7 @@ namespace Content.Server.Construction
                     {
                         var doAfterEv = new ConstructionInteractDoAfterEvent(EntityManager, interactUsing);
 
-                        var doAfterEventArgs = new DoAfterArgs(EntityManager, interactUsing.User, step.DoAfter, doAfterEv, uid, uid, interactUsing.Used)
+                        var doAfterEventArgs = new DoAfterArgs(EntityManager, interactUsing.User, GetIntelligenceConstructionDelay(interactUsing.User, step.DoAfter), doAfterEv, uid, uid, interactUsing.Used)
                         {
                             BreakOnDamage = false,
                             BreakOnMove = true,
@@ -347,6 +350,9 @@ namespace Content.Server.Construction
 
                     user = interactUsing.User;
 
+                    if (!CanCraftWithIntelligence(interactUsing.User, !validation))
+                        return HandleResult.False;
+
                     // If we're validating whether this event handles the step...
                     if (validation)
                     {
@@ -364,7 +370,7 @@ namespace Content.Server.Construction
                         interactUsing.Used,
                         interactUsing.User,
                         uid,
-                        TimeSpan.FromSeconds(toolInsertStep.DoAfter),
+                        TimeSpan.FromSeconds(GetIntelligenceConstructionDelay(interactUsing.User, toolInsertStep.DoAfter)),
                         new [] { toolInsertStep.Tool },
                         new ConstructionInteractDoAfterEvent(EntityManager, interactUsing),
                         out var doAfter,

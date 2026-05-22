@@ -31,3 +31,17 @@
       id: ClothingMaskBreather
     - type: loadout
       id: ClothingMaskFox
+    - type: loadout
+      id: N14LoadoutUniversalMaskBlackBalaclava
+    - type: loadout
+      id: N14LoadoutUniversalMaskBlueMask
+    - type: loadout
+      id: N14LoadoutUniversalMaskBrownMask
+    - type: loadout
+      id: N14LoadoutUniversalMaskGreenMask
+    - type: loadout
+      id: N14LoadoutUniversalMaskOrangeMask
+    - type: loadout
+      id: N14LoadoutUniversalMaskPatriotMask
+    - type: loadout
+      id: N14LoadoutUniversalMaskRedMask
