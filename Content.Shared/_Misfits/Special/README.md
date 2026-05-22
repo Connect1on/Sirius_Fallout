@@ -1,6 +1,7 @@
 # SPECIAL tuning
 
 Base values live on `HumanoidCharacterProfile.Special` and are copied to `SpecialComponent` when the character spawns.
+The persistent player-data row mirrors these values for character info/history, but character setup remains authoritative.
 Runtime systems should query `SharedSpecialSystem` instead of reading fields directly:
 
 - `GetBase(entity, stat)` for character-creation values.
@@ -31,6 +32,6 @@ The tuning values below are multiplied by that curved delta:
 - Perception changes ranged spread/recoil by `perceptionSpreadReductionPerPoint`.
 - Endurance changes stamina crit threshold by `enduranceStaminaCritThresholdPerPoint`.
 - Charisma changes character-creation loadout points by the curved delta times 2, rounded away from zero.
-- Intelligence changes construction/crafting delay on a fixed curve: 1 blocks crafting, 5 is normal speed, 9 is 80% faster, and 10 is instant.
+- Intelligence changes crafting delay on a fixed curve: 1 blocks hand crafting, 5 is normal speed, 9 is 80% faster, and 10 is instant only for lathe production. Hand construction keeps a small nonzero delay floor.
 - Agility changes movement speed by `agilityMovementSpeedMultiplierPerPoint`.
 - Luck changes critical-hit and lucky-scavenge chance.

@@ -249,7 +249,7 @@ namespace Content.Server.Construction
                 return null;
             }
 
-            var doAfterArgs = new DoAfterArgs(EntityManager, user, GetIntelligenceCraftingDelay(user, doAfterTime), new AwaitedDoAfterEvent(), null)
+            var doAfterArgs = new DoAfterArgs(EntityManager, user, GetIntelligenceConstructionDelay(user, doAfterTime), new AwaitedDoAfterEvent(), null)
             {
                 BreakOnDamage = true,
                 BreakOnMove = true,

@@ -454,6 +454,13 @@ namespace Content.Server.Database
         public string BarkVoice { get; set; } = null!; // Corvax-Fallout-Barks
         public string Voice { get; set; } = null!; // Corvax-TTS
         public string SpeechVerbPreference { get; set; } = "Default"; // #Misfits Add - vocal style
+        public int SpecialStrength { get; set; } = 5; // #Misfits Add - character profile SPECIAL
+        public int SpecialPerception { get; set; } = 5;
+        public int SpecialEndurance { get; set; } = 5;
+        public int SpecialCharisma { get; set; } = 5;
+        public int SpecialIntelligence { get; set; } = 5;
+        public int SpecialAgility { get; set; } = 5;
+        public int SpecialLuck { get; set; } = 5;
         public float Height { get; set; } = 1f;
         public float Width { get; set; } = 1f;
         [Column(TypeName = "jsonb")] public JsonDocument? Markings { get; set; } = null!;

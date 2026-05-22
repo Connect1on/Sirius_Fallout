@@ -231,21 +231,14 @@ public sealed class PersistentPlayerDataSystem : EntitySystem
 
             if (saved != null)
             {
-                comp.Strength = saved.Strength;
-                comp.Perception = saved.Perception;
-                comp.Endurance = saved.Endurance;
-                comp.Charisma = saved.Charisma;
-                comp.Agility = saved.Agility;
-                comp.Intelligence = saved.Intelligence;
-                comp.Luck = saved.Luck;
-
                 comp.MobKills = saved.MobKills;
                 comp.Deaths = saved.Deaths;
                 comp.RoundsPlayed = saved.RoundsPlayed;
                 comp.HistoryLog = DeserializeHistoryLog(saved.HistoryLog);
-                comp.StatsConfirmed = saved.StatsConfirmed; // #Misfits Fix - only lock if the player explicitly confirmed previously
 
-                ApplyPersistentSpecialToComponent(uid, comp);
+                // Character setup is authoritative for SPECIAL. Keep the persistent
+                // row as a mirror so old database values cannot override profile edits.
+                SyncPersistentSpecialFromComponent(uid, comp);
             }
             else
             {
@@ -276,23 +269,6 @@ public sealed class PersistentPlayerDataSystem : EntitySystem
         // #Misfits Add - Trigger stat-driven gameplay effects (stamina pool, movement speed).
         RaiseLocalEvent(uid, new SpecialStatsReadyEvent());
         _movement.RefreshMovementSpeedModifiers(uid);
-    }
-
-    private void ApplyPersistentSpecialToComponent(EntityUid uid, PersistentPlayerDataComponent comp)
-    {
-        var special = EnsureComp<SpecialComponent>(uid);
-        var profile = new SpecialProfile
-        {
-            Strength = comp.Strength,
-            Perception = comp.Perception,
-            Endurance = comp.Endurance,
-            Charisma = comp.Charisma,
-            Intelligence = comp.Intelligence,
-            Agility = comp.Agility,
-            Luck = comp.Luck,
-        };
-
-        _special.TrySetBaseValues(uid, profile, special);
     }
 
     private void SyncPersistentSpecialFromComponent(EntityUid uid, PersistentPlayerDataComponent comp, SpecialComponent? special = null)

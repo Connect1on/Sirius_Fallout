@@ -1,6 +1,7 @@
 using Content.Server.Construction.Components;
 using Content.Server.Stack;
 using Content.Shared._Misfits.Special;
+using Content.Shared._Misfits.Special.Components;
 using Content.Shared.Construction;
 using Content.Shared.DoAfter;
 using JetBrains.Annotations;
@@ -94,7 +95,7 @@ namespace Content.Server.Construction
             UpdateInteractions();
         }
 
-        private float GetIntelligenceCraftingDelay(EntityUid user, float baseDelay)
+        private float GetIntelligenceConstructionDelay(EntityUid user, float baseDelay)
         {
             if (baseDelay <= 0f)
                 return baseDelay;
@@ -107,12 +108,13 @@ namespace Content.Server.Construction
                 ? 1f - (intelligence - SpecialProfile.DefaultValue) * 0.2f
                 : 1f + (SpecialProfile.DefaultValue - intelligence) * 0.15f;
 
-            return baseDelay * MathF.Max(0f, multiplier);
+            return baseDelay * MathF.Max(0.1f, multiplier);
         }
 
         private bool CanCraftWithIntelligence(EntityUid user, bool showPopup = false)
         {
-            if (_special.GetEffective(user, SpecialStat.Intelligence) > SpecialProfile.Minimum)
+            if (TryComp<SpecialComponent>(user, out var special) &&
+                _special.GetEffective(user, SpecialStat.Intelligence, special) > SpecialProfile.Minimum)
                 return true;
 
             if (showPopup)

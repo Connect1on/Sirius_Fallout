@@ -6,8 +6,8 @@ namespace Content.Shared._Misfits.PlayerData.Components;
 
 /// <summary>
 /// Carries a player's persistent data that survives across rounds:
-/// SPECIAL base stats, lifetime kill/death/round counters, and a character history log.
-/// Data is keyed by UserId + CharacterName in player_data.json.
+/// mirrored SPECIAL base stats, lifetime kill/death/round counters, and a character history log.
+/// Data is keyed by UserId + CharacterName in the database.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class PersistentPlayerDataComponent : Component

@@ -899,6 +899,34 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("speech_verb_preference");
 
+                    b.Property<int>("SpecialAgility")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("special_agility");
+
+                    b.Property<int>("SpecialCharisma")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("special_charisma");
+
+                    b.Property<int>("SpecialEndurance")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("special_endurance");
+
+                    b.Property<int>("SpecialIntelligence")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("special_intelligence");
+
+                    b.Property<int>("SpecialLuck")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("special_luck");
+
+                    b.Property<int>("SpecialPerception")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("special_perception");
+
+                    b.Property<int>("SpecialStrength")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("special_strength");
+
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("TEXT")

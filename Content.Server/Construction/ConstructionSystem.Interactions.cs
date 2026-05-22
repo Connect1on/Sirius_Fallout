@@ -286,7 +286,7 @@ namespace Content.Server.Construction
                     {
                         var doAfterEv = new ConstructionInteractDoAfterEvent(EntityManager, interactUsing);
 
-                        var doAfterEventArgs = new DoAfterArgs(EntityManager, interactUsing.User, GetIntelligenceCraftingDelay(interactUsing.User, step.DoAfter), doAfterEv, uid, uid, interactUsing.Used)
+                        var doAfterEventArgs = new DoAfterArgs(EntityManager, interactUsing.User, GetIntelligenceConstructionDelay(interactUsing.User, step.DoAfter), doAfterEv, uid, uid, interactUsing.Used)
                         {
                             BreakOnDamage = false,
                             BreakOnMove = true,
@@ -370,7 +370,7 @@ namespace Content.Server.Construction
                         interactUsing.Used,
                         interactUsing.User,
                         uid,
-                        TimeSpan.FromSeconds(GetIntelligenceCraftingDelay(interactUsing.User, toolInsertStep.DoAfter)),
+                        TimeSpan.FromSeconds(GetIntelligenceConstructionDelay(interactUsing.User, toolInsertStep.DoAfter)),
                         new [] { toolInsertStep.Tool },
                         new ConstructionInteractDoAfterEvent(EntityManager, interactUsing),
                         out var doAfter,
