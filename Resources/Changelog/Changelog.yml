@@ -5493,3 +5493,12 @@ Entries:
   id: 5924
   time: '2026-05-22T19:02:07.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/510
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: 80s garage door
+    - type: Tweak
+      message: Legion Veteran Explorer Helmet icon change
+  id: 5925
+  time: '2026-05-22T21:36:58.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/575
