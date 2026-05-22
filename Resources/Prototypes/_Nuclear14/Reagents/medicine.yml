@@ -585,7 +585,6 @@
 - type: reagent
   id: Epoetine
   name: reagent-name-epoetine
-  group: Chems
   desc: reagent-desc-epoetine
   physicalDesc: reagent-physical-desc-refreshing
   color: "#0041a8"
@@ -609,7 +608,6 @@
 - type: reagent
   id: BetaEpoetine
   name: reagent-name-beta-epoetine
-  group: Medicine
   desc: reagent-desc-beta-epoetine
   physicalDesc: reagent-physical-desc-tangy
   color: "#4da0bd"
