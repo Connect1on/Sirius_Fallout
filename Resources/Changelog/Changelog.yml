@@ -5502,3 +5502,10 @@ Entries:
   id: 5925
   time: '2026-05-22T21:36:58.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/575
+- author: Bradysgaming
+  changes:
+    - type: Add
+      message: Added The block armor
+  id: 5926
+  time: '2026-05-22T21:37:11.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/577
