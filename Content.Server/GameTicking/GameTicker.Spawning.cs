@@ -236,11 +236,59 @@ namespace Content.Server.GameTicking
             if (jobBans != null)
                 restrictedRoles.UnionWith(jobBans);
 
-            // Pick best job best on prefs.
-            jobId ??= _stationJobs.PickBestAvailableJobWithPriority(station,
-                character.JobPriorities,
-                true,
-                restrictedRoles);
+            // Добавляем роли из запрещённых департаментов в restrictedRoles
+            List<DepartmentPrototype>? bannedDepts = null;
+
+            // #Misfits DEBUG
+            var hasBlacklistComp = TryComp<StationDepartmentBlacklistComponent>(station, out var deptBlacklistComponent);
+            var bannedCount = deptBlacklistComponent?.BannedDepartments.Count ?? 0;
+            _sawmill.Warning($"DEBUG StationDepartmentBlacklist: station={station}, hasComp={hasBlacklistComp}, bannedCount={bannedCount}");
+            if (deptBlacklistComponent != null && bannedCount > 0)
+            {
+                _sawmill.Warning($"DEBUG StationDepartmentBlacklist: departments={string.Join(",", deptBlacklistComponent.BannedDepartments)}");
+            }
+
+            if (hasBlacklistComp && bannedCount > 0)
+            {
+                bannedDepts = new List<DepartmentPrototype>(deptBlacklistComponent!.BannedDepartments.Count);
+                foreach (var deptId in deptBlacklistComponent.BannedDepartments)
+                {
+                    if (!_prototypeManager.TryIndex(deptId, out DepartmentPrototype? deptProto))
+                    {
+                        _sawmill.Warning($"DEBUG StationDepartmentBlacklist: could not index department {deptId}");
+                        continue;
+                    }
+                    bannedDepts.Add(deptProto);
+                    _sawmill.Warning($"DEBUG StationDepartmentBlacklist: adding {deptProto.Roles.Count} roles from {deptId}");
+                    foreach (var restrictedJobId in deptProto.Roles)
+                        restrictedRoles.Add(restrictedJobId);
+                }
+            }
+
+            // Проверка blacklist для переданного jobId (roundstart или явный выбор)
+            if (jobId != null && bannedDepts != null)
+            {
+                foreach (var deptProto in bannedDepts)
+                {
+                    if (deptProto.Roles.Any(role => role.Id == jobId))
+                    {
+                        _chatManager.DispatchServerMessage(player,
+                            Loc.GetString("station-department-blacklist-refused",
+                                ("department", Loc.GetString($"department-{deptProto.ID}-description"))));
+                        return;
+                    }
+                }
+            }
+
+            // Если jobId не передан — авто-выбор
+            if (jobId == null)
+            {
+                jobId = _stationJobs.PickBestAvailableJobWithPriority(station,
+                    character.JobPriorities,
+                    true,
+                    restrictedRoles);
+            }
+
             // If no job available, stay in lobby, or if no lobby spawn as observer
             if (jobId is null)
             {

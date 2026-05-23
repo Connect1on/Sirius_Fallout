@@ -12,6 +12,9 @@
         - type: CP14StationAdditionalMap
           mapPaths:
           - /Maps/N14/SunnyvaleUnderground.yml
+        - type: StationDepartmentBlacklist
+          bannedDepartments:
+            - CaesarLegion
         - type: StationJobs
           overflowJobs:
             - Wastelander
@@ -96,23 +99,23 @@
             VaultDweller: [ 4, 6 ]
             VaultEngineer: [ 2, 2 ]
             VaultSecurity: [ 2, 3 ]
-            CaesarLegionLegate: [ 0, 0 ] # Forge-Legion # #Misfits Tweak - 0 active slots (admin-notify role)
-            CaesarLegionCenturion: [ 0, 0] # Forge-Legion
-            CaesarLegionVeteranDecanus: [ 0, 0 ] # Forge-Legion
-            CaesarLegionDean: [ 0, 0 ] # Forge-Legion
-            CaesarLegionLegionnaireVeteran: [ 0, 0 ] # Forge-Legion
-            CaesarLegionLegionnaireWarrior: [ 0, 0 ] # Forge-Legion
-            CaesarLegionLegionnaireRecruit: [ 0, 0 ] # Forge-Legion
-            CaesarLegionVexillarius: [ 0, 0 ] # Forge-Legion
-            CaesarLegionFrumentarii: [ 0, 0 ] # Forge-Legion # #Misfits Tweak - raised total and initial slots from 1 to 2
-            CaesarLegionPrimeDecanus: [ 0, 0 ] # Misfits-Legion
-            CaesarLegionExplorer: [ 0, 0 ] # Misfits-Legion
-            CaesarLegionOrator: [ 0, 0 ] # Misfits-Legion
-            CaesarLegionPriestessOfMars: [ 0, 0 ] # Misfits-Legion — Priestess of Mars late-join slot
-            CaesarLegionHoundmaster: [ 0, 0 ] # Forge-Legion
+            CaesarLegionLegate: [ 1, 0 ] # Forge-Legion # #Misfits Tweak - 0 active slots (admin-notify role)
+            CaesarLegionCenturion: [ 1, 1 ] # Forge-Legion
+            CaesarLegionVeteranDecanus: [ 1, 1 ] # Forge-Legion
+            CaesarLegionDean: [ 1, 1 ] # Forge-Legion
+            CaesarLegionLegionnaireVeteran: [ 2, 2 ] # Forge-Legion
+            CaesarLegionLegionnaireWarrior: [ 2, 2 ] # Forge-Legion
+            CaesarLegionLegionnaireRecruit: [ 4, 4 ] # Forge-Legion
+            CaesarLegionVexillarius: [ 1, 1 ] # Forge-Legion
+            CaesarLegionFrumentarii: [ 2, 2 ] # Forge-Legion # #Misfits Tweak - raised total and initial slots from 1 to 2
+            CaesarLegionPrimeDecanus: [ 1, 1 ] # Misfits-Legion
+            CaesarLegionExplorer: [ 1, 2 ] # Misfits-Legion
+            CaesarLegionOrator: [ 1, 1 ] # Misfits-Legion
+            CaesarLegionPriestessOfMars: [ 1, 1 ] # Misfits-Legion — Priestess of Mars late-join slot
+            CaesarLegionHoundmaster: [ 1, 1 ] # Forge-Legion
             # #Misfits Change: CaesarLegionRecruit slot removed — CaesarLegionLegionnaireRecruit (line 103) already covers entry-level.
-            CaesarLegionAuxilia: [ 0, 0 ] # #Misfits Change - activated
-            CaesarLegionSlave: [ 0, 0 ] # Forge-Legion
+            CaesarLegionAuxilia: [ 4, 4 ] # #Misfits Change - activated
+            CaesarLegionSlave: [ 4, 4 ] # Forge-Legion
             # #Misfits Change - Khan removed (deactivated); Eighties expanded to 5-rank department.
             EightiesTheBlock:  [ 0, 0 ] # leader, 1 slot
             EightiesCylinders: [ 0, 0 ] # officer tier, 2 slots
