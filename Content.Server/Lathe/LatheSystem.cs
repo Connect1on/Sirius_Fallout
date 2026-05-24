@@ -601,11 +601,11 @@ namespace Content.Server.Lathe
                 return baseTime;
 
             var intelligence = _special.GetEffective(user.Value, SpecialStat.Intelligence, special);
-            if (intelligence >= SpecialProfile.Maximum)
-                return TimeSpan.Zero;
-
+            var tuning = _special.GetTuning();
+            var minMultiplier = Math.Clamp(tuning.IntelligenceLatheMinimumTimeMultiplierAtTen, 0.1f, 1f);
             var multiplier = intelligence >= SpecialProfile.DefaultValue
-                ? 1f - (intelligence - SpecialProfile.DefaultValue) * 0.2f
+                ? 1f - (1f - minMultiplier) * (intelligence - SpecialProfile.DefaultValue) /
+                    (SpecialProfile.Maximum - SpecialProfile.DefaultValue)
                 : 1f + (SpecialProfile.DefaultValue - intelligence) * 0.15f;
 
             return baseTime * MathF.Max(0.1f, multiplier);

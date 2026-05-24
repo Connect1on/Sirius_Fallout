@@ -9,24 +9,25 @@ public sealed partial class NcStoreLogicSystem
 {
     private readonly Dictionary<string, int> _inheritanceDepthCache = new(StringComparer.Ordinal);
 
-    public MassSellPlan ComputeMassSellPlan(NcStoreComponent store, EntityUid container)
+    public MassSellPlan ComputeMassSellPlan(NcStoreComponent store, EntityUid container, EntityUid? user = null)
     {
         _inventory.InvalidateInventoryCache(container);
         var cached = _inventory.GetOrBuildDeepItemsCacheCompacted(container);
-        return ComputeMassSellPlanInternal(store, cached);
+        return ComputeMassSellPlanInternal(store, cached, user);
     }
 
     public MassSellPlan ComputeMassSellPlanFromCachedItems(
         NcStoreComponent store,
         EntityUid container,
-        IReadOnlyList<EntityUid> cachedItems
+        IReadOnlyList<EntityUid> cachedItems,
+        EntityUid? user = null
     ) =>
-        ComputeMassSellPlanInternal(store, cachedItems);
+        ComputeMassSellPlanInternal(store, cachedItems, user);
 
     public Dictionary<string, int> GetMassSellValue(NcStoreComponent store, EntityUid container) =>
         ComputeMassSellPlan(store, container).IncomeByCurrency;
 
-    private MassSellPlan ComputeMassSellPlanInternal(NcStoreComponent store, IEnumerable<EntityUid> items)
+    private MassSellPlan ComputeMassSellPlanInternal(NcStoreComponent store, IEnumerable<EntityUid> items, EntityUid? user)
     {
         var incomeByCurrency = new Dictionary<string, int>(StringComparer.Ordinal);
         var unitsByListingId = new Dictionary<string, int>(StringComparer.Ordinal);
@@ -88,7 +89,11 @@ public sealed partial class NcStoreLogicSystem
             if (l.Mode != StoreMode.Sell)
                 continue;
             if (TryPickCurrencyForSell(store, l, out _, out var price))
+            {
+                if (user is { } userUid)
+                    price = ApplyCharismaSellReward(userUid, price);
                 listingPrices[l.Id] = price;
+            }
             else
                 listingPrices[l.Id] = 0;
         }
@@ -139,12 +144,14 @@ public sealed partial class NcStoreLogicSystem
             }
         }
 
-var stackName = _compFactory.GetComponentName(typeof(StackComponent));
+        var stackName = _compFactory.GetComponentName(typeof(StackComponent));
 
         foreach (var listing in sellListings)
         {
             if (!TryPickCurrencyForSell(store, listing, out var currencyId, out var unitPrice))
                 continue;
+            if (user is { } userUid)
+                unitPrice = ApplyCharismaSellReward(userUid, unitPrice);
             if (unitPrice <= 0 || string.IsNullOrWhiteSpace(currencyId))
                 continue;
 

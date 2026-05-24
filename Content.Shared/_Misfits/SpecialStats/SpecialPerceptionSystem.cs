@@ -5,7 +5,7 @@ using Content.Shared.Weapons.Ranged.Events;
 namespace Content.Shared._Misfits.SpecialStats;
 
 /// <summary>
-/// Reduces gun spread and camera recoil proportionally based on the holder's Perception.
+/// Applies Perception to gun precision and firing cadence.
 /// </summary>
 public sealed class SpecialPerceptionSystem : EntitySystem
 {
@@ -38,5 +38,23 @@ public sealed class SpecialPerceptionSystem : EntitySystem
         args.MaxAngle = new Angle((double) args.MaxAngle * keepFraction);
         args.AngleIncrease = new Angle((double) args.AngleIncrease * keepFraction);
         args.CameraRecoilScalar *= (float) keepFraction;
+
+        if (args.FireRate <= 0f)
+            return;
+
+        args.FireRate *= 1f / GetFireDelayMultiplier(holder, special);
+    }
+
+    private float GetFireDelayMultiplier(EntityUid uid, SpecialComponent special)
+    {
+        var tuning = _special.GetTuning();
+        var modifier = _special.GetCurvedEffectScale(
+            uid,
+            SpecialStat.Perception,
+            tuning.PerceptionFireDelayPenaltyAtOne,
+            -tuning.PerceptionFireDelayReductionAtTen,
+            special);
+
+        return MathF.Max(0.1f, 1f + modifier);
     }
 }

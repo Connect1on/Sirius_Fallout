@@ -22,6 +22,8 @@ public sealed partial class NcStoreLogicSystem
         if (!TryPickCurrencyForBuy(store, listing, snap, out var currency, out var unitPrice, out var balance))
             return false;
 
+        unitPrice = ApplyCharismaBuyPrice(user, unitPrice);
+
         var unitsPerPurchase = Math.Max(1, listing.UnitsPerPurchase);
 
         var maxByRemainingPurchases = listing.RemainingCount >= 0 ? listing.RemainingCount : int.MaxValue;
@@ -101,7 +103,7 @@ public sealed partial class NcStoreLogicSystem
         if (store == null)
             return false;
         return TrySellScenario(listingId, store, user, container, count, out var sold) &&
-            LogSellFromContainer(sold, listingId, store, container);
+            LogSellFromContainer(sold, listingId, store, container, user);
     }
 
     private bool TrySellScenario(
@@ -122,6 +124,7 @@ public sealed partial class NcStoreLogicSystem
             return false;
         if (!TryPickCurrencyForSell(store, listing, out var currency, out var unitPrice) || unitPrice <= 0)
             return false;
+        unitPrice = ApplyCharismaSellReward(user, unitPrice);
 
         _inventory.InvalidateInventoryCache(root);
 
@@ -160,7 +163,7 @@ public sealed partial class NcStoreLogicSystem
         return true;
     }
 
-    private bool LogSellFromContainer(int sold, string listingId, NcStoreComponent store, EntityUid container)
+    private bool LogSellFromContainer(int sold, string listingId, NcStoreComponent store, EntityUid container, EntityUid user)
     {
         if (sold <= 0)
             return false;
@@ -170,6 +173,7 @@ public sealed partial class NcStoreLogicSystem
             return true;
         if (!TryPickCurrencyForSell(store, listing, out var currency, out var unitPrice) || unitPrice <= 0)
             return true;
+        unitPrice = ApplyCharismaSellReward(user, unitPrice);
         Sawmill.Info(
             $"TrySellFromContainer: OK {listing.ProductEntity} x{sold} for {unitPrice} {currency} each (container={ToPrettyString(container)})");
         return true;
@@ -200,6 +204,7 @@ public sealed partial class NcStoreLogicSystem
 
         if (!TryPickCurrencyForSell(store, listing, out var currencyId, out var rewardPerUnit) || rewardPerUnit <= 0)
             return false;
+        rewardPerUnit = ApplyCharismaSellReward(user, rewardPerUnit);
 
         if (!_inventory.TryTakeProductUnitsFromRootCached(
             user,

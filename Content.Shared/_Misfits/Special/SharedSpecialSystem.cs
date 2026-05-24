@@ -164,6 +164,13 @@ public sealed class SharedSpecialSystem : EntitySystem
         return (int) Math.Round(GetCurvedEffectDelta(charisma) * 2f, MidpointRounding.AwayFromZero);
     }
 
+    public int GetCharismaChatFontSize(EntityUid uid, int baseFontSize, SpecialComponent? component = null)
+    {
+        return GetEffective(uid, SpecialStat.Charisma, component) >= 7
+            ? baseFontSize + 2
+            : baseFontSize;
+    }
+
     public bool HasRequirement(EntityUid uid, SpecialStat stat, int minimum, SpecialComponent? component = null)
     {
         return GetEffective(uid, stat, component) >= minimum;

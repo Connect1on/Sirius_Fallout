@@ -1,5 +1,6 @@
 using Content.Server.Storage.Components;
 using Content.Server.Storage.EntitySystems;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Movement.Pulling.Components;
@@ -22,6 +23,7 @@ public sealed partial class NcStoreLogicSystem : EntitySystem
     [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] public readonly NcStoreInventorySystem _inventory = default!;
     [Dependency] public readonly IPrototypeManager _protos = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
     [Dependency] public readonly SharedStackSystem _stacks = default!;
 
     public override void Initialize()

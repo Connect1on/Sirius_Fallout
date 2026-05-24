@@ -20,6 +20,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using System.Linq;
 using Content.Shared._NC.TTS;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.Silicons.Borgs.Components;
 
@@ -37,6 +38,7 @@ public sealed class TelephoneSystem : SharedTelephoneSystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IReplayRecordingManager _replay = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     // Has set used to prevent telephone feedback loops
     private HashSet<(EntityUid, string, Entity<TelephoneComponent>)> _recentChatMessages = new();
@@ -359,7 +361,7 @@ public sealed class TelephoneSystem : SharedTelephoneSystem
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-telephone-message-wrap-bold" : "chat-telephone-message-wrap",
             ("color", Color.White),
             ("fontType", speech.FontId),
-            ("fontSize", speech.FontSize),
+            ("fontSize", _special.GetCharismaChatFontSize(messageSource, speech.FontSize)),
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
             ("name", name),
             ("message", content));

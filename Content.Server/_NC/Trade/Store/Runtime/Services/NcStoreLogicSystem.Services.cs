@@ -1,4 +1,6 @@
 using Content.Shared._NC.Trade;
+using Content.Shared._Misfits.Special;
+using Content.Shared._Misfits.Special.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.Stacks;
 using Robust.Shared.Prototypes;
@@ -35,6 +37,30 @@ public sealed partial class NcStoreLogicSystem
 
     public void GiveCurrency(EntityUid user, string stackType, int amount) =>
         _currency.GiveCurrency(user, stackType, amount);
+
+    public int ApplyCharismaBuyPrice(EntityUid user, int amount) =>
+        ApplyCharismaTradeValue(user, amount, buying: true);
+
+    public int ApplyCharismaSellReward(EntityUid user, int amount) =>
+        ApplyCharismaTradeValue(user, amount, buying: false);
+
+    private int ApplyCharismaTradeValue(EntityUid user, int amount, bool buying)
+    {
+        if (amount <= 0 || !TryComp<SpecialComponent>(user, out var special))
+            return amount;
+
+        var tuning = _special.GetTuning();
+        var modifier = _special.GetCurvedEffectScale(
+            user,
+            SpecialStat.Charisma,
+            buying ? tuning.CharismaTradePenaltyAtOne : -tuning.CharismaTradePenaltyAtOne,
+            buying ? -tuning.CharismaTradeBonusAtTen : tuning.CharismaTradeBonusAtTen,
+            special);
+        var multiplier = MathF.Max(0.05f, 1f + modifier);
+        var adjusted = (int) Math.Round(amount * multiplier, MidpointRounding.AwayFromZero);
+
+        return Math.Max(1, adjusted);
+    }
 
 
     private sealed class StoreSpawnService

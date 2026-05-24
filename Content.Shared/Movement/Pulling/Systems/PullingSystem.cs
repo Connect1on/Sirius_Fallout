@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
+using Content.Shared._Misfits.SpecialStats;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
@@ -276,6 +277,13 @@ public sealed class PullingSystem : EntitySystem
     private void OnRefreshMovespeed(EntityUid uid, PullerComponent component, RefreshMovementSpeedModifiersEvent args)
     {
         args.ModifySpeed(component.WalkSpeedModifier, component.SprintSpeedModifier);
+
+        if (component.Pulling == null)
+            return;
+
+        var specialEv = new SpecialCarryPullSpeedModifierEvent(uid);
+        RaiseLocalEvent(uid, ref specialEv, true);
+        args.ModifySpeed(specialEv.Multiplier);
     }
 
     private void OnPullableMoveInput(EntityUid uid, PullableComponent component, ref MoveInputEvent args)

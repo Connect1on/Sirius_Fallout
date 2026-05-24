@@ -1,13 +1,32 @@
 - type: specialTuning
   id: MisfitsSpecialTuning
-  strengthMeleeDamageMultiplierPerPoint: 0.015
+  strengthMeleeDamageMultiplierPerPoint: 0.02
+  strengthCarryPullSpeedPenaltyAtOne: 0.08
+  strengthCarryPullSpeedBonusAtTen: 0.10
+  strengthHeavyGunPenaltyAtOne: 0.18
+  strengthHeavyGunReductionAtTen: 0.10
   perceptionSpreadPenaltyAtOne: 0.15
   perceptionSpreadReductionAtTen: 0.25
-  enduranceHealthPenaltyAtOne: 25
-  enduranceHealthBonusAtTen: 25
-  agilityMovementSpeedPenaltyAtOne: 0.10
-  agilityMovementSpeedBonusAtTen: 0.10
+  perceptionMineDelayPenaltyAtOne: 0.25
+  perceptionMineDelayReductionAtTen: 0.25
+  perceptionFireDelayPenaltyAtOne: 0.08
+  perceptionFireDelayReductionAtTen: 0.10
+  enduranceHealthPenaltyAtOne: 20
+  enduranceHealthBonusAtTen: 20
+  enduranceNeedDecayPenaltyAtOne: 0.15
+  enduranceNeedDecayReductionAtTen: 0.12
+  enduranceStaminaRecoveryPenaltyAtOne: 0.15
+  enduranceStaminaRecoveryBonusAtTen: 0.20
+  enduranceToxinDamagePenaltyAtOne: 0.12
+  enduranceToxinDamageReductionAtTen: 0.15
+  charismaTradePenaltyAtOne: 0.10
+  charismaTradeBonusAtTen: 0.10
+  intelligenceLatheMinimumTimeMultiplierAtTen: 0.50
+  agilityMovementSpeedPenaltyAtOne: 0.075
+  agilityMovementSpeedBonusAtTen: 0.075
+  agilityActionDelayPenaltyAtOne: 0.08
+  agilityActionDelayReductionAtTen: 0.10
   luckCriticalChancePerPoint: 0.005
-  luckSingleShotCriticalChanceAtTen: 0.3
+  luckSingleShotCriticalChanceAtTen: 0.25
   luckCriticalDamageMultiplier: 1.5
-  luckLootChancePerPoint: 0.03
+  luckLootChancePerPoint: 0.025

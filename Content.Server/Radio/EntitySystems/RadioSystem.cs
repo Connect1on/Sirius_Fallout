@@ -3,6 +3,7 @@ using Content.Server.Chat.Systems;
 using Content.Server.Language;
 using Content.Server.Power.Components;
 using Content.Server.Radio.Components;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Language;
@@ -33,6 +34,7 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly LanguageSystem _language = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
@@ -317,6 +319,7 @@ public sealed class RadioSystem : EntitySystem
             ? Loc.GetString("chat-manager-language-prefix", ("language", language.ChatName))
             : "";
         var messageColor = language.IsVisibleLanguage ? languageColor : channel.Color;
+        var fontSize = _special.GetCharismaChatFontSize(source, language.SpeechOverride.FontSize ?? speech.FontSize);
 
         string channelText;
         if (channel.ShowFrequency && frequency.HasValue)
@@ -329,7 +332,7 @@ public sealed class RadioSystem : EntitySystem
             ("languageColor", languageColor),
             ("messageColor", messageColor),
             ("fontType", language.SpeechOverride.FontId ?? speech.FontId),
-            ("fontSize", language.SpeechOverride.FontSize ?? speech.FontSize),
+            ("fontSize", fontSize),
             ("verb", Loc.GetString(_random.Pick(speech.SpeechVerbStrings))),
             ("channel", channelText),
             ("name", name),

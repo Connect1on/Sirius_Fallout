@@ -16,7 +16,7 @@ public sealed class SpecialPenaltySystem : EntitySystem
 
     private const int LowCharismaThreshold = 5;
     private const int LowIntelligenceThreshold = 2;
-    private const int ClumsyLuckThreshold = 4;
+    private const int ClumsyLuckThreshold = 3;
 
     public override void Initialize()
     {
