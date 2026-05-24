@@ -638,8 +638,8 @@
     - N14LightReplacer
     - N14Mousetrap
     - N14Plunger
-    - N14WeaponSprayNozzle
-    - N14ClothingBackpackWaterTank
+#    - N14WeaponSprayNozzle
+#    - N14ClothingBackpackWaterTank
     # Chemistry
     - N14Vial
     - N14Beaker

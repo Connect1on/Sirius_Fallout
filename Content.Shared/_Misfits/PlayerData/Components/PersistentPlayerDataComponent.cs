@@ -1,12 +1,13 @@
 // #Misfits Add - Persistent player SPECIAL stats, kill/death/round statistics, and character history log.
+using Content.Shared._Misfits.Special;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._Misfits.PlayerData.Components;
 
 /// <summary>
 /// Carries a player's persistent data that survives across rounds:
-/// SPECIAL base stats, lifetime kill/death/round counters, and a character history log.
-/// Data is keyed by UserId + CharacterName in player_data.json.
+/// mirrored SPECIAL base stats, lifetime kill/death/round counters, and a character history log.
+/// Data is keyed by UserId + CharacterName in the database.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class PersistentPlayerDataComponent : Component
@@ -15,25 +16,25 @@ public sealed partial class PersistentPlayerDataComponent : Component
 
     /// <summary>Persistent base Strength (1–10). Starts at 1; player allocates 10 points on first spawn.</summary>
     [DataField, AutoNetworkedField]
-    public int Strength = 1;
+    public int Strength = SpecialProfile.DefaultValue;
 
     [DataField, AutoNetworkedField]
-    public int Perception = 1;
+    public int Perception = SpecialProfile.DefaultValue;
 
     [DataField, AutoNetworkedField]
-    public int Endurance = 1;
+    public int Endurance = SpecialProfile.DefaultValue;
 
     [DataField, AutoNetworkedField]
-    public int Charisma = 1;
+    public int Charisma = SpecialProfile.DefaultValue;
 
     [DataField, AutoNetworkedField]
-    public int Agility = 1;
+    public int Agility = SpecialProfile.DefaultValue;
 
     [DataField, AutoNetworkedField]
-    public int Intelligence = 1;
+    public int Intelligence = SpecialProfile.DefaultValue;
 
     [DataField, AutoNetworkedField]
-    public int Luck = 1;
+    public int Luck = SpecialProfile.DefaultValue;
 
     // ── Lifetime statistics ───────────────────────────────────────────────────
 

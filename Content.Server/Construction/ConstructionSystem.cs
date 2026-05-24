@@ -1,5 +1,7 @@
 using Content.Server.Construction.Components;
 using Content.Server.Stack;
+using Content.Shared._Misfits.Special;
+using Content.Shared._Misfits.Special.Components;
 using Content.Shared.Construction;
 using Content.Shared.DoAfter;
 using JetBrains.Annotations;
@@ -22,6 +24,7 @@ namespace Content.Server.Construction
         [Dependency] private readonly ContainerSystem _container = default!;
         [Dependency] private readonly StackSystem _stackSystem = default!;
         [Dependency] private readonly SharedToolSystem _toolSystem = default!;
+        [Dependency] private readonly SharedSpecialSystem _special = default!;
 
         public override void Initialize()
         {
@@ -90,6 +93,34 @@ namespace Content.Server.Construction
             base.Update(frameTime);
 
             UpdateInteractions();
+        }
+
+        private float GetIntelligenceConstructionDelay(EntityUid user, float baseDelay)
+        {
+            if (baseDelay <= 0f)
+                return baseDelay;
+
+            var intelligence = _special.GetEffective(user, SpecialStat.Intelligence);
+            if (intelligence <= SpecialProfile.Minimum)
+                return baseDelay;
+
+            var multiplier = intelligence >= SpecialProfile.DefaultValue
+                ? 1f - (intelligence - SpecialProfile.DefaultValue) * 0.1f
+                : 1f + (SpecialProfile.DefaultValue - intelligence) * 0.15f;
+
+            return baseDelay * MathF.Max(0.1f, multiplier);
+        }
+
+        private bool CanCraftWithIntelligence(EntityUid user, bool showPopup = false)
+        {
+            if (TryComp<SpecialComponent>(user, out var special) &&
+                _special.GetEffective(user, SpecialStat.Intelligence, special) > SpecialProfile.Minimum)
+                return true;
+
+            if (showPopup)
+                _popup.PopupEntity(Loc.GetString("construction-system-construct-too-low-intelligence"), user, user);
+
+            return false;
         }
     }
 }

@@ -9,7 +9,7 @@
   canBeAntag: false
   name: job-name-ncr-doctor
   description: job-description-ncr-doctor
-  playTimeTracker: NCRDoctor
+  playTimeTracker: NCRMedicalDoctor
   requirements:
     - !type:CharacterSpeciesRequirement
       species:
@@ -20,7 +20,7 @@
       min: 57600 # 16 hours
   startingGear: NCRDoctorGear
   icon: "JobIconNcrMedic"
-  supervisors: job-supervisors-ncr-lt
+  supervisors: job-supervisors-ncr-commander
   alwaysUseSpawner: true
   access:
   - NCR
@@ -42,7 +42,6 @@
     back: N14ClothingBackpackNCR # Corvax-Change
     shoes: N14ClothingBootsLeatherFilled
     ears: N14ClothingHeadsetNCR # #Misfits Add - NCR radio earpiece
-    neck: ClothingNeckPinNCRDoctor
     belt: ClothingBeltNCR
     id: N14IDNCRDogtagDoctorSenior
     pocket2: NCRmedicloadoutkits
@@ -53,4 +52,4 @@
     - N14BoxPlasticFilledMilitaryNCR
 
 - type: playTimeTracker
-  id: NCRDoctor
+  id: NCRMedicalDoctor

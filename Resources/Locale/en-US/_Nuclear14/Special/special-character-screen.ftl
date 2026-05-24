@@ -9,6 +9,6 @@ humanoid-profile-editor-special-priority-eight-button = 8
 humanoid-profile-editor-special-priority-nine-button = 9
 humanoid-profile-editor-special-priority-ten-button = 10
 
-humanoid-profile-editor-specials-tab = Special
+humanoid-profile-editor-specials-tab = SPECIAL
 
-humanoid-profile-editor-special-points-label = {$points} left of {$max} SPECIAL points
+humanoid-profile-editor-special-points-label = Available SPECIAL points: {$points}

@@ -1,0 +1,123 @@
+﻿- type: entity
+  parent: N14DoorWoodSlanted
+  id: N14DoorWoodSecureLocked80s
+  suffix: 80s, Locked
+  components:
+  - type: AccessReader
+    access: [["80s"]]
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: N14DoorWoodSlanted
+  id: N14DoorWoodSecureLocked80sHead
+  suffix: 80s, Locked, Head
+  components:
+  - type: AccessReader
+    access: [["80sHead"]]
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: N14DoorMetalBlueSlanted
+  id: N14DoorMetalSlantedLocked80s
+  suffix: 80s, Locked
+  components:
+  - type: AccessReader
+    access: [["80s"]]
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: N14DoorMetalBarSlanted
+  id: N14DoorCellSlantedLocked80s
+  suffix: 80s, Locked
+  components:
+  - type: AccessReader
+    access: [["80s"]]
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: N14DoorWoodWhiteSlanted
+  id: N14DoorWoodSlantedWhiteLocked80s
+  suffix: 80s, Locked
+  components:
+  - type: AccessReader
+    access: [["80s"]]
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: N14DoorWoodRedSlanted
+  id: N14DoorWoodSlantedRedLocked80s
+  suffix: 80s, Locked
+  components:
+  - type: AccessReader
+    access: [["80s"]]
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  parent: FenceMetalGate
+  id: N14DoorFenceMetalGateLocked80s
+  suffix: 80s, Locked
+  components:
+  - type: AccessReader
+    access: [["80s"]]
+  - type: Wires
+    layoutId: AirlockCargo
+
+- type: entity
+  id: 80sGarageDoor
+  parent: BaseShutter
+  name: 80s garage door
+  description: fancy paint mate.
+  components:
+  - type: AccessReader
+  - type: Sprite
+    sprite: _Misfits/Structures/Doors/80sgaragedoor.rsi/
+    state: closed
+  - type: Door
+    closeTimeOne: 1.6
+    closeTimeTwo: 3
+    openTimeOne: 3
+    openTimeTwo: 1.6
+    openingAnimationTime: 3.0
+    closingAnimationTime: 3.0
+    canPry: false
+    crushDamage:
+      types:
+        Blunt: 25
+  - type: Occluder
+    boundingBox: "-0.9,-0.5,0.9,0.5"
+  - type: Appearance
+  - type: RadiationBlocker
+    resistance: 10
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronics ]
+  - type: Construction
+    graph: BlastDoor
+    node: blastdoor
+    containers:
+    - board
+  - type: StaticPrice
+    price: 280
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.9,-0.5,0.9,0.5"
+        layer:
+        - Impassable
+        - HighImpassable
+        mask:
+        - Impassable
+        - HighImpassable

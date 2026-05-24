@@ -8,7 +8,7 @@
       jobs:
         - NCRPisoner
     - !type:CharacterPlaytimeRequirement
-      tracker: NCRPisoner
+      tracker: NCRPrisoner
       min: 72000 # 1200 minutes
   items:
     - N14ClothingUniformNCRCFUniform

@@ -95,9 +95,9 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 5500
+    Steel: 5000
     Glass: 575
-    Circuitry: 925
+    Circuitry: 500
     Plastic: 750
 
 - type: latheRecipe
@@ -109,10 +109,10 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 7500
-    Glass: 1000
-    Circuitry: 1500
-    ScrapElectronic: 750
+    Steel: 6000
+    Glass: 500
+    Circuitry: 500
+    ScrapElectronic: 250
 
 # --- Vault Tier 4 Weapons (Experimental prototypes) ---
 - type: latheRecipe
@@ -126,7 +126,7 @@
   materials:
     Steel: 4000
     Glass: 1500
-    Circuitry: 500
+    Circuitry: 250
     ScrapElectronic: 150
     Plastic: 500
     N14Gold: 200
@@ -156,13 +156,13 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 8000
+    Steel: 7000
     Glass: 1500
-    Circuitry: 675
+    Circuitry: 575
     ScrapElectronic: 500
     Plastic: 750
-    N14Gold: 500
-    N14Silver: 500
+    N14Gold: 300
+    N14Silver: 300
 
 - type: latheRecipe
   id: N14BPVaultWeaponLaserRCW
@@ -173,12 +173,12 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 20000
-    Glass: 5000
-    Circuitry: 1200
-    ScrapElectronic: 975
+    Steel: 6000
+    Glass: 2500
+    Circuitry: 800
+    ScrapElectronic: 575
     Plastic: 750
-    N14Gold: 1500
+    N14Gold: 500
 
 # =====================================================================
 # VAULT ARMOR RECIPES
@@ -199,33 +199,22 @@
     Plastic: 500
 
 # --- Vault Tier 2 Armor ---
+
 - type: latheRecipe
-  id: N14BPVaultArmorLightLeatherArmor
-  result: N14ClothingOuterLightLeatherArmor
+  id: M14BPVaultAdvancedVestArmor
+  result: M14ClothingOuterVaultAdvancedVest
   category: N14BlueprintVaultArmorT2
   completetime: 8
   requiresBlueprint: true
   availableFaction:
   - Vault
   materials:
-    Leather: 1500
-    Cloth: 550
-    Thread: 800
-    Plastic: 250
-
-- type: latheRecipe
-  id: N14BPVaultArmorReinforcedLeatherArmor
-  result: N14ClothingOuterReinforcedLeatherArmor
-  category: N14BlueprintVaultArmorT2
-  completetime: 10
-  requiresBlueprint: true
-  availableFaction:
-  - Vault
-  materials:
-    Leather: 2000
+    Cloth: 900
+    Thread: 600
+    Plastic: 1000
     Steel: 1000
-    Cloth: 150
-    Thread: 700
+    N14Iron: 100
+    Leather: 250
 
 # --- Vault Tier 3 Armor ---
 - type: latheRecipe
@@ -238,9 +227,9 @@
   - Vault
   materials:
     Steel: 4000
-    Cloth: 2500
-    Thread: 1750
-    Plastic: 750
+    Cloth: 500
+    Thread: 250
+    Plastic: 250
     Circuitry: 250
 
 - type: latheRecipe
@@ -253,8 +242,8 @@
   - Vault
   materials:
     Steel: 4300
-    Cloth: 2250
-    Thread: 1500
+    Cloth: 650
+    Thread: 300
     Plastic: 500
 
 # --- Vault Tier 4 Armor ---
@@ -268,11 +257,11 @@
   - Vault
   materials:
     Steel: 7000
-    Cloth: 3500
-    Thread: 2000
+    Cloth: 500
+    Thread: 200
     Circuitry: 500
-    ScrapElectronic: 750
-    Plastic: 5000
+    ScrapElectronic: 250
+    Plastic: 500
 
 - type: latheRecipe
   id: M14BPVaultPaintCombatArmor
@@ -283,12 +272,12 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 900
-    Cloth: 4
-    Thread: 275
-    Circuitry: 150
-    ScrapElectronic: 1
-    N14Iron: 1
+    Steel: 8000
+    Cloth: 1000
+    Thread: 575
+    Circuitry: 450
+    ScrapElectronic: 900
+    Plastic: 750
 
 - type: latheRecipe
   id: N14BPVaultArmorMarineArmor
@@ -300,10 +289,10 @@
   - Vault
   materials:
     Steel: 9000
-    Cloth: 4000
-    Thread: 2750
-    Circuitry: 1500
-    ScrapElectronic: 1200
+    Cloth: 800
+    Thread: 750
+    Circuitry: 500
+    ScrapElectronic: 1000
     N14Iron: 1500
 
 # =====================================================================
@@ -381,10 +370,10 @@
   availableFaction:
   - Vault
   materials:
-    Glass: 250
+    Glass: 450
     Circuitry: 100
     ScrapElectronic: 100
-    Lead: 250
+    Lead: 450
 
 # --- Vault Tier 4 Ammo ---
 - type: latheRecipe
@@ -396,10 +385,10 @@
   availableFaction:
   - Vault
   materials:
-    Glass: 400
+    Glass: 600
     Circuitry: 100
     ScrapElectronic: 100
-    Lead: 400
+    Lead: 600
 
 # #Misfits Removed - MFC recipe commented out; consolidated to single generic cell at T2
 # - type: latheRecipe
@@ -1073,6 +1062,20 @@
     Cloth: 200
 
 # --- Vault Tier 2 Helmets (basic metal) ---
+- type: latheRecipe
+  id: M14BPVaultArmorHelmetAdvancedRiot
+  result: M14ClothingHeadHatVaultRiotHelmet
+  category: N14BlueprintVaultArmorT2
+  completetime: 5
+  requiresBlueprint: true
+  availableFaction:
+  - Vault
+  materials:
+    Steel: 500
+    Cloth: 500
+    Leather: 100
+    Plastic: 500
+
 - type: latheRecipe
   id: N14BPVaultArmorHelmetMetal
   result: N14ClothingHeadHatVaultBlueprintHelmetMetal

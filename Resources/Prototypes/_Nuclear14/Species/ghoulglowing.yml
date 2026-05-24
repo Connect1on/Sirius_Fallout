@@ -5,7 +5,7 @@
   order: 2 # #Misfits Change: sort after Ghoul
   prototype: N14MobGhoulGlowing
   sprites: N14MobGhoulGlowingSprites
-  markingLimits: MobGhoulMarkingLimits
+  markingLimits: MobGhoulAllHairMarkingLimits
   dollPrototype: N14MobGhoulGlowingDummy
   skinColoration: HumanToned
   minHeight: 0.937 # Corvax-Change

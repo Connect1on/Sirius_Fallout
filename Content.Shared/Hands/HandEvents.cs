@@ -324,10 +324,12 @@ namespace Content.Shared.Hands
     public sealed class HeldRelayedEvent<TEvent> : EntityEventArgs
     {
         public TEvent Args;
+        public EntityUid Holder;
 
-        public HeldRelayedEvent(TEvent args)
+        public HeldRelayedEvent(TEvent args, EntityUid holder)
         {
             Args = args;
+            Holder = holder;
         }
     }
 }

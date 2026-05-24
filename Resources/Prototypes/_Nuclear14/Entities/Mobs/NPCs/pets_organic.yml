@@ -131,10 +131,12 @@
     understands:
     - N14Dog
     - N14Insect
-    - N14Robot
     - English
-    - Tribal
     - Chinese
+    - Latin
+    - Tribal
+    - N14Robot
+    - N14BrotherBeep
     - Sign
   - type: Speech # Corvax-Change
     speechSounds: Dog
@@ -215,12 +217,13 @@
     - N14BrotherBeep
     understands:
     - N14Dog
-    - N14BrotherBeep
-    - N14Robot
     - N14Insect
     - English
-    - Tribal
     - Chinese
+    - Latin
+    - Tribal
+    - N14Robot
+    - N14BrotherBeep
     - Sign
 
 - type: entity
@@ -424,10 +427,12 @@
     understands:
     - N14Dog
     - N14Insect
-    - N14Robot
     - English
-    - Tribal
     - Chinese
+    - Latin
+    - Tribal
+    - N14Robot
+    - N14BrotherBeep
     - Sign
 
 - type: entity

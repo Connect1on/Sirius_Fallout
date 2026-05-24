@@ -9,6 +9,7 @@
   color: "#934435"
   metabolisms:
     Medicine:
+      metabolismRate: 1.0
       effects:
         - !type:AmbientDrugFlavorText
           cooldownId: HealingMixtureAmbient
@@ -25,30 +26,31 @@
         - !type:HealthChange
           damage:
             groups:
-              Burn: -2.5
-              Brute: -2.5
-              Airloss: -2.5
+              Burn: -9 # 9/3 = 3 | 3*25 = 75 of every type in 25 seconds.
+              Brute: -9 # 9/3 = 3 | 3*25 = 75 of every type in 25 seconds.
+              Airloss: -3
         - !type:ModifyBleedAmount
           amount: -2
         - !type:HealthChange # Bonus for poison
           conditions:
           - !type:ReagentThreshold
-            min: 30
+            min: 27
           damage:
             groups:
-              Burn: -1.25
-              Brute: -1.25
-              Airloss: -1.25
+              Burn: -1.0
+              Brute: -1.0
+              Airloss: -1.0
             types:
-              Poison: 0.3
-        - !type:HealthChange # to prevent doping
+              Poison: 3
+        - !type:GenericStatusEffect
           conditions:
           - !type:ReagentThreshold
-            min: 50
-          - !type:MobStateCondition #Misfits Tweak: OD can push to crit but never kill
-          damage:
-            types:
-              Poison: 1.5
+            reagent: HealingMixture
+            min: 35
+          key: ForcedSleep
+          component: ForcedSleeping
+          refresh: false
+          type: Add
 
 - type: reagent
   id: DirtyStimpak
@@ -75,11 +77,12 @@
       - !type:HealthChange
         damage:
           groups:
-            Burn: -1.5
-            Brute: -1.5
-            Airloss: -1.5
+            Burn: -2.0
+            Brute: -2.0
+            Airloss: -2.0
           types:
-            Radiation: 0.1
+            Radiation: 0.5
+            Poison: 0.25
       - !type:ModifyBleedAmount
         amount: -1
       - !type:HealthChange # to prevent doping
@@ -92,7 +95,7 @@
             Brute: -1.0
             Airloss: -1.0
           types:
-            Poison: 0.2
+            Poison: 0.75
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -251,9 +254,9 @@
       - !type:HealthChange
         damage:
           groups:
-            Burn: -6.125
-            Brute: -6.125
-            Airloss: -6.125
+            Burn: -9 # 150 healing of every type over 50 seconds
+            Brute: -9 # 150 healing of every type over 50 seconds
+            Airloss: -4.5
       - !type:ModifyBleedAmount
         amount: -3
       - !type:HealthChange # Taking 2 is more or less a guaranteed death
@@ -263,11 +266,11 @@
         - !type:MobStateCondition #Misfits Tweak: OD can push to crit but never kill
         damage:
           groups:
-            Burn: -2.5
-            Brute: -2.5
-            Airloss: -2.5
+            Burn: -1.5
+            Brute: -1.5
+            Airloss: -1.5
           types:
-            Poison: 4.5
+            Poison: 5
             Cellular: 0.75 # permanent damage, be glad you aint dead
       - !type:MovespeedModifier
         walkSpeedModifier: 0.50
@@ -578,3 +581,56 @@
       # conditions:
       # - !type:ReagentThreshold
       #   min: 25
+
+- type: reagent
+  id: Epoetine
+  name: reagent-name-epoetine
+  desc: reagent-desc-epoetine
+  physicalDesc: reagent-physical-desc-refreshing
+  color: "#0041a8"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: -1
+            Bloodloss: -0.5
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 20
+        damage:
+          types:
+            Asphyxiation: 3
+            Cold: 1
+
+- type: reagent
+  id: BetaEpoetine
+  name: reagent-name-beta-epoetine
+  desc: reagent-desc-beta-epoetine
+  physicalDesc: reagent-physical-desc-tangy
+  color: "#4da0bd"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Asphyxiation: -3.5
+            Bloodloss: -3
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: HeartbreakerToxin
+          min: 1
+        reagent: HeartbreakerToxin
+        amount: -3
+      - !type:HealthChange
+        conditions:
+        - !type:ReagentThreshold
+          min: 25
+        damage:
+          types:
+            Asphyxiation: 5
+            Cold: 3

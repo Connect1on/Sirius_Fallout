@@ -4,7 +4,7 @@
 ## Character window section labels
 
 # Persistent SPECIAL stats panel
-character-info-persistent-special-label = S.P.E.C.I.A.L. (Lifetime)
+character-info-persistent-special-label = VAULT (Lifetime)
 character-info-persistent-special-placeholder = No SPECIAL data recorded.
 
 # Lifetime statistics panel (mob kills, deaths, rounds played)
@@ -16,11 +16,11 @@ character-info-history-label = Character History
 character-info-history-placeholder = No history recorded.
 
 # Dedicated SPECIAL window — title and Character Menu button label
-character-info-special-window-title = S.P.E.C.I.A.L.
-character-info-special-window-button = S.P.E.C.I.A.L.
+character-info-special-window-title = VAULT
+character-info-special-window-button = VAULT
 
 # Confirm SPECIAL allocation button (legacy key, kept for reference)
-character-info-special-confirm = Confirm S.P.E.C.I.A.L.
+character-info-special-confirm = Confirm VAULT
 
 # Apply button — initiates the confirmation step
 character-info-special-apply = Apply
@@ -29,7 +29,7 @@ character-info-special-apply = Apply
 character-info-special-reset = Reset
 
 # Warning shown during the confirmation step before permanently locking stats
-character-info-special-confirm-warning = Warning: this cannot be undone. Your S.P.E.C.I.A.L. will be permanently locked once applied.
+character-info-special-confirm-warning = Warning: this cannot be undone. Your VAULT allocation will be permanently locked once applied.
 
 # Confirm button inside the confirmation step
 character-info-special-confirm-yes = Confirm — Lock Stats
@@ -38,7 +38,7 @@ character-info-special-confirm-yes = Confirm — Lock Stats
 character-info-special-confirm-no = Go Back
 
 # Message shown instead of all buttons after the allocation has been permanently locked
-character-info-special-locked = S.P.E.C.I.A.L. is permanently locked. Allocation can no longer be changed.
+character-info-special-locked = VAULT is permanently locked. Allocation can no longer be changed.
 
 # Currency Wallet — window title (reuses wallet-label) and Character Menu button label
 character-info-wallet-label = Currency Wallet

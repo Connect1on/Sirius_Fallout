@@ -291,6 +291,12 @@ reagent-desc-daytripper = The perfect escape for your horrible life.
 reagent-name-fev = FEV
 reagent-desc-fev = A megavirus protected by a protein shell, strengthened with ionized hydrogen molecules.
 
+reagent-name-epoetine = epoetine
+reagent-desc-epoetine = A medicine that stimulates the lungs and encourages bloodflow.
+
+reagent-name-beta-epoetine = beta epoetine
+reagent-desc-beta-epoetine = A more potent medicine that stimulates the lungs and encourages bloodflow.
+
 # Meta
 reagent-name-movespeedmod-mixture = jet
 reagent-desc-movespeedmod-mixture = A mixture of reagents that makes you move fast.

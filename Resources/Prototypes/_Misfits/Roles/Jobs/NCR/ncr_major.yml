@@ -5,7 +5,7 @@
 
 - type: job
   id: NCRMajor
-  setPreference: true
+  setPreference: false # RETIRED — Major is now a rank pin earned via NCRCommander/NCRDoctor progression
   hideWithoutJobWhitelist: true   # Whitelist-only; only visible to whitelisted players
   hideIfPlaytimeRequirementsNotMet: false
   jobWhitelistBypassesRoleTimers: true

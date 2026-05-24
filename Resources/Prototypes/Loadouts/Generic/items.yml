@@ -723,13 +723,6 @@
     - CrayonBox
 
 - type: loadout
-  id: LoadoutItemBarberScissors
-  category: Items
-  cost: 4
-  items:
-    - BarberScissors
-
-- type: loadout
   id: LoadoutSolCommonTranslator
   category: Items
   cost: 3

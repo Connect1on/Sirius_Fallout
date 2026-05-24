@@ -212,6 +212,13 @@
   items:
     - N14ClothingBeltUtilityFilled
 
+- type: loadout
+  id: LoadoutItemBarberScissors
+  category: Items
+  cost: 2
+  items:
+    - BarberScissors
+
 # Food
 - type: loadout
   id: N14LoadoutFoodPorkBeans

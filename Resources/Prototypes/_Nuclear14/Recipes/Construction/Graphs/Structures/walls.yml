@@ -32,7 +32,7 @@
             - !type:EntityAnchored {}
           steps:
             - material: WoodPlank
-              amount: 4
+              amount: 8
               doAfter: 3
 
     - node: Frame
@@ -115,7 +115,7 @@
             - material: Steel
               amount: 10
               doAfter: 2
-  
+
         - to: SheetScrapWallTall
           completed:
             - !type:SnapToGrid
@@ -265,7 +265,7 @@
             - tool: Welding
               doAfter: 10
 
-    - node: BlueScrapWallTall 
+    - node: BlueScrapWallTall
       entity: N14WallScrapBlueTall
       edges:
         - to: start

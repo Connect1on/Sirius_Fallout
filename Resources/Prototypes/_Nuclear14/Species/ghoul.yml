@@ -5,14 +5,14 @@
   order: 1 # #Misfits Change: sort after Human
   prototype: N14MobGhoul
   sprites: N14MobGhoulSprites
-  markingLimits: MobGhoulMarkingLimits
+  markingLimits: MobGhoulAllHairMarkingLimits
   dollPrototype: N14MobGhoulDummy
   skinColoration: HumanToned
   minHeight: 0.937 # Corvax-Change
   maxHeight: 1.249 # Corvax-Change
   minWidth: 0.825 # Corvax-Change
   maxWidth: 1.05 # Corvax-Change
-  minAge: 200 # Corvax-Change
+  minAge: 18 # Corvax-Change
   oldAge: 250 # Corvax-Change
   maxAge: 300 # Corvax-Change
 # The lack of a layer means that
@@ -42,6 +42,53 @@
   id: MobGhoulMarkingLimits
   onlyWhitelisted: true # Forge-Change also removed unnecessary slots
   points:
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
+    Snout:
+      points: 1
+      required: false
+    Chest:
+      points: 1
+      required: false
+    RightLeg:
+      points: 2
+      required: false
+    RightFoot:
+      points: 2
+      required: false
+    LeftLeg:
+      points: 2
+      required: false
+    LeftFoot:
+      points: 2
+      required: false
+    RightArm:
+      points: 2
+      required: false
+    RightHand:
+      points: 2
+      required: false
+    LeftArm:
+      points: 2
+      required: false
+    LeftHand:
+      points: 2
+      required: false
+
+- type: markingPoints
+  id: MobGhoulAllHairMarkingLimits
+  onlyWhitelisted: false
+  points:
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
     Snout:
       points: 1
       required: false

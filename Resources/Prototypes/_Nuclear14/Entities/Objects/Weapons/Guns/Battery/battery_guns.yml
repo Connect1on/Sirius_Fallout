@@ -346,8 +346,8 @@
   components:
   - type: Wieldable
   - type: GunWieldBonus
-    minAngle: -24 # #Misfits Tweak - wielded spread 1°/5°; matches RCW
-    maxAngle: -55
+    minAngle: -23 # #Misfits Tweak - wielded spread 2°/13°; fast fire. fast spread.
+    maxAngle: -47
   - type: Sprite
     sprite: _Nuclear14/Objects/Weapons/Guns/Battery/laser_autorifle.rsi
     layers:
@@ -377,7 +377,7 @@
           tags:
             - N14MicrofusionCell
   - type: Gun
-    fireRate: 5
+    fireRate: 8
     soundGunshot:
       collection: N14LaserAutoRifleGunshot
     selectedMode: FullAuto
@@ -615,8 +615,8 @@
   components:
   - type: Wieldable
   - type: GunWieldBonus
-    minAngle: -25 # #Misfits Tweak - wielded spread 0°/4°; 0° min for rifles
-    maxAngle: -56
+    minAngle: -25 # #Misfits Tweak - wielded spread 0°/2°; 0° min for rifles
+    maxAngle: -58
   - type: Sprite
     sprite: _Nuclear14/Objects/Weapons/Guns/Battery/laser_rifle.rsi
     layers:
@@ -646,7 +646,7 @@
           tags:
             - N14MicrofusionCell
   - type: Gun
-    fireRate: 5
+    fireRate: 3
     soundGunshot:
       collection: N14LaserAutoRifleGunshot
     selectedMode: SemiAuto
@@ -799,7 +799,7 @@
     steps: 3
     zeroVisible: true
   - type: Gun
-    fireRate: 3
+    fireRate: 2
     soundGunshot:
       collection: N14PlasmaAutoRifleGunshot
     selectedMode: SemiAuto
@@ -848,7 +848,7 @@
           tags:
             - N14PlasmaCartridge
   - type: Gun
-    fireRate: 2.5
+    fireRate: 1.5
     soundGunshot:
       collection: N14PlasmaAutoRifleGunshot
     selectedMode: SemiAuto
@@ -899,7 +899,7 @@
     steps: 3
     zeroVisible: true
   - type: Gun
-    fireRate: 4
+    fireRate: 3
     soundGunshot:
       collection: N14PlasmaAutoRifleGunshot
     selectedMode: SemiAuto
@@ -1247,7 +1247,7 @@
     minAngle: -7 # #Misfits Tweak - wielded spread 1°/5°; rapid-fire weapons keep 1° minimum
     maxAngle: -20
   - type: Gun
-    fireRate: 5 #Misfits Change — reduced from 8; RCW is rapid-cycling but not a bullet hose, 5 keeps it distinctly auto without being oppressive
+    fireRate: 6 #Misfits Change — reduced from 8; RCW is rapid-cycling and accurate. But not as fast as a rotating barrel like the AER-9 auto
     minAngle: 8
     maxAngle: 25
     angleIncrease: 4

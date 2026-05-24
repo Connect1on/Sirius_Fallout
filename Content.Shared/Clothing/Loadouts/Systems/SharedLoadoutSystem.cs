@@ -1,6 +1,8 @@
 using System.Linq;
+using Content.Shared._Misfits.Special;
 using Content.Shared._NC.Sponsor; // Forge-Change
 using Content.Shared.Body.Systems;
+using Content.Shared.CCVar;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Customization.Systems;
@@ -87,8 +89,14 @@ public sealed class SharedLoadoutSystem : EntitySystem
         if (!job.SpawnLoadout)
             return (failedLoadouts, allLoadouts);
 
+        var remainingPoints = Math.Max(0, _configuration.GetCVar(CCVars.GameLoadoutsPoints)
+            + SharedSpecialSystem.GetCharismaLoadoutPointModifier(SpecialProfile.EnsureValid(profile.Special).Charisma));
+
         foreach (var loadout in profile.LoadoutPreferences)
         {
+            if (!loadout.Selected)
+                continue;
+
             var slot = "";
 
             // Ignore loadouts that don't exist
@@ -100,6 +108,11 @@ public sealed class SharedLoadoutSystem : EntitySystem
                 EntityManager, _prototype, _configuration, _sponsorManager, // Forge-Change
                 out _))
                 continue;
+
+            if (loadoutProto.Cost > remainingPoints)
+                continue;
+
+            remainingPoints -= loadoutProto.Cost;
 
             // Spawn the loadout items
             var spawned = EntityManager.SpawnEntities(

@@ -111,7 +111,7 @@ public sealed class WarcrySystem : EntitySystem
 
         foreach (var target in _targets)
         {
-            if (!IsValidTarget(target, component.TargetDepartment))
+            if (!IsValidTarget(target, component))
                 continue;
 
             var buff = EnsureComp<WarcryBuffComponent>(target);
@@ -172,7 +172,7 @@ public sealed class WarcrySystem : EntitySystem
         return component.ActivatorJobs.Contains(prototype.ID);
     }
 
-    private bool IsValidTarget(EntityUid uid, string departmentId)
+    private bool IsValidTarget(EntityUid uid, WarcryComponent component)
     {
         if (_mobState.IsDead(uid))
             return false;
@@ -186,6 +186,9 @@ public sealed class WarcrySystem : EntitySystem
         if (!_jobs.MindTryGetJob(mindId, out _, out var jobPrototype))
             return false;
 
-        return _jobs.TryGetDepartment(jobPrototype.ID, out var department) && department.ID == departmentId;
+        if (component.ExcludedJobs != null && component.ExcludedJobs.Contains(jobPrototype.ID))
+            return false;
+
+        return _jobs.TryGetDepartment(jobPrototype.ID, out var department) && department.ID == component.TargetDepartment;
     }
 }

@@ -18,7 +18,7 @@
   - Duffel
   - Satchel
   jobWhitelistUnlock: C27 # #Misfits Add (Phase G) - C27 job whitelist also unlocks species visibility
-  restrictedJobs: # #Misfits Add (Phase G) - C-27 chassis can only take the C27 job
+  restrictedJobs: # #Misfits Add (Phase G) - C-27 chassis can only take the generic C27 job
   - C27
   prototype: N14MobC27
   sprites: MobC27Sprites
@@ -116,9 +116,9 @@
   - Backpacks
   - Duffel
   - Satchel
-  jobWhitelistUnlock: C27
+  jobWhitelistUnlock: C27NCR
   restrictedJobs:
-  - C27
+  - C27NCR
   prototype: N14MobC27NCR
   sprites: MobC27Sprites
   markingLimits: MobC27MarkingLimitsNCR
@@ -153,9 +153,9 @@
   - Backpacks
   - Duffel
   - Satchel
-  jobWhitelistUnlock: C27
+  jobWhitelistUnlock: C27BoS
   restrictedJobs:
-  - C27
+  - C27BoS
   prototype: N14MobC27BoS
   sprites: MobC27Sprites
   markingLimits: MobC27MarkingLimitsBoS

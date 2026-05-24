@@ -429,10 +429,10 @@
 - type: entity
   parent: MisfitsSpawnPointNCRCadet
   id: MisfitsSpawnPointNCRSGT
-  name: NCR Sergeant
+  name: NCR NCO
   components:
   - type: SpawnPoint
-    job_id: NCRSGT
+    job_id: NCRNCO
   - type: Sprite
     layers:
       - state: green
@@ -441,10 +441,10 @@
 - type: entity
   parent: MisfitsSpawnPointNCRCadet
   id: MisfitsSpawnPointNCRCaptain
-  name: NCR Captain
+  name: NCR Commander
   components:
   - type: SpawnPoint
-    job_id: NCRCaptain
+    job_id: NCRCommander
   - type: Sprite
     layers:
       - state: green
@@ -453,10 +453,10 @@
 - type: entity
   parent: MisfitsSpawnPointNCRCadet
   id: MisfitsSpawnPointNCRLT
-  name: NCR Lieutenant
+  name: NCR Executive Officer
   components:
   - type: SpawnPoint
-    job_id: NCRLT
+    job_id: NCRExecutiveOfficer
   - type: Sprite
     layers:
       - state: green
@@ -735,6 +735,94 @@
   - type: SpawnPoint
     job_id: SyntheticRobobrain
 
+# Super mutant variant spawn points. These are placed by faction on Wendover so
+# aligned variants do not fall back to the generic FEV/supermutant area.
+- type: entity
+  parent: SpawnPointJobBase
+  id: MisfitsSpawnPointSuperMutant
+  name: super mutant
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutant
+  - type: Sprite
+    sprite: Corvax/Markers/jobs.rsi
+    layers:
+    - state: green
+
+- type: entity
+  parent: MisfitsSpawnPointSuperMutant
+  id: MisfitsSpawnPointSuperMutantGladiator
+  name: super mutant gladiator
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutantGladiator
+
+- type: entity
+  parent: MisfitsSpawnPointSuperMutant
+  id: MisfitsSpawnPointSuperMutantRanger
+  name: super mutant ranger
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutantRanger
+
+- type: entity
+  parent: MisfitsSpawnPointSuperMutant
+  id: MisfitsSpawnPointSuperMutantTrooper
+  name: super mutant trooper
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutantTrooper
+
+- type: entity
+  parent: MisfitsSpawnPointSuperMutant
+  id: MisfitsSpawnPointSuperMutantNCRRanger
+  name: super mutant NCR ranger
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutantNCRRanger
+
+- type: entity
+  parent: MisfitsSpawnPointSuperMutant
+  id: MisfitsSpawnPointSuperMutantNCRTrooper
+  name: super mutant NCR trooper
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutantNCRTrooper
+
+- type: entity
+  parent: MisfitsSpawnPointSuperMutant
+  id: MisfitsSpawnPointSuperMutantTribal
+  name: super mutant tribal
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutantTribal
+
+# Followers of the Apocalypse ranked spawn points. The base N14 marker is the
+# entry-level volunteer marker; these keep ranked roles at the Followers base.
+- type: entity
+  parent: N14SpawnPointFollowers
+  id: MisfitsSpawnPointFollowerDoctor
+  name: follower doctor
+  components:
+  - type: SpawnPoint
+    job_id: FollowerDoctor
+
+- type: entity
+  parent: N14SpawnPointFollowers
+  id: MisfitsSpawnPointFollowerHead
+  name: follower head
+  components:
+  - type: SpawnPoint
+    job_id: FollowerHead
+
+- type: entity
+  parent: N14SpawnPointFollowers
+  id: MisfitsSpawnPointSuperMutantFollowerDoctor
+  name: super mutant follower doctor
+  components:
+  - type: SpawnPoint
+    job_id: SuperMutantFollowerDoctor
+
 # #Misfits Removed - Khan spawn point deactivated; Khan job dissolved into Eighties department.
 # #Misfits Removed - Jackal, Viper, Gunner, Fiend spawn points removed as part of Outlaws faction overhaul.
 # #Misfits Removed - Old single-rank Eighties spawn point replaced by 5-rank spawners below.
@@ -896,13 +984,9 @@
   id: N14SpawnPointCaravanTrader
   name: caravan trader (legacy)
 
-# #Misfits Add - C-27 Autonomous Unit latejoin spawn point.
-# Single spawner for the whitelisted-only C27 job. Because the C27 job declares
-# CharacterSpeciesRequirement [C27, C27NCR, C27BoS] and hideWithoutWhitelist:true,
-# all non-C27 roles are inherently blocked from claiming this slot — only a
-# whitelisted player who picked one of the three C-27 species variants can spawn
-# here. The species variant determines which startingGear sub-gear is applied
-# (NCR kit + headset + dogtag, BoS kit + headset + holotag, or Generic = bare).
+# #Misfits Add - C-27 Autonomous Unit spawn point.
+# Generic, NCR, and Brotherhood C-27 jobs each get separate spawners so the map
+# can place them with the matching faction.
 - type: entity
   parent: SpawnPointJobBase
   id: MisfitsSpawnPointC27

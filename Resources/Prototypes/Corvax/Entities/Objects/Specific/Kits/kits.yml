@@ -100,12 +100,11 @@
     size: Huge
   - type: SpawnItemsOnUse
     items:
-      - id: N14WeaponShotgunLever
+      - id: N14WeaponRifle762Marksman
       - id: N14LegionnaireShield
       - id: ClothingBeltRope
-      - id: MagazineBox20gauge
-      - id: Bola
-        amount: 2
+      - id: Magazine762Rifle
+        amount: 3
       - id: BoxHandcuff
       - id: N14HealingPoultice #Misfits Change /Tweak/: replaces dirty stimpak, Legion uses tribal medicine
         amount: 2
@@ -157,8 +156,9 @@
     items:
       - id: N14SledgeHammer
       - id: ClothingBeltRope
-      - id: ThrowingKnife
-        amount: 3
+      - id: N14WeaponRifle556Carbine
+      - id: LongMagazine556Rifle
+        amount: 4
       - id: N14HealingPoultice #Misfits Change /Tweak/: Legion uses tribal medicine, not stimpaks
         amount: 2
       #- id: N14MedkitFilled #Misfits Change /Remove/: Legion does not use stimpak medkits

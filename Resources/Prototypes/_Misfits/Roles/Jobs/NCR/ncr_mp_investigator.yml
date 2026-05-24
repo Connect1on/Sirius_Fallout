@@ -1,6 +1,6 @@
 - type: job
   id: NCRMPinvestigator
-  setPreference: true
+  setPreference: false
   hideIfPlaytimeRequirementsNotMet: false # #Misfits Tweak - all jobs visible in selection
   jobWhitelistBypassesRoleTimers: true # #Misfits Change
   overrideConsoleVisibility: true
@@ -18,7 +18,7 @@
       department: NCR
       min: 216000 # 60 hours
     - !type:CharacterPlaytimeRequirement
-      tracker: NCROfficer
+      tracker: NCRExecutiveOfficer
       min: 216000 # 60 hours
   startingGear: NCRMPinvestigatorGear
   alwaysUseSpawner: true

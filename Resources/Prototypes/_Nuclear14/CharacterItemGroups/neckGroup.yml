@@ -51,3 +51,23 @@
       id: ClothingNeckScarfStripedBrown
     - type: loadout
       id: ClothingNeckScarfStripedBlue
+    - type: loadout
+      id: N14LoadoutUniversalNeckCloakBrotherhoodWashington
+    - type: loadout
+      id: N14LoadoutUniversalNeckCloakDarkCloak
+    - type: loadout
+      id: N14LoadoutUniversalNeckCloakLeather
+    - type: loadout
+      id: N14LoadoutUniversalNeckCloakYaoguai
+    - type: loadout
+      id: N14LoadoutUniversalNeckMantleBrotherhoodWashington
+    - type: loadout
+      id: N14LoadoutUniversalNeckMantleLeather
+    - type: loadout
+      id: N14LoadoutUniversalNeckShawl
+    - type: loadout
+      id: N14LoadoutUniversalNeckTownGuardCloak
+    - type: loadout
+      id: N14LoadoutUniversalNeckTribalCloak
+    - type: loadout
+      id: N14LoadoutUniversalNeckTribalCloakBr

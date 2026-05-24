@@ -95,6 +95,9 @@ namespace Content.Server.Construction
         // LEGACY CODE. See warning at the top of the file!
         private async Task<EntityUid?> Construct(EntityUid user, string materialContainer, ConstructionGraphPrototype graph, ConstructionGraphEdge edge, ConstructionGraphNode targetNode)
         {
+            if (!CanCraftWithIntelligence(user, true))
+                return null;
+
             // We need a place to hold our construction items!
             var container = _container.EnsureContainer<Container>(user, materialContainer, out var existed);
 
@@ -246,7 +249,7 @@ namespace Content.Server.Construction
                 return null;
             }
 
-            var doAfterArgs = new DoAfterArgs(EntityManager, user, doAfterTime, new AwaitedDoAfterEvent(), null)
+            var doAfterArgs = new DoAfterArgs(EntityManager, user, GetIntelligenceConstructionDelay(user, doAfterTime), new AwaitedDoAfterEvent(), null)
             {
                 BreakOnDamage = true,
                 BreakOnMove = true,

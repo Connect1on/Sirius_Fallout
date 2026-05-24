@@ -1,0 +1,21 @@
+﻿- type: accessLevel
+  id: 80s
+  name: id-card-access-level-80s
+
+- type: accessLevel
+  id: 80sHead
+  name: id-card-access-level-80s-head
+
+- type: accessGroup
+  id: 80s
+  tags:
+  - 80s
+
+- type: accessGroup
+  id: 80sHead
+  tags:
+  - 80s
+  - 80sHead
+
+
+# there are currently no ids with this access, remove this comment once this is done

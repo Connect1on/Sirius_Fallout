@@ -14,7 +14,7 @@
     range: 45
     volume: 1
   - type: UseDelay
-    delay: 5
+    delay: 30
 
 - type: entity
   parent: BaseWarhorn
@@ -33,7 +33,7 @@
     range: 45
     volume: 1
   - type: UseDelay
-    delay: 5
+    delay: 30
 
 - type: entity
   parent: BaseWarhorn
@@ -52,7 +52,7 @@
     range: 45
     volume: 1
   - type: UseDelay
-    delay: 5
+    delay: 30
 
 - type: entity
   parent: BaseWarhorn
@@ -71,4 +71,4 @@
     range: 45
     volume: 2
   - type: UseDelay
-    delay: 5
+    delay: 30

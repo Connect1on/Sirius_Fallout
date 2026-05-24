@@ -4,6 +4,8 @@ using Content.Server.Roles;
 using Content.Server.Roles.Jobs;
 using Content.Shared._Misfits.Currency.Components;
 using Content.Shared._Misfits.PlayerData.Components;
+using Content.Shared._Misfits.Special;
+using Content.Shared._Misfits.Special.Components;
 using Content.Shared.CharacterInfo;
 using Content.Shared.Objectives;
 using Content.Shared.Objectives.Components;
@@ -17,6 +19,7 @@ public sealed class CharacterInfoSystem : EntitySystem
     [Dependency] private readonly MindSystem _minds = default!;
     [Dependency] private readonly RoleSystem _roles = default!;
     [Dependency] private readonly SharedObjectivesSystem _objectives = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     public override void Initialize()
     {
@@ -63,6 +66,38 @@ public sealed class CharacterInfoSystem : EntitySystem
             specials = mind.AllSpecials.ToList();
         }
 
+        if (TryComp<SpecialComponent>(entity, out var specialComponent))
+        {
+            specials.Add(Loc.GetString("special-component-examine-character-strength",
+                ("base", _special.GetBase(entity, SpecialStat.Strength, specialComponent)),
+                ("modifier", _special.GetModifier(entity, SpecialStat.Strength, specialComponent)),
+                ("total", _special.GetEffective(entity, SpecialStat.Strength, specialComponent))));
+            specials.Add(Loc.GetString("special-component-examine-character-perception",
+                ("base", _special.GetBase(entity, SpecialStat.Perception, specialComponent)),
+                ("modifier", _special.GetModifier(entity, SpecialStat.Perception, specialComponent)),
+                ("total", _special.GetEffective(entity, SpecialStat.Perception, specialComponent))));
+            specials.Add(Loc.GetString("special-component-examine-character-endurance",
+                ("base", _special.GetBase(entity, SpecialStat.Endurance, specialComponent)),
+                ("modifier", _special.GetModifier(entity, SpecialStat.Endurance, specialComponent)),
+                ("total", _special.GetEffective(entity, SpecialStat.Endurance, specialComponent))));
+            specials.Add(Loc.GetString("special-component-examine-character-charisma",
+                ("base", _special.GetBase(entity, SpecialStat.Charisma, specialComponent)),
+                ("modifier", _special.GetModifier(entity, SpecialStat.Charisma, specialComponent)),
+                ("total", _special.GetEffective(entity, SpecialStat.Charisma, specialComponent))));
+            specials.Add(Loc.GetString("special-component-examine-character-intelligence",
+                ("base", _special.GetBase(entity, SpecialStat.Intelligence, specialComponent)),
+                ("modifier", _special.GetModifier(entity, SpecialStat.Intelligence, specialComponent)),
+                ("total", _special.GetEffective(entity, SpecialStat.Intelligence, specialComponent))));
+            specials.Add(Loc.GetString("special-component-examine-character-agility",
+                ("base", _special.GetBase(entity, SpecialStat.Agility, specialComponent)),
+                ("modifier", _special.GetModifier(entity, SpecialStat.Agility, specialComponent)),
+                ("total", _special.GetEffective(entity, SpecialStat.Agility, specialComponent))));
+            specials.Add(Loc.GetString("special-component-examine-character-luck",
+                ("base", _special.GetBase(entity, SpecialStat.Luck, specialComponent)),
+                ("modifier", _special.GetModifier(entity, SpecialStat.Luck, specialComponent)),
+                ("total", _special.GetEffective(entity, SpecialStat.Luck, specialComponent))));
+        }
+
         var evnt = new CharacterInfoEvent(GetNetEntity(entity), jobTitle, objectives, briefing, specials);
 
         // #Misfits Add - Attach persistent SPECIAL / stats / history if available
@@ -85,6 +120,19 @@ public sealed class CharacterInfoSystem : EntitySystem
                 HistoryLog      = new List<string>(playerData.HistoryLog),
                 StatsConfirmed  = playerData.StatsConfirmed,
             };
+        }
+
+        if (specialComponent != null)
+        {
+            evnt.PersistentStats ??= new CharacterPersistentStats();
+            evnt.PersistentStats.Strength = _special.GetBase(entity, SpecialStat.Strength, specialComponent);
+            evnt.PersistentStats.Perception = _special.GetBase(entity, SpecialStat.Perception, specialComponent);
+            evnt.PersistentStats.Endurance = _special.GetBase(entity, SpecialStat.Endurance, specialComponent);
+            evnt.PersistentStats.Charisma = _special.GetBase(entity, SpecialStat.Charisma, specialComponent);
+            evnt.PersistentStats.Intelligence = _special.GetBase(entity, SpecialStat.Intelligence, specialComponent);
+            evnt.PersistentStats.Agility = _special.GetBase(entity, SpecialStat.Agility, specialComponent);
+            evnt.PersistentStats.Luck = _special.GetBase(entity, SpecialStat.Luck, specialComponent);
+            evnt.PersistentStats.StatsConfirmed = true;
         }
 
         // #Misfits Add - Attach currency balance from PersistentCurrencyComponent

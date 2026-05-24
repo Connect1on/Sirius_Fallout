@@ -37,6 +37,13 @@
   jobWhitelistUnlock: SuperMutant # #Misfits Change: job whitelist for SuperMutant unlocks this species
   restrictedJobs: # #Misfits Change
   - SuperMutant
+  - SuperMutantGladiator
+  - SuperMutantRanger
+  - SuperMutantTrooper
+  - SuperMutantNCRRanger
+  - SuperMutantNCRTrooper
+  - SuperMutantTribal
+  - SuperMutantFollowerDoctor
   prototype: N14MobSuperMutant
   sprites: MobSuperMutantSprites
   markingLimits: MobSuperMutantMarkingLimits

@@ -1,6 +1,6 @@
 - type: job
   id: NCRSoldier
-  setPreference: true
+  setPreference: false # RETIRED — replaced by NCRCadet (NCR Trooper)
   hideIfPlaytimeRequirementsNotMet: false # #Misfits Tweak - all jobs visible in selection
   jobWhitelistBypassesRoleTimers: true # #Misfits Change
   weight: 20

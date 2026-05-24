@@ -175,7 +175,7 @@
   materials:
     Steel: 3500
 
-    Wood: 2500
+    Wood: 1500
 
     N14Iron: 500
 
@@ -191,7 +191,7 @@
   materials:
     Steel: 4000
 
-    Wood: 2000
+    Wood: 1500
 
     Glass: 500
 
@@ -223,11 +223,9 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 3500
+    Steel: 3000
 
     N14Iron: 700
-
-    N14Brass: 500
 
 
 - type: latheRecipe
@@ -241,7 +239,7 @@
   materials:
     Steel: 3500
 
-    Wood: 1500
+    Wood: 1000
 
     N14Iron: 500
 
@@ -287,7 +285,7 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 4000
+    Steel: 4500
 
     Wood: 2000
 
@@ -327,9 +325,9 @@
 
     Wood: 1500
 
-    N14Iron: 120
+    N14Iron: 300
 
-    N14Brass: 100
+    N14Brass: 200
 
 
 - type: latheRecipe
@@ -359,7 +357,7 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 6500
+    Steel: 6000
 
     Wood: 1500
 
@@ -407,11 +405,9 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 6000
+    Steel: 4500
 
-    N14Iron: 120
-
-    N14Brass: 150
+    N14Iron: 400
 
 
 - type: latheRecipe
@@ -423,9 +419,9 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 6000
+    Steel: 5000
 
-    N14Iron: 150
+    N14Iron: 350
 
     N14Brass: 150
 
@@ -439,7 +435,7 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 6000
+    Steel: 3500
 
     N14Iron: 120
 
@@ -455,7 +451,7 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 6000
+    Steel: 5000
 
     N14Iron: 120
 
@@ -526,11 +522,11 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 11500
+    Steel: 10500
 
     N14Iron: 270
 
-    Wood: 2500
+    Wood: 2000
 
     N14Brass: 250
 
@@ -600,7 +596,7 @@
 
     N14Iron: 370
 
-    N14Brass: 45
+    N14Brass: 50
 
     Circuitry: 150
 
@@ -727,11 +723,11 @@
   availableFaction:
   - NCR
   materials:
-    Cloth: 170
+    Cloth: 800
 
-    Thread: 120
+    Thread: 200
 
-    Leather: 70
+    Leather: 100
 
 
 - type: latheRecipe
@@ -743,11 +739,11 @@
   availableFaction:
   - NCR
   materials:
-    Cloth: 170
+    Cloth: 800
 
-    Thread: 120
+    Thread: 200
 
-    Leather: 70
+    Leather: 100
 
 
 - type: latheRecipe
@@ -759,11 +755,11 @@
   availableFaction:
   - NCR
   materials:
-    Cloth: 170
+    Cloth: 800
 
-    Thread: 120
+    Thread: 200
 
-    Leather: 70
+    Leather: 100
 
 
 - type: latheRecipe
@@ -796,7 +792,7 @@
   materials:
     Steel: 6000
 
-    Cloth: 2200
+    Cloth: 1000
 
     Thread: 150
 
@@ -813,13 +809,13 @@
   - NCR
   - Rangers
   materials:
-    Leather: 300
+    Leather: 200
 
     Cloth: 300
 
     Thread: 220
 
-    Steel: 4000
+    Steel: 4500
 
 
 - type: latheRecipe
@@ -838,7 +834,7 @@
 
     Thread: 220
 
-    Steel: 4500
+    Steel: 4000
 
 
 - type: latheRecipe
@@ -851,11 +847,13 @@
   - NCR
   - Rangers
   materials:
-    Leather: 250
+    Leather: 1000
 
-    Cloth: 250
+    Cloth: 750
 
     Thread: 170
+
+    Steel: 7000
 
 
 # --- NCR Tier 4 Armor ---
@@ -868,13 +866,13 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 11500
+    Steel: 8500
 
     Cloth: 320
 
     Thread: 200
 
-    Leather: 150
+    Leather: 350
 
     Circuitry: 100
 
@@ -2063,6 +2061,8 @@
 
     Thread: 700
 
+    Steel: 1000
+
 
 # --- Legion Tier 3 Armor ---
 - type: latheRecipe
@@ -2074,15 +2074,15 @@
   availableFaction:
   - CaesarLegion
   materials:
-    Leather: 300
+    Leather: 700
 
-    Steel: 3500
+    Steel: 4500
 
-    Cloth: 220
+    Cloth: 300
 
-    Thread: 170
+    Thread: 300
 
-    N14Iron: 100
+    N14Iron: 500
 
 
 - type: latheRecipe
@@ -2364,9 +2364,9 @@
   materials:
     Steel: 2500
 
-    N14Gunpowder: 50
+    N14Gunpowder: 200
 
-    N14Iron: 10
+    N14Iron: 100
 
 
 # #Misfits Add - T3 ammo parity: 7.62mm for SKS, and craftable dynamite (Legion explosive doctrine)
@@ -2395,11 +2395,11 @@
   availableFaction:
   - CaesarLegion
   materials:
-    N14Gunpowder: 60
+    N14Gunpowder: 100
 
-    Cloth: 10
+    Cloth: 100
 
-    N14Brass: 5
+    N14Iron: 100
 
 
 # #Misfits Add - 7.62mm ammo belt craftable for Legion M240B (Tier 3)
@@ -2469,7 +2469,7 @@
 
     N14Gunpowder: 1000
 
-    N14Iron: 270
+    N14Iron: 300
 
     Plastic: 150
 

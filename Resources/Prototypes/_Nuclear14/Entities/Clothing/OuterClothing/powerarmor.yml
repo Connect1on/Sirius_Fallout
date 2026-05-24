@@ -142,6 +142,8 @@
     sprite: _Misfits/Clothing/OuterClothing/PowerArmor/Mutant_PA.rsi
   - type: Clothing
     sprite: _Misfits/Clothing/OuterClothing/PowerArmor/Mutant_PA.rsi
+    equipDelay: 14400 # The Experimental X-01 Power armor is a living Tomb for whichever poor supermutant they put in it, so it takes the entire round to unequip/equip.
+    unequipDelay: 14400
   - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
@@ -151,6 +153,7 @@
         Heat: 0.70
         Caustic: 0.75
         Radiation: 0.6
+  - type: Unremoveable # This is your casket. Service garentees citizenship.
   - type: Tag
     tags:
     - SuperMutantWearable
@@ -475,7 +478,7 @@
   components:
   - type: PowerArmorIntegrity
     brokenBleedthroughRatio: 1.0  # #Misfits Add - when broken, only armor coefficients apply
-    maxIntegrity: 450 # #Misfits Tweak: By Bill, 450, a little better than T60.
+    maxIntegrity: 485 # #Misfits Tweak: Very slightly above standard T-51.
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/PowerArmor/midwestcommander.rsi
   - type: Clothing
@@ -483,12 +486,14 @@
   - type: Armor # #Misfits Tweak: Added Heat and Piercing coefficients — pre-reduces damage before integrity absorption so PA stays above Centurion/Vet.Ranger at all integrity levels.
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.70
-        Caustic: 0.75
-        Radiation: 0.6
+        Blunt: 0.695
+        Slash: 0.695
+        Piercing: 0.695
+        Heat: 0.695
+        Caustic: 0.745
+        Radiation: 0.595
+  - type: ExplosionResistance
+    damageCoefficient: 0.118 # #Misfits Tweak: Very slightly above standard T-51 blast resistance.
   - type: ToggleableClothing
     clothingPrototypes:
       head: N14ClothingHeadHelmetPowerArmorMidwestCommander

@@ -90,13 +90,14 @@
   name: job-name-supermutant-gladiator
   description: job-description-supermutant-gladiator
   playTimeTracker: SuperMutantGladiator
-  icon: JobIconBorg
-  supervisors: job-supervisors-supermutant
+  icon: JobIconLegionSlave
+  supervisors: job-supervisors-caesar-legion-slave
   canBeAntag: false
   setPreference: true
   overrideConsoleVisibility: true
   whitelisted: true # #Misfits Change
   hideWithoutWhitelist: true # #Misfits Change
+  showBorder: true
   spawnLoadout: true
   applyTraits: true # #Misfits Change - enable perks tab for Supermutants
   startingGear: SuperMutantGladiatorGear
@@ -111,6 +112,7 @@
         factions:
           - PlayerSuperMutant
           - CaesarLegion
+          - Wastelander
   - !type:AddTraitSpecial
     traits: [ LanguageLatin ]
 - type: startingGear
@@ -158,6 +160,7 @@
       - type: NpcFactionMember
         factions:
           - PlayerSuperMutant
+          - Wastelander
 
 - type: startingGear
   id: SuperMutantRangerGear
@@ -193,12 +196,15 @@
     - !type:CharacterSpeciesRequirement
       species:
         - SuperMutant
+  access:
+  - NCR
   special:
   - !type:AddComponentSpecial
     components:
       - type: NpcFactionMember
         factions:
           - PlayerSuperMutant
+          - Wastelander
 
 - type: startingGear
   id: SuperMutantTrooperGear
@@ -219,13 +225,14 @@
   name: job-name-supermutant-ncr-ranger
   description: job-description-supermutant-ncr-ranger
   playTimeTracker: SuperMutantNCRRanger
-  icon: JobIconBorg
+  icon: JobIconSecurityOfficer
   supervisors: job-supervisors-ncr-ranger
   canBeAntag: false
   setPreference: true
   overrideConsoleVisibility: true
   whitelisted: true
   hideWithoutWhitelist: true
+  showBorder: true
   spawnLoadout: true
   applyTraits: true
   startingGear: SuperMutantNCRRangerGear
@@ -243,7 +250,8 @@
       - type: NpcFactionMember
         factions:
           - PlayerSuperMutant  # keeps Loremaster/perk detection working
-          - NCR                # recognised as ally by NCR faction AI and tabs
+          - Rangers            # recognised as ally by NCR faction AI and tabs
+          - Wastelander
 
 - type: startingGear
   id: SuperMutantNCRRangerGear
@@ -269,13 +277,14 @@
   name: job-name-supermutant-ncr-trooper
   description: job-description-supermutant-ncr-trooper
   playTimeTracker: SuperMutantNCRTrooper
-  icon: JobIconBorg
+  icon: JobIconNcrSerg
   supervisors: job-supervisors-ncr
   canBeAntag: false
   setPreference: true
   overrideConsoleVisibility: true
   whitelisted: true
   hideWithoutWhitelist: true
+  showBorder: true
   spawnLoadout: true
   applyTraits: true
   startingGear: SuperMutantNCRTrooperGear
@@ -293,6 +302,7 @@
         factions:
           - PlayerSuperMutant  # keeps Loremaster/perk detection working
           - NCR                # recognised as ally by NCR faction AI and tabs
+          - Wastelander
 
 - type: startingGear
   id: SuperMutantNCRTrooperGear
@@ -316,8 +326,8 @@
   name: job-name-supermutant-tribal
   description: job-description-supermutant-tribal
   playTimeTracker: SuperMutantTribal
-  icon: JobIconBorg
-  supervisors: job-supervisors-ncr
+  icon: JobIconTribal
+  supervisors: job-supervisors-tribal
   canBeAntag: false
   setPreference: true
   access:
@@ -326,6 +336,7 @@
   overrideConsoleVisibility: true
   whitelisted: true
   hideWithoutWhitelist: true
+  showBorder: true
   spawnLoadout: true
   applyTraits: true
   startingGear: SuperMutantTribalGear
@@ -338,9 +349,9 @@
     components:
       - type: NpcFactionMember
         factions:
-          - Wastelander
-          - Tribal
-          - PlayerSuperMutant
+        - PlayerSuperMutant
+        - Wastelander
+        - Tribal
       - type: Warcry
         action: ActionTribalWarcry
         targetDepartment: Tribe
@@ -352,6 +363,8 @@
         warcryMessage: warcry-message-tribal
         warcryMessageCount: 6
         buffPopup: warcry-popup-buffed-tribal
+        excludedJobs:
+        - SuperMutantTribal
       - type: TribalHuntParticipant
         targetDepartment: Tribe
   - !type:AddTraitSpecial
@@ -360,6 +373,8 @@
 - type: startingGear
   id: SuperMutantTribalGear
   equipment:
+    hands: ClothingSuperMutantTribalGloves
+    head: ClothingSuperMutantSkullHelmetTribal
     jumpsuit: ClothingSuperMutantTribalLoincloth
     shoes: ClothingSuperMutantGladiatorBoots
     back: N14ClothingBackpackTrekker # Corvax-Change
@@ -388,8 +403,8 @@
   name: Supermutant Follower Doctor
   description: A SuperMutant trained in the ways of medicine.
   playTimeTracker: SuperMutantFollowerDoctor
-  icon: JobIconBorg
-  supervisors: job-supervisors-follower-head
+  icon: JobIconPassenger
+  supervisors: job-supervisors-follower-doctor
   accessGroups:
   - FollowersApocalypse
   - FotADoctor
@@ -399,6 +414,7 @@
   overrideConsoleVisibility: true
   whitelisted: true
   hideWithoutWhitelist: true
+  showBorder: true
   spawnLoadout: true
   applyTraits: true
   startingGear: SuperMutantFollowerDoctorGear
@@ -412,6 +428,7 @@
         - type: NpcFactionMember
           factions:
             - PlayerSuperMutant
+            - Wastelander
             - Followers
         - type: CPRTraining
         - type: Sanitized

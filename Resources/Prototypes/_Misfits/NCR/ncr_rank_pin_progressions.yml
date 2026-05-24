@@ -1,0 +1,122 @@
+# NCR Rank Pin Progressions
+# NCRRankPinSpawnSystem reads these at round start and places the appropriate pin
+# in the player's hand based on their playtime in the tracker or department.
+#
+# Tracker quick-reference (use with: playtime_addrole <user> <tracker> <time>)
+#   NCRCommander         — NCR Commander
+#   NCRMedicalDoctor     — NCR Medical Doctor
+#   NCRExecutiveOfficer  — NCR Executive Officer
+#   NCRPlatoonLeader     — NCR Platoon Leader
+#   NCRSquadLeader       — NCR Squad Leader (all 4 map slots share this tracker)
+#   NCREngineer          — NCR Engineer
+#   NCRMedic             — NCR Medic
+#   NCRWeaponSpecialist  — NCR Weapon Specialist
+#   NCRHeavyTrooper      — NCR Heavy Trooper
+#   NCRTrooper           — NCR Trooper
+
+# Command Officers: Captain (O-3) → Major (O-4) at 20h NCR dept time
+- type: ncrRankPinProgression
+  id: NCRCommandOfficerPins
+  jobs:
+    - NCRCommander
+  tracker: NCR
+  departmentTracker: true
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRCaptain
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRMajor
+
+# Medical Officers: Captain (O-3) → Major (O-4) at 20h
+- type: ncrRankPinProgression
+  id: NCRMedicalOfficerPins
+  jobs:
+    - NCRDoctor
+  tracker: NCRMedicalDoctor
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRCaptain
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRMajor
+
+# Junior Officers: 2LT (O-1) → 1LT (O-2) at 20h NCR dept time
+- type: ncrRankPinProgression
+  id: NCRJuniorOfficerPins
+  jobs:
+    - NCRExecutiveOfficer
+    - NCRPlatoonLeader
+  tracker: NCR
+  departmentTracker: true
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRSecondLieutenant
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRFirstlLieutenant
+
+# Squad Leaders: CPL (E-4) → SGT (E-5) at 20h → SSG (E-6) at 40h → SFC (E-7) at 60h
+# All 4 map slots share the NCRSquadLeader tracker so time accumulates across slots.
+- type: ncrRankPinProgression
+  id: NCRNCOPins
+  jobs:
+    - NCRNCO
+  tracker: NCRSquadLeader
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRCorporal
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRSergeant
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinNCRSergeant1st
+    - min: 216000  # 60 hours
+      entity: ClothingNeckPinNCRMasterSergeant
+
+# Medic: PFC (E-3) → SPC (E-4) at 20h NCR dept → SGT (E-5) at 40h
+- type: ncrRankPinProgression
+  id: NCRMedicPins
+  jobs:
+    - NCRMedic
+  tracker: NCRMedic
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRPrivate1st
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRSpecialist
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinNCRSergeant
+
+# Specialists: PV2 (E-2) → PFC (E-3) at 20h NCR dept → SPC (E-4) at 40h NCR dept
+- type: ncrRankPinProgression
+  id: NCRSpecialistPins
+  jobs:
+    - NCRWS
+    - NCREngineer
+    - NCRHeavyTrooper
+  tracker: NCR
+  departmentTracker: true
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRPrivate
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRPrivate1st
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinNCRSpecialist
+
+# Troopers: Recruit (E-1) → PV2 at 20h NCR dept → PFC at 40h NCR dept → SPC at 60h NCR dept
+- type: ncrRankPinProgression
+  id: NCRTrooperPins
+  jobs:
+    - NCRCadet
+  tracker: NCR
+  departmentTracker: true
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRRecruit
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRPrivate
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinNCRPrivate1st
+    - min: 216000  # 60 hours
+      entity: ClothingNeckPinNCRSpecialist

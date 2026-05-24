@@ -6,12 +6,14 @@ using Content.Client.Lobby.UI;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Client.Station;
 using Content.Shared.CCVar;
+using Content.Shared._Misfits.PowerArmor;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
 using Content.Shared.GameTicking;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences;
+using Content.Shared.Prototypes;
 using Content.Shared.Roles;
 using Content.Shared.Traits;
 using Robust.Client.Player;
@@ -274,6 +276,8 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
     /// Applies the specified job's clothes to the dummy.
     public void GiveDummyJobClothes(EntityUid dummy, JobPrototype job, HumanoidCharacterProfile profile)
     {
+        ApplyDummyJobPreviewComponents(dummy, job, profile);
+
         if (!_inventory.TryGetSlots(dummy, out var slots)
             || job.StartingGear == null)
             return;
@@ -299,7 +303,37 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
     /// Applies loadouts to the dummy.
     public void GiveDummyLoadout(EntityUid dummy, JobPrototype job, HumanoidCharacterProfile profile)
     {
+        ApplyDummyJobPreviewComponents(dummy, job, profile);
         _loadouts.ApplyCharacterLoadout(dummy, job, profile, _jobRequirements.GetRawPlayTimeTrackers(), _jobRequirements.IsWhitelisted(), out _);
+    }
+
+    private void ApplyDummyJobPreviewComponents(EntityUid dummy, JobPrototype job, HumanoidCharacterProfile profile)
+    {
+        if (JobStartingGearIncludesPowerArmor(job, profile))
+        {
+            EntityManager.EnsureComponent<PowerArmorProficiencyComponent>(dummy);
+            return;
+        }
+
+        EntityManager.RemoveComponent<PowerArmorProficiencyComponent>(dummy);
+    }
+
+    private bool JobStartingGearIncludesPowerArmor(JobPrototype job, HumanoidCharacterProfile profile)
+    {
+        if (job.StartingGear == null)
+            return false;
+
+        var gear = _prototypeManager.Index<StartingGearPrototype>(job.StartingGear);
+        gear = _stationSpawning.ApplySubGear(gear, profile, job);
+
+        foreach (var item in gear.Equipment.Values)
+        {
+            if (_prototypeManager.TryIndex<EntityPrototype>(item, out var prototype)
+                && prototype.HasComponent<N14PowerArmorComponent>())
+                return true;
+        }
+
+        return false;
     }
 
     /// Loads the profile onto a dummy entity

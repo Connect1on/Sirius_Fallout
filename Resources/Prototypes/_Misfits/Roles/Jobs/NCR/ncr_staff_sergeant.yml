@@ -1,6 +1,6 @@
 - type: job
   id: NCRStaffSergeant
-  setPreference: true
+  setPreference: false # RETIRED — SSG is now a rank pin earned through NCRSquadLeader progression
   hideIfPlaytimeRequirementsNotMet: false # #Misfits Tweak - all jobs visible in selection
   jobWhitelistBypassesRoleTimers: true # #Misfits Change
   weight: 60

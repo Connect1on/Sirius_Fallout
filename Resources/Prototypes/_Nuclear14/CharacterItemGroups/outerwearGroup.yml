@@ -69,6 +69,8 @@
       id: N14ClothingOuterdrylandersimple
     - type: loadout
       id: N14LoadoutOuterCoatLeatherJacketVault
+    - type: loadout # #Misfits Add - Head Paladin veteran power armor choice
+      id: MisfitsLoadoutBoSMidwestCommanderPowerArmor
     - type: loadout
       id: ClothingOuterCoatInspector
     - type: loadout
@@ -87,3 +89,20 @@
       id: N14ClothingOuterBosScribeVault
     - type: loadout
       id: N14ClothingOuterPoliceVestVault
+
+    - type: loadout
+      id: N14LoadoutUniversalOuterBlackRobes
+    - type: loadout
+      id: N14LoadoutUniversalOuterGhostEchoes
+    - type: loadout
+      id: N14LoadoutUniversalOuterLeatherRobes
+    - type: loadout
+      id: N14LoadoutUniversalOuterNCRCorrectional
+    - type: loadout
+      id: N14LoadoutUniversalOuterNCRDressJacket
+    - type: loadout
+      id: N14LoadoutUniversalOuterNCRDressJacketCO
+    - type: loadout
+      id: N14LoadoutUniversalOuterNCRQuartermaster
+    - type: loadout
+      id: N14LoadoutUniversalOuterRobeHubologist

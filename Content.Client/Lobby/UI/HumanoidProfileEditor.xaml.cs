@@ -20,6 +20,7 @@ using Content.Shared.GameTicking;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Content.Shared.StatusIcon;
@@ -140,6 +141,9 @@ namespace Content.Client.Lobby.UI
         private List<TraitPreferenceSelector> _traitPreferences = new();
         private int _traitCount;
         private HashSet<LoadoutPreferenceSelector> _loadoutPreferences = new();
+        private BoxContainer? _specialTab;
+        private BoxContainer? _specialRows;
+        private Label? _specialPointsLabel;
 
         private Direction _previewRotation = Direction.North;
         private ColorSelectorSliders _rgbSkinColorSelector;
@@ -149,6 +153,10 @@ namespace Content.Client.Lobby.UI
         private bool _customizeBorgName;
 
         public event Action<HumanoidCharacterProfile, int>? OnProfileChanged;
+
+        private int LoadoutPointBudget =>
+            Math.Max(0, _cfgManager.GetCVar(CCVars.GameLoadoutsPoints)
+                + SharedSpecialSystem.GetCharismaLoadoutPointModifier(SpecialProfile.EnsureValid(Profile?.Special).Charisma));
 
         [ValidatePrototypeId<GuideEntryPrototype>]
         private const string DefaultSpeciesGuidebook = "Species";
@@ -532,6 +540,13 @@ namespace Content.Client.Lobby.UI
 
             #endregion Appearance
 
+            #region SPECIAL
+
+            _specialTab = BuildSpecialTab();
+            CTabContainer.AddTab(_specialTab, Loc.GetString("humanoid-profile-editor-specials-tab"));
+
+            #endregion SPECIAL
+
             #region Jobs
 
             Jobs.Orphan();
@@ -767,8 +782,7 @@ namespace Content.Client.Lobby.UI
 
             _species.AddRange(_prototypeManager.EnumeratePrototypes<SpeciesPrototype>()
                 .Where(o => o.RoundStart)
-                .Where(o => !o.WhitelistRequired // #Misfits Change
-                    || (o.JobWhitelistUnlock != null && _requirements.IsJobWhitelisted(o.JobWhitelistUnlock.Value.Id))) // #Misfits Change
+                .Where(IsSpeciesAvailableForSelection) // #Misfits Change
                 .OrderBy(o => o.Order)); // #Misfits Change: sort by Order field
             var speciesIds = _species.Select(o => o.ID).ToList();
             var selectedSpeciesId = GetSpeciesSelectionSpeciesId(Profile?.Species);
@@ -791,6 +805,48 @@ namespace Content.Client.Lobby.UI
                 SetSpecies(SharedHumanoidAppearanceSystem.DefaultSpecies);
 
             SpeciesButton.Disabled = IsSpeciesLockedForProfile();
+        }
+
+        private bool IsSpeciesAvailableForSelection(SpeciesPrototype species)
+        {
+            if (IsSpeciesDirectlyAvailable(species))
+                return true;
+
+            // Model-family base species, such as C27, should remain visible if any
+            // hidden model variant is unlocked by its own job whitelist.
+            return RobotModelFamilies.TryGetValue(species.ID, out var options)
+                && options.Any(option => IsSpeciesDirectlyAvailable(option.SpeciesId));
+        }
+
+        private bool IsSpeciesDirectlyAvailable(string speciesId)
+        {
+            return _prototypeManager.TryIndex<SpeciesPrototype>(speciesId, out var species)
+                && IsSpeciesDirectlyAvailable(species);
+        }
+
+        private bool IsSpeciesDirectlyAvailable(SpeciesPrototype species)
+        {
+            return !species.WhitelistRequired
+                || (species.JobWhitelistUnlock != null && _requirements.IsJobWhitelisted(species.JobWhitelistUnlock.Value.Id));
+        }
+
+        private bool TryGetFirstAvailableModelSpecies(string baseSpeciesId, out string speciesId)
+        {
+            speciesId = baseSpeciesId;
+
+            if (!RobotModelFamilies.TryGetValue(baseSpeciesId, out var options))
+                return false;
+
+            foreach (var option in options)
+            {
+                if (!IsSpeciesDirectlyAvailable(option.SpeciesId))
+                    continue;
+
+                speciesId = option.SpeciesId;
+                return true;
+            }
+
+            return false;
         }
 
         private bool IsSpeciesLockedForProfile()
@@ -945,6 +1001,7 @@ namespace Content.Client.Lobby.UI
             UpdateHeightWidthSliders();
             UpdateWeight();
             UpdateCharacterRequired();
+            UpdateSpecialControls();
             UpdateRobotAppearanceFieldVisibility(); // #Misfits Add: keep robot-only field visibility consistent after profile load/reset.
             UpdateRobotModelSelector(); // #Misfits Add: keep Robot Model selector in sync after profile load/reset.
 
@@ -1606,12 +1663,22 @@ namespace Content.Client.Lobby.UI
             if (IsSpeciesLockedForProfile() && Profile?.Species != newSpecies)
                 return;
 
+            if (!_prototypeManager.TryIndex<SpeciesPrototype>(newSpecies, out var speciesProto))
+                return;
+
+            if (!IsSpeciesDirectlyAvailable(speciesProto))
+            {
+                if (!TryGetFirstAvailableModelSpecies(newSpecies, out newSpecies))
+                    return;
+
+                speciesProto = _prototypeManager.Index<SpeciesPrototype>(newSpecies);
+            }
+
             Profile = Profile?.WithSpecies(newSpecies);
 
             // #Misfits Add: if the species restricts to specific jobs, auto-set those jobs to High
             // so the character doesn't fall through to overflow spawn (Wastelander) when the server
             // strips all non-restricted job priorities via EnsureValid.
-            var speciesProto = _prototypeManager.Index<SpeciesPrototype>(newSpecies);
             if (speciesProto.RestrictedJobs is { Count: > 0 } && Profile != null)
             {
                 foreach (var restrictedJobId in speciesProto.RestrictedJobs)
@@ -1675,7 +1742,7 @@ namespace Content.Client.Lobby.UI
 
             // Check if the species itself is a base key in the dictionary.
             if (RobotModelFamilies.TryGetValue(Profile.Species, out var options))
-                return options;
+                return FilterAvailableModelOptions(options);
 
             // Otherwise check if it's a hidden variant in any family.
             foreach (var (_, familyOpts) in RobotModelFamilies)
@@ -1683,11 +1750,20 @@ namespace Content.Client.Lobby.UI
                 foreach (var (optId, _) in familyOpts)
                 {
                     if (optId == Profile.Species)
-                        return familyOpts;
+                        return FilterAvailableModelOptions(familyOpts);
                 }
             }
 
             return null;
+        }
+
+        private (string SpeciesId, string NameLocKey)[]? FilterAvailableModelOptions((string SpeciesId, string NameLocKey)[] options)
+        {
+            var available = options
+                .Where(option => IsSpeciesDirectlyAvailable(option.SpeciesId))
+                .ToArray();
+
+            return available.Length == 0 ? null : available;
         }
 
         // #Misfits Add: synthetic robots should not expose unsupported humanoid appearance fields.
@@ -2249,6 +2325,188 @@ namespace Content.Client.Lobby.UI
             ResetButton.Disabled = Profile is null || !IsDirty;
         }
 
+        private BoxContainer BuildSpecialTab()
+        {
+            var root = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+                Margin = new Thickness(10),
+                HorizontalExpand = true,
+                VerticalExpand = true,
+            };
+
+            _specialPointsLabel = new Label
+            {
+                HorizontalAlignment = HAlignment.Center,
+                Margin = new Thickness(0, 0, 0, 8),
+            };
+
+            _specialRows = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+                HorizontalExpand = true,
+            };
+
+            var scroll = new ScrollContainer
+            {
+                HorizontalExpand = true,
+                VerticalExpand = true,
+            };
+            scroll.AddChild(_specialRows);
+
+            root.AddChild(_specialPointsLabel);
+            root.AddChild(scroll);
+            return root;
+        }
+
+        private void UpdateSpecialControls()
+        {
+            if (_specialRows == null || _specialPointsLabel == null)
+                return;
+
+            _specialRows.RemoveAllChildren();
+
+            if (Profile == null)
+            {
+                _specialPointsLabel.Text = string.Empty;
+                return;
+            }
+
+            var special = SpecialProfile.EnsureValid(Profile.Special);
+            if (!special.MemberwiseEquals(Profile.Special))
+                Profile = Profile.WithSpecial(special);
+            _specialPointsLabel.Text = Loc.GetString(
+                "humanoid-profile-editor-special-points-label",
+                ("points", special.AvailablePoints),
+                ("max", SpecialProfile.BonusPoints));
+
+            foreach (var stat in SpecialStats.All)
+            {
+                _specialRows.AddChild(BuildSpecialRow(stat, special));
+            }
+        }
+
+        private Control BuildSpecialRow(SpecialStat stat, SpecialProfile special)
+        {
+            var panel = new PanelContainer
+            {
+                Margin = new Thickness(0, 0, 0, 4),
+            };
+            panel.StyleClasses.Add("BackgroundDark");
+
+            var root = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+                Margin = new Thickness(8, 6),
+                SeparationOverride = 3,
+                HorizontalExpand = true,
+            };
+
+            var topRow = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                HorizontalExpand = true,
+                SeparationOverride = 8,
+            };
+
+            var value = special.Get(stat);
+            var name = new Label
+            {
+                Text = Loc.GetString(GetSpecialNameLoc(stat)),
+                HorizontalExpand = true,
+                VerticalAlignment = VAlignment.Center,
+            };
+            name.StyleClasses.Add("LabelHeading");
+
+            var valueLabel = new Label
+            {
+                Text = value.ToString(),
+                MinWidth = 32,
+                Align = Label.AlignMode.Center,
+                VerticalAlignment = VAlignment.Center,
+            };
+
+            var minusButton = new Button
+            {
+                Text = "-",
+                MinWidth = 30,
+                Disabled = value <= SpecialProfile.Minimum,
+            };
+            minusButton.StyleClasses.Add("OpenRight");
+            minusButton.OnPressed += _ => SetSpecialValue(stat, value - 1);
+
+            var plusButton = new Button
+            {
+                Text = "+",
+                MinWidth = 30,
+                Disabled = value >= SpecialProfile.Maximum || special.AvailablePoints <= 0,
+            };
+            plusButton.StyleClasses.Add("OpenLeft");
+            plusButton.OnPressed += _ => SetSpecialValue(stat, value + 1);
+
+            topRow.AddChild(name);
+            topRow.AddChild(valueLabel);
+            topRow.AddChild(minusButton);
+            topRow.AddChild(plusButton);
+
+            root.AddChild(topRow);
+            root.AddChild(new Label
+            {
+                Text = Loc.GetString(GetSpecialDescriptionLoc(stat)),
+                Modulate = Color.FromHex("#AAAAAA"),
+                HorizontalExpand = true,
+            });
+
+            panel.AddChild(root);
+            return panel;
+        }
+
+        private void SetSpecialValue(SpecialStat stat, int value)
+        {
+            if (Profile == null)
+                return;
+
+            var special = Profile.Special.With(stat, value);
+            if (!special.IsValid)
+                return;
+
+            Profile = Profile.WithSpecial(special);
+            IsDirty = true;
+            UpdateSpecialControls();
+            RemoveSuperfluousLoadouts();
+            UpdateLoadoutPreferences();
+        }
+
+        private static string GetSpecialNameLoc(SpecialStat stat)
+        {
+            return stat switch
+            {
+                SpecialStat.Strength => "special-character-creation-strength",
+                SpecialStat.Perception => "special-character-creation-perception",
+                SpecialStat.Endurance => "special-character-creation-endurance",
+                SpecialStat.Charisma => "special-character-creation-charisma",
+                SpecialStat.Intelligence => "special-character-creation-intelligence",
+                SpecialStat.Agility => "special-character-creation-agility",
+                SpecialStat.Luck => "special-character-creation-luck",
+                _ => "special-character-creation-strength",
+            };
+        }
+
+        private static string GetSpecialDescriptionLoc(SpecialStat stat)
+        {
+            return stat switch
+            {
+                SpecialStat.Strength => "special-character-creation-description-strength",
+                SpecialStat.Perception => "special-character-creation-description-perception",
+                SpecialStat.Endurance => "special-character-creation-description-endurance",
+                SpecialStat.Charisma => "special-character-creation-description-charisma",
+                SpecialStat.Intelligence => "special-character-creation-description-intelligence",
+                SpecialStat.Agility => "special-character-creation-description-agility",
+                SpecialStat.Luck => "special-character-creation-description-luck",
+                _ => "special-character-creation-description-strength",
+            };
+        }
+
         private void RandomizeProfile()
         {
             Profile = HumanoidCharacterProfile.Random();
@@ -2726,7 +2984,7 @@ namespace Content.Client.Lobby.UI
 
         private void UpdateLoadoutPreferences()
         {
-            var points = _cfgManager.GetCVar(CCVars.GameLoadoutsPoints);
+            var points = LoadoutPointBudget;
             LoadoutPointsBar.Value = points;
             LoadoutPointsLabel.Text = Loc.GetString("humanoid-profile-editor-loadouts-points-label", ("points", points), ("max", points));
 
@@ -2772,7 +3030,7 @@ namespace Content.Client.Lobby.UI
             showUnusable ??= LoadoutsShowUnusableButton.Pressed;
 
             // Reset loadout points so you don't get -14 points or something for no reason
-            var points = _cfgManager.GetCVar(CCVars.GameLoadoutsPoints);
+            var points = LoadoutPointBudget;
             LoadoutPointsLabel.Text = Loc.GetString("humanoid-profile-editor-loadouts-points-label", ("points", points), ("max", points));
             LoadoutPointsBar.MaxValue = points;
             LoadoutPointsBar.Value = points;
@@ -3137,7 +3395,7 @@ namespace Content.Client.Lobby.UI
             if (Profile?.LoadoutPreferences == null)
                 return;
 
-            var points = _cfgManager.GetCVar(CCVars.GameLoadoutsPoints);
+            var points = LoadoutPointBudget;
             foreach (var pref in Profile.LoadoutPreferences
                 .Where(l => l.Selected)
                 .OrderByDescending(l => _prototypeManager.Index<LoadoutPrototype>(l.LoadoutName)?.Cost))

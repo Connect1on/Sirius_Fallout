@@ -41,6 +41,8 @@
         warcryMessage: warcry-message-tribal
         warcryMessageCount: 6
         buffPopup: warcry-popup-buffed-tribal
+        excludedJobs:
+        - SuperMutantTribal
       - type: TribalHuntParticipant
         targetDepartment: Tribe
       - type: TribalHuntLeader

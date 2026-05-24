@@ -74,20 +74,20 @@
     Plastic: 50
     Wood: 200
 
-- type: latheRecipe
-  id: N14WeaponSprayNozzle
-  result: WeaponSprayNozzle
-  category: N14Cleaning
-  completetime: 5
-  materials:
-    Steel: 1500
-    Glass: 500
+#- type: latheRecipe
+#  id: N14WeaponSprayNozzle
+#  result: WeaponSprayNozzle
+#  category: N14Cleaning
+#  completetime: 5
+#  materials:
+#    Steel: 1500
+#    Glass: 500
 
-- type: latheRecipe
-  id: N14ClothingBackpackWaterTank
-  result: ClothingBackpackWaterTank
-  category: N14Cleaning
-  completetime: 4
-  materials:
-    Steel: 250
-    Glass: 1000
+#- type: latheRecipe
+#  id: N14ClothingBackpackWaterTank
+#  result: ClothingBackpackWaterTank
+#  category: N14Cleaning
+#  completetime: 4
+#  materials:
+#    Steel: 250
+#    Glass: 1000

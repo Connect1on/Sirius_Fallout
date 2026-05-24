@@ -19,8 +19,8 @@ undecided-loadout-category-cadet-rifleman-description =
 
 undecided-loadout-category-cadet-storm-name = Cadet Stormtrooper Kit
 undecided-loadout-category-cadet-storm-description =
-    Includes 1 NCR leather vest, 1 NCR pouches bandolier, 1 varmit rifle,
-    1 5.56 box, 1 smoke grenade, 1 9mm pistol, 2 9mm pistol magazines,
+    Includes 1 NCR leather vest, 1 NCR pouches bandolier, 1 9mm SMG,
+    4 9mm SMG magazines, 1 smoke grenade,
     1 C ration MRE, 1 stimpak, 1 gauze pack, and 1 flare.
 
 undecided-loadout-category-cadet-scout-name = Cadet Scout Kit
@@ -33,15 +33,15 @@ undecided-loadout-category-cadet-scout-description =
 
 undecided-loadout-category-soldier-rifleman-name = Soldier Rifleman Kit
 undecided-loadout-category-soldier-rifleman-description =
-    Includes 1 NCR belt, 1 varmit rifle, 1 5.56 box,
+    Includes 1 NCR belt, 1 service rifle, 3 5.56 service rifle magazines,
     1 9mm pistol, 2 9mm pistol magazines, 1 C ration MRE,
     1 stimpak, 1 Rad-X pill, 1 gauze pack, and 1 flare.
 
 undecided-loadout-category-soldier-storm-name = Soldier Stormtrooper Kit
 undecided-loadout-category-soldier-storm-description =
-    Includes 1 NCR belt, 1 varmit rifle, 1 5.56 box, 1 Smoke Grenade
-    1 9mm pistol, 2 9mm pistol magazines, 1 C ration MRE,
-    1 stimpak, 1 gauze pack, and 1 flare.
+    Includes 1 NCR belt, 1 butchered service rifle,
+    4 5.56 service rifle magazines, 1 smoke grenade,
+    1 C ration MRE, 1 stimpak, 1 gauze pack, and 1 flare.
 
 undecided-loadout-category-soldier-scout-name = Soldier Scout Kit
 undecided-loadout-category-soldier-scout-description =
@@ -57,61 +57,63 @@ undecided-loadout-category-soldier-point-description =
 
 undecided-loadout-category-soldier-morale-name = Morale Booster Kit
 undecided-loadout-category-soldier-morale-description =
-    Includes 1 NCR plate armor, 1 plate mask, 1 NCR belt, 1 NCR spear flag, bugle,
-    1 pair of black biker gloves, 1 hatchet, 1 9mm pistol, 2 9mm pistol magazines,
+    Includes 1 NCR plate armor, 1 plate mask, 1 NCR belt, 1 NCR spear flag, 1 bugle,
+    1 pair of black biker gloves, 1 hatchet, 1 .45 Colt pistol, 3 .45 Colt magazines,
     1 Psycho, 1 C ration MRE, 1 stimpak, 1 Rad-X pill, 1 gauze pack, and 1 flare.
 
 # NCRA Engineer Kits
 
 undecided-loadout-category-engi-mechanic-name = Engineer Mechanic Kit
 undecided-loadout-category-engi-mechanic-description =
-    Includes 1 filled utility belt, 1 9mm SMG, 3 9mm SMG magazines,
-    1 9mm pistol, 2 9mm pistol magazines, scrap, 10 glass sheets, wood planks,
-    1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 flare.
+    Includes 1 filled utility belt, 1 butchered service rifle,
+    3 5.56 service rifle magazines, scrap, 10 glass sheets, wood planks,
+    1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 torch.
 
 undecided-loadout-category-engi-demo-name = Engineer Demolition Kit
 undecided-loadout-category-engi-demo-description =
-    Includes 1 NCR belt, 1 pump-action shotgun, 1 box of 12 gauge shells,
-    1 mechanical toolbox, 1 C4 charge, 1 ripper, 1 9mm pistol,
-    2 9mm pistol magazines, 1 C ration MRE, 1 stimpak,
-    1 RadAway blood bag, 1 gauze pack, and 1 flare.
+    Includes 1 NCR belt, 1 9mm SMG, 3 9mm SMG magazines,
+    1 short shotgun, 1 box of 12 gauge shells,
+    1 mechanical toolbox, 1 C4 charge, 1 ripper,
+    1 C ration MRE, 1 stimpak,
+    1 RadAway blood bag, 1 gauze pack, and 1 torch.
 
 undecided-loadout-category-engi-breach-name = Engineer Breacher Kit
 undecided-loadout-category-engi-breach-description =
     Includes 1 NCR belt, 1 combat shotgun, 3 12 gauge drum magazines,
     1 mechanical toolbox, 1 9mm pistol, 2 9mm pistol magazines,
-    1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 flare.
+    1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 torch.
 
 # NCRA Medic Kits
 
 undecided-loadout-category-med-surg-name = Medic Advanced Field Kit
 undecided-loadout-category-med-surg-description =
-    Includes 1 lab coat, 1 filled medical belt, 1 pair of nitrile gloves,
-    1 medic beret, 1 compact defibrillator, 1 9mm SMG, 3 9mm SMG magazines,
-    1 9mm pistol, 2 9mm pistol magazines, 1 super stimpak, 1 trauma pack,
-    1 ointment pack, 1 Med-X injector, 1 antidote bottle, 1 C ration MRE,
-    1 stimpak, 1 RadAway blood bag, 2 gauze packs, and 1 flare.
+    Includes 1 filled medical belt, 1 pair of nitrile gloves, 1 sterile mask,
+    1 filled surgery pack, 1 .45 Colt pistol, 2 .45 Colt magazines,
+    1 super stimpak, 1 stimpak, 1 ointment pack,
+    1 blood pack, 1 antidote, 1 C ration MRE,
+    1 RadAway blood bag, 2 gauze packs, and 1 torch.
 
 undecided-loadout-category-med-doc-name = Medic Field Kit
 undecided-loadout-category-med-doc-description =
-    Includes 1 filled medical belt, 1 pair of nitrile gloves, 1 medic beret,
-    2 smelling salts, 1 9mm SMG, 3 9mm SMG magazines, 1 9mm pistol,
-    2 9mm pistol magazines, 1 trauma pack, 1 ointment pack, 1 antidote bottle,
-    1 C ration MRE, 2 stimpaks, 1 RadAway blood bag, 2 gauze packs, and 1 flare.
+    Includes 1 filled medical belt, 1 NCR pouched vest, 1 pair of nitrile gloves,
+    1 medic beret, 2 smelling salts, 1 health analyzer,
+    1 9mm SMG, 3 9mm SMG magazines, 1 trauma pack,
+    1 ointment pack, 1 antidote bottle, 1 C ration MRE,
+    2 stimpaks, 1 RadAway blood bag, 2 gauze packs, and 1 flare.
 
 undecided-loadout-category-med-combat-name = NCR Combat Medic Kit
 undecided-loadout-category-med-combat-description =
-    Includes 1 filled medical belt, 1 pair of nitrile gloves, 1 medic metal helmet,
-    1 compact defibrillator, 1 9mm SMG with 3 magazines, 1 9mm pistol with 2 magazines,
-    1 super stimpak, 1 trauma pack, 1 ointment pack, 1 Med-X injector,
-    1 antidote syringe, 1 C ration MRE, 2 stimpaks,
-    1 RadAway blood bag, 2 gauze packs, and 1 flare.
+    Includes 1 NCR pouched desert vest, 1 medic metal helmet,
+    1 compact defibrillator, 1 service rifle with 4 magazines,
+    1 9mm pistol with 2 magazines, 1 filled combat medkit,
+    1 C ration MRE, 2 stimpaks,
+    1 RadAway blood bag, 2 gauze packs, and 1 torch.
 
 # NCRA Weapon Specialist Kits
 
 undecided-loadout-category-ws-gunner-name = Specialist heavy sniper Kit
 undecided-loadout-category-ws-gunner-description =
-    Includes 1 NCR belt, 1 metal helmet, 1 NCR cloak, 1 NCR .50 rifle,
+    Includes 1 NCR belt, 1 recon beret, 1 NCR cloak, 1 NCR .50 rifle,
     1 box of .50, 1 9mm pistol, 2 9mm pistol magazines,
     1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 flare.
 
@@ -131,33 +133,33 @@ undecided-loadout-category-ws-sniper-description =
 undecided-loadout-category-ws-stealth-name = Specialist Infiltrator Kit
 undecided-loadout-category-ws-stealth-description =
     Includes 1 dark NCR vest coat, 1 black balaclava, 1 NCR belt,
-    1 suppressed 9mm SMG, 3 9mm SMG magazines, 1 9mm pistol,
-    2 9mm pistol magazines, 1 C ration MRE, 1 stimpak,
+    1 pair of night-vision goggles, 1 suppressed 9mm SMG,
+    4 9mm SMG magazines, 1 C ration MRE, 1 stimpak,
     1 RadAway blood bag, 1 gauze pack, and 1 flare.
 
 # NCRA Sergeant Kits
 
 undecided-loadout-category-sgt-rifleman-name = Sergeant Rifleman Kit
 undecided-loadout-category-sgt-rifleman-description =
-    Includes 1 metal helmet, 1 NCR belt, 1 sergeant pin, 1 assault carbine,
+    Includes 1 metal helmet, 1 NCR belt, 1 assault carbine,
     3 long carbine magazines, 1 9mm pistol, 2 9mm pistol magazines,
     1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 flare.
 
 undecided-loadout-category-sgt-gunner-name = Sergeant Gunner Kit
 undecided-loadout-category-sgt-gunner-description =
-    Includes 1 metal helmet, 1 NCR belt, 1 sergeant pin, 1 auto rifle,
-    3 .308 rifle magazines, 1 9mm pistol, 2 9mm pistol magazines,
+    Includes 1 metal helmet, 1 NCR belt, 1 light machine gun,
+    3 LMG magazines (5.56), 1 9mm pistol, 2 9mm pistol magazines,
     1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 flare.
 
 undecided-loadout-category-sgt-scout-name = Sergeant Scout Kit
 undecided-loadout-category-sgt-scout-description =
-    Includes 1 recon beret, 1 NCR belt, 1 sergeant pin, 1 battle rifle,
+    Includes 1 recon beret, 1 NCR belt, 1 battle rifle,
     6 .308 clips, 1 9mm pistol, 2 9mm pistol magazines,
     1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 flare.
 
 undecided-loadout-category-sgt-point-name = Sergeant Pointman Kit
 undecided-loadout-category-sgt-point-description =
-    Includes 1 metal helmet, 1 NCR belt, 1 sergeant pin, 1 combat shotgun,
+    Includes 1 metal helmet, 1 NCR belt, 1 combat shotgun,
     3 12 gauge drum magazines, 1 9mm pistol, 2 9mm pistol magazines,
     1 C ration MRE, 1 stimpak, 1 RadAway blood bag, 1 gauze pack, and 1 flare.
 
@@ -166,7 +168,7 @@ undecided-loadout-category-sgt-point-description =
 undecided-loadout-category-lt-pencil-name = LT's Pencilpusher Kit
 undecided-loadout-category-lt-pencil-description =
     Includes 1 NCR trench coat, 1 loaded captain's revolver belt,
-    1 lever-action carbine, 1 luxury pen, 1 C ration MRE,
+    1 lever-action carbine, 1 box of .44 ammo, 1 luxury pen, 1 C ration MRE,
     1 stimpak, 1 super stimpak, 1 RadAway blood bag, 2 gauze packs, and 1 flare.
 
 undecided-loadout-category-lt-scout-name = LT's Veteran Scout Kit
@@ -177,7 +179,7 @@ undecided-loadout-category-lt-scout-description =
 
 undecided-loadout-category-lt-tactical-name = LT's Tactical Kit
 undecided-loadout-category-lt-tactical-description =
-    Includes 1 NCR combat armor, 1 loaded revolver belt, 1 assault carbine,
+    Includes 1 NCR officer armor, 1 loaded revolver belt, 1 assault carbine,
     3 long carbine magazines, 1 C ration MRE, 1 stimpak,
     1 super stimpak, 1 RadAway blood bag, 2 gauze packs, and 1 flare.
 
@@ -277,9 +279,9 @@ undecided-loadout-category-mbos-kni-bal-description =
 undecided-loadout-category-mbos-scribe-medic-name = Medical Kit
 undecided-loadout-category-mbos-scribe-medic-description =
     A cache containing belongings of a Brotherhood chapter member.
-    Includes 1 pair of nitrile gloves,
-    1 medical robe, 1 filled medical belt, 1 stack of ointment, 1
-    super stimpak, 1 sterile mask, 1 roll of gauze, and 1 K ration MRE.
+    Includes 1 pair of chemist gloves, 1 medical robe, 1 filled medical belt,
+    1 health analyzer, 1 stack of ointment, 1 super stimpak,
+    1 sterile mask, 1 roll of gauze, and 1 K ration MRE.
 
 #Misfits Tweak: Removed rank prefix so the kit name is role-neutral.
 undecided-loadout-category-mbos-scribe-field-name = Field Kit
@@ -293,8 +295,8 @@ undecided-loadout-category-mbos-scribe-field-description =
 undecided-loadout-category-mbos-scribe-engineer-name = Engineer Kit
 undecided-loadout-category-mbos-scribe-engineer-description =
     A cache containing belongings of a Brotherhood chapter member.
-    Includes 1 pair of insulated gloves,
-    1 quilted armor, 1 filled utility belt, 1 stack of ointment,
+    Includes 1 pair of work gloves, 1 Brotherhood field coat,
+    1 filled utility belt, 1 stack of ointment,
     1 welding goggles, 1 roll of gauze, and 1 K ration MRE.
 
 #Misfits Change /Tweak/: Paladin laser kit replaced with auto shotgun + laser pistol sidearm.
@@ -473,13 +475,15 @@ undecided-loadout-category-town-lawb-description =
 undecided-loadout-category-town-brea-name = Breacher Kit
 undecided-loadout-category-town-brea-description =
     Only when you don't have to worry about friendly fire!
-    Includes 1 blowback shotgun, 1 box of 12 gauge shells,
+    Includes 1 visor brodie helmet, 1 riot armor,
+    1 blowback shotgun, 1 box of 12 gauge shells,
     1 Webley pistol, 2 9mm pistol mags,
     1 stack of gauze and basic ration supplies.
 
 undecided-loadout-category-town-riot-name = Riot Control Kit
 undecided-loadout-category-town-riot-description =
     Let me solo them! I mean send them home, peacefully!
-    Includes 1 spear, 1 heavy metal shield, 1 hunting revolver,
-    2 .45-70 speedloaders, 1 old cloak, 1 stack of gauze,
+    Includes 1 visor brodie helmet, 1 riot armor,
+    1 spear, 1 heavy metal shield, 1 hunting revolver,
+    2 .45-70 speedloaders, 1 town guard cloak, 1 stack of gauze,
     and basic ration supplies.

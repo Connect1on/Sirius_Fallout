@@ -31,7 +31,14 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
+  - type: UserInterface
+    interfaces:
+      enum.ToggleClothingUiKey.Key:
+        type: ToggleableClothingBoundUserInterface
   - type: ToggleableClothing
+    requiredSlot: outerClothing
+    blockUnequipWhenAttached: true
+    replaceCurrentClothing: false
     clothingPrototypes:
       head: N14ClothingHeadHatLegionpa
       gloves: N14ClothingPAGauntlets
@@ -67,8 +74,8 @@
       params:
         volume: -6
     requiresWorn: true
-    distanceWalking: 2
-    distanceSprinting: 3
+    distanceWalking: 3
+    distanceSprinting: 4
       # #Misfits Tweak - Disable brace stance (servos stripped); slot mismatch prevents action from being granted.
   - type: PowerArmorBrace
     requiredSlot: BELT

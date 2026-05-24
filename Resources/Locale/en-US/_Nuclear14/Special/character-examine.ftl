@@ -6,8 +6,8 @@ special-appearance-component-examine-charisma-high = { CAPITALIZE(SUBJECT($user)
 special-appearance-component-examine-charisma-very-high = { CAPITALIZE(SUBJECT($user)) } seems suave.
 
 # Examine all special modifiers
-special-examinable-component-examine-text = Special
-special-examinable-verb-message = Examine Special values
+special-examinable-component-examine-text = SPECIAL
+special-examinable-verb-message = Examine SPECIAL values
 
 special-appearance-component-examine-strength = Strength is {$value}.
 special-appearance-component-examine-perception = Perception is {$value}.
@@ -19,8 +19,8 @@ special-appearance-component-examine-luck = Luck is {$value}.
 
 
 # Examine in character screen
-character-info-special-label = S.P.E.C.I.A.L
-character-info-special-placeholder-text = Special values
+character-info-special-label = SPECIAL
+character-info-special-placeholder-text = SPECIAL values
 special-component-examine-character-strength = Strength is {$base} + {$modifier} = {$total}
 special-component-examine-character-perception = Perception is {$base} + {$modifier} = {$total}
 special-component-examine-character-endurance = Endurance is {$base} + {$modifier} = {$total}

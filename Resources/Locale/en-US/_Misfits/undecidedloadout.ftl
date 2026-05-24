@@ -254,8 +254,8 @@ undecided-loadout-category-corvax-legate-imperator-description =
 
 undecided-loadout-category-corvax-centurion-command-name = Centurion Command
 undecided-loadout-category-corvax-centurion-command-description =
-    Includes a lever shotgun, a Legion shield, a rope belt,
-    a box of 20 gauge ammo, 2 bolas, a handcuff box,
+    Includes a Marksman rifle, a Legion shield, a rope belt,
+    3 magazines of 7.62, 2 bolas, a handcuff box,
     2 healing poultice, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-centurion-marksman-name = Centurion Marksman
@@ -266,7 +266,7 @@ undecided-loadout-category-corvax-centurion-marksman-description =
 
 undecided-loadout-category-corvax-centurion-vanquisher-name = Centurion Vanquisher
 undecided-loadout-category-corvax-centurion-vanquisher-description =
-    Includes a sledgehammer, a rope belt, 3 throwing knives,
+    Includes a sledgehammer, a rope belt, an Assault Carbine, 4 mags of 5.56,
     2 healing pooultice, 2 K rations, and a ceramic flask.
 
 # #Misfits Add - Centurion armor selection kit locale strings (for LegionCenturionArmorloadoutkits)
@@ -286,6 +286,31 @@ undecided-loadout-category-misfits-centurion-armor-ranger-hunter-description =
     Armor field-modified with NCR Ranger ballistic inserts and fire-retardant lining.
     Paired with a refit NCR ranger helmet bearing the Legion bull.
     High bullet/fire/bio resistance. Weak against energy and melee.
+
+undecided-loadout-category-misfits-centurion-armor-warforged-name = Centurion Armor: Warforged
+undecided-loadout-category-misfits-centurion-armor-warforged-description =
+    Armor used by Centurions who have seen countless battles, and lived to tell the tale.
+    Paired with a matching helmet. High overall durability from veteran experience.
+
+undecided-loadout-category-misfits-centurion-armor-warlord-name = Centurion Armor: Warlord
+undecided-loadout-category-misfits-centurion-armor-warlord-description =
+    Armor for a Centurion who has single-handedly won wars.
+    Paired with a matching helmet. Extremely high protection and prestige.
+
+undecided-loadout-category-misfits-centurion-armor-cinder-name = Centurion Armor: Cinder
+undecided-loadout-category-misfits-centurion-armor-cinder-description =
+    Armor forged in the ashes of fallen legionnaires.
+    Paired with a matching helmet. Carries the weight of sacrificed warriors.
+
+undecided-loadout-category-misfits-centurion-armor-salt-column-name = Centurion Armor: Salt Column
+undecided-loadout-category-misfits-centurion-armor-salt-column-description =
+    Armor made for the Centurion of the Salt Column.
+    Paired with a matching helmet. Unique regimental pattern and decorations.
+
+undecided-loadout-category-misfits-centurion-armor-unbroken-name = Centurion Armor: Unbroken
+undecided-loadout-category-misfits-centurion-armor-unbroken-description =
+    Armor for a Centurion who refuses to stay dead.
+    Paired with a matching helmet. Reinforced and patched from countless battles.
 
 undecided-loadout-category-corvax-venator-marksman-name = Venator Marksman
 undecided-loadout-category-corvax-venator-marksman-description =
@@ -639,25 +664,24 @@ undecided-loadout-category-misfits-ncra-corporal-patrol-description =
 
 undecided-loadout-category-misfits-ncra-staff-sergeant-line-name = Staff Sergeant Linebreaker Kit
 undecided-loadout-category-misfits-ncra-staff-sergeant-line-description =
-    Includes NCR combat armor, an NCR belt,
-    a sergeant first class pin, a battle rifle with 6 clips,
-    a 9mm pistol with 2 magazines, a handheld radio,
-    a smoke grenade, a C ration MRE, a stimpak,
-    a super stimpak, a RadAway blood bag,
+    Includes an NCR belt, a battle rifle with 6 clips,
+    a 9mm pistol with 2 magazines,
+    a handheld radio, a smoke grenade, a C ration MRE,
+    a stimpak, a super stimpak, a RadAway blood bag,
     a gauze pack, and a flare.
 
 undecided-loadout-category-misfits-ncra-first-sergeant-veteran-name = Sergeant First Class Veteran Kit
 undecided-loadout-category-misfits-ncra-first-sergeant-veteran-description =
     Includes an NCR trench coat, a loaded revolver belt,
-    a master sergeant pin, a 5.56 carbine with 3 mags,
+    a 5.56 carbine with 3 mags,
     a handheld radio, 2 smoke grenades, a stick of dynamite,
     a C ration MRE, a stimpak, a super stimpak,
     a RadAway blood bag, 2 gauze packs, and a flare.
 
 undecided-loadout-category-misfits-ncra-captain-command-name = Captain Command Kit
 undecided-loadout-category-misfits-ncra-captain-command-description =
-    Includes NCR combat armor, a loaded captain's revolver belt,
-    a captain pin, a battle rifle with 6 clips,
+    Includes NCR officer armor, a loaded captain's revolver belt,
+    a battle rifle with 6 clips,
     a handheld radio, 2 smoke grenades, a stick of dynamite,
     a C ration MRE, a stimpak, 2 super stimpaks,
     a RadAway blood bag, 2 gauze packs, and a flare.
@@ -665,18 +689,19 @@ undecided-loadout-category-misfits-ncra-captain-command-description =
 undecided-loadout-category-misfits-ncra-captain-marksman-name = Captain Frontier Marksman Kit
 undecided-loadout-category-misfits-ncra-captain-marksman-description =
     Includes an NCR trench coat, a loaded captain's revolver belt,
-    a captain pin, Republic's Pride with 4 en-bloc clips,
+    Republic's Pride with 4 en-bloc clips,
     a handheld radio, a smoke grenade, a C ration MRE,
     a stimpak, a super stimpak, a RadAway blood bag,
     2 gauze packs, and a flare.
 
 undecided-loadout-category-misfits-ncra-captain-service-rifle-name = Captain Field Officer Kit
 undecided-loadout-category-misfits-ncra-captain-service-rifle-description =
-    Includes NCR combat armor, an NCR belt,
-    a captain pin, a scoped service rifle with 6 magazines,
+    Includes NCR officer armor, an NCR belt,
+    a scoped service rifle with 6 magazines,
     a 9mm pistol with 3 magazines, a handheld radio,
     2 smoke grenades, a stick of dynamite, a C ration MRE,
     a stimpak, 2 super stimpaks, a RadAway blood bag,
+    2 gauze packs, and a flare.
 
 # C-27 Humanoid Robot armor selection kit sets. #Misfits Add
 # Names and descriptions for the UndecidedLoadoutBackpackSet prototypes in c27_loadout_kits.yml.
@@ -738,17 +763,18 @@ c27-armor-set-bos-heavy-description =
     Maximum-density Brotherhood-variant C-27 plating.
     Power-heavy protection in the service of the Brotherhood.
     Includes heavy Brotherhood outer armor and matching helm sensor unit.
-    2 gauze packs, and a flare.
 
 undecided-loadout-category-misfits-priestess-healing-name = Priestess of Restoration
 undecided-loadout-category-misfits-priestess-healing-desc =
     Keep the Legion healthy until medical production is up.
-    4 Smelling Salts, 2 Bitter Drinks, 2 Poultices, 2 Powders.
-    2 Hydras, 3 bandages, and a medical belt.
+    4 Smelling Salts, 1 health analyzer, 2 Bitter Drinks,
+    2 Poultices, 2 Powders, 2 Hydras, 3 bandages,
+    a medical belt, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-misfits-priestess-order-name = Priestess of Order
 undecided-loadout-category-misfits-priestess-order-desc =
     Run the camp with an iron fist.
     A sawed off shotgun with a box of beanbag shells.
-    2 Bolas, a box of handcuffs and a muzzle.
-    2 Collars, with keys, and a police baton.
+    2 Bolas, a box of handcuffs, 2 muzzles.
+    2 Collars, with keys, a police baton,
+    2 K rations, and a ceramic flask.

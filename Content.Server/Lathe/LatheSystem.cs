@@ -10,6 +10,8 @@ using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Stack;
 using Content.Shared.Atmos;
+using Content.Shared._Misfits.Special;
+using Content.Shared._Misfits.Special.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reagent;
@@ -55,6 +57,7 @@ namespace Content.Server.Lathe
         [Dependency] private readonly PopupSystem _popup = default!;
         [Dependency] private readonly PuddleSystem _puddle = default!;
         [Dependency] private readonly ReagentSpeedSystem _reagentSpeed = default!;
+        [Dependency] private readonly SharedSpecialSystem _special = default!;
         [Dependency] private readonly SharedSolutionContainerSystem _solution = default!;
         [Dependency] private readonly StackSystem _stack = default!;
         [Dependency] private readonly TransformSystem _transform = default!;
@@ -76,6 +79,7 @@ namespace Content.Server.Lathe
             SubscribeLocalEvent<LatheComponent, LatheQueueRecipeMessage>(OnLatheQueueRecipeMessage);
             SubscribeLocalEvent<LatheComponent, LatheSyncRequestMessage>(OnLatheSyncRequestMessage);
 
+            SubscribeLocalEvent<LatheComponent, ActivatableUIOpenAttemptEvent>(OnLatheOpenAttempt);
             SubscribeLocalEvent<LatheComponent, BeforeActivatableUIOpenEvent>((u, c, _) => UpdateUserInterfaceState(u, c));
             SubscribeLocalEvent<LatheComponent, MaterialAmountChangedEvent>(OnMaterialAmountChanged);
             SubscribeLocalEvent<LatheComponent, EntInsertedIntoContainerMessage>(OnStorageContainerModified);
@@ -212,7 +216,7 @@ namespace Content.Server.Lathe
             return component.StaticRecipes.Union(component.DynamicRecipes).ToList();
         }
 
-        public bool TryAddToQueue(EntityUid uid, LatheRecipePrototype recipe, LatheComponent? component = null)
+        public bool TryAddToQueue(EntityUid uid, LatheRecipePrototype recipe, LatheComponent? component = null, EntityUid? actor = null)
         {
             if (!Resolve(uid, ref component))
                 return false;
@@ -230,6 +234,7 @@ namespace Content.Server.Lathe
                     return false;
             }
             component.Queue.Add(recipe);
+            component.QueueActors.Add(actor);
 
             return true;
         }
@@ -243,8 +248,15 @@ namespace Content.Server.Lathe
 
             var recipe = component.Queue.First();
             component.Queue.RemoveAt(0);
+            EntityUid? actor = null;
+            if (component.QueueActors.Count > 0)
+            {
+                actor = component.QueueActors[0];
+                component.QueueActors.RemoveAt(0);
+            }
 
             var time = _reagentSpeed.ApplySpeed(uid, recipe.CompleteTime) * component.TimeMultiplier;
+            time = GetIntelligenceLatheProductionTime(actor, time);
 
             var lathe = EnsureComp<LatheProducingComponent>(uid);
             lathe.StartTime = _timing.CurTime;
@@ -514,6 +526,13 @@ namespace Content.Server.Lathe
             // #Misfits Add: Debug logging for blueprint crafting pipeline
             Log.Info($"LatheQueueRecipe: actor={args.Actor}, recipe={args.ID}, qty={args.Quantity}");
 
+            if (!CanUseLatheWithIntelligence(args.Actor))
+            {
+                _popup.PopupEntity(Loc.GetString("construction-system-construct-too-low-intelligence"), uid, args.Actor);
+                UpdateUserInterfaceState(uid, component);
+                return;
+            }
+
             if (_proto.TryIndex(args.ID, out LatheRecipePrototype? recipe))
             {
                 // Convert raw material entities in storage into the material pool before queuing.
@@ -523,7 +542,7 @@ namespace Content.Server.Lathe
                 var count = 0;
                 for (var i = 0; i < args.Quantity; i++)
                 {
-                    if (TryAddToQueue(uid, recipe, component))
+                    if (TryAddToQueue(uid, recipe, component, args.Actor))
                         count++;
                     else
                     {
@@ -559,6 +578,37 @@ namespace Content.Server.Lathe
             }
             TryStartProducing(uid, component);
             UpdateUserInterfaceState(uid, component);
+        }
+
+        private void OnLatheOpenAttempt(EntityUid uid, LatheComponent component, ActivatableUIOpenAttemptEvent args)
+        {
+            if (CanUseLatheWithIntelligence(args.User))
+                return;
+
+            args.Cancel();
+            _popup.PopupEntity(Loc.GetString("construction-system-construct-too-low-intelligence"), uid, args.User);
+        }
+
+        private bool CanUseLatheWithIntelligence(EntityUid user)
+        {
+            return TryComp<SpecialComponent>(user, out var special) &&
+                   _special.GetEffective(user, SpecialStat.Intelligence, special) > 3;
+        }
+
+        private TimeSpan GetIntelligenceLatheProductionTime(EntityUid? user, TimeSpan baseTime)
+        {
+            if (baseTime <= TimeSpan.Zero || user == null || !TryComp<SpecialComponent>(user.Value, out var special))
+                return baseTime;
+
+            var intelligence = _special.GetEffective(user.Value, SpecialStat.Intelligence, special);
+            if (intelligence >= SpecialProfile.Maximum)
+                return TimeSpan.Zero;
+
+            var multiplier = intelligence >= SpecialProfile.DefaultValue
+                ? 1f - (intelligence - SpecialProfile.DefaultValue) * 0.2f
+                : 1f + (SpecialProfile.DefaultValue - intelligence) * 0.15f;
+
+            return baseTime * MathF.Max(0.1f, multiplier);
         }
 
         /// <summary>

@@ -1,28 +1,25 @@
 - type: job
-  id: NCRSGT
+  id: NCRNCO
   setPreference: true
-  hideIfPlaytimeRequirementsNotMet: false # #Misfits Tweak - all jobs visible in selection
-  jobWhitelistBypassesRoleTimers: true # #Misfits Change
+  hideIfPlaytimeRequirementsNotMet: false
+  jobWhitelistBypassesRoleTimers: true
   weight: 50
   overrideConsoleVisibility: false
   canBeAntag: false
-  name: job-name-ncr-sergeant
-  description: job-description-ncr-sergeant
-  playTimeTracker: NCRNCO
+  name: job-name-ncr-nco
+  description: job-description-ncr-nco
+  playTimeTracker: NCRSquadLeader
   requirements:
     - !type:CharacterSpeciesRequirement
       species:
       - Human
       - Ghoul
-    - !type:CharacterDepartmentTimeRequirement # #Misfits Tweak - T5 faction timelock (16h NCR)
+    - !type:CharacterDepartmentTimeRequirement # T5 faction timelock (16h NCR)
       department: NCR
       min: 57600 # 16 hours
-    #- !type:CharacterPlaytimeRequirement # TEMP REMOVED
-    #  tracker: NCRWS
-    #  min: 18000 # 5 hours
-  startingGear: NCRSGTGear
-  icon: "JobIconNcrSerg" # Corvax-Change
-  supervisors: job-supervisors-ncr-staff-sergeant
+  startingGear: NCRNCOGear
+  icon: "JobIconNcrSerg"
+  supervisors: job-supervisors-ncr-nco
   alwaysUseSpawner: true
   access:
   - NCR
@@ -36,24 +33,24 @@
           - NCR
 
 - type: startingGear
-  id: NCRSGTGear
+  id: NCRNCOGear
   equipment:
-    back: N14ClothingBackpackNCR # Corvax-Change
+    back: N14ClothingBackpackNCR
     hands: N14ClothingHandsGlovesCombat
-    jumpsuit: N14ClothingOfficerUniformNCRDesert # Corvax-Change
+    jumpsuit: N14ClothingOfficerUniformNCRDesert
     shoes: N14ClothingBootsCombatFilled
-    ears: N14ClothingHeadsetNCR # #Misfits Add - NCR radio earpiece
-    neck: ClothingNeckPinNCRSergeant # #Misfits Change - rank pin instead of generic mantle
+    ears: N14ClothingHeadsetNCR
+
     belt: ClothingBeltNCR
-    outerClothing: MisfitsNCRHeavyCombatArmor # #Misfits Tweak: T5 armor (0.70/0.65) — Sergeant tier
+    outerClothing: MisfitsNCRHeavyCombatArmor # T5 armor (0.70/0.65)
     pocket1: NCRSGTloadoutkits
     pocket2: RadioHandheld
     id: N14IDNCRDogtagNCO
-  innerClothingSkirt: N14ClothingOfficerUniformNCRDesert # Corvax-Change
+  innerClothingSkirt: N14ClothingOfficerUniformNCRDesert
   satchel: N14ClothingBackpackSatchelNCRFilled
-  storage: # Corvax-Change
+  storage:
     back:
     - N14BoxPlasticFilledMilitaryNCR
 
 - type: playTimeTracker
-  id: NCRNCO
+  id: NCRSquadLeader

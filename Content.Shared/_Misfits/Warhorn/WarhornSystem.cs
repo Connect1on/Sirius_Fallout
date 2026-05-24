@@ -24,6 +24,8 @@ public sealed class WarhornSystem : EntitySystem
 
     private void OnUseInHand(Entity<WarhornComponent> ent, ref UseInHandEvent args)
     {
+        args.Handled = true;
+
         var sound = ent.Comp.Sound;
         var hornXform = Transform(ent);
 

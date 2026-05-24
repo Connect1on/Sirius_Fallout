@@ -38,12 +38,13 @@
     understands:
     - N14Dog
     - N14Insect
-    - N14Robot
     - English
-    - Tribal
     - Chinese
-    - Sign
     - Latin
+    - Tribal
+    - N14Robot
+    - N14BrotherBeep
+    - Sign
   - type: MeleeWeapon
     altDisarm: false
     hidden: true

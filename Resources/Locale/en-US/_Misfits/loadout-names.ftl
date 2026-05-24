@@ -226,6 +226,7 @@ loadout-name-N14LoadoutFoodPorkBeans = pork and beans
 loadout-name-N14CurrencyCap100 = 100 caps
 loadout-name-GeigerCounter = Geiger counter
 loadout-name-d6Dice = d6 dice
+loadout-name-LoadoutItemBarberScissors = barber scissors
 
 # Instruments
 loadout-name-N14InstrumentBanjo = banjo

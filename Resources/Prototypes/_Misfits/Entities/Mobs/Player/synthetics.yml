@@ -176,7 +176,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
+        startingItem: PowerCellAntiqueProto
 
 - type: entity
   parent: N14BasePlayerSynthetic
@@ -270,14 +270,14 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
+        startingItem: PowerCellAntiqueProto
 
 - type: entity
   parent: N14BasePlayerSynthetic
   id: N14PlayerSyntheticMrGutsy
   name: mr. gutsy
   suffix: player, synthetic
-  description: A General Atomics Mr. Gutsy military combat robot, now guided by a living mind. Equipped with a plasma caster and aggressive military programming.
+  description: A General Atomics Mr. Gutsy military combat robot, now guided by a living mind. Equipped with a plasma pistol and military programming.
   components:
   - type: HumanoidAppearance
     species: RobotMrGutsy
@@ -343,7 +343,7 @@
     availableModes:
     - SemiAuto
   - type: BasicEntityAmmoProvider # #Misfits Add: limited plasma shots, auto-refills after cooldown
-    proto: BulletBigPlasma
+    proto: BulletPlasma
     capacity: 15
     count: 15
   - type: RechargeBasicEntityAmmo # #Misfits Add: recharge simulates internal capacitor cycling
@@ -356,7 +356,6 @@
         - PositronicBrain
       borg_module:
         - BorgModuleTool # #Misfits Add: military utility — field repair and maintenance tools
-        - BorgModuleGPS # #Misfits Add: military utility — navigation and scanning tools
       id: # #Misfits Change: pre-load the nav module into the id inventory slot
         - MisfitsRobotNavCard # General Atomics Navigation
       ears: # #Misfits Fix - vault comms: wasteland + vault radio for vault-assigned robot
@@ -365,7 +364,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
+        startingItem: PowerCellAntiqueProto
 
 - type: entity
   parent: N14PlayerSyntheticProtectron
@@ -427,7 +426,6 @@
         - PositronicBrain
       borg_module:
         - N14BorgModuleSecurity # stun baton, handcuffs, flashlight - lore-accurate detainment kit
-        - BorgModuleGPS         # navigation/patrol utility for law enforcement
       id:
         - MisfitsRobotNavCardRobCo
       ears: # #Misfits Fix - vault comms: wasteland + vault radio for vault-assigned robot
@@ -593,7 +591,7 @@
   - type: AssaultronBeamCharge # #Misfits Add: 2-second charge-up before beam fires, 3-second cooldown after
     chargeDuration: 2
     cooldownDuration: 3
-    fireDrainCharge: 900 # #Misfits Add: 50% of PowerCellHyper (1800) per shot — matches Tesla drain cost
+    fireDrainCharge: 270 # #Misfits Add: 20% of PowerCellHyper (1800) per shot
   - type: HitscanBatteryAmmoProvider # #Misfits Change: battery pool large enough for continuous fire — beam availability tied to chassis power cell
     proto: N14AssaultronHeadLaser
     fireCost: 100

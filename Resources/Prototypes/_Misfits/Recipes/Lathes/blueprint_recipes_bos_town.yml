@@ -69,7 +69,7 @@
 
     Glass: 350
 
-    Circuitry: 250
+    Circuitry: 150
 
     Scrap: 250
 
@@ -85,11 +85,11 @@
   materials:
     Steel: 3500
 
-    Glass: 450
+    Glass: 250
 
-    Circuitry: 350
+    Circuitry: 100
 
-    Scrap: 500
+    Scrap: 200
 
 
 - type: latheRecipe
@@ -105,7 +105,7 @@
 
     Glass: 600
 
-    Circuitry: 600
+    Circuitry: 300
 
     Plastic: 500
 
@@ -127,7 +127,7 @@
 
     Circuitry: 150
 
-    ScrapElectronic: 500
+    ScrapElectronic: 300
 
 
 - type: latheRecipe
@@ -143,7 +143,7 @@
 
     Glass: 800
 
-    Circuitry: 900
+    Circuitry: 500
 
     ScrapElectronic: 500
 
@@ -158,15 +158,17 @@
   availableFaction:
   - BrotherhoodOfSteel
   materials:
-    Steel: 6000
+    Steel: 5500
 
     Glass: 1500
 
-    Circuitry: 500
+    Circuitry: 350
 
-    ScrapElectronic: 800
+    ScrapElectronic: 500
 
-    Plastic: 1000
+    Plastic: 750
+
+    N14Gold: 150
 
 
 - type: latheRecipe
@@ -274,7 +276,7 @@
 
     Glass: 900
 
-    Circuitry: 600
+    Circuitry: 400
 
     ScrapElectronic: 450
 
@@ -293,9 +295,9 @@
   materials:
     Steel: 10500
 
-    Glass: 700
+    Glass: 1000
 
-    Circuitry: 1200
+    Circuitry: 1000
 
     ScrapElectronic: 1000
 
@@ -318,6 +320,8 @@
     Circuitry: 1000
 
     ScrapElectronic: 1300
+
+    N14Gold: 400
 
 
 # #Misfits Add - Bozar as T4 craftable BoS weapon blueprint; removed from Knight loadout kit
@@ -542,11 +546,11 @@
   materials:
     Steel: 6000
 
-    Cloth: 1700
+    Cloth: 700
 
-    Thread: 1500
+    Thread: 500
 
-    Leather: 1200
+    Leather: 800
 
     Circuitry: 500
 
@@ -562,11 +566,11 @@
   materials:
     Steel: 6000
 
-    Cloth: 1700
+    Cloth: 700
 
-    Thread: 1500
+    Thread: 500
 
-    Leather: 1200
+    Leather: 800
 
     Circuitry: 500
 
@@ -582,9 +586,9 @@
   materials:
     Steel: 7000
 
-    Cloth: 2000
+    Cloth: 1000
 
-    Thread: 1500
+    Thread: 700
 
     Leather: 1200
 
@@ -602,9 +606,9 @@
   materials:
     Steel: 7000
 
-    Cloth: 2000
+    Cloth: 1000
 
-    Thread: 1500
+    Thread: 700
 
     Leather: 1200
 
@@ -622,13 +626,13 @@
   materials:
     Steel: 6500
 
-    Cloth: 1700
+    Cloth: 1200
 
-    Thread: 1200
+    Thread: 800
 
     Leather: 1200
 
-    Circuitry: 1000
+    Circuitry: 700
 
 
 # --- BoS Tier 4 Armor (Power Armor) ---
@@ -731,13 +735,13 @@
   availableFaction:
   - BrotherhoodOfSteel
   materials:
-    Glass: 400
+    Glass: 600
 
-    Circuitry: 100
+    Circuitry: 150
 
     ScrapElectronic: 100
 
-    Lead: 400
+    Lead: 600
 
 
 # --- BoS Tier 3 Ammo ---

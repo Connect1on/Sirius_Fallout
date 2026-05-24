@@ -43,6 +43,7 @@ public sealed partial class TimeTransferPanel : DefaultWindow
     public void PopulateJobs()
     {
         var jobs = _prototypeManager.EnumeratePrototypes<JobPrototype>()
+            .Where(job => job.SetPreference)
             .OrderBy(job => job.LocalizedName)
             .ToList();
 

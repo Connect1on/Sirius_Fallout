@@ -51,13 +51,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
-        Piercing: 0.85
-        Heat: 0.85
-        Radiation: 0.6
+        Blunt: 0.795
+        Slash: 0.795
+        Piercing: 0.845
+        Heat: 0.845
+        Radiation: 0.595
   - type: ExplosionResistance
-    damageCoefficient: 0.85
+    damageCoefficient: 0.845
   - type: BreathMask # Misfits Change
   - type: GasFilterMask # Misfits Change
   - type: IngestionBlocker # Misfits Change

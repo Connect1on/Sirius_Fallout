@@ -9,7 +9,7 @@
   canBeAntag: false
   name: job-name-ncr-prisoner #Misfits Change
   description: job-description-ncr-prisoner
-  playTimeTracker: NCRPisoner
+  playTimeTracker: NCRPrisoner
   requirements: # TEMP REMOVED - all requirements removed
    # - !type:MinPlayersRequirement
    #   min: 55
@@ -41,4 +41,4 @@
     bandage: NCClothingBraceletNCRPrisoner
 
 - type: playTimeTracker
-  id: NCRPisoner
+  id: NCRPrisoner

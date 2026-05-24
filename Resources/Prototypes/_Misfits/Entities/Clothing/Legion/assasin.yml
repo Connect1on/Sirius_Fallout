@@ -30,8 +30,7 @@
   description: "A helmet that was fitted with a gasmask."
   components:
   - type: Sprite
-    sprite: _Misfits/Clothing/CaesarLegion/assasinhelmeticon.rsi
-    scale: 0.3, 0.3
+    sprite: _Misfits/Clothing/CaesarLegion/assasinhelmet.rsi
   - type: Clothing
     sprite: _Misfits/Clothing/CaesarLegion/assasinhelmet.rsi
   - type: Armor

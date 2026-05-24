@@ -48,6 +48,8 @@
         warcryMessage: warcry-message-legion
         warcryMessageCount: 6
         buffPopup: warcry-popup-buffed-legion
+        excludedJobs:
+        - SuperMutantGladiator
         cautionPopup: true
         activatorJobs:
         - CaesarLegionDean

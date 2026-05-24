@@ -5326,3 +5326,247 @@ Entries:
   id: 5910
   time: '2026-05-18T23:26:15.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/554
+- author: Bradysgaming
+  changes:
+    - type: Add
+      message: Added Supermutant Muffalo Skull Helmet.
+    - type: Add
+      message: Added Supermutant Tribal Gloves
+    - type: Tweak
+      message: Replaced combat jumpsuit
+  id: 5911
+  time: '2026-05-19T22:24:16.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/546
+- author: Squagg
+  changes:
+    - type: Tweak
+      message: Reduced cost of backpacks/duffels/satchels to 0
+    - type: Add
+      message: Lets ghouls choose hair and facial hair options in character creation
+    - type: Tweak
+      message: Adds a 30s cooldown to warhorns
+    - type: Tweak
+      message: Reduces noise and interval of hotplates and grills
+    - type: Fix
+      message: Fixes bug that shows/announces dead NPCs on FoTA Tacmap
+    - type: Fix
+      message: Fixes ghoul's being stuck at 200 years old
+  id: 5912
+  time: '2026-05-19T22:27:39.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/555
+- author: Oli
+  changes:
+    - type: Tweak
+      message: Scissors to 2 from 4
+  id: 5913
+  time: '2026-05-19T22:28:26.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/557
+- author: TykeBlackbeard
+  changes:
+    - type: Add
+      message: Added fun :D
+  id: 5914
+  time: '2026-05-19T23:02:14.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/558
+- author: Billy Boy
+  changes:
+    - type: Tweak
+      message: >-
+        Modified plasma rifle's ROF, entirely due to them being recently buffed.
+        Hit yo shots kid.
+    - type: Tweak
+      message: >-
+        Makes stimpacks into ROOFIES they knock you out at critical OD instead
+        of megapoison.
+  id: 5915
+  time: '2026-05-20T02:17:50.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/559
+- author: Ruzter7319
+  changes:
+    - type: Tweak
+      message: 'my pets can understand me now, most pets know tribal and sign now. '
+  id: 5916
+  time: '2026-05-20T02:18:49.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/561
+- author: Squagg
+  changes:
+    - type: Fix
+      message: Fix FoTA spawn points
+    - type: Fix
+      message: Allows C-27s to choose NCR or BoS at round start
+    - type: Fix
+      message: Allows SMs to choose their variants at round start
+    - type: Fix
+      message: Fixes C-27 spawn points
+    - type: Fix
+      message: Updates SM and C-27 spawn points to be at proper faction bases
+    - type: Add
+      message: Prestige drip for Head Paladins
+  id: 5917
+  time: '2026-05-20T22:29:01.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/560
+- author: Bradysgaming
+  changes:
+    - type: Tweak
+      message: >-
+        Turned the Experimental X-01 Power Armor into a living, unremoveable
+        casket. 
+  id: 5918
+  time: '2026-05-20T22:29:54.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/563
+- author: NajaTheNaja
+  changes:
+    - type: Remove
+      message: >-
+        took common encryption key out of robots... this is the wasteland not a
+        space station
+    - type: Remove
+      message: 'GPS module from police protectron and mr gutsy '
+    - type: Tweak
+      message: >-
+        gutsy now shoots smaller bullets again, Todd Howard called and said its
+        only a pistol not a caster
+    - type: Tweak
+      message: >-
+        laser assaultron now has less damaging laser but it can be fired several
+        times on a battery instead of once. total damage if you land every laser
+        is theoretically higher, but takes multiple shots. 
+  id: 5919
+  time: '2026-05-21T00:57:33.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/566
+- author: Dpellowski
+  changes:
+    - type: Tweak
+      message: Readjusted layout and settings (Readjust)
+    - type: Tweak
+      message: Updated loadout descriptions (Loadouts descriptions)
+    - type: Add
+      message: Added job descriptions (Job Descriptions)
+    - type: Tweak
+      message: Improved kit update accuracy (Kit updates accuracy)
+    - type: Tweak
+      message: Normalized names (Normalizating names)
+    - type: Tweak
+      message: 'Merged pull request #1 (loading-out-the-ncr)'
+    - type: Tweak
+      message: Refactored kits with new weapons and descriptions
+    - type: Tweak
+      message: Refactored NCRA loadout kits and updated comments
+    - type: Tweak
+      message: Increased magazine capacity from 7 to 8 rounds
+    - type: Add
+      message: Added rank spawns in hand
+    - type: Tweak
+      message: Applied NCR changes
+  id: 5920
+  time: '2026-05-21T01:03:47.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/565
+- author: NajaTheNaja
+  changes:
+    - type: Add
+      message: NCRPlatoonLeader Spawnpoint
+  id: 5921
+  time: '2026-05-21T01:39:14.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/568
+- author: Chance
+  changes:
+    - type: Add
+      message: Added PL spawn to CO office.
+    - type: Tweak
+      message: >-
+        Added invisible walls near rocket launcher, and deleted excess ones
+        (greedy people will die, god speed)
+  id: 5922
+  time: '2026-05-21T12:55:30.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/569
+- author: Lucky
+  changes:
+    - type: Add
+      message: lots of prototypes have been added for mapping
+  id: 5923
+  time: '2026-05-21T15:29:13.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/533
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: Ported Goob vehicle system.
+  id: 5924
+  time: '2026-05-22T19:02:07.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/510
+- author: HungryCuban
+  changes:
+    - type: Add
+      message: 80s garage door
+    - type: Tweak
+      message: Legion Veteran Explorer Helmet icon change
+  id: 5925
+  time: '2026-05-22T21:36:58.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/575
+- author: Bradysgaming
+  changes:
+    - type: Add
+      message: Added The block armor
+  id: 5926
+  time: '2026-05-22T21:37:11.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/577
+- author: Chance
+  changes:
+    - type: Tweak
+      message: BoS base reworked by Lucky
+    - type: Add
+      message: 80's Camp
+  id: 5927
+  time: '2026-05-22T22:15:10.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/579
+- author: HungryCuban
+  changes:
+    - type: Remove
+      message: you will never know
+  id: 5928
+  time: '2026-05-22T22:31:21.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/578
+- author: evil-two-info-types
+  changes: []
+  id: 5929
+  time: '2026-05-22T23:26:57.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/571
+- author: Squagg
+  changes:
+    - type: Add
+      message: S.P.E.C.I.A.L. System
+    - type: Fix
+      message: Allows lobotomies to be actually be reverted
+    - type: Add
+      message: More loadout drip
+    - type: Tweak
+      message: SMs can now move at full speed while wielding two-handed weapons
+  id: 5930
+  time: '2026-05-22T23:29:01.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/572
+- author: NajaTheNaja
+  changes:
+    - type: Add
+      message: Epoetine (dexalin but different), uses uranium instead of plasma
+    - type: Add
+      message: Beta Epoetine (dexp but different)
+  id: 5931
+  time: '2026-05-22T23:37:29.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/573
+- author: sssaaagggeee
+  changes:
+    - type: Tweak
+      message: NCR Doctor now requires NCR doctor playtime to rank up
+    - type: Tweak
+      message: NCR Medic now requires NCR medic playtime to rank up
+    - type: Tweak
+      message: NCR medic promotions are now E3 -> E4 -> E5
+  id: 5932
+  time: '2026-05-22T23:39:15.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/570
+- author: Squagg
+  changes:
+    - type: Fix
+      message: Fixes admin commands for special modification
+  id: 5933
+  time: '2026-05-22T23:45:20.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/580

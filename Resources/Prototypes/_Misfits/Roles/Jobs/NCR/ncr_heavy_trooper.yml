@@ -39,13 +39,11 @@
 - type: startingGear
   id: NCRHeavyTrooperGear
   equipment:
-    head: N14ClothingHeadHelmetPowerArmorT45NCR  # NCR variant T-45 helmet
     back: N14ClothingBackpackNCR                 # #Misfits Fix - Minigun moved to pocket1 so custom backpack selection no longer overwrites it
     jumpsuit: N14ClothingOfficerUniformNCRDesert  # standard NCR officer uniform under the suit
     outerClothing: N14ClothingOuterPowerArmorT45NCRSalvaged  # salvaged T-45 (no training required)
     shoes: N14ClothingBootsCombatFilled
     ears: N14ClothingHeadsetNCR               # NCR radio earpiece
-    neck: ClothingNeckPinNCRSpecialist        # enlisted heavy weapons rank
     belt: ClothingBeltNCR
     pocket1: N14WeaponMinigun                 # #Misfits Tweak - downgraded to minigun again -bill
     pocket2: RadioHandheld
@@ -54,7 +52,7 @@
   satchel: N14ClothingBackpackSatchelNCRFilled
   storage:
     back:
-    - N14MagazineMinigun5mm                   # extra 5mm box -bill 
+    - N14MagazineMinigun5mm                   # extra 5mm box -bill
 
 - type: playTimeTracker
   id: NCRHeavyTrooper

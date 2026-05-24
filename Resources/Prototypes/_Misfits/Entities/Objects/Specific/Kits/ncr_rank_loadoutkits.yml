@@ -133,7 +133,6 @@
   - type: SpawnItemsOnUse
     items:
       - id: ClothingBeltNCR
-      - id: ClothingNeckPinNCRSergeant1st
       - id: N14WeaponRifle308Battle
       - id: ClipMagazine308Rifle
         amount: 6
@@ -165,7 +164,6 @@
     items:
       - id: MisfitsClothingOuterNCRTrenchCoat
       - id: ClothingBeltRevolverfilled
-      - id: ClothingNeckPinNCRSergeant1st # #Misfits Change - sergeant first class pin for SFC rank
       - id: N14WeaponRifle556Carbine
       - id: LongMagazine556Rifle
         amount: 3
@@ -197,7 +195,6 @@
     items:
       - id: MisfitsNCROfficerArmor
       - id: ClothingBeltRevolverCaptainfilled
-      - id: ClothingNeckPinNCRCaptain
       - id: N14WeaponRifle308Battle
       - id: ClipMagazine308Rifle
         amount: 6
@@ -230,7 +227,6 @@
     items:
       - id: MisfitsClothingOuterNCRTrenchCoat
       - id: ClothingBeltRevolverCaptainfilled
-      - id: ClothingNeckPinNCRCaptain
       - id: N14WeaponRifleM1GarandRepublicsPride # #Misfits Change: Republic's Pride scoped M1C replaces .50 rifle
       - id: ClipMagazine308Rifle # #Misfits Change - replaced GarandEnbloc308
         amount: 4
@@ -270,7 +266,6 @@
     items:
       - id: MisfitsNCROfficerArmor
       - id: ClothingBeltNCR
-      - id: ClothingNeckPinNCRCaptain
       - id: N14WeaponRifle556ServiceScoped
       - id: Magazine556Rifle
         amount: 6

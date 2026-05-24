@@ -7,6 +7,7 @@ using Content.Client.UserInterface.Systems.Character.Controls;
 using Content.Client.UserInterface.Systems.Character.Windows;
 using Content.Client.UserInterface.Systems.Objectives.Controls;
 using Content.Shared.Input;
+using Content.Shared._Misfits.Special;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
@@ -39,19 +40,18 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
     private static readonly string[] SpecialNames = { "Strength", "Perception", "Endurance", "Charisma", "Intelligence", "Agility", "Luck" };
     private static readonly string[] SpecialDesc =
     {
-        "Increases melee damage and heavy weapon handling. Reduces movement penalties from heavy equipment.",
+        "Increases melee damage and heavy weapon handling.",
         "Improves ranged accuracy and reduces weapon recoil.",
         "Increases maximum health, radiation resistance, and stamina.",
-        "Reduces prices from vendors. Improves social fluency and negotiations.",
-        "Improves crafting quality. Higher values yield better results when crafting items.",
+        "Changes available loadout points by 2 per point above or below 5.",
+        "Speeds up crafting.",
         "Increases movement speed.",
         "Improves loot quality when scavenging junkpiles and containers.",
     };
-    private readonly int[] _allocValues      = { 1, 1, 1, 1, 1, 1, 1 };
+    private readonly int[] _allocValues      = { 5, 5, 5, 5, 5, 5, 5 };
     // #Misfits Add - saved copy of server values so Cancel can restore them
-    private readonly int[] _savedAllocValues  = { 1, 1, 1, 1, 1, 1, 1 };
-    private const int AllocBudget = 10;
-    private int _allocPoints = AllocBudget;
+    private readonly int[] _savedAllocValues  = { 5, 5, 5, 5, 5, 5, 5 };
+    private int _allocPoints = SpecialProfile.BonusPoints;
     private bool _localStatsConfirmed;
     private bool _historyExpanded;
     private string _lastEntityName = string.Empty;
@@ -381,7 +381,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
         _allocValues[6] = stats.Luck;
         // Save originals so Cancel can restore them
         Array.Copy(_allocValues, _savedAllocValues, SpecialNames.Length);
-        _allocPoints = AllocBudget - (_allocValues.Sum() - SpecialNames.Length);
+        _allocPoints = SpecialProfile.MaxTotal - _allocValues.Sum();
         UpdatePointsLabel();
 
         for (var idx = 0; idx < SpecialNames.Length; idx++)
@@ -447,7 +447,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
         {
             minusBtn.OnPressed += _ =>
             {
-                if (_allocValues[i] <= 1) return;
+                if (_allocValues[i] <= SpecialProfile.Minimum) return;
                 _allocValues[i]--;
                 _allocPoints++;
                 valueLbl.Text = _allocValues[i].ToString();
@@ -455,7 +455,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
             };
             plusBtn.OnPressed += _ =>
             {
-                if (_allocValues[i] >= 10 || _allocPoints <= 0) return;
+                if (_allocValues[i] >= SpecialProfile.Maximum || _allocPoints <= 0) return;
                 _allocValues[i]++;
                 _allocPoints--;
                 valueLbl.Text = _allocValues[i].ToString();
@@ -486,7 +486,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
     private void UpdatePointsLabel()
     {
         if (_specialWindow == null) return;
-        _specialWindow.SpecialPointsLabel.Text = $"Available points: {_allocPoints}";
+        _specialWindow.SpecialPointsLabel.Text = $"Available SPECIAL points: {_allocPoints}";
     }
 
     // #Misfits Add - Apply/Cancel/Confirm flow for SPECIAL allocation
@@ -512,8 +512,13 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
         // Permanently lock the allocation; send to server
         if (_specialWindow == null || _localStatsConfirmed) return;
         _characterInfo.SendConfirmSpecialAllocation(
-            _allocValues[0], _allocValues[1], _allocValues[2], _allocValues[3],
-            _allocValues[4], _allocValues[5], _allocValues[6]);
+            _allocValues[0],
+            _allocValues[1],
+            _allocValues[2],
+            _allocValues[3],
+            _allocValues[4],
+            _allocValues[5],
+            _allocValues[6]);
 
         // Immediately update local state so the UI reflects the lock without waiting for a server echo
         _localStatsConfirmed = true;
@@ -532,7 +537,7 @@ public sealed class CharacterUIController : UIController, IOnStateEntered<Gamepl
         // Restore working values to the server-sent originals and rebuild rows
         if (_specialWindow == null) return;
         Array.Copy(_savedAllocValues, _allocValues, SpecialNames.Length);
-        _allocPoints = AllocBudget - (_allocValues.Sum() - SpecialNames.Length);
+        _allocPoints = SpecialProfile.MaxTotal - _allocValues.Sum();
         _specialWindow.SpecialRows.RemoveAllChildren();
         for (var i = 0; i < SpecialNames.Length; i++)
             _specialWindow.SpecialRows.AddChild(BuildSpecialRow(i));

@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Shared._Misfits.Special;
 using Content.Shared._Shitmed.Medical.Surgery.Conditions;
 using Content.Shared._Shitmed.Medical.Surgery.Effects.Complete;
 using Content.Shared.Body.Systems;
@@ -49,6 +50,7 @@ public abstract partial class SharedSurgerySystem : EntitySystem
     [Dependency] private readonly StandingStateSystem _standing = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     /// <summary>
     /// Cache of all surgery prototypes' singleton entities.

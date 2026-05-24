@@ -103,3 +103,20 @@
 #         - BoSMidPaladinCommander
 #   items:
 #     - N14ClothingOuterPowerArmorMidwestCommander
+
+- type: loadout
+  id: MisfitsLoadoutBoSMidwestCommanderPowerArmor
+  category: Outer
+  cost: 12
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+    - !type:CharacterPlaytimeRequirement
+      tracker: BoSMidPaladinCommander
+      min: 180000 # 50 hours as Head Paladin
+  items:
+    - N14ClothingOuterPowerArmorMidwestCommander

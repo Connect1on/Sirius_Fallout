@@ -90,4 +90,10 @@ public sealed partial class WarcryComponent : Component
     /// </summary>
     [DataField]
     public bool CautionPopup;
+
+    /// <summary>
+    /// Optional exact job blacklist disallowed to benefit from this action.
+    /// </summary>
+    [DataField]
+    public HashSet<string>? ExcludedJobs;
 }

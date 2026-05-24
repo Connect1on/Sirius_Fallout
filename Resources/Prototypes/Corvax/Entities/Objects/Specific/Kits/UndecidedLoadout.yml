@@ -510,8 +510,8 @@
 
 - type: UndecidedLoadoutBackpackSet
   id: CenturionArmorWarforgedSet
-  name: Centurion Warforged Armor
-  description: "Armor used by Centurions who have seen countless battles, and lived to tell the tale."
+  name: undecided-loadout-category-misfits-centurion-armor-warforged-name
+  description: undecided-loadout-category-misfits-centurion-armor-warforged-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
@@ -520,8 +520,8 @@
 
 - type: UndecidedLoadoutBackpackSet
   id: CenturionArmorWarlordSet
-  name: Centurion Warlord Armor
-  description: "Armor for a Centurion who has single handendly won wars."
+  name: undecided-loadout-category-misfits-centurion-armor-warlord-name
+  description: undecided-loadout-category-misfits-centurion-armor-warlord-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
@@ -530,8 +530,8 @@
 
 - type: UndecidedLoadoutBackpackSet
   id: CenturionArmorCinderSet
-  name: Centurion Cinder Armor
-  description: "Armor forged in the ashes of fallen legionnaires."
+  name: undecided-loadout-category-misfits-centurion-armor-cinder-name
+  description: undecided-loadout-category-misfits-centurion-armor-cinder-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
@@ -540,8 +540,8 @@
 
 - type: UndecidedLoadoutBackpackSet
   id: CenturionArmorSaltColumnSet
-  name: Centurion Salt Column Armor
-  description: "Armor made for the Centurion of the Salt Column."
+  name: undecided-loadout-category-misfits-centurion-armor-salt-column-name
+  description: undecided-loadout-category-misfits-centurion-armor-salt-column-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
@@ -550,8 +550,8 @@
 
 - type: UndecidedLoadoutBackpackSet
   id: CenturionArmorUnbrokenSet
-  name: Centurion Unbroken Armor
-  description: "Armor for a Centurion who refuses to stay dead."
+  name: undecided-loadout-category-misfits-centurion-armor-unbroken-name
+  description: undecided-loadout-category-misfits-centurion-armor-unbroken-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base

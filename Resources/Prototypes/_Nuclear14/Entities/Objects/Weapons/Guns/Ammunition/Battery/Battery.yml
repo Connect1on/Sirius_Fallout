@@ -441,8 +441,8 @@
        - N14PlasmaShell
        - N14AmmoCell
    - type: Battery
-     maxCharge: 5000
-     startingCharge: 5000
+     maxCharge: 7500
+     startingCharge: 7500
    - type: ProjectileBatteryAmmoProvider
      proto: BulletBigPlasma
      fireCost: 500
