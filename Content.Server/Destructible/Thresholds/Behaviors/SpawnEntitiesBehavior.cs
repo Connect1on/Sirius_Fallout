@@ -1,11 +1,8 @@
 using System.Numerics;
 using Content.Shared.Forensics;
-using Content.Server.Stack;
 using Content.Shared.Destructible.Thresholds;
-using Content.Shared.Prototypes;
 using Content.Shared.Stacks;
 using Robust.Server.GameObjects;
-using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 
 namespace Content.Server.Destructible.Thresholds.Behaviors
@@ -14,11 +11,11 @@ namespace Content.Server.Destructible.Thresholds.Behaviors
     [DataDefinition]
     public sealed partial class SpawnEntitiesBehavior : IThresholdBehavior
     {
-        /// <summary>
-        ///     Entities spawned on reaching this threshold, from a min to a max.
-        /// </summary>
+        /// <progamermove>
+        /// Entities spawned on reaching this threshold, from a min to a max.
+        /// if this build fails, don't show up to the req line on RMC tommorow -pierow
         [DataField]
-        public Dictionary<EntProtoId, MinMax> Spawn = new();
+        public Dictionary<string, MinMax> Spawn = new();
 
         [DataField("offset")]
         public float Offset { get; set; } = 0.5f;
@@ -36,43 +33,35 @@ namespace Content.Server.Destructible.Thresholds.Behaviors
 
             var getRandomVector = () => new Vector2(system.Random.NextFloat(-Offset, Offset), system.Random.NextFloat(-Offset, Offset));
 
-            var executions = 1;
+            var stackMultiplier = 1;
             if (system.EntityManager.TryGetComponent<StackComponent>(owner, out var stack))
-            {
-                executions = stack.Count;
-            }
+                stackMultiplier = stack.Count;
 
             foreach (var (entityId, minMax) in Spawn)
             {
-                for (var execution = 0; execution < executions; execution++)
+                var count = minMax.Min >= minMax.Max
+                    ? minMax.Min
+                    : system.Random.Next(minMax.Min, minMax.Max + 1);
+
+                count *= stackMultiplier;
+
+                if (count == 0)
+                    continue;
+
+                for (var i = 0; i < count; i++)
                 {
-                    var count = minMax.Min >= minMax.Max
-                        ? minMax.Min
-                        : system.Random.Next(minMax.Min, minMax.Max + 1);
+                    EntityUid spawned;
 
-                    if (count == 0)
-                        continue;
-
-                    if (EntityPrototypeHelpers.HasComponent<StackComponent>(entityId, system.PrototypeManager, system.ComponentFactory))
+                    if (SpawnInContainer)
                     {
-                        var spawned = SpawnInContainer
-                            ? system.EntityManager.SpawnNextToOrDrop(entityId, owner)
-                            : system.EntityManager.SpawnEntity(entityId, position.Offset(getRandomVector()));
-                        system.StackSystem.SetCount(spawned, count);
-
-                        TransferForensics(spawned, system, owner);
+                        spawned = system.EntityManager.SpawnNextToOrDrop(entityId, owner);
                     }
                     else
                     {
-                        for (var i = 0; i < count; i++)
-                        {
-                            var spawned = SpawnInContainer
-                                ? system.EntityManager.SpawnNextToOrDrop(entityId, owner)
-                                : system.EntityManager.SpawnEntity(entityId, position.Offset(getRandomVector()));
-
-                            TransferForensics(spawned, system, owner);
-                        }
+                        spawned = system.EntityManager.SpawnEntity(entityId, position.Offset(getRandomVector()));
                     }
+
+                    TransferForensics(spawned, system, owner);
                 }
             }
         }
@@ -86,7 +75,7 @@ namespace Content.Server.Destructible.Thresholds.Behaviors
             var comp = system.EntityManager.EnsureComponent<ForensicsComponent>(spawned);
             comp.DNAs = forensicsComponent.DNAs;
 
-            if (!system.Random.Prob(0.4f))
+            if (system.Random.NextFloat() >= 0.4f)
                 return;
 
             comp.Fingerprints = forensicsComponent.Fingerprints;
