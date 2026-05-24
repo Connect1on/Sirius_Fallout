@@ -69,6 +69,7 @@
       </Box>
     </Box>
   </ColorBox>
+
   <ColorBox Color="#0d0d0d" OutlineColor="#2a4a2a" OutlineThickness="2" Margin="5">
     <Box Orientation="Vertical">
       <Box Orientation="Horizontal" HorizontalAlignment="Center">
@@ -78,527 +79,117 @@
         ТЕРМИНАЛ ПРАВИЛ VAULT-TEC
       </Box>
       <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        КРАТКИЕ ДИРЕКТИВЫ
+        ДИРЕКТИВЫ СЕРВЕРА
       </Box>
       <Box Orientation="Horizontal" HorizontalAlignment="Center">
         +======================================+
       </Box>
       <Box Orientation="Vertical" Margin="10">
-        ОПЕРАЦИОННАЯ СИСТЕМА VAULT-TEC v3.11
-        УЗЕЛ ТЕРМИНАЛА: MISFITS_NETWORK
+        ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ
 
-        > ЗАГРУЗКА СООБЩЕСТВЕННЫХ ДИРЕКТИВ...
-        > ПРОВЕРКА ДОСТУПА ЖИТЕЛЯ...
-
-        СТАТУС: ТЕРМИНАЛ АКТИВЕН
-        УРОВЕНЬ ДОСТУПА: ОБЩЕДОСТУПНЫЙ
-      </Box>
-      <Box Orientation="Vertical" Margin="10">
-        ======================================
-
-        1 - УВАЖАЙ СООБЩЕСТВО
-        Токсичное поведение, домогательства или действия,
-        направленные на порчу опыта других, не допускаются.
-
-        2 - ИГРАЙ РАДИ ИСТОРИИ
-        Это среда Medium Roleplay.
-        Создавай историю и взаимодействие, а не победу любой ценой.
-
-        3 - НИКАКОГО МЕТАГЕЙМИНГА
-        Внеигровая информация из Discord, стримов
-        или наблюдения за игрой не должна влиять на внутриигровые действия.
-
-        4 - НИКАКОГО ГРИФИНГА
-        Действия, направленные исключительно на срыв игры
-        без ролевого обоснования, запрещены.
-
-        5 - ОСТАВАЙСЯ В ОБРАЗЕ
-        Персонажи должны соответствовать сеттингу Fallout
-        и поддерживать погружение в пустошь.
-
-        6 - СОБЛЮДАЙ ЭСКАЛАЦИЮ
-        Диалог должен предшествовать применению летальной силы,
-        если только нет непосредственной угрозы.
-
-        7 - НИКАКИХ ЧИТОВ И ЭКСПЛОЙТОВ
-        Не злоупотребляй багами, инструментами или механиками.
-        Сообщай о проблемах через официальные каналы.
-
-        8 - ЦЕНИ СВОЮ ЖИЗНЬ
-        FearRP применяется при воскрешении в плену.
-        Попытки побега требуют одобрения администрации через Ahelp.
-
-        ======================================
-
-        > ПОЛНЫЕ ДИРЕКТИВЫ ДОСТУПНЫ НИЖЕ
-        > ПРОКРУТИТЕ ДЛЯ ПРОДОЛЖЕНИЯ
-
-        ======================================
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        УВЕДОМЛЕНИЕ VAULT-TEC:
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ЛУЧШЕЕ СООБЩЕСТВО ЧЕРЕЗ ПОРЯДОК.
+        Сервер 18+.
+        Здесь могут присутствовать грубый язык, жестокость,
+        тёмные темы и насилие в рамках вселенной Fallout.
+        Если ты младше 18 лет — тебе здесь не место.
       </Box>
     </Box>
   </ColorBox>
-  <ColorBox Color="#0a0a0a" OutlineColor="#1a3a1a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        +======================================+
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ТЕРМИНАЛ СЕТИ VAULT-TEC
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        УРОВЕНЬ ДОСТУПА: ОБЩЕДОСТУПНЫЙ
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ФАЙЛ: СООБЩЕСТВЕННЫЕ_ДИРЕКТИВЫ_A
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        +======================================+
-      </Box>
-      <Box Orientation="Vertical" Margin="10">
-        СООБЩЕСТВЕННЫЕ ДИРЕКТИВЫ VAULT-TEC
-        MISFITS: NUCLEAR WASTELAND
 
-        ДОБРО ПОЖАЛОВАТЬ, ЖИТЕЛЬ.
-
-        MISFITS: NUCLEAR WASTELAND ФУНКЦИОНИРУЕТ КАК СРЕДА
-        MEDIUM ROLEPLAY В СЕТТИНГЕ FALLOUT. ЦЕЛЬ — НЕ ТОЛЬКО
-        УВЛЕКАТЕЛЬНЫЙ ГЕЙМПЛЕЙ, НО И СОЗДАНИЕ
-        ЗАПОМИНАЮЩИХСЯ ИСТОРИЙ, ФОРМИРУЕМЫХ ВЫБОРОМ ИГРОКОВ.
-
-        ПУСТОШЬ СУРОВА, И ПОСЛЕДСТВИЯ ИМЕЮТ ЗНАЧЕНИЕ.
-        ВАШЕ ВЫЖИВАНИЕ ЗАВИСИТ ОТ ВАШИХ ДЕЙСТВИЙ,
-        ВАШИХ СОЮЗОВ И ВАШЕЙ РАССУДИТЕЛЬНОСТИ.
-
-        АДМИНИСТРАТИВНОЕ ВМЕШАТЕЛЬСТВО РЕДКО И ПРЕДНАЗНАЧЕНО
-        ДЛЯ ПРАВОПРИМЕНЕНИЯ, А НЕ СПАСЕНИЯ ИСТОРИИ.
-      </Box>
-    </Box>
-  </ColorBox>
-  <ColorBox Color="#0d0d0d" OutlineColor="#2a4a2a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Vertical" Margin="10">
-        ======================================
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 0 — ПОВЕДЕНИЕ
-      </Box>
-      <Box Orientation="Vertical" Margin="10">
-        ЭТО СРЕДА СОТРУДНИЧЕСТВА.
-
-        ТОКСИЧНОСТЬ, ЭГОИЗМ И ПОВЕДЕНИЕ, НАЦЕЛЕННОЕ НА
-        ПОРЧУ УДОВОЛЬСТВИЯ ДРУГИХ, НЕ ДОПУСКАЮТСЯ.
-
-        <Box Orientation="Vertical" Margin="10">
-          > ИГРАЙ, ЧТОБЫ СОЗДАВАТЬ ИСТОРИЮ, А НЕ «ПОБЕЖДАТЬ»
-          > УВАЖАЙ АДМИНИСТРАТОРОВ И РАЗРАБОТЧИКОВ
-          > СОТРУДНИЧАЙ ВО ВРЕМЯ ВЗАИМОДЕЙСТВИЙ С АДМИНИСТРАЦИЕЙ
-          > НЕ ОТКЛЮЧАЙСЯ ВО ВРЕМЯ АКТИВНЫХ ТИКЕТОВ
-          > СООБЩАЙ О ТЕХНИЧЕСКИХ ПРОБЛЕМАХ СВОЕВРЕМЕННО
-        </Box>
-
-        АДМИНИСТРАЦИЯ МОЖЕТ ВМЕШИВАТЬСЯ В СИТУАЦИИ,
-        НЕ ОПИСАННЫЕ ЯВНО, ЕСЛИ ПОВЕДЕНИЕ НАНОСИТ УЩЕРБ
-        СООБЩЕСТВУ ИЛИ РАУНДУ.
-
-        НАКАЗАНИЯ НАЗНАЧАЮТСЯ НА УСМОТРЕНИЕ ПЕРСОНАЛА
-        НА ОСНОВЕ СЕРЬЁЗНОСТИ, КОНТЕКСТА И ИСТОРИИ.
-      </Box>
-    </Box>
-  </ColorBox>
   <ColorBox Color="#0a0a0a" OutlineColor="#1a3a1a" OutlineThickness="2" Margin="5">
     <Box Orientation="Vertical">
       <Box Orientation="Vertical" Margin="10">
         ======================================
       </Box>
       <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 1 — ГРИФИНГ
+        ДИРЕКТИВА 1 — НЕ БУДЬ МУДАКОМ
       </Box>
       <Box Orientation="Vertical" Margin="10">
-        ГРИФИНГ — ЭТО ЛЮБОЕ ДЕЙСТВИЕ, ПРЕДПРИНЯТОЕ ГЛАВНЫМ
-        ОБРАЗОМ ДЛЯ СРЫВА ГЕЙМПЛЕЯ ИЛИ УХУДШЕНИЯ ОПЫТА
-        ДРУГИХ БЕЗ ОСМЫСЛЕННОЙ ВНУТРИИГРОВОЙ МОТИВАЦИИ.
+        Относись к другим с уважением.
+        Помни, что по ту сторону экрана такой же человек,
+        как и ты.
 
-        ПРИМЕРЫ ВКЛЮЧАЮТ:
-
-        <Box Orientation="Vertical" Margin="10">
-          > НАМЕРЕННОЕ РАЗРУШЕНИЕ БЕЗ РП-ОБОСНОВАНИЯ
-          > УСТАНОВКА ЛОВУШЕК ИСКЛЮЧИТЕЛЬНО ДЛЯ РАЗДРАЖЕНИЯ
-          > МАСШТАБНЫЙ СРЫВ ИГРЫ БЕЗ НАРРАТИВНОЙ ОСНОВЫ
-        </Box>
-
-        ОТСУТСТВИЕ НАМЕРЕНИЯ НЕ ВСЕГДА ОПРАВДЫВАЕТ
-        КРУПНОМАСШТАБНЫЙ УЩЕРБ.
-
-        ЕСЛИ ВАШИ ДЕЙСТВИЯ СЕРЬЁЗНО ВЛИЯЮТ НА РАУНД
-        БЕЗ РАЗУМНОЙ РП-ЛОГИКИ, ОНИ МОГУТ БЫТЬ
-        РАСЦЕНЕНЫ КАК ГРИФИНГ.
+        Токсичность, травля, преследование и любое
+        поведение, направленное на порчу опыта другим
+        игрокам, не допускаются.
       </Box>
     </Box>
   </ColorBox>
+
   <ColorBox Color="#0d0d0d" OutlineColor="#2a4a2a" OutlineThickness="2" Margin="5">
     <Box Orientation="Vertical">
       <Box Orientation="Vertical" Margin="10">
         ======================================
       </Box>
       <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 2 — ЧЕСТНАЯ ИГРА
+        ДИРЕКТИВА 2 — ЗАПРЕТ ERP
       </Box>
-
       <Box Orientation="Vertical" Margin="10">
-        2.1 МЕТАГЕЙМИНГ
+        Любой Erotic Role Play (эротическая ролевая игра)
+        строго запрещён на сервере.
 
-        ИСПОЛЬЗОВАНИЕ ВНЕИГРОВОЙ ИНФОРМАЦИИ ДЛЯ
-        ВЛИЯНИЯ НА ВНУТРИИГРОВЫЕ ДЕЙСТВИЯ ЗАПРЕЩЕНО.
-
-        ИНФОРМАЦИЯ ИЗ:
-
-        <Box Orientation="Vertical" Margin="10">
-          > DISCORD
-          > СТРИМОВ ИЛИ НАБЛЮДЕНИЯ
-          > OOC ЧАТА
-          > ВНЕШНИХ КОММУНИКАЦИЙ
-        </Box>
-
-        НЕ МОЖЕТ ИСПОЛЬЗОВАТЬСЯ ВНУТРИ ИГРЫ.
-
-        СТРИМИНГ РАЗРЕШЁН, НО ОТВЕТСТВЕННОСТЬ
-        ЗА УТЕЧКУ ИНФОРМАЦИИ ЛЕЖИТ НА СТРИМЕРЕ.
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        2.2 МУЛЬТИАККАУНТИНГ
-
-        <Box Orientation="Vertical" Margin="10">
-          > НЕСКОЛЬКО АККАУНТОВ В ОДНОМ РАУНДЕ
-            ЗАПРЕЩЕНЫ
-          > ОБХОД БАНА СТРОГО ЗАПРЕЩЁН
-          > АЛЬТЕРНАТИВНЫЕ АККАУНТЫ ДЛЯ СОКРЫТИЯ
-            ИСТОРИИ НАКАЗАНИЙ НЕ ДОПУСКАЮТСЯ
-        </Box>
-
-        НАРУШЕНИЯ МОГУТ ПРИВЕСТИ К ПОЖИЗНЕННЫМ БАНАМ.
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        2.3 ЭКСПЛОЙТЫ
-
-        <Box Orientation="Vertical" Margin="10">
-          > НИКАКИХ ЧИТОВ, МАКРОСОВ ИЛИ СТОРОННИХ ИНСТРУМЕНТОВ
-          > НИКАКОГО НАМЕРЕННОГО ИСПОЛЬЗОВАНИЯ БАГОВ
-          > НИКАКОЙ НАМЕРЕННОЙ НАГРУЗКИ НА СЕРВЕР
-        </Box>
-
-        СООБЩАЙТЕ О НАЙДЕННЫХ БАГАХ ЧЕРЕЗ
-        ОФИЦИАЛЬНЫЕ КАНАЛЫ.
+        Нарушение = пермабан.
       </Box>
     </Box>
   </ColorBox>
-  <ColorBox Color="#0a0a0a" OutlineColor="#1a3a1a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        +======================================+
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ТЕРМИНАЛ СЕТИ VAULT-TEC
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        УРОВЕНЬ ДОСТУПА: ОБЩЕДОСТУПНЫЙ
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ФАЙЛ: СООБЩЕСТВЕННЫЕ_ДИРЕКТИВЫ_B
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        +======================================+
-      </Box>
-      <Box Orientation="Vertical" Margin="10">
-        > ФАЙЛ ПРОДОЛЖЕНИЯ ЗАГРУЖЕН
-      </Box>
-    </Box>
-  </ColorBox>
-  <ColorBox Color="#0d0d0d" OutlineColor="#2a4a2a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Vertical" Margin="10">
-        ======================================
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 3 — СТАНДАРТЫ РОЛЕВОЙ ИГРЫ
-      </Box>
 
-      <Box Orientation="Vertical" Margin="10">
-        ПЕРСОНАЖИ ДОЛЖНЫ СООТВЕТСТВОВАТЬ СЕТТИНГУ FALLOUT
-        ПО ТОНУ, ПОВЕДЕНИЮ И ИМЕНИ.
-
-        3.1 ЛИЧНОСТЬ ПЕРСОНАЖА
-
-        <Box Orientation="Vertical" Margin="10">
-          > НИКАКИХ МЕМНЫХ ИМЁН ИЛИ ОТСЫЛОК К РЕАЛЬНОМУ МИРУ
-          > ЗАПРЕЩЕНО ПОВТОРНОЕ ИСПОЛЬЗОВАНИЕ МЁРТВЫХ ИЛИ
-            НАВСЕГДА ЗАКЛЮЧЁННЫХ ПЕРСОНАЖЕЙ БЕЗ ОДОБРЕНИЯ
-          > АДМИНИСТРАЦИЯ МОЖЕТ ПОТРЕБОВАТЬ СМЕНУ ИМЕНИ
-        </Box>
-
-        3.2 ОБЩЕНИЕ
-
-        <Box Orientation="Vertical" Margin="10">
-          > НЕ РАЗРУШАЙТЕ ПОГРУЖЕНИЕ
-            МЕХАНИЧЕСКИМИ ТЕРМИНАМИ
-          > НЕ ВЫНОСИТЕ OOC ТЕМЫ В IC КАНАЛЫ
-          > OOC КАНАЛЫ ДОЛЖНЫ ОСТАВАТЬСЯ УВАЖИТЕЛЬНЫМИ
-        </Box>
-
-        3.3 АТМОСФЕРА
-
-        <Box Orientation="Vertical" Margin="10">
-          > НЕ ССЫЛАЙТЕСЬ НА АДМИНОВ ИЛИ
-            ИГРОВЫЕ СИСТЕМЫ ВНУТРИ ИГРЫ
-          > ПО ВОЗМОЖНОСТИ УКАЗЫВАЙТЕ IC ПРИЧИНЫ
-            ДЛЯ ОТСУТСТВИЯ
-        </Box>
-
-        3.4 ОГРАНИЧЕНИЯ ЗНАНИЙ
-
-        ВАШ ПЕРСОНАЖ НЕ ВСЕЗНАЮЩ.
-
-        НЕ ИСПОЛЬЗУЙТЕ ТЕХНОЛОГИИ ИЛИ
-        ЗНАНИЯ, КОТОРЫМИ ВАШ ПЕРСОНАЖ
-        РЕАЛИСТИЧНО НЕ МОГ БЫ ОБЛАДАТЬ.
-      </Box>
-    </Box>
-  </ColorBox>
   <ColorBox Color="#0a0a0a" OutlineColor="#1a3a1a" OutlineThickness="2" Margin="5">
     <Box Orientation="Vertical">
       <Box Orientation="Vertical" Margin="10">
         ======================================
       </Box>
       <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 4 — ЭРОТИЧЕСКАЯ РОЛЕВАЯ ИГРА
+        ДИРЕКТИВА 3 — ОТЫГРЫВАЙ СВОЮ РОЛЬ
       </Box>
       <Box Orientation="Vertical" Margin="10">
-        ЯВНЫЙ ERP ЗАПРЕЩЁН ВО ВСЕХ ФОРМАХ.
+        Мы — проект от людей и для людей.
+        Просим тебя соблюдать логику персонажа и устои
+        выбранной фракции.
 
-        ЛЁГКОЕ РОМАНТИЧЕСКОЕ ВЗАИМОДЕЙСТВИЕ, ТАКОЕ КАК
-        ФЛИРТ, ОБЪЯТИЯ ИЛИ ПОЦЕЛУИ, РАЗРЕШЕНО, ЕСЛИ:
+        Разрешено быть оппозиционером внутри фракции
+        или иметь нестандартные взгляды, если это не
+        мешает геймплею других игроков и не ломает
+        атмосферу сервера.
 
-        <Box Orientation="Vertical" Margin="10">
-          > НЕ ЯВЛЯЕТСЯ ОТКРОВЕННЫМ
-          > ПО ОБОЮДНОМУ СОГЛАСИЮ
-        </Box>
-
-        ЕСЛИ ПЕРСОНАЛ ВЕЛИТ ВАМ ПРЕКРАТИТЬ
-        ПОВЕДЕНИЕ НА ГРАНИ ДОПУСТИМОГО,
-        ВЫ ОБЯЗАНЫ НЕМЕДЛЕННО ПОДЧИНИТЬСЯ.
-
-        НАРУШЕНИЯ МОГУТ ПРИВЕСТИ К УДАЛЕНИЮ.
+        Особые обстоятельства могут обоснованно изменить
+        отношение твоего персонажа к фракции.
       </Box>
     </Box>
   </ColorBox>
+
   <ColorBox Color="#0d0d0d" OutlineColor="#2a4a2a" OutlineThickness="2" Margin="5">
     <Box Orientation="Vertical">
       <Box Orientation="Vertical" Margin="10">
         ======================================
       </Box>
       <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 5 — ЗАЩИТА SSD
+        ДИРЕКТИВА 4 — ЭСКАЛАЦИЯ КОНФЛИКТОВ
       </Box>
       <Box Orientation="Vertical" Margin="10">
-        ПЕРСОНАЖИ, КОТОРЫЕ ОТКЛЮЧИЛИСЬ, НЕ МОГУТ
-        БЫТЬ НАПРЯМУЮ АТАКОВАНЫ.
+        Время на эскалацию конфликта (словесное
+        предупреждение, угрозы, требование уйти и т.д.)
+        даётся только крупным (мажорным) фракциям
+        при конфликте с другими крупными фракциями.
+      </Box>
 
-        РАЗРЕШЕНО
-        <Box Orientation="Vertical" Margin="10">
-          > ОБЫСК SSD ПЕРСОНАЖЕЙ
-        </Box>
+      <Box Orientation="Vertical" Margin="10">
+        4.1 — ОСОБЫЕ ТРЕБОВАНИЯ ДЛЯ НКР
 
-        ЗАПРЕЩЕНО
-        <Box Orientation="Vertical" Margin="10">
-          > УБИЙСТВО SSD ПЕРСОНАЖЕЙ
-          > ПОХИЩЕНИЕ SSD ПЕРСОНАЖЕЙ
-        </Box>
+        НКР обязана соблюдать высокие стандарты
+        эскалации даже по отношению к одиночкам
+        и дегенератам из Пустоши.
 
-        ОТКЛЮЧЕНИЕ ВО ВРЕМЯ АКТИВНОГО БОЯ
-        СНИМАЕТ ЭТУ ЗАЩИТУ.
+        Категорически запрещено без предупреждения
+        и попытки диалога убивать людей — это
+        противоречит довоенным устоям Республики.
 
-        SSD ИГРОКИ ВНУТРИ БАЗ ФРАКЦИЙ
-        ВО ВРЕМЯ РЕЙДОВ НЕ ЗАЩИЩЕНЫ.
+        Исключение: если по тебе открывают огонь
+        (рейдеры, бандиты и т.п.), ты имеешь полное
+        право открывать ответный огонь без
+        дополнительной эскалации.
       </Box>
     </Box>
   </ColorBox>
-  <ColorBox Color="#0a0a0a" OutlineColor="#1a3a1a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        +======================================+
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ТЕРМИНАЛ СЕТИ VAULT-TEC
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        УРОВЕНЬ ДОСТУПА: ОБЩЕДОСТУПНЫЙ
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ФАЙЛ: СООБЩЕСТВЕННЫЕ_ДИРЕКТИВЫ_C
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        +======================================+
-      </Box>
-      <Box Orientation="Vertical" Margin="10">
-        > ФАЙЛ ПРОДОЛЖЕНИЯ ЗАГРУЖЕН
-      </Box>
-    </Box>
-  </ColorBox>
-  <ColorBox Color="#0d0d0d" OutlineColor="#2a4a2a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Vertical" Margin="10">
-        ======================================
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 6 — ВООРУЖЁННЫЙ КОНФЛИКТ
-      </Box>
 
-      <Box Orientation="Vertical" Margin="10">
-        6.1 ЭСКАЛАЦИЯ
-
-        ДИАЛОГ ДОЛЖЕН ПРЕДШЕСТВОВАТЬ ЛЕТАЛЬНОЙ СИЛЕ.
-
-        ТРЕБОВАНИЯ
-
-        <Box Orientation="Vertical" Margin="10">
-          > ЛИЧНАЯ ЭСКАЛАЦИЯ
-          > ЧЁТКО ВЫСКАЗАННОЕ ТРЕБОВАНИЕ
-          > ВРЕМЯ НА РЕАКЦИЮ
-        </Box>
-
-        ИСКЛЮЧЕНИЯ
-
-        <Box Orientation="Vertical" Margin="10">
-          > АКТИВНЫЕ ПЕРЕСТРЕЛКИ
-          > НЕПОСРЕДСТВЕННЫЕ УГРОЗЫ
-          > ДИКИЕ СУЩЕСТВА
-          > ФРАКЦИОННЫЕ ВОЙНЫ
-        </Box>
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        6.2 ОГРАБЛЕНИЕ
-
-        <Box Orientation="Vertical" Margin="10">
-          > НЕ ЗАБИРАЙТЕ ВСЕ ПРЕДМЕТЫ ВЫЖИВАНИЯ
-          > НЕСОПРОТИВЛЯЮЩИЕСЯ ЖЕРТВЫ ДОЛЖНЫ ВЫЖИТЬ
-          > СОПРОТИВЛЕНИЕ ПЕРЕКЛАДЫВАЕТ ОТВЕТСТВЕННОСТЬ
-        </Box>
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        6.3 ФРАКЦИОННЫЕ ВОЙНЫ
-
-        <Box Orientation="Vertical" Margin="10">
-          > ФРАКЦИИ НАЧИНАЮТ НЕЙТРАЛЬНЫМИ
-          > ТОЛЬКО ЛИДЕРЫ МОГУТ ОБЪЯВЛЯТЬ ВОЙНУ
-          > ВОЙНА НАЧИНАЕТСЯ ЧЕРЕЗ ПЯТЬ МИНУТ ПОСЛЕ
-            ЛИЧНОГО ОБЪЯВЛЕНИЯ
-        </Box>
-
-        УБИЙСТВО ДИПЛОМАТОВ ИЛИ СДАВШИХСЯ
-        ЛИЦ ЗАПРЕЩЕНО.
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        6.4 РАННИЕ РЕЙДЫ
-
-        БАЗЫ ФРАКЦИЙ НЕЛЬЗЯ РЕЙДИТЬ
-        В ТЕЧЕНИЕ ПЕРВЫХ 30 МИНУТ.
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        6.5 СНАРЯЖЕНИЕ ФРАКЦИЙ И САМОЗВАНЦЫ
-
-        ВСЕ ФРАКЦИИ МОГУТ БЫТЬ ОБЫСКАНЫ НА
-        БРОНЮ, УНИФОРМУ, ОРУЖИЕ И ПРЕДМЕТЫ.
-
-        ЛЮБОЙ, ВЫДАЮЩИЙ СЕБЯ ЗА ЧЛЕНА ФРАКЦИИ,
-        МОЖЕТ БЫТЬ АТАКОВАН.
-
-        НОШЕНИЕ БРОНИ ФРАКЦИИ ДАЁТ
-        ЭТОЙ ФРАКЦИИ ПРАВО НА ЭСКАЛАЦИЮ.
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        6.6 РЕЙДЫ ФРАКЦИЙ
-
-        ВСЕ РЕЙДЫ ФРАКЦИЙ ДОЛЖНЫ БЫТЬ
-        СОГЛАСОВАНЫ ЧЕРЕЗ AHELP ПЕРЕД
-        НАЧАЛОМ.
-
-        ЕСЛИ ОТКАЗАНО ИЛИ ОТВЕТА НЕТ,
-        АТАКУЮЩАЯ СТОРОНА ДОЛЖНА УЙТИ.
-      </Box>
-
-      <Box Orientation="Vertical" Margin="10">
-        6.7 ВМЕШАТЕЛЬСТВО В КОНФЛИКТ
-
-        ИГРОКИ, КОТОРЫЕ ЯВНО СДАЛИСЬ,
-        НЕ МОГУТ БЫТЬ КАЗНЕНЫ, ЕСЛИ НЕТ
-        ПЕРЕКРЁСТНОГО ОГНЯ.
-
-        ЧЛЕНЫ ФРАКЦИЙ ИЛИ БАНД
-        В ОДИНАКОВОЙ УНИФОРМЕ МОГУТ ПОМОГАТЬ
-        СОЮЗНИКАМ В АКТИВНОМ КОНФЛИКТЕ.
-      </Box>
-    </Box>
-  </ColorBox>
-  <ColorBox Color="#0a0a0a" OutlineColor="#1a3a1a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Vertical" Margin="10">
-        ======================================
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 7 — ПРАВИЛО НОВОЙ ЖИЗНИ
-      </Box>
-      <Box Orientation="Vertical" Margin="10">
-        ИГРОКИ НЕ МОГУТ ПЕРЕЗАЙТИ ЗА ТОГО ЖЕ
-        ПЕРСОНАЖА, ЧТОБЫ ОБОЙТИ СМЕРТЬ.
-
-        ВОСКРЕШЁННЫЕ ПЕРСОНАЖИ ЗАБЫВАЮТ
-        ОБСТОЯТЕЛЬСТВА СВОЕЙ СМЕРТИ.
-
-        ЗНАНИЯ ИЗ ПРЕДЫДУЩИХ РАУНДОВ
-        НЕ МОГУТ ИСПОЛЬЗОВАТЬСЯ ДЛЯ ПОЛУЧЕНИЯ ПРЕИМУЩЕСТВА.
-      </Box>
-    </Box>
-  </ColorBox>
-  <ColorBox Color="#0d0d0d" OutlineColor="#2a4a2a" OutlineThickness="2" Margin="5">
-    <Box Orientation="Vertical">
-      <Box Orientation="Vertical" Margin="10">
-        ======================================
-      </Box>
-      <Box Orientation="Horizontal" HorizontalAlignment="Center">
-        ДИРЕКТИВА 8 — FEAR ROLEPLAY
-      </Box>
-      <Box Orientation="Vertical" Margin="10">
-        FEARRP ПРИМЕНЯЕТСЯ, КОГДА ИГРОК
-        ВОСКРЕШАЕТСЯ В ЗАЩИЩЁННОМ МЕСТЕ.
-
-        ПРИМЕР:
-
-        ЛЕГИОН УБИВАЕТ ПАЛАДИНА BOS И
-        ВОСКРЕШАЕТ ЕГО В СВОЁМ ЛАГЕРЕ.
-
-        ПАЛАДИН ОБЯЗАН ЦЕНИТЬ СВОЮ
-        ЖИЗНЬ И СЛЕДОВАТЬ FEARRP.
-
-        ПОПЫТКИ ПОБЕГА ТРЕБУЮТ
-        ОДОБРЕНИЯ АДМИНИСТРАЦИИ ЧЕРЕЗ AHELP.
-
-        НЕУДАЧНЫЕ ПОПЫТКИ ТРЕБУЮТ
-        НОВОГО ОДОБРЕНИЯ.
-      </Box>
-    </Box>
-  </ColorBox>
   <ColorBox Color="#0a0a0a" OutlineColor="#1a3a1a" OutlineThickness="2" Margin="5">
     <Box Orientation="Vertical">
       <Box Orientation="Vertical" Margin="10">
@@ -611,7 +202,7 @@
         РУКОВОДСТВО ПРОЕКТА СОХРАНЯЕТ ОКОНЧАТЕЛЬНУЮ
         ВЛАСТЬ В ИНТЕРПРЕТАЦИИ ПРАВИЛ.
 
-        ОЖИДАНИЕ СЕРВЕРА: 17+
+        ОЖИДАНИЕ СЕРВЕРА: 18+
       </Box>
       <Box Orientation="Vertical" Margin="10">
         ======================================
