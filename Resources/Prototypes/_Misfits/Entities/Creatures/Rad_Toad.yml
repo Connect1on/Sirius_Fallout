@@ -39,6 +39,6 @@
       - TribalHuntParticipant
   - type: Mountable
   - type: MovementSpeedModifier
-    modifiers:
-    baseWalkSpeed: 4.5
-    baseSprintSpeed: 4.5
+     modifiers:
+     baseWalkSpeed: 4.5
+     baseSprintSpeed: 4.5
