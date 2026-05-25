@@ -59,13 +59,6 @@
     belt:
     - Magazine45SubMachineGun
     - Magazine45SubMachineGun
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: NpcFactionMember
-        factions:
-          - PlayerRaider
-          - Wastelander
 
 - type: playTimeTracker
   id: EightiesTheBlock
@@ -124,13 +117,6 @@
     belt:
     - Magazine45SubMachineGun
     - Magazine45SubMachineGun
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: NpcFactionMember
-        factions:
-          - PlayerRaider
-          - Wastelander
 
 - type: playTimeTracker
   id: EightiesCylinders
