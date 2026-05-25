@@ -5754,3 +5754,17 @@ Entries:
   id: 5951
   time: '2026-05-25T17:58:03.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/599
+- author: SaintIWNL
+  changes:
+    - type: Add
+      message: Added fun :D
+  id: 5952
+  time: '2026-05-25T20:05:53.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/567
+- author: Dpellowski
+  changes:
+    - type: Tweak
+      message: Faction members auto join war.
+  id: 5953
+  time: '2026-05-25T20:34:52.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/601

@@ -10,14 +10,13 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Utility;
-using Robust.Shared.Network;
 
 namespace Content.Client._Misfits.FactionWar.UI;
 
 [GenerateTypedNameReferences]
 public sealed partial class WarJoinWindow : FancyWindow
 {
-    public event Action<NetUserId, NetUserId, byte>? OnJoinWar;
+    public event Action<string, byte>? OnJoinWar;
 
     private readonly List<PlayerWarEntry> _pendingWars = new();
     private readonly List<(string Display, byte Side)> _sideItems = new();
@@ -78,8 +77,9 @@ public sealed partial class WarJoinWindow : FancyWindow
         for (var i = 0; i < _pendingWars.Count; i++)
         {
             var w = _pendingWars[i];
-            var label = $"{w.SideName1} vs {w.SideName2}";
-            WarSelector.AddItem(label);
+            var s1 = FactionLabel(w.SideName1, w.Side1FactionId);
+            var s2 = FactionLabel(w.SideName2, w.Side2FactionId);
+            WarSelector.AddItem($"{s1} vs {s2}");
         }
 
         // Auto-select first war and populate sides.
@@ -117,8 +117,8 @@ public sealed partial class WarJoinWindow : FancyWindow
 
         var war = _pendingWars[warIndex];
 
-        _sideItems.Add(($"{war.SideName1}", 1));
-        _sideItems.Add(($"{war.SideName2}", 2));
+        _sideItems.Add((FactionLabel(war.SideName1, war.Side1FactionId), 1));
+        _sideItems.Add((FactionLabel(war.SideName2, war.Side2FactionId), 2));
 
         SideSelector.AddItem(_sideItems[0].Display);
         SideSelector.AddItem(_sideItems[1].Display);
@@ -149,7 +149,7 @@ public sealed partial class WarJoinWindow : FancyWindow
 
         var war = _pendingWars[warIdx];
         var chosenSide = _sideItems[sideIdx].Side;
-        OnJoinWar?.Invoke(war.DeclaredByPlayer, war.DeclaredAgainstPlayer, chosenSide);
+        OnJoinWar?.Invoke(war.WarKey, chosenSide);
         ResetConfirm();
     }
 
@@ -163,5 +163,10 @@ public sealed partial class WarJoinWindow : FancyWindow
     private void ClearResult()
     {
         JoinResultLabel.SetMarkup(string.Empty);
+    }
+
+    private static string FactionLabel(string sideName, string? factionId)
+    {
+        return string.IsNullOrEmpty(factionId) ? sideName : $"{sideName} [{factionId}]";
     }
 }

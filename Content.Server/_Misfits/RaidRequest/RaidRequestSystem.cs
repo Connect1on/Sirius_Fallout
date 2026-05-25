@@ -326,8 +326,8 @@ public sealed class RaidRequestSystem : EntitySystem
             return;
         }
 
-        // Raids are war-linked: only one of the original two active war players may submit.
-        if (!_factionWar.TryGetActiveWarForOriginalParticipant(session.UserId, out var linkedWar))
+        // Raids are war-linked: only the original two character entities may submit.
+        if (!_factionWar.TryGetActiveWarForOriginalParticipant(GetNetEntity(playerEntity), out var linkedWar))
         {
             SendSubmitResult(session, false,
                 "You must be one of the two original participants in an active war to request a raid.");

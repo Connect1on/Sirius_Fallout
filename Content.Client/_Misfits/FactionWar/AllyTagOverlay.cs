@@ -2,6 +2,7 @@
 // entities participating in active player wars.
 
 using System.Numerics;
+using Content.Shared._Misfits.FactionWar;
 using Content.Shared.Examine;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -83,7 +84,7 @@ internal sealed class AllyTagOverlay : Overlay
         return (coords.Position - entry.Position).LengthSquared() >= PositionRefreshThresholdSquared;
     }
 
-    private void CleanupCache(IReadOnlyDictionary<NetEntity, byte> participants, TimeSpan now)
+    private void CleanupCache(IReadOnlyDictionary<NetEntity, FactionWarParticipantInfo> participants, TimeSpan now)
     {
         if (now < _nextCleanup)
             return;
@@ -108,12 +109,16 @@ internal sealed class AllyTagOverlay : Overlay
         if (_warSystem.ActiveWars.Count == 0 || participants.Count == 0)
             return;
 
+        var localWarKey = _warSystem.LocalWarKey;
+        if (localWarKey == null)
+            return;
+
         var localNet = _entityManager.GetNetEntity(localEntity.Value);
         byte? effectiveSide;
         if (!participants.TryGetValue(localNet, out var tmpSide))
             effectiveSide = _warSystem.LocalWarJoinSide;
         else
-            effectiveSide = tmpSide;
+            effectiveSide = tmpSide.Side;
 
         if (effectiveSide == null)
             return;
@@ -126,8 +131,11 @@ internal sealed class AllyTagOverlay : Overlay
 
         var viewport = args.WorldAABB;
 
-        foreach (var (netEntity, side) in participants)
+        foreach (var (netEntity, info) in participants)
         {
+            if (info.WarKey != localWarKey)
+                continue;
+
             var uid = _entityManager.GetEntity(netEntity);
             if (uid == localEntity.Value || !_entityManager.EntityExists(uid))
                 continue;
@@ -178,7 +186,7 @@ internal sealed class AllyTagOverlay : Overlay
             if (!cacheEntry.Visible)
                 continue;
 
-            var isAlly = side == effectiveSide.Value;
+            var isAlly = info.Side == effectiveSide.Value;
             var tag = isAlly ? "[ALLY]" : "[ENEMY]";
             var color = isAlly ? Color.LimeGreen : new Color(1f, 0.3f, 0.3f);
 
