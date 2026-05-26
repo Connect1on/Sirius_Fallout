@@ -5835,3 +5835,10 @@ Entries:
   id: 5960
   time: '2026-05-26T20:00:03.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/605
+- author: pierow
+  changes:
+    - type: Add
+      message: Whip now has 3 tile attack range
+  id: 5961
+  time: '2026-05-26T20:00:23.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/607
