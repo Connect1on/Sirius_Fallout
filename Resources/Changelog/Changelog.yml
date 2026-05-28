@@ -6021,3 +6021,12 @@ Entries:
   id: 5977
   time: '2026-05-28T20:56:46.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/627
+- author: Squagg
+  changes:
+    - type: Fix
+      message: >-
+        Fixed 10 Intelligence medical insight not restoring visible health bars
+        after being toggled back on.
+  id: 5978
+  time: '2026-05-28T23:03:49.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/628
