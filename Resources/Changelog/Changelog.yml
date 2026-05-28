@@ -6030,3 +6030,10 @@ Entries:
   id: 5978
   time: '2026-05-28T23:03:49.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/628
+- author: NajaTheNaja
+  changes:
+    - type: Fix
+      message: made math start at 0 for low cha modifier accent
+  id: 5979
+  time: '2026-05-28T23:04:09.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/629
