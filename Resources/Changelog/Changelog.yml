@@ -6099,3 +6099,10 @@ Entries:
   id: 5985
   time: '2026-05-29T19:09:52.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/636
+- author: Bradysgaming
+  changes:
+    - type: Tweak
+      message: Made it so kuzdu can not occur.
+  id: 5986
+  time: '2026-05-29T22:50:44.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/637
