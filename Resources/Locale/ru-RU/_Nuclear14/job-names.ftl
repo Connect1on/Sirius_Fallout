@@ -1,13 +1,13 @@
 # Brotherhood of Steel
-job-name-bos-mid-paladin-comm = Глава Братства Паладин
+job-name-bos-mid-paladin-comm = Главный паладин Братства
 job-description-bos-mid-paladin-comm = Возглавьте боевое крыло отделения Братства и руководите полевыми операциями.
-job-name-bos-mid-paladin = Старший Паладин Братства
+job-name-bos-mid-paladin = Старший паладин Братства
 job-description-bos-mid-paladin = Служите ветераном полевого командира и командиром тяжелой пехоты Братства.
 job-name-bos-mid-knight = Старший рыцарь Братства
 job-description-bos-mid-knight = Возглавьте патрули Братства, поддерживайте дисциплину и защищайте восстановленные технологии.
-job-name-bos-mid-scribe = Старший писец Братства
+job-name-bos-mid-scribe = Старший писарь Братства
 job-description-bos-mid-scribe = Координируйте исследования, каталогизируйте технологии и консультируйте командный состав отделения.
-job-name-bos-mid-squire = Братство Оруженосец
+job-name-bos-mid-squire = Оруженосец Братства
 job-description-bos-mid-squire = Тренируйтесь под руководством ветеранов Братства и докажите, что вы готовы к более высоким обязанностям.
 
 #Misfits Change /Comment-out/: Washington BoS job names removed — will create new prototypes.
@@ -105,13 +105,13 @@ job-description-tribal-shaman = Проводите духовные обряды
 # Vault
 job-name-overseer = Смотритель Убежища
 job-description-overseer = Следуйте целям «Волт-Тек» в управлении вашим Убежищем и убедитесь, что все идет по плану...
-job-name-vault-doctor = Доктор Убежища
+job-name-vault-doctor = Врач Убежища
 job-description-vault-doctor = Поддерживайте здоровье и благополучие своих собратьев-жителей Убежища. При необходимости провести исследование.
-job-name-vault-dweller = Выходец из Убежища
+job-name-vault-dweller = Резидент Убежища
 job-description-vault-dweller = Основное население Убежища. Живите комфортной жизнью и тяните свой вес там, где это необходимо.
-job-name-vault-engineer = Инженер хранилища
+job-name-vault-engineer = Инженер Убежища
 job-description-vault-engineer = Поддерживайте Убежище и все его жизненно важные системы, чтобы обеспечить комфортную и безопасную жизнь.
-job-name-vault-security = Безопасность хранилища
+job-name-vault-security = Охранник Убежища
 job-description-vault-security = Поддерживайте порядок в Убежище и докладывайте Смотрителю. На благо Убежища!
 
 # Wasteland

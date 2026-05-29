@@ -1,6 +1,6 @@
 ﻿job-supervisors-bos-mid-initiate = командование Братства
 job-supervisors-bos-mid-knight = Главный рыцарь, Главный паладин и Старейшина
-job-supervisors-bos-mid = Старейшина и главы глав
+job-supervisors-bos-mid = Старейшина и главы орденов
 job-supervisors-bos-mid-commander = Старейшина
 #Misfits Change /Comment-out/: Washington BoS supervisor strings removed — will create new prototypes.
 #job-supervisors-bos-wash-initiate = the Brotherhood chain of command
@@ -18,7 +18,7 @@ job-supervisors-ncr-lt = капитан НКР
 job-supervisors-ncr-captain = Высшее командование НКР и ваша миссия
 job-supervisors-ncr-ranger = старшие рейнджеры и ваш кодекс
 job-supervisors-ranger-field = полевые рейнджеры и ветеран-рейнджер
-job-supervisors-ranger-veteran = твоя миссия и твой код
+job-supervisors-ranger-veteran = твоя миссия и твой кодекс
 job-supervisors-ncr-prisoners = охранники НКР держат ваш приговор
 job-supervisors-tribal = вождь племени
 job-supervisors-tribal-elder = ваше лучшее решение

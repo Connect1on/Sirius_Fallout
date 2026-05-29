@@ -81,3 +81,17 @@ job-name-ncr-major = Майор НКР
 job-description-ncr-major = Вы старший командный пункт Новой Калифорнийской Республики в этом регионе. Ваша власть превосходит капитана. Ваше назначение на основании административной директивы — действуйте сдержанно и целенаправленно.
 job-supervisors-ncr-major = Верховное командование НКР
 id-card-access-level-ncr-major = Основной доступ НКР
+
+ # #Misfits Add - NCR Military Police
+
+job-name-ncr-military-police-recruit = Специалист ВП НКР
+job-description-ncr-military-police-recruit = Обучайся у старших и следи за исполнунием закона.
+department-NCRMilitaryPolice-description = Enforce justice and law upon the members of the NCR.
+department-MilitaryPolice = Военная полиция НКР
+job-name-ncr-military-police-sergeant = Штаб-сержант ВП НКР
+job-description-ncr-military-police-sergeant = Вы несете ответственность за соблюдение закона в этом батальоне НКР. Возглавьте молодых новобранцев военной полиции и изучите каждую букву закона.
+job-supervisors-ncr-militarypolice-recruit = любому члену ВП НКР выше вас. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ НЕ ПОКИДАЙТЕ ТЕРРИТОРИЮ НКР.
+job-name-ncr-military-police-captain = Первый лейтенант ВП НКР
+job-description-ncr-military-police-captain = Вы несете ответственность за соблюдение закона в этом батальоне НКР. Руководите военной полицией НКР с надлежащей компетентностью и следите за тем, чтобы ни одно преступление не оставалось безнаказанным.
+job-supervisors-ncr-militarypolice-sergeant = первому лейтенанту ВП НКР. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ НЕ ПОКИДАЙТЕ ТЕРРИТОРИЮ НКР.
+job-supervisors-ncr-militarypolice-captain = высшему командованию. НИ ПРИ КАКИХ ОБСТОЯТЕЛЬСТВАХ НЕ ПОКИДАЙТЕ ТЕРРИТОРИЮ НКР.
