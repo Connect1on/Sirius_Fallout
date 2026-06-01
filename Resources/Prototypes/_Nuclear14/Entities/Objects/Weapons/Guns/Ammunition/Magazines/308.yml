@@ -62,6 +62,7 @@
 - type: entity
   id: ClipMagazine308Rifle
   name: "clip (.308)"
+  description: A 8-round clip for .308 rifles.
   parent: BaseMagazine308Rifle
   components:
   - type: Tag
@@ -73,6 +74,10 @@
   - type: Sprite
     netsync: false
     sprite: _Nuclear14/Objects/Weapons/Guns/Ammunition/Magazines/308/mag2.rsi
+  - type: Item
+    size: Tiny
+    shape:
+    - 0,0,0,0
 
 - type: entity
   id: Magazine308M60Box
@@ -98,6 +103,7 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+
 
 # #Misfits Removed - GarandEnbloc308 replaced by ClipMagazine308Rifle; all Garands now use the shared .308 clip
 #- type: entity
