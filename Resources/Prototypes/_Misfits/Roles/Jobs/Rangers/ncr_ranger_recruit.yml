@@ -27,7 +27,6 @@
     - !type:CharacterOverallTimeRequirement # #Misfits Fix - entry-level ranger uses overall playtime, not Rangers dept time
       min: 43200 # 12 hours
     - !type:CharacterSpeciesRequirement # #Misfits Change - robots, super mutants, and glowing ghouls cannot be Rangers
-      inverted: true
       species:
       - Human
       - Ghoul
