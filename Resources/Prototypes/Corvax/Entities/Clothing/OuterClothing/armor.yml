@@ -41,7 +41,7 @@
         Piercing: 0.45
         Heat: 0.45
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.60
   - type: StaminaDamageResistance
     coefficient: 0.85 # 15%
 #  - type: ClothingSpecialModifier
@@ -70,7 +70,7 @@
         Piercing: 0.45
         Heat: 0.45
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.60
   - type: StaminaDamageResistance
     coefficient: 0.85
 
@@ -97,7 +97,7 @@
         Piercing: 0.45
         Heat: 0.45
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.60
   - type: StaminaDamageResistance
     coefficient: 0.85
 
@@ -188,15 +188,15 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/veteranarmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 1.05 # makes veterans a big threat (not really) -Bill
-    sprintModifier: 1.05
+    walkModifier: 1 # NO MO SPEED
+    sprintModifier: 1
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.75
         Piercing: 0.7
-        Heat: 0.7
+        Heat: 0.85
   - type: ExplosionResistance
     damageCoefficient: 0.8
 
@@ -234,8 +234,8 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/lightreconnaissancearmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 1.10
-    sprintModifier: 1.10
+    walkModifier: 1.05
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
@@ -284,7 +284,7 @@
       coefficients:
         Blunt: 0.9
         Slash: 0.9
-        Piercing: 0.80 # 10% is worse than some COATS btw. just want you to know that. gave them 20% -Bill
+        Piercing: 0.85 # 10% is worse than some COATS btw. just want you to know that. gave them 15% -Bill
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.95
@@ -327,8 +327,8 @@
       coefficients:
         Blunt: 0.85
         Slash: 0.85
-        Piercing: 0.85
-        Heat: 0.85
+        Piercing: 0.90
+        Heat: 0.90
   - type: ExplosionResistance
     damageCoefficient: 0.90
 
