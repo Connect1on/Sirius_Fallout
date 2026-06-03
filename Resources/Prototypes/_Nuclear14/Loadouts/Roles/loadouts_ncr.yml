@@ -332,3 +332,33 @@
         - NCRVeteranRanger
   items:
     - ClothingBeltNCRHarness
+
+- type: loadout
+  id: LoadoutNCRRangerFoxArmor
+  category: Roles
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+     tracker: NCRVeteranRanger
+     min: 216000
+  items:
+   - N14ClothingOuterRangerFox
+
+- type: loadout
+  id: LoadoutNCRRangerEliteArmor
+  category: Roles
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+     tracker: NCRVeteranRanger
+     min: 108000
+  items:
+   - N14ClothingOuterRangerElite
