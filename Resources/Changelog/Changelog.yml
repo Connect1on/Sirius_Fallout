@@ -6427,3 +6427,12 @@ Entries:
   id: 6014
   time: '2026-06-04T00:14:37.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/683
+- author: qevie
+  changes:
+    - type: Add
+      message: New NCR vet ranger cosmetic options.
+    - type: Tweak
+      message: Added a proper description to fox ranger armor.
+  id: 6015
+  time: '2026-06-04T00:54:14.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/681
