@@ -211,6 +211,7 @@ public sealed class RequisitionsBui : BoundUserInterface
             Disabled = !canWithdraw,
             VerticalAlignment = Control.VAlignment.Center,
         };
+        RequisitionsUiStyles.ApplyQuantityButton(button);
         button.OnPressed += _ => SendMessage(new RequisitionsWithdrawStorageMsg { Proto = proto, Amount = spin.Value });
         row.AddChild(button);
 
@@ -521,14 +522,15 @@ public sealed class RequisitionsBui : BoundUserInterface
 
     private static Button CreateCategoryButton(string text, bool disabled)
     {
-        return new Button
+        var button = new Button
         {
             Text = text,
             Disabled = disabled,
             ClipText = false,
             HorizontalExpand = true,
-            StyleClasses = { "ButtonSquare" },
         };
+        RequisitionsUiStyles.ApplyQuantityButton(button);
+        return button;
     }
 
     private void PopulateProducts()

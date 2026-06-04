@@ -1,6 +1,6 @@
-# ASRS requisitions console UI
+# Requisitions console UI
 
-n14-requisitions-window-title = Automated Storage and Retrieval System
+n14-requisitions-window-title = RobCo Supply Terminal
 
 n14-requisitions-deposit = Deposited ${$amount} into the budget.
 
@@ -11,7 +11,7 @@ n14-requisitions-unlinked = [color=#cf2f2f][bold]● Not linked — no elevator 
 # Platform
 n14-requisitions-platform-raise = Raise platform
 n14-requisitions-platform-lower = Lower platform
-n14-requisitions-platform-busy = ASRS is busy
+n14-requisitions-platform-busy = Terminal is busy
 n14-requisitions-platform-missing = No platform
 
 # Sidebar
@@ -54,7 +54,7 @@ n14-requisitions-history-print = Print transcript
 n14-requisitions-sell-onplatform = On the platform
 n14-requisitions-sell-item = {$item}  [color=#5fbf5f]x{$count}[/color]  [color=#33FF33]${$value}[/color]
 n14-requisitions-sell-item-trade = {$item}  [color=#5fbf5f]x{$count}[/color]  [color=#33FF33]trade[/color]
-n14-requisitions-sell-total = [bold]Appraised total: ${$value}[/bold]  (lower the platform to sell)
+n14-requisitions-sell-total = [bold]Appraised total: ${$value}[/bold]
 n14-requisitions-sell-refresh = Refresh
 # Storage
 n14-requisitions-storage-empty = Storage is empty. Trade goods on the platform to fill it.

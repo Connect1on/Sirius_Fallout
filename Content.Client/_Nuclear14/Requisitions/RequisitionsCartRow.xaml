@@ -29,7 +29,7 @@
                             Access="Public"
                             Text="-"
                             ToolTip="{Loc n14-requisitions-remove-tooltip}"
-                            StyleClasses="ButtonSquare"
+    
                             MinWidth="32" />
                     <Label Name="Quantity"
                            Access="Public"
@@ -40,7 +40,7 @@
                             Access="Public"
                             Text="+"
                             ToolTip="{Loc n14-requisitions-add-tooltip}"
-                            StyleClasses="ButtonSquare"
+    
                             MinWidth="32" />
                 </BoxContainer>
             </BoxContainer>

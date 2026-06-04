@@ -6,8 +6,8 @@
   components:
   - type: RequisitionsAccount
     group: NCR
-    startingBalance: 8000
-    gain: 120
+    startingBalance: 6000
+    gain: 50
 
 - type: entity
   parent: N14BaseCargoElevator
@@ -31,65 +31,3 @@
     accountProto: N14ASRSAccountNCR
     acceptedCurrency: NCRDollars
     categories:
-    - name: n14-requisitions-category-medical
-      entries:
-      - cost: 600
-        crate: N14CrateRequisitionsNCRMedical
-    - name: n14-requisitions-category-ammunition
-      entries:
-      - cost: 800
-        crate: N14CrateRequisitionsNCRAmmo
-    - name: n14-requisitions-category-supplies
-      entries:
-      - cost: 400
-        crate: N14CrateRequisitionsNCRSupplies
-      - cost: 2000
-        crate: N14CrateRequisitionsNCRCaps
-
-- type: entity
-  parent: N14CrateRequisitions
-  id: N14CrateRequisitionsNCRMedical
-  name: NCR medical crate
-  components:
-  - type: RequisitionsCrate
-    reward: 150
-  - type: StorageFill
-    contents:
-    - id: N14Stimpak
-      amount: 5
-    - id: DrinkWaterBottleFull
-      amount: 3
-
-- type: entity
-  parent: N14CrateRequisitions
-  id: N14CrateRequisitionsNCRAmmo
-  name: NCR ammunition crate
-  components:
-  - type: RequisitionsCrate
-    reward: 150
-  - type: StorageFill
-    contents:
-    - id: N14MagazinePistol9mm
-      amount: 6
-
-- type: entity
-  parent: N14CrateRequisitions
-  id: N14CrateRequisitionsNCRSupplies
-  name: NCR supply crate
-  components:
-  - type: StorageFill
-    contents:
-    - id: MaterialCloth1
-      amount: 10
-
-- type: entity
-  parent: N14CrateRequisitions
-  id: N14CrateRequisitionsNCRCaps
-  name: caps crate
-  components:
-  - type: RequisitionsCrate
-    reward: 0
-  - type: StorageFill
-    contents:
-    - id: N14CurrencyCap100
-      amount: 5

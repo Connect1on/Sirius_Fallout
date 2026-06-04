@@ -23,6 +23,13 @@ public sealed partial class RequisitionsWindow : DefaultWindow
         Stylesheet = RequisitionsUiStyles.Create();
         ShopTabs.StyleClasses.Add(RequisitionsUiStyles.ShopTabs);
 
+        RequisitionsUiStyles.ApplyQuantityButton(PlatformButton);
+        RequisitionsUiStyles.ApplyQuantityButton(ClearCartButton);
+        RequisitionsUiStyles.ApplyQuantityButton(BuyButton);
+        RequisitionsUiStyles.ApplyQuantityButton(SellRefreshButton);
+        RequisitionsUiStyles.ApplyQuantityButton(WithdrawButton);
+        RequisitionsUiStyles.ApplyQuantityButton(PrintHistoryButton);
+
         TabContainer.SetTabTitle(ProductsTab, Loc.GetString("n14-requisitions-tab-products"));
         TabContainer.SetTabTitle(CartTab, Loc.GetString("n14-requisitions-tab-cart"));
         TabContainer.SetTabTitle(SellTab, Loc.GetString("n14-requisitions-tab-sell"));
