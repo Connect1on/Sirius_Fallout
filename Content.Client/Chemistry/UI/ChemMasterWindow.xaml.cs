@@ -242,6 +242,18 @@ namespace Content.Client.Chemistry.UI
             AmountLineEdit.SetText(string.Empty);
         }
 
+        private void SetAmountFromState(int amount)
+        {
+            if (amount == _transferAmount)
+                return;
+
+            _transferAmount = amount;
+            AmountLabel.Text = Loc.GetString(
+                "chem-master-window-transferring-label",
+                ("quantity", amount),
+                ("color", TransferringAmountColor));
+        }
+
         private ReagentButton MakeReagentButton(string text, ReagentId id, bool isBuffer)
         {
             var reagentTransferButton = new ReagentButton(text, id, isBuffer);
@@ -285,7 +297,7 @@ namespace Content.Client.Chemistry.UI
             // Ensure the Panel Info is updated, including UI elements for Buffer Volume, Output Container and so on
             UpdatePanelInfo(castState);
             HandleSortMethodChange(castState.SortMethod);
-            SetAmountText(castState.TransferringAmount.ToString());
+            SetAmountFromState(castState.TransferringAmount);
 
             BufferCurrentVolume.Text = $" {castState.PillBufferCurrentVolume?.Int() ?? 0}u";
 
