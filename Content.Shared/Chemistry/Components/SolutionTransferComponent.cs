@@ -6,13 +6,14 @@ namespace Content.Shared.Chemistry.Components;
 /// <summary>
 ///     Gives click behavior for transferring to/from other reagent containers.
 /// </summary>
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class SolutionTransferComponent : Component
 {
     /// <summary>
     ///     The amount of solution to be transferred from this solution when clicking on other solutions with it.
     /// </summary>
     [DataField("transferAmount")]
+    [AutoNetworkedField]
     [ViewVariables(VVAccess.ReadWrite)]
     public FixedPoint2 TransferAmount { get; set; } = FixedPoint2.New(5);
 
