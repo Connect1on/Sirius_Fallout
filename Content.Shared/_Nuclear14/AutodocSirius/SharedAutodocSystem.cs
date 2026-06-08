@@ -12,6 +12,7 @@ using Content.Shared.Stunnable;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
 using Robust.Shared.Serialization;
+using Robust.Shared.Timing;
 
 namespace Content.Shared._Nuclear14.AutodocSirius;
 
@@ -23,6 +24,8 @@ public abstract partial class SharedAutodocSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedPointLightSystem _light = default!;
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    private readonly Dictionary<EntityUid, TimeSpan> _lastToggleTime = new();
 
     public override void Initialize()
     {
@@ -84,11 +87,13 @@ public abstract partial class SharedAutodocSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
+        var now = _gameTiming.CurTime;
+        if (_lastToggleTime.TryGetValue(uid, out var last) && (now - last).TotalMilliseconds < 100)
+            return;
+        _lastToggleTime[uid] = now;
+
         component.IsOpen = !component.IsOpen;
         UpdateAppearance(uid, component);
-
-        var state = component.IsOpen ? "opened" : "closed";
-        _popupSystem.PopupEntity(Loc.GetString($"autodoc-{state}"), uid, user);
     }
 
     public bool InsertBody(EntityUid uid, EntityUid target, SiriusAutodocComponent component)
@@ -116,10 +121,7 @@ public abstract partial class SharedAutodocSystem : EntitySystem
             return;
 
         if (component.IsOpen)
-        {
-            _popupSystem.PopupEntity(Loc.GetString("autodoc-already-open"), uid, user);
             return;
-        }
 
         var ejected = EjectBody(uid, component);
         if (ejected != null)

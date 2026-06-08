@@ -26,7 +26,7 @@ public sealed class AutodocSystem : SharedAutodocSystem
             return;
 
         component.PreviousOffset = sprite.Offset;
-        _spriteSystem.SetOffset(uid, new Vector2(0, 1));
+        _spriteSystem.SetOffset(uid, new Vector2(0, 0.5f));
     }
 
     private void OnInsideRemove(EntityUid uid, InsideAutodocComponent component, ComponentRemove args)
