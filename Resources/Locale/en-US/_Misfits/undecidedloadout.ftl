@@ -780,15 +780,15 @@ undecided-loadout-category-misfits-priestess-order-desc =
 
 undecided-loadout-category-misfits-eighties-block-road-captain-name = Road Captain Kit
 undecided-loadout-category-misfits-eighties-block-road-captain-description =
-    Includes a .45 SMG with 4 magazines, an upgraded .44 revolver
-    with 2 speedloaders, a radio, 2 smoke grenades, Psycho,
-    a stimpak, gauze, and a flare.
+    A kit filled with everything a block needs to rip them apart.
+    Comes with a 12.7 SMG, a ripper, and some meds with various other 
+    looted equipment. 
 
 undecided-loadout-category-misfits-eighties-block-boss-brawler-name = Boss Brawler Kit
 undecided-loadout-category-misfits-eighties-block-boss-brawler-description =
-    Includes a sledgehammer, a .45 pistol with 4 magazines,
-    a frag grenade, a smoke grenade, Psycho, a stimpak,
-    gauze, and a flare.
+    A homemade stash filled with what the block needs to brawl with armor.
+    Comes with a .50 pipe, a 45-70 hunter, and some assorted meds and food.
+    A smoke and a frag are included.
 
 undecided-loadout-category-misfits-eighties-block-lead-foot-name = Lead Foot Kit
 undecided-loadout-category-misfits-eighties-block-lead-foot-description =
@@ -797,13 +797,15 @@ undecided-loadout-category-misfits-eighties-block-lead-foot-description =
 
 undecided-loadout-category-misfits-eighties-cylinders-tommy-name = Cylinders Tommy Kit
 undecided-loadout-category-misfits-eighties-cylinders-tommy-description =
-    Includes a .45 SMG with 3 magazines, a combat knife,
-    a smoke grenade, a stimpak, gauze, and a flare.
+    Everything a cylinder would need to kill from his bike, and on foot.
+    Comes with an american 180, some turbo, some meds, some food.
+    Two smoke grenades included.
 
 undecided-loadout-category-misfits-eighties-cylinders-shotcaller-name = Cylinders Shotcaller Kit
 undecided-loadout-category-misfits-eighties-cylinders-shotcaller-description =
-    Includes an upgraded .44 revolver with 3 speedloaders,
-    a radio, 2 smoke grenades, Psycho, a stimpak, gauze, and a flare.
+    A looted stash with extra meds for a cylinder, including a super stim.
+    Comes with a 10mm, a 44 revolver, some smoke grenades, the extra meds,
+    and gauze.
 
 undecided-loadout-category-misfits-eighties-cylinders-road-marshal-name = Cylinders Road Marshal Kit
 undecided-loadout-category-misfits-eighties-cylinders-road-marshal-description =
@@ -812,13 +814,15 @@ undecided-loadout-category-misfits-eighties-cylinders-road-marshal-description =
 
 undecided-loadout-category-misfits-eighties-pistons-skirmisher-name = Pistons Skirmisher Kit
 undecided-loadout-category-misfits-eighties-pistons-skirmisher-description =
-    Includes a pipe 10mm SMG with 3 magazines, a combat knife,
-    a stimpak, gauze, and a flare.
+    A small pile of gear for a piston to beat the wasties with.
+    Comes with a 10mm SMG, some assorted meds, a tribal club, 
+    a light shield, spare 44 revolver, and bolas for capturing.
 
 undecided-loadout-category-misfits-eighties-pistons-scattergun-name = Pistons Scattergun Kit
 undecided-loadout-category-misfits-eighties-pistons-scattergun-description =
-    Includes a pump shotgun, a box of 12 gauge shells,
-    a hatchet, a stimpak, gauze, and a flare.
+    A kit meant to spray down enemies of the 80s from afar.
+    Comes with an old carbine, a 44 revolver, some meds, some smokes,
+    and a lot of extra ammo.
 
 undecided-loadout-category-misfits-eighties-pistons-blade-name = Pistons Blade Kit
 undecided-loadout-category-misfits-eighties-pistons-blade-description =
@@ -827,18 +831,20 @@ undecided-loadout-category-misfits-eighties-pistons-blade-description =
 
 undecided-loadout-category-misfits-eighties-oilers-mechanic-name = Oilers Mechanic Kit
 undecided-loadout-category-misfits-eighties-oilers-mechanic-description =
-    Includes a filled mechanical toolbox, a pipe 10mm pistol
-    with 3 magazines, 2 flares, a stimpak, and gauze.
+    A supply of looted gear and a filled toolbox. Worth more than you.
+    Comes with a lever action 20g, a 44, some meds, some food,
+    and a shield.
 
 undecided-loadout-category-misfits-eighties-oilers-firebug-name = Oilers Firebug Kit
 undecided-loadout-category-misfits-eighties-oilers-firebug-description =
-    Includes a sawed-off shotgun, a box of 12 gauge shells,
-    2 smoke grenades, 2 flares, a stimpak, and gauze.
-
+    Everything a trusted oiler needs to cave a skull and bash a tin.
+    Comes with a precious psycho syringe, two puffs of jet, a heavy
+    club, some meds, and a 10mm for the black-top.
+ 
 undecided-loadout-category-misfits-eighties-oilers-patch-name = Oilers Patch Kit
 undecided-loadout-category-misfits-eighties-oilers-patch-description =
-    Includes a 9mm pistol with 2 magazines, 2 stimpaks,
-    2 gauze packs, and a flare.
+    Scrap SMG, scrap pistol, scrap shield, the only thing that isn't 
+    scrap is the tribal club and the meds included. Good luck.
 
 undecided-loadout-category-misfits-eighties-road-rash-runner-name = Road Rash Runner Kit
 undecided-loadout-category-misfits-eighties-road-rash-runner-description =
@@ -847,10 +853,12 @@ undecided-loadout-category-misfits-eighties-road-rash-runner-description =
 
 undecided-loadout-category-misfits-eighties-road-rash-scrapper-name = Road Rash Scrapper Kit
 undecided-loadout-category-misfits-eighties-road-rash-scrapper-description =
-    Includes a baseball bat, a pipe 10mm pistol with 2 magazines,
-    a stimpak, gauze, and a flare.
+    Equipment for a man that likely won't survive first contact. 
+    Scrap machete, a 10mm scrap shooter, shit meds, the only thing
+    to save you is the two puffs of jet you get.
 
 undecided-loadout-category-misfits-eighties-road-rash-lookout-name = Road Rash Lookout Kit
 undecided-loadout-category-misfits-eighties-road-rash-lookout-description =
+    A simple mans loot stash. Barely worth more than a couple caps.
     Includes a 9mm pistol, a box of 9mm ammo, a tribal knife,
-    a smoke grenade, 2 flares, a stimpak, and gauze.
+    a smoke grenade, 2 flares, a stimpak, and gauze. Good for looting.
