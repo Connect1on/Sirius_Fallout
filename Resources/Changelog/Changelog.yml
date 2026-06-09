@@ -6645,3 +6645,10 @@ Entries:
   id: 6034
   time: '2026-06-08T21:06:21.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/717
+- author: NajaTheNaja
+  changes:
+    - type: Fix
+      message: fixed fish and cazador shop contracts
+  id: 6035
+  time: '2026-06-09T22:47:44.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/733
