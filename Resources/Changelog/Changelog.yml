@@ -6652,3 +6652,10 @@ Entries:
   id: 6035
   time: '2026-06-09T22:47:44.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/733
+- author: paige404
+  changes:
+    - type: Fix
+      message: Fixed some unexpected behavior in the tribal accent
+  id: 6036
+  time: '2026-06-09T22:49:17.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/731
