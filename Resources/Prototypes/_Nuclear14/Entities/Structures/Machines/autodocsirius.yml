@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseStructure
+  parent: BaseStructureDynamic
   id: SiriusAutodoc
   name: autodoc
   description: A pre-war medical autodoc, capable of performing complex medical procedures.
@@ -37,6 +37,9 @@
         showEnts: true
   - type: Appearance
   - type: SiriusAutodoc
+    entryDelay: 2
+    treatmentDuration: 10
+    isOpen: true
   - type: Damageable
     damageContainer: Inorganic
     damageModifierSet: Metallic
@@ -69,10 +72,21 @@
     energy: 8
     enabled: false
   - type: ActivatableUI
-    key: enum.AutodocUiKey.Key
+    key: enum.SiriusAutodocUiKey.Key
     requiresComplex: false
   - type: ActivatableUIRequiresPower
   - type: UserInterface
     interfaces:
-      enum.AutodocUiKey.Key:
-        type: AutodocBoundUserInterface
+      enum.SiriusAutodocUiKey.Key:
+        type: SiriusAutodocBoundUserInterface
+  - type: ItemSlots
+    slots:
+      siriusBeakerSlot:
+        name: siriusBeakerSlot-name
+        whitelist:
+          components:
+          - FitsInDispenser
+        ejectSound:
+          path: /Audio/Machines/machine_switch.ogg
+        insertSuccessSound:
+          path: /Audio/Machines/machine_switch.ogg

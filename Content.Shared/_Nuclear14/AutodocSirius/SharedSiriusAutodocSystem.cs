@@ -6,6 +6,7 @@ using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.DragDrop;
 using Content.Shared.Mobs.Components;
+using Content.Shared.Movement.Events;
 using Content.Shared.Popups;
 using Content.Shared.Standing;
 using Content.Shared.Stunnable;
@@ -16,15 +17,17 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._Nuclear14.AutodocSirius;
 
-public abstract partial class SharedAutodocSystem : EntitySystem
+public abstract partial class SharedSiriusAutodocSystem : EntitySystem
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly StandingStateSystem _standingState = default!;
-    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
-    [Dependency] private readonly SharedPointLightSystem _light = default!;
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] protected readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] protected readonly StandingStateSystem _standingState = default!;
+    [Dependency] protected readonly SharedContainerSystem _containerSystem = default!;
+    [Dependency] protected readonly SharedPopupSystem _popupSystem = default!;
+    [Dependency] protected readonly SharedPointLightSystem _light = default!;
+    [Dependency] protected readonly ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] protected readonly IGameTiming _gameTiming = default!;
+    [Dependency] protected readonly SharedDoAfterSystem _doAfterSystem = default!;
+
     private readonly Dictionary<EntityUid, TimeSpan> _lastToggleTime = new();
 
     public override void Initialize()
@@ -58,19 +61,55 @@ public abstract partial class SharedAutodocSystem : EntitySystem
         args.Handled = true;
     }
 
+    protected void OnDragDrop(Entity<SiriusAutodocComponent> entity, ref DragDropTargetEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!entity.Comp.IsOpen)
+        {
+            _popupSystem.PopupEntity(Loc.GetString("autodoc-not-open"), entity, args.User);
+            return;
+        }
+
+        if (entity.Comp.BodyContainer.ContainedEntity != null)
+        {
+            _popupSystem.PopupEntity(Loc.GetString("autodoc-occupied"), entity, args.User);
+            return;
+        }
+
+        if (entity.Comp.IsTreating)
+        {
+            _popupSystem.PopupEntity(Loc.GetString("autodoc-cant-insert-during-treatment"), entity, args.User);
+            return;
+        }
+
+        var doAfterArgs = new DoAfterArgs(EntityManager, args.User, entity.Comp.EntryDelay, new SiriusAutodocInsertFinished(), entity, target: args.Dragged, used: entity)
+        {
+            BreakOnDamage = true,
+            BreakOnMove = true,
+            NeedHand = false,
+        };
+        _doAfterSystem.TryStartDoAfter(doAfterArgs);
+        args.Handled = true;
+    }
+
     protected void AddAlternativeVerbs(EntityUid uid, SiriusAutodocComponent component, GetVerbsEvent<AlternativeVerb> args)
     {
         if (!args.CanAccess || !args.CanInteract)
             return;
 
-        args.Verbs.Add(new AlternativeVerb
+        if (!component.IsTreating)
         {
-            Text = component.IsOpen ? Loc.GetString("autodoc-verb-close") : Loc.GetString("autodoc-verb-open"),
-            Priority = 1,
-            Act = () => TryToggleOpen(uid, args.User, component)
-        });
+            args.Verbs.Add(new AlternativeVerb
+            {
+                Text = component.IsOpen ? Loc.GetString("autodoc-verb-close") : Loc.GetString("autodoc-verb-open"),
+                Priority = 1,
+                Act = () => TryToggleOpen(uid, args.User, component)
+            });
+        }
 
-        if (component.BodyContainer.ContainedEntity != null && !component.IsOpen)
+        if (component.BodyContainer.ContainedEntity != null && !component.IsTreating)
         {
             args.Verbs.Add(new AlternativeVerb
             {
@@ -86,6 +125,12 @@ public abstract partial class SharedAutodocSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return;
+
+        if (component.IsTreating)
+        {
+            _popupSystem.PopupEntity(Loc.GetString("autodoc-cant-toggle-during-treatment"), uid, user);
+            return;
+        }
 
         var now = _gameTiming.CurTime;
         if (_lastToggleTime.TryGetValue(uid, out var last) && (now - last).TotalMilliseconds < 100)
@@ -107,10 +152,15 @@ public abstract partial class SharedAutodocSystem : EntitySystem
         if (!HasComp<MobStateComponent>(target))
             return false;
 
+        if (component.IsTreating)
+            return false;
+
         _containerSystem.Insert(target, component.BodyContainer, containerXform: Transform(component.BodyContainer.Owner));
 
         EnsureComp<InsideAutodocComponent>(target);
         _standingState.Stand(target, force: true);
+
+        UpdateAppearance(uid, component);
 
         return true;
     }
@@ -120,8 +170,17 @@ public abstract partial class SharedAutodocSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
-        if (component.IsOpen)
+        if (component.IsTreating)
+        {
+            _popupSystem.PopupEntity(Loc.GetString("autodoc-cant-eject-during-treatment"), uid, user);
             return;
+        }
+
+        if (!component.IsOpen)
+        {
+            component.IsOpen = true;
+            UpdateAppearance(uid, component);
+        }
 
         var ejected = EjectBody(uid, component);
         if (ejected != null)
@@ -136,10 +195,16 @@ public abstract partial class SharedAutodocSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return null;
 
+        if (component.IsTreating)
+            return null;
+
         if (component.BodyContainer.ContainedEntity is not { Valid: true } contained)
             return null;
 
         _containerSystem.Remove(contained, component.BodyContainer);
+
+        if (HasComp<InsideAutodocComponent>(contained))
+            RemComp<InsideAutodocComponent>(contained);
 
         if (HasComp<KnockedDownComponent>(contained))
         {

@@ -4,7 +4,7 @@ using Robust.Shared.Containers;
 
 namespace Content.Shared._Nuclear14.AutodocSirius;
 
-public abstract partial class SharedAutodocSystem
+public abstract partial class SharedSiriusAutodocSystem
 {
     public virtual void InitializeInsideAutodoc()
     {

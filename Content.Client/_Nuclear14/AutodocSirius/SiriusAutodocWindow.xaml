@@ -1,0 +1,87 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="AUTODOC - SIRIUS MD-3"
+                      MinSize="480 520"
+                      SetSize="520 580">
+    <!-- Fallout 2 / Vault-Tec terminal style background -->
+    <PanelContainer Name="BackgroundPanel" VerticalExpand="True" HorizontalExpand="True">
+        <BoxContainer Orientation="Vertical" Margin="12 8 12 8" SeparationOverride="8">
+
+            <!-- Header -->
+            <Label Name="HeaderLabel"
+                   Text="[ ROBCO INDUSTRIES (TM) - SIRIUS MD-3 ]"
+                   FontColorOverride="#33FF33"
+                   StyleClasses="monospace"
+                   HorizontalAlignment="Center" />
+            <PanelContainer Name="SepTop" MinHeight="2" HorizontalExpand="True" />
+
+            <!-- Patient Status Line -->
+            <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                <Label Text="PATIENT:" FontColorOverride="#33FF33" StyleClasses="monospace" />
+                <Label Name="PatientNameLabel"
+                       FontColorOverride="#33FF33"
+                       StyleClasses="monospace"
+                       HorizontalExpand="True" />
+                <Label Name="StatusLabel"
+                       FontColorOverride="#33FF33"
+                       StyleClasses="monospace" />
+            </BoxContainer>
+
+            <PanelContainer Name="SepMid1" MinHeight="1" HorizontalExpand="True" />
+
+            <!-- Damage Display Section -->
+            <Label Text="DIAGNOSTIC REPORT"
+                   FontColorOverride="#33FF33"
+                   StyleClasses="monospace"
+                   HorizontalAlignment="Center" />
+            <ScrollContainer VerticalExpand="True" HorizontalExpand="True" HScrollEnabled="False" MinHeight="200">
+                <BoxContainer Name="DamageContainer" Orientation="Vertical" SeparationOverride="4" />
+            </ScrollContainer>
+
+            <PanelContainer Name="SepMid2" MinHeight="1" HorizontalExpand="True" />
+
+            <!-- Stimulants Display -->
+            <BoxContainer Orientation="Horizontal" SeparationOverride="8">
+                <Label Text="STIMULANTS:" FontColorOverride="#33FF33" StyleClasses="monospace" />
+                <Label Name="StimulantsLabel"
+                       FontColorOverride="#55FF55"
+                       StyleClasses="monospace"
+                       HorizontalExpand="True" />
+                <Label Text="units" FontColorOverride="#33FF33" StyleClasses="monospace" />
+            </BoxContainer>
+
+            <PanelContainer Name="SepMid3" MinHeight="1" HorizontalExpand="True" />
+
+            <!-- Error Message Line (red) -->
+            <Label Name="ErrorLabel"
+                   FontColorOverride="#FF5555"
+                   StyleClasses="monospace"
+                   HorizontalAlignment="Center"
+                   Visible="False" />
+
+            <PanelContainer Name="SepBottom" MinHeight="1" HorizontalExpand="True" />
+
+            <!-- Buttons Row -->
+            <BoxContainer Orientation="Horizontal" SeparationOverride="10" HorizontalExpand="True">
+                <Button Name="EjectBeakerButton"
+                        Text="[ EJECT BEAKER ]"
+                        HorizontalExpand="True"
+                        MinWidth="120" />
+                <Button Name="EjectPatientButton"
+                        Text="[ EJECT PATIENT ]"
+                        HorizontalExpand="True"
+                        MinWidth="120" />
+                <Button Name="StartTreatmentButton"
+                        Text="[ START TREATMENT ]"
+                        HorizontalExpand="True"
+                        MinWidth="140" />
+            </BoxContainer>
+
+            <!-- Footer -->
+            <Label Text="[ SYSTEM READY ]"
+                   FontColorOverride="#1a5c1a"
+                   StyleClasses="monospace"
+                   HorizontalAlignment="Center" />
+        </BoxContainer>
+    </PanelContainer>
+</controls:FancyWindow>
