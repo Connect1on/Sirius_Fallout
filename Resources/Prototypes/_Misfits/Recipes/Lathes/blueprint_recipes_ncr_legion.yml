@@ -2116,26 +2116,6 @@
 
 
 - type: latheRecipe
-  id: N14BPLegionArmorOratorArmor
-  result: N14ClothingOuterLegionnaireOratorArmor
-  category: N14BlueprintLegionArmorT3
-  completetime: 12
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Leather: 250
-
-    Cloth: 220
-
-    Thread: 170
-
-    N14Iron: 1000
-
-    N14Gold: 150
-
-
-- type: latheRecipe
   id: N14BPLegionArmorDeanRecruitArmor
   result: N14ClothingOuterDeanLegionnaireRecruitArmor
   category: N14BlueprintLegionArmorT3

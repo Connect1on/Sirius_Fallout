@@ -354,23 +354,23 @@ undecided-loadout-category-corvax-vexillarius-skirmisher-description =
     a buckler, a pilum spear, a healing poultice,
     2 K rations, and a ceramic flask.
 
-undecided-loadout-category-corvax-orator-preacher-name = Orator Preacher
-undecided-loadout-category-corvax-orator-preacher-description =
-    Includes a hunting rifle, a box of .308 ammo,
+undecided-loadout-category-corvax-optio-preacher-name = Optio Preacher
+undecided-loadout-category-corvax-optio-preacher-description =
+    Includes a Neostead, 2 12 Gauge ammo boxes,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     2 smoke grenades, 2 bandages, 2 healing poultices,
     a healing powder, 2 K rations, and a ceramic flask.
 
-undecided-loadout-category-corvax-orator-defender-name = Orator Defender
-undecided-loadout-category-corvax-orator-defender-description =
-    Includes a hunting rifle, a box of .308 ammo,
+undecided-loadout-category-corvax-optio-defender-name = Optio Defender
+undecided-loadout-category-corvax-optio-defender-description =
+    Includes a Decorated tribal heavy club,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     a smoke grenade, 2 healing poultices, a healing powder,
     2 K rations, and a ceramic flask.
 
-undecided-loadout-category-corvax-orator-inquisitor-name = Orator Inquisitor
-undecided-loadout-category-corvax-orator-inquisitor-description =
-    Includes a hunting rifle, a box of .308 ammo,
+undecided-loadout-category-corvax-optio-inquisitor-name = Optio Inquisitor
+undecided-loadout-category-corvax-optio-inquisitor-description =
+    Includes an SKS, three en-block clips,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     a ceremonial sword, a bola, handcuffs,
     2 healing powder, 2 K rations, and a ceramic flask.
@@ -420,7 +420,7 @@ undecided-loadout-category-corvax-auxilia-medic-description =
 
 undecided-loadout-category-corvax-veteran-decanus-command-name = Veteran Decanus Command
 undecided-loadout-category-corvax-veteran-decanus-command-description =
-    Includes a Legion shield, a neostead with two boxes of 12g,
+    Includes a Legion shield, a Riot shotgun, 2 20 gauge drums, a 20 gauge box,
     a rope belt, a .45 Colt pistol, 2 .45 magazines,
     a box of .45 ammo, a handcuff box, a bola,
     2 healing poultice, 2 K rations, and a ceramic flask.

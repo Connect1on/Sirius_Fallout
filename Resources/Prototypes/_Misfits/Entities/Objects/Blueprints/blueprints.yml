@@ -372,7 +372,6 @@
   - type: Blueprint
     recipes:
     - N14BPLegionArmorVeteranArmor
-    - N14BPLegionArmorOratorArmor
     - N14BPLegionArmorDeanRecruitArmor
     - N14BPLegionArmorReconnaissanceArmor
     # #Misfits Add - paired veteran headgear (hunter hoods and trophy skulls)

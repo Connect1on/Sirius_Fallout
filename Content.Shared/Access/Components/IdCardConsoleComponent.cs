@@ -83,7 +83,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "CaesarLegionLegionnaireVeteran",
         "CaesarLegionDean",
         "CaesarLegionVeteranDecanus",
-        "CaesarLegionOrator",
+        "CaesarLegionOptio",
         "CaesarLegionCenturion",
         "BOS", // Misfit: BOS Start
         "BOSInitiate",
