@@ -17,7 +17,7 @@ autodoc-cant-eject-beaker-treating = CANNOT EJECT CONTAINER DURING ACTIVE TREATM
 autodoc-cant-eject-patient-treating = CANNOT EJECT PATIENT DURING ACTIVE TREATMENT
 autodoc-beaker-ejected = REAGENT CONTAINER EJECTED
 autodoc-patient-ejected = PATIENT EJECTED FROM CHAMBER
-autodoc-treatment-complete = TREATMENT COMPLETE - PATIENT STABILIZED
+autodoc-treatment-complete = TREATMENT COMPLETE - PATIENT STABILIZED    
 
 siriusBeakerSlot-name = Beaker Slot
 siriusBeakerSlot-desc = A slot for a beaker containing Stimulants.
