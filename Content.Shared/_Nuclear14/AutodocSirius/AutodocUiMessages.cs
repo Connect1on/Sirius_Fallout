@@ -42,6 +42,8 @@ public sealed partial class AutodocTreatmentDoAfterEvent : SimpleDoAfterEvent
 [Serializable, NetSerializable]
 public enum AutodocUiButton
 {
+    OpenDoor,
+    CloseDoor,
     EjectBeaker,
     EjectPatient,
     StartTreatment,

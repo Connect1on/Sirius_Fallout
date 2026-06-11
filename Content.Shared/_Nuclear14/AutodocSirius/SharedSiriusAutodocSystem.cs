@@ -15,6 +15,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Containers;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
+using System.Linq;
 
 namespace Content.Shared._Nuclear14.AutodocSirius;
 
@@ -62,7 +63,7 @@ public abstract partial class SharedSiriusAutodocSystem : EntitySystem
         args.Handled = true;
     }
 
-    protected void OnDragDrop(Entity<SiriusAutodocComponent> entity, ref DragDropTargetEvent args)
+    public void OnDragDrop(Entity<SiriusAutodocComponent> entity, ref DragDropTargetEvent args)
     {
         if (args.Handled)
             return;
@@ -100,18 +101,31 @@ public abstract partial class SharedSiriusAutodocSystem : EntitySystem
         if (!args.CanAccess || !args.CanInteract)
             return;
 
-        if (!component.IsTreating)
+        if (component.IsTreating)
+            return;
+
+        var existingVerbs = args.Verbs.Where(v => v.Text == Loc.GetString("autodoc-verb-open") ||
+                                                    v.Text == Loc.GetString("autodoc-verb-close")).ToList();
+        foreach (var verb in existingVerbs)
         {
-            args.Verbs.Add(new AlternativeVerb
-            {
-                Text = component.IsOpen ? Loc.GetString("autodoc-verb-close") : Loc.GetString("autodoc-verb-open"),
-                Priority = 1,
-                Act = () => TryToggleOpen(uid, args.User, component)
-            });
+            args.Verbs.Remove(verb);
         }
+
+        args.Verbs.Add(new AlternativeVerb
+        {
+            Text = component.IsOpen ? Loc.GetString("autodoc-verb-close") : Loc.GetString("autodoc-verb-open"),
+            Priority = 1,
+            Act = () => TryToggleOpen(uid, args.User, component)
+        });
 
         if (component.BodyContainer.ContainedEntity != null && !component.IsTreating)
         {
+            var existingEject = args.Verbs.Where(v => v.Text == Loc.GetString("autodoc-verb-eject")).ToList();
+            foreach (var verb in existingEject)
+            {
+                args.Verbs.Remove(verb);
+            }
+
             args.Verbs.Add(new AlternativeVerb
             {
                 Text = Loc.GetString("autodoc-verb-eject"),
@@ -121,7 +135,6 @@ public abstract partial class SharedSiriusAutodocSystem : EntitySystem
             });
         }
     }
-
     public void TryToggleOpen(EntityUid uid, EntityUid user, SiriusAutodocComponent? component = null)
     {
         if (!Resolve(uid, ref component))
@@ -207,11 +220,8 @@ public abstract partial class SharedSiriusAutodocSystem : EntitySystem
         if (HasComp<InsideAutodocComponent>(contained))
             RemComp<InsideAutodocComponent>(contained);
 
-        // Misfits Fix: Check if entity is dead before trying to stand it up
         var isAlive = TryComp<MobStateComponent>(contained, out var mobState) &&
                       mobState.CurrentState == MobState.Alive;
-
-        // Also check if entity has any damage? No, because they could be dead with zero damage
 
         if (HasComp<KnockedDownComponent>(contained))
         {
@@ -219,12 +229,10 @@ public abstract partial class SharedSiriusAutodocSystem : EntitySystem
         }
         else if (isAlive)
         {
-            // Only stand up if alive
             _standingState.Stand(contained);
         }
         else
         {
-            // If dead, make sure they're down (lying on the ground)
             _standingState.Down(contained);
         }
 

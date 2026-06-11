@@ -64,13 +64,20 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
         SepMid1.PanelOverride = dimLine;
         SepMid2.PanelOverride = dimLine;
         SepMid3.PanelOverride = dimLine;
+        SepMid4.PanelOverride = dimLine;
         SepBottom.PanelOverride = dimLine;
     }
 
     private void WireButtons()
     {
+        DoorOpenButton.OnPressed += _ => OnAutodocButton?.Invoke(AutodocUiButton.OpenDoor);
+        DoorCloseButton.OnPressed += _ => OnAutodocButton?.Invoke(AutodocUiButton.CloseDoor);
         EjectBeakerButton.OnPressed += _ => OnAutodocButton?.Invoke(AutodocUiButton.EjectBeaker);
-        EjectPatientButton.OnPressed += _ => OnAutodocButton?.Invoke(AutodocUiButton.EjectPatient);
+        EjectPatientButton.OnPressed += _ =>
+        {
+            _sawmill.Debug("EjectPatientButton pressed - sending message");
+            OnAutodocButton?.Invoke(AutodocUiButton.EjectPatient);
+        };
         StartTreatmentButton.OnPressed += _ => OnAutodocButton?.Invoke(AutodocUiButton.StartTreatment);
     }
 
@@ -87,17 +94,14 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
 
     public void UpdateState(AutodocBoundUserInterfaceState state)
     {
-        _sawmill.Debug($"=== UpdateState CALLED === HasBeaker={state.HasBeaker}, HasOccupant={state.HasOccupant}, IsTreating={state.IsTreating}");
-
         UpdatePatientInfo(state);
         UpdateDamageDisplay(state);
         UpdateStimulantsDisplay(state);
-        UpdateButtonsState(state);
+        UpdateDoorButtonsState(state);
+        UpdateActionButtonsState(state);
         UpdateProgressDisplay(state);
         UpdateErrorDisplay(state);
         UpdateFooter(state);
-
-        _sawmill.Debug("=== UpdateState FINISHED ===");
     }
 
     private void UpdatePatientInfo(AutodocBoundUserInterfaceState state)
@@ -131,6 +135,20 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
             StatusLabel.Text = "AWAITING SUBJECT";
             StatusLabel.FontColorOverride = ColorDim;
         }
+    }
+
+    private void UpdateDoorButtonsState(AutodocBoundUserInterfaceState state)
+    {
+        var disabled = state.IsTreating;
+
+        DoorOpenButton.Disabled = disabled || state.IsOpen;
+        DoorCloseButton.Disabled = disabled || !state.IsOpen;
+
+        DoorOpenButton.ModulateSelfOverride = (disabled || state.IsOpen) ? ColorInactive : null;
+        DoorCloseButton.ModulateSelfOverride = (disabled || !state.IsOpen) ? ColorInactive : null;
+
+        DoorOpenButton.Text = state.IsOpen ? "DOOR OPEN" : "OPEN DOOR";
+        DoorCloseButton.Text = !state.IsOpen ? "DOOR CLOSED" : "CLOSE DOOR";
     }
 
     private void UpdateDamageDisplay(AutodocBoundUserInterfaceState state)
@@ -249,11 +267,11 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
         }
     }
 
-    private void UpdateButtonsState(AutodocBoundUserInterfaceState state)
+    private void UpdateActionButtonsState(AutodocBoundUserInterfaceState state)
     {
+        var ejectPatientDisabled = !state.HasOccupant || state.IsTreating || !state.IsOpen;
         var ejectBeakerDisabled = !state.HasBeaker || state.IsTreating;
-        var ejectPatientDisabled = !state.HasOccupant || state.IsTreating;
-        var startDisabled = !state.TreatButtonEnabled || state.IsTreating;
+        var startDisabled = !state.TreatButtonEnabled || state.IsTreating || state.IsOpen;
 
         EjectBeakerButton.Disabled = ejectBeakerDisabled;
         EjectPatientButton.Disabled = ejectPatientDisabled;
@@ -305,14 +323,19 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
             FooterLabel.Text = "[ NO POWER ]";
             FooterLabel.FontColorOverride = ColorCritical;
         }
+        else if (state.HasOccupant && state.IsOpen)
+        {
+            FooterLabel.Text = "[ DOOR OPEN - CLOSE TO START TREATMENT ]";
+            FooterLabel.FontColorOverride = ColorModerate;
+        }
         else if (state.HasOccupant && !state.TreatButtonEnabled)
         {
             FooterLabel.Text = "[ INSUFFICIENT STIMULANTS ]";
             FooterLabel.FontColorOverride = ColorModerate;
         }
-        else if (state.HasOccupant)
+        else if (state.HasOccupant && !state.IsOpen)
         {
-            FooterLabel.Text = "[ SYSTEM READY ]";
+            FooterLabel.Text = "[ SYSTEM READY - PRESS START ]";
             FooterLabel.FontColorOverride = ColorMinor;
         }
         else

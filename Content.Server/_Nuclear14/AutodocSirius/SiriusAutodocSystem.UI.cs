@@ -32,8 +32,8 @@ public sealed partial class SiriusAutodocSystem
 
     private const string StimulantsReagentId = "Stimulants";
     private const int StimulantsRequired = 30;
-
-    private const float UiUpdateInterval = 1.0f;
+    private bool _isUpdating = false;
+    private const float UiUpdateInterval = 0.5f;
     private readonly Dictionary<EntityUid, TimeSpan> _lastUiUpdate = new();
 
     private void OnContainerInserted(Entity<SiriusAutodocComponent> entity, ref EntInsertedIntoContainerMessage args)
@@ -114,40 +114,6 @@ public sealed partial class SiriusAutodocSystem
 
         UpdateUiState(entity);
     }
-
-    private void OnEjectOccupantMessage(Entity<SiriusAutodocComponent> entity, ref AutodocUiEjectOccupantMessage message)
-    {
-        _sawmill.Debug($"=== OnEjectOccupantMessage CALLED for autodoc {entity.Owner} from user {message.Actor} ===");
-
-        if (entity.Comp.IsTreating)
-        {
-            _sawmill.Debug("Cannot eject - autodoc is treating");
-            _popupSystem.PopupEntity(Loc.GetString("autodoc-cant-eject-patient-treating"), entity, message.Actor);
-            UpdateUiState(entity);
-            return;
-        }
-
-        if (!entity.Comp.IsOpen)
-        {
-            _sawmill.Debug("Autodoc is closed, opening first");
-            entity.Comp.IsOpen = true;
-            UpdateAppearance(entity.Owner, entity.Comp);
-            UpdateUiState(entity);
-        }
-
-        var ejected = EjectBody(entity.Owner, entity.Comp);
-        if (ejected != null)
-        {
-            _sawmill.Debug($"Successfully ejected patient {ejected}");
-            _popupSystem.PopupEntity(Loc.GetString("autodoc-patient-ejected"), entity, message.Actor);
-        }
-        else
-        {
-            _sawmill.Debug("Eject failed - no patient inside");
-        }
-        UpdateUiState(entity);
-    }
-
     private void OnStartTreatmentMessage(Entity<SiriusAutodocComponent> entity, EntityUid user)
     {
         _sawmill.Debug($"StartTreatmentMessage received");
@@ -168,95 +134,78 @@ public sealed partial class SiriusAutodocSystem
         }
 
         entity.Comp.IsTreating = true;
-
-        // ЗАПОМИНАЕМ ВРЕМЯ НАЧАЛА ЛЕЧЕНИЯ
         _treatmentStartTime[entity.Owner] = _gameTiming.CurTime;
 
         UpdateUiState(entity);
         UpdateAppearance(entity.Owner, entity.Comp);
-
-        // Альтернатива: не используем DoAfter вообще, полагаемся на таймаут в Update
-        // Просто помечаем, что лечение началось, и таймаут завершит его
         _sawmill.Debug($"Treatment started on autodoc {entity.Owner}, will complete in {entity.Comp.TreatmentDuration} seconds");
     }
-
-    //private void OnTreatmentFinished(Entity<SiriusAutodocComponent> entity, ref AutodocTreatmentDoAfterEvent args)
-    //// {
-    //// _sawmill.Debug($"Treatment finished! Cancelled={args.Cancelled}, Handled={args.Handled}");
-
-    // УДАЛЯЕМ ВРЕМЯ НАЧАЛА ЛЕЧЕНИЯ
-    // _treatmentStartTime.Remove(entity.Owner);
-
-    //     if (args.Cancelled || args.Handled)
-    //    {
-    // entity.Comp.IsTreating = false;
-    // UpdateUiState(entity);
-    // UpdateAppearance(entity.Owner, entity.Comp);
-
-    // Если лечение было прервано, уведомляем пользователя
-    //   if (args.Args.User.IsValid())
-    //    {
-    // _popupSystem.PopupEntity(Loc.GetString("autodoc-treatment-cancelled"), entity, args.Args.User);
-    //}
-    //      return;
-    //}
-
-    //    if (!entity.Comp.Powered)
-    //    {
-    //  entity.Comp.IsTreating = false;
-    //       if (args.Args.User.IsValid())
-    //_popupSystem.PopupEntity(Loc.GetString("autodoc-error-no-power"), entity, args.Args.User);
-    // UpdateUiState(entity);
-    // UpdateAppearance(entity.Owner, entity.Comp);
-    //         return;
-    //}
-
-    //       if (entity.Comp.CurrentPatient is { } patient)
-    //       {
-    // Лечим пациента
-    //  HealPatient(patient);
-
-    // Списываем стимулянты
-    // var beaker = _itemSlots.GetItemOrNull(entity.Owner, SiriusAutodocComponent.SiriusBeakerSlotId);
-    //      if (beaker != null && _solutionContainer.TryGetSolution(beaker.Value, "beaker", out var soln, out var solution))
-    //     {
-    //var stimulantsAmount = solution.GetReagentQuantity(new(StimulantsReagentId, null));
-    //var toRemove = FixedPoint2.Min(StimulantsRequired, stimulantsAmount);
-    //_solutionContainer.RemoveReagent(soln.Value, new(StimulantsReagentId, null), toRemove);
-    //}
-
-    // Проверяем статус после лечения
-    //     if (TryComp<MobStateComponent>(patient, out var mobState))
-    //    {
-    // if (mobState.CurrentState == MobState.Dead)
-    //   {
-    // _popupSystem.PopupEntity(Loc.GetString("autodoc-treatment-complete-still-dead"), entity, args.Args.User);
-    //}
-    //          else
-    //          {
-    // _popupSystem.PopupEntity(Loc.GetString("autodoc-treatment-complete"), entity, args.Args.User);
-    //}
-    //}
-    //}
-
-    //entity.Comp.IsTreating = false;
-    //     UpdateUiState(entity);
-    //  //      UpdateAppearance(entity.Owner, entity.Comp);
-    // }
-
     private void OnUiButtonPressed(Entity<SiriusAutodocComponent> entity, ref AutodocUiButtonPressedMessage message)
     {
         _sawmill.Debug($"OnUiButtonPressed: Button={message.Button}, Actor={message.Actor}");
 
         switch (message.Button)
         {
+            case AutodocUiButton.OpenDoor:
+                if (!entity.Comp.IsTreating && !entity.Comp.IsOpen)
+                {
+                    entity.Comp.IsOpen = true;
+                    UpdateAppearance(entity.Owner, entity.Comp);
+                    UpdateUiState(entity);
+                    _popupSystem.PopupEntity("Door opened", entity, message.Actor);
+                }
+                break;
+
+            case AutodocUiButton.CloseDoor:
+                if (!entity.Comp.IsTreating && entity.Comp.IsOpen)
+                {
+                    if (entity.Comp.BodyContainer.ContainedEntity == null)
+                    {
+                        entity.Comp.IsOpen = false;
+                        UpdateAppearance(entity.Owner, entity.Comp);
+                        UpdateUiState(entity);
+                        _popupSystem.PopupEntity("Door closed", entity, message.Actor);
+                    }
+                    else
+                    {
+                        entity.Comp.IsOpen = false;
+                        UpdateAppearance(entity.Owner, entity.Comp);
+                        UpdateUiState(entity);
+                        _popupSystem.PopupEntity("Door closed - Patient secured", entity, message.Actor);
+                    }
+                }
+                break;
+
             case AutodocUiButton.EjectBeaker:
                 OnEjectBeakerMessage(entity, message.Actor);
                 break;
+
             case AutodocUiButton.EjectPatient:
-                var ejectMsg = new AutodocUiEjectOccupantMessage();
-                OnEjectOccupantMessage(entity, ref ejectMsg);
+                if (entity.Comp.IsOpen)
+                {
+                    if (entity.Comp.IsEjecting)
+                    {
+                        _sawmill.Debug("Eject already in progress, ignoring");
+                        return;
+                    }
+
+                    entity.Comp.IsEjecting = true;
+                    try
+                    {
+                        TryEjectBody(entity.Owner, message.Actor, entity.Comp);
+                        UpdateUiState(entity);
+                    }
+                    finally
+                    {
+                        entity.Comp.IsEjecting = false;
+                    }
+                }
+                else
+                {
+                    _popupSystem.PopupEntity("Cannot eject: Door is closed!", entity, message.Actor);
+                }
                 break;
+
             case AutodocUiButton.StartTreatment:
                 OnStartTreatmentMessage(entity, message.Actor);
                 break;
@@ -333,15 +282,32 @@ public sealed partial class SiriusAutodocSystem
 
     private void UpdateUiState(Entity<SiriusAutodocComponent> entity)
     {
-        if (!_uiSystem.HasUi(entity.Owner, SiriusAutodocUiKey.Key))
-            return;
+        if (_isUpdating) return;
+        _isUpdating = true;
 
-        var state = GetUiState(entity);
-        _uiSystem.SetUiState(entity.Owner, SiriusAutodocUiKey.Key, state);
+        try
+        {
+            _sawmill.Debug($"UpdateUiState called for {entity.Owner}");
+
+            if (!_uiSystem.HasUi(entity.Owner, SiriusAutodocUiKey.Key))
+            {
+                _sawmill.Debug($"No UI for {entity.Owner}");
+                return;
+            }
+
+            var state = GetUiState(entity);
+            _uiSystem.SetUiState(entity.Owner, SiriusAutodocUiKey.Key, state);
+            _sawmill.Debug($"UpdateUiState completed");
+        }
+        finally
+        {
+            _isUpdating = false;
+        }
     }
 
     private AutodocBoundUserInterfaceState GetUiState(Entity<SiriusAutodocComponent> entity)
     {
+        _sawmill.Debug($"=== GetUiState START for {entity.Owner} ===");
         var component = entity.Comp;
         var hasOccupant = component.BodyContainer.ContainedEntity != null;
         var occupantDamage = new Dictionary<string, FixedPoint2>();
@@ -403,7 +369,7 @@ public sealed partial class SiriusAutodocSystem
         var treatButtonEnabled = canTreat && !component.IsTreating;
 
         _sawmill.Debug($"GetUiState FINAL: HasBeaker={hasBeaker}, HasOccupant={hasOccupant}, TreatButtonEnabled={treatButtonEnabled}, IsTreating={component.IsTreating}, Progress={treatmentProgress:F2}");
-
+        _sawmill.Debug($"GetUiState: IsOpen={component.IsOpen}, HasOccupant={hasOccupant}, TreatButtonEnabled={treatButtonEnabled}");
         return new AutodocBoundUserInterfaceState(
             component.IsOpen,
             component.Powered,
@@ -428,7 +394,6 @@ public sealed partial class SiriusAutodocSystem
 
         var currentTime = _gameTiming.CurTime;
 
-        // Обрабатываем лечение через таймаут
         var treatmentsToComplete = new List<EntityUid>();
 
         foreach (var (uid, startTime) in _treatmentStartTime)
@@ -448,7 +413,6 @@ public sealed partial class SiriusAutodocSystem
             var elapsed = (currentTime - startTime).TotalSeconds;
             if (elapsed >= comp.TreatmentDuration)
             {
-                // Лечение завершено
                 treatmentsToComplete.Add(uid);
                 CompleteTreatment((uid, comp));
             }
@@ -459,7 +423,6 @@ public sealed partial class SiriusAutodocSystem
             _treatmentStartTime.Remove(uid);
         }
 
-        // Обычное обновление UI
         var query = EntityQueryEnumerator<SiriusAutodocComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
@@ -498,10 +461,8 @@ public sealed partial class SiriusAutodocSystem
 
         if (entity.Comp.CurrentPatient is { } patient)
         {
-            // Лечим пациента
             HealPatient(patient);
 
-            // Списываем стимулянты
             var beaker = _itemSlots.GetItemOrNull(entity.Owner, SiriusAutodocComponent.SiriusBeakerSlotId);
             if (beaker != null && _solutionContainer.TryGetSolution(beaker.Value, "beaker", out var soln, out var solution))
             {

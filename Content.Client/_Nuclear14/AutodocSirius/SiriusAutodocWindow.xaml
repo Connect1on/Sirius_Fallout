@@ -55,6 +55,20 @@
 
         <PanelContainer Name="SepMid3" MinHeight="1" HorizontalExpand="True" />
 
+        <!-- Door Controls - ИЗМЕНЕНЫ ИМЕНА -->
+        <BoxContainer Orientation="Horizontal" SeparationOverride="10" HorizontalExpand="True">
+            <Button Name="DoorOpenButton"
+                    Text="OPEN DOOR"
+                    HorizontalExpand="True"
+                    MinWidth="100" />
+            <Button Name="DoorCloseButton"
+                    Text="CLOSE DOOR"
+                    HorizontalExpand="True"
+                    MinWidth="100" />
+        </BoxContainer>
+
+        <PanelContainer Name="SepMid4" MinHeight="1" HorizontalExpand="True" />
+
         <!-- Error Message -->
         <Label Name="ErrorLabel"
                FontColorOverride="#FF5555"

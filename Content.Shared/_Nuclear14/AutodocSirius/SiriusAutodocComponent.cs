@@ -30,6 +30,8 @@ public sealed partial class SiriusAutodocComponent : Component
 
     [ViewVariables]
     public bool IsTreating = false;
+    [ViewVariables]
+    public bool IsEjecting = false;
 
     [ViewVariables]
     public EntityUid? CurrentPatient = null;
