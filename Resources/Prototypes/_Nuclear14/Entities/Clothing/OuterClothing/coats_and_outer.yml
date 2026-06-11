@@ -426,6 +426,7 @@
         Piercing: 0.85
         Heat: 0.85
     priceMultiplier: 0.5
+  - type: Butcherable
     butcheringType: Knife
     spawned:
     - id: N14MaterialLeather1
