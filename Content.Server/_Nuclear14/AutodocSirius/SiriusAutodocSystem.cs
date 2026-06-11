@@ -26,8 +26,8 @@ public sealed partial class SiriusAutodocSystem : SharedSiriusAutodocSystem
         SubscribeLocalEvent<SiriusAutodocComponent, PowerChangedEvent>(OnPowerChanged);
         SubscribeLocalEvent<SiriusAutodocComponent, BoundUIOpenedEvent>(OnBoundUIOpened);
         SubscribeLocalEvent<SiriusAutodocComponent, BoundUIClosedEvent>(OnBoundUIClosed);
-        SubscribeLocalEvent<SiriusAutodocComponent, AutodocTreatmentDoAfterEvent>(OnTreatmentFinished);
-        SubscribeLocalEvent<SiriusAutodocComponent, DragDropTargetEvent>(OnDragDrop);
+                SubscribeLocalEvent<SiriusAutodocComponent, DragDropTargetEvent>(OnDragDrop);
+        // SubscribeLocalEvent<SiriusAutodocComponent, AutodocTreatmentDoAfterEvent>(OnTreatmentFinished); // КОММЕНТИРУЕМ
         SubscribeLocalEvent<SiriusAutodocComponent, AutodocUiButtonPressedMessage>(OnUiButtonPressed);
         SubscribeLocalEvent<SiriusAutodocComponent, AutodocUiToggleOpenMessage>(OnToggleOpenMessage);
 

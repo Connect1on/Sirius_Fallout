@@ -1,10 +1,11 @@
-using Content.Shared.Administration.Logs;
 using Content.Shared._Nuclear14.AutodocSirius;
+using Content.Shared.Administration.Logs;
 using Content.Shared.Body.Components;
 using Content.Shared.Containers;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.DragDrop;
+using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Popups;
@@ -206,13 +207,25 @@ public abstract partial class SharedSiriusAutodocSystem : EntitySystem
         if (HasComp<InsideAutodocComponent>(contained))
             RemComp<InsideAutodocComponent>(contained);
 
+        // Misfits Fix: Check if entity is dead before trying to stand it up
+        var isAlive = TryComp<MobStateComponent>(contained, out var mobState) &&
+                      mobState.CurrentState == MobState.Alive;
+
+        // Also check if entity has any damage? No, because they could be dead with zero damage
+
         if (HasComp<KnockedDownComponent>(contained))
         {
             _standingState.Down(contained);
         }
+        else if (isAlive)
+        {
+            // Only stand up if alive
+            _standingState.Stand(contained);
+        }
         else
         {
-            _standingState.Stand(contained);
+            // If dead, make sure they're down (lying on the ground)
+            _standingState.Down(contained);
         }
 
         UpdateAppearance(uid, component);
