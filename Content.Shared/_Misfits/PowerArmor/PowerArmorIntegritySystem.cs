@@ -133,6 +133,12 @@ public sealed class PowerArmorIntegritySystem : EntitySystem
             var brokenShare = new DamageSpecifier();
             foreach (var (type, amount) in args.Args.Damage.DamageDict)
             {
+                // #Misfits Fix - Radiation bypasses armor entirely; only affects the wearer.
+                if (type == "Radiation")
+                {
+                    brokenShare.DamageDict[type] = amount;
+                    continue;
+                }
                 // Pass healing (negative values) through unchanged; only cap incoming damage.
                 brokenShare.DamageDict[type] = amount <= 0 ? amount : amount * comp.BrokenBleedthroughRatio;
             }
@@ -161,6 +167,13 @@ public sealed class PowerArmorIntegritySystem : EntitySystem
             if (amount <= 0)
             {
                 // Negative values (healing) always go to the player, never to armor.
+                playerShare.DamageDict[type] = amount;
+                continue;
+            }
+
+            // #Misfits Fix - Radiation bypasses armor integrity entirely; only affects the wearer.
+            if (type == "Radiation")
+            {
                 playerShare.DamageDict[type] = amount;
                 continue;
             }
