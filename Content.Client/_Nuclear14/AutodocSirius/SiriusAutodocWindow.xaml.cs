@@ -35,7 +35,6 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
     { "Radiation", Loc.GetString("autodoc-damage-radiation") },
     { "Bloodloss", Loc.GetString("autodoc-damage-bloodloss") },
     { "Asphyxiation", Loc.GetString("autodoc-damage-asphyxiation") },
-    { "Toxin", Loc.GetString("autodoc-damage-toxin") },
     { "Poison", Loc.GetString("autodoc-damage-poison") },
     { "Toxins", Loc.GetString("autodoc-damage-toxins") },
     { "Genetic", Loc.GetString("autodoc-damage-genetic") },
@@ -96,7 +95,6 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
         UpdateDoorButtonsState(state);
         UpdateActionButtonsState(state);
         UpdateProgressDisplay(state);
-        UpdateErrorDisplay(state);
         UpdateFooter(state);
     }
 
@@ -308,17 +306,6 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
         }
     }
 
-    private void UpdateErrorDisplay(AutodocBoundUserInterfaceState state)
-    {
-        var hasError = !string.IsNullOrEmpty(state.ErrorMessage);
-        ErrorLabel.Visible = hasError;
-
-        if (hasError && state.ErrorMessage != null)
-        {
-            ErrorLabel.Text = state.ErrorMessage.ToUpperInvariant();
-        }
-    }
-
     private void UpdateFooter(AutodocBoundUserInterfaceState state)
     {
         if (state.IsTreating)
@@ -338,7 +325,11 @@ public sealed partial class SiriusAutodocWindow : DefaultWindow
         }
         else if (state.HasOccupant && !state.TreatButtonEnabled)
         {
-            FooterLabel.Text = Loc.GetString("autodoc-footer-insufficient-stimulants");
+            var required = 30;
+            var current = state.BeakerStimulantsAmount.Float();
+            FooterLabel.Text = Loc.GetString("autodoc-footer-insufficient-stimulants",
+                ("required", required),
+                ("current", current));
             FooterLabel.FontColorOverride = ColorModerate;
         }
         else if (state.HasOccupant && !state.IsOpen)

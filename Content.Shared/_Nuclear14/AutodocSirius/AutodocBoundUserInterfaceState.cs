@@ -18,7 +18,6 @@ public sealed class AutodocBoundUserInterfaceState : BoundUserInterfaceState
     public FixedPoint2 BeakerCurrentVolume;
     public FixedPoint2 BeakerMaxVolume;
     public FixedPoint2 BeakerStimulantsAmount;
-    public string? ErrorMessage;
     public bool TreatButtonEnabled;
     public float TreatmentProgress;
 
@@ -34,7 +33,6 @@ public sealed class AutodocBoundUserInterfaceState : BoundUserInterfaceState
         FixedPoint2 beakerCurrentVolume,
         FixedPoint2 beakerMaxVolume,
         FixedPoint2 beakerStimulantsAmount,
-        string? errorMessage,
         bool treatButtonEnabled,
         float treatmentProgress = 0f)
     {
@@ -49,7 +47,6 @@ public sealed class AutodocBoundUserInterfaceState : BoundUserInterfaceState
         BeakerCurrentVolume = beakerCurrentVolume;
         BeakerMaxVolume = beakerMaxVolume;
         BeakerStimulantsAmount = beakerStimulantsAmount;
-        ErrorMessage = errorMessage;
         TreatButtonEnabled = treatButtonEnabled;
         TreatmentProgress = treatmentProgress;
     }

@@ -30,7 +30,7 @@ public sealed partial class SiriusAutodocSystem
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     private readonly Dictionary<EntityUid, TimeSpan> _treatmentStartTime = new();
 
-    private const string StimulantsReagentId = "Stimulants";
+    private const string StimulantsReagentId = "HealingMixture";
     private const int StimulantsRequired = 30;
     private bool _isUpdating = false;
     private const float UiUpdateInterval = 0.5f;
@@ -106,16 +106,14 @@ public sealed partial class SiriusAutodocSystem
 
     private void OnStartTreatmentMessage(Entity<SiriusAutodocComponent> entity, EntityUid user)
     {
-        if (!CanStartTreatment(entity, out var errorMessage))
+        if (!CanStartTreatment(entity))
         {
-            _popupSystem.PopupEntity(errorMessage, entity, user);
             UpdateUiState(entity);
             return;
         }
 
         if (entity.Comp.IsOpen)
         {
-            _popupSystem.PopupEntity(Loc.GetString("autodoc-error-not-closed"), entity, user);
             UpdateUiState(entity);
             return;
         }
@@ -200,47 +198,40 @@ public sealed partial class SiriusAutodocSystem
         TryToggleOpen(entity.Owner, message.Actor, entity.Comp);
     }
 
-    private bool CanStartTreatment(Entity<SiriusAutodocComponent> entity, out string errorMessage)
+    private bool CanStartTreatment(Entity<SiriusAutodocComponent> entity)
     {
         if (entity.Comp.CurrentPatient == null || entity.Comp.BodyContainer.ContainedEntity == null)
         {
-            errorMessage = Loc.GetString("autodoc-error-no-patient");
             return false;
         }
 
         if (entity.Comp.IsOpen)
         {
-            errorMessage = Loc.GetString("autodoc-error-not-closed");
             return false;
         }
 
         if (!entity.Comp.Powered)
         {
-            errorMessage = Loc.GetString("autodoc-error-no-power");
             return false;
         }
 
         var beaker = _itemSlots.GetItemOrNull(entity.Owner, SiriusAutodocComponent.SiriusBeakerSlotId);
         if (beaker == null)
         {
-            errorMessage = Loc.GetString("autodoc-error-no-beaker");
             return false;
         }
 
         if (!_solutionContainer.TryGetFitsInDispenser(beaker.Value, out var soln, out var solution))
         {
-            errorMessage = Loc.GetString("autodoc-error-beaker-empty");
             return false;
         }
 
         var stimulantsAmount = solution.GetReagentQuantity(new(StimulantsReagentId, null));
         if (stimulantsAmount < StimulantsRequired)
         {
-            errorMessage = Loc.GetString("autodoc-error-insufficient-stimulants", ("required", StimulantsRequired), ("current", stimulantsAmount));
             return false;
         }
 
-        errorMessage = string.Empty;
         return true;
     }
 
@@ -335,7 +326,7 @@ public sealed partial class SiriusAutodocSystem
             treatmentProgress = Math.Clamp(elapsed / component.TreatmentDuration, 0, 1);
         }
 
-        var canTreat = CanStartTreatment(entity, out var errorMessage);
+        var canTreat = CanStartTreatment(entity);
         var treatButtonEnabled = canTreat && !component.IsTreating;
         return new AutodocBoundUserInterfaceState(
             component.IsOpen,
@@ -349,7 +340,6 @@ public sealed partial class SiriusAutodocSystem
             FixedPoint2.Zero,
             FixedPoint2.Zero,
             beakerStimulants,
-            errorMessage,
             treatButtonEnabled,
             treatmentProgress
         );

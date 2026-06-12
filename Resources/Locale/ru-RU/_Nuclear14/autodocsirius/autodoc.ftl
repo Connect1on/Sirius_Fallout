@@ -7,12 +7,6 @@ autodoc-not-open = Автодок закрыт!
 autodoc-occupied = Автодок уже занят!
 autodoc-already-open = Автодок уже открыт!
 
-autodoc-error-no-patient = ПАЦИЕНТ НЕ ОБНАРУЖЕН В КАМЕРЕ АВТОДОКА
-autodoc-error-not-closed = КАМЕРА АВТОДОКА ОТКРЫТА - ЗАКРОЙТЕ ПЕРЕД ЛЕЧЕНИЕМ
-autodoc-error-no-power = ОТКАЗ ПИТАНИЯ - НЕВОЗМОЖНО НАЧАТЬ ЛЕЧЕНИЕ
-autodoc-error-no-beaker = НЕТ КОНТЕЙНЕРА С РЕАГЕНТАМИ
-autodoc-error-beaker-empty = КОНТЕЙНЕР С РЕАГЕНТАМИ ПУСТ - ТРЕБУЕТСЯ ГИПЕРЗИН
-autodoc-error-insufficient-stimulants = НЕДОСТАТОЧНО ГИПЕРЗИНА: НУЖНО {$required} ЕД., ДОСТУПНО {$current}
 autodoc-cant-eject-beaker-treating = НЕВОЗМОЖНО ИЗВЛЕЧЬ КОНТЕЙНЕР ВО ВРЕМЯ ЛЕЧЕНИЯ
 autodoc-cant-eject-patient-treating = НЕВОЗМОЖНО ИЗВЛЕЧЬ ПАЦИЕНТА ВО ВРЕМЯ ЛЕЧЕНИЯ
 autodoc-beaker-ejected = КОНТЕЙНЕР С РЕАГЕНТАМИ ИЗВЛЕЧЁН
@@ -20,14 +14,14 @@ autodoc-patient-ejected = ПАЦИЕНТ ИЗВЛЕЧЁН ИЗ АВТОДОКА
 autodoc-treatment-complete = ЛЕЧЕНИЕ ЗАВЕРШЕНО
 
 siriusBeakerSlot-name = Слот для стакана
-siriusBeakerSlot-desc = Слот для стакана, содержащего гиперзин.
+siriusBeakerSlot-desc = Слот для стакана, содержащего стимулятор.
 
 autodoc-window-title = SIRIUS MD-3 - АВТОДОК
 autodoc-header = [ ROBCO INDUSTRIES (TM) - SIRIUS MD-3 ]
 
 autodoc-patient-label = ПАЦИЕНТ:
 autodoc-diagnostic-report = ДИАГНОСТИЧЕСКИЙ ОТЧЁТ
-autodoc-stimulants-label = ГИПЕРЗИН:
+autodoc-stimulants-label = СТИМУЛЯТОР:
 autodoc-units = ед.
 autodoc-treatment-label = ЛЕЧЕНИЕ:
 
@@ -67,8 +61,8 @@ autodoc-damage-no-patient = НЕТ ПАЦИЕНТА
 
 autodoc-stimulants-none = ОТСУТСТВУЕТ
 
-autodoc-footer-treatment = [ ЛЕЧЕНИЕ В ПРОГРЕССЕ ]
+autodoc-footer-treatment = [ ЛЕЧЕНИЕ В ПРОЦЕССЕ ]
 autodoc-footer-no-power = [ НЕТ ПИТАНИЯ ]
 autodoc-footer-door-open = [ ДВЕРЬ ОТКРЫТА - ЗАКРОЙТЕ ДЛЯ ЛЕЧЕНИЯ ]
-autodoc-footer-insufficient-stimulants = [ НЕДОСТАТОЧНО ГИПЕРЗИНА ]
+autodoc-footer-insufficient-stimulants = [ НЕДОСТАТОЧНО СТИМУЛЯТОРА: НУЖНО {$required} ЕД., ДОСТУПНО {$current} ]
 autodoc-footer-ready = [ ОЖИДАНИЕ ЛЕЧЕНИЯ ]
