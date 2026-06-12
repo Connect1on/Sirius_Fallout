@@ -14,6 +14,7 @@ using Content.Shared.Rounding;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
 using Robust.Shared.Network;
+using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Shared._Misfits.PowerArmor;
@@ -34,8 +35,12 @@ namespace Content.Shared._Misfits.PowerArmor;
 /// </summary>
 public sealed class PowerArmorIntegritySystem : EntitySystem
 {
+    // #Misfits Fix - Tracks last processed hit to prevent Shitmed body system double-dip.
+    private (GameTick tick, EntityUid uid) _lastProcessed;
+
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly INetManager _net = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
@@ -125,6 +130,13 @@ public sealed class PowerArmorIntegritySystem : EntitySystem
     private void OnDamageModify(EntityUid uid, PowerArmorIntegrityComponent comp,
         InventoryRelayedEvent<DamageModifyEvent> args)
     {
+        // #Misfits Fix - Shitmed body system relays the same hit through inventory twice
+        // (once from body parts, once from the main event). Only process once per tick.
+        var curTick = _timing.CurTick;
+        if (_lastProcessed.uid == uid && _lastProcessed.tick == curTick)
+            return;
+        _lastProcessed = (curTick, uid);
+
         // #Misfits Change - broken armor: ArmorComponent stays active (coefficients still apply).
         // Apply BrokenBleedthroughRatio (20%) so the wearer takes only 20% of post-coefficient damage.
         // OLD behavior: returned early → ArmorComponent had been removed → wearer took full damage.
