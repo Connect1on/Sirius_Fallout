@@ -30,7 +30,7 @@
     angleDecay: 16
     fireRate: 3
     soundGunshot:
-      collection: N14AntiMaterielGunshot
+      path: /Audio/Weapons/Guns/Gunshots/Heavyburst2.ogg
     selectedMode: FullAuto
     availableModes:
     - FullAuto

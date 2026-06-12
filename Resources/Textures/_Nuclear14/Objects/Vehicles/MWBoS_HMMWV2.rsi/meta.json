@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-1.0",
+  "copyright": "made by londorondondon",
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "MWBoS_HMMWV_Metall2",
+      "directions": 4
+    },
+    {
+      "name": "MWBoS_HMMWV_Metall22",
+      "directions": 4,
+      "delays": [
+        [
+          0.010000001,
+          0.010000001,
+          0.010000001
+        ],
+        [
+          0.010000001,
+          0.010000001,
+          0.010000001
+        ],
+        [
+          0.010000001,
+          0.010000001,
+          0.010000001
+        ],
+        [
+          0.010000001,
+          0.010000001,
+          0.010000001
+        ]
+      ]
+    }
+  ]
+}
