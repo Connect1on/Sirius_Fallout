@@ -15,6 +15,13 @@
     - !type:CharacterDepartmentTimeRequirement
       department: BrotherhoodOfSteel
       min: 252000 # 70 hours
+    - !type:SexRequirement
+      sex : Male
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - Muted
+        - Pacifist
   startingGear: BoSWestElderCommanderGear
   alwaysUseSpawner: true
   icon: "JobIconBosMCommander"
