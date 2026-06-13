@@ -15,7 +15,7 @@ language-Tribal-description = Вы можете понимать и говори
 chat-language-Tribal-name = Племенной
 
 language-N14BrotherBeep-name = Код Братства
-language-N14BrotherBeep-description = Вы можете понимать и «говорить» на бинарном языке своих агументированных братьев и сестер.
+language-N14BrotherBeep-description = Вы можете понимать и «говорить» на бинарном языке своих аугментированных братьев и сестёр.
 chat-language-N14BrotherBeep-name = Код
 
 language-N14Dog-name = Лай
@@ -28,4 +28,4 @@ chat-language-N14Insect-name = Криттер
 
 language-N14Robot-name = Двоичный
 language-N14Robot-description = Вам не хватает полноценного речевого модуля? Что бы то ни было, просто попискивайте и гавкайте в двоичном формате с другими машинами.
-chat-language-N14Robot-name = Бинарный
+chat-language-N14Robot-name = Двоичный
