@@ -11,4 +11,4 @@ humanoid-profile-editor-special-priority-ten-button = 10
 
 humanoid-profile-editor-specials-tab = Особенный
 
-humanoid-profile-editor-special-points-label = {$points} слева от {$max} СПЕЦИАЛЬНЫХ баллов
+humanoid-profile-editor-special-points-label = Доступно {$points} из {$max} баллов S.P.E.C.I.A.L.
