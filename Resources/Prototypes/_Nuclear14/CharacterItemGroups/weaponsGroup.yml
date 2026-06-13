@@ -71,7 +71,7 @@
   items:
     - type: loadout
       id: N14SpeedLoader9
-      - type: loadout
+    - type: loadout
       id: N14SpeedLoader44
     - type: loadout
       id: N14MagazinePistol9mm
@@ -91,11 +91,11 @@
   items:
     - type: loadout
       id: N14MagazineSMG9mm
-      - type: loadout
+    - type: loadout
       id: N14BaseMagazine10mmSubMachineGun
     - type: loadout
       id: Magazine762AmmoShort
-      - type: loadout
+    - type: loadout
       id: Magazine556Rifle
 
 - type: characterItemGroup
@@ -103,25 +103,25 @@
   items:
     - type: loadout
       id: MagazineBox12gauge
-      - type: loadout
+    - type: loadout
       id: MagazineBox20gauge
     - type: loadout
       id: MagazineBox9mm
-      - type: loadout
+    - type: loadout
       id: MagazineBox10mm
     - type: loadout
       id: MagazineBox22
-      - type: loadout
+    - type: loadout
       id: MagazineBox45
     - type: loadout
       id: MagazineBox556
-      - type: loadout
+    - type: loadout
       id: MagazineBox12
     - type: loadout
       id: MagazineBox44
-      - type: loadout
+    - type: loadout
       id: MagazineBox762
-      - type: loadout
+    - type: loadout
       id: MagazineBox308
 
 
