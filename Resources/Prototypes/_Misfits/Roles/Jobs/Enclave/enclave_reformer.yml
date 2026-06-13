@@ -17,10 +17,16 @@
     - !type:CharacterSpeciesRequirement
       species:
       - Human
-      - Ghoul
     - !type:CharacterDepartmentTimeRequirement # #Misfits Add - admin-only timelock (70h Enclave)
       department: Enclave
       min: 252000 # 70 hours — admin role
+    - !type:CharacterSexRequirement
+      sex: Male
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14Muted
+        - N14Pacifist
   startingGear: EnclaveCommanderGear # reuse Commander gear as base
   icon: "JobIconEnclaveReformer"
   supervisors: job-supervisors-enclave-reformer

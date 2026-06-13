@@ -16,7 +16,6 @@
     - !type:CharacterSpeciesRequirement
       species:
       - Human
-      - Ghoul
     - !type:CharacterDepartmentTimeRequirement
       department: Enclave
       min: 57600 # 16 hours
