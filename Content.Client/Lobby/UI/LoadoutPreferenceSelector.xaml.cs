@@ -195,7 +195,7 @@ public sealed partial class LoadoutPreferenceSelector : Control
                 },
                 new PanelContainer
                 {
-                    PanelOverride = new StyleBoxFlat { BackgroundColor = Color.FromHex("#142A16") },
+                    StyleClasses = { StyleNano.StyleClassPipBoyHighlight },
                     Children =
                     {
                         previewLoadout,

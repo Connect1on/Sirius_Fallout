@@ -5,7 +5,7 @@
     xmlns:style="clr-namespace:Content.Client.Stylesheets">
     <BoxContainer Name="VBox" Orientation="Vertical">
         <Label Name="Header" StyleClasses="PipBoyHeading" Text="{Loc 'lobby-character-preview-panel-header'}" />
-        <controls:HLine Color="{x:Static style:StyleNano.PipBoyGreen}" Thickness="1" />
+        <PanelContainer StyleClasses="PipBoyDivider" MinSize="0 1" />
         <BoxContainer Name="Loaded" Orientation="Vertical" Visible="False">
             <Label Name="Summary" HorizontalAlignment="Center" Margin="3 3"/>
             <BoxContainer Name="ViewBox" Orientation="Horizontal" HorizontalAlignment="Center">

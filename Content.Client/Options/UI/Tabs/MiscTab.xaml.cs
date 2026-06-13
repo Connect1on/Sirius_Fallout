@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Screens;
 using Content.Shared.CCVar;
 using Content.Shared.HUD;
@@ -29,6 +30,23 @@ namespace Content.Client.Options.UI.Tabs
         {
             RobustXamlLoader.Load(this);
             IoCManager.InjectDependencies(this);
+
+            // UI color theme dropdown.
+            var currentTheme = _cfg.GetCVar(CCVars.UiThemePalette);
+            for (var i = 0; i < UiPalette.All.Count; i++)
+            {
+                var palette = UiPalette.All[i];
+                UiThemeOption.AddItem(Loc.GetString(palette.NameLoc), i);
+                UiThemeOption.SetItemMetadata(i, palette.Id);
+                if (palette.Id == currentTheme)
+                    UiThemeOption.SelectId(i);
+            }
+
+            UiThemeOption.OnItemSelected += args =>
+            {
+                UiThemeOption.SelectId(args.Id);
+                UpdateApplyButton();
+            };
 
             var themes = _prototypeManager.EnumeratePrototypes<HudThemePrototype>().ToList();
             themes.Sort();
@@ -179,6 +197,13 @@ namespace Content.Client.Options.UI.Tabs
                 _cfg.SetCVar(CCVars.UILayout, opt);
             }
 
+            if (UiThemeOption.SelectedMetadata is string themeId
+                && themeId != _cfg.GetCVar(CCVars.UiThemePalette))
+            {
+                _cfg.SetCVar(CCVars.UiThemePalette, themeId);
+                IoCManager.Resolve<IStylesheetManager>().SetActivePalette(themeId);
+            }
+
             _cfg.SaveToFile();
             UpdateApplyButton();
         }
@@ -186,6 +211,7 @@ namespace Content.Client.Options.UI.Tabs
         private void UpdateApplyButton()
         {
             var isHudThemeSame = HudThemeOption.SelectedId == _hudThemeIdToIndex.GetValueOrDefault(_cfg.GetCVar(CVars.InterfaceTheme), 0);
+            var isUiThemeSame = UiThemeOption.SelectedMetadata is string themeId && themeId == _cfg.GetCVar(CCVars.UiThemePalette);
             var isLayoutSame = HudLayoutOption.SelectedMetadata is string opt && opt == _cfg.GetCVar(CCVars.UILayout);
             var isDiscordSame = DiscordRich.Pressed == _cfg.GetCVar(CVars.DiscordEnabled);
             var isShowHeldItemSame = ShowHeldItemCheckBox.Pressed == _cfg.GetCVar(CCVars.HudHeldItemShow);
@@ -208,6 +234,7 @@ namespace Content.Client.Options.UI.Tabs
             var isChatStackTheSame = ChatStackOption.SelectedId == _cfg.GetCVar(CCVars.ChatStackLastLines);
 
             ApplyButton.Disabled = isHudThemeSame &&
+                                   isUiThemeSame &&
                                    isLayoutSame &&
                                    isDiscordSame &&
                                    isShowHeldItemSame &&

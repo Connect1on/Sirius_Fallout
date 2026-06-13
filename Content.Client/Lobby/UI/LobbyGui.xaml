@@ -80,8 +80,8 @@
                         <Label Name="ServerName" Access="Public" StyleClasses="PipBoyHeading" VAlign="Center"
                                HorizontalExpand="True" HorizontalAlignment="Center" />
                     </BoxContainer>
-                    <!-- Gold line -->
-                    <controls:HLine Color="{x:Static style:StyleNano.PipBoyGreen}" Thickness="2" />
+                    <!-- Accent divider -->
+                    <PanelContainer StyleClasses="PipBoyDivider" MinSize="0 2" />
                     <controls:HSpacer Spacing="10" />
                     <!-- Voting & misc button bar -->
                     <BoxContainer Orientation="Horizontal" MinSize="0 40" HorizontalAlignment="Right">
@@ -96,7 +96,7 @@
                     <controls:HSpacer Spacing="10" />
                     <!-- Server info -->
                     <Label StyleClasses="PipBoyHeading" Text="{Loc 'ui-lobby-server-info-block'}" />
-                    <controls:HLine Color="{x:Static style:StyleNano.PipBoyGreen}" Thickness="1" />
+                    <PanelContainer StyleClasses="PipBoyDivider" MinSize="0 1" />
                     <info:ServerInfo Name="ServerInfo" Access="Public" MinSize="0 30" VerticalExpand="false"
                                      Margin="3 3 3 3" MaxWidth="400" HorizontalAlignment="Left" />
                     <Label Name="StationTime" Access="Public" FontColorOverride="{x:Static style:StyleNano.PipBoyGreenDim}"
@@ -105,8 +105,8 @@
                     <lobbyUi:LobbyCharacterPreviewPanel Name="CharacterPreview" Access="Public" />
                     <controls:HSpacer Spacing="5" />
                     <BoxContainer MinHeight="10" />
-                    <!-- Gold line -->
-                    <controls:HLine Color="{x:Static style:StyleNano.PipBoyGreen}" Thickness="2" Access="Public" />
+                    <!-- Accent divider -->
+                    <PanelContainer StyleClasses="PipBoyDivider" MinSize="0 2" />
                     <controls:HSpacer Spacing="10" />
                     <widgets:ChatBox Name="Chat" Access="Public" VerticalExpand="True" Margin="3 3 3 3" MinHeight="50" />
                 </BoxContainer>
