@@ -96,6 +96,11 @@
   - type: Hands # #Misfits Add - allows dragging and item handling
   - type: BorgHands # #Misfits Add - gives cats actual holdable hand slots
     handCount: 2
+  - type: RobotWeaponPickupBlacklist # #Misfits Add - cats should not be able to pick up guns/melee weapons
+    blacklist:
+      components:
+      - Gun
+      - MeleeWeapon
   - type: InventorySlots
   - type: Strippable
   - type: PetCollarHolder
