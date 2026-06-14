@@ -335,6 +335,169 @@
   # - type: PresetIdCard
   #   job: EnclaveScientist
 
+#MARK: Sirius Stukov's Rework
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveReformer
+  name: Enclave high command holotag
+  description: An ID holotag worn by higher ranking memebers of the Enclave. This one belongs to a President Representative.
+  categories: [ HideSpawnMenu ]
+  suffix: Commander; General
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_officer
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveReformer
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveCommander
+  name: Enclave commander holotag
+  description: An ID holotag worn by higher ranking memebers of the Enclave. This one belongs to a regional Enclave commander.
+  categories: [ HideSpawnMenu ]
+  suffix: Commander; Colonel
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_officer
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveCommander
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveSeniorOfficer
+  name: Enclave senior officer holotag
+  description: An ID holotag worn by higher ranking memebers of the Enclave. This one belongs to a senior officer.
+  categories: [ HideSpawnMenu ]
+  suffix: Officer; Captain, Major, Lieutenant-colonel
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_officer
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveSeniorOfficer
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveJuniorOfficer
+  name: Enclave junior officer holotag
+  description: An ID holotag worn by higher ranking memebers of the Enclave. This one belongs to a junior officer.
+  categories: [ HideSpawnMenu ]
+  suffix: Officer; 2nd Lieutenant, 1st Lieutenant
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_officer
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveJuniorOfficer
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveNCO
+  name: Enclave sergeant holotag
+  description: An ID holotag worn by the Enclave. This one is for sergeant. Don't call me sarge!
+  categories: [ HideSpawnMenu ]
+  suffix: Trooper; Sergeant, Staff-Sergeant, Sergeant 1st class, Master Sergeant
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_trooper
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveNCO
+  # #Misfits Change - enables Enclave shared map (tactical helmet HUDs, Pip-Boy)
+  - type: Tag
+    tags:
+    - IdCardEnclave
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveEnlisted
+  name: Enclave enlisted holotag
+  description: An ID holotag worn by the Enclave. This one is for enlisted trooper. Did you put on your power armor?
+  categories: [ HideSpawnMenu ]
+  suffix: Trooper; Private, Private 1st class, Corporal
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_trooper
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveEnlisted
+  # #Misfits Change - enables Enclave shared map (tactical helmet HUDs, Pip-Boy)
+  - type: Tag
+    tags:
+    - IdCardEnclave
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveHeadScientist
+  name: Enclave research director's holotag
+  description: An ID holotag worn by the non-combat members of Enclave. This one is for the research director.
+  categories: [ HideSpawnMenu ]
+  suffix: Scientist , Noncombat
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_noncombat
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveHeadScientist
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveScientist
+  name: Enclave scientist holotag
+  description: An ID holotag worn by the non-combat members of Enclave. This one is for the scientist.
+  categories: [ HideSpawnMenu ]
+  suffix: Scientist , Noncombat
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_noncombat
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveScientist
+
+- type: entity
+  parent: N14IDPassportBlank
+  id: SiriusIDEnclaveJuniorScientist
+  name: Enclave jr. scientist holotag
+  description: An ID holotag worn by the non-combat members of Enclave. This one is for the jr. scientist.
+  categories: [ HideSpawnMenu ]
+  suffix: Scientist , Noncombat
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Misc/identification.rsi
+    state: enclave_noncombat
+  - type: IdCard # #Misfits Add - display "holotags" instead of default "ID card"
+    nameLocId: n14-id-holotag-name
+    fullNameLocId: n14-id-holotag-full-name
+  - type: PresetIdCard
+    job: EnclaveJuniorScientist
+
 # MARK: NCR
 - type: entity
   parent: N14IDPassportBlank

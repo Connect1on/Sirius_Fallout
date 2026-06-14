@@ -34,6 +34,7 @@
       - type: NpcFactionMember
         factions:
           - Enclave
+      - type: PowerArmorProficiency
 
 - type: startingGear
   id: EnclaveJuniorOfficerGear
@@ -49,7 +50,7 @@
     ears: N14ClothingHeadsetEnclave
     pocket1: EnclaveOfficerloadoutkits
     pocket2: RadioHandheld
-    id: N14IDEnclaveOfficer
+    id: SiriusIDEnclaveJuniorOfficer
   satchel: N14ClothingBackpackSatchelMilitaryFilled
   duffelbag: N14ClothingBackpackDuffelMilitaryFilled
   storage:

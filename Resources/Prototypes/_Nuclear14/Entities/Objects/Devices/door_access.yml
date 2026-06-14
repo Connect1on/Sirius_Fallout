@@ -153,3 +153,49 @@
   components:
   - type: AccessReader
     access: [["AncientBunker"]]
+
+# Enclave
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsEnclaveCommander
+  suffix: Enclave Commander, Locked
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AccessReader
+    access: [["EnclaveCommand"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsEnclaveOfficer
+  suffix: Enclave Officer, Locked
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AccessReader
+    access: [["EnclaveOfficer"]]
+    
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsEnclaveScience
+  suffix: Enclave Science, Locked
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AccessReader
+    access: [["EnclaveScience"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsEnclaveNCO
+  suffix: Enclave NCO, Locked
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AccessReader
+    access: [["EnclaveNCO"]]
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsEnclave
+  suffix: Enclave General, Locked
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AccessReader
+    access: [["Enclave"]]

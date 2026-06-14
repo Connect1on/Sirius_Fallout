@@ -20,7 +20,7 @@ job-description-ncr-weapon-specialist = Вы являетесь квалифиц
 
 # #Misfits Add - Enclave job locale (expanded 8-role hierarchy). Reformer is admin-only apex role.
 job-name-enclave-reformer = Реформатор
-job-description-enclave-reformer = Вы — высший авторитет Анклава на поле боя, его реформатор. Формируйте доктрину ячейки, судите ее членов и определяйте ее будущее. Подотчётен только Президенту.
+job-description-enclave-reformer = Вы — высший авторитет Анклава на поле боя, его реформатор. Формируйте доктрину ячейки, судите её членов и определяйте её будущее. Подотчётен только Президенту.
 job-name-enclave-commander = Командир Анклава
 job-description-enclave-commander = Руководите ячейкой Анклава с абсолютной властью, координируйте военную и научную отрасли, а также обеспечивайте оперативную безопасность.
 job-name-enclave-senior-officer = Старший офицер Анклава
@@ -31,12 +31,12 @@ job-name-enclave-nco = Сержант Анклава
 job-description-enclave-nco = Ваша задача - поддерживать дисциплину, обучать личный состав, обеспечивать тактическую готовность на местах.
 job-name-enclave-enlisted = Рядовой Анклава
 job-description-enclave-enlisted = Станьте передовым солдатом Анклава, выполняйте приказы и миссии.
-job-name-enclave-head-scientist = Старший учёный анклава
+job-name-enclave-head-scientist = Директор исследований Анклава
 job-description-enclave-head-scientist = Руководит исследовательскими программами Анклава, наблюдает за младшими учёными и консультирует командование по техническим вопросам.
 job-name-enclave-scientist = Учёный Анклава
 job-description-enclave-scientist = Проводите полевые исследования, обслуживайте современное оборудование и поддерживайте научную миссию ячейки.
-job-name-enclave-junior-scientist = Младший учёный Анклава
-job-description-enclave-junior-scientist = Помогайте старшим ученым, изучайте протоколы Анклава и вносите вклад в текущие исследования. # Названия и описания должностей в области синтетических технологий (для Misfits)
+job-name-enclave-junior-scientist = Лаборант Анклава
+job-description-enclave-junior-scientist = Помогайте старшим ученым, изучайте протоколы Анклава и вносите вклад в текущие исследования.
 
 # Synthetics
 # #Misfits Add - Chief Ranger: admin-only Rangers leadership role.
