@@ -329,7 +329,7 @@
     - ClothingSuperMutantNeckCapeTribal
 
 - type: loadout
-  id: ClothingSuperMutantScavengedGloves
+  id: MisfitsLoadoutSuperMutantScavengedGloves
   category: Hands
   cost: 1
   exclusive: true
