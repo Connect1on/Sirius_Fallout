@@ -6,3 +6,7 @@ ent-N14WorkbenchChemistryset = химический набор
     .desc = Химический набор для создания лекарств и соединений.
 ent-N14WorkbenchForge = кузня
     .desc = Кузница, сделанная из кусков металлолома. Выглядит жарко.
+ent-N14WorkbenchIDPrinterBrotherhoodMidwest = принтер ID Братства
+    .desc = ID принтер для печати голотагов Братства.
+ent-SirusWorkbenchIDPrinterEnclave = принтер ID Анклава
+    .desc = ID принтер для печати голотагов Анклава.
