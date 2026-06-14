@@ -868,9 +868,12 @@
   components:
   - type: Lathe
     staticRecipes:
-    - HolotagEnclaveOfficer
-    - HolotagEnclaveTrooper
-    - HolotagEnclaveNoncombat
+    - HolotagEnclaveSeniorOfficer
+    - HolotagEnclaveJuniorOfficer
+    - HolotagEnclaveNCO
+    - HolotagEnclaveEnlisted
+    - HolotagEnclaveScientist
+    - HolotagEnclaveJuniorScientist
 
 # Misfits Fix: N14WorkbenchIDPrinterBrotherhoodWashington commented out — all WBOS holotag recipe prototypes are commented out
 #- type: entity

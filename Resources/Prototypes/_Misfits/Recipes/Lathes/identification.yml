@@ -65,24 +65,48 @@
 
 #MARK: The Enclave
 - type: latheRecipe
-  id: HolotagEnclaveOfficer
-  result: N14IDEnclaveOfficer
+  id: HolotagEnclaveSeniorOfficer
+  result: SiriusIDEnclaveSeniorOfficer
   category: N14Identification
   completetime: 5
   materials:
     Steel: 100
 
 - type: latheRecipe
-  id: HolotagEnclaveTrooper
-  result: N14IDEnclaveTrooper
+  id: HolotagEnclaveJuniorOfficer
+  result: SiriusIDEnclaveJuniorOfficer
   category: N14Identification
   completetime: 5
   materials:
     Steel: 100
 
 - type: latheRecipe
-  id: HolotagEnclaveNoncombat
-  result: N14IDEnclaveNoncombat
+  id: HolotagEnclaveNCO
+  result: SiriusIDEnclaveNCO
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveEnlisted
+  result: SiriusIDEnclaveEnlisted
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveScientist
+  result: SiriusIDEnclaveScientist
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveJuniorScientist
+  result: SiriusIDEnclaveJuniorScientist
   category: N14Identification
   completetime: 5
   materials:
