@@ -154,7 +154,26 @@
 
 # #Misfits Add - Enclave remnant faction for player jobs and future map-side automation.
 - type: npcFaction
+  id: EnclaveSecureArea
+  friendly:
+  - Enclave
+  hostile:
+  - BrotherhoodOfSteel
+  - BrotherhoodOfSteelSecureArea
+  - NCR
+  - NCRSecureArea
+  - CaesarLegion
+  - WastelandInsect
+  - WastelandAnimal
+  - Deathclaw
+  - Raider
+  - HostileRobot
+  - Feral
+
+- type: npcFaction
   id: Enclave
+  friendly:
+  - EnclaveSecureArea
   hostile:
   - BrotherhoodOfSteel
   - BrotherhoodOfSteelSecureArea
