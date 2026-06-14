@@ -850,10 +850,14 @@
   components:
   - type: Lathe
     staticRecipes:
-    - HolotagMidwestScribe
-    - HolotagMidwestSquire
-    - HolotagMidwestKnight
-    - HolotagMidwestPaladin
+    - N14IDBrotherhoodOfSteelHolotagScribe
+    - N14IDBrotherhoodOfSteelHolotagSquire
+    - N14IDBrotherhoodOfSteelHolotagKnight
+    - N14IDBrotherhoodOfSteelHolotagPaladin
+    - N14IDBrotherhoodOfSteelHolotagInitiate
+    - N14IDBrotherhoodOfSteelHolotagSeniorKnight
+    - N14IDBrotherhoodOfSteelHolotagSeniorPaladin
+    - N14IDBrotherhoodOfSteelHolotagSeniorScribe
     #- NCClothingBandageBoS # Misfits Fix: recipe prototype is commented out # Corvax-Change
 
 # Misfits Fix: N14WorkbenchIDPrinterBrotherhoodWashington commented out — all WBOS holotag recipe prototypes are commented out
