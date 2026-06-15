@@ -41,8 +41,7 @@
       "directions": 4
     },
     {
-      "name": "light-overlay",
-      "directions": 4
+      "name": "light-overlay"
     }
   ]
 }
