@@ -6889,3 +6889,169 @@ Entries:
   id: 6056
   time: '2026-06-13T00:14:48.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/772
+- author: Cythisiax
+  changes:
+    - type: Add
+      message: Gun & meleeweapon blacklist to parent N14MobPetCat.
+  id: 6057
+  time: '2026-06-13T17:04:22.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/776
+- author: pierow
+  changes:
+    - type: Fix
+      message: Fixes going sideways randomly during gameplay. (Maybe...)
+  id: 6058
+  time: '2026-06-13T17:10:14.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/782
+- author: Squagg
+  changes:
+    - type: Add
+      message: >-
+        Redesigned the character SPECIAL screen with a Pip-Boy-style layout,
+        segmented stat gauges, and an optional info button showing each stat's
+        effects.
+    - type: Tweak
+      message: >-
+        Reskinned the lobby and character setup menus with a Fallout-inspired
+        Pip-Boy terminal theme.
+  id: 6059
+  time: '2026-06-13T17:13:18.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/783
+- author: Vixting
+  changes:
+    - type: Add
+      message: >-
+        Adds a overwatch tab to overseer terminal that allows you to observe
+        members of the vault (those with vault ID)
+    - type: Add
+      message: Adds overseer terminal only accessible with overseer ID
+  id: 6060
+  time: '2026-06-13T22:43:39.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/789
+- author: paige404
+  changes:
+    - type: Tweak
+      message: Player robots are no longer gibbable.
+  id: 6061
+  time: '2026-06-13T23:51:34.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/791
+- author: pierow
+  changes:
+    - type: Fix
+      message: >-
+        Player mobs no longer go vertical standing state when recovering from
+        stamina while crit/dead.
+  id: 6062
+  time: '2026-06-14T00:56:05.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/794
+- author: Cythisiax
+  changes:
+    - type: Fix
+      message: Missile bullets from revolvers & plasma weapons.
+  id: 6063
+  time: '2026-06-14T03:57:25.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/795
+- author: Squagg
+  changes:
+    - type: Add
+      message: >-
+        You can now pick a UI color theme (Pip-Boy Green, Dark Mode, Amber,
+        Vault Blue, or Classic Gold) from the options menu.
+  id: 6064
+  time: '2026-06-14T03:57:45.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/790
+- author: Bradysgaming
+  changes:
+    - type: Tweak
+      message: Buffed all deathclaws
+    - type: Tweak
+      message: Buffed Mirelurks
+    - type: Tweak
+      message: Buffed Maypoles
+    - type: Tweak
+      message: Most wasteland wildlife will now fight back
+    - type: Tweak
+      message: >-
+        Buffed Xeno npcs to reflect to our damage (idk if they get used for an
+        event they wont suck ig)
+  id: 6065
+  time: '2026-06-14T04:02:32.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/796
+- author: Wazura
+  changes:
+    - type: Tweak
+      message: Loadouts
+  id: 6066
+  time: '2026-06-14T04:08:46.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/787
+- author: Squagg
+  changes:
+    - type: Tweak
+      message: NCR infiltrator armor now grants a 10% movement speed bonus.
+  id: 6067
+  time: '2026-06-14T16:07:58.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/797
+- author: thedaneeffect
+  changes:
+    - type: Fix
+      message: >-
+        The Pet Pigrat companion now understands languages like the other pets,
+        instead of none.
+  id: 6068
+  time: '2026-06-14T19:47:50.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/801
+- author: paige404
+  changes:
+    - type: Fix
+      message: >-
+        Fixed several problems with the custom Malnutrition damage group for its
+        reintroduction.
+    - type: Tweak
+      message: >-
+        Changed the Cold damage from starving and dehydrating back to the custom
+        Malnutrition damage types. These damages heal gradually on their own by
+        maintaining good nutrition and hydration. These damages can lead to
+        death, but not RR.
+    - type: Add
+      message: >-
+        Added small amounts of Malnutrition damage healing to several food and
+        drink reagents.
+    - type: Add
+      message: >-
+        Added examinable health states for Malnutrition damage types and for
+        Caustic damage.
+  id: 6069
+  time: '2026-06-14T20:38:22.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/803
+- author: paige404
+  changes:
+    - type: Fix
+      message: >-
+        Ghouls, Glowing Ghouls, and Supermutants will no longer take limb damage
+        from things that don't hurt limbs.
+  id: 6070
+  time: '2026-06-14T22:15:17.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/804
+- author: Squagg
+  changes:
+    - type: Fix
+      message: >-
+        Changed the Legion tactical chalkboard to use general Legion access
+        instead of Centurion-only access.
+  id: 6071
+  time: '2026-06-14T23:25:25.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/805
+- author: Pipetoadcouncil
+  changes: []
+  id: 6072
+  time: '2026-06-15T01:15:51.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/784
+- author: Wazura
+  changes:
+    - type: Add
+      message: >-
+        Two Midwest pas to loadout for Paladin and Senior Paladin as Playtime
+        Rewards
+  id: 6073
+  time: '2026-06-15T01:16:19.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/802

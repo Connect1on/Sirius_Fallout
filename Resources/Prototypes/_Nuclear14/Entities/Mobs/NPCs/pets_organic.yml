@@ -589,6 +589,19 @@
       path: /Audio/Animals/small_dog_bark_happy.ogg
   - type: ReplacementAccent
     accent: xeno
+  - type: LanguageKnowledge # Misfits Fix - pigrat was missing language knowledge entirely; mirror other organic pets
+    speaks:
+    - N14Insect
+    understands:
+    - N14Dog
+    - N14Insect
+    - English
+    - Chinese
+    - Latin
+    - Tribal
+    - N14Robot
+    - N14BrotherBeep
+    - Sign
   - type: NpcFactionMember # Corvax-Change
     factions:
     - Passive

@@ -782,6 +782,10 @@
     price: 150
   - proto: BoxTapeRecorder
     price: 100
+  - proto: FishingRod
+    price: 50
+  - proto: FishingRodGolden
+    price: 250
 
 - type: storeCategoryStructured
   id: CaravanBuy2_Sprouts
