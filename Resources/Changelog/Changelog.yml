@@ -7221,3 +7221,10 @@ Entries:
   id: 6086
   time: '2026-06-16T21:59:38.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/830
+- author: Squagg
+  changes:
+    - type: Fix
+      message: Fixed NCR Weapon Specialist rank pins not progressing with playtime.
+  id: 6087
+  time: '2026-06-16T22:00:45.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/822
