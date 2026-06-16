@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
 using Content.Shared.Chat;
+using Content.Shared.Examine;
 using Content.Shared.Mind;
 using Content.Shared.Pointing;
 using Content.Shared.Power;
@@ -25,6 +26,7 @@ public sealed class StationAiSystem : SharedStationAiSystem
     [Dependency] private readonly IChatManager _chats = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly SharedTransformSystem _xforms = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedRoleSystem _roles = default!;
@@ -36,6 +38,10 @@ public sealed class StationAiSystem : SharedStationAiSystem
     private readonly Dictionary<EntityUid, HashSet<EntityUid>> _visionSubscriptions = new();
     private readonly HashSet<EntityUid> _desiredVisionSubscriptions = new();
 
+    // [Changed by MisfitsCrew/Operator] Mirrors normal pointing reach when the AI must
+    // fall back from camera-source attribution to its active relayed eye entity.
+    private const float AiPointingRange = 15f;
+
     private EntityQuery<BroadphaseComponent> _broadphaseQuery;
 
     public override void Initialize()
@@ -45,9 +51,9 @@ public sealed class StationAiSystem : SharedStationAiSystem
         _broadphaseQuery = GetEntityQuery<BroadphaseComponent>();
 
         SubscribeLocalEvent<ExpandICChatRecipientsEvent>(OnExpandICChatRecipients);
-        // [Changed by MisfitsCrew/Operator] Hooks Station AI point attempts so they can
-        // originate from the nearest supervised camera/core instead of the contained brain.
-        SubscribeLocalEvent<StationAiHeldComponent, GetPointingSourceEvent>(OnAiGetPointingSource);
+        // [Changed by MisfitsCrew/Operator] Hooks Station AI point attempts from any
+        // attached AI entity so they originate from the nearest supervised camera/core.
+        SubscribeLocalEvent<GetPointingSourceEvent>(OnAiGetPointingSource);
         // [Changed by MisfitsCrew/Operator] Watches AI vision source startup/shutdown to
         // keep active AI camera PVS subscriptions in sync with mapped cameras.
         SubscribeLocalEvent<StationAiVisionComponent, ComponentStartup>(OnAiVisionStartup);
@@ -105,36 +111,32 @@ public sealed class StationAiSystem : SharedStationAiSystem
         return true;
     }
 
-    private void OnAiGetPointingSource(Entity<StationAiHeldComponent> ent, ref GetPointingSourceEvent args)
+    private void OnAiGetPointingSource(ref GetPointingSourceEvent args)
     {
         // [Changed by MisfitsCrew/Operator] Resolves Station AI pointing from visible
         // supervised sources and rejects points outside the powered core's camera network.
+        if (!TryResolvePointingCore(args.Pointer, out var core))
+            return;
+
         args.Handled = true;
 
-        if (!TryGetStationAiCoreForHeld(ent, out var core) ||
-            !IsCorePowered(core.Value.Owner))
+        if (!IsCorePowered(core.Value.Owner))
         {
             args.Cancelled = true;
             return;
         }
 
-        var coreGrid = Transform(core.Value.Owner).GridUid;
-        if (coreGrid == null)
-        {
-            args.Cancelled = true;
-            return;
-        }
-
+        // [Changed by MisfitsCrew/Operator] Resolve the clicked coordinate's own grid
+        // instead of requiring it to rediscover as the physical core's grid.
         var targetMap = args.Coordinates.ToMap(EntityManager, _xforms);
-        if (!_mapManager.TryFindGridAt(targetMap, out var gridUid, out var grid) ||
-            gridUid != coreGrid.Value ||
+        if (!TryGetPointingGrid(args.Coordinates, targetMap, out var gridUid, out var grid) ||
             !_broadphaseQuery.TryComp(gridUid, out var broadphase))
         {
             args.Cancelled = true;
             return;
         }
 
-        var targetTile = grid.WorldToTile(targetMap.Position);
+        var targetTile = Maps.LocalToTile(gridUid, grid, args.Coordinates);
 
         lock (Vision)
         {
@@ -157,7 +159,108 @@ public sealed class StationAiSystem : SharedStationAiSystem
             }
         }
 
+        if (TryUseRemoteEyePointingSource(core.Value, args.Coordinates, ref args))
+            return;
+
         args.Cancelled = true;
+    }
+
+    private bool TryUseRemoteEyePointingSource(
+        Entity<StationAiCoreComponent> core,
+        EntityCoordinates coordinates,
+        ref GetPointingSourceEvent args)
+    {
+        // [Changed by MisfitsCrew/Operator] Lets inserted positronic-brain AIs point
+        // from their relayed AI eye when camera supervision attribution misses the tile,
+        // instead of falling back to the hidden brain/core position and reporting range.
+        var remoteEntity = core.Comp.RemoteEntity;
+        if (remoteEntity == null || !Exists(remoteEntity.Value))
+            return false;
+
+        if (!_examine.InRangeUnOccluded(
+                remoteEntity.Value,
+                coordinates,
+                AiPointingRange,
+                predicate: entity => entity == remoteEntity.Value))
+        {
+            return false;
+        }
+
+        args.Source = remoteEntity.Value;
+        args.RotateSource = false;
+        return true;
+    }
+
+    private bool TryResolvePointingCore(
+        EntityUid pointer,
+        [NotNullWhen(true)] out Entity<StationAiCoreComponent>? core)
+    {
+        // [Changed by MisfitsCrew/Operator] Resolves the AI core from the hidden AI brain,
+        // the physical core, or the spawned AI eye so pointing works after setmind/relay use.
+        core = null;
+
+        if (TryGetContainingStationAiCore(pointer, out core))
+            return true;
+
+        if (TryComp(pointer, out StationAiHeldComponent? held) &&
+            TryGetStationAiCoreForHeld((pointer, held), out core))
+        {
+            return true;
+        }
+
+        if (TryComp(pointer, out StationAiCoreComponent? coreComp))
+        {
+            core = (pointer, coreComp);
+            return true;
+        }
+
+        var query = EntityQueryEnumerator<StationAiCoreComponent>();
+        while (query.MoveNext(out var coreUid, out var candidateCore))
+        {
+            if (candidateCore.RemoteEntity == pointer)
+            {
+                core = (coreUid, candidateCore);
+                return true;
+            }
+
+            var coreEnt = new Entity<StationAiCoreComponent>(coreUid, candidateCore);
+            if (TryGetInsertedAI(coreEnt, out var insertedAi) &&
+                insertedAi.Value.Owner == pointer)
+            {
+                core = coreEnt;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private bool TryGetPointingGrid(
+        EntityCoordinates coordinates,
+        MapCoordinates mapCoordinates,
+        out EntityUid gridUid,
+        [NotNullWhen(true)] out MapGridComponent? grid)
+    {
+        // [Changed by MisfitsCrew/Operator] Finds the grid for an AI point attempt from
+        // the original click coordinates first, falling back to map lookup only when needed.
+        gridUid = EntityUid.Invalid;
+        grid = null;
+
+        if (TryComp(coordinates.EntityId, out MapGridComponent? coordinateGrid))
+        {
+            gridUid = coordinates.EntityId;
+            grid = coordinateGrid;
+            return true;
+        }
+
+        if (_xforms.GetGrid(coordinates) is { } resolvedGrid &&
+            TryComp(resolvedGrid, out grid))
+        {
+            gridUid = resolvedGrid;
+            return true;
+        }
+
+        return _mapManager.TryFindGridAt(mapCoordinates, out gridUid, out grid);
     }
 
     protected override void OnStationAiInserted(Entity<StationAiCoreComponent> core, EntityUid ai)

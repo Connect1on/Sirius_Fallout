@@ -26,6 +26,13 @@
     radius: 5
   - type: SlimPoweredLight
     enabled: false
+  # [Changed by MisfitsCrew/Operator] Lets Station AI camera-light actions toggle
+  # surveillance camera lights while keeping normal player use/activation disabled.
+  - type: ItemToggle
+    onUse: false
+    onActivate: false
+    predictable: false
+  - type: ItemTogglePointLight
   - type: StationAiVision
   - type: Clickable
   - type: InteractionOutline

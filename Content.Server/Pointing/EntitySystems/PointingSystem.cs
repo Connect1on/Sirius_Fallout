@@ -138,7 +138,9 @@ namespace Content.Server.Pointing.EntitySystems
             // [Changed by MisfitsCrew/Operator] Lets systems such as Station AI replace
             // the visual point source, validate remote-vision reach, and prevent proxy rotation.
             var sourceEv = new GetPointingSourceEvent(player, coordsPointed, pointed);
-            RaiseLocalEvent(player, ref sourceEv);
+            // [Changed by MisfitsCrew/Operator] Broadcasts the source query as well so
+            // systems can resolve relayed actors such as AI cores, brains, and camera eyes.
+            RaiseLocalEvent(player, ref sourceEv, true);
 
             if (sourceEv.Cancelled)
             {

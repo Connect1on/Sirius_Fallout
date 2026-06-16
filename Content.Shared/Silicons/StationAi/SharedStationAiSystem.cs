@@ -102,6 +102,11 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         SubscribeLocalEvent<StationAiOverlayComponent, AccessibleOverrideEvent>(OnAiAccessible);
         SubscribeLocalEvent<StationAiOverlayComponent, InRangeOverrideEvent>(OnAiInRange);
         SubscribeLocalEvent<StationAiOverlayComponent, MenuVisibilityEvent>(OnAiMenu);
+        // [Changed by MisfitsCrew/Operator] Applies the same AI interaction range
+        // overrides when the controlled entity is the physical AI core.
+        SubscribeLocalEvent<StationAiCoreComponent, AccessibleOverrideEvent>(OnAiCoreAccessible);
+        SubscribeLocalEvent<StationAiCoreComponent, InRangeOverrideEvent>(OnAiCoreInRange);
+        SubscribeLocalEvent<StationAiCoreComponent, MenuVisibilityEvent>(OnAiCoreMenu);
 
         SubscribeLocalEvent<StationAiHolderComponent, ComponentInit>(OnHolderInit);
         SubscribeLocalEvent<StationAiHolderComponent, ComponentRemove>(OnHolderRemove);
@@ -147,15 +152,25 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiAccessible(Entity<StationAiOverlayComponent> ent, ref AccessibleOverrideEvent args)
     {
+        HandleAiAccessible(args.User, args.Target, ref args);
+    }
+
+    private void OnAiCoreAccessible(Entity<StationAiCoreComponent> ent, ref AccessibleOverrideEvent args)
+    {
+        HandleAiAccessible(args.User, args.Target, ref args);
+    }
+
+    private void HandleAiAccessible(EntityUid user, EntityUid target, ref AccessibleOverrideEvent args)
+    {
         args.Handled = true;
 
         // Hopefully AI never needs storage
-        if (_containers.TryGetContainingContainer(args.Target, out var targetContainer))
+        if (_containers.TryGetContainingContainer(target, out var targetContainer))
         {
             return;
         }
 
-        if (!_containers.IsInSameOrTransparentContainer(args.User, args.Target, otherContainer: targetContainer))
+        if (!_containers.IsInSameOrTransparentContainer(user, target, otherContainer: targetContainer))
         {
             return;
         }
@@ -164,6 +179,16 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     }
 
     private void OnAiMenu(Entity<StationAiOverlayComponent> ent, ref MenuVisibilityEvent args)
+    {
+        HandleAiMenu(ref args);
+    }
+
+    private void OnAiCoreMenu(Entity<StationAiCoreComponent> ent, ref MenuVisibilityEvent args)
+    {
+        HandleAiMenu(ref args);
+    }
+
+    private void HandleAiMenu(ref MenuVisibilityEvent args)
     {
         args.Visibility &= ~MenuVisibility.NoFov;
     }
@@ -202,14 +227,18 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiInRange(Entity<StationAiOverlayComponent> ent, ref InRangeOverrideEvent args)
     {
-        args.Handled = true;
-        var targetXform = Transform(args.Target);
+        HandleAiInRange(args.User, args.Target, ref args);
+    }
 
-        // No cross-grid
-        if (targetXform.GridUid != Transform(args.User).GridUid)
-        {
-            return;
-        }
+    private void OnAiCoreInRange(Entity<StationAiCoreComponent> ent, ref InRangeOverrideEvent args)
+    {
+        HandleAiInRange(args.User, args.Target, ref args);
+    }
+
+    private void HandleAiInRange(EntityUid user, EntityUid target, ref InRangeOverrideEvent args)
+    {
+        args.Handled = true;
+        var targetXform = Transform(target);
 
         // Validate it's in camera range yes this is expensive.
         // Yes it needs optimising
@@ -577,6 +606,26 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
         parentEnt = new Entity<StationAiCoreComponent>(parent, stationAiCore);
 
+        return true;
+    }
+
+    protected bool TryGetContainingStationAiCore(
+        EntityUid contained,
+        [NotNullWhen(true)] out Entity<StationAiCoreComponent>? core)
+    {
+        // [Changed by MisfitsCrew/Operator] Resolves the AI core from the actual
+        // station_ai_mind_slot container owner, covering positronic-brain setmind cases
+        // where dynamic held components or transform parenting are not reliable yet.
+        core = null;
+
+        if (!_containers.TryGetContainingContainer((contained, null, null), out var container) ||
+            container.ID != StationAiCoreComponent.Container ||
+            !TryComp(container.Owner, out StationAiCoreComponent? coreComp))
+        {
+            return false;
+        }
+
+        core = (container.Owner, coreComp);
         return true;
     }
 

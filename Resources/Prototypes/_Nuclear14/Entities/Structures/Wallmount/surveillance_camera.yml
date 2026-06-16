@@ -12,3 +12,71 @@
     networkSet: true
   - type: Sprite
     drawdepth: Overdoors
+
+- type: entity
+  parent: SurveillanceCameraBase
+  id: N14SurveillanceCameraBrotherhoodMidwest
+  name: camera
+  suffix: BrotherhoodMidwest
+  components:
+  # [Changed by MisfitsCrew/Operator] Adds a Nuclear14 camera variant that inherits
+  # base surveillance AI vision and camera-light behavior for the Midwest BoS network.
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCameraBrotherhoodMidwest
+  - type: SurveillanceCamera
+    networkSet: true
+  - type: Sprite
+    drawdepth: Overdoors
+
+- type: entity
+  parent: SurveillanceCameraBase
+  id: N14SurveillanceCameraNCR
+  name: camera
+  suffix: NCR
+  components:
+  # [Changed by MisfitsCrew/Operator] Adds a Nuclear14 camera variant that inherits
+  # base surveillance AI vision and camera-light behavior for the NCR network.
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCameraNCR
+  - type: SurveillanceCamera
+    networkSet: true
+  - type: Sprite
+    drawdepth: Overdoors
+
+- type: entity
+  parent: SurveillanceCameraBase
+  id: N14SurveillanceCameraTown
+  name: camera
+  suffix: Town
+  components:
+  # [Changed by MisfitsCrew/Operator] Adds a Nuclear14 camera variant that inherits
+  # base surveillance AI vision and camera-light behavior for the town network.
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCameraTown
+  - type: SurveillanceCamera
+    networkSet: true
+  - type: Sprite
+    drawdepth: Overdoors
+
+- type: entity
+  parent: SurveillanceCameraBase
+  id: N14SurveillanceCameraVault
+  name: camera
+  suffix: Vault
+  components:
+  # [Changed by MisfitsCrew/Operator] Adds a Nuclear14 camera variant that inherits
+  # base surveillance AI vision and camera-light behavior for the vault network.
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCameraVault
+  - type: SurveillanceCamera
+    networkSet: true
+  - type: Sprite
+    drawdepth: Overdoors

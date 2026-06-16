@@ -492,6 +492,9 @@
   suffix: DO NOT MAP
   components:
   - type: NoFTL
+  # [Changed by MisfitsCrew/Operator] Lets AI eye-controlled interactions use
+  # Station AI camera range overrides instead of normal mob reach checks.
+  - type: StationAiOverlay
   - type: WarpPoint
     follow: true
   - type: Eye
@@ -529,6 +532,9 @@
   categories: [ HideSpawnMenu ]
   suffix: DO NOT MAP
   components:
+  # [Changed by MisfitsCrew/Operator] Lets local AI hologram interactions use
+  # Station AI camera range overrides instead of normal mob reach checks.
+  - type: StationAiOverlay
   - type: Transform
     anchored: true
   - type: WarpPoint
