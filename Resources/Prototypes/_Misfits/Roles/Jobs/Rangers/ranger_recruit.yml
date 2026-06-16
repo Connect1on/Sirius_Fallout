@@ -34,16 +34,17 @@
   equipment:
     head: N14ClothingHeadHatNCRPatrolRangerCampaign # Misfits Tweak - patrol rangers are given a campaign hat.
     back: N14ClothingBackpackMilitary # Corvax-Change
-    jumpsuit: N14ClothingUniformRangerV1
+    jumpsuit: N14ClothingUniformNCRPatrolRanger
     ears: N14ClothingHeadsetNCR
     shoes: N14ClothingBootsLeather
     belt: ClothingBeltRevolverdesertfilled
+    gloves: N14ClothingHandsGlovesBlackLeather
     pocket1: MagazineBox45-70
     pocket2: NCRpatrolrangerloadoutkits
     eyes: ClothingEyesGlassesSunglasses
     outerClothing: N14ClothingOuterNCRPatrolRangerArmorVariant # Misfits Change - patrol rangers will start with a unique sidegrade.
     id: N14IDBadgeNCRDesertRangerRecruit
-  innerClothingSkirt: N14ClothingUniformRangerV1 #placeholder
+  innerClothingSkirt: N14ClothingUniformNCRPatrolRanger #placeholder
   satchel: N14ClothingBackpackSatchelMilitaryFilled
   duffelbag: N14ClothingBackpackDuffelMilitaryFilled
   storage: # Corvax-Change
