@@ -1608,6 +1608,7 @@
 # New Midwest BoS stuff after rework
 
 - type: entity
+  parent: N14FalloutArmorBase
   id: N14ClothingOuterMBoSInitiateArmor
   name: Initiate Armor
   description: A set of light armor used by the Brotherhood's Initiates. It's quite light on actual plating, but cheap to make.

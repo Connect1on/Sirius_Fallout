@@ -208,7 +208,7 @@
     sprite: _Nuclear14/Objects/Vehicles/MWBoS_HMMWV1.rsi
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
-      state: highwayman2
+      state: MWBoS_HMMWV_Metall1
   - type: Mech
     baseState: MWBoS_HMMWV_Metall12
     openState: MWBoS_HMMWV_Metall1
@@ -238,7 +238,7 @@
     sprite: _Nuclear14/Objects/Vehicles/MWBoS_HMMWV2.rsi
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
-      state: highwayman2
+      state: MWBoS_HMMWV_Metall1
   - type: Mech
     baseState: MWBoS_HMMWV_Metall22
     openState: MWBoS_HMMWV_Metall2

@@ -86,11 +86,11 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutGuns
-    - !type:CharacterDepartmentRequirement 
+    - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
       - Vault
-    - !type:CharacterJobRequirement 
+    - !type:CharacterJobRequirement
       inverted: true
       jobs:
       - BoSMidSerf
@@ -110,7 +110,7 @@
     - !type:CharacterTraitRequirement
       traits:
       - LanguageChinese
-      - LanguageNerd 
+      - LanguageNerd
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutGuns
     - !type:CharacterDepartmentRequirement
@@ -137,7 +137,7 @@
       inverted: true
       departments:
       - Vault
-    - !type:CharacterJobRequirement 
+    - !type:CharacterJobRequirement
       inverted: true
       jobs:
       - BoSMidSerf
@@ -160,7 +160,7 @@
       inverted: true
       departments:
       - Vault
-    - !type:CharacterJobRequirement 
+    - !type:CharacterJobRequirement
       inverted: true
       jobs:
       - BoSMidSerf
@@ -250,7 +250,7 @@
       inverted: true
       departments:
       - Vault
-    - !type:CharacterJobRequirement 
+    - !type:CharacterJobRequirement
       inverted: true
       jobs:
       - BoSMidSerf
@@ -288,11 +288,11 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutAmmo
-    - !type:CharacterDepartmentRequirement 
+    - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
       - Vault
-    - !type:CharacterJobRequirement 
+    - !type:CharacterJobRequirement
       inverted: true
       jobs:
       - BoSMidSerf
@@ -309,7 +309,7 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutAmmo
-    - !type:CharacterDepartmentRequirement 
+    - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
       - Vault
@@ -331,7 +331,7 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutAmmo
-    - !type:CharacterDepartmentRequirement 
+    - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
       - Vault
@@ -454,21 +454,6 @@
     - N14Machete
 
 - type: loadout
-  id: N14TribalSword
-  category: Weapons
-  cost: 3
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: N14LoadoutMelee
-    - !type:CharacterDepartmentRequirement
-      departments:
-        - Wastelander
-        - Tribe
-  items:
-    - N14TribalSword
-
-    
-- type: loadout
   id: N14LongSwordBoS
   category: Weapons
   cost: 2
@@ -505,7 +490,7 @@
     - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
-        - BrotherhoodOfSteel 
+        - BrotherhoodOfSteel
   items:
     - N14LongSword
 
@@ -515,7 +500,7 @@
   cost: 5
   requirements:
     - !type:CharacterItemGroupRequirement
-      group: N14LoadoutMelee    
+      group: N14LoadoutMelee
     - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
@@ -531,7 +516,7 @@
     - !type:CharacterTraitRequirement
       traits:
       - LanguageChinese
-      - LanguageNerd 
+      - LanguageNerd
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutMelee
   items:
