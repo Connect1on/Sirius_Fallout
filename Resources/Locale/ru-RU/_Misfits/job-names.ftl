@@ -1,5 +1,5 @@
 # #Misfits Add - NCR Heavy Trooper job locale.
-job-name-ncr-heavy-trooper = Тяжёлый солдат НКР
+job-name-ncr-heavy-trooper = Тяжёлый пехотинец НКР
 job-description-ncr-heavy-trooper = Вы — ходячая артиллерия НКР. Ваша задача, облаченная в спасенный костюм Т-45 и вооруженная ручным пулеметом, проста: удерживать оборону и вести огонь до тех пор, пока ничего не останется.
 
 # #Misfits Add - NCR role rehaul: new role-based job locale strings.
@@ -20,7 +20,7 @@ job-description-ncr-weapon-specialist = Вы являетесь квалифиц
 
 # #Misfits Add - Enclave job locale (expanded 8-role hierarchy). Reformer is admin-only apex role.
 job-name-enclave-reformer = Реформатор
-job-description-enclave-reformer = Вы — высший авторитет Анклава на поле боя, его реформатор. Формируйте доктрину ячейки, судите её членов и определяйте её будущее. Подотчётен только Президенту.
+job-description-enclave-reformer = Вы — высший авторитет Анклава, его реформатор. Формируйте доктрину ячейки, судите её членов и определяйте её будущее. Подотчётен только Президенту.
 job-name-enclave-commander = Командир Анклава
 job-description-enclave-commander = Руководите ячейкой Анклава с абсолютной властью, координируйте военную и научную отрасли, а также обеспечивайте оперативную безопасность.
 job-name-enclave-senior-officer = Старший офицер Анклава

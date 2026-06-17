@@ -153,6 +153,15 @@
     factions:
     - BrotherhoodOfSteel
 
+- type: entity
+  parent: N14BaseWeaponTurret
+  id: N14WeaponTurretEnclave
+  suffix: Enclave
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Enclave
+
 #Misfits Change: Washington BoS turrets re-enabled using consolidated BrotherhoodOfSteel faction.
 #Original used BrotherhoodOfSteelWashington/SecureArea which no longer exist.
 - type: entity

@@ -47,27 +47,30 @@
             TownMechanic: [ 2, 2 ]
             TownShopkeeper: [ 2, 2 ]
             #TownShopkeeperHelper: [ 0, 0 ] # Forge-Town
-            Townsperson: [ 6, 6 ]
-            NCRMajor: [ 0, 1 ] # #Misfits Add - whitelist-only command role; 0 active late-join slots
-            #NCRChiefRanger: [ 0, 0 ]  # #Misfits Change - admin-only Chief Ranger; renamed from ChiefRanger
+            Townsperson: [ 12, 12 ]
+            #NCRMajor: [ 0, 1 ] # #Misfits Add - whitelist-only command role; 0 active late-join slots
+            NCRCommander: [ 1, 1 ]
+            NCRExecutiveOfficer: [ 1, 1 ]
+            NCRPlatoonLeader: [ 1, 1 ]
+            NCRChiefRanger: [ 1, 0 ]  # #Misfits Change - admin-only Chief Ranger; renamed from ChiefRanger
             NCRVeteranRanger: [ 1, 1 ] # #Misfits Change - renamed from RangerVeteran
-            #NCRFieldRanger: [ 0, 0 ]   # #Misfits Add - Field Ranger slot
+            NCRFieldRanger: [ 1, 1 ]   # #Misfits Add - Field Ranger slot
             NCRPatrolRanger: [ 2, 2 ]  # #Misfits Change - renamed from RangerRecruit (was Patrol Ranger by FTL)
-            NCRRangerRecruit: [ 1, 1 ] # #Misfits Add - entry-level Ranger Recruit slot
-            NCRFirstSergeant: [ 1, 1 ]
-            NCRStaffSergeant: [ 1, 1 ] # #Misfits Removed - replaced by NCRHeavyTrooper as T5 specialist slot
+            NCRRangerRecruit: [ 2, 2 ] # #Misfits Add - entry-level Ranger Recruit slot
+            #NCRFirstSergeant: [ 1, 1 ]
+            #NCRStaffSergeant: [ 1, 1 ] # #Misfits Removed - replaced by NCRHeavyTrooper as T5 specialist slot
             NCRHeavyTrooper: [ 1, 1 ] # #Misfits Add - Heavy Trooper: 2 slots, between Specialist and Sergeant
             NCRWS: [ 1, 1 ] # #Misfits Tweak - increased: absorbs Engineer (2) + Medic (1) slots
             NCREngineer: [ 2, 2 ] #Misfits Change /Comment-out/: consolidated into Specialist
             NCRDoctor: [ 2, 2 ]
             #NCRMedic: [ 1, 1 ] #Misfits Change /Comment-out/: consolidated into Specialist
-            NCRPrivateFirstClass: [ 0, 0 ]
+            #NCRPrivateFirstClass: [ 0, 0 ]
             #NCRSoldier: [ 0, 0 ]
-            NCRCadet: [ 11, 11 ]
-            #NCRPisoner : [ 0, 0 ]
-            NCRMPinvestigator : [ 1, 1 ]
+            NCRCadet: [ 15, 15 ]
+            #NCRPisoner : [ 5, 5 ]
+            NCRMPinvestigator : [ 1, 1 ] # Misfits Change # #Misfits Tweak - 0 active slots (admin-notify role)
             NCRMilitaryPoliceSergeant: [ 2, 2 ]
-            NCRMilitaryPoliceRecruit: [ 2, 2 ]
+            NCRMilitaryPoliceRecruit: [ 3, 3 ]
             NCRMilitaryPoliceCaptain: [ 1, 1 ]
             # CaravanLeader: [ 1, 1 ]
             # CaravanTrader: [ 1, 1 ]
@@ -80,17 +83,18 @@
             # BoSWashingtonKnight: [ 2, 2 ]
             # BoSWashingtonInitiate: [ 0, 2 ]
             BoSMidPaladinCommander: [ 1, 1 ]
-            #BoSHeadKnight: [ 0, 0 ]  #Misfits Change /Add/: New consolidated BoS jobs
+            BoSHeadKnight: [ 1, 1 ]  #Misfits Change /Add/: New consolidated BoS jobs
             BoSWestScribe: [ 1, 1 ] # Misfits Change
             BoSMidPaladin: [ 1, 1 ]  #Misfits Tweak: 1 slot — Senior Paladin is a rare rank
-            BoSMidKnight: [ 1, 1 ]
-            #BoSMidScribe: [ 0, 0 ]
+            BoSMidKnight: [ 2, 2 ]
+            BoSMidScribe: [ 1, 1 ]
             BoSPaladin: [ 2, 2 ]  #Misfits Tweak: 3 slots — standard Paladin complement
-            BoSKnight: [ 2, 2 ]  #Misfits Change /Add/
-            BoSScribe: [ 2, 2 ]  #Misfits Change /Add/
-            BoSMidSquire: [ 2, 2 ]
-            BoSInitiate: [ 2, 2 ]  #Misfits Change /Add/
+            BoSKnight: [ 4, 4 ]  #Misfits Change /Add/
+            BoSScribe: [ 3, 3 ]  #Misfits Change /Add/
+            BoSMidSquire: [ 4, 4 ]
+            BoSInitiate: [ 3, 3 ]  #Misfits Change /Add/
             # BoSWashingtonInitiate: [ 3, 3 ] #Misfits Change /Comment-out/: Washington BoS removed
+            VaultManagement: [ 1, 0 ] # #Misfits Tweak - 0 active slots (admin-notify role)
             Overseer: [ 1, 1 ]
             VaultDoctor: [ 2, 2 ]
             VaultDweller: [ 4, 6 ]

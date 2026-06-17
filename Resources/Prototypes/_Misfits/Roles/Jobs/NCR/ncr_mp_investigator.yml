@@ -1,9 +1,9 @@
 - type: job
   id: NCRMPinvestigator
-  setPreference: false
-  hideIfPlaytimeRequirementsNotMet: false # #Misfits Tweak - all jobs visible in selection
-  jobWhitelistBypassesRoleTimers: true # #Misfits Change
-  overrideConsoleVisibility: true
+  setPreference: true
+  hideWithoutJobWhitelist: true   # #Misfits Add - admin-only; hidden from job picker without whitelist
+  hideIfPlaytimeRequirementsNotMet: false
+  jobWhitelistBypassesRoleTimers: true # #Misfits Add - admin bypass, no timer gate
   canBeAntag: false
   name: job-name-ncr-mp-investigator #Misfits Change
   description: job-description-ncr-mp-investegator

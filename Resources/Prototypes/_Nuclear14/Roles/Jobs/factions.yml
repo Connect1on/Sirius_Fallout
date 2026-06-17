@@ -88,7 +88,6 @@
   # Special
   - NCRPisoner           # NCR Prisoner            | _Misfits/Roles/Jobs/NCR/ncr_prisoner.yml
   # Special roles outside the visible ladder (hidden from character creation):
-  #- NCRMPinvestigator    # NCR MP Investigator     | _Misfits/Roles/Jobs/NCR/ncr_mp_investigator.yml
   # Hidden — kept for compatibility, not visible in character creation:
   #- NCRMajor            # Superseded — Major is now a loadout pin for NCRCommander
   #- NCRFirstSergeant    # Superseded — SFC is now a loadout pin for NCRNCO
@@ -119,6 +118,7 @@
   - NCRMilitaryPoliceRecruit
   - NCRMilitaryPoliceSergeant
   - NCRMilitaryPoliceCaptain
+  - NCRMPinvestigator    # NCR MP Investigator     | _Misfits/Roles/Jobs/NCR/ncr_mp_investigator.yml
 
 - type: department
   id: Tribe
