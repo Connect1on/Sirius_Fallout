@@ -32,18 +32,18 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/centurionheavyarmor.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1
-    sprintModifier: 1
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.45
-        Slash: 0.45
-        Piercing: 0.45
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.5
         Heat: 0.45
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.6
   - type: StaminaDamageResistance
-    coefficient: 0.85 # 15%
+    coefficient: 0.8 # 20%
 #  - type: ClothingSpecialModifier
 #    strengthModifier: 2
 
@@ -65,14 +65,14 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.45
-        Slash: 0.45
-        Piercing: 0.45
-        Heat: 0.45
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.5
+        Heat: 0.4
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.6
   - type: StaminaDamageResistance
-    coefficient: 0.85
+    coefficient: 0.8
 
 #Misfits Add — Ranger-Hunter Centurion: specialised for engaging NCR Ranger units.
 # High bullet/fire resistance and bio protection for anti-Ranger skirmish. Stats from SS13 Big-Iron (melee=35,bullet=60,fire=80,bio=60,bomb=35).
@@ -88,16 +88,16 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/rangerhuntercent.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1
-    sprintModifier: 1
+    sprintModifier: 1.15
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.45
         Slash: 0.45
-        Piercing: 0.45
-        Heat: 0.45
+        Piercing: 0.6
+        Heat: 0.5
   - type: ExplosionResistance
-    damageCoefficient: 0.40
+    damageCoefficient: 0.6
   - type: StaminaDamageResistance
     coefficient: 0.85
 
@@ -113,14 +113,14 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/deanveteranarmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 1
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
-        Piercing: 0.55 # Billy again. This shit is for veteran decani. 35% with 10% slow? you fuckin kidding me? buff to 45%.
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.65 # Billy again. This shit is for veteran decani. 35% with 10% slow? you fuckin kidding me? buff to 45%.
         Heat: 0.60 # light buff by bill. just 5%
   - type: ExplosionResistance
     damageCoefficient: 0.75
@@ -138,17 +138,17 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/deanprimearmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 1
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.60 # prime is slightly above "recruit" so here is 5% extra resist. sprite does literally have more metal on it.
-        Heat: 0.60 # light 5% buff.
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.7 # prime is slightly above "recruit" so here is 5% extra resist. sprite does literally have more metal on it.
+        Heat: 0.65 # light 5% buff.
   - type: ExplosionResistance
-    damageCoefficient: 0.75
+    damageCoefficient: 0.8
 #  - type: ClothingSpecialModifier
 #    strengthModifier: 2
 
@@ -163,17 +163,17 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/deanrecruitarmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 1
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.65 # liquid dogshit but you're the bitch decani. -Bill
-        Heat: 0.65
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.75
+        Heat: 0.7
   - type: ExplosionResistance
-    damageCoefficient: 0.75
+    damageCoefficient: 0.85
 #  - type: ClothingSpecialModifier
 #    strengthModifier: 2
 
@@ -193,12 +193,12 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.75
-        Slash: 0.75
-        Piercing: 0.7
+        Blunt: 0.65
+        Slash: 0.6
+        Piercing: 0.75
         Heat: 0.7
   - type: ExplosionResistance
-    damageCoefficient: 0.8
+    damageCoefficient: 0.85
 
 - type: entity
   parent: N14FalloutArmorBase
@@ -212,13 +212,13 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/reconnaissancearmor.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1.10
-    sprintModifier: 1.10
+    sprintModifier: 1.15
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.75
-        Slash: 0.75
-        Piercing: 0.75
+        Slash: 0.7
+        Piercing: 0.8
         Heat: 0.75
   - type: ExplosionResistance
     damageCoefficient: 0.85
@@ -235,16 +235,16 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/lightreconnaissancearmor.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1.15
-    sprintModifier: 1.15
+    sprintModifier: 1.2
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.85
-        Slash: 0.85
+        Slash: 0.8
         Piercing: 0.85
-        Heat: 0.85
+        Heat: 0.8
   - type: ExplosionResistance
-    damageCoefficient: 0.85
+    damageCoefficient: 0.9
 
 - type: entity
   parent: N14FalloutArmorBase
@@ -256,15 +256,18 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/basearmor.rsi
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/basearmor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.85
-        Slash: 0.85
-        Piercing: 0.75 # 20 fucking %? no. dogshit. here is 25%. You get nothing else. -Bill
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8 # 20 fucking %? no. dogshit. here is 25%. You get nothing else. -Bill # Yes, it's 20. -Raven
         Heat: 0.8
   - type: ExplosionResistance
-    damageCoefficient: 0.85
+    damageCoefficient: 0.9
 
 - type: entity
   parent: N14FalloutArmorBase
@@ -282,9 +285,9 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.9
+        Blunt: 0.8
         Slash: 0.9
-        Piercing: 0.80 # 10% is worse than some COATS btw. just want you to know that. gave them 20% -Bill
+        Piercing: 0.85
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.95
@@ -299,15 +302,18 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/vexillariusarmor.rsi
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/vexillariusarmor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.15
+    sprintModifier: 1.15
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.80
         Slash: 0.80
-        Piercing: 0.75
+        Piercing: 0.8
         Heat: 0.75
   - type: ExplosionResistance
-    damageCoefficient: 0.80
+    damageCoefficient: 0.9
 
 - type: entity
   parent: N14FalloutArmorBase
@@ -342,13 +348,16 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/oratorarmor.rsi
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/oratorarmor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.80
+        Blunt: 0.75
         Slash: 0.80
-        Piercing: 0.75 # I had pity on him and gave him 25%.
-        Heat: 0.75
+        Piercing: 0.8
+        Heat: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.82
 

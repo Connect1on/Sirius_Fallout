@@ -49,8 +49,6 @@
             #TownShopkeeperHelper: [ 0, 0 ] # Forge-Town
             Townsperson: [ 12, 12 ]
             #NCRMajor: [ 0, 1 ] # #Misfits Add - whitelist-only command role; 0 active late-join slots
-            #NCRCaptain: [ 1, 1 ] # #Misfits Tweak - keep 1 roundstart slot and seed 1 active department slot for admins
-            #NCRLT: [ 1, 1 ]
             NCRCommander: [ 1, 1 ]
             NCRExecutiveOfficer: [ 1, 1 ]
             NCRPlatoonLeader: [ 1, 1 ]
@@ -62,7 +60,6 @@
             #NCRFirstSergeant: [ 1, 1 ]
             #NCRStaffSergeant: [ 1, 1 ] # #Misfits Removed - replaced by NCRHeavyTrooper as T5 specialist slot
             NCRHeavyTrooper: [ 1, 1 ] # #Misfits Add - Heavy Trooper: 2 slots, between Specialist and Sergeant
-            NCRSGT: [ 2, 2 ]
             NCRWS: [ 1, 1 ] # #Misfits Tweak - increased: absorbs Engineer (2) + Medic (1) slots
             NCREngineer: [ 2, 2 ] #Misfits Change /Comment-out/: consolidated into Specialist
             NCRDoctor: [ 2, 2 ]

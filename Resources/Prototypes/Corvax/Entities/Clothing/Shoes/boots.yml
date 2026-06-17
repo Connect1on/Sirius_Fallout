@@ -8,6 +8,9 @@
     sprite: Corvax/Clothing/Shoes/Boots/legateboots.rsi
   - type: Clothing
     sprite: Corvax/Clothing/Shoes/Boots/legateboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1.05
 
 - type: entity
   parent: ClothingShoesBase
@@ -20,3 +23,6 @@
   - type: Clothing
     sprite: Corvax/Clothing/Shoes/Boots/centurionboots.rsi
   - type: NoSlip
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1.05
