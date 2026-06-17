@@ -9,69 +9,69 @@ trait-description-LanguageSpanish = Вы можете понимать и гов
 
 trait-name-N14SignLanguage = Язык жестов
 trait-description-N14SignLanguage = 
-    You can understand and use a basic & generally accepted sign language.
-    If you are mute for any reason, you can still communicate with sign language.
+    Вы можете понимать и использовать базовый и общепринятый язык жестов.
+    Если вы по какой-либо причине не можете говорить, вы все равно можете общаться с помощью языка жестов.
 
 trait-name-LanguageTribalRanger = Племенной язык
 trait-description-LanguageTribalRanger = Вы можете понимать и говорить на языке местного племени. Будь то обучение или предыстория.
 
 trait-name-N14SignLanguageRanger = Язык жестов
 trait-description-N14SignLanguageRanger = 
-    You can understand and use a basic & generally accepted sign language.
-    If you are mute for any reason, you can still communicate with sign language.
+    Вы можете понимать и использовать базовый и общепринятый язык жестов.
+    Если вы по какой-либо причине не можете говорить, вы все равно можете общаться с помощью языка жестов.
 
 trait-name-N14ScottishAccent = Шотландский акцент
 trait-description-N14ScottishAccent = 
-    Fer tha folk who come frae Hielan clan.  You have Scottish accent, that's about it. Do I have to explain it?
+    Для тех, кто происходит из клана Хилан.  У вас шотландский акцент, вот и всё. Мне нужно это объяснять?
 
 trait-name-N14Stutter = Заикание
 trait-description-N14Stutter = 
-    E-either d-due t-to a s-speech d-disorder, or d-due t-to a-anxiety or s-stress, you o-of-often f-find your-self s-stuttering w-while t-rying t-to s-speak.
+    Либо из-за нарушения речи, либо из-за беспокойства или стресса, вы часто обнаруживаете, что заикаетесь, пытаясь говорить.
 
-trait-name-N14FrontalLisp = Фронтальный Лисп
+trait-name-N14FrontalLisp = Фронтальная шепелявость
 trait-description-N14FrontalLisp = 
-    An abnormality in the development of your speech has caused you to pronounce the "s" and "z" sounds similarly to "th".
-    In other words, you thpeak with a lithp.
+    Аномалия в развитии вашей речи привела к тому, что вы произносите звуки "s" и "z" аналогично "th".
+    Другими словами, вы говорите с придыханием.
 
 trait-name-N14BrotherBeep = Кодекс Братства
 trait-description-N14BrotherBeep = 
-    You have learned the coding language of your chapter, those beeps and boops, you can understand them all.
-    But due to your lack of augmentations [color = red]ты сам до сих пор не можешь говорить на этом языке[/color]!
+    Вы изучили язык программирования вашего ордена, эти звуковые сигналы и бум-бум, вы можете понять их все.
+    Но из-за отсутствия у тебя аугментаций [color = red]ты сам до сих пор не можешь говорить на этом языке[/color]!
 
 trait-name-N14Paracusia = Паракузия
 trait-description-N14Paracusia = 
-    The challenges of the Wasteland have led you to experience chronic and frequent auditory hallucinations,
-    causing you to perceive sounds that are not really there.
+    Трудности, связанные с Пустошью, привели к тому, что вы испытываете хронические и частые слуховые галлюцинации,
+    заставляя вас воспринимать звуки, которых на самом деле нет.
 
 # Misfits Change
 trait-name-ChronicPain = Хроническая боль
 trait-description-ChronicPain = 
-    Old injuries never fully healed, leaving you with persistent pain that flares up without medication.
-    Painkillers and proper treatment can suppress the symptoms for a while.
+    Старые травмы никогда полностью не заживают, оставляя вас с постоянной болью, которая усиливается без медикаментозного лечения.
+    Обезболивающие и правильное лечение могут на некоторое время подавить симптомы.
 
 trait-name-N14Snoring = Храп
 trait-description-N14Snoring = Вы склонны громко храпеть во время сна.
 
-trait-name-N14Stomper = Стомпер
+trait-name-N14Stomper = Топотун
 trait-description-N14Stomper = 
-    Your footsteps are louder than what others tend to produce.
-    It doesn't matter if it's because you want to seem more intimidating, you're stumbling or your weight.
+    Ваши шаги звучат громче, чем обычно слышат другие.
+    Неважно, из-за того, что вы хотите казаться более устрашающим, из-за того, что вы спотыкаетесь или из-за своего веса.
 
-trait-name-N14Sneak = Красться
+trait-name-N14Sneak = Крадулька
 trait-description-N14Sneak = 
-    You mastered the art of stealth, your footsteps are a lot more difficult to hear.
+    Вы овладели искусством скрытности, и теперь ваши шаги гораздо труднее расслышать.
 
-trait-name-N14Singer = Певица
+trait-name-N14Singer = Соловей
 trait-description-N14Singer = Вы от природы способны петь голосом простые мелодии.
 
 trait-name-N14Pacifist = Пацифист
 trait-description-N14Pacifist = 
-    Either due to moral principles, or as a result of some alteration, you cannot bring yourself to harm or to directly risk harming any other living being, regardless of what threat they may pose.
+    Ни в силу моральных принципов, ни в результате каких-либо изменений вы не можете причинить вред себе или подвергнуть прямому риску любое другое живое существо, независимо от того, какую угрозу оно может представлять.
 
 trait-name-N14Narcolepsy = Нарколепсия
 trait-description-N14Narcolepsy = 
-    Due to a neurological disorder, controlling your sleep-wake cycles is difficult for you.
-    As a result, you may repeatedly fall asleep for short periods of time throughout the day.
+    Из-за неврологического расстройства вам трудно контролировать свои циклы сна и бодрствования.
+    В результате вы можете неоднократно засыпать на короткие промежутки времени в течение дня.
 
 trait-name-N14Liar = Патологический лжец
 trait-description-N14Liar = Вы с трудом можете заставить себя сказать правду. Иногда ты все равно лжешь.
@@ -81,57 +81,57 @@ trait-description-N14CarefulSteps = Вы овладели способность
 
 trait-name-N14CPRTraining = Обучение СЛР
 trait-description-N14CPRTraining = 
-   At some point in your life, you have received training in how to perform CPR.
-   Using this you can remove Airloss damage from people and have a chance to restart their heart.
-   (This trait is automatically given for free to medical doctors, and is intended for non-medical characters)
+   В какой-то момент своей жизни вы прошли обучение тому, как делать искусственное дыхание.
+   С его помощью вы можете снимать с людей повреждения от потери воздуха и получать шанс перезапустить их сердце.
+   (Эта функция автоматически предоставляется бесплатно врачам и предназначена для персонажей, не связанных с медициной)
 
 trait-name-N14SelfAware = Самосознание
 trait-description-N14SelfAware = 
-    You possess a keen intuition of your body and senses.
-    You can accurately examine the severity of your wounds and burns like a health analyzer,
-    and can gauge if you have toxin or airloss damage.
+    Вы обладаете острым чутьем своего тела и органов чувств.
+    Вы можете точно оценить тяжесть своих ран и ожогов, как анализатор состояния здоровья,
+    и определить, есть ли у вас повреждения от токсинов или потери воздуха.
 
 trait-name-N14PetRoach = Домашний радтаракан
 trait-description-N14PetRoach = 
-    You (might) have a pet radroach that follows and obeys you.
-    Radroaches are not the toughest creatures, but they are pretty decent for espionage, or you can simply keep them for their insect cuteness.
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть домашний таракан, который следует за вами и повинуется вам.
+    Тараканы - не самые выносливые существа, но они вполне пригодны для шпионажа, или вы можете просто оставить их из-за их привлекательности для насекомых.
+    (Эта черта создает призрачную роль для другого игрока, есть гарантия, что кто-то займет ее.)
 
-trait-name-N14PetPigrat = Домашняя свинья
+trait-name-N14PetPigrat = Домашний кротокрыс
 trait-description-N14PetPigrat = 
-    You (might) have a pet pigrat that follows and obeys you.
-    Pigrats don't eat a lot and are common enough that it's easy to replace them, or you can protect them for their mutated cuteness.
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть домашний кротокрыс, который ходит за вами по пятам и повинуется вам.
+    Кротокрысы едят мало и встречаются достаточно часто, поэтому их легко заменить, или вы можете защитить их из-за их мутировавшей привлекательности.
+    (Эта черта создает призрачную роль для другого игрока, есть гарантия, что кто-то займет ее.)
 
-trait-name-N14PetAnt = Мулант (Питомец)
+trait-name-N14PetAnt = Муравей-вол (Питомец)
 trait-description-N14PetAnt = 
-    You (might) have a giant ant that follows and obeys you.
-    The company somehow domesticated a giant ant queen. Eventually this lead to you getting a loyal insect friend with bags on its back to carry your burdens.
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть гигантский муравей, который следует за вами и повинуется вам.
+    Компания каким-то образом приручила гигантскую муравьиную королеву. В конечном итоге это привело к тому, что у вас появился верный друг-насекомое с мешками на спине, который будет нести вашу ношу.
+    (Эта черта создает призрачную роль для другого игрока, есть гарантия, что кто-то займет ее.)
 
 trait-name-N14PetDog = Собака-компаньон
 trait-description-N14PetDog = 
-    You (might) have a dog companion that follows and obeys you.
-    You are followed along by a canine friend. It doesn't matter if you tamed it, or purchased it. It's a human's best friend!
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть собака-компаньон, которая следует за вами и повинуется вам.
+    За вами следует друг-собака. Не имеет значения, приручили вы её или купили. Это лучший друг человека!
+    (Эта черта создает призрачную роль для другого игрока, есть гарантия, что кто-то займет ее.)
 
 trait-name-N14PetDogCC = Сторожевая собака
 trait-description-N14PetDogCC = 
-    You (might) have a guard dog that follows and obeys you.
-    You got one of those "best friends" but he's smaller than the usual, at least he can run fast!
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть сторожевой пёс, который следует за вами и повинуется вам.
+    У вас есть один из этих "лучших друзей", но он меньше обычного, по крайней мере, он может быстро бегать!
+    (Эта черта создает роль призрака для другого игрока, и есть гарантия, что кто-то ее займет).
 
-trait-name-N14PetDogNCR = Боевой пес
+trait-name-N14PetDogNCR = Боевой пёс
 trait-description-N14PetDogNCR = 
-    You (might) have a warhound that follows and obeys you.
-    You got one of 'em pals and it's ready to tear someone's arm off without any hesitation.
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть боевой пёс, который следует за вами и повинуется вам.
+    У вас есть один из таких приятелей, и он готов без колебаний оторвать кому-нибудь руку.
+    (Эта черта создает роль призрака для другого игрока, и есть гарантия, что кто-нибудь ее займет.)
 
 trait-name-N14PetDogMBoS = Тактическая собака
 trait-description-N14PetDogMBoS = 
-    You (might) have a tactical dog that follows and obeys you.
-    Your little buddy was taught tactics and has a vest to keep him safe. You might even be able to store stuff in it.
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть тактическая собака, которая следует за вами и повинуется вам.
+    Вашего маленького приятеля учили тактике, и у него есть жилет для безопасности. Возможно, вы даже сможете хранить в нём вещи.
+    (Эта черта создает призрачную роль для другого игрока, есть гарантия, что кто-то займет ее.)
 
 #Misfits Change /Comment-out/: Washington BoS pet traits removed — will create new prototypes.
 #trait-name-N14PetDogWBoS = Cybernetic Dog
@@ -140,17 +140,17 @@ trait-description-N14PetDogMBoS =
 #    This dog is not your best friend, it's a mutilated killing machine. At least it's immune to radiation poisoning.
 #    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
 
-trait-name-N14PetEyebot = Последователь глазбота
+trait-name-N14PetEyebot = Робоглаз-компаньон
 trait-description-N14PetEyebot = 
-    You (might) have an Eyebot that follows and obeys you.
-    It cannot carry stuff for you, but has a laser weapon and can play tunes from the town's frequency.
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть робоглаз, который следует за вами и повинуется вам.
+    Он не может переносить вещи за вас, но имеет лазерное оружие и может воспроизводить мелодии на городской частоте.
+    (Эта особенность создает роль призрака для другого игрока, и есть гарантия, что кто-то ее займет).
 
-trait-name-N14PetEyebotMBoS = Последователь глазбота
+trait-name-N14PetEyebotMBoS = Робоглаз-компаньон Братства
 trait-description-N14PetEyebotMBoS = 
-    You (might) have an Eyebot that follows and obeys you.
-    It cannot carry stuff for you, but has a laser weapon and can play tunes from the town's frequency.
-    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
+    У вас (возможно) есть робоглаз, который следует за вами и повинуется вам.
+    Он не может переносить вещи за вас, но имеет лазерное оружие и может воспроизводить мелодии на городской частоте.
+    (Эта особенность создает роль призрака для другого игрока, и есть гарантия, что кто-то ее займет).
 
 #Misfits Change /Comment-out/: Washington BoS eyebot trait removed — will create new prototypes.
 #trait-name-N14PetEyebotWBoS = Eyebot Follower
@@ -159,183 +159,183 @@ trait-description-N14PetEyebotMBoS =
 #    It cannot carry stuff for you, but has a laser weapon and can play tunes from the town's frequency.
 #    (The trait creates a ghost role for another player, there is guarantee that someone takes it.)
 
-trait-name-N14PillowKnuckles = Подушка Наклз
+trait-name-N14PillowKnuckles = Подушечки на костяшках
 trait-description-N14PillowKnuckles = 
-    Your fists could never cause as much damage as someone else's.
-    You deal [color = красный]-1[/color] [color=yellow]Тупой[/color] урон в рукопашном бою без оружия.
+    Твои кулаки никогда не смогли бы причинить такого вреда, как чьи-то другие.
+    Вы наносите [color = red]-1[/color] [color=yellow]Тупой[/color] урон в рукопашном бою без оружия.
 
-trait-name-N14IronFist = Железные Кулаки
+trait-name-N14IronFist = Железные кулаки
 trait-description-N14IronFist = 
-    Your knuckles are almost like they're made of iron, no one wants to get punched by you.
-    You deal [color = зеленый]+1[/color] [color=yellow]Тупой[/color] урон в рукопашном бою без оружия.
+    Твои костяшки пальцев как будто сделаны из железа, никто не хочет, чтобы ты их ударил.
+    Вы наносите [color=green]+1[/color] [color=yellow]Тупой[/color] урон в рукопашном бою без оружия.
 
-trait-name-N14RadClaws = Рад когти
+trait-name-N14RadClaws = Радкогти
 trait-description-N14RadClaws = 
-    Being a ghoul is not that all bad, you got very neat sharp claws that you can use in a brawl.
-    You deal [color = зеленый]+1[/color] [color=yellow]Slash[/color] и [color=yellow]Radiation[/color] урона в рукопашном бою без оружия.
+    Бытиё гулем не так уж и плохо - у вас есть острые когти, которые вы можете использовать в бою.
+    Вы наносите [color=green]+1[/color] [color=yellow]Режущего[/color] и [color=yellow]радиационного[/color] урона в рукопашном бою без оружия.
 
-trait-name-N14WeakLiquor = Слабый алкоголь
+trait-name-N14WeakLiquor = Слабость к алкоголю
 trait-description-N14WeakLiquor = 
-    Your body exhibits a significantly heightened susceptibility to alcohol intoxication.
-    As a result, alcohol has a more significant effect on your cognitive functions.
-    Note: This pertrains solely to the [color = синий]визуальные эффекты[/color] интоксикации и не влияют на порог отравления алкоголем.
+    Ваш организм проявляет значительно повышенную восприимчивость к алкогольной интоксикации.
+    В результате алкоголь оказывает более значительное влияние на ваши когнитивные функции.
+    Прим.: Это относится исключительно к [color=blue]визуальным эффектам[/color] интоксикации и не влияют на порог отравления алкоголем.
 
 trait-name-N14PartyAnimal = Тусовочное животное
 trait-description-N14PartyAnimal = 
-    Your body has developed an exceptionally high level of alcohol tolerance, leaving the very beverages you consume intimidated.
-    As a result, the effects of alcohol on your cognitive functions are considerably less noticeable.
-    Note: This pertrains solely to the [color = синий]визуальные эффекты[/color] интоксикации и не влияют на порог отравления алкоголем.
+    Ваш организм выработал исключительно высокий уровень толерантности к алкоголю, поэтому вы не боитесь тех напитков, которые употребляете.
+    В результате воздействие алкоголя на ваши когнитивные функции значительно менее заметно.
+    Прим.: Это относится исключительно к [color=blue]визуальным эффектам[/color] интоксикации и не влияют на порог отравления алкоголем.
 
 trait-name-N14ShortArms = Короткие руки
 trait-description-N14ShortArms = 
-    Your arms are shorter than they should be. Your [color = желтый]Дальность ближнего боя[/color] составляет [color=red], уменьшена на 10%[/color].
+    Ваши руки короче, чем должны быть. Ваша [color=yellow]дальность ближнего боя[/color] теперь [color=red]уменьшена на 10%[/color].
 
 trait-name-N14Blitz = Блиц
 trait-description-N14Blitz = 
-    You are able to move really fast and hand slaps out from far away. Your [color = желтый]Дальность ближнего боя[/color] увеличена на [color=green] на 15%[/color].
+    Вы способны двигаться очень быстро и наносить удары руками издалека. Ваша [color=yellow]дальность ближнего боя[/color] теперь [color=green]увеличена на 15%[/color].
 
 trait-name-N14ScriptedDeath = Заскриптованная смерть
 trait-description-N14ScriptedDeath = 
-    You always knew you were an extra
-    and that you had to die when they stepped through the gates of Solitude.
-    Your [color = желтый]порог смерти[/color] снижается на [color=red][/color] на [color=red]100 пунктов[/color].
+    Ты всегда знал, что ты посредственность
+    и что тебе придется умереть, когда они пройдут через врата Солитьюда.
+    Ваш [color=yellow]порог смерти[/color] снижается на [color=red][/color] на [color=red]100 пунктов[/color].
 
-trait-name-N14LifeTaker = Похититель жизни
+trait-name-N14LifeTaker = Болезненный
 trait-description-N14LifeTaker = 
-    You were always sickly and easy to knock out. Hopefully this won't cost your life.
-    Your damage [color = желтый] порог критического уровня [/color] [color=red] уменьшен на 10 пунктов[/color].
-    And the damage [color = желтый]tresshold для Смерти[/color] [color=red]уменьшен на 20 пунктов[/color].
+    Вы всегда были болезненным и легко отрубались. Надеюсь, это не будет стоить вам жизни?
+    Ваш [color=yellow]порог критического урона[/color] [color=red]уменьшен на 10 пунктов[/color].
+    И весь урон, необходимый [color=yellow]для смерти[/color] [color=red]уменьшен на 20 пунктов[/color].
 
-trait-name-N14LifeGiver = Податель жизни
+trait-name-N14LifeGiver = Крепыш
 trait-description-N14LifeGiver = 
-    Whether it be through raw grit, willpower, or some sort of augmentation you are more difficult to kill.
-    Your damage [color = желтый] порог критического уровня [/color] [color=green] уменьшен на 5 пунктов[/color].
-    And the damage [color = желтый]tresshold для Смерти[/color] [color=green]уменьшен на 10 пунктов[/color].
+    Будь то благодаря упорству, силе воли или какому-то аугменту, убить вас гораздо труднее.
+    Ваш [color=yellow]порог критического урона[/color] [color=green]увеличен на 5 пунктов[/color].
+    И весь урон, необходимый [color=yellow]для смерти[/color] [color=green]увеличен на 10 пунктов[/color].
 
 trait-name-N14BadReflexes = Плохие рефлексы
 trait-description-N14BadReflexes = 
-    You are pretty slow when it comes to throwing punches.
-    It takes you [color = красный]На 10 % больше[/color] времени на восстановление между ударами в ближнем бою без оружия
+    Вы чертовски медленны, когда дело доходит до ударов.
+    Вам нужно [color=red]на 10% больше[/color] времени на восстановление между ударами в ближнем бою без оружия
 
 trait-name-N14LightningHands = Молниеносные руки
 trait-description-N14LightningHands = 
-    You are just throwing hands and no one can stop this machine!
-    It takes you [color = зеленый]На 10 % меньше[/color] времени на восстановление между ударами в ближнем бою без оружия.
+    Вы просто бьёте кулаками, словно из минигана. Никто не может остановить эту машину!
+    Вам нужно [color=green]на 10% меньше[/color] времени на восстановление между ударами в ближнем бою без оружия.
 
 trait-name-N14Poisoned = Отравленный
 trait-description-N14Poisoned = 
-    A while ago you were poisoned by something or someone and it still didn't clear from your system.
-    You are constantly taking [color = красный]Урон ядом[/color], делающий вас зависимым от противоядия.
+    Некоторое время назад вы были отравлены чем-то или кем-то, и это все еще не вывелось из вашего организма.
+    Вы периодически получаете [color=red]урон ядом[/color], делающий вас зависимым от противоядия.
 
 trait-name-N14UnnaturalReg = Неестественная регенерация
 trait-description-N14UnnaturalReg = 
-    For some reason your body heals a lot faster than it normally should.
-    You just keep healing damage, not really fast but it save you from wasting meds,
-    or even bring you out of Critical state.
+    По какой-то причине ваше тело выздоравливает намного быстрее, чем обычно.
+    Вы просто продолжаете залечивать повреждения, не очень быстро, но это избавляет вас от ненужной траты лекарств
+    или даже выводит из критического состояния.
 
 trait-name-N14WorldChampion = Чемпион мира
 trait-description-N14WorldChampion = 
-    You could've been world champion with those punches and kicks, or maybe you were a champion.
-    You gain a knockback effect to your unarmed melee punches.
+    Вы могли бы стать чемпионом мира с такими ударами руками и ногами, а может, вы и были чемпионом.
+    Вы получаете эффект нокдауна при нанесении ударов в ближнем бою без оружия.
 
 trait-name-N14SittingDuck = Сидящая утка
 trait-description-N14SittingDuck = 
-    You are significantly slower than others. (You gain a [color = красный]10% дебафф скорости[/color].)
+    Вы куда медленнее прочих. (Вы получаете [color=red]10% дебафф скорости[/color].)
 
 trait-name-N14MovingAsset = Перемещение актива
 trait-description-N14MovingAsset = 
-    You are significantly faster than others. (You gain a [color = зеленый]5% усиление скорости[/color].)
+    Вы куда быстрее прочих. (Вы получаете [color=green]5% усиление скорости[/color].)
 
-trait-name-N14StiffJoints = Жесткие суставы
+trait-name-N14StiffJoints = Жёсткие суставы
 trait-description-N14StiffJoints = 
-    You are not the most agile person. It takes you [color = зеленый]на 25 % больше[/color] времени, чтобы перелезть через предметы или встать после того, как поскользнулся.
+    Вы не самый ловкий человек. Вам нужно [color=red]на 25% больше[/color] времени, чтобы перелезть через предметы или встать после того, как поскользнулись.
 
 trait-name-N14DeskNinja = Настольный ниндзя
 trait-description-N14DeskNinja = 
-    You are comically agile. It takes you [color = зеленый]на 50 % меньше[/color] времени, чтобы перелезть через предметы или встать после того, как поскользнулся.
+    Вы комически ловки. Вам нужно [color=green]на 50% меньше[/color] времени, чтобы перелезть через предметы или встать после того, как поскользнулись.
 
 trait-name-N14SilentTakedown = Тихий тейкдаун
 trait-description-N14SilentTakedown = 
-    You were taught how to take down knock people out silently. But you're not that good at it. At least you know where to hit.
-    Your unarmed melee attacks [color = зеленый]нанесите 8 [color=yellow]Урона выносливости[/color] в качестве дополнительного [color=green]бонуса[/color].
+    Тебя учили, как бесшумно вырубать людей. Но ты не настолько хорош в этом. По крайней мере, ты знаешь, куда бить.
+    Ваши атаки без оружия [color=green]наносят [color=yellow]8 урона выносливости[/color] в качестве дополнительного [color=green]бонуса[/color].
 
 trait-name-N14GammaShield = Гамма-щит
 trait-description-N14GammaShield = 
-    Through meditation you were able to channel Atom's radiation to protect you from harm.
-    Significant increase in your overall damage resistances.
+    С помощью медитации вы смогли направить излучение Атома в нужное русло, чтобы защитить себя от вреда.
+    Значительно повысилась ваша общая устойчивость к повреждениям.
 
 trait-name-N14HandyTools = Удобные инструменты
 trait-description-N14HandyTools = 
-    You always carry a set of tools with you, because they are part of you.
-    You are able to force open doors, even without a crowbar.
+    Вы всегда носите с собой набор инструментов, потому что они являются частью вас самих.
+    Вы можете взламывать двери даже без лома.
 
 trait-name-N14DermalArmorWaster = Кожная броня
 trait-description-N14DermalArmorWaster = 
-    You have a series of armour plates & lattice implanted under your skin.
-    This grants you bonuses against physical damage types.
+    У вас под кожей имплантирован ряд бронированных пластин и решеток.
+    Это дает вам бонусы к различным видам физического урона.
 
 trait-name-N14DermalArmor = Кожная броня
 trait-description-N14DermalArmor = 
-    You have a series of armour plates & lattice implanted under your skin.
-    This grants you bonuses against physical damage types.
-    (Thanks to your faction's technological advancements this came at a discount.)
+    У вас под кожей имплантирован ряд бронированных пластин и решеток.
+    Это дает вам бонусы к различным видам физического урона.
+    (Благодаря технологическим достижениям вашей фракции это было сделано со скидкой).
 
 trait-name-N14PhoenixArmor = Броня Феникса
 trait-description-N14PhoenixArmor = 
-    Because the Brotherhood chapter captured Vault 0 you have access to many advanced technologies.
-    Among them is this set of energy dispersing subdermal lattice, which increases your resistance towards energy- and heat-based weapons.
+    Поскольку орден Братства захватил Убежище 0, у вас есть доступ ко многим передовым технологиям.
+    Среди них - набор подкожных решеток, рассеивающих энергию, которые повышают вашу сопротивляемость энергетическому и тепловому оружию.
 
 trait-name-N14ExtremeAugKnight = Экстремальные улучшения
 trait-description-N14ExtremeAugKnight = 
-    You were heavily modified for your designated purpose within your chapter.
-    You are able to pry doors open with your bare hands and punch harder.
-    On top of that you are able to communicate via an encoded language.
+    Вы были сильно модифицированы в соответствии с вашими целями в вашем ордене.
+    Вы можете открывать двери голыми руками и бить сильнее.
+    Кроме того, вы можете общаться с помощью закодированного языка.
 
 trait-name-N14ExtremeAugScribe = Экстремальные улучшения
 trait-description-N14ExtremeAugScribe = 
-    You were heavily modified for your designated purpose within your chapter.
-    Your eyes cannot be blinded and your body is full of equipment to make surgeries performed by you faster.
-    On top of that you are able to communicate via an encoded language.
+    Вы были сильно модифицированы в соответствии с вашими целями в вашем ордене.
+    Ваши глаза не могут быть ослеплены, а ваше тело оснащено всем необходимым для ускорения операций.
+    Кроме того, вы можете общаться с помощью закодированного языка.
 
 trait-name-N14ExtremeAugPaladin = Экстремальные улучшения
 trait-description-N14ExtremeAugPaladin = 
-    You were heavily modified for your designated purpose within your chapter.
-    You are immune to being blinded and your punches are heavy and more difficult to recover from.
-    On top of that you are able to communicate via an encoded language.
+    Вы были сильно модифицированы для достижения определённых целей в вашем ордене.
+    Вы невосприимчивы к ослеплению, а ваши удары тяжелы, и от них труднее оправиться.
+    Кроме того, вы можете общаться с помощью закодированного языка.
 
 trait-name-N14Pickpocket = Карманник
 trait-description-N14Pickpocket = 
-    You are really good at taking people's things without consent. You steal from them faster and there is a chance it doesn't even get noticed.
+    У вас действительно хорошо получается забирать чужие вещи без согласия. Вы крадете у людей быстрее, и есть шанс, что этого даже не заметят.
 
-trait-name-N14Muted = Без звука
+trait-name-N14Muted = Немой
 trait-description-N14Muted = 
-    Either due to to an abnormality in your body development, or due to some body augmentation, you are unable to utilize spoken language.
+    Либо из-за аномалий в развитии вашего организма, либо из-за некоторого увеличения тела вы не можете использовать разговорную речь.
 
 trait-name-N14Blindness = Слепота
 trait-description-N14Blindness = 
-    You are legally blind, and can't see clearly past a few meters in front of you.
+    По закону вы слепы и не можете ясно видеть дальше, чем в нескольких метрах перед собой.
 
 trait-name-N14Nearsighted = Близорукий
 trait-description-N14Nearsighted = 
-    You require glasses to see properly. They might be difficult to get these days.
+    Чтобы нормально видеть, вам нужны очки. В наши дни их, возможно, трудно достать.
 
 trait-name-N14Photophobia = Светобоязнь
 trait-description-N14Photophobia = 
-    Your eyes are extremely sensitive to bright lights.
-    As a result, you may be blinded for a greater duration than others when exposed to sudden flashes of light.
-    Your eyes are also more likely to be injured by flashes.
+    Ваши глаза чрезвычайно чувствительны к яркому свету.
+    В результате вы можете ослепнуть на более длительный срок, чем другие люди, подвергаясь воздействию внезапных вспышек света.
+    Кроме того, ваши глаза с большей вероятностью могут пострадать от вспышек.
 
-trait-name-N14GooglyEyes = Гугли Глаза
+trait-name-N14GooglyEyes = Выпуклые глаза
 trait-description-N14GooglyEyes = 
-    Your eyes were replaced with cybernetics that are less likely to be blinded by sudden flashes.
+    Ваши глаза были заменены на кибернетические, которые с меньшей вероятностью будут ослеплены внезапными вспышками.
 
-trait-name-N14PetDogNCRK9Medical = НКР Медикал К9
+trait-name-N14PetDogNCRK9Medical = Медицинский К9 НКР
 trait-description-N14PetDogNCRK9Medical = 
-    You (might) have an NCRA trained medical dog companion assigned to you.
+    К вам (возможно) будет прикреплён обученный НКР медицинский пес-компаньон.
 
 # Misfits Add
 trait-name-N14PowerArmorTraining = Обучение силовой броне
 trait-description-N14PowerArmorTraining = 
-    You have received formal training in the operation of power armor suits.
-    Without this training, the weight distribution, servo-assisted limbs, and integrated systems
-    of power armor are too complex to operate safely. [color = желтый]Необходим для ношения любой силовой брони.[/color]
+    Вы прошли формальную подготовку по работе с костюмами силовой брони.
+    Без этой подготовки распределение веса, сервоприводы конечностей и интегрированные системы силовой брони
+    будут слишком сложными для безопасной эксплуатации. [color=yellow]Необходим для ношения любой силовой брони.[/color]

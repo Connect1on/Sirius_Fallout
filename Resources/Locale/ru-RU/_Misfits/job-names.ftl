@@ -1,5 +1,5 @@
 # #Misfits Add - NCR Heavy Trooper job locale.
-job-name-ncr-heavy-trooper = Тяжелый солдат НКР
+job-name-ncr-heavy-trooper = Тяжёлый солдат НКР
 job-description-ncr-heavy-trooper = Вы — ходячая артиллерия НКР. Ваша задача, облаченная в спасенный костюм Т-45 и вооруженная ручным пулеметом, проста: удерживать оборону и вести огонь до тех пор, пока ничего не останется.
 
 # #Misfits Add - NCR role rehaul: new role-based job locale strings.
@@ -20,7 +20,7 @@ job-description-ncr-weapon-specialist = Вы являетесь квалифиц
 
 # #Misfits Add - Enclave job locale (expanded 8-role hierarchy). Reformer is admin-only apex role.
 job-name-enclave-reformer = Реформатор
-job-description-enclave-reformer = Вы — высший авторитет Анклава на поле боя, его реформатор. Формируйте доктрину ячейки, судите ее членов и определяйте ее будущее. Подотчетен только Иден.
+job-description-enclave-reformer = Вы — высший авторитет Анклава на поле боя, его реформатор. Формируйте доктрину ячейки, судите её членов и определяйте её будущее. Подотчётен только Президенту.
 job-name-enclave-commander = Командир Анклава
 job-description-enclave-commander = Руководите ячейкой Анклава с абсолютной властью, координируйте военную и научную отрасли, а также обеспечивайте оперативную безопасность.
 job-name-enclave-senior-officer = Старший офицер Анклава
@@ -31,12 +31,12 @@ job-name-enclave-nco = Сержант Анклава
 job-description-enclave-nco = Ваша задача - поддерживать дисциплину, обучать личный состав, обеспечивать тактическую готовность на местах.
 job-name-enclave-enlisted = Рядовой Анклава
 job-description-enclave-enlisted = Станьте передовым солдатом Анклава, выполняйте приказы и миссии.
-job-name-enclave-head-scientist = Старший учёный анклава
+job-name-enclave-head-scientist = Директор исследований Анклава
 job-description-enclave-head-scientist = Руководит исследовательскими программами Анклава, наблюдает за младшими учёными и консультирует командование по техническим вопросам.
 job-name-enclave-scientist = Учёный Анклава
 job-description-enclave-scientist = Проводите полевые исследования, обслуживайте современное оборудование и поддерживайте научную миссию ячейки.
-job-name-enclave-junior-scientist = Младший учёный Анклава
-job-description-enclave-junior-scientist = Помогайте старшим ученым, изучайте протоколы Анклава и вносите вклад в текущие исследования. # Названия и описания должностей в области синтетических технологий (для Misfits)
+job-name-enclave-junior-scientist = Лаборант Анклава
+job-description-enclave-junior-scientist = Помогайте старшим ученым, изучайте протоколы Анклава и вносите вклад в текущие исследования.
 
 # Synthetics
 # #Misfits Add - Chief Ranger: admin-only Rangers leadership role.
@@ -56,52 +56,60 @@ job-description-synthetic-protectron = Вы — охранный и служеб
 job-name-synthetic-assaultron = Штурмотрон
 job-description-synthetic-assaultron = Вы — боевой робот RobCo Industries Assaultron, созданный для скорости и разрушения. Ваши лазерные системы и возможности ближнего боя делают вас грозной силой. Выбирайте свою преданность с умом.
 job-name-synthetic-sentrybot = Сторожевой бот
-job-description-synthetic-sentrybot = Вы — довоенный военный бот-сторожевой робот — ходячая оружейная платформа, ощетинившаяся вооружением. В вашем массивном бронированном шасси находится миниган или лазер Гатлинга, а также ракетная установка. То, что осталось от вашей программы, требует уничтожения.
+job-description-synthetic-sentrybot = Вы — довоенный сторожевой бот — ходячая оружейная платформа, ощетинившаяся вооружением. В вашем массивном бронированном шасси находится миниган или лазер Гатлинга, а также ракетная установка. То, что осталось от вашей программы, требует уничтожения.
 job-name-synthetic-robobrain = Робомозг
-job-description-synthetic-robobrain = Вы — довоенный военный Робомозг, кибернетическая конструкция, вмещающая живой мозг в роботизированное шасси. Медленнее, но универсальнее, с медицинскими и служебными возможностями — или со встроенным лазером, если боевые действия — ваше призвание.
+job-description-synthetic-robobrain = Вы — довоенный Робомозг, кибернетическая конструкция, вмещающая живой мозг в роботизированное шасси. Медленнее, но универсальнее, с медицинскими и служебными возможностями — или со встроенным лазером, если боевые действия — ваше призвание.
 
 # Super Mutant
 job-name-supermutant = Супермутант
-job-description-supermutant = Вы — огромный гуманоид с мутацией FEV, возвышающийся над обычными людьми. С вашей огромной силой и выносливостью может сравниться только ваш пониженный интеллект. Найдите свое место в пустоши — с помощью силы, преданности или удивительного сострадания.
+job-description-supermutant = Вы — огромный гуманоид с мутацией ВРЭ, возвышающийся над обычными людьми. С вашей огромной силой и выносливостью может сравниться только ваш пониженный интеллект. Найдите своё место в пустоши — с помощью силы, преданности или удивительного сострадания.
 # #Misfits Add - separate Nightkin whitelist entry under FEV Mutants.
 job-name-nightkin = Найткин
 job-description-nightkin = Вы — Найткин, сине-фиолетовый мутант ВРЭ, измененный в результате длительного воздействия Стелс Боя. Сильный, израненный и напуганный, вы путешествуете по пустошам отдельно от обычных супермутантов.
 # #Misfits Tweak - renamed to reflect Legion alignment
-job-name-supermutant-gladiator = Супермутантный гладиатор Легиона
+job-name-supermutant-gladiator = Супермутант-гладиатор Легиона
 job-description-supermutant-gladiator = Вы — супермутант, созданный на арене, сражающийся под знаменем Цезаря. Ваша сила и жестокость делают вас ценным оружием Легиона — живым символом завоеваний.
 
 # #Misfits Add - Supermutant Ranger and Trooper job locale strings (generic variants).
-job-name-supermutant-ranger = Супермутант Рейнджер
+job-name-supermutant-ranger = Супермутант-рейнджер
 job-description-supermutant-ranger = Вы супермутант, который научился терпению и хитрости наряду с грубой силой. Ваша броня рейнджера отмечает вас как человека, который занимается разведкой, устраивает засады и выживает там, где другие этого не делают.
 job-name-supermutant-trooper = Супермутант-солдат
 job-description-supermutant-trooper = Вы — молот — супермутант-фронтовик, созданный для прямого нападения. Ваша солдатская броня способна выдержать наказание, способное разорвать человека, и вы намерены извлечь из этого максимальную пользу.
 
 # #Misfits Add - NCR-aligned supermutant variants for the FEVMutants whitelist department.
-job-name-supermutant-ncr-ranger = Супермутант Рейнджер НКР
+job-name-supermutant-ncr-ranger = Супермутант-рейнджер НКР
 job-description-supermutant-ncr-ranger = Вы — супермутант, заслуживший место среди рейнджеров НКР — маловероятного союза, выкованного кровью и взаимной необходимостью. Ваша броня рейнджера и значок НКР открывают двери, которые в противном случае разрушили бы ваши кулаки.
-job-name-supermutant-ncr-trooper = Супермутант, солдат НКР
+job-name-supermutant-ncr-trooper = Супермутант-солдат НКР
 job-description-supermutant-ncr-trooper = Вы супермутант, который сражается под началом медведя НКР. Большинство солдат считают вас уродом, но вы доказываете свою ценность в каждом сражении. Ваша солдатская броня и жетон — единственные удостоверения, которые вам нужны.
 
 # #Misfits Add - NCR-aligned supermutant variants for the FEVMutants whitelist department.
-job-name-supermutant-tribal = Супермутантное племя
+job-name-supermutant-tribal = Супермутант племени
 job-description-supermutant-tribal = Вы супермутант, который нашел дом в местном племени, и вы будете защищать его всем сердцем.
+
+# #Misfits Add - FOTA-aligned supermutant variants for the FEVMutants whitelist department.
+job-name-supermutant-follower = Супермутант-врач Последователей
+job-description-supermutant-follower = Супермутант, наученный каким-то чудом премудростям медицины.
+
+# #Misfits Add - Enclave-aligned supermutant variants for the FEVMutants whitelist department.
+job-name-supermutant-enclave = Супермутант Анклава
+job-description-supermutant-enclave = Супермутант, служащий Соединённым Штатам. Служба гарантирует гражданство!
 
 # #Misfits Add (Phase G) - C-27 Humanoid Robot job locale.
 job-name-c27 = Робот-гуманоид C-27
 job-description-c27 = Вы — человекоподобный робот C-27 — довоенный корпус мастерской General Atomics, переоборудованный для службы в Пустошах. Медленный, но прочный, невосприимчивый к вспышкам и разбитому стеклу и самовосстанавливающийся. Выбирайте заводскую краску, обслуживайте своих мастеров или прокладывайте свой собственный путь через пустоши.
 
 # #Misfits Add - C-27 faction-aligned variants (separate whitelist entries).
-job-name-c27-ncr = Робот-гуманоид C-27 НКР
+job-name-c27-ncr = Гуманоидный робот C-27 НКР
 job-description-c27-ncr = Вы — робот-гуманоид C-27, призванный в Новую Калифорнийскую Республику, перекрашенный в ливрею НКР и получивший армейскую гарнитуру, жетоны и комплект легкой брони по образцу НКР. Медленный, но прочный, невосприимчивый к вспышкам и разбитому стеклу и самовосстанавливающийся. Служить Республике.
-job-name-c27-bos = Гуманоидный робот Братства C-27
-job-description-c27-bos = Вы — робот-гуманоид C-27, возвращенный Братству Стали — перекрашенный в ливрею Братства и получивший гарнитуру Братства, голотег «Посвященный» и комплект легкой брони по образцу Братства. Медленный, но прочный, невосприимчивый к вспышкам и разбитому стеклу и самовосстанавливающийся. Служите Кодексу.
+job-name-c27-bos = Гуманоидный робот C-27 Братства
+job-description-c27-bos = Вы — робот-гуманоид C-27, возвращённый Братству Стали — перекрашенный в ливрею Братства и получивший гарнитуру Братства, голотег «Посвящённый» и комплект лёгкой брони по образцу Братства. Медленный, но прочный, невосприимчивый к вспышкам и разбитому стеклу и самовосстанавливающийся. Служите Кодексу.
 
 # #Misfits Add - Followers of the Apocalypse ranked job locale.
 job-name-follower-head = Глава последователей
 job-description-follower-head = Вы возглавляете эту группу Последователей. Больные, любопытные и отчаявшиеся обращаются к вам за указаниями. Подавайте пример, защищайте своих людей и сохраняйте миссию.
 job-name-follower-doctor = Врач последователей
 job-description-follower-doctor = Вы обученный врач-Последователь. Зашивайте раненых, изучайте пустоши и доставляйте лекарства туда, куда НКР и Братство не осмеливаются заходить.
-job-name-follower-volunteer = Волонтёры последователей
+job-name-follower-volunteer = Волонтёр последователей
 job-description-follower-volunteer = Вы новичок в Последователях. Вы верите, что знания и сострадание могут пережить пули и бомбы. Докажите это — учитесь у тех, кто выше вас, и помогите всем, кто в этом нуждается.
 
 # #Misfits Add — Western BoS chapter command-tier jobs (Elder + Head Scribe).
@@ -113,7 +121,7 @@ job-name-bos-west-scribe = Главный писарь Братства
 job-description-bos-west-scribe = Руководит писцами, контролирует техническую доктрину и охраняет знания отделения.
 
 # #Misfits Add — New consolidated Brotherhood of Steel jobs.
-job-name-bos-headknight = Главный рыцарь Братства
+job-name-bos-headknight = Рыцарь-капитан Братства
 job-description-bos-headknight = Контролируйте рыцарские ордена, логистику и боевую готовность Братства.
 job-name-bos-paladin = Паладин Братства
 job-description-bos-paladin = Сражайтесь в роли передовой тяжелой пехоты Братства и защищайте интересы ордена.

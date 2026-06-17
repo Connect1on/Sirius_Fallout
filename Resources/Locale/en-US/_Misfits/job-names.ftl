@@ -86,6 +86,14 @@ job-description-supermutant-ncr-trooper = You are a supermutant who fights under
 job-name-supermutant-tribal = Supermutant Tribal
 job-description-supermutant-tribal = You are a supermutant that found a home within the local tribe. You will protect them with all your heart.
 
+# #Misfits Add - FOTA-aligned supermutant variants for the FEVMutants whitelist department.
+job-name-supermutant-follower = Supermutant Follower Doctor
+job-description-supermutant-follower = A SuperMutant trained in the ways of medicine.
+
+# #Misfits Add - Enclave-aligned supermutant variants for the FEVMutants whitelist department.
+job-name-supermutant-enclave = Enclave Supermutant
+job-description-supermutant-enclave = A Supermutant working for the United States. Service Guarantees Citizenship!
+
 # #Misfits Add (Phase G) - C-27 Humanoid Robot job locale.
 job-name-c27 = C-27 Humanoid Robot
 job-description-c27 = You are a C-27 humanoid robot — a pre-war General Atomics workshop frame retrofitted for Wasteland service. Slow but durable, immune to flash and broken glass, and self-repairing. Choose your factory paint, serve your masters, or carve your own path through the wastes.

@@ -17,13 +17,16 @@
     - !type:CharacterSpeciesRequirement
       species:
       - Human
-      - Ghoul
     - !type:CharacterDepartmentTimeRequirement # #Misfits Tweak - T6 faction timelock (20h Enclave)
       department: Enclave
       min: 72000 # 20 hours
     - !type:CharacterPlaytimeRequirement
       tracker: EnclaveScientist
       min: 36000 # 10 hours
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14Muted
   startingGear: EnclaveHeadScientistGear
   icon: "JobIconEnclaveHeadScientist"
   supervisors: job-supervisors-enclave-head-scientist
@@ -50,7 +53,7 @@
     belt: ClothingBeltMilitary
     ears: N14ClothingHeadsetEnclave
     pocket2: EnclaveScientistloadoutkits
-    id: N14IDEnclaveNoncombat
+    id: SiriusIDEnclaveHeadScientist
   satchel: N14ClothingBackpackSatchelMilitaryFilled
   storage:
     back:

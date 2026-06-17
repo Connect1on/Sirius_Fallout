@@ -2,7 +2,7 @@
 - type: radioChannel
   id: WastelandGlobal
   name: chat-radio-wasteland-global
-  keycode: 'w'
+  keycode: 'п'
   frequency: 1500
   color: "#d8b25c"
   longRange: true
@@ -10,7 +10,7 @@
 - type: radioChannel
   id: VaultCommon
   name: chat-radio-vault-common
-  keycode: 'v' # Corvax-Change
+  keycode: 'у' # Corvax-Change
   frequency: 1349
   color: "#3E7BD1"
 
@@ -47,7 +47,7 @@
 - type: radioChannel
   id: CaravanCompany
   name: chat-radio-caravan
-  keycode: 'c'
+  keycode: 'к'
   frequency: 1347
   color: "#b88646"
 
@@ -68,21 +68,21 @@
 - type: radioChannel
   id: BrotherhoodOfSteel
   name: chat-radio-bos
-  keycode: 'b'  # #Misfits Change — was 'm', now :b
+  keycode: 'б'  # #Misfits Change — was 'm', now :b
   frequency: 1213
   color: "#3B72BF"
 
 - type: radioChannel
   id: Enclave
   name: chat-radio-enclave
-  keycode: 'e'
+  keycode: 'а'
   frequency: 1600
   color: "#c6cf00"
 
 - type: radioChannel
   id: NCR
   name: chat-radio-ncr
-  keycode: 'n' # Corvax-Change
+  keycode: 'н' # Corvax-Change
   frequency: 1546
   color: "#d77715"
 
@@ -90,14 +90,14 @@
 - type: radioChannel
   id: Legion
   name: chat-radio-legion
-  keycode: 'l'
+  keycode: 'л'
   frequency: 1650
   color: "#8b0000"
 
 - type: radioChannel
   id: PBS
   name: chat-radio-pbs
-  keycode: 'o'
+  keycode: 'в'
   frequency: 1667
   color: "#c44508"
   longRange: true
@@ -107,7 +107,7 @@
 - type: radioChannel
   id: FollowersOfApocalypse
   name: chat-radio-followers
-  keycode: 'f'
+  keycode: 'ф'
   frequency: 1700
   color: "#5cbf82"
   longRange: true

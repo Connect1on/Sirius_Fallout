@@ -850,11 +850,30 @@
   components:
   - type: Lathe
     staticRecipes:
-    - HolotagMidwestScribe
-    - HolotagMidwestSquire
-    - HolotagMidwestKnight
-    - HolotagMidwestPaladin
+    - HolotagBoSInitiate
+    - HolotagBoSSquire
+    - HolotagBoSScribe
+    - HolotagBoSKnight
+    - HolotagBoSPaladin
+    - HolotagBoSSeniorScribe
+    - HolotagBoSSeniorKnight
+    - HolotagBoSSeniorPaladin
     #- NCClothingBandageBoS # Misfits Fix: recipe prototype is commented out # Corvax-Change
+
+- type: entity
+  parent: N14WorkbenchIDPrinter
+  id: SirusWorkbenchIDPrinterEnclave
+  description: An ID printer for printing Enclave holotags.
+  suffix: ENC
+  components:
+  - type: Lathe
+    staticRecipes:
+    - HolotagEnclaveSeniorOfficer
+    - HolotagEnclaveJuniorOfficer
+    - HolotagEnclaveNCO
+    - HolotagEnclaveEnlisted
+    - HolotagEnclaveScientist
+    - HolotagEnclaveJuniorScientist
 
 # Misfits Fix: N14WorkbenchIDPrinterBrotherhoodWashington commented out — all WBOS holotag recipe prototypes are commented out
 #- type: entity

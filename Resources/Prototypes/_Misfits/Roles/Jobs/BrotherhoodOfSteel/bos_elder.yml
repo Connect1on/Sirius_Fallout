@@ -15,6 +15,13 @@
     - !type:CharacterDepartmentTimeRequirement
       department: BrotherhoodOfSteel
       min: 252000 # 70 hours
+    - !type:CharacterSexRequirement
+      sex: Male
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14Muted
+        - N14Pacifist
   startingGear: BoSWestElderCommanderGear
   alwaysUseSpawner: true
   icon: "JobIconBosMCommander"

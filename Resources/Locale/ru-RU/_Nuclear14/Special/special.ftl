@@ -15,5 +15,5 @@ clothing-agility-increase-equal-examine = [color=green]увеличивает[/c
 clothing-agility-decrease-equal-examine = [color=red]уменьшается[/color] [color=yellow]Ловкость[/color] на [color=red]{ $agility }[/color]
 clothing-luck-increase-equal-examine = [color=green]увеличивает[/color] [color=yellow]Luck[/color] на [color=green]{ $luck }[/color]
 clothing-luck-decrease-equal-examine = [color=red]уменьшается[/color] [color=yellow]Luck[/color] на [color=red]{ $luck }[/color]
-player-component-not-enough-strength-weild = Чтобы носить это, вам нужно иметь { $number } [color=yellow]Strength[/color].
+player-component-not-enough-strength-weild = Чтобы носить это, вам нужно иметь { $number } [color=yellow]Силы[/color].
 special-lucky-evasion = уклоняется от пули

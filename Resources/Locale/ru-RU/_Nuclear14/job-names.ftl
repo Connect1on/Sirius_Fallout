@@ -1,11 +1,11 @@
 # Brotherhood of Steel
-job-name-bos-mid-paladin-comm = Главный паладин Братства
+job-name-bos-mid-paladin-comm = Паладин-командор Братства
 job-description-bos-mid-paladin-comm = Возглавьте боевое крыло отделения Братства и руководите полевыми операциями.
 job-name-bos-mid-paladin = Старший паладин Братства
 job-description-bos-mid-paladin = Служите ветераном полевого командира и командиром тяжелой пехоты Братства.
-job-name-bos-mid-knight = Старший рыцарь Братства
+job-name-bos-mid-knight = Рыцарь-сержант Братства
 job-description-bos-mid-knight = Возглавьте патрули Братства, поддерживайте дисциплину и защищайте восстановленные технологии.
-job-name-bos-mid-scribe = Старший писарь Братства
+job-name-bos-mid-scribe = Проктор Братства
 job-description-bos-mid-scribe = Координируйте исследования, каталогизируйте технологии и консультируйте командный состав отделения.
 job-name-bos-mid-squire = Оруженосец Братства
 job-description-bos-mid-squire = Тренируйтесь под руководством ветеранов Братства и докажите, что вы готовы к более высоким обязанностям.
@@ -28,7 +28,7 @@ job-name-caravan-leader = Лидер Каравана
 job-description-caravan-leader = Координируйте деятельность караванной компании в этом районе и заключайте торговые сделки с местными жителями.
 job-name-caravan-trader = Торговец Каравана
 job-description-caravan-trader = Проводите торговые миссии и путешествуйте по караванным маршрутам, чтобы приносить прибыль компании.
-job-name-caravan-guard = Стражник Каравана
+job-name-caravan-guard = Охранник Каравана
 job-description-caravan-guard = Защитите торговцев караванной компании, их скот и инвентарь.
 
 # NCR
@@ -122,7 +122,7 @@ job-name-waste-musician = Музыкант
 job-description-waste-musician = Эта роль будет удалена из игры, пожалуйста, установите для всех своих персонажей значение «НИКОГДА»!
 job-name-scavenger = Мусорщик
 job-description-scavenger = Эта роль будет удалена из игры, пожалуйста, установите для всех своих персонажей значение «НИКОГДА»!
-job-name-wastelander = Выходец из пустоши
+job-name-wastelander = Выходец с пустоши
 job-description-wastelander = Выживайте в пустоши и прокладывайте свой собственный путь. В одиночку там тяжело, подумай о поиске других.
 
 # Town

@@ -139,6 +139,76 @@
   - type: Wires
     layoutId: HighSec
 
+#MARK: Enclave
+- type: entity
+  parent: N14DoorAirlockTall
+  id: N14DoorBunkerLockedEnclaveTall
+  suffix: Enclave, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEnclave ]
+  - type: Wires
+    layoutId: HighSec
+
+- type: entity
+  parent: N14DoorBunkerGlass # needs replaced
+  id: N14DoorBunkerGlassLockedEnclaveTall
+  suffix: Enclave, Locked
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEnclave ]
+  - type: Wires
+    layoutId: HighSec
+
+- type: entity
+  parent: N14DoorAirlockTall
+  id: N14DoorBunkerLockedEnclaveOfficerTall
+  suffix: Enclave, Locked, Officer
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEnclaveOfficer ]
+  - type: Wires
+    layoutId: HighSec
+
+- type: entity
+  parent: N14DoorBunkerGlass # needs replaced
+  id: N14DoorBunkerGlassLockedEnclaveOfficerTall
+  suffix: Enclave, Locked, Officer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEnclaveOfficer ]
+  - type: Wires
+    layoutId: HighSec
+
+- type: entity
+  parent: N14DoorAirlockTall
+  id: N14DoorBunkerLockedEnclaveCommanderTall
+  suffix: Enclave, Locked, Commander
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEnclaveCommander ]
+  - type: Wires
+    layoutId: HighSec
+
+- type: entity
+  parent: N14DoorBunkerGlass # needs replaced
+  id: N14DoorBunkerGlassLockedEnclaveCommanderTall
+  suffix: Enclave, Locked, Commander
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsEnclaveCommander ]
+  - type: Wires
+    layoutId: HighSec
+
 #Misfits Change /Comment-out/: Washington BoS tall doors removed — will create new prototypes.
 ##MARK: BoS Washington
 #- type: entity

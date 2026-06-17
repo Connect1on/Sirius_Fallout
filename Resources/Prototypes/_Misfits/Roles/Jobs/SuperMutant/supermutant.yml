@@ -400,8 +400,8 @@
 - type: job
   id: SuperMutantFollowerDoctor
   jobWhitelistBypassesRoleTimers: true
-  name: Supermutant Follower Doctor
-  description: A SuperMutant trained in the ways of medicine.
+  name: job-name-supermutant-follower
+  description: job-description-supermutant-follower
   playTimeTracker: SuperMutantFollowerDoctor
   icon: JobIconPassenger
   supervisors: job-supervisors-follower-doctor
@@ -454,8 +454,8 @@
 - type: job
   id: SuperMutantEnclave
   jobWhitelistBypassesRoleTimers: true
-  name: Enclave Supermutant
-  description: A Supermutant working for the United States. Service Guarantees Citizenship!
+  name: job-name-supermutant-enclave
+  description: job-description-supermutant-enclave
   playTimeTracker: SuperMutantEnclave
   icon: "JobIconEnclaveEnlisted"
   supervisors: job-supervisors-enclave

@@ -1,16 +1,16 @@
 weather-announcement = Погода меняется.
-weather-ashfall = Эшфол приближается.
-weather-ashfall-light = Эшфол приближается.
+weather-ashfall = Пеплопад приближается.
+weather-ashfall-light = Приближается лёгкий пеплопад.
 weather-ashfall-heavy = Приближается сильный пеплопад.
 weather-default = Погода проясняется.
 weather-fallout = Fallout приближается.
 weather-hail = Град приближается.
 weather-rain = Дождь приближается.
 weather-sandstorm = Песчаная буря приближается.
-weather-sandstorm-heavy = Песчаная буря приближается.
-weather-snowfall-light = Снегопад приближается.
+weather-sandstorm-heavy = Суровая песчаная буря приближается.
+weather-snowfall-light = Лёгкий снегопад приближается.
 weather-snowfall-medium = Снегопад приближается.
-weather-snowfall-heavy = Приближается сильный снегопад.
+weather-snowfall-heavy = Сильный снегопад приближается.
 weather-storm = Шторм приближается.
 
 

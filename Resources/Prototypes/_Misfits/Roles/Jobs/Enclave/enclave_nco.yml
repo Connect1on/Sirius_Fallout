@@ -17,7 +17,6 @@
     - !type:CharacterSpeciesRequirement
       species:
       - Human
-      - Ghoul
     - !type:CharacterDepartmentTimeRequirement # #Misfits Tweak - T5 faction timelock (16h Enclave)
       department: Enclave
       min: 57600 # 16 hours
@@ -36,6 +35,7 @@
       - type: NpcFactionMember
         factions:
           - Enclave
+      - type: PowerArmorProficiency
 
 - type: startingGear
   id: EnclaveNCOGear
@@ -50,7 +50,7 @@
     belt: ClothingBeltMilitary
     ears: N14ClothingHeadsetEnclave
     pocket1: EnclaveSoldierloadoutkits
-    id: N14IDEnclaveTrooper
+    id: SiriusIDEnclaveNCO
   satchel: N14ClothingBackpackSatchelMilitaryFilled
   duffelbag: N14ClothingBackpackDuffelMilitaryFilled
   storage:

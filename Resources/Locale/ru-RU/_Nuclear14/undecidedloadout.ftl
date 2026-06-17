@@ -6,7 +6,7 @@ undecided-loadout-window-description =
 undecided-loadout-window-selected = Выбранные комплекты: ({$selectedCount}/{$maxCount})
 
 undecided-loadout-window-approve-button = Утвердить
-undecided-loadout-button-select = Выбирать [  ]
+undecided-loadout-button-select = Выбрать [  ]
 undecided-loadout-button-deselect = Выберите [X]
 
 # NCRA Cadet Sets

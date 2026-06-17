@@ -1,7 +1,7 @@
 # Names
 BrotherhoodOfSteel = Братство Стали
 department-BrotherhoodOfSteel = Братство Стали
-department-BrotherhoodMidwest = БоС
+department-BrotherhoodMidwest = БС
 #department-BrotherhoodWashington = Washington BoS #Misfits Change /Comment-out/: Washington BoS removed
 department-CaravanCompany = Караванная компания
 NCR = Новая Калифорнийская Республика
@@ -12,12 +12,12 @@ Tribe = Племя Юма
 department-Tribe = Племя Юма
 Vault = Жители Убежища
 department-Vault = Жители Убежища
-department-Wastelander = Странник пустошей
+department-Wastelander = Странники пустошей
 Townsfolk = Горожане
 department-Townsfolk = Горожане
 department-Followers = Последователи Апокалипсиса
 department-Zetan = Зетан
-department-Rangers = НКР Рейнджерс
+department-Rangers = Рейнджеры НКР
 
 # Descriptions
 department-BrotherhoodOfSteel-description = Единое отделение Братства Стали.

@@ -1,0 +1,113 @@
+#MARK: Brotherhood of Steel
+- type: latheRecipe
+  id: HolotagBoSInitiate
+  result: N14IDBrotherhoodOfSteelHolotagInitiate
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagBoSSquire
+  result: N14IDBrotherhoodOfSteelHolotagSquire
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagBoSScribe
+  result: N14IDBrotherhoodOfSteelHolotagScribe
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagBoSKnight
+  result: N14IDBrotherhoodOfSteelHolotagKnight
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagBoSPaladin
+  result: N14IDBrotherhoodOfSteelHolotagPaladin
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagBoSSeniorScribe
+  result: N14IDBrotherhoodOfSteelHolotagSeniorScribe
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagBoSSeniorKnight
+  result: N14IDBrotherhoodOfSteelHolotagSeniorKnight
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagBoSSeniorPaladin
+  result: N14IDBrotherhoodOfSteelHolotagSeniorPaladin
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+#MARK: The Enclave
+- type: latheRecipe
+  id: HolotagEnclaveSeniorOfficer
+  result: SiriusIDEnclaveSeniorOfficer
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveJuniorOfficer
+  result: SiriusIDEnclaveJuniorOfficer
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveNCO
+  result: SiriusIDEnclaveNCO
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveEnlisted
+  result: SiriusIDEnclaveEnlisted
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveScientist
+  result: SiriusIDEnclaveScientist
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: HolotagEnclaveJuniorScientist
+  result: SiriusIDEnclaveJuniorScientist
+  category: N14Identification
+  completetime: 5
+  materials:
+    Steel: 100
