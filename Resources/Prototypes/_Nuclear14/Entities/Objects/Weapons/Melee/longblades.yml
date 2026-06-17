@@ -124,7 +124,7 @@
     attackRate: 0.25
     damage:
       types:
-        Slash: 6
+        Slash: 18
         Piercing: 3
         Structural: 8
     soundHit:
