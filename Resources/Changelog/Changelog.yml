@@ -7328,3 +7328,10 @@ Entries:
   id: 6094
   time: '2026-06-17T21:25:35.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/837
+- author: Squagg
+  changes:
+    - type: Tweak
+      message: Allowed Compliance Officers to use the force war join command.
+  id: 6095
+  time: '2026-06-18T01:27:31.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/841
