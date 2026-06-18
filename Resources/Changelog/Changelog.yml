@@ -7451,3 +7451,12 @@ Entries:
   id: 6100
   time: '2026-06-18T23:45:36.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/845
+- author: Oli
+  changes:
+    - type: Add
+      message: >-
+        Medicus, Blacksmith(forgemaster), and treasurer mantles/apron/cloaks +
+        skirt to loadout menu
+  id: 6101
+  time: '2026-06-18T23:48:58.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/844
