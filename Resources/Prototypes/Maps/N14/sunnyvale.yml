@@ -60,7 +60,7 @@
             #NCRFirstSergeant: [ 1, 1 ]
             #NCRStaffSergeant: [ 1, 1 ] # #Misfits Removed - replaced by NCRHeavyTrooper as T5 specialist slot
             NCRHeavyTrooper: [ 2, 2 ] # #Misfits Add - Heavy Trooper: 2 slots, between Specialist and Sergeant
-            NCRSGT: [ 4, 4 ]
+            NCRNCO: [ 4, 4 ]
             NCRWS: [ 1, 1 ] # #Misfits Tweak - increased: absorbs Engineer (2) + Medic (1) slots
             NCREngineer: [ 3, 3 ] #Misfits Change /Comment-out/: consolidated into Specialist
             NCRDoctor: [ 3, 3 ]
