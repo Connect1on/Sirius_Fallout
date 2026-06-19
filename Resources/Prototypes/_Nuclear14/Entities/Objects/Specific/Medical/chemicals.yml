@@ -79,7 +79,6 @@
     transferAmount: 15
     toggleState: draw
     injectOnly: false
-    doAfter: 1.5
   - type: ExaminableSolution
     solution: injector
   - type: Spillable
@@ -92,6 +91,7 @@
   - type: Tag
     tags:
     - Syringe
+  - type: DoAfter
 
 - type: entity
   parent: N14BaseSyringe
@@ -829,7 +829,6 @@
     sprite: _Nuclear14/Objects/Specific/Medical/ms13_medical.rsi
     state: powder1
   - type: SmellingSalts
-    doAfter: 6
     reviveHeal:
       types:
         Asphyxiation: -40
