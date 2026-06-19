@@ -156,4 +156,24 @@
     Steel: 200
     Wood: 800
 
+#sirius thing
+- type: latheRecipe
+  id: N14ClothingOuterPowerArmorT60Enclave
+  result: N14ClothingOuterPowerArmorT60
+  category: N14Armor
+  completetime: 120
+  requiresBlueprint: true
+  availableFaction:
+  - NCR
+  materials:
+    Steel: 15000
+
+    N14Iron: 60
+
+    Circuitry: 35
+
+    ScrapElectronic: 30
+
+    N14Brass: 25
+
 # Accessories

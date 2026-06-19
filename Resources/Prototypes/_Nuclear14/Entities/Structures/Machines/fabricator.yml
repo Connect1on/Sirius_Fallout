@@ -1,0 +1,78 @@
+- type: entity
+  id: N14FabricatorEnclave
+  parent: [BaseLatheLube, BaseMaterialSiloUtilizer]
+  name: Fabricator Enclave
+  description: Converts raw materials into advanced items.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/protolathe.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+#  - type: Machine
+#    board: ProtolatheMachineCircuitboard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+      - Ingot
+      - Wooden
+      - ClothMade
+      - Gauze
+      - Metal
+      - Scrap
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+    - LargeBeaker
+    - Dropper
+    - ClothingEyesGlassesChemical
+    - N14ClothingOuterPowerArmorT60Enclave
+    - PowerDrill
+    - MiningDrill
+    - Scalpel
+    - Retractor
+    - Cautery
+    - Drill
+    - Saw
+    - Hemostat
+    - Syringe
+    - PillCanister
+    - ChemistryEmptyBottle01
+    - PowerCellMicroreactor
+    - PowerCellHigh
+    - WeaponPistolCHIMP
+    - ClothingMaskWeldingGas
+    - SynthesizerInstrument
+    - SyringeBluespace
+    - WeaponForceGun
+    - WelderExperimental
+    - ClothingEyesNightVisionGoggles
+    - ClothingEyesNightVisionDiagnosticGoggles
+    - ClothingEyesThermalVisionGoggles
+    # Shitmed Change
+    - EnergyScalpel
+    - EnergyCautery
+    - AdvancedRetractor
+  - type: EmagLatheRecipes
+    emagDynamicRecipes:
+    - JawsOfLife
+    - ExplosivePayload
+    - GrenadeBlast
+    - GrenadeEMP
+    - GrenadeFlash
+    - PortableRecharger
+    - WeaponAdvancedLaser
+    - WeaponLaserCannon
+    - WeaponLaserCarbine
+    - WeaponXrayCannon
