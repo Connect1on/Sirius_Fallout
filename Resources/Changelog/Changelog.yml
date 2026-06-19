@@ -7460,3 +7460,12 @@ Entries:
   id: 6101
   time: '2026-06-18T23:48:58.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/844
+- author: RedBookcase
+  changes:
+    - type: Add
+      message: >-
+        Various chem injectors have had new fill sprites added, and various
+        chems have received changes to their appearance and descriptions.
+  id: 6102
+  time: '2026-06-19T00:28:37.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/842
