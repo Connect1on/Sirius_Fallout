@@ -7576,3 +7576,12 @@ Entries:
   id: 6115
   time: '2026-06-20T03:34:17.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/864
+- author: Bradysgaming
+  changes:
+    - type: Add
+      message: Added in ID and headset sprites for the eighties
+    - type: Remove
+      message: Removed the keys for the eighties for now.
+  id: 6116
+  time: '2026-06-20T15:08:55.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/866
