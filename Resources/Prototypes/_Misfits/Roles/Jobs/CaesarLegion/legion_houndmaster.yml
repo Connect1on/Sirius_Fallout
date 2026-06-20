@@ -28,6 +28,8 @@
       - type: NpcFactionMember
         factions:
           - CaesarLegion
+      - type: FollowerCommander
+        innateFollowerCapacity: 3
       - type: ReplacementAccent
         accent: latin
   - !type:AddTraitSpecial
