@@ -48,7 +48,7 @@
     tags:
       - N14MagazineRifle2mmEC
   - type: Sprite
-    sprite: _Nuclear14/Objects/Weapons/Guns/Ammunition/Magazines/2mmEC/2mmRiflemag.rsi
+    sprite: _Nuclear14/Objects/Weapons/Guns/Ammunition/Magazines/2mmEC/2mmriflemag.rsi
     scale: 0.70, 0.70
   - type: BallisticAmmoProvider
     whitelist:

@@ -68,8 +68,11 @@
     damageContainer: Inorganic
     damageModifierSet: LightArmor # Goobstation
   - type: FootstepModifier
-#     footstepSoundCollection:
-#       path: /Audio/Vehicles/Buggy_Move.ogg
+    footstepSoundCollection:
+      path: /Audio/Vehicles/Buggy_Move.ogg
+      params:
+        volume: -15
+        maxDistance: 30
   - type: Destructible
     thresholds:
     - trigger:
@@ -208,12 +211,12 @@
     sprite: _Nuclear14/Objects/Vehicles/MWBoS_HMMWV1.rsi
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
-      state: MWBoS_HMMWV_Metall1
+      state: MWBoS_HMMWV_Metall12
   - type: Mech
     baseState: MWBoS_HMMWV_Metall12
     openState: MWBoS_HMMWV_Metall1
     brokenState: MWBoS_HMMWV_Metall1
-    engineOnState: MWBoS_HMMWV_Metall1
+    engineOnState: MWBoS_HMMWV_Metall12
     mechToPilotDamageMultiplier: 0.5
     airtight: false
     pilotWhitelist:
@@ -223,8 +226,11 @@
       path: /Audio/Items/airhorn.ogg
     mechHornAction: ActionMechHorn
   - type: FootstepModifier
-#     footstepSoundCollection:
-#       path: /Audio/Vehicles/Hum_Move.ogg
+    footstepSoundCollection:
+      path: /Audio/Vehicles/Hum_Move.ogg
+      params:
+        volume: -15
+        maxDistance: 30
 
 - type: entity
   parent: [ BaseCars, SpecialMech ]
@@ -238,7 +244,7 @@
     sprite: _Nuclear14/Objects/Vehicles/MWBoS_HMMWV2.rsi
     layers:
     - map: [ "enum.MechVisualLayers.Base" ]
-      state: MWBoS_HMMWV_Metall1
+      state: MWBoS_HMMWV_Metall22
   - type: Mech
     baseState: MWBoS_HMMWV_Metall22
     openState: MWBoS_HMMWV_Metall2
@@ -253,5 +259,8 @@
       path: /Audio/Items/airhorn.ogg
     mechHornAction: ActionMechHorn
   - type: FootstepModifier
-#     footstepSoundCollection:
-#       path: /Audio/Vehicles/Hum_Move.ogg
+    footstepSoundCollection:
+      path: /Audio/Vehicles/Hum_Move.ogg
+      params:
+        volume: -15
+        maxDistance: 30

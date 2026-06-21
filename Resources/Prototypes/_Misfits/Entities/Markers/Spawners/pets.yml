@@ -1,7 +1,7 @@
 ﻿# Follower pet spawner
 
 - type: entity
-  parent: MisfitsPetSpawnerBase
+  parent: MarkerBase
   id: MisfitsSpawnerRabbitFollowersPet
   name: dr. thumper rabbit pet followers spawner
   components:
@@ -21,7 +21,7 @@
     - MisfitsMobRabbitFollowersPet
 
 - type: entity
-  parent: MisfitsPetSpawnerBase
+  parent: MarkerBase
   id: MisfitsSpawnerMobLizardBoSPet1
   name: timmy bos pet spawner
   components:
@@ -41,7 +41,7 @@
     - MisfitsMobLizardBoSPet1
 
 - type: entity
-  parent: MisfitsPetSpawnerBase
+  parent: MarkerBase
   id: MisfitsSpawnerMobLizardBoSPet2
   name: jimmy bos pet spawner
   components:

@@ -34,8 +34,8 @@
     idleState: icon
     runningState: building
     staticRecipes:
-    - CartridgePistol5
-    - MagazineMinigun5mm
+    - N14CartridgePistol5
+    - N14MagazineMinigun5mm
     - SiriusPlasmaCartridge
     - SiriusPlasmaCartridgeMultiplas
     - SiriusMicrofusionCell

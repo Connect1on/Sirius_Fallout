@@ -297,14 +297,14 @@
   - proto: N14WeaponThermospear
     price: 1
 
-# - type: storeCategoryStructured
-#   id: TicketsSell_Explosives
-#   name: "Explosives"
-#   entries:
-#   - proto: C4
-#     price: 1
-#   - proto: GrenadeIncendiary
-#     price: 1
+- type: storeCategoryStructured
+  id: TicketsSell_Explosives
+  name: "Explosives"
+  entries:
+  - proto: C4
+    price: 1
+  - proto: GrenadeIncendiary
+    price: 1
 
 - type: storeCategoryStructured
   id: TicketsSell_PowerArmor
@@ -1322,4 +1322,4 @@
   - CaravanSell2_Ore
   - CaravanSell2_Alcohol
   - CaravanSell2_Fish
-  - CaravanSell2_Currency
+#   - CaravanSell2_Currency

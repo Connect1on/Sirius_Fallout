@@ -66,9 +66,9 @@
   description: The only thing standing between you and a larger knife.
   components:
   - type: Sprite
-    sprite: _Misfits/Clothing/Head/Helmets/vaultriot.rsi
+    sprite: _Nuclear14/Clothing/Head/FalloutHats/vaultriot.rsi
   - type: Clothing
-    sprite: _Misfits/Clothing/Head/Helmets/vaultriot.rsi
+    sprite: _Nuclear14/Clothing/Head/FalloutHats/vaultriot.rsi
   - type: Armor
     modifiers:
       coefficients:
