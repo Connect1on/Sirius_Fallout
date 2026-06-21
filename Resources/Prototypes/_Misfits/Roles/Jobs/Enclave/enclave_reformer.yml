@@ -22,6 +22,8 @@
       min: 252000 # 70 hours — admin role
     - !type:CharacterSexRequirement
       sex: Male
+    - !type:CharacterGenderRequirement
+      gender: Male
     - !type:CharacterTraitRequirement
       inverted: true
       traits:

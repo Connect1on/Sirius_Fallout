@@ -23,8 +23,6 @@
     - !type:CharacterPlaytimeRequirement
       tracker: EnclaveSeniorOfficer
       min: 43200 # 12 hours
-    - !type:CharacterSexRequirement
-      sex: Male
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
