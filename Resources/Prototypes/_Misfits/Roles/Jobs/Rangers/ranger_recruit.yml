@@ -55,7 +55,7 @@
     pocket1: MagazineBox45-70
     pocket2: NCRpatrolrangerloadoutkits
     eyes: ClothingEyesGlassesSunglasses
-    outerClothing: N14ClothingOuterNCRCombatArmor # Misfits Tweak - patrol rangers should start in NCR combat armor, not ranger combat armor
+    outerClothing: N14ClothingOuterRangerCoat # Misfits Tweak - patrol rangers should start in NCR combat armor, not ranger combat armor
     id: N14IDBadgeNCRDesertRangerRecruit
   innerClothingSkirt: N14ClothingUniformRangerV1 #placeholder
   satchel: N14ClothingBackpackSatchelMilitaryFilled

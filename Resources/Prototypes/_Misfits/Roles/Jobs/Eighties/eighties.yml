@@ -24,6 +24,8 @@
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 144000 # 40 hours
+  access:
+  - 80sHead
   startingGear: EightiesTheBlockGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -84,6 +86,8 @@
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 54000 # 15 hours
+  access:
+  - 80s
   startingGear: EightiesCylindersGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -141,6 +145,8 @@
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 21600 # 6 hours
+  access:
+  - 80s
   startingGear: EightiesPistonsGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -198,6 +204,8 @@
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 7200 # 2 hours
+  access:
+  - 80s
   startingGear: EightiesOilersGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -252,6 +260,8 @@
     species:
     - Human
     - Ghoul
+  access:
+  - 80s
   startingGear: EightiesRoadRashGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
