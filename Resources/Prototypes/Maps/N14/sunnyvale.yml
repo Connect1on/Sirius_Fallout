@@ -28,8 +28,8 @@
             #SuperMutantNCRTrooper: [ 0, 0 ] # #Misfits Add: NCR Trooper variant latejoin slot.
             SuperMutantTribal: [ 1, 1 ] # #Misfits Add: Tribal variant latejoin slot.
             C27: [ 0, 1 ]    # #Misfits Add - C-27 Generic latejoin slot (whitelist gates actual access)/// Increased to 2 from 1.
-            #C27NCR: [ 0, 0 ] # #Misfits Add - C-27 NCR variant latejoin slot.
-            #C27BoS: [ 0, 0 ] # #Misfits Add - C-27 Brotherhood variant latejoin slot.
+            C27NCR: [ 1, 0 ] # #Misfits Add - C-27 NCR variant latejoin slot.
+            C27BoS: [ 1, 0 ] # #Misfits Add - C-27 Brotherhood variant latejoin slot.
             # WastelandScavenger: [ 3, 5 ]
             WastelandReporter: [ 1, 2 ]
             # WastelandMusician: [ 2, 3 ]
@@ -134,10 +134,10 @@
             #FollowerDoctor: [ 0, 0 ]   # #Misfits Add - Doctor rank slot
             #FollowerHead: [ 0, 0 ]     # #Misfits Add - Head rank slot (0 min so server doesn't require one)
             SyntheticMrHandy: [ 2, 2 ]
-            #SyntheticProtectron: [ 2, 2 ]
-            SyntheticMrGutsy: [ 1, 1 ]
-            #SyntheticAssaultron: [ 1, 1 ]
-            #SyntheticSentryBot: [ 1, 0 ] # #Misfits Add: sentry bot late join slots
+            SyntheticProtectron: [ 2, 0 ]
+            SyntheticMrGutsy: [ 1, 0 ]
+            SyntheticAssaultron: [ 1, 0 ]
+            SyntheticSentryBot: [ 1, 0 ] # #Misfits Add: sentry bot late join slots
             SyntheticRobobrain: [ 1, 1 ] # #Misfits Add: robobrain late join slots
             # #Misfits Add - Enclave faction activation: whitelist-only roles. Spawns at Vault bunker (~-92.5, 50.5).
             EnclaveReformer: [ 1, 0 ]      # admin-only leader (The Reformer); 0 active latejoin slots
