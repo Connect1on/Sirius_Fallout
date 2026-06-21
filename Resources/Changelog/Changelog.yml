@@ -7646,3 +7646,29 @@ Entries:
   id: 6123
   time: '2026-06-21T21:27:00.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/876
+- author: Operator
+  changes:
+    - type: Add
+      message: >-
+        The eighties gang finally ran out of their initial fuel stockpiles,
+        they're starting to scavenge from the region now. Fear. Motorbikes take
+        fuel, a fuel tank lasts 10 minutes. Can't be refueled with the engine on
+        either.
+    - type: Add
+      message: >-
+        Their motorbikes have also started to feel the wear and tear of the
+        deserts, the activity strains their engines. They are damagable
+        entities, have 250 HP, take 10% more piercing, and will blow up after 5
+        seconds of hissing when they hit 0. They can be repaired with a welder
+        and 15 seconds of spare time.
+    - type: Tweak
+      message: >-
+        The BLOCK Finally remembered to grab the Blueprints for their bikes. Its
+        in their safe.
+    - type: Fix
+      message: >-
+        Bullet prediction also works on bikes now. And sprites wont attach to
+        them.
+  id: 6124
+  time: '2026-06-21T21:29:46.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/871
