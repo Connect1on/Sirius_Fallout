@@ -63,6 +63,7 @@
   storage:
     back:
     - N14BoxPlasticFilledMilitary
+    - SiriusRubberStampEnclaveCommander
 
 - type: playTimeTracker
   id: EnclaveCommander

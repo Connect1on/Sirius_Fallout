@@ -4,12 +4,12 @@
 
 ## Dropdown labels
 admin-announce-type-faction-legion = Легион (Легат)
-admin-announce-type-faction-ncr = НКР (Капитан)
-admin-announce-type-faction-bos = Бос (Старейшина)
-admin-announce-type-faction-enclave = Анклав (Директор)
+admin-announce-type-faction-ncr = НКР (Генерал)
+admin-announce-type-faction-bos = Братство (Старейшина)
+admin-announce-type-faction-enclave = Анклав (Президент)
 
 ## Default sender names pre-filled into the Announcer field
 admin-announce-faction-sender-legion = Легат
-admin-announce-faction-sender-ncr = Капитан НКР
+admin-announce-faction-sender-ncr = Генерал НКР
 admin-announce-faction-sender-bos = Старейшина
-admin-announce-faction-sender-enclave = Директор
+admin-announce-faction-sender-enclave = Президент

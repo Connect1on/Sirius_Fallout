@@ -19,8 +19,8 @@ job-name-ncr-weapon-specialist = Оружейный специалист НКР
 job-description-ncr-weapon-specialist = Вы являетесь квалифицированным специалистом по вооружению НКР. Ваша цель — огневая мощь и боевая эффективность, а не командование. По мере накопления опыта ваш ранг повышается от PV2 до SPC.
 
 # #Misfits Add - Enclave job locale (expanded 8-role hierarchy). Reformer is admin-only apex role.
-job-name-enclave-reformer = Реформатор
-job-description-enclave-reformer = Вы — высший авторитет Анклава, его реформатор. Формируйте доктрину ячейки, судите её членов и определяйте её будущее. Подотчётен только Президенту.
+job-name-enclave-reformer = Губернатор Штата
+job-description-enclave-reformer = Вы — высший авторитет Анклава, губернатор этой земли. Формируйте доктрину ячейки, судите её членов и определяйте её будущее. Подотчётен только Президенту.
 job-name-enclave-commander = Командир Анклава
 job-description-enclave-commander = Руководите ячейкой Анклава с абсолютной властью, координируйте военную и научную отрасли, а также обеспечивайте оперативную безопасность.
 job-name-enclave-senior-officer = Старший офицер Анклава

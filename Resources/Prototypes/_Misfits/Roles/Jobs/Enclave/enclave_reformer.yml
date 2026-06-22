@@ -48,16 +48,14 @@
 - type: startingGear
   id: EnclaveReformerGear
   equipment:
-    head: N14ClothingHeadHatEnclaveOfficer
-    back: N14ClothingBackpackMilitary
-    jumpsuit: N14ClothingUniformJumpsuitEnclave
-    outerClothing: N14ClothingOuterEnclaverOfficerCoat
-    shoes: N14ClothingBootsCombatFilled
-    gloves: N14ClothingHandsGlovesCombat
-    neck: ClothingNeckPinEnclaveGeneral
-    belt: ClothingBeltMilitary
+    back: ClothingBackpackSatchelLeather
+    jumpsuit: SiriusClothingUniformJumpsuitGovernor
+    outerClothing: ClothingOuterCoatGentle
+    shoes: ClothingShoesBootsLaceup
+    neck: ClothingNeckPinEnclaveGovernor
+    belt: ClothingBeltEnclave
     ears: N14ClothingHeadsetEnclave
-    pocket1: EnclaveOfficerloadoutkits
+    pocket1: SiriusRubberStampEnclaveReformer
     pocket2: RadioHandheld
     id: SiriusIDEnclaveReformer
   satchel: N14ClothingBackpackSatchelMilitaryFilled

@@ -49,10 +49,10 @@
             #TownShopkeeperHelper: [ 0, 0 ] # Forge-Town
             Townsperson: [ 12, 12 ]
             #NCRMajor: [ 0, 1 ] # #Misfits Add - whitelist-only command role; 0 active late-join slots
-            NCRCommander: [ 1, 1 ]
+            NCRCommander: [ 1, 1 ] # #Sirius Add - whitelist-only command role; 0 active late-join slots
             NCRExecutiveOfficer: [ 1, 1 ]
             NCRPlatoonLeader: [ 2, 2 ]
-            NCRChiefRanger: [ 1, 0 ]  # #Misfits Change - admin-only Chief Ranger; renamed from ChiefRanger
+            NCRChiefRanger: [ 1, 1 ]  # #Misfits Change - admin-only Chief Ranger; renamed from ChiefRanger
             NCRVeteranRanger: [ 1, 1 ] # #Misfits Change - renamed from RangerVeteran
             NCRFieldRanger: [ 1, 1 ]   # #Misfits Add - Field Ranger slot
             NCRPatrolRanger: [ 2, 2 ]  # #Misfits Change - renamed from RangerRecruit (was Patrol Ranger by FTL)
@@ -62,21 +62,21 @@
             NCRHeavyTrooper: [ 2, 2 ] # #Misfits Add - Heavy Trooper: 2 slots, between Specialist and Sergeant
             NCRNCO: [ 4, 4 ]
             NCRWS: [ 1, 1 ] # #Misfits Tweak - increased: absorbs Engineer (2) + Medic (1) slots
-            NCREngineer: [ 3, 3 ] #Misfits Change /Comment-out/: consolidated into Specialist
-            NCRDoctor: [ 3, 3 ]
-            #NCRMedic: [ 1, 1 ] #Misfits Change /Comment-out/: consolidated into Specialist
+            NCREngineer: [ 3, 3 ]
+            NCRDoctor: [ 1, 1 ]
+            NCRMedic: [ 3, 3 ]
             #NCRPrivateFirstClass: [ 0, 0 ]
             #NCRSoldier: [ 0, 0 ]
-            NCRCadet: [ 15, 15 ]
+            NCRCadet: [ 16, 16 ]
             #NCRPisoner : [ 5, 5 ]
-            NCRMPinvestigator : [ 1, 1 ] # Misfits Change # #Misfits Tweak - 0 active slots (admin-notify role)
+            #NCRMPinvestigator : [ 1, 1 ]
             NCRMilitaryPoliceSergeant: [ 2, 2 ]
             NCRMilitaryPoliceRecruit: [ 3, 3 ]
             NCRMilitaryPoliceCaptain: [ 1, 1 ]
             # CaravanLeader: [ 1, 1 ]
             # CaravanTrader: [ 1, 1 ]
             # CaravanGuard: [ 2, 2 ]
-            BoSWestElderCommander: [ 1, 0 ] # Misfits Change # #Misfits Tweak - 0 active slots (admin-notify role)
+            BoSWestElderCommander: [ 1, 1 ] # Misfits Change # #Misfits Tweak - 0 active slots (admin-notify role)
             #Misfits Change /Comment-out/: Washington BoS map spawners removed.
             # BoSWashingtonCommander: [ 1, 1 ]
             # BoSWashingtonPaladin: [ 1, 1 ]
@@ -95,13 +95,13 @@
             BoSMidSquire: [ 4, 4 ]
             BoSInitiate: [ 4, 4 ]  #Misfits Change /Add/
             # BoSWashingtonInitiate: [ 3, 3 ] #Misfits Change /Comment-out/: Washington BoS removed
-            VaultManagement: [ 1, 0 ] # #Misfits Tweak - 0 active slots (admin-notify role)
+            VaultManagement: [ 1, 1 ] # #Misfits Tweak - 0 active slots (admin-notify role)
             Overseer: [ 1, 1 ]
             VaultDoctor: [ 2, 2 ]
             VaultDweller: [ 6, 6 ]
             VaultEngineer: [ 2, 2 ]
             VaultSecurity: [ 4, 4 ]
-            #CaesarLegionLegate: [ 1, 0 ] # Forge-Legion # #Misfits Tweak - 0 active slots (admin-notify role)
+            #CaesarLegionLegate: [ 1, 1 ] # Forge-Legion # #Misfits Tweak - 0 active slots (admin-notify role)
             #CaesarLegionCenturion: [ 1, 1 ] # Forge-Legion
             #CaesarLegionVeteranDecanus: [ 1, 1 ] # Forge-Legion
             #CaesarLegionDean: [ 1, 1 ] # Forge-Legion
@@ -140,7 +140,7 @@
             SyntheticSentryBot: [ 1, 0 ] # #Misfits Add: sentry bot late join slots
             SyntheticRobobrain: [ 1, 1 ] # #Misfits Add: robobrain late join slots
             # #Misfits Add - Enclave faction activation: whitelist-only roles. Spawns at Vault bunker (~-92.5, 50.5).
-            EnclaveReformer: [ 1, 0 ]      # admin-only leader (The Reformer); 0 active latejoin slots
+            EnclaveReformer: [ 1, 1 ]      # admin-only leader (The Reformer); 0 active latejoin slots
             EnclaveCommander: [ 1, 1 ]
             EnclaveSeniorOfficer: [ 1, 1 ]
             EnclaveJuniorOfficer: [ 2, 2 ]

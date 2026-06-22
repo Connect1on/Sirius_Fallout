@@ -1,0 +1,117 @@
+- type: entity
+  name: presidental rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampEnclavePresident
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-enclave-president
+    stampedColor: "#003142"
+    stampState: "paper_stamp-cap"
+  - type: Sprite
+    state: stamp-cap
+
+- type: entity
+  name: state governor rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampEnclaveReformer
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-enclave-reformer
+    stampedColor: "#116062"
+    stampState: "paper_stamp-hop"
+  - type: Sprite
+    state: stamp-hop
+
+- type: entity
+  name: enclave high command rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampEnclaveHighComm
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-enclave-highcomm
+    stampedColor: "#2f4f4f"
+    stampState: "paper_stamp-cap"
+  - type: Sprite
+    state: stamp-cap
+
+- type: entity
+  name: enclave commander's rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampEnclaveCommander
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-enclave-commander
+    stampedColor: "#025669"
+    stampState: "paper_stamp-cmo"
+  - type: Sprite
+    state: stamp-cmo
+
+- type: entity
+  name: enclave's rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampEnclaveMain
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-enclave-main
+    stampedColor: "#1f3a3d"
+    stampState: "paper_stamp-cmo"
+  - type: Sprite
+    state: stamp-cmo
+
+- type: entity
+  name: NCR high command rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampNCRHighComm
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-ncr-highcomm
+    stampedColor: "#9f8200"
+    stampState: "paper_stamp-qm"
+  - type: Sprite
+    state: stamp-qm
+
+- type: entity
+  name: NCR commander's rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampNCRCommander
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-ncr-commander
+    stampedColor: "#b57900"
+    stampState: "paper_stamp-qm"
+  - type: Sprite
+    state: stamp-qm
+
+- type: entity
+  name: NCR executive officer's rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampNCRExecutive
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-ncr-executive
+    stampedColor: "#cf8d51"
+    stampState: "paper_stamp-ce"
+  - type: Sprite
+    state: stamp-ce
+
+- type: entity
+  name: NCR MP chief's rubber stamp
+  parent: RubberStampBase
+  id: SiriusRubberStampNCRChiefMP
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: sirius-stamp-component-stamped-name-ncr-chief-mp
+    stampedColor: "#a5260a"
+    stampState: "paper_stamp-hos"
+  - type: Sprite
+    state: stamp-hos
+

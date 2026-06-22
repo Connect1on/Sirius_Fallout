@@ -19,7 +19,7 @@ job-name-ncr-weapon-specialist = NCR Weapon Specialist
 job-description-ncr-weapon-specialist = You are a weapons-qualified specialist of the NCR. Your focus is firepower and combat effectiveness — not command. Your rank tracks PV2 through SPC as you accumulate experience.
 
 # #Misfits Add - Enclave job locale (expanded 8-role hierarchy). Reformer is admin-only apex role.
-job-name-enclave-reformer = The Reformer
+job-name-enclave-reformer = State Governor
 job-description-enclave-reformer = You are the Enclave's supreme authority on the field — its Reformer. Shape the cell's doctrine, judge its members, and determine its future. Answerable only to Eden.
 job-name-enclave-commander = Enclave Commander
 job-description-enclave-commander = Lead the Enclave cell with absolute authority, coordinate military and science branches, and ensure operational security.

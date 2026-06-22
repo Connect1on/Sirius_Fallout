@@ -158,6 +158,16 @@
     layers:
     - state: captain
 
+- type: entity
+  parent: ClothingNeckPinEnclaveSecondLieutenant
+  id: ClothingNeckPinEnclaveGovernor
+  name: enclave state governor pin
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
+    layers:
+    - state: captain
+
 # Science ranks
 - type: entity
   parent: ClothingNeckPinEnclavePrivate

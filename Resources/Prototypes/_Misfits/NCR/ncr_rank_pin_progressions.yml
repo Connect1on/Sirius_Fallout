@@ -46,7 +46,7 @@
     - min: 72000   # 20 hours
       entity: ClothingNeckPinNCRFirstlLieutenant
 
-# Junior Officers: 2LT (O-1) → 1LT (O-2) at 20h NCR dept time
+# Junior Officers: 2LT (O-1) → 1LT (O-2) at 20h NCR dept time → Captain (O-3) at 50h NCR dept time
 - type: ncrRankPinProgression
   id: NCRJuniorOfficerPins
   jobs:
@@ -59,8 +59,55 @@
       entity: ClothingNeckPinNCRSecondLieutenant
     - min: 72000   # 20 hours
       entity: ClothingNeckPinNCRFirstlLieutenant
-    - min: 72000   # 20 hours
+    - min: 180000   # 50 hours
       entity: ClothingNeckPinNCRCaptain
+
+# Military Police Chief: 2LT (O-1) → 1LT (O-2) at 30h → Captain (O-3) at 60h
+- type: ncrRankPinProgression
+  id: NCRMPChiefPins
+  jobs:
+    - NCRMilitaryPoliceCaptain
+  tracker: NCRMilitaryPoliceCaptain
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRSecondLieutenant
+    - min: 108000   # 30 hours
+      entity: ClothingNeckPinNCRFirstlLieutenant
+    - min: 216000  # 60 hours
+      entity: ClothingNeckPinNCRCaptain
+
+# Military Police Operative: SSG (E-7) → SFC (E-8) at 30h → SGM (E-9) at 60h
+- type: ncrRankPinProgression
+  id: NCRMPOperativePins
+  jobs:
+    - NCRMilitaryPoliceSergeant
+  tracker: NCRMilitaryPoliceSergeant
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRSergeant1st
+    - min: 108000   # 30 hours
+      entity: ClothingNeckPinNCRMasterSergeant
+    - min: 216000  # 60 hours
+      entity: ClothingNeckPinNCRSergeantMajor
+
+# Military Police Cadet: PFC (E-3) → CPL (E-4) at 10h → SPC (E-5) at 20h → SGT (E-6) at 40h
+- type: ncrRankPinProgression
+  id: NCRMPCadetPins
+  jobs:
+    - NCRMilitaryPoliceRecruit
+  tracker: NCRMilitaryPoliceRecruit
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRPrivate1st
+    - min: 36000   # 10 hours
+      entity: ClothingNeckPinNCRCorporal
+    - min: 72000  # 20 hours
+      entity: ClothingNeckPinNCRSpecialist
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinNCRSergeant
 
 # Squad Leaders: SGT (E-6) → SSG (E-7) at 20h → SFC (E-8) at 40h → SGM (E-9) at 60h
 # All 4 map slots share the NCRSquadLeader tracker so time accumulates across slots.

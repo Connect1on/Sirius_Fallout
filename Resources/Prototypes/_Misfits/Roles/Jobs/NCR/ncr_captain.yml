@@ -1,11 +1,11 @@
 - type: job
   id: NCRCommander
   setPreference: true
-  hideWithoutJobWhitelist: false
+  hideWithoutJobWhitelist: true
   hideIfPlaytimeRequirementsNotMet: false
   jobWhitelistBypassesRoleTimers: true
   overrideConsoleVisibility: false
-  canBeAntag: true
+  canBeAntag: false
   name: job-name-ncr-commander
   description: job-description-ncr-commander
   playTimeTracker: NCRCommander
@@ -57,6 +57,7 @@
   storage:
     back:
     - N14BoxPlasticFilledMilitaryNCR
+    - SiriusRubberStampNCRCommander
 
 - type: playTimeTracker
   id: NCRCommander
