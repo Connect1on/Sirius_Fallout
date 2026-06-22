@@ -2,8 +2,8 @@
 - type: entity
   parent: FaxMachineBase
   id: SiriusFaxMachineEnclavePresident
-  name: Presidental long range fax machine
-  suffix: Enclave Presidental
+  name: Presidential long range fax machine
+  suffix: Enclave Presidential
   components:
   - type: Sprite
     layers:
@@ -11,7 +11,7 @@
         map: [ "base" ]
         color: "#bfe3ff"
   - type: FaxMachine
-    name: "Presidental Office"
+    name: "Presidential Office"
     notifyAdmins: true
 
 - type: entity
