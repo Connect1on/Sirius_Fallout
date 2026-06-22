@@ -12,7 +12,7 @@ sirius-stamp-component-stamped-name-enclave-reformer = Губернатор Шт
 
 ent-SiriusRubberStampEnclaveHighComm = печать верховного командования Анклава
     .desc = Печать верховного командования - символ высшей военной власти Анклава, после Президента.
-sirius-stamp-component-stamped-name-enclave-reformer = Верховное командование Анклава
+sirius-stamp-component-stamped-name-enclave-highcomm = Верховное командование Анклава
 
 ent-SiriusRubberStampEnclaveCommander = печать командира Анклава
     .desc = Печать командира местной ячейки Анклава.

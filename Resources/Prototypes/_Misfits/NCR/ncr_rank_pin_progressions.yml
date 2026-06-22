@@ -102,11 +102,11 @@
   thresholds:
     - min: 0
       entity: ClothingNeckPinNCRPrivate1st
-    - min: 72000   # 20 hours
+    - min: 36000   # 10 hours
       entity: ClothingNeckPinNCRCorporal
-    - min: 144000  # 40 hours
+    - min: 72000  # 20 hours
       entity: ClothingNeckPinNCRSpecialist
-    - min: 216000  # 60 hours
+    - min: 144000  # 40 hours
       entity: ClothingNeckPinNCRSergeant
 
 # Squad Leaders: SGT (E-6) → SSG (E-7) at 20h → SFC (E-8) at 40h → SGM (E-9) at 60h
