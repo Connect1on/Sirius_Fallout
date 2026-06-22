@@ -2,17 +2,16 @@
   parent: BaseItem
   id: N14ClothingSlashGaunlets
   name: кастет кротокрыса
-  prefix: Sirius
   description: Смертоносные кастеты, способные вызвать глубокие порезы.
   components:
   - type: Appearance
   - type: Sprite
-    sprite: _Sirius/Entities/Clothing/Gloves/BrassKnuckles.rsi
+    sprite: _Sirius/Objects/Weapons/Melee/BrassKnuckles.rsi
     state: icon
     scale: 0.75, 0.75
   - type: Item
     size: Normal
-    sprite: _Sirius/Entities/Clothing/Gloves/BrassKnuckles.rsi
+    sprite: _Sirius/Objects/Weapons/Melee/BrassKnuckles.rsi
   - type: Tag
     tags:
     - SuperMutantWearable
