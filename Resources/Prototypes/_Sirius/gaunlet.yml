@@ -1,0 +1,27 @@
+- type: entity
+  parent: BaseItem
+  id: N14ClothingSlashGaunlets
+  name: кастет кротокрыса
+  prefix: Sirius
+  description: Смертоносные кастеты, способные вызвать глубокие порезы.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sirius/Entities/Clothing/Gloves/BrassKnuckles.rsi
+    state: icon
+    scale: 0.75, 0.75
+  - type: Item
+    size: Normal
+    sprite: _Sirius/Entities/Clothing/Gloves/BrassKnuckles.rsi
+  - type: Tag
+    tags:
+    - SuperMutantWearable
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/slash.ogg
+    range: 1.3
+    attackRate: 1.1
+    damage:
+      types:
+        Piercing: 18
+        Slash: 32
