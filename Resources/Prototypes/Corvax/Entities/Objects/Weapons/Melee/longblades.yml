@@ -154,6 +154,8 @@
     quickEquip: false
     slots:
     - belt
+    - Back
+    - suitStorage
   - type: GenericVisualizer
     visuals:
       enum.ToggleVisuals.Toggled:
