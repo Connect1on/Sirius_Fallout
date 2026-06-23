@@ -3,7 +3,7 @@
   id: BowImprovised
   minInt: 6
   result: BowImprovised
-  completetime: 12
+  completeTime: 12
   materials:
     Wood: 500
     Cloth: 200
@@ -14,7 +14,7 @@
   id: N14ArrowTribal
   minInt: 8
   result: N14ArrowTribal
-  completetime: 2
+  completeTime: 2
   materials:
     Steel: 25
     Cloth: 10
@@ -23,7 +23,7 @@
   id: N14ArrowBroadHead
   minInt: 8
   result: N14ArrowBroadHead
-  completetime: 2
+  completeTime: 2
   materials:
     Steel: 25
     Cloth: 10
@@ -33,7 +33,7 @@
   id: N14Bola
   minInt: 7
   result: Bola
-  completetime: 12
+  completeTime: 12
   materials:
     Steel: 200
     Cloth: 200
@@ -42,7 +42,7 @@
   id: ClothingBeltQuiver
   minInt: 9
   result: ClothingBeltQuiver
-  completetime: 4
+  completeTime: 4
   materials:
     Leather: 400
     Cloth: 200
@@ -51,7 +51,7 @@
   id: ClothingBeltQuiverSpear
   minInt: 9
   result: ClothingBeltQuiverSpear
-  completetime: 4
+  completeTime: 4
   materials:
     Steel: 100
     Leather: 300
@@ -62,7 +62,7 @@
   id: N14WastelandTribalJavelin
   minInt: 8
   result: N14WastelandTribalJavelin
-  completetime: 12
+  completeTime: 12
   materials:
     Steel: 100
     Wood: 200
@@ -72,7 +72,7 @@
   id: N14WastelandSpear
   minInt: 6
   result: N14WastelandSpear
-  completetime: 12
+  completeTime: 12
   materials:
     Steel: 100
     Wood: 600
@@ -82,7 +82,7 @@
   id: N14ScrapMachete
   minInt: 7
   result: N14ScrapMachete
-  completetime: 12
+  completeTime: 12
   materials:
     Scrap: 600
     Cloth: 200
@@ -91,7 +91,7 @@
   id: N14BrassKnife
   minInt: 7
   result: N14BrassKnife
-  completetime: 12
+  completeTime: 12
   materials:
     N14Brass: 200
     N14Iron: 100
@@ -101,7 +101,7 @@
   id: N14TrainingSword
   minInt: 6
   result: N14TrainingSword
-  completetime: 5
+  completeTime: 5
   materials:
     Wood: 300
 
@@ -109,7 +109,7 @@
   id: N14LongSword
   minInt: 7
   result: N14LongSword
-  completetime: 30
+  completeTime: 30
   materials:
     Wood: 300
     N14Iron: 500
@@ -121,7 +121,7 @@
   id: MakeshiftShield
   minInt: 6
   result: MakeshiftShield
-  completetime: 6
+  completeTime: 6
   materials:
     Steel: 600
     Wood: 200
@@ -130,7 +130,7 @@
   id: WoodenBuckler
   minInt: 7
   result: WoodenBuckler
-  completetime: 6
+  completeTime: 6
   materials:
     Steel: 200
     Wood: 800
@@ -139,7 +139,7 @@
   id: N14InsectShield
   minInt: 8
   result: N14InsectShield
-  completetime: 6
+  completeTime: 6
   materials:
     Exoskeleton: 50
     Wood: 400
@@ -149,7 +149,7 @@
   id: N14ChemicalPayload
   minInt: 10
   result: ChemicalPayload
-  completetime: 10
+  completeTime: 10
   materials:
     Circuitry: 200
     Steel: 400
@@ -158,7 +158,7 @@
   id: N14FlashPayload
   minInt: 10
   result: FlashPayload
-  completetime: 10
+  completeTime: 10
   materials:
     Aluminum: 100
     Sulfur: 400
@@ -167,7 +167,7 @@
   id: N14ExplosivePayload
   minInt: 10
   result: ExplosivePayload
-  completetime: 10
+  completeTime: 10
   materials:
     N14Gunpowder: 1000
     Lead: 400
@@ -176,7 +176,7 @@
   id: N14ModularGrenade
   minInt: 10
   result: ModularGrenade
-  completetime: 10
+  completeTime: 10
   materials:
     Steel: 300
 
@@ -184,7 +184,7 @@
   id: LandMineKick
   minInt: 10
   result: LandMineKick
-  completetime: 12
+  completeTime: 12
   materials:
     Steel: 500
     N14Iron: 200
@@ -193,7 +193,7 @@
   id: N14LandMine
   minInt: 10
   result: N14LandMine
-  completetime: 20
+  completeTime: 20
   materials:
     Steel: 800
     N14Gunpowder: 500
@@ -203,7 +203,7 @@
   id: LandMineExplosive
   minInt: 10
   result: LandMineExplosive
-  completetime: 25
+  completeTime: 25
   materials:
     Steel: 1000
     N14Gunpowder: 1000
@@ -213,7 +213,7 @@
   id: LandMineModular
   minInt: 10
   result: LandMineModular
-  completetime: 15
+  completeTime: 15
   materials:
     Steel: 600
 
@@ -222,7 +222,7 @@
   id: N14ClothingOuterLeatherRobes
   minInt: 6
   result: N14ClothingOuterLeatherRobes
-  completetime: 4
+  completeTime: 4
   materials:
     Cloth: 600
     Leather: 100
@@ -232,7 +232,7 @@
   id: N14ClothingOuterBlackRobes
   minInt: 7
   result: N14ClothingOuterBlackRobes
-  completetime: 4
+  completeTime: 4
   materials:
     Cloth: 600
     Leather: 100
@@ -242,7 +242,7 @@
   id: N14ClothingOuterLightLeatherArmor
   minInt: 7
   result: N14ClothingOuterLightLeatherArmor
-  completetime: 4
+  completeTime: 4
   materials:
     Leather: 500
     Thread: 200
@@ -252,7 +252,7 @@
   id: N14ClothingOuterLeatherArmor
   minInt: 8
   result: N14ClothingOuterLeatherArmor
-  completetime: 4
+  completeTime: 4
   materials:
     Leather: 500
     Thread: 200
@@ -261,7 +261,7 @@
   id: N14ClothingOuterCoatLeatherDuster
   minInt: 8
   result: N14ClothingOuterCoatLeatherDuster
-  completetime: 4
+  completeTime: 4
   materials:
     Cloth: 500
     Leather: 300
@@ -271,7 +271,7 @@
   id: N14ClothingOuterTribalArmorHeavy
   minInt: 9
   result: N14ClothingOuterTribalArmorHeavy
-  completetime: 8
+  completeTime: 8
   materials:
     Cloth: 500
     Leather: 500
@@ -281,7 +281,7 @@
   id: N14ClothingOuterReinforcedLeatherArmor
   minInt: 9
   result: N14ClothingOuterReinforcedLeatherArmor
-  completetime: 4
+  completeTime: 4
   materials:
     Leather: 500
     Thread: 200
@@ -291,7 +291,7 @@
   id: N14ClothingOuterChitinArmor
   minInt: 9
   result: N14ClothingOuterChitinArmor
-  completetime: 6
+  completeTime: 6
   materials:
     AntChitin: 300
     Cloth: 450
@@ -300,7 +300,7 @@
   id: N14ClothingOuterInsectArmor
   minInt: 9
   result: N14ClothingOuterInsectArmor
-  completetime: 8
+  completeTime: 8
   materials:
     Exoskeleton: 300
     Cloth: 350
@@ -309,7 +309,7 @@
   id: N14ClothingOuterMetalArmor
   minInt: 10
   result: N14ClothingOuterMetalArmor
-  completetime: 8
+  completeTime: 8
   materials:
     Cloth: 1000
     Steel: 2000
@@ -318,7 +318,7 @@
   id: N14ClothingOuterPainspike
   minInt: 9
   result: N14ClothingOuterPainspike
-  completetime: 6
+  completeTime: 6
   materials:
     Cloth: 400
     Steel: 600
@@ -328,7 +328,7 @@
   id: N14ClothingOuterZealotDuster
   minInt: 9
   result: N14ClothingOuterZealotDuster
-  completetime: 8
+  completeTime: 8
   materials:
     Cloth: 1000
     Steel: 1000
@@ -339,7 +339,7 @@
   id: N14ClothingOuterCoatWinterArmored
   minInt: 10
   result: N14ClothingOuterCoatWinterArmored
-  completetime: 4
+  completeTime: 4
   materials:
     Cloth: 600
     Leather: 100
@@ -350,7 +350,7 @@
   id: SpeedLoader9
   minInt: 7
   result: SpeedLoader9
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 6
     Steel: 22
@@ -360,7 +360,7 @@
   id: SpeedLoader10
   minInt: 7
   result: SpeedLoader10
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 6
     Steel: 22
@@ -370,7 +370,7 @@
   id: SpeedLoader44
   minInt: 8
   result: SpeedLoader44
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 10
     Steel: 25
@@ -380,7 +380,7 @@
   id: SpeedLoader45-70
   minInt: 8
   result: SpeedLoader45-70
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 24
     Steel: 25
@@ -390,7 +390,7 @@
   id: SpeedLoader45-70Tube
   minInt: 8
   result: SpeedLoader45-70Tube
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 40
     Steel: 35
@@ -400,7 +400,7 @@
   id: ClipMagazine308Rifle
   minInt: 8
   result: ClipMagazine308Rifle
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 24
     Steel: 132
@@ -411,7 +411,7 @@
   id: N14MagazinePistol22lr
   minInt: 7
   result: N14MagazinePistol22lr
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 80
     Steel: 260
@@ -421,7 +421,7 @@
   id: N14MagazinePistol9mm
   minInt: 8
   result: N14MagazinePistol9mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 24
     Steel: 148
@@ -431,7 +431,7 @@
   id: N14MagazinePistol10mm
   minInt: 8
   result: N14MagazinePistol10mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 10
     Steel: 120
@@ -441,7 +441,7 @@
   id: N14MagazinePistol45
   minInt: 8
   result: N14MagazinePistol45
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 18
     Steel: 136
@@ -451,7 +451,7 @@
   id: N14MagazinePistol44
   minInt: 8
   result: N14MagazinePistol44
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 20
     Steel: 30
@@ -461,7 +461,7 @@
   id: N14MagazinePistol12mm
   minInt: 8
   result: N14MagazinePistol12mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 20
     Steel: 130
@@ -472,7 +472,7 @@
   id: N14MagazineSMG9mm
   minInt: 8
   result: N14MagazineSMG9mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 31
     Steel: 162
@@ -482,7 +482,7 @@
   id: N14MagazineSMG10mm
   minInt: 8
   result: N14MagazineSMG10mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 35
     Steel: 170
@@ -492,7 +492,7 @@
   id: Magazine45SubMachineGun
   minInt: 8
   result: Magazine45SubMachineGun
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 25
     Steel: 150
@@ -502,7 +502,7 @@
   id: N14MagazineSMG12mm
   minInt: 8
   result: N14MagazineSMG12mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 56
     Steel: 184
@@ -512,7 +512,7 @@
   id: N14TopMagazineSMG12mm
   minInt: 9
   result: N14TopMagazineSMG12mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 80
     Steel: 220
@@ -523,7 +523,7 @@
   id: Magazine308Rifle
   minInt: 8
   result: Magazine308Rifle
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 33
     Steel: 144
@@ -533,7 +533,7 @@
   id: Magazine308RifleLong
   minInt: 9
   result: Magazine308RifleLong
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 300
     Steel: 500
@@ -543,7 +543,7 @@
   id: Magazine308RifleSniper
   minInt: 9
   result: Magazine308RifleSniper
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 33
     Steel: 77
@@ -553,7 +553,7 @@
   id: Magazine762AmmoShort
   minInt: 8
   result: Magazine762AmmoShort
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 40
     Steel: 180
@@ -563,7 +563,7 @@
   id: Magazine762Rifle
   minInt: 9
   result: Magazine762Rifle
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 60
     Steel: 190
@@ -573,7 +573,7 @@
   id: Magazine762AmmoBelt
   minInt: 10
   result: Magazine762AmmoBelt
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 500
     Steel: 1100
@@ -583,7 +583,7 @@
   id: Magazine556Rifle
   minInt: 9
   result: Magazine556Rifle
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 50
     Steel: 175
@@ -593,7 +593,7 @@
   id: LongMagazine556Rifle
   minInt: 9
   result: LongMagazine556Rifle
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 70
     Steel: 205
@@ -603,7 +603,7 @@
   id: LMGMagazine556Rifle
   minInt: 10
   result: LMGMagazine556Rifle
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 110
     Steel: 265
@@ -614,7 +614,7 @@
   id: N14MagazineShotgun12
   minInt: 8
   result: N14MagazineShotgun12
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 16
     N14Paper: 24
@@ -625,7 +625,7 @@
   id: N14MagazineShotgun20
   minInt: 8
   result: N14MagazineShotgun20
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 20
     Steel: 100
@@ -637,7 +637,7 @@
   id: MagazineBox9mm
   minInt: 8
   result: MagazineBox9mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 80
     Steel: 160
@@ -648,7 +648,7 @@
   id: MagazineBox10mm
   minInt: 8
   result: MagazineBox10mm
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 80
     Steel: 160
@@ -659,7 +659,7 @@
   id: MagazineBox22
   minInt: 8
   result: MagazineBox22
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 75
     Steel: 150
@@ -670,7 +670,7 @@
   id: MagazineBox45
   minInt: 8
   result: MagazineBox45
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 75
     Steel: 150
@@ -681,7 +681,7 @@
   id: MagazineBox44
   minInt: 8
   result: MagazineBox44
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 44
     Steel: 166
@@ -692,7 +692,7 @@
   id: MagazineBox12
   minInt: 8
   result: MagazineBox12
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 150
     Steel: 225
@@ -703,7 +703,7 @@
   id: MagazineBox308
   minInt: 9
   result: MagazineBox308
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 96
     Steel: 128
@@ -714,7 +714,7 @@
   id: MagazineBox762
   minInt: 9
   result: MagazineBox762
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 120
     Steel: 180
@@ -725,7 +725,7 @@
   id: MagazineBox556
   minInt: 9
   result: MagazineBox556
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 150
     Steel: 225
@@ -736,7 +736,7 @@
   id: MagazineBox12gauge
   minInt: 8
   result: MagazineBox12gauge
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 60
     N14Paper: 90
@@ -747,7 +747,7 @@
   id: MagazineBox20gauge
   minInt: 8
   result: MagazineBox20gauge
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 30
     N14Paper: 60
@@ -758,7 +758,7 @@
   id: MagazineBox45-70
   minInt: 9
   result: MagazineBox45-70
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 120
     Steel: 150
@@ -769,7 +769,7 @@
   id: N14Magazine50AMR
   minInt: 10
   result: N14Magazine50AMR
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 25
     Steel: 50
@@ -779,7 +779,7 @@
   id: MagazineBox50
   minInt: 10
   result: MagazineBox50
-  completetime: 5
+  completeTime: 5
   materials:
     Lead: 150
     Steel: 200
@@ -791,7 +791,7 @@
   id: N14HandCraftPipePistol
   minInt: 7
   result: N14WeaponPistol10mmPipe
-  completetime: 15
+  completeTime: 15
   materials:
     Steel: 500
     Wood: 200
@@ -801,7 +801,7 @@
   id: N14HandCraftPipeShotgun
   minInt: 8
   result: N14WeaponShotgunPipe
-  completetime: 20
+  completeTime: 20
   materials:
     Steel: 500
     Wood: 500
@@ -811,7 +811,7 @@
   id: N14HandCraftPipeSMG10mm
   minInt: 8
   result: N14WeaponSMG10mmPipe
-  completetime: 25
+  completeTime: 25
   materials:
     Steel: 1000
     Wood: 300
@@ -821,7 +821,7 @@
   id: N14HandCraftPipeSMG12mm
   minInt: 8
   result: N14WeaponSMG12mmPipe
-  completetime: 25
+  completeTime: 25
   materials:
     Steel: 1200
     Wood: 300
@@ -831,7 +831,7 @@
   id: N14HandCraftPipeRifle556
   minInt: 10
   result: N14WeaponRifle556Pipe
-  completetime: 35
+  completeTime: 35
   materials:
     Steel: 1000
     Wood: 1200
@@ -841,7 +841,7 @@
   id: N14HandCraftPipeSniperRifle
   minInt: 10
   result: N14WeaponSniper308PipeRifle
-  completetime: 40
+  completeTime: 40
   materials:
     Steel: 1000
     Wood: 2000
@@ -852,7 +852,7 @@
   id: N14FlashlightLantern
   minInt: 6
   result: EmptyFlashlightLantern
-  completetime: 2
+  completeTime: 2
   materials:
     Steel: 50
     N14Copper: 50
@@ -863,7 +863,7 @@
   id: N14HandheldRadio
   minInt: 6
   result: RadioHandheld
-  completetime: 5
+  completeTime: 5
   materials:
     Steel: 100
     Circuitry: 100
@@ -872,7 +872,7 @@
   id: N14HandLabeler
   minInt: 8
   result: HandLabeler
-  completetime: 2
+  completeTime: 2
   materials:
     Plastic: 100
 
@@ -880,7 +880,7 @@
   id: N14HydroponicsToolClippers
   minInt: 7
   result: N14HydroponicsToolClippers
-  completetime: 3
+  completeTime: 3
   materials:
     Steel: 100
 
@@ -888,7 +888,7 @@
   id: N14HydroponicsToolHatchet
   minInt: 7
   result: N14HydroponicsToolHatchet
-  completetime: 3
+  completeTime: 3
   materials:
     Steel: 100
 
@@ -896,7 +896,7 @@
   id: N14HydroponicsToolScythe
   minInt: 7
   result: N14HydroponicsToolScythe
-  completetime: 5
+  completeTime: 5
   materials:
     Steel: 200
 
@@ -904,7 +904,7 @@
   id: HydroponicsToolSpade
   minInt: 7
   result: HydroponicsToolSpade
-  completetime: 3
+  completeTime: 3
   materials:
     Steel: 100
 
@@ -912,7 +912,7 @@
   id: N14HydroponicsToolHoe
   minInt: 7
   result: N14HydroponicsToolHoe
-  completetime: 3
+  completeTime: 3
   materials:
     Steel: 100
 
@@ -920,7 +920,7 @@
   id: N14SprayPainter
   minInt: 8
   result: SprayPainter
-  completetime: 2
+  completeTime: 2
   materials:
     Steel: 300
     Plastic: 100
@@ -929,7 +929,7 @@
   id: N14MiningDrill
   minInt: 9
   result: MiningDrill
-  completetime: 3
+  completeTime: 3
   materials:
     Steel: 300
     N14Copper: 200
@@ -939,7 +939,7 @@
   id: N14PowerDrill
   minInt: 9
   result: N14PowerDrill
-  completetime: 2
+  completeTime: 2
   materials:
     N14Copper: 500
     Steel: 100
@@ -949,7 +949,7 @@
   id: N14ClothingEyesGlassesWelding
   minInt: 9
   result: N14ClothingEyesGlassesWelding
-  completetime: 5
+  completeTime: 5
   materials:
     Steel: 50
     Glass: 200
@@ -959,7 +959,7 @@
   id: N14HandheldHealthAnalyzer
   minInt: 10
   result: N14HandheldHealthAnalyzer
-  completetime: 2
+  completeTime: 2
   materials:
     N14Gold: 50
     Plastic: 300
@@ -969,7 +969,7 @@
   id: N14RemoteSignaller
   minInt: 10
   result: RemoteSignaller
-  completetime: 2
+  completeTime: 2
   materials:
     N14Copper: 50
     Plastic: 300
@@ -979,7 +979,7 @@
   id: TimerTrigger
   minInt: 10
   result: TimerTrigger
-  completetime: 2
+  completeTime: 2
   materials:
     Steel: 300
     Plastic: 200
@@ -988,7 +988,7 @@
   id: SignalTrigger
   minInt: 10
   result: SignalTrigger
-  completetime: 2
+  completeTime: 2
   materials:
     Steel: 300
     Plastic: 200
@@ -997,7 +997,7 @@
   id: VoiceTrigger
   minInt: 10
   result: VoiceTrigger
-  completetime: 2
+  completeTime: 2
   materials:
     Steel: 300
     Plastic: 200
@@ -1006,7 +1006,7 @@
   id: N14GlowstickRed
   minInt: 8
   result: GlowstickRed
-  completetime: 2
+  completeTime: 2
   materials:
     Plastic: 50
 
@@ -1016,7 +1016,7 @@
   id: BodyBagFolded
   minInt: 5
   result: BodyBagFolded
-  completetime: 10
+  completeTime: 10
   materials:
     Cloth: 500
 
@@ -1024,7 +1024,7 @@
   id: N14MortarpestleGrinder
   minInt: 8
   result: N14MortarpestleGrinder
-  completetime: 5
+  completeTime: 5
   materials:
     Wood: 200
 
@@ -1032,7 +1032,7 @@
   id: N14CleanGauze1
   minInt: 9
   result: N14CleanGauze1
-  completetime: 5
+  completeTime: 5
   materials:
     Cloth: 100
 
@@ -1040,7 +1040,7 @@
   id: N14JetInhaler
   minInt: 10
   result: N14JetInhaler
-  completetime: 2
+  completeTime: 2
   materials:
     Plastic: 100
 
@@ -1048,7 +1048,7 @@
   id: N14SyringeInjectable
   minInt: 8
   result: N14DoctorSyringe
-  completetime: 2
+  completeTime: 2
   materials:
     Plastic: 100
     Steel: 25
