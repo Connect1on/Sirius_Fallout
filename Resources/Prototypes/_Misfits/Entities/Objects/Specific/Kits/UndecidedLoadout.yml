@@ -10,7 +10,7 @@
   - type: UndecidedLoadoutBackpack
     possibleSets:
     - PriestessHealingSet
-    - PriestessOrderSet
+    - PriestessZealotSet
 
 - type: UndecidedLoadoutBackpackSet
   id: PriestessHealingSet
@@ -23,11 +23,11 @@
   - KitPriestessHealing
 
 - type: UndecidedLoadoutBackpackSet
-  id: PriestessOrderSet
-  name: undecided-loadout-category-misfits-priestess-order-name
-  description: undecided-loadout-category-misfits-priestess-order-desc
+  id: PriestessZealotSet
+  name: undecided-loadout-category-misfits-priestess-zealot-name
+  description: undecided-loadout-category-misfits-priestess-zealot-desc
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
   content:
-  - KitPriestessOrder
+  - KitPriestessZealot

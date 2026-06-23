@@ -2208,24 +2208,24 @@
     N14Iron: 200
 
 
-- type: latheRecipe
-  id: N14BPLegionArmorHeavyCenturionArmor
-  result: N14ClothingOuterHeavyCenturionArmor
-  category: N14BlueprintLegionArmorT4
-  completetime: 22
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 10500
-
-    Leather: 450
-
-    N14Iron: 270
-
-    Cloth: 170
-
-    Thread: 150
+#- type: latheRecipe
+#  id: N14BPLegionArmorHeavyCenturionArmor
+#  result: N14ClothingOuterHeavyCenturionArmor
+#  category: N14BlueprintLegionArmorT4
+#  completetime: 22
+#  requiresBlueprint: true
+#  availableFaction:
+#  - CaesarLegion
+#  materials:
+#    Steel: 10500
+#
+#    Leather: 450
+#
+#    N14Iron: 270
+#
+#    Cloth: 170
+#
+#    Thread: 150
 
 
 # =====================================================================

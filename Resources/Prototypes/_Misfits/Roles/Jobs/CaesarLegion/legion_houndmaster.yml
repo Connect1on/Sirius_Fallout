@@ -45,6 +45,7 @@
     back: N14ClothingBackpackMilitary
     shoes: N14ClothingShoesKaligi
     gloves: N14ClothingHandsGlovesTribal
+    outerClothing: N14ClothingLegionReconArmor
     belt: N14Gladius
     pocket1: LegionHoundmasterloadoutkits
     id: N14IDLegionaryMedalHoundmaster
