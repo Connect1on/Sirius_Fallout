@@ -1,0 +1,26 @@
+- type: entity
+  parent: BaseItem
+  id: N14ClothingSlashGaunlets
+  name: кастет кротокрыса
+  description: Смертоносные кастеты, способные вызвать глубокие порезы.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sirius/Objects/Weapons/Melee/BrassKnuckles.rsi
+    state: icon
+    scale: 0.75, 0.75
+  - type: Item
+    size: Normal
+    sprite: _Sirius/Objects/Weapons/Melee/BrassKnuckles.rsi
+  - type: Tag
+    tags:
+    - SuperMutantWearable
+  - type: MeleeWeapon
+    soundHit:
+        path: /Audio/Weapons/slash.ogg
+    range: 1.3
+    attackRate: 1.1
+    damage:
+      types:
+        Piercing: 18
+        Slash: 32
