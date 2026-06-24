@@ -1,0 +1,45 @@
+- type: alertLevels
+  id: wastelandAlerts
+  defaultLevel: defcon5
+  levels:
+    defcon5:
+      announcement: alert-level-defcon5-announcement
+      color: Green
+      emergencyLightColor: LawnGreen
+      sound: /Audio/Announcements/Alerts/code_green.ogg
+      disableSelection: true
+      shuttleTime: 600
+    defcon4:
+      announcement: alert-level-defcon4-announcement
+      sound: /Audio/Announcements/Alerts/code_blue.ogg
+      disableSelection: true
+      color: DodgerBlue
+      forceEnableEmergencyLights: true
+      emergencyLightColor: DodgerBlue
+      shuttleTime: 600
+    defcon3:
+      announcement: alert-level-defcon3-announcement
+      sound: /Audio/Announcements/Alerts/code_red.ogg
+      disableSelection: true
+      color: PaleVioletRed
+      emergencyLightColor: PaleVioletRed
+      forceEnableEmergencyLights: true
+      shuttleTime: 600
+    defcon2:
+      announcement: alert-level-defcon2-announcement
+      selectable: false
+      sound: /Audio/Announcements/Alerts/code_gamma.ogg
+      disableSelection: true
+      color: Red
+      emergencyLightColor: Red
+      forceEnableEmergencyLights: true
+      shuttleTime: 600
+    defcon1:
+      announcement: alert-level-defcon1-announcement
+      selectable: false
+      sound: /Audio/Announcements/Alerts/code_delta.ogg
+      disableSelection: true
+      color: DarkRed
+      emergencyLightColor: Orange
+      forceEnableEmergencyLights: true
+      shuttleTime: 1200

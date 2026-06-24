@@ -33,7 +33,7 @@
     - min: 360000   # 100 hours
       entity: ClothingNeckPinNCRGeneralMajor
 
-# Medical Officers: Captain (O-3) → Major (O-4) at 20h
+# Medical Officers: 2LT (O-1) → 1LT (O-2) at 20h
 - type: ncrRankPinProgression
   id: NCRMedicalOfficerPins
   jobs:

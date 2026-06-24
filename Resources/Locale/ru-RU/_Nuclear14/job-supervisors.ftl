@@ -2,6 +2,7 @@
 job-supervisors-bos-mid-knight = Главный рыцарь, Главный паладин и Старейшина
 job-supervisors-bos-mid = Старейшина и главы орденов
 job-supervisors-bos-mid-commander = Старейшина
+job-supervisors-bos-mid-serf = всем членам Братства в порядке старшинства
 #Misfits Change /Comment-out/: Washington BoS supervisor strings removed — will create new prototypes.
 #job-supervisors-bos-wash-initiate = the Brotherhood chain of command
 #job-supervisors-bos-wash-knight = the Head Knight, Head Paladin, and Elder

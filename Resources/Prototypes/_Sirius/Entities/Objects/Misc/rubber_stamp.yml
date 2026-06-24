@@ -7,9 +7,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-enclave-president
     stampedColor: "#003142"
-    stampState: "paper_stamp-cap"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-cap
+    state: stamp-ok
 
 - type: entity
   name: state governor rubber stamp
@@ -20,9 +20,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-enclave-reformer
     stampedColor: "#116062"
-    stampState: "paper_stamp-hop"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-hop
+    state: stamp-ok
 
 - type: entity
   name: enclave high command rubber stamp
@@ -33,9 +33,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-enclave-highcomm
     stampedColor: "#2f4f4f"
-    stampState: "paper_stamp-cap"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-cap
+    state: stamp-ok
 
 - type: entity
   name: enclave commander's rubber stamp
@@ -46,9 +46,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-enclave-commander
     stampedColor: "#025669"
-    stampState: "paper_stamp-cmo"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-cmo
+    state: stamp-ok
 
 - type: entity
   name: enclave's rubber stamp
@@ -59,9 +59,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-enclave-main
     stampedColor: "#1f3a3d"
-    stampState: "paper_stamp-cmo"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-cmo
+    state: stamp-ok
 
 - type: entity
   name: NCR high command rubber stamp
@@ -72,9 +72,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-ncr-highcomm
     stampedColor: "#9f8200"
-    stampState: "paper_stamp-qm"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-qm
+    state: stamp-ok
 
 - type: entity
   name: NCR commander's rubber stamp
@@ -85,9 +85,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-ncr-commander
     stampedColor: "#b57900"
-    stampState: "paper_stamp-qm"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-qm
+    state: stamp-ok
 
 - type: entity
   name: NCR executive officer's rubber stamp
@@ -98,9 +98,9 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-ncr-executive
     stampedColor: "#cf8d51"
-    stampState: "paper_stamp-ce"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-ce
+    state: stamp-ok
 
 - type: entity
   name: NCR MP chief's rubber stamp
@@ -111,7 +111,7 @@
   - type: Stamp
     stampedName: sirius-stamp-component-stamped-name-ncr-chief-mp
     stampedColor: "#a5260a"
-    stampState: "paper_stamp-hos"
+    stampState: "paper_stamp-ok"
   - type: Sprite
-    state: stamp-hos
+    state: stamp-ok
 

@@ -94,6 +94,7 @@
             BoSScribe: [ 3, 3 ]  #Misfits Change /Add/
             BoSMidSquire: [ 4, 4 ]
             BoSInitiate: [ 4, 4 ]  #Misfits Change /Add/
+            BoSMidSerf: [ 6, 6 ]
             # BoSWashingtonInitiate: [ 3, 3 ] #Misfits Change /Comment-out/: Washington BoS removed
             VaultManagement: [ 1, 1 ] # #Misfits Tweak - 0 active slots (admin-notify role)
             Overseer: [ 1, 1 ]

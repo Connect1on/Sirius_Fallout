@@ -10,8 +10,8 @@
   materials:
     Circuitry: 1200
     Steel: 2800
-    ScrapElectronic: 4000
-    N14Gold: 200
+    ScrapElectronic: 400
+    Glass: 2000
 
 - type: latheRecipe
   id: SiriusPlasmaRifleAuto
@@ -23,8 +23,9 @@
   materials:
     Circuitry: 1500
     Steel: 3500
-    ScrapElectronic: 7000
-    N14Gold: 250
+    ScrapElectronic: 700
+    Glass: 2500
+    Plastic: 1000
 
 - type: latheRecipe
   id: SiriusPlasmaPistol
@@ -36,8 +37,9 @@
   materials:
     Circuitry: 150
     Steel: 1500
-    ScrapElectronic: 3000
-    N14Gold: 100
+    ScrapElectronic: 300
+    Glass: 1000
+    Plastic: 700
 
 # MARK: Laser
 
@@ -51,8 +53,9 @@
   materials:
     Circuitry: 110
     Steel: 2400
-    ScrapElectronic: 40
-    N14Silver: 200
+    ScrapElectronic: 400
+    Glass: 200
+    Plastic: 500
 
 - type: latheRecipe
   id: SiriusLaserRifleAuto
@@ -64,8 +67,10 @@
   materials:
     Circuitry: 110
     Steel: 2900
-    ScrapElectronic: 40
-    N14Silver: 200
+    ScrapElectronic: 400
+    Glass: 200
+    N14Gold: 100
+    Plastic: 500
 
 - type: latheRecipe
   id: SiriusLaserRifleAER12
@@ -78,7 +83,9 @@
     Circuitry: 145
     Steel: 2800
     ScrapElectronic: 700
-    N14Silver: 400
+    Glass: 400
+    N14Gold: 150
+    Plastic: 750
 
 - type: latheRecipe
   id: SiriusLaserPistol
@@ -91,19 +98,5 @@
     Circuitry: 90
     Steel: 1400
     ScrapElectronic: 250
-    N14Silver: 150
-
-# MARK: Heavy Guns
-
-- type: latheRecipe
-  id: SiriusMinigun
-  result: N14WeaponMinigun
-  category: N14Weapons
-  availableFaction:
-  - Enclave
-  completetime: 25
-  materials:
-    Circuitry: 200
-    Steel: 19000
-    N14Iron: 3300
-    N14Brass: 4500
+    Glass: 150
+    Plastic: 250

@@ -53,6 +53,7 @@
   - BoSMidSquire                 # Squire         | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_squire.yml
   #- BoSWashingtonInitiate        # Initiate (old Washington)
   - BoSInitiate                  # Initiate       | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_initiate.yml  #Misfits Change /Add/
+  - BoSMidSerf                  # Serf       | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_serf.yml  #Misfits Change /Add/
 
 #- type: department
 #  id: CaravanCompany

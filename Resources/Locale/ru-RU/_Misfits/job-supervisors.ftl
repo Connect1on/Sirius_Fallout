@@ -19,7 +19,7 @@ job-supervisors-supermutant = твоим инстинктам и самому с
 job-supervisors-c27 = вашим заводским директивам и вашему собственному возникающему суждению
 
 # #Misfits Add — New consolidated Brotherhood of Steel supervisor strings.
-job-supervisors-bos-west-elder = никто, кроме твоего долга перед Братством
+job-supervisors-bos-west-elder = никому, кроме вашего долга перед Братством
 # #Misfits Add: missing key — used by bos_headscribe.yml (Head Scribe reports to Elder)
 job-supervisors-bos-west = Старейшине
 job-supervisors-bos-headknight = Старейшине

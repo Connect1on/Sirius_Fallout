@@ -34,8 +34,6 @@
     idleState: icon
     runningState: building
     staticRecipes:
-    - N14CartridgePistol5
-    - N14MagazineMinigun5mm
     - SiriusPlasmaCartridge
     - SiriusPlasmaCartridgeMultiplas
     - SiriusMicrofusionCell
@@ -47,7 +45,6 @@
     - SiriusLaserRifle
     - SiriusLaserRifleAER12
     - SiriusLaserPistol
-    - SiriusMinigun
     - SiriusClothingOuterPowerArmorT45Enclave
     - SiriusClothingOuterPowerArmorT51Enclave
     - SiriusClothingOuterPowerArmorT60Enclave

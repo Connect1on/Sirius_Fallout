@@ -8,11 +8,11 @@
   availableFaction:
   - Enclave
   materials:
-    Steel: 8000
-    N14Iron: 200
-    Circuitry: 150
-    ScrapElectronic: 150
-    N14Brass: 700
+    Steel: 10000
+    N14Iron: 20
+    Circuitry: 15
+    ScrapElectronic: 15
+    N14Brass: 70
 
 - type: latheRecipe
   id: SiriusClothingOuterPowerArmorT51Enclave
@@ -23,10 +23,10 @@
   - Enclave
   materials:
     Steel: 13000
-    N14Iron: 600
-    Circuitry: 350
-    ScrapElectronic: 300
-    N14Brass: 1350
+    N14Iron: 60
+    Circuitry: 35
+    ScrapElectronic: 30
+    N14Brass: 135
 
 - type: latheRecipe
   id: SiriusClothingOuterPowerArmorT60Enclave
@@ -37,10 +37,10 @@
   - Enclave
   materials:
     Steel: 18500
-    N14Iron: 1000
-    Circuitry: 500
-    ScrapElectronic: 400
-    N14Brass: 1450
+    N14Iron: 100
+    Circuitry: 50
+    ScrapElectronic: 40
+    N14Brass: 145
 
 - type: latheRecipe
   id: SiriusClothingOuterPowerArmorX01Enclave
@@ -51,10 +51,10 @@
   - Enclave
   materials:
     Steel: 20000
-    N14Iron: 1000
-    Circuitry: 600
-    ScrapElectronic: 500
-    N14Brass: 2000
+    N14Iron: 100
+    Circuitry: 60
+    ScrapElectronic: 50
+    N14Brass: 200
 
 - type: latheRecipe
   id: SiriusClothingOuterPowerArmorX02Enclave
@@ -65,7 +65,7 @@
   - Enclave
   materials:
     Steel: 27000
-    N14Iron: 1000
-    Circuitry: 600
-    ScrapElectronic: 450
-    N14Brass: 2500
+    N14Iron: 100
+    Circuitry: 60
+    ScrapElectronic: 45
+    N14Brass: 250
