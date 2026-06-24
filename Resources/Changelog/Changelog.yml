@@ -7760,3 +7760,13 @@ Entries:
   id: 6134
   time: '2026-06-24T01:45:01.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/887
+- author: cythisiax
+  changes:
+    - type: Tweak
+      message: >-
+        Major Factions cannot 2v1. Or 3v1. Etc. This applies to Brotherhood,
+        Enclave, Legion, NCR. Majors can only 1v1, but minor factions can join
+        as they please. For now, likely.
+  id: 6135
+  time: '2026-06-24T03:25:16.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/889
