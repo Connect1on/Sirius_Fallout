@@ -48,7 +48,6 @@
     gloves: N14ClothingHandsGlovesTribal
     belt: N14Gladius
     suitstorage: N14PilumSpear
-    pocket1: LegionVenatorloadoutkits  # #Misfits Fix - restore combat loadout kit selector (was accidentally replaced)
     pocket2: KitFrumentariiBlackOps    # #Misfits Add - deep-cover black ops cover kit in second pocket
     id: N14IDLegionaryMedalFrumentarii
   innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther

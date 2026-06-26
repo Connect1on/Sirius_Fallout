@@ -96,7 +96,6 @@
     head: N14ClothingHeadKnightBeret
     outerClothing: MisfitsBoSHeadKnightArmor # #Misfits Tweak: T6 armor (0.65/0.60) — Head Knight tier, equal to NCR Staff Sergeant / Legion Prime Decanus
     hands: N14ClothingHandsGlovesCombat
-    pocket1: BoSBrotherhoodHeadKnightKits
     id: N14HeadKnight_PipBoy
     ears: N14ClothingHeadsetBrotherhoodOfSteel
     belt: ClothingBeltBoSWebbing

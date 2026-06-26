@@ -204,7 +204,7 @@
   - type: Gun
     soundGunshot:
       collection: N14PlasmaPistolGunshot
-    fireRate: 1.5
+    fireRate: 1
   - type: FollowDistance
     backStrength: 6
   - type: StaticPrice
@@ -433,7 +433,7 @@
     steps: 3
     zeroVisible: true
   - type: Gun
-    fireRate: 4
+    fireRate: 3
     soundGunshot:
       collection: N14PlasmaAutoRifleGunshot
     selectedMode: FullAuto
@@ -799,7 +799,7 @@
     steps: 3
     zeroVisible: true
   - type: Gun
-    fireRate: 2
+    fireRate: 1.5
     soundGunshot:
       collection: N14PlasmaAutoRifleGunshot
     selectedMode: SemiAuto
@@ -848,7 +848,7 @@
           tags:
             - N14PlasmaCartridge
   - type: Gun
-    fireRate: 1.5
+    fireRate: 1
     soundGunshot:
       collection: N14PlasmaAutoRifleGunshot
     selectedMode: SemiAuto
@@ -899,7 +899,7 @@
     steps: 3
     zeroVisible: true
   - type: Gun
-    fireRate: 3
+    fireRate: 2
     soundGunshot:
       collection: N14PlasmaAutoRifleGunshot
     selectedMode: SemiAuto
@@ -957,7 +957,7 @@
     steps: 5
     zeroVisible: true
   - type: Gun
-    fireRate: 2 # #Misfits Tweak - reduced from 6; shotgun pacing (1 spread burst per 0.5s)
+    fireRate: 1.5 # #Misfits Tweak - reduced from 6; shotgun pacing (1 spread burst per 0.5s)
     soundGunshot:
       collection: N14MultiplasGunshot
     selectedMode: SemiAuto # #Misfits Fix - was Burst; Multiplas fires multiple bolts simultaneously like a shotgun

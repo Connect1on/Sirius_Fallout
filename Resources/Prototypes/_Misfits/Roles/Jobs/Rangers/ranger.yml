@@ -55,7 +55,6 @@
     belt: ClothingBeltRevolverdesertfilled
     mask: ClothingMaskGasRangerDesert
     pocket1: MagazineBox45-70
-    pocket2: NCRfieldrangerloadoutkits
     eyes: ClothingEyesGlassesSunglasses
     outerClothing: N14ClothingOuterRangerCoat # Misfits Tweak - reserve desert combat armor for veteran-tier rangers
     id: N14IDBadgeNCRDesertRanger

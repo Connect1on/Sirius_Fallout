@@ -44,7 +44,6 @@
     belt: ClothingBeltNCR
     eyes: ClothingEyesGlassesSunglasses
     ears: N14ClothingHeadsetNCR
-    pocket1: NCRMPKit_Set
     pocket2: SiriusRubberStampNCRChiefMP
     id: N14IDNCRDogtagMPCaptain
   innerClothingSkirt: N14ClothingOfficerUniformNCRDesert

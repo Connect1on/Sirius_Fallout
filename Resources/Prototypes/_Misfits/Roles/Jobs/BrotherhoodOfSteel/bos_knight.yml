@@ -92,7 +92,6 @@
     head: N14ClothingHeadHatCapkhighBoS
     outerClothing: MisfitsBoSKnightArmor # #Misfits Tweak: T4 armor (0.75/0.70) — Knight tier, equal to NCR Specialist / Legion Veteran Legionnaire
     hands: N14ClothingHandsGlovesCombat
-    pocket1: BoSBrotherhoodKnightKits
     id: N14IDBrotherhoodOfSteelHolotagKnight
     ears: N14ClothingHeadsetBrotherhoodOfSteel
     belt: ClothingBeltBoSWebbing

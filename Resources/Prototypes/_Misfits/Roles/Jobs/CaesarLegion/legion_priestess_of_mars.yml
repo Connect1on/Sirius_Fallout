@@ -83,7 +83,6 @@
     ears: N14ClothingHeadsetLegion
     back: N14ClothingBackpackMilitary
     id: N14IDLegionaryMedalRecruit
-    pocket1: LegionPriestessLoadoutKits
   storage:
     back:
       - N14BoxPlasticFilledMilitaryLegion

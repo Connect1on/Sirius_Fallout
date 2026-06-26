@@ -50,7 +50,6 @@
     gloves: N14ClothingHandsGlovesTribal
     belt: N14Gladius
     suitstorage: N14PilumSpear
-    pocket1: LegionExplorerloadoutkits
     id: N14IDLegionaryMedalExplorer
   innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther
   storage:

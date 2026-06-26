@@ -51,7 +51,6 @@
     head: N14ClothingHeadHatLightBaseballHelmet # #Misfits Change /Tweak/: Prime Legionary wears a light baseball helmet
     outerClothing: MisfitsLegionWarriorArmor # #Misfits Tweak: T3 armor (0.80/0.75) — Warrior Legionnaire tier
     gloves: N14ClothingHandsGlovesTribal
-    pocket1: LegionWarriorloadoutkits
     id: N14IDLegionaryMedalSilver
   innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther
   storage:

@@ -9,7 +9,7 @@
     ignoreEmpty: true
   - type: Clickable
   - type: Sprite
-    sprite: Objects/Tools/bucket.rsi
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/vedro.rsi
     layers:
     - state: icon
     - map: ["enum.SolutionContainerLayers.Fill"]
@@ -18,10 +18,16 @@
   - type: Item
     size: Normal
   - type: Clothing
-    sprite: Objects/Tools/bucket.rsi
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/vedro.rsi
     slots:
     - HEAD
     quickEquip: false
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.9
   - type: SolutionContainerManager
     solutions:
       bucket:

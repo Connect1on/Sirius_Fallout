@@ -43,7 +43,6 @@
     shoes: N14ClothingBootsLeatherFilled
     id: N14IDBadgeTownSheriff
     belt: ClothingBeltRevolverWildWhisper
-    pocket1: TownGuardKits
     pocket2: Handcuffs
   storage: # Forge-Change
     back:

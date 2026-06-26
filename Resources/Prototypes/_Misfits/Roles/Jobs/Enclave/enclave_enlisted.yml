@@ -45,7 +45,6 @@
     neck: ClothingNeckPinEnclavePrivate
     belt: ClothingBeltMilitary
     ears: N14ClothingHeadsetEnclave
-    pocket1: EnclaveSoldierloadoutkits
     id: SiriusIDEnclaveEnlisted
   satchel: N14ClothingBackpackSatchelMilitaryFilled
   duffelbag: N14ClothingBackpackDuffelMilitaryFilled

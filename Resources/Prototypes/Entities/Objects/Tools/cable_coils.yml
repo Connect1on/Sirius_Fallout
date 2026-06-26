@@ -15,9 +15,9 @@
   - type: Stack
     stackType: Cable
   - type: Sprite
-    sprite: Objects/Tools/cable-coils.rsi
+    sprite: Objects/Tools/cable-rosetka-coils.rsi
   - type: Item
-    sprite: Objects/Tools/cable-coils.rsi
+    sprite: Objects/Tools/cable-rosetka-coils.rsi
     size: Small
     storedRotation: -90
   - type: CablePlacer

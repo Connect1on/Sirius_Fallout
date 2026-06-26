@@ -44,6 +44,7 @@
     head: N14ClothingHeadHatTribalOutcastHood
     gloves: N14ClothingHandsGlovesTribal
     belt: N14Gladius
+    outerClothing: N14ClothingOuterLegionnaireBaseArmor
     pocket1: LegionHoundmasterloadoutkits
     id: N14IDLegionaryMedalHoundmaster
   innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther

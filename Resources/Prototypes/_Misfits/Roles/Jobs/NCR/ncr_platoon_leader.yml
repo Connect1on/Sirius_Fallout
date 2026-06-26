@@ -48,7 +48,6 @@
     belt: ClothingBeltNCR
     eyes: ClothingEyesGlassesSunglasses
     ears: N14ClothingHeadsetNCR
-    pocket1: NCRLTloadoutkits
     pocket2: RadioHandheld
     id: N14IDNCRDogtagOfficer
   innerClothingSkirt: N14ClothingOfficerUniformNCRDesert

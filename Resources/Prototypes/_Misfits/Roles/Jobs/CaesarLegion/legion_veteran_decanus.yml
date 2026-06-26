@@ -76,7 +76,6 @@
     gloves: N14ClothingHandsGlovesTribal
     outerClothing: MisfitsLegionVeteranDecanusArmor # #Misfits Tweak: T7 armor (0.60/0.55) — Veteran Decanus, top Legion enlisted
     belt: N14Gladius
-    pocket1: LegionVeteranDecanusloadoutkits
     pocket2: N14WeaponPistol10mmPipe
     id: N14IDLegionaryMedalVeteranDecanus
   innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther

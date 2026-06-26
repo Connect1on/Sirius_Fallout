@@ -40,7 +40,6 @@
     shoes: N14ClothingBootsLeatherFilled
     id: N14IDBadgeTownDeputy
     belt: ClothingBeltRevolverfilled # Forge-Change
-    pocket1: TownGuardKits
     pocket2: Handcuffs
   storage: # Forge-Change
     back:

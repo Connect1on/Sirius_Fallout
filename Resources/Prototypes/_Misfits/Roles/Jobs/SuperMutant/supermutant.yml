@@ -380,7 +380,6 @@
     back: N14ClothingBackpackTrekker # Corvax-Change
     neck: ClothingSuperMutantNeckCapeTribal
     pocket1: N14TribalKnife
-    pocket2: Triballoadoutkits
     id: N14IDTribeBulletsPendant
   satchel: N14ClothingBackpackSatchelTribalFilled
   storage: # Corvax-Change

@@ -41,7 +41,6 @@
     shoes: N14ClothingBootsLeatherFilled
     head: N14ClothingHeadHatBanganeBoS
     outerClothing: MisfitsBoSSquireArmor # #Misfits Tweak: T2 armor (0.85/0.80) — Squires are still in training, lighter protection than Knights
-    pocket1: BoSBrotherhoodSquireKits
     id: N14IDBrotherhoodOfSteelHolotagSquire
     ears: N14ClothingHeadsetBrotherhoodOfSteel
     belt: ClothingBeltMilitary

@@ -14,17 +14,26 @@ public sealed class SpecialLowCharismaSystem : EntitySystem
 
     private static readonly string[] AwkwardOpeners =
     [
-        "Uh, ",
-        "Look, ",
-        "I mean, ",
-        "So, ",
+        "Ну, ",
+        "Зырь, ",
+        "Типа, ",
+        "Бля, ",
+        "Короче, ",
+        "Слышь, ",
+        "Кхе-кхе, ",
+        "Ой жёске, ",
     ];
 
     private static readonly string[] AwkwardClosers =
     [
-        ", I guess",
-        ", or whatever",
-        ", if that makes sense",
+        ", Нахуй",
+        ", Или типа того",
+        ", Хуё-моё",
+        ", Ну или я хз",
+        ", Ёпта",
+        ", Походу",
+        ", Така хуйня, малята",
+        ", Вот так вот",
     ];
 
     public override void Initialize()

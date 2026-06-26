@@ -4,20 +4,20 @@
   name: hoe
   components:
   - type: Sprite
-    sprite: Objects/Tools/Hydroponics/hoe.rsi # N14TODO: Sprite
-    state: icon
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools.rsi # sirius-change
+    state: cultivator
   - type: Item
-    sprite: Objects/Tools/Hydroponics/hoe.rsi # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools.rsi # sirius-change
 
 - type: entity
   parent: HydroponicsToolClippers
   id: N14HydroponicsToolClippers
   components:
   - type: Sprite
-    sprite: Objects/Tools/Hydroponics/clippers.rsi  # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/sekator.rsi  # sirius-change
     state: icon
   - type: Item
-    sprite: Objects/Tools/Hydroponics/clippers.rsi  # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/sekator.rsi  # sirius-change
 
 - type: entity
   parent: HydroponicsToolScythe
@@ -25,10 +25,10 @@
   description: A sharp and curved blade on a long fibremetal handle, this tool makes it easy to reap what you sow.
   components:
   - type: Sprite
-    sprite: Objects/Tools/Hydroponics/scythe.rsi  # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/kosa.rsi  # sirius-change
     state: icon
   - type: Clothing
-    sprite: Objects/Tools/Hydroponics/scythe.rsi  # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/kosa.rsi  # sirius-change
     slots:
     - back
 
@@ -38,19 +38,19 @@
   description: Can I axe you a question?
   components:
   - type: Sprite
-    sprite: Objects/Tools/Hydroponics/hatchet.rsi  # N14TODO: Sprite
-    state: icon
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools.rsi  # sirius-change
+    state: hatchet
   - type: Item
-    sprite: Objects/Tools/Hydroponics/hatchet.rsi  # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools.rsi  # sirius-change
 
 - type: entity
   parent: HydroponicsToolSpade
   id: N14HydroponicsToolShovel
-  name: shovel
+  name: Spade
   description: A tool for digging holes and moving aggregates.
   components:
   - type: Sprite
-    sprite: Objects/Tools/Hydroponics/spade.rsi  # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/lopata.rsi  # sirius-change
     state: icon
   - type: Item
-    sprite: Objects/Tools/Hydroponics/spade.rsi  # N14TODO: Sprite
+    sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/lopata.rsi  # sirius-change

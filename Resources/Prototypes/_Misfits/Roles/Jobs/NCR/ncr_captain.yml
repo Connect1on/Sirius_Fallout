@@ -49,7 +49,6 @@
     belt: ClothingBeltNCR
     eyes: ClothingEyesGlassesSunglasses
     ears: N14ClothingHeadsetNCR
-    pocket1: NCRcaptainloadoutkits
     pocket2: TrainingManualPowerArmorOperation
     id: N14IDNCRDogtagCaptain
   innerClothingSkirt: N14ClothingOfficerUniformNCRDesert

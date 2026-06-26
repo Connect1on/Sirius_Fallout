@@ -50,7 +50,6 @@
     neck: ClothingNeckPinNCRSergeant1st # #Misfits Change - sergeant first class pin for SFC rank
     belt: ClothingBeltNCR
     outerClothing: MisfitsNCRCommandArmor # #Misfits Tweak: T7 armor (0.60/0.55) — First Sergeant tier, top enlisted
-    pocket1: NCRfirstsergeantloadoutkits
     pocket2: RadioHandheld
     id: N14IDNCRDogtagFirstSergeant
   innerClothingSkirt: N14ClothingOfficerUniformNCRDesert # Corvax-Change
