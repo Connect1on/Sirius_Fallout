@@ -46,11 +46,11 @@
 - type: entity
   parent: HydroponicsToolSpade
   id: N14HydroponicsToolShovel
-  name: icon
+  name: Spade
   description: A tool for digging holes and moving aggregates.
   components:
   - type: Sprite
     sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/lopata.rsi  # sirius-change
-    state: spade
+    state: icon
   - type: Item
     sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/lopata.rsi  # sirius-change

@@ -5,7 +5,7 @@ namespace Content.Shared.CCVar;
 public sealed partial class CCVars
 {
     public static readonly CVarDef<double> GhostRespawnTime =
-        CVarDef.Create("ghost.respawn_time", 5d, CVar.SERVERONLY);
+        CVarDef.Create("ghost.respawn_time", 6d, CVar.SERVERONLY);
 
     public static readonly CVarDef<bool> GhostRespawnEnabled =
         CVarDef.Create("ghost.respawn_max_players_enabled", false, CVar.SERVERONLY); // Corvax-Change

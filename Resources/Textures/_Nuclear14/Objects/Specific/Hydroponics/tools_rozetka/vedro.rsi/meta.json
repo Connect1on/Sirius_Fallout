@@ -16,6 +16,19 @@
       "directions": 4
     },
     {
+      "name": "equipped",
+      "directions": 4
+    },
+    {
+      "name": "fill-1"
+    },
+    {
+      "name": "fill-2"
+    },
+    {
+      "name": "fill-3"
+    },
+    {
       "name": "icon"
     }
   ]
