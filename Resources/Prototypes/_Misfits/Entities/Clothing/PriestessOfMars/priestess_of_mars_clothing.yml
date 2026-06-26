@@ -68,9 +68,13 @@
   name: Priestess of Mars Boots
   description: Simple black boots suited for the dusty ground of the Legion's encampments.
 
-# Satchel — worn in the belt slot; inherits the small storage grid
+# Satchel — worn in the belt slot; bigger storage space than a regular fanny pack
 - type: entity
   parent: ClothingBeltStorageWaistbag
   id: N14PriestessOfMarsSatchel
   name: Priestess of Mars Satchel
   description: A worn leather satchel used to carry sacred texts, medicinal supplies, and whatever else the priestess might need during her duties.
+  components:
+  - type: Storage
+    grid:
+      - 0,0,5,1

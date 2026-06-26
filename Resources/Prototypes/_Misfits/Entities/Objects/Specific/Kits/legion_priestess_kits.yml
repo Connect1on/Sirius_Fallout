@@ -1,8 +1,8 @@
 ﻿- type: entity
-  name: priestess of order
+  name: priestess of zealotry
   parent: KitBase
-  id: KitPriestessOrder
-  description: "Run the camp with an iron fist."
+  id: KitPriestessZealot
+  description: "Inspire bloodlust in allies and terror in foes."
   components:
   - type: Sprite
     sprite: Corvax/Objects/Misc/kits.rsi
@@ -11,21 +11,18 @@
     size: Huge
   - type: SpawnItemsOnUse
     items:
-      - id: N14PoliceBaton
-      - id: NCClothingCollarLegionSlave
-        amount: 2
-      - id: N14IDKeyLegionSlaveCollar
-        amount: 2
-      - id: BoxHandcuff
-      - id: ClothingMaskMuzzle
-        amount: 2
+      - id: N14CeremonialSword
+      - id: N14LegionnaireShield
+      - id: ClothingBeltQuiverSpear
+      - id: N14PilumSpear
+        amount: 3
       - id: Bola
+        amount: 2
+      - id: N14FoodCazadorAcidSac
         amount: 2
       - id: N14FoodTinK
         amount: 2
       - id: N14JunkCeramicFlask
-      - id: N14WeaponShotgunSawedOff
-      - id: MisfitsMagazineBox12GaugeBeanbag
     sound:
       path: /Audio/Effects/unwrap.ogg
 
@@ -51,11 +48,9 @@
       - id: N14Bandage
         amount: 3
       - id: N14HealingPoultice
-        amount: 2
-      - id: N14Hydra
-        amount: 2
+        amount: 3
       - id: N14HealingPowder
-        amount: 2
+        amount: 3
       - id: N14FoodTinK
         amount: 2
       - id: N14JunkCeramicFlask

@@ -192,3 +192,42 @@
     - type: NpcFactionMember
       factions:
       - CaesarLegion
+
+- type: entity
+  parent: MobHuman
+  id: N14MobHumanCaesarLegionAuxilia
+  name: Auxilia
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: Loadout
+    prototypes: [CaesarLegionAuxiliaGear]
+  - type: NpcFactionMember
+    factions:
+    - CaesarLegion
+
+- type: entity
+  parent: MobHuman
+  id: N14MobHumanCaesarLegionForgemaster
+  name: Forgemaster
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: Loadout
+    prototypes: [CaesarLegionForgeMasterGear]
+  - type: NpcFactionMember
+    factions:
+    - CaesarLegion
+
+- type: entity
+  parent: MobHuman
+  id: N14MobHumanCaesarLegionPriestessofMars
+  name: Priestess of Mars
+  components:
+  - type: RandomHumanoidAppearance
+    randomizeName: true
+  - type: Loadout
+    prototypes: [CaesarLegionPriestessOfMarsGear]
+  - type: NpcFactionMember
+    factions:
+    - CaesarLegion

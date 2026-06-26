@@ -340,7 +340,6 @@
   - type: Blueprint
     recipes:
     - N14BPLegionArmorRecruitArmor
-    - N14BPLegionArmorExplorerArmor
     # #Misfits Add - paired tribal head wraps for recruits
     - N14BPLegionArmorHelmetTribalShemagh
     - N14BPLegionArmorHelmetTribalHeadWraps
@@ -354,7 +353,6 @@
   - type: Blueprint
     recipes:
     - N14BPLegionArmorBaseArmor
-    - N14BPLegionArmorVexillariusArmor
     - N14BPLegionArmorReconArmor
     # #Misfits Add - paired legionnaire hoods
     - N14BPLegionArmorHelmetTribalHood
@@ -369,7 +367,6 @@
   - type: Blueprint
     recipes:
     - N14BPLegionArmorVeteranArmor
-    - N14BPLegionArmorDeanRecruitArmor
     - N14BPLegionArmorReconnaissanceArmor
     # #Misfits Add - paired veteran headgear (hunter hoods and trophy skulls)
     - N14BPLegionArmorHelmetTribalHunterHood
@@ -384,9 +381,8 @@
   components:
   - type: Blueprint
     recipes:
-    - N14BPLegionArmorDeanVeteranArmor
-    - N14BPLegionArmorDeanPrimeArmor
     # #Misfits Add - paired looted pre-war helmets for Centurion-grade kits
+    - N14BPLegionArmorDeanRecruitArmor
     - N14BPLegionArmorHelmetPrewarMilitaryHelmet
     - N14BPLegionArmorHelmetMetalHelmet
 

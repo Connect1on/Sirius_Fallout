@@ -2058,22 +2058,6 @@
     Thread: 200
 
 
-- type: latheRecipe
-  id: N14BPLegionArmorExplorerArmor
-  result: N14ClothingOuterLegionnaireExplorerArmor
-  category: N14BlueprintLegionArmorT1
-  completetime: 5
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Leather: 700
-
-    Cloth: 500
-
-    Thread: 200
-
-
 # --- Legion Tier 2 Armor ---
 - type: latheRecipe
   id: N14BPLegionArmorBaseArmor
@@ -2089,24 +2073,6 @@
     Cloth: 1200
 
     Thread: 700
-
-    N14Iron: 500
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorVexillariusArmor
-  result: N14ClothingOuterLegionnaireVexillariusArmor
-  category: N14BlueprintLegionArmorT2
-  completetime: 9
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Leather: 1700
-
-    Cloth: 1200
-
-    Thread: 1000
 
     N14Iron: 500
 
@@ -2141,31 +2107,13 @@
   materials:
     Leather: 700
 
-    Steel: 4500
+    Steel: 8500
 
     Cloth: 300
 
     Thread: 300
 
     N14Iron: 500
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorDeanRecruitArmor
-  result: N14ClothingOuterDeanLegionnaireRecruitArmor
-  category: N14BlueprintLegionArmorT3
-  completetime: 14
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 5000
-
-    Leather: 200
-
-    Cloth: 170
-
-    Thread: 150
 
 
 - type: latheRecipe
@@ -2187,62 +2135,24 @@
 
 
 # --- Legion Tier 4 Armor ---
+
+
 - type: latheRecipe
-  id: N14BPLegionArmorDeanVeteranArmor
-  result: N14ClothingOuterDeanLegionnaireVeteranArmor
+  id: N14BPLegionArmorDeanRecruitArmor
+  result: N14ClothingOuterDeanLegionnairePrimeArmor
   category: N14BlueprintLegionArmorT4
-  completetime: 18
+  completetime: 14
   requiresBlueprint: true
   availableFaction:
   - CaesarLegion
   materials:
     Steel: 10000
 
-    Leather: 350
+    N14Iron: 700
 
-    Cloth: 300
+    Leather: 500
 
-    Thread: 200
-
-    N14Iron: 200
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorDeanPrimeArmor
-  result: N14ClothingOuterDeanLegionnairePrimeArmor
-  category: N14BlueprintLegionArmorT4
-  completetime: 20
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 6500
-
-    Leather: 350
-
-    Cloth: 270
-
-    Thread: 200
-
-    N14Iron: 200
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorHeavyCenturionArmor
-  result: N14ClothingOuterHeavyCenturionArmor
-  category: N14BlueprintLegionArmorT4
-  completetime: 22
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 10500
-
-    Leather: 450
-
-    N14Iron: 270
-
-    Cloth: 170
+    Cloth: 800
 
     Thread: 150
 

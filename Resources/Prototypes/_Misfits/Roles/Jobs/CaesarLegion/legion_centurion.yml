@@ -49,6 +49,7 @@
         - SuperMutantGladiator
         cautionPopup: true
         activatorJobs:
+        - CaesarLegionVexillarius
         - CaesarLegionDean
         - CaesarLegionPrimeDecanus
         - CaesarLegionVeteranDecanus
@@ -83,7 +84,6 @@
     back:
     - N14BoxPlasticFilledMilitaryLegion #Misfits Change /Tweak/: Legion uses tribal medicine, not stimpaks
     - N14HealingPowder
-    - N14WeaponPistol10mmPipe  # #Misfits Change - moved from pocket2 to storage; pocket2 now holds armor kit
 
 - type: playTimeTracker
   id: CaesarLegionCenturion

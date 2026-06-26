@@ -47,6 +47,7 @@
     shoes: N14ClothingBootsLeather
     head: N14ClothingHeadHatTribalOutcastHood
     gloves: N14ClothingHandsGlovesTribal
+    outerClothing: N14ClothingOuterLegionnaireRecruitArmor
     pocket1: LegionAuxilialoadoutkits
     id: N14IDLegionaryBadge
   innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther

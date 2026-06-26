@@ -60,6 +60,7 @@
           - SuperMutantGladiator
           cautionPopup: true
           activatorJobs:
+          - CaesarLegionVexillarius
           - CaesarLegionDean
           - CaesarLegionPrimeDecanus
           - CaesarLegionVeteranDecanus
@@ -82,16 +83,15 @@
     belt: N14PriestessOfMarsSatchel
     ears: N14ClothingHeadsetLegion
     back: N14ClothingBackpackMilitary
-    id: N14IDLegionaryMedalRecruit
+    id: N14IDLegionaryBadgePriestessOfMars
+    outerClothing: N14ClothingOuterLegionnaireReconnaissanceArmor
     pocket1: LegionPriestessLoadoutKits
+    pocket2: N14Whip
   storage:
     back:
       - N14BoxPlasticFilledMilitaryLegion
       - N14HealingPowder
-      - N14HealingPowder
       - N14HealingPoultice
-      - N14HealingPoultice
-      - N14Hydra
 
 # Playtime tracker — accumulated hours unlock future female Legion ranks.
 - type: playTimeTracker

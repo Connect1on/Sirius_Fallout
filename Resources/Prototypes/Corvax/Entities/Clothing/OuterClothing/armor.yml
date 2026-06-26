@@ -131,22 +131,19 @@
   parent: N14FalloutArmorBase
   id: N14ClothingOuterDeanLegionnairePrimeArmor
   name: heavy legionary armor
-  description: "The heavy version of legionary armor slows down the wearer, but gives good protection from external threats."
+  description: "Though this heavy plate offers no added mobility, it stands as the Forgemaster's most protective suit of armor."
   components:
   - type: Sprite
     sprite: Corvax/Clothing/OuterClothing/Armor/deanprimearmor.rsi
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/deanprimearmor.rsi
-  - type: ClothingSpeedModifier
-    walkModifier: 0.9 # this is combat mk2 it can be slower
-    sprintModifier: 0.9
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.70
         Slash: 0.70
         Piercing: 0.60 # prime is slightly above "recruit" so here is 5% extra resist. sprite does literally have more metal on it.
-        Heat: 0.60 # light 5% buff.
+        Heat: 0.70 # worse on heat
   - type: ExplosionResistance
     damageCoefficient: 0.65
 #  - type: ClothingSpecialModifier
@@ -163,8 +160,8 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/deanrecruitarmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 0.95 # made a little faster since its just worse than combat mk2
-    sprintModifier: 0.95
+    walkModifier: 1.05 # made a little faster since its just worse than combat mk2
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
@@ -188,8 +185,8 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/veteranarmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 1.05
-    sprintModifier: 1.05
+    walkModifier: 1.10
+    sprintModifier: 1.10
   - type: Armor
     modifiers:
       coefficients:
@@ -211,8 +208,8 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/reconnaissancearmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 1.05 #same as ranger recon
-    sprintModifier: 1.05
+    walkModifier: 1.10 #same as ranger recon
+    sprintModifier: 1.10
   - type: Armor
     modifiers:
       coefficients:
@@ -256,6 +253,9 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/basearmor.rsi
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/basearmor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05 #A little faster than the previous recon
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
@@ -277,8 +277,8 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/lightarmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 1.05
-    sprintModifier: 1.05 # the little ones can enjoy the game too.
+    walkModifier: 1.10
+    sprintModifier: 1.10 # the little ones can enjoy the game too.
   - type: Armor
     modifiers:
       coefficients:
@@ -300,15 +300,15 @@
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/vexillariusarmor.rsi
   - type: ClothingSpeedModifier
-    walkModifier: 1.05 # basically the same as veteran
-    sprintModifier: 1.05
+    walkModifier: 1.10 # basically the same as veteran
+    sprintModifier: 1.10
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.75
         Slash: 0.75
-        Piercing: 0.70 #Vex is a honored veteran
-        Heat: 0.70 #more heat resist, metal pans cover chest and abdomen 
+        Piercing: 0.65 #Vex is a honored veteran
+        Heat: 0.70 #more heat resist, metal pans cover chest and abdomen
   - type: ExplosionResistance
     damageCoefficient: 0.80
 
@@ -330,8 +330,8 @@
       coefficients:
         Blunt: 0.85
         Slash: 0.85
-        Piercing: 0.90
-        Heat: 0.90
+        Piercing: 0.80
+        Heat: 0.80
   - type: ExplosionResistance
     damageCoefficient: 0.90
 
@@ -345,6 +345,9 @@
     sprite: Corvax/Clothing/OuterClothing/Armor/oratorarmor.rsi
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Armor/oratorarmor.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.05 #A little faster than the previous recon
+    sprintModifier: 1.05
   - type: Armor
     modifiers:
       coefficients:
