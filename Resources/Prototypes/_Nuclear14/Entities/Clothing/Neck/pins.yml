@@ -131,6 +131,21 @@
 
 - type: entity
   parent: ClothingNeckPinNCRPrivate
+  id: ClothingNeckPinNCRMPMasterSergeant
+  name: master sergeant pin
+  components:
+  - type: RankTitle
+    rankTitle: Master Sergeant
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
+    layers:
+    - state: mastersergeant
+  - type: Tag
+    tags:
+    - SuperMutantWearable
+
+- type: entity
+  parent: ClothingNeckPinNCRPrivate
   id: ClothingNeckPinNCRSergeantMajor
   name: sergeant major pin
   components:
@@ -206,6 +221,21 @@
   components:
   - type: RankTitle
     rankTitle: Major
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
+    layers:
+    - state: major
+  - type: Tag
+    tags:
+    - SuperMutantWearable
+
+- type: entity
+  parent: ClothingNeckPinNCRFirstLieutenant
+  id: ClothingNeckPinNCRLtColonel
+  name: lieutenant colonel pin
+  components:
+  - type: RankTitle
+    rankTitle: Lieutenant Colonel
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:

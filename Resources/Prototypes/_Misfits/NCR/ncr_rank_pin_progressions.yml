@@ -15,6 +15,9 @@
 #   NCRTrooper           — NCR Trooper
 #   C27NCR               — NCR C27
 #   SuperMutantNCRTrooper— NCR Super Mutant Trooper
+#   NCRMilitaryPoliceRecruit  — NCRMP Specialist
+#   NCRMilitaryPoliceSergeant — NCRMP Staff Sergeant
+#   NCRMilitaryPoliceCaptain  — NCRMP First Lieutenant
 
 # Commander: Captain (O-3) → Major (O-4) at 20h
 - type: ncrRankPinProgression
@@ -192,3 +195,50 @@
       entity: ClothingNeckPinNCRPrivate1st
     - min: 72000  # 20 hours
       entity: ClothingNeckPinNCRSpecialist
+
+# NCRMP Specialist: SPC (E-4) -> SGT (E-5) at 20h
+- type: ncrRankPinProgression
+  id: NCRMilitaryPoliceRecruitPins
+  jobs:
+    - NCRMilitaryPoliceRecruit
+  tracker: NCRMilitaryPoliceRecruit
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRSpecialist
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRSergeant
+
+# NCRMP Staff Sergeant: SSG (E-6) -> SFC (E-7) at 20h -> MSG (E-8) at 40h -> SGM (E-9) at 60h
+- type: ncrRankPinProgression
+  id: NCRMilitaryPoliceSergeantPins
+  jobs:
+    - NCRMilitaryPoliceSergeant
+  tracker: NCRMilitaryPoliceSergeant
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRSergeant1st
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRMasterSergeant
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinNCRMPMasterSergeant
+    - min: 216000  # 60 hours
+      entity: ClothingNeckPinNCRSergeantMajor
+
+# NCRMP First Lieutenant: 1LT (O-2) -> CPT (O-3) at 20h -> MAJ (O-4) at 40h -> LTC (O-5) at 80h
+- type: ncrRankPinProgression
+  id: NCRMilitaryPoliceOfficerPins
+  jobs:
+    - NCRMilitaryPoliceCaptain
+  tracker: NCRMilitaryPoliceCaptain
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinNCRFirstLieutenant
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinNCRCaptain
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinNCRMajor
+    - min: 288000  # 80 hours
+      entity: ClothingNeckPinNCRLtColonel
