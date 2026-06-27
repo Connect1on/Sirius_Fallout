@@ -1,4 +1,5 @@
-﻿using System.Linq;
+using System.Linq;
+using System.Numerics;
 using Content.Client.Administration.Managers;
 using Content.Client.ContextMenu.UI;
 using Content.Client.Decals;
@@ -21,7 +22,6 @@ using Robust.Client.Placement;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.CustomControls;
-using Robust.Shared;
 using Robust.Shared.Enums;
 using Robust.Shared.Input;
 using Robust.Shared.Input.Binding;
@@ -33,7 +33,6 @@ using Robust.Shared.Serialization.Markdown.Sequence;
 using Robust.Shared.Serialization.Markdown.Value;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Robust.Shared.Configuration;
 using static Robust.Client.UserInterface.Controls.BaseButton;
 using static Robust.Client.UserInterface.Controls.OptionButton;
 using static Robust.Shared.Input.Binding.PointerInputCmdHandler;
@@ -57,8 +56,9 @@ public sealed class MappingState : GameplayStateBase
     [Dependency] private readonly IResourceCache _resources = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
-    [Dependency] private readonly ILocalizationManager _locale = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    // Sirius edit start
+    [Dependency] private readonly ILocalizationManager _localization = default!;
+    // Sirius edit end
 
     private EntityMenuUIController _entityMenuController = default!;
 
@@ -114,6 +114,7 @@ public sealed class MappingState : GameplayStateBase
         var context = _input.Contexts.GetContext("common");
         context.AddFunction(ContentKeyFunctions.MappingUnselect);
         context.AddFunction(ContentKeyFunctions.SaveMap);
+        // Sirius edit start
         context.AddFunction(ContentKeyFunctions.MappingEnablePick);
         context.AddFunction(ContentKeyFunctions.MappingEnableDecalPick);
         context.AddFunction(ContentKeyFunctions.MappingEnableDelete);
@@ -122,6 +123,7 @@ public sealed class MappingState : GameplayStateBase
         context.AddFunction(ContentKeyFunctions.MappingCancelEraseDecal);
         context.AddFunction(ContentKeyFunctions.MappingOpenContextMenu);
         context.AddFunction(ContentKeyFunctions.MouseMiddle);
+        // Sirius edit end
 
         Screen.DecalSystem = _decal;
 
@@ -133,12 +135,16 @@ public sealed class MappingState : GameplayStateBase
         Screen.Decals.SelectionChanged += OnSelected;
 
         Screen.Pick.OnPressed += OnPickPressed;
+        // Sirius edit start
         Screen.PickDecal.OnPressed += OnPickDecalPressed;
+        // Sirius edit end
         Screen.EntityReplaceButton.OnToggled += OnEntityReplacePressed;
         Screen.EntityPlacementMode.OnItemSelected += OnEntityPlacementSelected;
+        // Sirius edit start
         Screen.EraseEntityButton.OnToggled += OnEraseEntityPressed;
         Screen.EraseTileButton.OnToggled += OnEraseTilePressed;
         Screen.EraseDecalButton.OnToggled += OnEraseDecalPressed;
+        // Sirius edit end
         Screen.FixGridAtmos.OnPressed += OnFixGridAtmosPressed;
         Screen.RemoveGrid.OnPressed += OnRemoveGridPressed;
         Screen.MoveGrid.OnPressed += OnMoveGridPressed;
@@ -184,12 +190,16 @@ public sealed class MappingState : GameplayStateBase
         Screen.Decals.SelectionChanged -= OnSelected;
 
         Screen.Pick.OnPressed -= OnPickPressed;
+        // Sirius edit start
         Screen.PickDecal.OnPressed -= OnPickDecalPressed;
+        // Sirius edit end
         Screen.EntityReplaceButton.OnToggled -= OnEntityReplacePressed;
         Screen.EntityPlacementMode.OnItemSelected -= OnEntityPlacementSelected;
+        // Sirius edit start
         Screen.EraseEntityButton.OnToggled -= OnEraseEntityPressed;
         Screen.EraseTileButton.OnToggled -= OnEraseTilePressed;
         Screen.EraseDecalButton.OnToggled -= OnEraseDecalPressed;
+        // Sirius edit end
         Screen.FixGridAtmos.OnPressed -= OnFixGridAtmosPressed;
         Screen.RemoveGrid.OnPressed -= OnRemoveGridPressed;
         Screen.MoveGrid.OnPressed -= OnMoveGridPressed;
@@ -207,6 +217,7 @@ public sealed class MappingState : GameplayStateBase
         var context = _input.Contexts.GetContext("common");
         context.RemoveFunction(ContentKeyFunctions.MappingUnselect);
         context.RemoveFunction(ContentKeyFunctions.SaveMap);
+        // Sirius edit start
         context.RemoveFunction(ContentKeyFunctions.MappingEnablePick);
         context.RemoveFunction(ContentKeyFunctions.MappingEnableDecalPick);
         context.RemoveFunction(ContentKeyFunctions.MappingEnableDelete);
@@ -214,6 +225,7 @@ public sealed class MappingState : GameplayStateBase
         context.RemoveFunction(ContentKeyFunctions.MappingRemoveDecal);
         context.RemoveFunction(ContentKeyFunctions.MappingCancelEraseDecal);
         context.RemoveFunction(ContentKeyFunctions.MappingOpenContextMenu);
+        // Sirius edit end
 
         _overlays.RemoveOverlay<MappingOverlay>();
 
@@ -250,6 +262,7 @@ public sealed class MappingState : GameplayStateBase
             Screen.EraseEntityButton.ToolTip = Loc.GetString("mapping-erase-entity-tooltip", ("key", enableDeleteBinding.GetKeyString()));
     }
 
+    // Sirius edit start
     private void SaveFavorites()
     {
         Screen.Entities.FavoritesPrototype.Children ??= new List<MappingPrototype>();
@@ -263,25 +276,17 @@ public sealed class MappingState : GameplayStateBase
 
         _mapping.SaveFavorites(children);
     }
+    // Sirius edit end
 
+    // Sirius edit start
     private void ReloadPrototypes()
     {
         var mappings = new Dictionary<string, MappingPrototype>();
         var entities = new MappingPrototype(null, Loc.GetString("mapping-entities")) { Children = new List<MappingPrototype>() };
-        var categoryFilter = _cfg.GetCVar(CVars.EntitiesCategoryFilter);
-        _prototypeManager.TryIndex<EntityCategoryPrototype>(categoryFilter, out var filter);
         foreach (var entity in _prototypeManager.EnumeratePrototypes<EntityPrototype>())
         {
-            if (entity.Abstract)
-                continue;
-
-            if (entity.HideSpawnMenu)
-                continue;
-
-            if (filter is not null && !entity.Categories.Contains(filter))
-                continue;
-
-            Register(entity, entity.ID, entities);
+            if (!entity.HideSpawnMenu)
+                Register(entity, entity.ID, entities);
         }
 
         Sort(mappings, entities);
@@ -329,22 +334,24 @@ public sealed class MappingState : GameplayStateBase
         Sort(mappings, entitiesTemplate);
         mappings.Clear();
         Screen.Entities.UpdateVisible(
-            new(entitiesTemplate.Children?.Count > 0 ? [entitiesTemplate, entities] : [entities]),
+            new (entitiesTemplate.Children?.Count > 0 ? [entitiesTemplate, entities] : [entities]),
             _allPrototypes.GetOrNew(typeof(EntityPrototype)));
 
         Sort(mappings, tilesTemplate);
         mappings.Clear();
         Screen.Tiles.UpdateVisible(
-            new(tilesTemplate.Children?.Count > 0 ? [tilesTemplate, tiles] : [tiles]),
+            new (tilesTemplate.Children?.Count > 0 ? [tilesTemplate, tiles] : [tiles]),
             _allPrototypes.GetOrNew(typeof(ContentTileDefinition)));
 
         Sort(mappings, decalsTemplate);
         mappings.Clear();
         Screen.Decals.UpdateVisible(
-            new(decalsTemplate.Children?.Count > 0 ? [decalsTemplate, decals] : [decals]),
+            new (decalsTemplate.Children?.Count > 0 ? [decalsTemplate, decals] : [decals]),
             _allPrototypes.GetOrNew(typeof(DecalPrototype)));
     }
+    // Sirius edit end
 
+    // Sirius edit start
     private void RegisterTemplates(MappingTemplatePrototype templateProto, TemplateType? type, MappingPrototype toplevel)
     {
         if (type == null)
@@ -374,7 +381,7 @@ public sealed class MappingState : GameplayStateBase
         if (proto == null)
         {
             var name = templateProto.ID;
-            if (_locale.TryGetString($"mapping-template-{templateProto.ID.ToLower()}", out var locale))
+            if (_localization.TryGetString($"mapping-template-{templateProto.ID.ToLower()}", out var locale))
                 name = locale;
             proto = new MappingPrototype(null, name);
         }
@@ -390,14 +397,19 @@ public sealed class MappingState : GameplayStateBase
         toplevel.Children ??= new List<MappingPrototype>();
         toplevel.Children.Add(proto);
     }
+    // Sirius edit end
 
+    // Sirius edit start
     private MappingPrototype? Register<T>(T? prototype, string id, MappingPrototype topLevel) where T : class, IPrototype, IInheritingPrototype
     {
         {
-            if (prototype == null && _prototypeManager.TryIndex(id, out prototype))
-                if (prototype is EntityPrototype entity)
-                    if (entity.HideSpawnMenu || entity.Abstract)
-                        prototype = null;
+            if (prototype == null &&
+                _prototypeManager.TryIndex(id, out prototype) &&
+                prototype is EntityPrototype entity)
+            {
+                if (entity.HideSpawnMenu || entity.Abstract)
+                    prototype = null;
+            }
         }
 
         if (prototype == null)
@@ -410,8 +422,9 @@ public sealed class MappingState : GameplayStateBase
 
             var ids = _idDict.GetOrNew(typeof(T));
             if (ids.TryGetValue(id, out var mapping))
+            {
                 return mapping;
-
+            }
             else
             {
                 var name = node.TryGet("name", out ValueDataNode? nameNode)
@@ -467,12 +480,17 @@ public sealed class MappingState : GameplayStateBase
         {
             var ids = _idDict.GetOrNew(typeof(T));
             if (ids.TryGetValue(id, out var mapping))
+            {
                 return mapping;
-
+            }
             else
             {
                 var entity = prototype as EntityPrototype;
-                var name = entity?.Name ?? prototype.ID;
+                var tile = prototype as ContentTileDefinition;
+                var name = entity?.Name ?? tile?.Name ?? prototype.ID;
+
+                if (tile != null && _localization.TryGetString(tile.Name, out var locName))
+                    name = locName;
 
                 if (!string.IsNullOrWhiteSpace(entity?.EditorSuffix))
                     name = $"{name} [{entity.EditorSuffix}]";
@@ -508,6 +526,7 @@ public sealed class MappingState : GameplayStateBase
             return mapping;
         }
     }
+    // Sirius edit end
 
     private void Sort(Dictionary<string, MappingPrototype> prototypes, MappingPrototype topLevel)
     {
@@ -616,6 +635,7 @@ public sealed class MappingState : GameplayStateBase
         Screen.EntityPlacementMode.Disabled = _placement.Eraser;
     }
 
+    // Sirius edit start
     private void OnFavoritesLoaded(List<IPrototype> prototypes)
     {
         Screen.Entities.FavoritesPrototype.Children = new List<MappingPrototype>();
@@ -627,41 +647,42 @@ public sealed class MappingState : GameplayStateBase
             switch (prototype)
             {
                 case EntityPrototype entityPrototype:
+                {
+                    if (_idDict.GetOrNew(typeof(EntityPrototype)).TryGetValue(entityPrototype.ID, out var entity))
                     {
-                        if (_idDict.GetOrNew(typeof(EntityPrototype)).TryGetValue(entityPrototype.ID, out var entity))
-                        {
-                            Screen.Entities.FavoritesPrototype.Children.Add(entity);
-                            entity.Parents ??= new List<MappingPrototype>();
-                            entity.Parents.Add(Screen.Entities.FavoritesPrototype);
-                            entity.Favorite = true;
-                        }
-                        break;
+                        Screen.Entities.FavoritesPrototype.Children.Add(entity);
+                        entity.Parents ??= new List<MappingPrototype>();
+                        entity.Parents.Add(Screen.Entities.FavoritesPrototype);
+                        entity.Favorite = true;
                     }
+                    break;
+                }
                 case DecalPrototype decalPrototype:
+                {
+                    if (_idDict.GetOrNew(typeof(DecalPrototype)).TryGetValue(decalPrototype.ID, out var decal))
                     {
-                        if (_idDict.GetOrNew(typeof(DecalPrototype)).TryGetValue(decalPrototype.ID, out var decal))
-                        {
-                            Screen.Decals.FavoritesPrototype.Children.Add(decal);
-                            decal.Parents ??= new List<MappingPrototype>();
-                            decal.Parents.Add(Screen.Decals.FavoritesPrototype);
-                            decal.Favorite = true;
-                        }
-                        break;
+                        Screen.Decals.FavoritesPrototype.Children.Add(decal);
+                        decal.Parents ??= new List<MappingPrototype>();
+                        decal.Parents.Add(Screen.Decals.FavoritesPrototype);
+                        decal.Favorite = true;
                     }
+                    break;
+                }
                 case ContentTileDefinition tileDefinition:
+                {
+                    if (_idDict.GetOrNew(typeof(ContentTileDefinition)).TryGetValue(tileDefinition.ID, out var tile))
                     {
-                        if (_idDict.GetOrNew(typeof(ContentTileDefinition)).TryGetValue(tileDefinition.ID, out var tile))
-                        {
-                            Screen.Tiles.FavoritesPrototype.Children.Add(tile);
-                            tile.Parents ??= new List<MappingPrototype>();
-                            tile.Parents.Add(Screen.Tiles.FavoritesPrototype);
-                            tile.Favorite = true;
-                        }
-                        break;
+                        Screen.Tiles.FavoritesPrototype.Children.Add(tile);
+                        tile.Parents ??= new List<MappingPrototype>();
+                        tile.Parents.Add(Screen.Tiles.FavoritesPrototype);
+                        tile.Favorite = true;
                     }
+                    break;
+                }
             }
         }
     }
+    // Sirius edit end
 
     protected override void OnKeyBindStateChanged(ViewportBoundKeyEventArgs args)
     {
@@ -678,7 +699,7 @@ public sealed class MappingState : GameplayStateBase
         switch (prototype)
         {
             case EntityPrototype entity:
-                textures.AddRange(SpriteComponent.GetPrototypeTextures(entity, _resources).Select(t => t.Default));
+                textures.AddRange(_sprite.GetPrototypeTextures(entity).Select(t => t.Default));
                 break;
             case DecalPrototype decal:
                 textures.Add(_sprite.Frame0(decal.Sprite));
@@ -731,6 +752,7 @@ public sealed class MappingState : GameplayStateBase
             _scrollTo = (last, list);
     }
 
+    // Sirius edit start
     private void OnSelected(MappingPrototypeList list, MappingSpawnButton button, IPrototype? prototype)
     {
         var time = _timing.CurTime;
@@ -740,16 +762,25 @@ public sealed class MappingState : GameplayStateBase
         // Double-click functionality if it's collapsible.
         if (_lastClicked is { } lastClicked &&
             lastClicked.Button == button &&
-            lastClicked.At > time - TimeSpan.FromSeconds(0.333) &&
-            string.IsNullOrEmpty(list.SearchBar.Text) &&
-            button.CollapseButton.Visible)
+            lastClicked.At > time - TimeSpan.FromSeconds(0.333))
         {
-            button.CollapseButton.Pressed = !button.CollapseButton.Pressed;
-            list.ToggleCollapse(button);
-            button.Button.Pressed = true;
-            list.Selected = button;
-            _lastClicked = null;
-            return;
+            if (button.CollapseButton.Visible && string.IsNullOrEmpty(list.SearchBar.Text))
+            {
+                button.CollapseButton.Pressed = !button.CollapseButton.Pressed;
+                list.ToggleCollapse(button);
+                button.Button.Pressed = true;
+                list.Selected = button;
+                _lastClicked = null;
+                return;
+            }
+
+            if (button.Parent == list.SearchList && button.Prototype != null)
+            {
+                list.SearchBar.SetText(string.Empty, true);
+                OnSelected(list, button.Prototype);
+                _lastClicked = null;
+                return;
+            }
         }
 
         // Toggle if it's the same button (at least if we just unclicked it).
@@ -777,20 +808,20 @@ public sealed class MappingState : GameplayStateBase
         switch (prototype)
         {
             case EntityPrototype entity:
+            {
+                var placementId = Screen.EntityPlacementMode.SelectedId;
+
+                var placement = new PlacementInformation
                 {
-                    var placementId = Screen.EntityPlacementMode.SelectedId;
+                    PlacementOption = placementId > 0 ? EntitySpawnWindow.InitOpts[placementId] : entity.PlacementMode,
+                    EntityType = entity.ID,
+                    IsTile = false
+                };
 
-                    var placement = new PlacementInformation
-                    {
-                        PlacementOption = placementId > 0 ? EntitySpawnWindow.InitOpts[placementId] : entity.PlacementMode,
-                        EntityType = entity.ID,
-                        IsTile = false
-                    };
-
-                    _decal.SetActive(false);
-                    _placement.BeginPlacing(placement);
-                    break;
-                }
+                _decal.SetActive(false);
+                _placement.BeginPlacing(placement);
+                break;
+            }
             case DecalPrototype decal:
                 _placement.Clear();
 
@@ -798,18 +829,18 @@ public sealed class MappingState : GameplayStateBase
                 Screen.SelectDecal(decal.ID);
                 break;
             case ContentTileDefinition tile:
+            {
+                var placement = new PlacementInformation
                 {
-                    var placement = new PlacementInformation
-                    {
-                        PlacementOption = "AlignTileAny",
-                        TileType = tile.TileId,
-                        IsTile = true
-                    };
+                    PlacementOption = "AlignTileAny",
+                    TileType = tile.TileId,
+                    IsTile = true
+                };
 
-                    _decal.SetActive(false);
-                    _placement.BeginPlacing(placement);
-                    break;
-                }
+                _decal.SetActive(false);
+                _placement.BeginPlacing(placement);
+                break;
+            }
             default:
                 _placement.Clear();
                 break;
@@ -819,6 +850,7 @@ public sealed class MappingState : GameplayStateBase
 
         button.Button.Pressed = true;
     }
+    // Sirius edit end
 
     private void OnEntityReplacePressed(ButtonToggledEventArgs args)
     {
@@ -1083,6 +1115,7 @@ public sealed class MappingState : GameplayStateBase
         return true;
     }
 
+    // Sirius edit start
     private bool HandleEnableDecalPick(ICommonSession? session, EntityCoordinates coords, EntityUid uid)
     {
         Deselect();
@@ -1099,7 +1132,9 @@ public sealed class MappingState : GameplayStateBase
         Meta.State = CursorState.None;
         return true;
     }
+    // Sirius edit end
 
+    // Sirius edit start
     private bool HandleEnableDelete(ICommonSession? session, EntityCoordinates coords, EntityUid uid)
     {
         Screen.EraseEntityButton.Pressed = true;
@@ -1113,7 +1148,9 @@ public sealed class MappingState : GameplayStateBase
         DisableEntityEraser();
         return true;
     }
+    // Sirius edit end
 
+    // Sirius edit start
     private bool HandlePick(ICommonSession? session, EntityCoordinates coords, EntityUid uid)
     {
         MappingPrototype? button = null;
@@ -1131,15 +1168,15 @@ public sealed class MappingState : GameplayStateBase
                     switch (button.Prototype)
                     {
                         case EntityPrototype:
-                            {
-                                OnSelected(Screen.Entities, button);
-                                break;
-                            }
+                        {
+                            OnSelected(Screen.Entities, button);
+                            break;
+                        }
                         case ContentTileDefinition:
-                            {
-                                OnSelected(Screen.Tiles, button);
-                                break;
-                            }
+                        {
+                            OnSelected(Screen.Tiles, button);
+                            break;
+                        }
                     }
 
                     return true;
@@ -1167,7 +1204,7 @@ public sealed class MappingState : GameplayStateBase
 
         if (uid == EntityUid.Invalid ||
             _entityManager.GetComponentOrNull<MetaDataComponent>(uid) is not
-            { EntityPrototype: { } prototype } ||
+                { EntityPrototype: { } prototype } ||
             !_allPrototypesDict.TryGetValue(prototype, out button))
         {
             // we always block other input handlers if pick mode is enabled
@@ -1184,6 +1221,7 @@ public sealed class MappingState : GameplayStateBase
 
         return true;
     }
+    // Sirius edit end
 
     private bool HandleEditorCancelPlace(ICommonSession? session, EntityCoordinates coords, EntityUid uid)
     {

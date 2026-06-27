@@ -1,81 +1,514 @@
 - type: mappingTemplate
+  id: Systems
+  rootType: Entity
+  children:
+  - !type:MappingTemplatePrototype
+    id: Atmosphere
+    children:
+      - !type:MappingTemplatePrototype
+        id: Pipes
+        children:
+          - !type:MappingTemplatePrototype
+            id: GasPipeFourway
+          - !type:MappingTemplatePrototype
+            id: GasPipeTJunction
+          - !type:MappingTemplatePrototype
+            id: GasPipeStraight
+          - !type:MappingTemplatePrototype
+            id: GasPipeBend
+          - !type:MappingTemplatePrototype
+            id: GasPipeHalf
+          - !type:MappingTemplatePrototype
+            id: GasPipeBroken
+      - !type:MappingTemplatePrototype
+        id: Devices
+        children:
+          - !type:MappingTemplatePrototype
+            id: GasPort
+          - !type:MappingTemplatePrototype
+            id: GasPressurePump
+          - !type:MappingTemplatePrototype
+            id: GasVolumePump
+          - !type:MappingTemplatePrototype
+            id: SignalControlledValve
+          - !type:MappingTemplatePrototype
+            id: GasValve
+          - !type:MappingTemplatePrototype
+            id: GasPassiveGate
+          - !type:MappingTemplatePrototype
+            id: GasPipeSensor
+          - !type:MappingTemplatePrototype
+            id: HeatExchanger
+          - !type:MappingTemplatePrototype
+            id: GasMixer
+          - !type:MappingTemplatePrototype
+            id: GasFilter
+      - !type:MappingTemplatePrototype
+        id: ExternalInteraction
+        children:
+          - !type:MappingTemplatePrototype
+            id: GasPassiveVent
+          - !type:MappingTemplatePrototype
+            id: GasVentPump
+          - !type:MappingTemplatePrototype
+            id: GasVentScrubber
+          - !type:MappingTemplatePrototype
+            id: GasOutletInjector
+          - !type:MappingTemplatePrototype
+            id: AirSensor
+          - !type:MappingTemplatePrototype
+            id: AirAlarm
+          - !type:MappingTemplatePrototype
+            id: FireAlarm
+          - !type:MappingTemplatePrototype
+            id: FirelockEdge
+          - !type:MappingTemplatePrototype
+            id: Firelock
+  - !type:MappingTemplatePrototype
+    id: Cables
+    children:
+      - !type:MappingTemplatePrototype
+        id: CableTerminal
+      - !type:MappingTemplatePrototype
+        id: SMESBasic
+      - !type:MappingTemplatePrototype
+        id: SubstationBasic
+      - !type:MappingTemplatePrototype
+        id: APCBasic
+      - !type:MappingTemplatePrototype
+        id: CableHV
+      - !type:MappingTemplatePrototype
+        id: RandomCableHVSpawner
+      - !type:MappingTemplatePrototype
+        id: CableMV
+      - !type:MappingTemplatePrototype
+        id: RandomCableMVSpawner
+      - !type:MappingTemplatePrototype
+        id: CableApcExtension
+      - !type:MappingTemplatePrototype
+        id: RandomCableApcExtensionSpawner
+  - !type:MappingTemplatePrototype
+    id: Disposal
+    children:
+      - !type:MappingTemplatePrototype
+        id: DisposalPipeBase
+      - !type:MappingTemplatePrototype
+        id: DisposalUnitBase
+  - !type:MappingTemplatePrototype
+    id: Lighting
+    children:
+      - !type:MappingTemplatePrototype
+        id: AlwaysPoweredWallLight
+      - !type:MappingTemplatePrototype
+        id: SmallLight
+      - !type:MappingTemplatePrototype
+        id: EmergencyLight
+      - !type:MappingTemplatePrototype
+        id: Poweredlight
+      - !type:MappingTemplatePrototype
+        id: PoweredlightLED
+      - !type:MappingTemplatePrototype
+        id: AlwaysPoweredLightExterior
+      - !type:MappingTemplatePrototype
+        id: PoweredSmallLight
+      - !type:MappingTemplatePrototype
+        id: PoweredLightPostSmall
+
+- type: mappingTemplate
   id: Common
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
-      id: RandomPosterContraband
+      id: AirlockGlass
     - !type:MappingTemplatePrototype
-      id: RandomPosterLegit
+      id: Airlock
     - !type:MappingTemplatePrototype
-      id: RandomPosterAny
+      id: AirlockMaintLocked
     - !type:MappingTemplatePrototype
-      id: FireAlarm
+      id: Windoor
     - !type:MappingTemplatePrototype
-      id: Firelock
+      id: WindoorSecure
+    # Reserve edit begin
     - !type:MappingTemplatePrototype
-      id: AirAlarm
+      id: BasePlasmaWindoor
     - !type:MappingTemplatePrototype
-      id: GasVentScrubber
+      id: BaseSecurePlasmaWindoor
     - !type:MappingTemplatePrototype
-      id: AirSensor
+      id: BaseUraniumWindoor
     - !type:MappingTemplatePrototype
-      id: APCBasic
+      id: BaseSecureUraniumWindoor
+    # Reserve edit end
     - !type:MappingTemplatePrototype
-      id: CableApcExtension
+      id: ToolRoom
+      children:
+        - !type:MappingTemplatePrototype
+          id: Equipment
+          children:
+            - !type:MappingTemplatePrototype
+              id: ToolboxElectricalFilled
+            - !type:MappingTemplatePrototype
+              id: ToolboxMechanicalFilled
+            - !type:MappingTemplatePrototype
+              id: ToolboxEmergencyFilled
+            - !type:MappingTemplatePrototype
+              id: CableHVStack
+            - !type:MappingTemplatePrototype
+              id: CableMVStack
+            - !type:MappingTemplatePrototype
+              id: CableApcStack
+            - !type:MappingTemplatePrototype
+              id: ClothingBeltUtility
+            - !type:MappingTemplatePrototype
+              id: ClothingHeadHatWelding # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: ClothingHandsGlovesColorYellow # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: Crowbar
+            - !type:MappingTemplatePrototype
+              id: Wrench
+            - !type:MappingTemplatePrototype
+              id: Screwdriver
+            - !type:MappingTemplatePrototype
+              id: Wirecutter
+            - !type:MappingTemplatePrototype
+              id: Welder
+            - !type:MappingTemplatePrototype
+              id: NetworkConfigurator
+            - !type:MappingTemplatePrototype
+              id: Multitool
+            - !type:MappingTemplatePrototype
+              id: GasAnalyzer
+        - !type:MappingTemplatePrototype
+          id: SignToolStorage
+        - !type:MappingTemplatePrototype
+          id: VendingMachineYouTool
+        - !type:MappingTemplatePrototype
+          id: VendingMachineVendomat
+        - !type:MappingTemplatePrototype
+          id: WaterTankFull
+        - !type:MappingTemplatePrototype
+          id: WeldingFuelTankFull
+        - !type:MappingTemplatePrototype
+          id: PowerCellRecharger
+        - !type:MappingTemplatePrototype
+          id: ClosetToolFilled
+        - !type:MappingTemplatePrototype
+          id: SpawnPointPassenger # Reserve edit
     - !type:MappingTemplatePrototype
-      id: CableMV
+      id: Dorms
+      children:
+        #- !type:MappingTemplatePrototype
+        #  id: SignDorms
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalDorms
+        - !type:MappingTemplatePrototype
+          id: BedsheetBase
+        - !type:MappingTemplatePrototype
+          id: Bed
+        # Reserve edit begin
+        - !type:MappingTemplatePrototype
+          id: DresserFilled
+        - !type:MappingTemplatePrototype
+          id: SignalButtonDirectional
+        - !type:MappingTemplatePrototype
+          id: TableWood
+        - !type:MappingTemplatePrototype
+          id: TableCounterWood
+        - !type:MappingTemplatePrototype
+          id: ComfyChair
+        - !type:MappingTemplatePrototype
+          id: CarpetBase
+        - !type:MappingTemplatePrototype
+          id: DormNotifierMarker # :trolled:
+        # Reserve edit end
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconDorms
+        - !type:MappingTemplatePrototype
+          id: ComputerTelevision
+        - !type:MappingTemplatePrototype
+          id: WardrobeBase
     - !type:MappingTemplatePrototype
-      id: CableHV
+      id: Arrivals
+      children:
+        #- !type:MappingTemplatePrototype
+        #  id: SignArrivals
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalGlassShuttleArrivals
+        - !type:MappingTemplatePrototype
+          id: AtmosDeviceFanTiny
+        - !type:MappingTemplatePrototype
+          id: ArrivalsShuttleTimer
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconArrivals
+        - !type:MappingTemplatePrototype
+          id: HolopadGeneralArrivals
+        - !type:MappingTemplatePrototype
+          id: HolopadSecurityArrivalsCheckpoint # Reserve edit
     - !type:MappingTemplatePrototype
-      id: WarpPointBombing
+      id: Evac
+      children:
+        #- !type:MappingTemplatePrototype
+        #  id: SignEvac
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalEvac
+        - !type:MappingTemplatePrototype
+          id: AirlockGlassShuttle
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalGlassShuttleEmergencyLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalGlassShuttleEscape
+        - !type:MappingTemplatePrototype
+          id: AtmosDeviceFanTiny
+        - !type:MappingTemplatePrototype
+          id: HolopadGeneralEvac # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: HolopadSecurityEvacCheckpoint # Reserve edit
     - !type:MappingTemplatePrototype
-      id: DisposalUnit
+      id: Corridors
+      children:
+        - !type:MappingTemplatePrototype
+          id: RandomPosterContraband
+        - !type:MappingTemplatePrototype
+          id: RandomPosterLegit
+        - !type:MappingTemplatePrototype
+          id: RandomPosterAny
+        - !type:MappingTemplatePrototype
+          id: IntercomCommon
+        - !type:MappingTemplatePrototype
+          id: SurveillanceCameraGeneral
+        - !type:MappingTemplatePrototype
+          id: StationMap
+        - !type:MappingTemplatePrototype
+          id: JanitorServiceLight
+        - !type:MappingTemplatePrototype
+          id: Screen
+        - !type:MappingTemplatePrototype
+          id: ExtinguisherCabinetFilled
+        - !type:MappingTemplatePrototype
+          id: ClosetEmergencyFilledRandom # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ClosetFireFilled # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: RandomVending
+        - !type:MappingTemplatePrototype
+          id: RandomVendingDrinks
+        - !type:MappingTemplatePrototype
+          id: RandomVendingSnacks
+        - !type:MappingTemplatePrototype
+          id: VendingMachine
+        - !type:MappingTemplatePrototype
+          id: Chair # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: BenchComfy # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: WoodenBench # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: BenchSteelMiddle
+        - !type:MappingTemplatePrototype
+          id: BenchSteelWhiteMiddle
+        - !type:MappingTemplatePrototype
+          id: PottedPlantRandom
+        - !type:MappingTemplatePrototype
+          id: PottedPlantRandomPlastic
     - !type:MappingTemplatePrototype
-      id: RandomVending
-    - !type:MappingTemplatePrototype
-      id: RandomVendingDrinks
-    - !type:MappingTemplatePrototype
-      id: RandomVendingSnacks
-    - !type:MappingTemplatePrototype
-      id: VendingMachineCigs
-    - !type:MappingTemplatePrototype
-      id: PottedPlantRandom
-    - !type:MappingTemplatePrototype
-      id: PottedPlantRandomPlastic
-    - !type:MappingTemplatePrototype
-      id: ClosetEmergencyFilledRandom
-    - !type:MappingTemplatePrototype
-      id: ClosetEmergencyN2FilledRandom
-    - !type:MappingTemplatePrototype
-      id: WallmountTelevision
-    - !type:MappingTemplatePrototype
-      id: Screen
-    - !type:MappingTemplatePrototype
-      id: Poweredlight
-    - !type:MappingTemplatePrototype
-      id: EmergencyLight
-    - !type:MappingTemplatePrototype
-      id: JanitorServiceLight
-    - !type:MappingTemplatePrototype
-      id: SpawnMobMouse
-    - !type:MappingTemplatePrototype
-      id: MouseTimedSpawner
-    - !type:MappingTemplatePrototype
-      id: SpawnMobCockroach
-    - !type:MappingTemplatePrototype
-      id: DefibrillatorCabinetFilled
-    - !type:MappingTemplatePrototype
-      id: StationMap
-    - !type:MappingTemplatePrototype
-      id: SurveillanceCameraGeneral
-
+      id: Markers
+      children:
+      - !type:MappingTemplatePrototype
+        id: MarkerBase
+      - !type:MappingTemplatePrototype
+        id: Antags
+        children:
+          - !type:MappingTemplatePrototype
+            id: WarpPointBombing
+          #- !type:MappingTemplatePrototype
+          #  id: RendingRunePlacementMarker
+      - !type:MappingTemplatePrototype
+        id: Jobs
+        children:
+          - !type:MappingTemplatePrototype
+            id: Bridge
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointCaptain
+              - !type:MappingTemplatePrototype
+                id: SpawnPointHeadOfPersonnel
+              - !type:MappingTemplatePrototype
+                id: SpawnPointNanotrasenRepresentative # Reserve edit
+              - !type:MappingTemplatePrototype
+                id: SpawnPointBlueshieldOfficer # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: Security
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointHeadOfSecurity
+              - !type:MappingTemplatePrototype
+                id: SpawnPointWarden
+              - !type:MappingTemplatePrototype
+                id: SpawnPointDetective
+              - !type:MappingTemplatePrototype
+                id: SpawnPointBrigmedic
+              - !type:MappingTemplatePrototype
+                id: SpawnPointSecurityOfficer
+              - !type:MappingTemplatePrototype
+                id: SpawnPointSecurityCadet
+              - !type:MappingTemplatePrototype
+                id: SpawnPointLawyer
+              #- !type:MappingTemplatePrototype
+              #  id: SpawnPointPrisonGuard
+              #- !type:MappingTemplatePrototype
+              #  id: SpawnPointPrisoner
+          - !type:MappingTemplatePrototype
+            id: Medbay
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointChiefMedicalOfficer
+              - !type:MappingTemplatePrototype
+                id: SpawnPointChemist
+              - !type:MappingTemplatePrototype
+                id: SpawnPointParamedic
+              - !type:MappingTemplatePrototype
+                id: SpawnPointMedicalDoctor
+              - !type:MappingTemplatePrototype
+                id: SpawnPointMedicalIntern
+              - !type:MappingTemplatePrototype
+                id: SpawnPointPsychologist
+          - !type:MappingTemplatePrototype
+            id: Service
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointPassenger
+              - !type:MappingTemplatePrototype
+                id: SpawnPointServiceWorker
+              - !type:MappingTemplatePrototype
+                id: SpawnPointBartender
+              - !type:MappingTemplatePrototype
+                id: SpawnPointChef
+              - !type:MappingTemplatePrototype
+                id: SpawnPointBotanist
+              - !type:MappingTemplatePrototype
+                id: SpawnPointJanitor
+              - !type:MappingTemplatePrototype
+                id: SpawnPointMusician
+              - !type:MappingTemplatePrototype
+                id: SpawnPointClown
+              - !type:MappingTemplatePrototype
+                id: SpawnPointMime
+              - !type:MappingTemplatePrototype
+                id: SpawnPointReporter
+              - !type:MappingTemplatePrototype
+                id: SpawnPointBoxer
+              - !type:MappingTemplatePrototype
+                id: SpawnPointZookeeper
+              - !type:MappingTemplatePrototype
+                id: SpawnPointLibrarian
+              - !type:MappingTemplatePrototype
+                id: SpawnPointChaplain
+          - !type:MappingTemplatePrototype
+            id: Cargo
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointQuartermaster
+              - !type:MappingTemplatePrototype
+                id: SpawnPointSalvageSpecialist
+              #- !type:MappingTemplatePrototype
+              #  id: SpawnPointMailCarrier
+              - !type:MappingTemplatePrototype
+                id: SpawnPointCargoTechnician
+          - !type:MappingTemplatePrototype
+            id: Science
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointResearchDirector
+              #- !type:MappingTemplatePrototype
+              #  id: SpawnPointRoboticist
+              - !type:MappingTemplatePrototype
+                id: SpawnPointScientist
+              - !type:MappingTemplatePrototype
+                id: SpawnPointResearchAssistant
+          - !type:MappingTemplatePrototype
+            id: Engineering
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointChiefEngineer
+              - !type:MappingTemplatePrototype
+                id: SpawnPointAtmos
+              - !type:MappingTemplatePrototype
+                id: SpawnPointStationEngineer
+              - !type:MappingTemplatePrototype
+                id: SpawnPointTechnicalAssistant
+          - !type:MappingTemplatePrototype
+            id: Silicons
+            children:
+              - !type:MappingTemplatePrototype
+                id: PlayerStationAi
+              - !type:MappingTemplatePrototype
+                id: SpawnPointBorg
+          - !type:MappingTemplatePrototype
+            id: Other
+            children:
+              - !type:MappingTemplatePrototype
+                id: SpawnPointObserver
+              - !type:MappingTemplatePrototype
+                id: SpawnPointLatejoin
 - type: mappingTemplate
   id: Service
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
+      id: ServiceCommon
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceTheatreLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintServiceLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureServiceLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorServiceLocked
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconService
+        - !type:MappingTemplatePrototype
+          id: IntercomService
+        - !type:MappingTemplatePrototype
+          id: SurveillanceCameraService
+        - !type:MappingTemplatePrototype
+          id: ComputerCargoOrdersService # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: CrateLockBoxService # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ServiceTechFab # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: LockableButtonService
+    - !type:MappingTemplatePrototype
       id: Bar
       children:
+        - !type:MappingTemplatePrototype
+          id: BarAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: AirlockBarGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockBarLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintBarLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintBarKitchenLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureBarLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorBarLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorBarKitchenLocked
+        - !type:MappingTemplatePrototype
+          id: SignBar
+        - !type:MappingTemplatePrototype
+          id: BaseBarSign
         - !type:MappingTemplatePrototype
           id: BoozeDispenser
         - !type:MappingTemplatePrototype
@@ -85,6 +518,10 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconBar
         - !type:MappingTemplatePrototype
+          id: HolopadServiceBar
+        - !type:MappingTemplatePrototype
+          id: LockableButtonBar
+        - !type:MappingTemplatePrototype
           id: SurveillanceCameraService
         - !type:MappingTemplatePrototype
           id: Sink
@@ -93,11 +530,11 @@
         - !type:MappingTemplatePrototype
           id: KitchenReagentGrinder
         - !type:MappingTemplatePrototype
-          id: RandomDrinkBottle
-        - !type:MappingTemplatePrototype
-          id: RandomDrinkGlass
-        - !type:MappingTemplatePrototype
           id: SpawnMobMonkeyPunpun
+        - !type:MappingTemplatePrototype
+          id: RandomDrinkGlass # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: RandomDrinkBottle
         - !type:MappingTemplatePrototype
           id: VendingBarDrobe
         - !type:MappingTemplatePrototype
@@ -105,52 +542,209 @@
         - !type:MappingTemplatePrototype
           id: SpawnPointBartender
         - !type:MappingTemplatePrototype
+          id: SpawnPointServiceWorker # Reserve edit
+        - !type:MappingTemplatePrototype
           id: NuclearBombKeg
     - !type:MappingTemplatePrototype
       id: Kitchen
       children:
         - !type:MappingTemplatePrototype
+          id: KitchenAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: AirlockKitchenGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockKitchenLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintKitchenLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintBarKitchenLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockFreezerLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockFreezerKitchenHydroLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintKitchenHydroLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockFreezer
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureKitchenLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorBarKitchenLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorKitchenLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorKitchenHydroponicsLocked
+        - !type:MappingTemplatePrototype
+          id: Fridge
+          children:
+            - !type:MappingTemplatePrototype
+              id: GasThermoMachineFreezerEnabled
+            - !type:MappingTemplatePrototype
+              id: GasPassiveVent
+            - !type:MappingTemplatePrototype
+              id: AtmosFixFreezerMarker
+            - !type:MappingTemplatePrototype
+              id: FloorDrain
+            - !type:MappingTemplatePrototype
+              id: KitchenSpike
+            - !type:MappingTemplatePrototype
+              id: LockerFreezer
+            - !type:MappingTemplatePrototype
+              id: CrateFreezer
+            - !type:MappingTemplatePrototype
+              id: FoodCartCold
+            - !type:MappingTemplatePrototype
+              id: FoodCartHot
+        - !type:MappingTemplatePrototype
+          id: SignKitchen
+        - !type:MappingTemplatePrototype
           id: KitchenMicrowave
+        - !type:MappingTemplatePrototype
+          id: KitchenElectricGrill
         - !type:MappingTemplatePrototype
           id: VendingMachineDinnerware
         - !type:MappingTemplatePrototype
-          id: Sink
+          id: VendingMachineChefvend
         - !type:MappingTemplatePrototype
-          id: KitchenReagentGrinder
+          id: VendingMachineCondiments
         - !type:MappingTemplatePrototype
           id: VendingMachineChefDrobe
         - !type:MappingTemplatePrototype
           id: ClosetChefFilled
         - !type:MappingTemplatePrototype
-          id: VendingMachineCondiments
+          id: ShelfKitchen
         - !type:MappingTemplatePrototype
-          id: SpawnMobAlexander
+          id: DefaultStationBeaconKitchen
+        - !type:MappingTemplatePrototype
+          id: HolopadServiceKitchen
+        - !type:MappingTemplatePrototype
+          id: LockableButtonKitchen
+        - !type:MappingTemplatePrototype
+          id: Sink
+        - !type:MappingTemplatePrototype
+          id: KitchenReagentGrinder
+        - !type:MappingTemplatePrototype
+          id: CrateNPCCow
+        # Reserve edit begin
+        - !type:MappingTemplatePrototype
+          id: VendingMachineHappyHonk
+        - !type:MappingTemplatePrototype
+          id: RandomFoodBakedSingle
+        - !type:MappingTemplatePrototype
+          id: RandomFoodBakedWhole
+        - !type:MappingTemplatePrototype
+          id: RandomFoodSingle
         - !type:MappingTemplatePrototype
           id: RandomFoodMeal
         - !type:MappingTemplatePrototype
-          id: RandomFoodSingle
-    - !type:MappingTemplatePrototype
-      id: Fridge
-      children:
+          id: RandomMeat
         - !type:MappingTemplatePrototype
-          id: AtmosFixFreezerMarker
+          id: RandomIngredient
         - !type:MappingTemplatePrototype
-          id: FloorDrain
+          id: SpawnPointChef
         - !type:MappingTemplatePrototype
-          id: KitchenSpike
+          id: SpawnPointServiceWorker
         - !type:MappingTemplatePrototype
-          id: CrateNPCCow
-        - !type:MappingTemplatePrototype
-          id: FoodCartCold
-        - !type:MappingTemplatePrototype
-          id: FoodCartHot
+          id: SpawnMobAlexander
+        # Reserve edit end
     - !type:MappingTemplatePrototype
       id: Hydroponics
       children:
         - !type:MappingTemplatePrototype
+          id: HydroponicsAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: AirlockHydroGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockHydroponicsLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintHydroLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintKitchenHydroLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorHydroponicsLocked # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: WindoorKitchenHydroponicsLocked # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: AirlockFreezerKitchenHydroLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockFreezerHydroponicsLocked
+        - !type:MappingTemplatePrototype
+          id: CattlePen
+          children:
+            - !type:MappingTemplatePrototype
+              id: SpawnMobGoat
+            # Reserve edit begin
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCow
+            - !type:MappingTemplatePrototype
+              id: SpawnMobButterfly
+            - !type:MappingTemplatePrototype
+              id: SpawnMobMonkey
+            - !type:MappingTemplatePrototype
+              id: SpawnMobBee
+            - !type:MappingTemplatePrototype
+              id: CrateNPCChicken # there is no spawner for chickens! Why???
+            # Reserve edit end
+            - !type:MappingTemplatePrototype
+              id: FenceRailing
+              children:
+                - !type:MappingTemplatePrototype
+                  id: RailingRound
+                - !type:MappingTemplatePrototype
+                  id: RailingCorner
+                - !type:MappingTemplatePrototype
+                  id: RailingCornerSmall
+                - !type:MappingTemplatePrototype
+                  id: Railing
+            - !type:MappingTemplatePrototype
+              id: FenceMetal
+              children:
+                - !type:MappingTemplatePrototype
+                  id: FenceMetalEnd
+                - !type:MappingTemplatePrototype
+                  id: FenceMetalStraight
+                - !type:MappingTemplatePrototype
+                  id: FenceMetalCorner
+                - !type:MappingTemplatePrototype
+                  id: FenceMetalGate
+            - !type:MappingTemplatePrototype
+              id: FenceWoodSmall
+              children:
+                - !type:MappingTemplatePrototype
+                  id: FenceWoodSmallEnd
+                - !type:MappingTemplatePrototype
+                  id: FenceWoodSmallStraight
+                - !type:MappingTemplatePrototype
+                  id: FenceWoodSmallCorner
+                - !type:MappingTemplatePrototype
+                  id: FenceWoodSmallTJunction
+                - !type:MappingTemplatePrototype
+                  id: FenceWoodSmallGate
+            - !type:MappingTemplatePrototype
+              id: FenceWoodHigh
+              children:
+              - !type:MappingTemplatePrototype
+                id: FenceWoodHighEnd
+              - !type:MappingTemplatePrototype
+                id: FenceWoodHighStraight
+              - !type:MappingTemplatePrototype
+                id: FenceWoodHighCorner
+              - !type:MappingTemplatePrototype
+                id: FenceWoodHighTJunction
+              - !type:MappingTemplatePrototype
+                id: FenceWoodHighGate
+        - !type:MappingTemplatePrototype
+          id: SignHydro1
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalHydro
+        - !type:MappingTemplatePrototype
           id: SpawnPointBotanist
         - !type:MappingTemplatePrototype
           id: hydroponicsTray
+        - !type:MappingTemplatePrototype
+          id: hydroponicsSoil # Reserve edit
         - !type:MappingTemplatePrototype
           id: SeedExtractor
         - !type:MappingTemplatePrototype
@@ -158,24 +752,63 @@
         - !type:MappingTemplatePrototype
           id: VendingMachineNutri
         - !type:MappingTemplatePrototype
-          id: WaterTankHighCapacity
-        - !type:MappingTemplatePrototype
-          id: DefaultStationBeaconBotany
+          id: LockerBotanistFilled
         - !type:MappingTemplatePrototype
           id: VendingMachineHydrobe
         - !type:MappingTemplatePrototype
           id: WardrobeBotanistFilled
         - !type:MappingTemplatePrototype
-          id: SpawnMobBandito
+          id: WaterTankHighCapacity
+        - !type:MappingTemplatePrototype
+          id: Sink # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconBotany
+        - !type:MappingTemplatePrototype
+          id: HolopadServiceBotany
+        - !type:MappingTemplatePrototype
+          id: LockableButtonHydroponics
     - !type:MappingTemplatePrototype
       id: JanitorsCloset
       children:
         - !type:MappingTemplatePrototype
+          id: JanitorAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: AirlockJanitorGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockJanitorLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintJanitorLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureJanitorLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorJanitorLocked
+            - !type:MappingTemplatePrototype
+              id: PlasmaWindoorJanitorLocked # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: PlasmaWindoorSecureJanitorLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SignJanitor
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalJanitor
+        - !type:MappingTemplatePrototype
           id: SpawnPointJanitor
         - !type:MappingTemplatePrototype
           id: VendingMachineJaniDrobe
+        # Reserve edit begin
+        - !type:MappingTemplatePrototype
+          id: ClothingBeltJanitor
+        - !type:MappingTemplatePrototype
+          id: CrateTrashCartJani
+        - !type:MappingTemplatePrototype
+          id: SpawnVehicleJanicart
+        - !type:MappingTemplatePrototype
+          id: VehicleKeyJanicart
+        # Reserve edit end
         - !type:MappingTemplatePrototype
           id: JanitorialTrolley
+        - !type:MappingTemplatePrototype
+          id: MopBucketFull
         - !type:MappingTemplatePrototype
           id: ClosetJanitorFilled
         - !type:MappingTemplatePrototype
@@ -183,56 +816,142 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconJanitorsCloset
         - !type:MappingTemplatePrototype
+          id: HolopadServiceJanitor
+        - !type:MappingTemplatePrototype
+          id: LockableButtonJanitor
+        - !type:MappingTemplatePrototype
           id: ClosetL3JanitorFilled
         - !type:MappingTemplatePrototype
-          id: SpawnMobRaccoonMorticia
+          id: FloorDrain # Reserve edit
     - !type:MappingTemplatePrototype
       id: Theater
       children:
         - !type:MappingTemplatePrototype
+          id: ClownRoom
+          children:
+            - !type:MappingTemplatePrototype
+              id: PaintingSadClown
+            - !type:MappingTemplatePrototype
+              id: LockerClown
+            - !type:MappingTemplatePrototype
+              id: SpawnPointClown
+            - !type:MappingTemplatePrototype
+              id: HolopadServiceClown
+            - !type:MappingTemplatePrototype
+              id: HolopadServiceClownMime
+            - !type:MappingTemplatePrototype
+              id: LampBanana
+            - !type:MappingTemplatePrototype
+              id: BedsheetClown
+            - !type:MappingTemplatePrototype
+              id: Bed
+            - !type:MappingTemplatePrototype
+              id: BananaPhoneInstrument # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: FoodPieBananaCream # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: MimeRoom
+          children:
+            - !type:MappingTemplatePrototype
+              id: PosterLegitMime
+            - !type:MappingTemplatePrototype
+              id: SpawnPointMime
+            - !type:MappingTemplatePrototype
+              id: HolopadServiceMime
+            - !type:MappingTemplatePrototype
+              id: HolopadServiceClownMime
+            - !type:MappingTemplatePrototype
+              id: LockerMime
+            - !type:MappingTemplatePrototype
+              id: BedsheetMime
+            - !type:MappingTemplatePrototype
+              id: Bed
+        - !type:MappingTemplatePrototype
+          id: MusicanRoom
+          children:
+            - !type:MappingTemplatePrototype
+              id: SpawnPointMusician
+            - !type:MappingTemplatePrototype
+              id: HolopadServiceMusician
+            - !type:MappingTemplatePrototype
+              id: RandomInstruments
+        - !type:MappingTemplatePrototype
+          id: SignTheater
+        - !type:MappingTemplatePrototype
+          id: AirlockTheatreGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockTheatreLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceTheatreLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintTheatreLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintServiceTheatreLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorTheatreLocked
+        - !type:MappingTemplatePrototype
           id: VendingMachineTheater
-        - !type:MappingTemplatePrototype
-          id: RandomInstruments
-        - !type:MappingTemplatePrototype
-          id: DefaultStationBeaconTheater
         - !type:MappingTemplatePrototype
           id: VendingMachineHappyHonk
         - !type:MappingTemplatePrototype
-          id: SpawnPointClown
+          id: DefaultStationBeaconTheater
         - !type:MappingTemplatePrototype
-          id: FoodPieBananaCream
+          id: HolopadGeneralTheater
         - !type:MappingTemplatePrototype
-          id: BedsheetClown
+          id: LockableButtonTheatre
         - !type:MappingTemplatePrototype
-          id: LauncherCreamPie
-        - !type:MappingTemplatePrototype
-          id: SpawnPointMime
-        - !type:MappingTemplatePrototype
-          id: LockerMime
-        - !type:MappingTemplatePrototype
-          id: DrinkBottleOfNothingFull
-        - !type:MappingTemplatePrototype
-          id: BedsheetMime
-        - !type:MappingTemplatePrototype
-          id: FoodTartMime
-        - !type:MappingTemplatePrototype
-          id: SpawnPointMusician
+          id: CrateServiceTheatre # Reserve edit
     - !type:MappingTemplatePrototype
       id: ReportersOffice
       children:
+        - !type:MappingTemplatePrototype
+          id: SignNews
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintServiceLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorServiceLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureServiceLocked
+        - !type:MappingTemplatePrototype
+          id: ComputerSurveillanceCameraMonitor # Reserve edit
         - !type:MappingTemplatePrototype
           id: ComputerSurveillanceWirelessCameraMonitor
         - !type:MappingTemplatePrototype
           id: ComputerMassMedia
         - !type:MappingTemplatePrototype
-          id: SurveillanceWirelessCameraMovableConstructed
+          id: SurveillanceWirelessCameraMovableEntertainment
         - !type:MappingTemplatePrototype
-          id: SurveillanceWirelessCameraAnchoredConstructed
+          id: SurveillanceWirelessCameraAnchoredEntertainment
         - !type:MappingTemplatePrototype
           id: SpawnPointReporter
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconReporter
+        - !type:MappingTemplatePrototype
+          id: HolopadServiceNewsroom
     - !type:MappingTemplatePrototype
       id: Church
       children:
+        - !type:MappingTemplatePrototype
+          id: ChapelAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: AirlockChapelGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockChapelLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintChapelLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureChapelLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorChapelLocked
+        - !type:MappingTemplatePrototype
+          id: SignChapel
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalChapel
         - !type:MappingTemplatePrototype
           id: VendingMachineChapel
         - !type:MappingTemplatePrototype
@@ -242,43 +961,164 @@
         - !type:MappingTemplatePrototype
           id: Crematorium
         - !type:MappingTemplatePrototype
+          id: Morgue
+        - !type:MappingTemplatePrototype
           id: CrateCoffin
+        - !type:MappingTemplatePrototype
+          id: Urn # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: BoxCandle # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: Candle # Reserve edit
         - !type:MappingTemplatePrototype
           id: AltarSpawner
         - !type:MappingTemplatePrototype
+          id: ConvertAltarSpawner
+        - !type:MappingTemplatePrototype
+          id: ChurchBell # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ChurchOrganInstrument # Reserve edit
+        - !type:MappingTemplatePrototype
           id: DefaultStationBeaconChapel
         - !type:MappingTemplatePrototype
+          id: HolopadServiceChapel
+        - !type:MappingTemplatePrototype
+          id: LockableButtonChapel
+        - !type:MappingTemplatePrototype
           id: CarpetChapel
-
+    - !type:MappingTemplatePrototype
+      id: Library
+      children:
+        - !type:MappingTemplatePrototype
+          id: SignLibrary
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalLibrary
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockServiceLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintServiceLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorServiceLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureServiceLocked
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconLibrary
+        - !type:MappingTemplatePrototype
+          id: HolopadServiceLibrary
+        - !type:MappingTemplatePrototype
+          id: SpawnPointLibrarian
+        - !type:MappingTemplatePrototype
+          id: SpawnMobSlothPaperwork
+        - !type:MappingTemplatePrototype
+          id: VendingMachineCuraDrobe
+        - !type:MappingTemplatePrototype
+          id: VendingMachineGames
+        - !type:MappingTemplatePrototype
+          id: VendingMachineCoffee
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
+          id: BookshelfFilled
+        - !type:MappingTemplatePrototype
+          id: TableWood # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: PaperBin # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: DiceBag # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: PaperCNCSheet # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: RandomPainting
 - type: mappingTemplate
   id: Cargo
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
-      id: ComputerCargoOrders
+      id: CargoAirlocks
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockCargoGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockCargoGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockCargo
+        - !type:MappingTemplatePrototype
+          id: AirlockCargoLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintCargoLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorCargoLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureCargoLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalCargoLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalGlassCargoLocked
     - !type:MappingTemplatePrototype
-      id: Autolathe
-    - !type:MappingTemplatePrototype
-      id: IntercomSupply
-    - !type:MappingTemplatePrototype
-      id: VendingMachineChefDrobe
-    - !type:MappingTemplatePrototype
-      id: ComputerShuttleCargo
-    - !type:MappingTemplatePrototype
-      id: ComputerCargoBounty
-    - !type:MappingTemplatePrototype
-      id: SpawnPointCargoTechnician
-    - !type:MappingTemplatePrototype
-      id: DefaultStationBeaconSupply
-    - !type:MappingTemplatePrototype
-      id: SurveillanceCameraSupply
-    - !type:MappingTemplatePrototype
-      id: ConveyorBelt
-    - !type:MappingTemplatePrototype
-      id: MailingUnit
+      id: CargoBay
+      children:
+      - !type:MappingTemplatePrototype
+        id: SignCargoDock
+      - !type:MappingTemplatePrototype
+        id: SignCargo
+      - !type:MappingTemplatePrototype
+        id: SignDirectionalSupply
+      - !type:MappingTemplatePrototype
+        id: ComputerShuttleCargo
+      - !type:MappingTemplatePrototype
+        id: ComputerCargoBounty
+      - !type:MappingTemplatePrototype
+        id: ComputerCargoOrders
+      - !type:MappingTemplatePrototype
+        id: Autolathe
+      - !type:MappingTemplatePrototype
+        id: CargoTechFab # Reserve edit
+      - !type:MappingTemplatePrototype
+        id: SurveillanceCameraSupply
+      - !type:MappingTemplatePrototype
+        id: ConveyorBelt
+      - !type:MappingTemplatePrototype
+        id: TwoWayLever
+      - !type:MappingTemplatePrototype
+        id: VendingMachineCargoDrobe
+      - !type:MappingTemplatePrototype
+        id: SpawnPointCargoTechnician
+      - !type:MappingTemplatePrototype
+        id: DefaultStationBeaconSupply
+      - !type:MappingTemplatePrototype
+        id: IntercomSupply
+      - !type:MappingTemplatePrototype
+        id: HolopadCargoBay
+      - !type:MappingTemplatePrototype
+        id: HolopadCargoBreakroom
+      - !type:MappingTemplatePrototype
+        id: HolopadCargoFront
+      - !type:MappingTemplatePrototype
+        id: HolopadCargoBayLongRange # Reserve edit
+      - !type:MappingTemplatePrototype
+        id: BannerCargo
+      - !type:MappingTemplatePrototype
+        id: FaxMachineBase #Reserve edit begin
+      - !type:MappingTemplatePrototype
+        id: filingCabinet
+      - !type:MappingTemplatePrototype
+        id: filingCabinetTall
+      - !type:MappingTemplatePrototype
+        id: filingCabinetDrawer
+      - !type:MappingTemplatePrototype
+        id: PaperBin
+      # Reserve edit end
     - !type:MappingTemplatePrototype
       id: QMRoom
       children:
+        - !type:MappingTemplatePrototype
+          id: AirlockQuartermasterGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockQuartermasterLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintQuartermasterLocked
         - !type:MappingTemplatePrototype
           id: SpawnPointQuartermaster
         - !type:MappingTemplatePrototype
@@ -288,12 +1128,81 @@
         - !type:MappingTemplatePrototype
           id: BedsheetQM
         - !type:MappingTemplatePrototype
+          id: Bed
+        - !type:MappingTemplatePrototype
           id: DefaultStationBeaconQMRoom
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandQm
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
+          id: SpawnMobRaccoonMorticia # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: DogBed # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: MaterialSilo # Reserve edit - i guess, it can be mapped in cargo. Would be cool.
+    - !type:MappingTemplatePrototype
+      id: MailRoom
+      children:
+        #- !type:MappingTemplatePrototype #There isn't any at the moment
+        #  id: MailAirlocks
+        #  children:
+        #    - !type:MappingTemplatePrototype
+        #      id: AirlockMailGlassLocked
+        #    - !type:MappingTemplatePrototype
+        #     id: AirlockMailLocked
+        #    - !type:MappingTemplatePrototype
+        #      id: WindoorMailLocked
+        #    - !type:MappingTemplatePrototype
+        #      id: WindoorSecureMailLocked
+        - !type:MappingTemplatePrototype
+          id: SignMail
+        - !type:MappingTemplatePrototype
+          id: BoxMailCapsulePrimed # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: VendingMachineMailDrobe # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: MailBag
+        - !type:MappingTemplatePrototype
+          id: MailTeleporter
+        - !type:MappingTemplatePrototype
+          id: MailingUnit # Reserve edit
+        #- !type:MappingTemplatePrototype
+        #  id: DefaultStationBeaconMailroom
+        - !type:MappingTemplatePrototype
+          id: HolopadCargoMailroom # Reserve edit
     - !type:MappingTemplatePrototype
       id: Salvage
       children:
         - !type:MappingTemplatePrototype
+          id: SalvageAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: AirlockSalvageGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockSalvageLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMiningLocked # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintSalvageLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureSalvageLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockExternalCargoLocked # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: AirlockExternalGlassCargoLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SignSalvage
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalSalvage
+        - !type:MappingTemplatePrototype
+          id: SignNTMine # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: LockerSalvageSpecialistFilledHardsuit
+        - !type:MappingTemplatePrototype
           id: LockerSalvageSpecialistFilled
+        - !type:MappingTemplatePrototype
+          id: WardrobeSalvageFilled
         - !type:MappingTemplatePrototype
           id: SuitStorageSalv
         - !type:MappingTemplatePrototype
@@ -305,97 +1214,438 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconSalvage
         - !type:MappingTemplatePrototype
-          id: WardrobeSalvageFilled
+          id: LockableButtonSalvage # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: HolopadCargoSalvageBay
         - !type:MappingTemplatePrototype
           id: ComputerRadar
-
+        - !type:MappingTemplatePrototype
+          id: ComputerSalvageJobBoard # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerSalvageExpedition # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerShuttleSalvage
+        - !type:MappingTemplatePrototype
+          id: ComputerShuttleMiningLavaland # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SalvageMagnet
 - type: mappingTemplate
   id: Command
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
+      id: BridgeAirlocks
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockCommandGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockCommandGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockCommand
+        - !type:MappingTemplatePrototype
+          id: AirlockCommandLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintCommandLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureCommandLocked
+        - !type:MappingTemplatePrototype
+          id: PlasmaWindoorSecureCommandLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalCommandLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalGlassCommandLocked # Reserve edit
+    - !type:MappingTemplatePrototype
       id: Bridge
       children:
         - !type:MappingTemplatePrototype
-          id: ComputerComms
-        - !type:MappingTemplatePrototype
-          id: ComputerId
-        - !type:MappingTemplatePrototype
-          id: ComputerStationRecords
-        - !type:MappingTemplatePrototype
-          id: ComputerCriminalRecords
-        - !type:MappingTemplatePrototype
-          id: ComputerPowerMonitoring
-        - !type:MappingTemplatePrototype
-          id: ComputerCrewMonitoring
-        - !type:MappingTemplatePrototype
-          id: ComputerCargoOrders
+          id: Computer
+          children:
+          - !type:MappingTemplatePrototype
+            id: ComputerComms
+          - !type:MappingTemplatePrototype
+            id: ComputerId
+          - !type:MappingTemplatePrototype
+            id: ComputerStationRecords
+          - !type:MappingTemplatePrototype
+            id: ComputerCriminalRecords
+          - !type:MappingTemplatePrototype
+            id: ComputerPowerMonitoring
+          - !type:MappingTemplatePrototype
+            id: ComputerCrewMonitoring
+          - !type:MappingTemplatePrototype
+            id: ComputerCargoOrders
+          - !type:MappingTemplatePrototype
+            id: ComputerRadar
+          - !type:MappingTemplatePrototype
+            id: ComputerResearchAndDevelopment
+          - !type:MappingTemplatePrototype
+            id: ComputerAlert
+          - !type:MappingTemplatePrototype
+            id: ComputerSurveillanceWirelessCameraMonitor
+          - !type:MappingTemplatePrototype
+            id: ComputerSurveillanceCameraMonitor
+          - !type:MappingTemplatePrototype
+            id: ComputerSolarControl
+          # Reserve edit begin
+          - !type:MappingTemplatePrototype
+            id: ComputerMassMedia
+          - !type:MappingTemplatePrototype
+            id: ComputerCargoBounty
+          - !type:MappingTemplatePrototype
+            id: ComputerRoboticsControl
+          - !type:MappingTemplatePrototype
+            id: ComputerSolarControl
+          # Reserve edit end
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconBridge
         - !type:MappingTemplatePrototype
           id: SurveillanceCameraCommand
         - !type:MappingTemplatePrototype
           id: IntercomCommand
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandBridge
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandBridgeHallway
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandLounge
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandMeetingRoom
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandBridgeLongRange # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SignalButtonBridge
+        - !type:MappingTemplatePrototype
+          id: SignBridge
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalBridge
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
+          id: SignalButtonBridge
+        - !type:MappingTemplatePrototype
+          id: PhoneInstrument # Reserve edit
     - !type:MappingTemplatePrototype
       id: CaptainsQuarters
       children:
+        #- !type:MappingTemplatePrototype
+        #  id: SignCaptain
+        - !type:MappingTemplatePrototype
+          id: AirlockCaptainGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockCaptainLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintCaptainLocked
         - !type:MappingTemplatePrototype
           id: SpawnPointCaptain
         - !type:MappingTemplatePrototype
-          id: LockerCaptainFilled
-        - !type:MappingTemplatePrototype
           id: LockerCaptainFilledNoLaser
+        - !type:MappingTemplatePrototype
+          id: LockerCaptainFilledHardsuit
         - !type:MappingTemplatePrototype
           id: DresserCaptainFilled
         - !type:MappingTemplatePrototype
-          id: CaptainIDCard
+          id: GlassBoxLaserFilled
         - !type:MappingTemplatePrototype
-          id: ToiletGoldenEmpty
+          id: SuitStorageCaptain
+        - !type:MappingTemplatePrototype
+          id: CaptainIDCard # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: BedsheetCaptain
+        - !type:MappingTemplatePrototype
+          id: Bed
+        - !type:MappingTemplatePrototype
+          id: FaxMachineCaptain
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconCaptainsQuarters
+        - !type:MappingTemplatePrototype
+          id: LockableButtonCaptain
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandCaptain
         - !type:MappingTemplatePrototype
           id: PinpointerNuclear
         - !type:MappingTemplatePrototype
           id: SpawnMobFoxRenault
         - !type:MappingTemplatePrototype
+          id: DogBed # Reserve edit
+        - !type:MappingTemplatePrototype
           id: DrinkFlask
+        # Reserve edit begin
+        - !type:MappingTemplatePrototype
+          id: ToiletGoldenDirtyWater
+        - !type:MappingTemplatePrototype
+          id: ComputerId
+        - !type:MappingTemplatePrototype
+          id: ComputerComms
+        - !type:MappingTemplatePrototype
+          id: Fireplace
     - !type:MappingTemplatePrototype
       id: HOPOffice
       children:
+        #- !type:MappingTemplatePrototype
+        #  id: SignHOP
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalHop
+        - !type:MappingTemplatePrototype
+          id: AirlockHeadOfPersonnelGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockHeadOfPersonnelLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintHOPLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureHeadOfPersonnelLocked
         - !type:MappingTemplatePrototype
           id: LockerHeadOfPersonnelFilled
         - !type:MappingTemplatePrototype
           id: DresserHeadOfPersonnelFilled
         - !type:MappingTemplatePrototype
-          id: SpawnMobCorgi
-        - !type:MappingTemplatePrototype
           id: VendingMachineCart
+        # Reserve edit begin
+        - !type:MappingTemplatePrototype
+          id: filingCabinet
+        - !type:MappingTemplatePrototype
+          id: filingCabinetTall
+        - !type:MappingTemplatePrototype
+          id: filingCabinetDrawer
+        - !type:MappingTemplatePrototype
+          id: PaperBin
         - !type:MappingTemplatePrototype
           id: CrateServicePersonnel
+        # Reserve edit end
+        - !type:MappingTemplatePrototype
+          id: SpawnMobCorgi
+        - !type:MappingTemplatePrototype
+          id: DogBed
         - !type:MappingTemplatePrototype
           id: SpawnPointHeadOfPersonnel
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconHOPOffice
         - !type:MappingTemplatePrototype
-          id: RubberStampApproved
+          id: LockableButtonHeadOfPersonnel
         - !type:MappingTemplatePrototype
-          id: RubberStampDenied
+          id: HolopadCommandHop
+        - !type:MappingTemplatePrototype
+          id: UniformPrinter # Reserve edit
         - !type:MappingTemplatePrototype
           id: MaterialCloth
         - !type:MappingTemplatePrototype
           id: MaterialDurathread
         - !type:MappingTemplatePrototype
-          id: BoxID
+          id: Bed
         - !type:MappingTemplatePrototype
-          id: BoxPDA
+          id: BedsheetHOP
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
+          id: ComputerId
+        - !type:MappingTemplatePrototype
+          id: ComputerFundingAllocation # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerCargoOrdersService # Reserve edit
+    - !type:MappingTemplatePrototype
+      id: AI
+      children:
+        - !type:MappingTemplatePrototype
+          id: Core
+          children:
+            - !type:MappingTemplatePrototype
+              id: SignAi
+            - !type:MappingTemplatePrototype
+              id: AirlockCommandGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockCommandLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintCommandLocked
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureCommandLocked
+            - !type:MappingTemplatePrototype
+              id: HighSecCommandLocked
+            - !type:MappingTemplatePrototype
+              id: DefaultStationBeaconAISatellite
+            - !type:MappingTemplatePrototype
+              id: DefaultStationBeaconAICore
+            - !type:MappingTemplatePrototype
+              id: DefaultStationBeaconAI
+            - !type:MappingTemplatePrototype
+              id: HolopadAiEntrance
+            - !type:MappingTemplatePrototype
+              id: HolopadAiMain
+            - !type:MappingTemplatePrototype
+              id: HolopadAiBackupPower
+            - !type:MappingTemplatePrototype
+              id: HolopadAiChute
+            - !type:MappingTemplatePrototype
+              id: HolopadAiCore
+            - !type:MappingTemplatePrototype
+              id: IntercomAll
+            - !type:MappingTemplatePrototype
+              id: SurveillanceCameraCommand
+            - !type:MappingTemplatePrototype
+              id: PlayerStationAi
+            # Reserve edit begin
+            - !type:MappingTemplatePrototype
+              id: WeaponEnergyTurretAI
+            - !type:MappingTemplatePrototype
+              id: BorgCharger
+            # Reserve edit end
+        - !type:MappingTemplatePrototype
+          id: Upload
+          children:
+            - !type:MappingTemplatePrototype
+              id: SignAiUpload
+            - !type:MappingTemplatePrototype
+              id: HolopadAiUpload
+            - !type:MappingTemplatePrototype
+              id: StationAiUploadComputer
+    - !type:MappingTemplatePrototype
+      id: EVA
+      children:
+        - !type:MappingTemplatePrototype
+          id: SignEVA
+        - !type:MappingTemplatePrototype
+          id: AirlockEVAGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockEVALocked
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconEVAStorage
+        - !type:MappingTemplatePrototype
+          id: HolopadGeneralEVAStorage
+        - !type:MappingTemplatePrototype
+          id: SuitStorageEVA
+        - !type:MappingTemplatePrototype
+          id: VendingMachineTankDispenserEVA
+        - !type:MappingTemplatePrototype
+          id: OxygenCanister
+        - !type:MappingTemplatePrototype
+          id: NitrogenCanister
+        # Reserve edit begin
+        - !type:MappingTemplatePrototype
+          id: ClothingShoesBootsMag
+        - !type:MappingTemplatePrototype
+          id: JetpackBlueFilled
+        - !type:MappingTemplatePrototype
+          id: CrateEvaKit
+        # Reserve edit end
+    - !type:MappingTemplatePrototype
+      id: Vault
+      children:
+        - !type:MappingTemplatePrototype
+          id: SignVault
+        - !type:MappingTemplatePrototype
+          id: HighSecCommandLocked
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconVault
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandVault
+        - !type:MappingTemplatePrototype
+          id: LockerFreezerVaultFilled
+        - !type:MappingTemplatePrototype
+          id: NuclearBomb
+        - !type:MappingTemplatePrototype
+          id: MaterialSilo
+        # Reserve edit begin
+        - !type:MappingTemplatePrototype
+          id: ToolboxGoldFilled
+        - !type:MappingTemplatePrototype
+          id: PinpointerNuclear
+        - !type:MappingTemplatePrototype
+          id: IngotGold
+        - !type:MappingTemplatePrototype
+          id: IngotSilver
+        - !type:MappingTemplatePrototype
+          id: MaterialDiamond1
+        # Reserve edit end
+    # Reserve edit begin
+    - !type:MappingTemplatePrototype
+      id: BSOQuarters
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockBlueshieldOfficerCommandLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockBlueshieldOfficerCommandGlassLocked
+        - !type:MappingTemplatePrototype
+          id: UniqueLockerBlueshieldOfficerFilled
+        - !type:MappingTemplatePrototype
+          id: DresserBlueshieldOfficerFilled
+        - !type:MappingTemplatePrototype
+          id: SpawnPointBlueshieldOfficer
+        - !type:MappingTemplatePrototype
+          id: Bed
+        - !type:MappingTemplatePrototype
+          id: BedsheetNT
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandBSO
+        - !type:MappingTemplatePrototype
+          id: SurveillanceCameraCommand
+    - !type:MappingTemplatePrototype
+      id: NTRQuarters
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockNanotrasenRepresentativeCommandLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockNanotrasenRepresentativeCommandGlassLocked
+        - !type:MappingTemplatePrototype
+          id: UniqueLockerNanorepFilled
+        - !type:MappingTemplatePrototype
+          id: DresserNanorepFilled
+        - !type:MappingTemplatePrototype
+          id: SpawnPointNanotrasenRepresentative
+        - !type:MappingTemplatePrototype
+          id: Bed
+        - !type:MappingTemplatePrototype
+          id: BedsheetCentcom
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandNTR
+        - !type:MappingTemplatePrototype
+          id: SurveillanceCameraCommand
+    # Reserve edit end
 
 - type: mappingTemplate
   id: Medical
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
+      id: MedicalAirlocks
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMedical
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureMedicalLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintMedLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalScienceLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalScienceGlassLocked # Reserve edit
+    - !type:MappingTemplatePrototype
       id: Chemistry
       children:
+        - !type:MappingTemplatePrototype
+          id: ChemistryAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureChemistryLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintChemLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockChemistryGlass
+            - !type:MappingTemplatePrototype
+              id: AirlockChemistryGlassLocked
+            - !type:MappingTemplatePrototype
+              id: PlasmaWindoorSecureChemistryLocked # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: AirlockChemistry
+            - !type:MappingTemplatePrototype
+              id: AirlockChemistryLocked
+        - !type:MappingTemplatePrototype
+          id: SignChem
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalChemistry
         - !type:MappingTemplatePrototype
           id: ChemMaster
         - !type:MappingTemplatePrototype
@@ -403,7 +1653,13 @@
         - !type:MappingTemplatePrototype
           id: LockerChemistryFilled
         - !type:MappingTemplatePrototype
+          id: WardrobeChemistryFilled
+        - !type:MappingTemplatePrototype
           id: VendingMachineChemicals
+        - !type:MappingTemplatePrototype
+          id: VendingMachineChemDrobe
+        - !type:MappingTemplatePrototype
+          id: ShelfGlass # Reserve edit
         - !type:MappingTemplatePrototype
           id: FloorDrain
         - !type:MappingTemplatePrototype
@@ -411,7 +1667,9 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconChemistry
         - !type:MappingTemplatePrototype
-          id: VendingMachineChemDrobe
+          id: HolopadMedicalChemistry
+        - !type:MappingTemplatePrototype
+          id: LockableButtonChemistry
         - !type:MappingTemplatePrototype
           id: ChemistryHotplate
         - !type:MappingTemplatePrototype
@@ -429,18 +1687,75 @@
         - !type:MappingTemplatePrototype
           id: FuelDispenser
         - !type:MappingTemplatePrototype
+          id: Sink
+        - !type:MappingTemplatePrototype
           id: SmartFridge
         - !type:MappingTemplatePrototype
           id: HandLabeler
+        - !type:MappingTemplatePrototype
+          id: SpawnPointChemist
         - !type:MappingTemplatePrototype
           id: SpawnMobWalter
     - !type:MappingTemplatePrototype
       id: Medbay
       children:
         - !type:MappingTemplatePrototype
+          id: Equipment
+          children:
+            - !type:MappingTemplatePrototype
+              id: ClothingNeckStethoscope
+            - !type:MappingTemplatePrototype
+              id: BoxSyringe # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: BoxSterileMask # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: BoxLatexGloves # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: Brutepack
+            - !type:MappingTemplatePrototype
+              id: Ointment
+            - !type:MappingTemplatePrototype
+              id: Gauze
+            - !type:MappingTemplatePrototype
+              id: Bloodpack
+            - !type:MappingTemplatePrototype
+              id: Syringe # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: MedkitFilled
+            - !type:MappingTemplatePrototype
+              id: MedkitOxygenFilled
+            - !type:MappingTemplatePrototype
+              id: MedkitBruteFilled
+            - !type:MappingTemplatePrototype
+              id: MedkitToxinFilled
+            - !type:MappingTemplatePrototype
+              id: MedkitBurnFilled
+            - !type:MappingTemplatePrototype
+              id: MedkitAdvancedFilled # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: BoxPillCanister
+            - !type:MappingTemplatePrototype
+              id: PillCanister
+        - !type:MappingTemplatePrototype
+          id: SignMedical
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalMed
+        - !type:MappingTemplatePrototype
           id: MedicalTechFab
         - !type:MappingTemplatePrototype
+          id: CrateLockBoxMedical # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerCargoOrdersMedical # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerMedicalRecords # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerCrewMonitoring # Reserve edit
+        - !type:MappingTemplatePrototype
           id: DefibrillatorCabinetFilled
+        - !type:MappingTemplatePrototype
+          id: VendingMachineWallMedical
+        - !type:MappingTemplatePrototype
+          id: VendingMachineMedical
         - !type:MappingTemplatePrototype
           id: VendingMachineMediDrobe
         - !type:MappingTemplatePrototype
@@ -448,7 +1763,15 @@
         - !type:MappingTemplatePrototype
           id: LockerMedicalFilled
         - !type:MappingTemplatePrototype
-          id: LockerParamedicFilled
+          id: WardrobeMedicalDoctorFilled
+        - !type:MappingTemplatePrototype
+          id: LockerWallMedicalDoctorFilled
+        - !type:MappingTemplatePrototype
+          id: LockerWallMedicalFilled
+        - !type:MappingTemplatePrototype
+          id: SpawnPointMedicalDoctor
+        - !type:MappingTemplatePrototype
+          id: SpawnPointMedicalIntern
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconMedbay
         - !type:MappingTemplatePrototype
@@ -456,47 +1779,19 @@
         - !type:MappingTemplatePrototype
           id: IntercomMedical
         - !type:MappingTemplatePrototype
-          id: VendingMachineWallMedical
+          id: LockableButtonMedical
         - !type:MappingTemplatePrototype
-          id: VendingMachineMedical
+          id: HolopadMedicalFront
+        - !type:MappingTemplatePrototype
+          id: HolopadMedicalMedbay
+        - !type:MappingTemplatePrototype
+          id: HolopadMedicalBreakroom
         - !type:MappingTemplatePrototype
           id: EmergencyRollerBed
         - !type:MappingTemplatePrototype
-          id: CheapRollerBedSpawnFolded
-        - !type:MappingTemplatePrototype
           id: CheapRollerBed
         - !type:MappingTemplatePrototype
-          id: RollerBedSpawnFolded
-        - !type:MappingTemplatePrototype
           id: RollerBed
-        - !type:MappingTemplatePrototype
-          id: Brutepack
-        - !type:MappingTemplatePrototype
-          id: Ointment
-        - !type:MappingTemplatePrototype
-          id: Gauze
-        - !type:MappingTemplatePrototype
-          id: Bloodpack
-        - !type:MappingTemplatePrototype
-          id: MedkitFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitOxygenFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitBruteFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitToxinFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitBurnFilled
-        - !type:MappingTemplatePrototype
-          id: ClothingHandsGlovesColorWhite
-        - !type:MappingTemplatePrototype
-          id: BoxPillCanister
-        - !type:MappingTemplatePrototype
-          id: PillCanister
-        - !type:MappingTemplatePrototype
-          id: PillCanisterRandom
-        - !type:MappingTemplatePrototype
-          id: WardrobeMedicalDoctorFilled
         - !type:MappingTemplatePrototype
           id: CrateMedical
         - !type:MappingTemplatePrototype
@@ -504,24 +1799,55 @@
         - !type:MappingTemplatePrototype
           id: MedicalBed
         - !type:MappingTemplatePrototype
+          id: BedsheetMedical
+        - !type:MappingTemplatePrototype
           id: StasisBed
-        - !type:MappingTemplatePrototype
-          id: MedkitFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitOxygenFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitBruteFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitToxinFilled
-        - !type:MappingTemplatePrototype
-          id: MedkitBurnFilled
         - !type:MappingTemplatePrototype
           id: HospitalCurtains
         - !type:MappingTemplatePrototype
           id: HospitalCurtainsOpen
     - !type:MappingTemplatePrototype
+      id: Paramedic
+      children:
+        #- !type:MappingTemplatePrototype
+        #  id: AirlockParamedicGlassLocked
+        #- !type:MappingTemplatePrototype
+        #  id: AirlockParamedicLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalMorgueMaintLocked
+        #- !type:MappingTemplatePrototype
+        #  id: WindoorSecureParamedicLocked
+        - !type:MappingTemplatePrototype
+          id: LockerParamedicFilled
+        - !type:MappingTemplatePrototype
+          id: ClothingBeltMedicalEMT
+        #- !type:MappingTemplatePrototype
+        #  id: SuitStorageParamedic
+        - !type:MappingTemplatePrototype
+          id: HolopadMedicalParamed
+        - !type:MappingTemplatePrototype
+          id: SpawnPointParamedic
+        - !type:MappingTemplatePrototype
+          id: EmergencyRollerBed
+        - !type:MappingTemplatePrototype
+          id: CheapRollerBed
+        - !type:MappingTemplatePrototype
+          id: RollerBed
+        - !type:MappingTemplatePrototype
+          id: BoxBodyBag
+    - !type:MappingTemplatePrototype
       id: MorgueRoom
       children:
+        - !type:MappingTemplatePrototype
+          id: SignMorgue
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalMorgueLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalMorgueGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalMorgueMaintLocked
+        - !type:MappingTemplatePrototype
+          id: SpawnMobPossumMorty
         - !type:MappingTemplatePrototype
           id: Morgue
         - !type:MappingTemplatePrototype
@@ -530,6 +1856,8 @@
           id: BiomassReclaimer
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconMorgue
+        - !type:MappingTemplatePrototype
+          id: HolopadMedicalMorgue
         - !type:MappingTemplatePrototype
           id: BoxBodyBag
         - !type:MappingTemplatePrototype
@@ -540,7 +1868,37 @@
       id: CMORoom
       children:
         - !type:MappingTemplatePrototype
+          id: CMOAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: AirlockChiefMedicalOfficerGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockChiefMedicalOfficerLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintChiefMedicalOfficerLocked
+        - !type:MappingTemplatePrototype
+          id: Cats
+          children:
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCatSpace
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCat
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCatBingus
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCatRuntime
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCatException
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCatGeneric
+            - !type:MappingTemplatePrototype
+              id: SpawnMobCatKitten
+        - !type:MappingTemplatePrototype
+          id: SignHead
+        - !type:MappingTemplatePrototype
           id: LockerChiefMedicalOfficerFilled
+        - !type:MappingTemplatePrototype
+          id: LockerChiefMedicalOfficerFilledHardsuit
         - !type:MappingTemplatePrototype
           id: DresserChiefMedicalOfficerFilled
         - !type:MappingTemplatePrototype
@@ -550,74 +1908,119 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconCMORoom
         - !type:MappingTemplatePrototype
+          id: HolopadCommandCmo
+        - !type:MappingTemplatePrototype
+          id: LockableButtonChiefMedicalOfficer
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
           id: ComputerCrewMonitoring
         - !type:MappingTemplatePrototype
           id: BedsheetCMO
         - !type:MappingTemplatePrototype
-          id: SpawnMobCatSpace
-        - !type:MappingTemplatePrototype
-          id: SpawnMobCat
-        - !type:MappingTemplatePrototype
-          id: SpawnMobCatBingus
-        - !type:MappingTemplatePrototype
-          id: SpawnMobCatRuntime
-        - !type:MappingTemplatePrototype
-          id: SpawnMobCatException
-        - !type:MappingTemplatePrototype
-          id: SpawnMobCatGeneric
-        - !type:MappingTemplatePrototype
-          id: SpawnMobCatKitten
+          id: Bed
     - !type:MappingTemplatePrototype
       id: Cryonics
       children:
+        - !type:MappingTemplatePrototype
+          id: SignCryo
         - !type:MappingTemplatePrototype
           id: CryoPod
         - !type:MappingTemplatePrototype
           id: GasThermoMachineFreezer
         - !type:MappingTemplatePrototype
-          id: GasThermoMachineFreezerEnabled
-        - !type:MappingTemplatePrototype
           id: DefaultStationBeaconCryonics
         - !type:MappingTemplatePrototype
+          id: HolopadMedicalCryopods
+        - !type:MappingTemplatePrototype
+          id: LockableButtonCryogenics
+        - !type:MappingTemplatePrototype
           id: CryoxadoneBeakerSmall
+        - !type:MappingTemplatePrototype
+          id: AirCanister # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: CrateFreezer # Reserve edit
     - !type:MappingTemplatePrototype
       id: OperatingRoom
       children:
         - !type:MappingTemplatePrototype
+          id: Equipment
+          children:
+          - !type:MappingTemplatePrototype
+            id: Drill
+          - !type:MappingTemplatePrototype
+            id: Hemostat
+          - !type:MappingTemplatePrototype
+            id: Scalpel
+          - !type:MappingTemplatePrototype
+            id: Saw
+          - !type:MappingTemplatePrototype
+            id: Cautery
+          - !type:MappingTemplatePrototype
+            id: Retractor
+          # Reserve edit begin
+          - !type:MappingTemplatePrototype
+            id: BoneGel
+          - !type:MappingTemplatePrototype
+            id: Bonesetter
+          # Reserve edit end
+          - !type:MappingTemplatePrototype
+            id: CrateMedicalSurgery
+          - !type:MappingTemplatePrototype
+            id: ClothingBackpackDuffelSurgeryFilled
+        - !type:MappingTemplatePrototype
+          id: SignSurgery
+        - !type:MappingTemplatePrototype
           id: OperatingTable
-        - !type:MappingTemplatePrototype
-          id: Drill
-        - !type:MappingTemplatePrototype
-          id: Hemostat
-        - !type:MappingTemplatePrototype
-          id: Scalpel
-        - !type:MappingTemplatePrototype
-          id: Saw
-        - !type:MappingTemplatePrototype
-          id: Cautery
-        - !type:MappingTemplatePrototype
-          id: Retractor
         - !type:MappingTemplatePrototype
           id: computerBodyScanner
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconSurgery
         - !type:MappingTemplatePrototype
-          id: ClothingBackpackDuffelSurgeryFilled
+          id: HolopadMedicalSurgery
         - !type:MappingTemplatePrototype
           id: CrateFreezer
         - !type:MappingTemplatePrototype
-          id: CrateMedicalSurgery
-        - !type:MappingTemplatePrototype
           id: CrateSurgery
         - !type:MappingTemplatePrototype
-          id: ClothingHeadHatSurgcapBlue
+          id: NitrousOxideTankFilled
         - !type:MappingTemplatePrototype
-          id: ClothingHeadHatSurgcapPurple
+          id: ClothingMaskBreathMedical
         - !type:MappingTemplatePrototype
-          id: ClothingHeadHatSurgcapGreen
+          id: SinkWide
+        - !type:MappingTemplatePrototype
+          id: MedicalBiofabricator #Reserve edit begin
+    - !type:MappingTemplatePrototype
+      id: Cloning
+      children:
+        - !type:MappingTemplatePrototype
+          id: CloningPod
+        - !type:MappingTemplatePrototype
+          id: MedicalScanner
+        - !type:MappingTemplatePrototype
+          id: ComputerCloningConsole
+        - !type:MappingTemplatePrototype
+          id: NetworkConfigurator
+        - !type:MappingTemplatePrototype
+          id: LockerSteel
+    # Reserve edit end
     - !type:MappingTemplatePrototype
       id: Virology
       children:
+        - !type:MappingTemplatePrototype
+          id: SignVirology
+        - !type:MappingTemplatePrototype
+          id: AirlockVirologyGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockVirologyGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockVirology
+        - !type:MappingTemplatePrototype
+          id: AirlockVirologyLocked
+        #- !type:MappingTemplatePrototype
+        #  id: DefaultStationBeaconVirology
+        - !type:MappingTemplatePrototype
+          id: HolopadMedicalVirology
         - !type:MappingTemplatePrototype
           id: DiseaseDiagnoser
         - !type:MappingTemplatePrototype
@@ -625,41 +2028,107 @@
         - !type:MappingTemplatePrototype
           id: VendingMachineViroDrobe
         - !type:MappingTemplatePrototype
+          id: WardrobeVirology
+        - !type:MappingTemplatePrototype
+          id: ClosetL3Filled # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ClosetL3Virology
+        - !type:MappingTemplatePrototype
           id: BoxMouthSwab
         - !type:MappingTemplatePrototype
           id: ClothingHandsGlovesNitrile
+    # Reserve edit begin
+    - !type:MappingTemplatePrototype
+      id: Psychologist
+      children:
         - !type:MappingTemplatePrototype
-          id: WardrobeVirologyFilled
+          id: SignPsychology
+        - !type:MappingTemplatePrototype
+          id: SpawnPointPsychologist
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconPsychology
+        - !type:MappingTemplatePrototype
+          id: PsychBed
+    # Reserve edit end
 
 - type: mappingTemplate
   id: Science
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
-      id: VendingMachineSciDrobe
+      id: ScienceAirlocks
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockScienceGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockScienceGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockScience
+        - !type:MappingTemplatePrototype
+          id: AirlockScienceLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintRnDLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureScienceLocked
+        - !type:MappingTemplatePrototype
+          id: PlasmaWindoorSecureScienceLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalScienceLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: AirlockMedicalScienceGlassLocked # Reserve edit
     - !type:MappingTemplatePrototype
-      id: LockerScienceFilled
-    - !type:MappingTemplatePrototype
-      id: SpawnPointScientist
-    - !type:MappingTemplatePrototype
-      id: SpawnPointResearchAssistant
-    - !type:MappingTemplatePrototype
-      id: SurveillanceCameraScience
-    - !type:MappingTemplatePrototype
-      id: IntercomScience
-    - !type:MappingTemplatePrototype
-      id: WardrobeScienceFilled
-    - !type:MappingTemplatePrototype
-      id: BannerScience
-    - !type:MappingTemplatePrototype
-      id: ResearchAndDevelopmentServer
-    - !type:MappingTemplatePrototype
-      id: DefaultStationBeaconServerRoom
-    - !type:MappingTemplatePrototype
-      id: CrewMonitoringServer
+      id: RnDBay
+      children:
+        - !type:MappingTemplatePrototype
+          id: RnDServer
+          children:
+          - !type:MappingTemplatePrototype
+            id: SignServer # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: ResearchAndDevelopmentServer
+          - !type:MappingTemplatePrototype
+            id: DefaultStationBeaconServerRoom
+          - !type:MappingTemplatePrototype
+            id: CrewMonitoringServer
+          - !type:MappingTemplatePrototype
+            id: GasThermoMachineFreezer
+          - !type:MappingTemplatePrototype
+            id: ComputerResearchAndDevelopment
+          - !type:MappingTemplatePrototype
+            id: SurveillanceCameraRouterScience # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SignRND
+        - !type:MappingTemplatePrototype
+          id: VendingMachineSciDrobe
+        - !type:MappingTemplatePrototype
+          id: LockerScienceFilled
+        - !type:MappingTemplatePrototype
+          id: WardrobeScienceFilled
+        - !type:MappingTemplatePrototype
+          id: CrateScienceBiosuit # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SpawnPointScientist
+        - !type:MappingTemplatePrototype
+          id: SpawnPointResearchAssistant
+        - !type:MappingTemplatePrototype
+          id: SurveillanceCameraScience
+        - !type:MappingTemplatePrototype
+          id: IntercomScience
+        - !type:MappingTemplatePrototype
+          id: LockableButtonResearch
+        - !type:MappingTemplatePrototype
+          id: HolopadScienceBreakroom
+        - !type:MappingTemplatePrototype
+          id: HolopadScienceFront
+        - !type:MappingTemplatePrototype
+          id: HolopadScienceRnd
+        - !type:MappingTemplatePrototype
+          id: BannerScience
     - !type:MappingTemplatePrototype
       id: AnomalyGenerator
       children:
+        - !type:MappingTemplatePrototype
+          id: SignAnomaly2
         - !type:MappingTemplatePrototype
           id: MachineAnomalyGenerator
         - !type:MappingTemplatePrototype
@@ -671,23 +2140,47 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconAnomalyGenerator
         - !type:MappingTemplatePrototype
+          id: HolopadScienceAnomaly
+        - !type:MappingTemplatePrototype
+          id: CrateScience # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: TablePlasmaGlass # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ClosetRadiationSuitFilled # Reserve edit
+        - !type:MappingTemplatePrototype
           id: SheetPlasma
     - !type:MappingTemplatePrototype
       id: Robotics
       children:
         - !type:MappingTemplatePrototype
+          id: SignRobo
+        - !type:MappingTemplatePrototype
+        #  id: AirlockRoboticsGlass#- !type:MappingTemplatePrototype
+        #  id: AirlockRobotics- !type:MappingTemplatePrototype
           id: VendingMachineRoboDrobe
         - !type:MappingTemplatePrototype
           id: VendingMachineRobotics
         - !type:MappingTemplatePrototype
+          id: VendingMachineVendomat
+        - !type:MappingTemplatePrototype
+          id: WardrobeRoboticsFilled # Reserve edit
+        - !type:MappingTemplatePrototype
           id: BorgCharger
+        - !type:MappingTemplatePrototype
+          id: SpawnPointBorg
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconRobotics
         - !type:MappingTemplatePrototype
+          id: HolopadScienceRobotics
+        - !type:MappingTemplatePrototype
           id: ExosuitFabricator
+        - !type:MappingTemplatePrototype
+          id: WeldingFuelTankFull # Reserve edit
     - !type:MappingTemplatePrototype
       id: ArtifactLab
       children:
+        - !type:MappingTemplatePrototype
+          id: SignAnomaly
         - !type:MappingTemplatePrototype
           id: MachineArtifactAnalyzer
         - !type:MappingTemplatePrototype
@@ -697,7 +2190,15 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconArtifactLab
         - !type:MappingTemplatePrototype
+          id: HolopadScienceArtifact
+        - !type:MappingTemplatePrototype
+          id: HolopadScienceArtifactNorth # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: HolopadScienceArtifactSouth # Reserve edit
+        - !type:MappingTemplatePrototype
           id: RandomArtifactSpawner
+        - !type:MappingTemplatePrototype
+          id: BlastDoor # Reserve edit
         - !type:MappingTemplatePrototype
           id: ClosetRadiationSuitFilled
         - !type:MappingTemplatePrototype
@@ -708,6 +2209,14 @@
       id: RDRoom
       children:
         - !type:MappingTemplatePrototype
+          id: SignHead
+        - !type:MappingTemplatePrototype
+          id: AirlockResearchDirectorGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockResearchDirectorLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintResearchDirectorLocked
+        - !type:MappingTemplatePrototype
           id: SpawnPointResearchDirector
         - !type:MappingTemplatePrototype
           id: DresserResearchDirectorFilled
@@ -716,26 +2225,60 @@
         - !type:MappingTemplatePrototype
           id: LockerResearchDirectorFilled
         - !type:MappingTemplatePrototype
-          id: ComputerRoboticsControl
+          id: LockerResearchDirectorFilledHardsuit
+        - !type:MappingTemplatePrototype
+          id: SuitStorageEVA # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ClothingBeltUtilityFilled # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: PowerDrill # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerResearchAndDevelopment
+        - !type:MappingTemplatePrototype
+          id: ComputerRoboticsControl # Reserve edit
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconRDRoom
         - !type:MappingTemplatePrototype
+          id: HolopadCommandRd
+        - !type:MappingTemplatePrototype
+          id: LockableButtonResearchDirector
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
           id: BedsheetRD
         - !type:MappingTemplatePrototype
-          id: SpawnMobSmile
+          id: Bed
+        - !type:MappingTemplatePrototype
+          id: SpawnMobBandito
         - !type:MappingTemplatePrototype
           id: PottedPlantRD
     - !type:MappingTemplatePrototype
       id: RnD
       children:
         - !type:MappingTemplatePrototype
+          id: SignScience
+        - !type:MappingTemplatePrototype
+          id: ComputerTechnologyDiskTerminal
+        - !type:MappingTemplatePrototype
           id: ComputerResearchAndDevelopment
+        - !type:MappingTemplatePrototype
+          id: ScienceTechFab # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ComputerCargoOrdersScience # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: CrateLockBoxScience # Reserve edit
         - !type:MappingTemplatePrototype
           id: Protolathe
         - !type:MappingTemplatePrototype
           id: Autolathe
         - !type:MappingTemplatePrototype
           id: CircuitImprinter
+        - !type:MappingTemplatePrototype
+          id: WeaponCapacitorRecharger # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: PowerCellRecharger # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: HolopadScienceFront # Reserve edit
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconRND
         - !type:MappingTemplatePrototype
@@ -744,14 +2287,67 @@
           id: MicroManipulatorStockPart
         - !type:MappingTemplatePrototype
           id: MatterBinStockPart
-
+        - !type:MappingTemplatePrototype
+          id: SpawnMobSmile
+    - !type:MappingTemplatePrototype
+      id: RnDCanisters
+      children:
+        - !type:MappingTemplatePrototype
+          id: SignCans
+        - !type:MappingTemplatePrototype
+          id: StorageCanister
+        - !type:MappingTemplatePrototype
+          id: OxygenCanister
+        - !type:MappingTemplatePrototype
+          id: NitrogenCanister
+        - !type:MappingTemplatePrototype
+          id: CarbonDioxideCanister
+        - !type:MappingTemplatePrototype
+          id: NitrousOxideCanister
+        - !type:MappingTemplatePrototype
+          id: WaterVaporCanister
+        - !type:MappingTemplatePrototype
+          id: PlasmaCanister
 - type: mappingTemplate
   id: Engineering
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
+      id: EngineeringAirlocks
+      children:
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureEngineeringLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintEngiLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockEngineeringGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockEngineeringGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockEngineering
+        - !type:MappingTemplatePrototype
+          id: AirlockEngineeringLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalGlassEngineeringLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockExternalEngineeringLocked
+    - !type:MappingTemplatePrototype
       id: CERoom
       children:
+        - !type:MappingTemplatePrototype
+          id: SignHead
+        - !type:MappingTemplatePrototype
+          id: AirlockChiefEngineerLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintChiefEngineerLocked
+        - !type:MappingTemplatePrototype
+          id: ComputerPowerMonitoring
+        - !type:MappingTemplatePrototype
+          id: ComputerSolarControl
+        - !type:MappingTemplatePrototype
+          id: ComputerRadar
+        - !type:MappingTemplatePrototype
+          id: ComputerAlert
         - !type:MappingTemplatePrototype
           id: DresserChiefEngineerFilled
         - !type:MappingTemplatePrototype
@@ -759,28 +2355,188 @@
         - !type:MappingTemplatePrototype
           id: LockerChiefEngineerFilled
         - !type:MappingTemplatePrototype
+          id: LockerChiefEngineerFilledHardsuit
+        - !type:MappingTemplatePrototype
           id: DefaultStationBeaconCERoom
         - !type:MappingTemplatePrototype
+          id: HolopadCommandCe
+        - !type:MappingTemplatePrototype
+          id: LockableButtonChiefEngineer
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
           id: BedsheetCE
+        - !type:MappingTemplatePrototype
+          id: Bed
+        - !type:MappingTemplatePrototype
+          id: SpawnPointChiefEngineer
+        - !type:MappingTemplatePrototype
+          id: ComputerCargoOrdersEngineering # Reserve edit
     - !type:MappingTemplatePrototype
       id: Atmos
       children:
         - !type:MappingTemplatePrototype
-          id: GasThermoMachineFreezer
+          id: AtmosAirlocks
+          children:
+            - !type:MappingTemplatePrototype
+              id: WindoorSecureAtmosphericsLocked
+            - !type:MappingTemplatePrototype
+              id: PlasmaWindoorSecureAtmosphericsLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockMaintAtmoLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockAtmosphericsGlass
+            - !type:MappingTemplatePrototype
+              id: AirlockAtmosphericsGlassLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockAtmospherics
+            - !type:MappingTemplatePrototype
+              id: AirlockAtmosphericsLocked
+            - !type:MappingTemplatePrototype
+              id: HighSecAtmosLocked # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: AirlockExternalGlassAtmosphericsLocked
+            - !type:MappingTemplatePrototype
+              id: AirlockExternalAtmosphericsLocked
         - !type:MappingTemplatePrototype
-          id: GasThermoMachineHeater
+          id: AtmosGenerating
+          children:
+            - !type:MappingTemplatePrototype
+              id: GasMinerBase
+            - !type:MappingTemplatePrototype
+              id: AtmosFixOxygenMarker
+            - !type:MappingTemplatePrototype
+              id: AtmosFixNitrogenMarker
+            - !type:MappingTemplatePrototype
+              id: AtmosFixBlockerMarker
+            - !type:MappingTemplatePrototype
+              id: AtmosFixFreezerMarker
+            - !type:MappingTemplatePrototype
+              id: AtmosFixPlasmaMarker
+            - !type:MappingTemplatePrototype
+              id: AtmosFixInstantPlasmaFireMarker
         - !type:MappingTemplatePrototype
-          id: PortableScrubber
+          id: Canisters
+          children:
+          - !type:MappingTemplatePrototype
+            id: SignCanisters
+          - !type:MappingTemplatePrototype
+            id: SignCans # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: NitrogenCanister
+          - !type:MappingTemplatePrototype
+            id: OxygenCanister
+          - !type:MappingTemplatePrototype
+            id: CarbonDioxideCanister
+          - !type:MappingTemplatePrototype
+            id: WaterVaporCanister
+          - !type:MappingTemplatePrototype
+            id: AirCanister # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: StorageCanister
+          - !type:MappingTemplatePrototype
+            id: PlasmaCanister
+          - !type:MappingTemplatePrototype
+            id: NitrousOxideCanister
+        - !type:MappingTemplatePrototype
+          id: Equipment
+          children:
+          - !type:MappingTemplatePrototype
+            id: GasThermoMachineFreezer
+          - !type:MappingTemplatePrototype
+            id: GasThermoMachineHeater
+          - !type:MappingTemplatePrototype
+            id: PortableScrubber
+          - !type:MappingTemplatePrototype
+            id: TegCirculator
+          - !type:MappingTemplatePrototype
+            id: TegCenter
+          - !type:MappingTemplatePrototype
+            id: HeatExchanger
+        - !type:MappingTemplatePrototype
+          id: Atmosphere
+          children:
+          - !type:MappingTemplatePrototype
+            id: Pipes
+            children:
+              - !type:MappingTemplatePrototype
+                id: GasPipeFourway
+              - !type:MappingTemplatePrototype
+                id: GasPipeTJunction
+              - !type:MappingTemplatePrototype
+                id: GasPipeStraight
+              - !type:MappingTemplatePrototype
+                id: GasPipeBend
+              - !type:MappingTemplatePrototype
+                id: GasPipeHalf
+              - !type:MappingTemplatePrototype
+                id: GasPipeBroken
+          - !type:MappingTemplatePrototype
+            id: Devices
+            children:
+              - !type:MappingTemplatePrototype
+                id: GasPort
+              - !type:MappingTemplatePrototype
+                id: GasPressurePump
+              - !type:MappingTemplatePrototype
+                id: GasVolumePump
+              - !type:MappingTemplatePrototype
+                id: SignalControlledValve
+              - !type:MappingTemplatePrototype
+                id: GasValve
+              - !type:MappingTemplatePrototype
+                id: GasPassiveGate
+              - !type:MappingTemplatePrototype
+                id: GasPipeSensor
+              - !type:MappingTemplatePrototype
+                id: HeatExchanger
+              - !type:MappingTemplatePrototype
+                id: GasMixer
+              - !type:MappingTemplatePrototype
+                id: GasFilter
+          - !type:MappingTemplatePrototype
+            id: ExternalInteraction
+            children:
+              - !type:MappingTemplatePrototype
+                id: AtmosDeviceFanTiny # Reserve edit
+              - !type:MappingTemplatePrototype
+                id: AtmosDeviceFanDirectional # Reserve edit
+              - !type:MappingTemplatePrototype
+                id: GasPassiveVent
+              - !type:MappingTemplatePrototype
+                id: GasVentPump
+              - !type:MappingTemplatePrototype
+                id: GasVentScrubber
+              - !type:MappingTemplatePrototype
+                id: GasOutletInjector
+              - !type:MappingTemplatePrototype
+                id: AirSensor
+              - !type:MappingTemplatePrototype
+                id: AirAlarm
+              - !type:MappingTemplatePrototype
+                id: FireAlarm
+              - !type:MappingTemplatePrototype
+                id: FirelockEdge
+              - !type:MappingTemplatePrototype
+                id: Firelock
+        - !type:MappingTemplatePrototype
+          id: SignAtmos
+        - !type:MappingTemplatePrototype
+          id: LockableButtonAtmospherics
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconAtmospherics
         - !type:MappingTemplatePrototype
-          id: TegCirculator
+          id: HolopadEngineeringAtmosFront
         - !type:MappingTemplatePrototype
-          id: TegCenter
+          id: HolopadEngineeringAtmosMain
         - !type:MappingTemplatePrototype
-          id: HeatExchanger
+          id: HolopadEngineeringAtmosTeg
+        - !type:MappingTemplatePrototype
+          id: LockerAtmosphericsFilledHardsuit
         - !type:MappingTemplatePrototype
           id: LockerAtmosphericsFilled
+        - !type:MappingTemplatePrototype
+          id: ClosetWallAtmospherics # Reserve edit
         - !type:MappingTemplatePrototype
           id: SuitStorageAtmos
         - !type:MappingTemplatePrototype
@@ -788,109 +2544,204 @@
         - !type:MappingTemplatePrototype
           id: WardrobeAtmosphericsFilled
         - !type:MappingTemplatePrototype
+          id: ComputerAlert
+        - !type:MappingTemplatePrototype
+          id: VendingMachineTankDispenserEngineering
+        - !type:MappingTemplatePrototype
+          id: VendingMachineTankDispenserEVA
+        - !type:MappingTemplatePrototype
+          id: FireAxeCabinetFilled # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SpaceHeater # Reserve edit
+        - !type:MappingTemplatePrototype
           id: SpawnMobCrabAtmos
         - !type:MappingTemplatePrototype
-          id: NitrogenCanister
-        - !type:MappingTemplatePrototype
-          id: OxygenCanister
-        - !type:MappingTemplatePrototype
-          id: CarbonDioxideCanister
-        - !type:MappingTemplatePrototype
-          id: WaterVaporCanister
-        - !type:MappingTemplatePrototype
-          id: StorageCanister
-        - !type:MappingTemplatePrototype
-          id: PlasmaCanister
-        - !type:MappingTemplatePrototype
-          id: NitrousOxideCanister
+          id: SpawnPointAtmos
     - !type:MappingTemplatePrototype
       id: Common
       children:
         - !type:MappingTemplatePrototype
-          id: SpawnPointBorg
+          id: Materials
+          children:
+          - !type:MappingTemplatePrototype
+            id: CrateMaterial
+            children:
+            - !type:MappingTemplatePrototype
+              id: CrateMaterialSteel # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: CrateMaterialGlass # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: CrateMaterialPlasma # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: CrateMaterialBasicResource # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: CrateMaterialRandom # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: CrateMaterialPlasteel # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: CableHVStack
+          - !type:MappingTemplatePrototype
+            id: CableMVStack
+          - !type:MappingTemplatePrototype
+            id: CableApcStack
+          - !type:MappingTemplatePrototype
+            id: SheetSteel
+          - !type:MappingTemplatePrototype
+            id: SheetGlass
+          - !type:MappingTemplatePrototype
+            id: SheetPlastic
+          - !type:MappingTemplatePrototype
+            id: SheetPlasma # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: SheetUranium # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: SheetPlasteel # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: PartRodMetal
+          - !type:MappingTemplatePrototype
+            id: SheetRPGlass
+          - !type:MappingTemplatePrototype
+            id: SheetRGlass
         - !type:MappingTemplatePrototype
-          id: GravityGenerator
+          id: Equipment
+          children:
+          - !type:MappingTemplatePrototype
+            id: Tools
+            children:
+            - !type:MappingTemplatePrototype
+              id: GasAnalyzer
+            - !type:MappingTemplatePrototype
+              id: trayScanner
+            - !type:MappingTemplatePrototype
+              id: Crowbar
+            - !type:MappingTemplatePrototype
+              id: Wrench
+            - !type:MappingTemplatePrototype
+              id: Screwdriver
+            - !type:MappingTemplatePrototype
+              id: Wirecutter
+            - !type:MappingTemplatePrototype
+              id: Welder
+            - !type:MappingTemplatePrototype
+              id: Multitool
+            - !type:MappingTemplatePrototype
+              id: SprayPainter
+            - !type:MappingTemplatePrototype
+              id: RCD # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: RPD # Reserve edit
+          - !type:MappingTemplatePrototype
+            id: BoxMesonScanners
+          - !type:MappingTemplatePrototype
+            id: BoxLightbulb
+          - !type:MappingTemplatePrototype
+            id: BoxLighttube
+          - !type:MappingTemplatePrototype
+            id: BoxLightMixed
+          - !type:MappingTemplatePrototype
+            id: LightReplacer
+          - !type:MappingTemplatePrototype
+            id: ToolboxElectricalFilled
+          - !type:MappingTemplatePrototype
+            id: ToolboxMechanicalFilled
+          - !type:MappingTemplatePrototype
+            id: ToolboxEmergencyFilled
+          - !type:MappingTemplatePrototype
+            id: ClothingBeltUtilityEngineering
+          - !type:MappingTemplatePrototype
+            id: ClothingHandsGlovesColorYellow
+          - !type:MappingTemplatePrototype
+            id: ClothingEyesGlassesMeson
+          - !type:MappingTemplatePrototype
+            id: ClothingEyesHudDiagnostic
+          - !type:MappingTemplatePrototype
+            id: ClothingOuterVestHazard
+          - !type:MappingTemplatePrototype
+            id: ClothingMaskGas
+          - !type:MappingTemplatePrototype
+            id: ClothingHeadHatWelding
         - !type:MappingTemplatePrototype
-          id: DefaultStationBeaconAnomalyGenerator
+          id: EquipRoom
+          children:
+            - !type:MappingTemplatePrototype
+              id: VendingMachineEngiDrobe
+            - !type:MappingTemplatePrototype
+              id: VendingMachineEngivend
+            - !type:MappingTemplatePrototype
+              id: VendingMachineYouTool
+            - !type:MappingTemplatePrototype
+              id: LockerEngineerFilled
+            - !type:MappingTemplatePrototype
+              id: LockerEngineerFilledHardsuit
+            - !type:MappingTemplatePrototype
+              id: SuitStorageBase
+            - !type:MappingTemplatePrototype
+              id: WardrobeEngineeringFilled
+            - !type:MappingTemplatePrototype
+              id: LockerElectricalSuppliesFilled # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: ClosetToolFilled # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: LockerWeldingSuppliesFilled # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: GravGenAndAnchor
+          children:
+            - !type:MappingTemplatePrototype
+              id: SignGravity
+            - !type:MappingTemplatePrototype
+              id: SignDirectionalGravity
+            - !type:MappingTemplatePrototype
+              id: DefaultStationBeaconGravGen
+            - !type:MappingTemplatePrototype
+              id: GravityGenerator
+            - !type:MappingTemplatePrototype
+              id: DefaultStationBeaconAnchor
+            - !type:MappingTemplatePrototype
+              id: StationAnchor
+        - !type:MappingTemplatePrototype
+          id: SignEngineering
+        - !type:MappingTemplatePrototype
+          id: LockableButtonEngineering # Reserve edit
         - !type:MappingTemplatePrototype
           id: SMESBasic
         - !type:MappingTemplatePrototype
+          id: SMESAdvanced # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: CableTerminal
+        - !type:MappingTemplatePrototype
           id: ComputerPowerMonitoring
         - !type:MappingTemplatePrototype
-          id: DefaultStationBeaconPowerBank
+          id: ComputerAlert
         - !type:MappingTemplatePrototype
-          id: Materials
-          children:
-            - !type:MappingTemplatePrototype
-              id: CableMVStack
-            - !type:MappingTemplatePrototype
-              id: CableApcStack
-            - !type:MappingTemplatePrototype
-              id: CableApcStack
-            - !type:MappingTemplatePrototype
-              id: SheetSteel
-            - !type:MappingTemplatePrototype
-              id: SheetGlass
-            - !type:MappingTemplatePrototype
-              id: SheetPlastic
-            - !type:MappingTemplatePrototype
-              id: PartRodMetal
-            - !type:MappingTemplatePrototype
-              id: SheetRPGlass
-            - !type:MappingTemplatePrototype
-              id: SheetRGlass
-        - !type:MappingTemplatePrototype
-          id: ClothingHandsGlovesColorYellow
-        - !type:MappingTemplatePrototype
-          id: ClothingEyesGlassesMeson
+          id: ComputerSolarControl
         - !type:MappingTemplatePrototype
           id: WeldingFuelTankFull
         - !type:MappingTemplatePrototype
-          id: VendingMachineEngiDrobe
-        - !type:MappingTemplatePrototype
-          id: VendingMachineEngivend
-        - !type:MappingTemplatePrototype
-          id: LockerEngineerFilled
-        - !type:MappingTemplatePrototype
-          id: VendingMachineYouTool
-        - !type:MappingTemplatePrototype
-          id: CutterMachine
-        - !type:MappingTemplatePrototype
           id: DefaultStationBeaconEngineering
+        - !type:MappingTemplatePrototype
+          id: HolopadEngineeringBreakroom
+        - !type:MappingTemplatePrototype
+          id: HolopadEngineeringFront
+        - !type:MappingTemplatePrototype
+          id: HolopadEngineeringStorage
         - !type:MappingTemplatePrototype
           id: SurveillanceCameraEngineering
         - !type:MappingTemplatePrototype
           id: IntercomEngineering
         - !type:MappingTemplatePrototype
-          id: BoxMesonScanners
-        - !type:MappingTemplatePrototype
-          id: VendingMachineTankDispenserEngineering
-        - !type:MappingTemplatePrototype
-          id: ToolboxEmergencyFilled
-        - !type:MappingTemplatePrototype
-          id: ToolboxMechanicalFilled
-        - !type:MappingTemplatePrototype
-          id: ToolboxElectricalFilled
-        - !type:MappingTemplatePrototype
-          id: ClothingBeltUtilityEngineering
-        - !type:MappingTemplatePrototype
-          id: BoxLightbulb
-        - !type:MappingTemplatePrototype
-          id: BoxLighttube
-        - !type:MappingTemplatePrototype
-          id: BoxLightMixed
-        - !type:MappingTemplatePrototype
-          id: LightReplacer
-        - !type:MappingTemplatePrototype
           id: Autolathe
         - !type:MappingTemplatePrototype
-          id: WardrobeEngineeringFilled
+          id: Protolathe
+        - !type:MappingTemplatePrototype
+          id: EngineeringTechFab # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: CrateLockBoxEngineering # Reserve edit
         - !type:MappingTemplatePrototype
           id: BannerEngineering
         - !type:MappingTemplatePrototype
-          id: ClothingEyesHudDiagnostic
+          id: SpawnPointStationEngineer
         - !type:MappingTemplatePrototype
-          id: ClothingHeadHatBeretEngineering
+          id: SpawnPointTechnicalAssistant
     - !type:MappingTemplatePrototype
       id: Telecoms
       children:
@@ -913,6 +2764,12 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconTelecoms
         - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconCameraServerRoom
+        - !type:MappingTemplatePrototype
+          id: HolopadEngineeringTelecoms
+        - !type:MappingTemplatePrototype
+          id: IntercomAll
+        - !type:MappingTemplatePrototype
           id: SurveillanceCameraRouterEngineering
         - !type:MappingTemplatePrototype
           id: SurveillanceCameraRouterSupply
@@ -934,9 +2791,23 @@
       id: SolarPanels
       children:
         - !type:MappingTemplatePrototype
+          id: SignSolar
+        - !type:MappingTemplatePrototype
+          id: SignDirectionalSolar
+        - !type:MappingTemplatePrototype
+          id: SMESBasic
+        - !type:MappingTemplatePrototype
+          id: CableTerminal
+        - !type:MappingTemplatePrototype
+          id: CableHV
+        - !type:MappingTemplatePrototype
           id: SolarAssembly
         - !type:MappingTemplatePrototype
           id: SolarPanel
+        - !type:MappingTemplatePrototype
+          id: SolarPanelPlasma
+        - !type:MappingTemplatePrototype
+          id: SolarPanelUranium
         - !type:MappingTemplatePrototype
           id: SolarPanelBroken
         - !type:MappingTemplatePrototype
@@ -948,6 +2819,8 @@
     - !type:MappingTemplatePrototype
       id: AME
       children:
+        - !type:MappingTemplatePrototype
+          id: SignAME
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconAME
         - !type:MappingTemplatePrototype
@@ -961,81 +2834,277 @@
     - !type:MappingTemplatePrototype
       id: PARoom
       children:
-        - !type:MappingTemplatePrototype
-          id: ParticleAcceleratorEmitterPortUnfinished
+      - !type:MappingTemplatePrototype
+        id: Assembled
+        children:
         - !type:MappingTemplatePrototype
           id: ParticleAcceleratorEmitterPort
         - !type:MappingTemplatePrototype
-          id: ParticleAcceleratorEmitterStarboard
+          id: ParticleAcceleratorEmitterFore
         - !type:MappingTemplatePrototype
-          id: ParticleAcceleratorEmitterStarboardUnfinished
+          id: ParticleAcceleratorEmitterStarboard
         - !type:MappingTemplatePrototype
           id: ParticleAcceleratorPowerBox
         - !type:MappingTemplatePrototype
-          id: ParticleAcceleratorPowerBoxUnfinished
-        - !type:MappingTemplatePrototype
           id: ParticleAcceleratorFuelChamber
+        - !type:MappingTemplatePrototype
+          id: ParticleAcceleratorEndCap
+        - !type:MappingTemplatePrototype
+          id: ParticleAcceleratorControlBox
+      - !type:MappingTemplatePrototype
+        id: Unfinished
+        children:
+        - !type:MappingTemplatePrototype
+          id: ParticleAcceleratorEmitterPortUnfinished
+        - !type:MappingTemplatePrototype
+          id: ParticleAcceleratorEmitterForeUnfinished
+        - !type:MappingTemplatePrototype
+          id: ParticleAcceleratorEmitterStarboardUnfinished
+        - !type:MappingTemplatePrototype
+          id: ParticleAcceleratorPowerBoxUnfinished
         - !type:MappingTemplatePrototype
           id: ParticleAcceleratorFuelChamberUnfinished
         - !type:MappingTemplatePrototype
           id: ParticleAcceleratorEndCapUnfinished
         - !type:MappingTemplatePrototype
-          id: ParticleAcceleratorEndCap
+          id: ParticleAcceleratorControlBoxUnfinished
+      - !type:MappingTemplatePrototype
+        id: Disassembled
+        children:
         - !type:MappingTemplatePrototype
-          id: ParticleAcceleratorEmitterForeUnfinished
+          id: CrateEngineeringParticleAccelerator
         - !type:MappingTemplatePrototype
-          id: ParticleAcceleratorEmitterFore
+          id: ComputerFrame
         - !type:MappingTemplatePrototype
-          id: DefaultStationBeaconSingularity
-
+          id: MachineFrame
+        - !type:MappingTemplatePrototype
+          id: UnfinishedMachineFrame
+        - !type:MappingTemplatePrototype
+          id: MachineFrameDestroyed
+        - !type:MappingTemplatePrototype
+          id: MachineParticleAcceleratorEmitterPortCircuitboard
+        - !type:MappingTemplatePrototype
+          id: MachineParticleAcceleratorEmitterForeCircuitboard
+        - !type:MappingTemplatePrototype
+          id: MachineParticleAcceleratorEmitterStarboardCircuitboard
+        - !type:MappingTemplatePrototype
+          id: MachineParticleAcceleratorPowerBoxCircuitboard
+        - !type:MappingTemplatePrototype
+          id: MachineParticleAcceleratorFuelChamberCircuitboard
+        - !type:MappingTemplatePrototype
+          id: MachineParticleAcceleratorEndCapCircuitboard
+        - !type:MappingTemplatePrototype
+          id: ParticleAcceleratorComputerCircuitboard
+        - !type:MappingTemplatePrototype
+          id: AmeJar
+        - !type:MappingTemplatePrototype
+          id: CableApcStack
+        - !type:MappingTemplatePrototype
+          id: SheetGlass
+        - !type:MappingTemplatePrototype
+          id: SheetSteel
+      - !type:MappingTemplatePrototype
+        id: Engine
+        children:
+        - !type:MappingTemplatePrototype
+          id: CrateEngineeringSingularityContainment
+        - !type:MappingTemplatePrototype
+          id: CrateEngineeringSingularityEmitter
+        - !type:MappingTemplatePrototype
+          id: CrateEngineeringSingularityGenerator
+        - !type:MappingTemplatePrototype
+          id: CrateEngineeringSingularityCollector
+        - !type:MappingTemplatePrototype
+          id: ContainmentFieldGenerator
+        - !type:MappingTemplatePrototype
+          id: Emitter
+        - !type:MappingTemplatePrototype
+          id: SingularityGenerator
+        - !type:MappingTemplatePrototype
+          id: RadiationCollector
+        - !type:MappingTemplatePrototype
+          id: CrateEngineeringTeslaGenerator
+        - !type:MappingTemplatePrototype
+          id: CrateEngineeringTeslaCoil
+        - !type:MappingTemplatePrototype
+          id: CrateEngineeringTeslaGroundingRod
+        - !type:MappingTemplatePrototype
+          id: TeslaGenerator
+        - !type:MappingTemplatePrototype
+          id: TeslaCoil
+        - !type:MappingTemplatePrototype
+          id: TeslaGroundingRod
+      - !type:MappingTemplatePrototype
+        id: SignRadiation # Reserve edit
+      - !type:MappingTemplatePrototype
+        id: DefaultStationBeaconSingularity
+      - !type:MappingTemplatePrototype
+        id: GeigerCounter # Reserve edit
+      - !type:MappingTemplatePrototype
+        id: CrateEmergencyRadiation # Reserve edit
+      - !type:MappingTemplatePrototype
+        id: ClosetRadiationSuitFilled
+      - !type:MappingTemplatePrototype
+        id: ShuttersRadiation
+    - !type:MappingTemplatePrototype
+      id: SupermatterRoom
+      children:
+        - !type:MappingTemplatePrototype
+          id: SignEngine
+        - !type:MappingTemplatePrototype
+          id: Supermatter
+        - !type:MappingTemplatePrototype
+          id: SignRadiation # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: HighSecAtmosLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: Emitter
+        - !type:MappingTemplatePrototype
+          id: RadiationCollector
+        - !type:MappingTemplatePrototype
+          id: SuitStorageHEVFilled # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: ClosetRadiationSuitFilled
+        - !type:MappingTemplatePrototype
+          id: ShuttersRadiation
+        - !type:MappingTemplatePrototype
+          id: TeslaCoil
+        - !type:MappingTemplatePrototype
+          id: TeslaGroundingRod
+        - !type:MappingTemplatePrototype
+          id: ReinforcedUraniumWindow # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: AtmosFixBlockerMarker
 - type: mappingTemplate
   id: Security
   rootType: Entity
   children:
     - !type:MappingTemplatePrototype
+      id: SecurityAirlocks
+      children:
+        - !type:MappingTemplatePrototype
+          id: AirlockSecurity
+        - !type:MappingTemplatePrototype
+          id: AirlockSecurityLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockSecurityGlass
+        - !type:MappingTemplatePrototype
+          id: AirlockSecurityGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockSecurityLawyerLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockSecurityLawyerGlassLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureSecurityLocked
+        - !type:MappingTemplatePrototype
+          id: PlasmaWindoorSecureSecurityLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureSecurityLawyerLocked
+        - !type:MappingTemplatePrototype
+          id: HighSecArmoryLocked # Reserve edit
+    - !type:MappingTemplatePrototype
       id: HOSRoom
       children:
+        - !type:MappingTemplatePrototype
+          id: SignHead
+        - !type:MappingTemplatePrototype
+          id: AirlockHeadOfSecurityGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockHeadOfSecurityLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintHeadOfSecurityLocked
         - !type:MappingTemplatePrototype
           id: SpawnPointHeadOfSecurity
         - !type:MappingTemplatePrototype
           id: LockerHeadOfSecurityFilled
         - !type:MappingTemplatePrototype
+          id: LockerHeadOfSecurityFilledHardsuit
+        - !type:MappingTemplatePrototype
           id: SuitStorageHOS
+        - !type:MappingTemplatePrototype
+          id: GlassBoxLawbringerFilled # Reserve edit
         - !type:MappingTemplatePrototype
           id: DresserHeadOfSecurityFilled
         - !type:MappingTemplatePrototype
           id: BedsheetHOS
         - !type:MappingTemplatePrototype
+          id: Bed
+        - !type:MappingTemplatePrototype
           id: DefaultStationBeaconHOSRoom
+        - !type:MappingTemplatePrototype
+          id: HolopadCommandHos
+        - !type:MappingTemplatePrototype
+          id: LockableButtonHeadOfSecurity
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
         - !type:MappingTemplatePrototype
           id: SpawnMobShiva
     - !type:MappingTemplatePrototype
       id: Brig
       children:
         - !type:MappingTemplatePrototype
-          id: VendingMachineSecDrobe
+          id: EquipmentRoom
+          children:
+            #- !type:MappingTemplatePrototype
+            #  id: SignEquip
+            - !type:MappingTemplatePrototype
+              id: VendingMachineSec
+            - !type:MappingTemplatePrototype
+              id: VendingMachineSecDrobe
+            - !type:MappingTemplatePrototype
+              id: LockerSecurityFilled
+            - !type:MappingTemplatePrototype
+              id: ClosetBombFilled
+            - !type:MappingTemplatePrototype
+              id: ClosetL3SecurityFilled
+            - !type:MappingTemplatePrototype
+              id: WardrobeSecurityFilled # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: WeaponCapacitorRecharger
+            - !type:MappingTemplatePrototype
+              id: PowerCellRecharger
+            - !type:MappingTemplatePrototype
+              id: WallWeaponCapacitorRecharger
+            - !type:MappingTemplatePrototype
+              id: LootSpawnerSecurityBasic # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: LootSpawnerSecurity # Reserve edit
+            - !type:MappingTemplatePrototype
+              id: HolopadSecurityLockerRoom # Reserve edit
         - !type:MappingTemplatePrototype
-          id: VendingMachineSec
+          id: SignPrison
         - !type:MappingTemplatePrototype
-          id: LockerSecurityFilled
+          id: SignSecurity
         - !type:MappingTemplatePrototype
-          id: Stunbaton
+          id: SignInterrogation # Reserve edit
         - !type:MappingTemplatePrototype
-          id: LampInterrogator
-        - !type:MappingTemplatePrototype
-          id: BoxMRE
-        - !type:MappingTemplatePrototype
-          id: Handcuffs
+          id: BannerSecurity # Reserve edit
         - !type:MappingTemplatePrototype
           id: ComputerCriminalRecords
         - !type:MappingTemplatePrototype
+          id: ComputerStationRecords
+        - !type:MappingTemplatePrototype
+          id: ComputerSurveillanceWirelessCameraMonitor
+        - !type:MappingTemplatePrototype
+          id: WallmountTelescreen
+        - !type:MappingTemplatePrototype
           id: ComputerSurveillanceCameraMonitor
+        - !type:MappingTemplatePrototype
+          id: ComputerCargoOrdersSecurity # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: CrateLockBoxSecurity # Reserve edit
         - !type:MappingTemplatePrototype
           id: SpawnPointSecurityCadet
         - !type:MappingTemplatePrototype
           id: SpawnPointSecurityOfficer
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconBrig
+        - !type:MappingTemplatePrototype
+          id: HolopadSecurityBrig
+        - !type:MappingTemplatePrototype
+          id: LockableButtonSecurity
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
         - !type:MappingTemplatePrototype
           id: SurveillanceCameraSecurity
         - !type:MappingTemplatePrototype
@@ -1048,9 +3117,23 @@
           id: WardrobePrisonFilled
         - !type:MappingTemplatePrototype
           id: BrigTimer
+        - !type:MappingTemplatePrototype
+          id: ContrabandDetector # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: VendingMachineDonut # Reserve edit
     - !type:MappingTemplatePrototype
       id: WardensOffice
       children:
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureArmoryLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockArmoryGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockArmoryLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintArmoryLocked
+        - !type:MappingTemplatePrototype
+          id: HighSecArmoryLocked # Reserve edit
         - !type:MappingTemplatePrototype
           id: DresserWardenFilled
         - !type:MappingTemplatePrototype
@@ -1058,48 +3141,56 @@
         - !type:MappingTemplatePrototype
           id: LockerWardenFilled
         - !type:MappingTemplatePrototype
+          id: LockerWardenFilledHardsuit
+        - !type:MappingTemplatePrototype
           id: SpawnPointWarden
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconWardensOffice
         - !type:MappingTemplatePrototype
+          id: HolopadSecurityWarden
+        - !type:MappingTemplatePrototype
+          id: LockableButtonArmory
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
+        - !type:MappingTemplatePrototype
           id: ComputerCriminalRecords
+        - !type:MappingTemplatePrototype
+          id: SpawnMobMcGriff
     - !type:MappingTemplatePrototype
       id: Armory
       children:
+        - !type:MappingTemplatePrototype
+          id: SignArmory
+        - !type:MappingTemplatePrototype
+          id: HighSecArmoryLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureArmoryLocked
+        - !type:MappingTemplatePrototype
+          id: PlasmaWindoorSecureArmoryLocked # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: GunSafe
+        - !type:MappingTemplatePrototype
+          id: LootSpawnerArmoryArmorOnly # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: LootSpawnerArmoryGunsOnly # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: LootSpawnerArmory # Reserve edit
         - !type:MappingTemplatePrototype
           id: SecurityTechFab
         - !type:MappingTemplatePrototype
           id: SuitStorageSec
         - !type:MappingTemplatePrototype
-          id: WeaponSubMachineGunDrozd
-        - !type:MappingTemplatePrototype
-          id: WeaponShotgunKammerer
-        - !type:MappingTemplatePrototype
-          id: WeaponShotgunEnforcer
-        - !type:MappingTemplatePrototype
-          id: WeaponShotgunEnforcerRubber
-        - !type:MappingTemplatePrototype
-          id: WeaponShotgunDoubleBarreledRubber
-        - !type:MappingTemplatePrototype
-          id: WeaponShotgunDoubleBarreled
-        - !type:MappingTemplatePrototype
-          id: WeaponPistolMk58
-        - !type:MappingTemplatePrototype
-          id: WeaponSubMachineGunWt550
-        - !type:MappingTemplatePrototype
-          id: WeaponRifleLecter
-        - !type:MappingTemplatePrototype
-          id: WeaponLaserCannon
-        - !type:MappingTemplatePrototype
-          id: WeaponLaserCarbine
-        - !type:MappingTemplatePrototype
-          id: WeaponLaserGun
-        - !type:MappingTemplatePrototype
-          id: WeaponDisabler
-        - !type:MappingTemplatePrototype
-          id: WeaponCapacitorRecharger
-        - !type:MappingTemplatePrototype
           id: DefaultStationBeaconArmory
+        - !type:MappingTemplatePrototype
+          id: HolopadSecurityArmory
+        - !type:MappingTemplatePrototype
+          id: LockableButtonArmory
+        - !type:MappingTemplatePrototype
+          id: CrateContrabandStorageSecure # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: LootSpawnerRandomCrateSecurity # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: CrateSecurityTrackingMindshieldImplants # Reserve edit
         - !type:MappingTemplatePrototype
           id: PortableFlasher
         - !type:MappingTemplatePrototype
@@ -1114,24 +3205,42 @@
           id: RiotBulletShield
         - !type:MappingTemplatePrototype
           id: RiotShield
-        - !type:MappingTemplatePrototype
-          id: LootSpawnerArmoryArmorOnly
-        - !type:MappingTemplatePrototype
-          id: LootSpawnerArmoryGunsOnly
-        - !type:MappingTemplatePrototype
-          id: LootSpawnerArmory
     - !type:MappingTemplatePrototype
-      id: PermaBrig
+      id: PermaBrig # or genpop
       children:
+        - !type:MappingTemplatePrototype
+          id: SignPrison # Reserve edit
+        - !type:MappingTemplatePrototype
+          id: SignGenpop # Reserve edit
         - !type:MappingTemplatePrototype
           id: VendingMachineSustenance
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconPermaBrig
         - !type:MappingTemplatePrototype
           id: SuitStorageEVAPrisoner
+        - !type:MappingTemplatePrototype
+          id: TurnstileGenpopEnter
+        - !type:MappingTemplatePrototype
+          id: TurnstileGenpopLeave
+        - !type:MappingTemplatePrototype
+          id: LockerPrisoner
+        - !type:MappingTemplatePrototype
+          id: CryogenicSleepUnit
+        - !type:MappingTemplatePrototype
+          id: WardrobePrisonFilled
+        - !type:MappingTemplatePrototype
+          id: HolopadSecurityPerma
     - !type:MappingTemplatePrototype
       id: DetectiveRoom
       children:
+        - !type:MappingTemplatePrototype
+          id: AirlockDetectiveGlassLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockDetectiveLocked
+        - !type:MappingTemplatePrototype
+          id: AirlockMaintDetectiveLocked
+        - !type:MappingTemplatePrototype
+          id: WindoorSecureDetectiveLocked
         - !type:MappingTemplatePrototype
           id: VendingMachineDetDrobe
         - !type:MappingTemplatePrototype
@@ -1141,7 +3250,11 @@
         - !type:MappingTemplatePrototype
           id: DefaultStationBeaconDetectiveRoom
         - !type:MappingTemplatePrototype
-          id: BoxForensicPad
+          id: HolopadSecurityDetective
+        - !type:MappingTemplatePrototype
+          id: LockableButtonDetective
+        - !type:MappingTemplatePrototype
+          id: FaxMachineBase
     - !type:MappingTemplatePrototype
       id: Gunnery
       children:
@@ -1157,4 +3270,87 @@
           id: WeaponLaserCarbinePractice
         - !type:MappingTemplatePrototype
           id: WeaponDisablerPractice
-
+        - !type:MappingTemplatePrototype
+          id: WeaponCapacitorRecharger
+        - !type:MappingTemplatePrototype
+          id: CrateTrainingBombs
+        - !type:MappingTemplatePrototype
+          id: ClothingNeckHeadphones #Reserve edit begin
+    - !type:MappingTemplatePrototype
+      id: Brigmedic
+      children:
+        - !type:MappingTemplatePrototype
+          id: LockerBrigmedicFilled
+        - !type:MappingTemplatePrototype
+          id: ComputerCrewMonitoring
+        - !type:MappingTemplatePrototype
+          id: MedicalBed
+        - !type:MappingTemplatePrototype
+          id: BedsheetBrigmedic
+        - !type:MappingTemplatePrototype
+          id: Morgue
+        - !type:MappingTemplatePrototype
+          id: DefibrillatorCabinetFilled
+        - !type:MappingTemplatePrototype
+          id: HolopadSecurityBrigMed
+        - !type:MappingTemplatePrototype
+          id: DefaultStationBeaconBrigMed
+        - !type:MappingTemplatePrototype
+          id: SpawnPointBrigmedic
+    # Reserve edit end
+- type: mappingTemplate
+  id: JusticeDepartment #changed due to same id with Goob HOS sword.
+  rootType: Entity
+  children:
+  - !type:MappingTemplatePrototype
+    id: Lawyer
+    children:
+    - !type:MappingTemplatePrototype
+      id: SignLawyer
+    #- !type:MappingTemplatePrototype
+    #  id: SignDirectionalJustice
+    #- !type:MappingTemplatePrototype
+    #  id: AirlockJusticeGlass
+    #- !type:MappingTemplatePrototype
+    #  id: AirlockJustice
+    - !type:MappingTemplatePrototype
+      id: AirlockLawyerLocked
+    - !type:MappingTemplatePrototype
+      id: AirlockMaintLawyerLocked
+    - !type:MappingTemplatePrototype
+      id: AirlockLawyerGlassLocked
+    - !type:MappingTemplatePrototype
+      id: AirlockSecurityLawyerLocked # Reserve edit
+    - !type:MappingTemplatePrototype
+      id: AirlockSecurityLawyerGlassLocked # Reserve edit
+    - !type:MappingTemplatePrototype
+      id: WindoorSecureSecurityLawyerLocked # Reserve edit
+    - !type:MappingTemplatePrototype
+      id: DefaultStationBeaconLawOffice
+    - !type:MappingTemplatePrototype
+      id: HolopadSecurityLawyer
+    - !type:MappingTemplatePrototype
+      id: LockableButtonLawyer
+    - !type:MappingTemplatePrototype
+      id: FaxMachineBase
+    - !type:MappingTemplatePrototype
+      id: ClosetLegalFilled
+    - !type:MappingTemplatePrototype
+      id: VendingMachineLawDrobe
+    - !type:MappingTemplatePrototype
+      id: SpawnPointLawyer
+  - !type:MappingTemplatePrototype
+    id: CourtRoom
+    children:
+      #- !type:MappingTemplatePrototype
+      #  id: SignDirectionaCourt
+      - !type:MappingTemplatePrototype
+        id: SignLawyer # Reserve edit
+      - !type:MappingTemplatePrototype
+        id: DefaultStationBeaconCourtroom
+      - !type:MappingTemplatePrototype
+        id: HolopadSecurityCourtroom
+      - !type:MappingTemplatePrototype
+        id: BenchPewMiddle
+      - !type:MappingTemplatePrototype
+        id: ToyHammer # Reserve edit

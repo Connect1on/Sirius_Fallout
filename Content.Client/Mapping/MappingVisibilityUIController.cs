@@ -1,3 +1,4 @@
+/*
 using Content.Client.Decals;
 using Content.Client.Markers;
 using Content.Client.SubFloor;
@@ -153,3 +154,4 @@ public sealed class MappingVisibilityUIController : UIController
         }
     }
 }
+*/

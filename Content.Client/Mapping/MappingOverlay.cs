@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+/*
+using System.Numerics;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
@@ -117,3 +118,4 @@ public sealed class MappingOverlay : Overlay
         handle.UseShader(null);
     }
 }
+*/

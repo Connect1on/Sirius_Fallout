@@ -1,3 +1,4 @@
+/*
 using Content.Client.Mapping;
 using Content.Client.Markers;
 using JetBrains.Annotations;
@@ -30,4 +31,4 @@ internal sealed class MappingClientSideSetupCommand : LocalizedCommands
         }
     }
 }
-
+*/

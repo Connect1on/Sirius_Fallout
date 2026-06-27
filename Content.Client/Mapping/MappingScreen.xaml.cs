@@ -1,4 +1,5 @@
-﻿using System.Linq;
+/*
+using System.Linq;
 using System.Numerics;
 using Content.Client.Decals;
 using Content.Client.Decals.UI;
@@ -280,3 +281,4 @@ public sealed partial class MappingScreen : InGameScreen
         EraseTileButton.Pressed = EraseTileButton == except;
     }
 }
+*/

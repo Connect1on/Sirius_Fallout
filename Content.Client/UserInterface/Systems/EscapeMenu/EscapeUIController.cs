@@ -1,4 +1,5 @@
-﻿using Content.Client.Gameplay;
+/*
+using Content.Client.Gameplay;
 using Content.Client.Mapping;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
@@ -226,3 +227,4 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
         }
     }
 }
+*/

@@ -1,3 +1,4 @@
+<!--
 <DefaultWindow
     xmlns="https://spacestation14.io"
     xmlns:mapping="clr-namespace:Content.Client.Mapping"
@@ -19,3 +20,4 @@
         <mapping:MappingVisibilityButton Name="Atmos" Text="{Loc 'mapping-visibility-atmos'}" Access="Public"/>
     </BoxContainer>
 </DefaultWindow>
+-->

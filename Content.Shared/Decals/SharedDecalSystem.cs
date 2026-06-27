@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
 using Robust.Shared.GameStates;
@@ -104,7 +103,7 @@ namespace Content.Shared.Decals
             OnDecalRemoved(gridId, decalId, component, indices, chunk);
             return true;
         }
-
+        // Sirius edit begin
         public HashSet<(uint Index, Decal Decal)> GetDecalsIntersecting(EntityUid gridUid, Box2 bounds, DecalGridComponent? component = null)
         {
             var decalIds = new HashSet<(uint, Decal)>();
@@ -131,6 +130,8 @@ namespace Content.Shared.Decals
 
             return decalIds;
         }
+        // Sirius edit end
+
 
         protected virtual void OnDecalRemoved(EntityUid gridId, uint decalId, DecalGridComponent component, Vector2i indices, DecalChunk chunk)
         {

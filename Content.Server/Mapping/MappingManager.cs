@@ -1,14 +1,12 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
 using Content.Shared.Mapping;
-using Robust.Server.GameObjects;
 using Robust.Server.Player;
-using Robust.Shared.EntitySerialization.Systems;
-using Robust.Shared.GameObjects;
 using Robust.Shared.ContentPack;
-using Robust.Shared.Map;
+using Robust.Shared.EntitySerialization;
+using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -25,23 +23,29 @@ public sealed class MappingManager : IPostInjectInit
 {
     [Dependency] private readonly IAdminManager _admin = default!;
     [Dependency] private readonly ILogManager _log = default!;
-    [Dependency] private readonly IMapManager _map = default!;
     [Dependency] private readonly IServerNetManager _net = default!;
     [Dependency] private readonly IPlayerManager _players = default!;
     [Dependency] private readonly IEntitySystemManager _systems = default!;
+    // Sirius edit start
     [Dependency] private readonly ISerializationManager _serialization = default!;
     [Dependency] private readonly IResourceManager _resourceMan = default!;
+    [Dependency] private readonly IEntityManager _ent = default!;
+    // Sirius edit end
 
     private ISawmill _sawmill = default!;
     private ZStdCompressionContext _zstd = default!;
 
+    // Sirius edit start
     private const string FavoritesPath = "/mapping_editor_favorites.yml";
+    // Sirius edit end
 
     public void PostInject()
     {
+        // Sirius edit start
         _net.RegisterNetMessage<MappingFavoritesSaveMessage>(OnMappingFavoritesSave);
         _net.RegisterNetMessage<MappingFavoritesLoadMessage>(OnMappingFavoritesLoad);
         _net.RegisterNetMessage<MappingFavoritesDataMessage>();
+        // Sirius edit end
 
         _sawmill = _log.GetSawmill("mapping");
 
@@ -59,27 +63,31 @@ public sealed class MappingManager : IPostInjectInit
 #if !FULL_RELEASE
         try
         {
+            // Sirius edit start
             if (!_players.TryGetSessionByChannel(message.MsgChannel, out var session) ||
                 !_admin.IsAdmin(session, true) ||
                 !_admin.HasAdminFlag(session, AdminFlags.Host) ||
-                session.AttachedEntity is not { } player)
+                !_ent.TryGetComponent(session.AttachedEntity, out TransformComponent? xform) ||
+                xform.MapUid is not { } mapUid)
             {
                 return;
             }
 
-            var mapId = _systems.GetEntitySystem<TransformSystem>().GetMapCoordinates(player).MapId;
-            var mapEntity = _map.GetMapEntityIdOrThrow(mapId);
-            var (data, _) = _systems.GetEntitySystem<MapLoaderSystem>().SerializeEntitiesRecursive(new HashSet<EntityUid> { mapEntity });
+            var sys = _systems.GetEntitySystem<MapLoaderSystem>();
+            var data = sys.SerializeEntitiesRecursive([mapUid]).Node;
+            // Sirius edit end
             var document = new YamlDocument(data.ToYaml());
             var stream = new YamlStream { document };
             var writer = new StringWriter();
             stream.Save(new YamlMappingFix(new Emitter(writer)), false);
 
-            var msg = new MappingMapDataMessage()
+            // Sirius edit start
+            var msg = new MappingMapDataMessage
             {
                 Context = _zstd,
                 Yml = writer.ToString()
             };
+            // Sirius edit end
             _net.ServerSendMessage(msg, message.MsgChannel);
         }
         catch (Exception e)
@@ -91,6 +99,7 @@ public sealed class MappingManager : IPostInjectInit
 #endif
     }
 
+    // Sirius edit start
     private void OnMappingFavoritesSave(MappingFavoritesSaveMessage message)
     {
         var mapping = new MappingDataNode();
@@ -98,7 +107,7 @@ public sealed class MappingManager : IPostInjectInit
 
         var path = new ResPath(FavoritesPath);
         using var writer = _resourceMan.UserData.OpenWriteText(path);
-        var stream = new YamlStream {new(mapping.ToYaml())};
+        var stream = new YamlStream { new(mapping.ToYaml()) };
         stream.Save(new YamlMappingFix(new Emitter(writer)), false);
     }
 
@@ -131,4 +140,5 @@ public sealed class MappingManager : IPostInjectInit
             _sawmill.Error("Failed to load user favorite objects: " + e);
         }
     }
+    // Sirius edit end
 }
