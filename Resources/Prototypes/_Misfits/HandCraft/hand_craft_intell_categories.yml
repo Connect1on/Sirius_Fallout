@@ -828,6 +828,15 @@
 
 # tools / misc stuff
 - type: handCraftIntellRecipe
+  id: N14HandCraftConveyorBelt
+  minInt: 10
+  result: ConveyorBeltAssembly
+  completeTime: 5
+  materials:
+    Steel: 600
+
+
+- type: handCraftIntellRecipe
   id: N14FlashlightLantern
   minInt: 6
   result: EmptyFlashlightLantern
