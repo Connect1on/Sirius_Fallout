@@ -21,7 +21,7 @@
   startingGear: CaesarLegionExplorerGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerVenator"
-  supervisors: job-name-caesar-legion-supervisors
+  supervisors: job-supervisor-caesar-legion-frumentarii
   canBeAntag: false
   accessGroups:
   - CaesarLegionExplorer

@@ -91,7 +91,7 @@
   description: job-description-supermutant-gladiator
   playTimeTracker: SuperMutantGladiator
   icon: JobIconLegionSlave
-  supervisors: job-supervisors-caesar-legion-slave
+  supervisors: job-supervisor-caesar-legion-slaves
   canBeAntag: false
   setPreference: true
   overrideConsoleVisibility: true

@@ -3,6 +3,7 @@
   setPreference: true
   hideIfPlaytimeRequirementsNotMet: false # #Misfits Tweak - all jobs visible in selection
   jobWhitelistBypassesRoleTimers: true # #Misfits Change
+  whitelisted: true # #Misfits Fix — allow job-whitelist fallback in lobby visibility filter
   weight: 180
   showBorder: true  # Starts the "Support Officers" tier block below Centurion/Legate
   name: job-name-caesar-legion-orator
@@ -25,7 +26,7 @@
   startingGear: CaesarLegionOratorGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerVenator"
-  supervisors: job-name-caesar-legion-other
+  supervisors: job-supervisor-caesar-legion-centurion
   canBeAntag: false
   accessGroups:
   - CaesarLegionOrator

@@ -103,6 +103,7 @@
   description: department-WhiteLegs-description
   color: "#d8d0c4"
   weight: -98
+  editorHidden: true
   uiCategory: MinorFaction
   roles:
   - WhiteLegsWarChief

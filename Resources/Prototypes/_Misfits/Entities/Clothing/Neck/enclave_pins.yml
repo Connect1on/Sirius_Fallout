@@ -4,8 +4,8 @@
 # Base Enclave pin — all others inherit from this.
 - type: entity
   parent: ClothingNeckPinBase
-  id: ClothingNeckPinEnclavePrivate
-  name: enclave private pin
+  id: ClothingNeckPinEnclaveBase
+  name: enclave pin
   description: A United States Government rank insignia showing the wearer's rank.
   components:
   - type: Sprite
@@ -20,20 +20,36 @@
 
 # Enlisted ranks
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
+  parent: ClothingNeckPinEnclaveBase
+  id: ClothingNeckPinEnclavePrivate
+  name: enclave private pin
+  components:
+  - type: RankTitle
+    rankTitle: Рядовой Анклава
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
+    layers:
+    - state: private
+
+- type: entity
+  parent: ClothingNeckPinEnclaveBase
   id: ClothingNeckPinEnclavePFC
   name: enclave private first class pin
   components:
+  - type: RankTitle
+    rankTitle: Рядовой 1го кл. Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: private1st
 
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
+  parent: ClothingNeckPinEnclaveBase
   id: ClothingNeckPinEnclaveSpecialist
   name: enclave specialist pin
   components:
+  - type: RankTitle
+    rankTitle: Капрал Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
@@ -41,40 +57,48 @@
 
 # NCO ranks
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
+  parent: ClothingNeckPinEnclaveBase
   id: ClothingNeckPinEnclaveSergeant
   name: enclave sergeant pin
   components:
+  - type: RankTitle
+    rankTitle: Сержант Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: sergeant
 
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
+  parent: ClothingNeckPinEnclaveBase
   id: ClothingNeckPinEnclaveStaffSergeant
   name: enclave staff sergeant pin
   components:
+  - type: RankTitle
+    rankTitle: Штаб-сержант Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: sergeant1st
 
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
+  parent: ClothingNeckPinEnclaveBase
   id: ClothingNeckPinEnclaveSFC
   name: enclave sergeant first class pin
   components:
+  - type: RankTitle
+    rankTitle: Сержант 1го кл. Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: mastersergeant
 
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
+  parent: ClothingNeckPinEnclaveBase
   id: ClothingNeckPinEnclaveMasterSergeant
   name: enclave master sergeant pin
   components:
+  - type: RankTitle
+    rankTitle: Мастер-сержант Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
@@ -82,9 +106,9 @@
 
 # Junior Officer ranks
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
-  id: ClothingNeckPinEnclaveSecondLieutenant
-  name: enclave second lieutenant pin
+  parent: ClothingNeckPinEnclaveBase
+  id: ClothingNeckPinEnclaveBaseOfficer
+  name: enclave officer pin
   components:
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
@@ -97,10 +121,24 @@
       - state: silver-equipped
 
 - type: entity
-  parent: ClothingNeckPinEnclaveSecondLieutenant
+  parent: ClothingNeckPinEnclaveBaseOfficer
+  id: ClothingNeckPinEnclaveSecondLieutenant
+  name: enclave second lieutenant pin
+  components:
+  - type: RankTitle
+    rankTitle: 2й Лейтенант Анклава
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
+    layers:
+    - state: secondlieutenant
+
+- type: entity
+  parent: ClothingNeckPinEnclaveBaseOfficer
   id: ClothingNeckPinEnclaveFirstLieutenant
   name: enclave first lieutenant pin
   components:
+  - type: RankTitle
+    rankTitle: 1й Лейтенант Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
@@ -108,20 +146,24 @@
 
 # Senior Officer ranks
 - type: entity
-  parent: ClothingNeckPinEnclaveSecondLieutenant
+  parent: ClothingNeckPinEnclaveBaseOfficer
   id: ClothingNeckPinEnclaveCaptain
   name: enclave captain pin
   components:
+  - type: RankTitle
+    rankTitle: Капитан Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: captain
 
 - type: entity
-  parent: ClothingNeckPinEnclaveSecondLieutenant
+  parent: ClothingNeckPinEnclaveBaseOfficer
   id: ClothingNeckPinEnclaveMajor
   name: enclave major pin
   components:
+  - type: RankTitle
+    rankTitle: Майор Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
@@ -129,37 +171,43 @@
 
 # Commander ranks
 - type: entity
-  parent: ClothingNeckPinEnclaveSecondLieutenant
+  parent: ClothingNeckPinEnclaveBaseOfficer
   id: ClothingNeckPinEnclaveLtColonel
   name: enclave lieutenant colonel pin
   components:
+  - type: RankTitle
+    rankTitle: Подполковник Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: major
 
 - type: entity
-  parent: ClothingNeckPinEnclaveSecondLieutenant
+  parent: ClothingNeckPinEnclaveBaseOfficer
   id: ClothingNeckPinEnclaveColonel
   name: enclave colonel pin
   components:
+  - type: RankTitle
+    rankTitle: Полковник Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: captain
 
 - type: entity
-  parent: ClothingNeckPinEnclaveSecondLieutenant
+  parent: ClothingNeckPinEnclaveBaseOfficer
   id: ClothingNeckPinEnclaveGeneral
   name: enclave general pin
   components:
+  - type: RankTitle
+    rankTitle: Генерал Анклава
   - type: Sprite
     sprite: _Nuclear14/Clothing/Neck/Misc/pins.rsi
     layers:
     - state: captain
 
 - type: entity
-  parent: ClothingNeckPinEnclaveSecondLieutenant
+  parent: ClothingNeckPinEnclaveBaseOfficer
   id: ClothingNeckPinEnclaveGovernor
   name: enclave state governor pin
   components:
@@ -170,7 +218,7 @@
 
 # Science ranks
 - type: entity
-  parent: ClothingNeckPinEnclavePrivate
+  parent: ClothingNeckPinEnclaveBase
   id: ClothingNeckPinEnclaveJuniorScientist
   name: enclave junior scientist pin
   description: A United States Government research division insignia showing the wearer's rank.

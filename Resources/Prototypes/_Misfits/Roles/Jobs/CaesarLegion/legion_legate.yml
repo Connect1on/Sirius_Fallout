@@ -22,7 +22,7 @@
   startingGear: CaesarLegionLegateGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerCenturion"
-  supervisors: job-name-caesar-legion
+  supervisors: job-supervisor-caesar-legion-kaisar
   canBeAntag: false
   requireAdminNotify: true
   accessGroups:

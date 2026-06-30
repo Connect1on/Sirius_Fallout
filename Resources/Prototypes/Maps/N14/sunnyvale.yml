@@ -62,12 +62,12 @@
             NCRHeavyTrooper: [ 2, 2 ] # #Misfits Add - Heavy Trooper: 2 slots, between Specialist and Sergeant
             NCRNCO: [ 4, 4 ]
             NCRWS: [ 1, 1 ] # #Misfits Tweak - increased: absorbs Engineer (2) + Medic (1) slots
-            NCREngineer: [ 3, 3 ]
+            NCREngineer: [ 2, 2 ]
             NCRDoctor: [ 1, 1 ]
             NCRMedic: [ 3, 3 ]
             #NCRPrivateFirstClass: [ 0, 0 ]
             #NCRSoldier: [ 0, 0 ]
-            NCRCadet: [ 16, 16 ]
+            NCRCadet: [ 15, 15 ]
             #NCRPisoner : [ 5, 5 ]
             #NCRMPinvestigator : [ 1, 1 ]
             NCRMilitaryPoliceSergeant: [ 2, 2 ]
@@ -93,7 +93,7 @@
             BoSKnight: [ 3, 3 ]  #Misfits Change /Add/
             BoSScribe: [ 3, 3 ]  #Misfits Change /Add/
             BoSMidSquire: [ 4, 4 ]
-            BoSInitiate: [ 4, 4 ]  #Misfits Change /Add/
+            BoSInitiate: [ 3, 3 ]  #Misfits Change /Add/
             BoSMidSerf: [ 6, 6 ]
             # BoSWashingtonInitiate: [ 3, 3 ] #Misfits Change /Comment-out/: Washington BoS removed
             VaultManagement: [ 1, 1 ] # #Misfits Tweak - 0 active slots (admin-notify role)
@@ -135,7 +135,7 @@
             #FollowerDoctor: [ 0, 0 ]   # #Misfits Add - Doctor rank slot
             #FollowerHead: [ 0, 0 ]     # #Misfits Add - Head rank slot (0 min so server doesn't require one)
             SyntheticMrHandy: [ 2, 2 ]
-            SyntheticProtectron: [ 2, 0 ]
+            SyntheticProtectron: [ 1, 0 ]
             SyntheticMrGutsy: [ 1, 0 ]
             SyntheticAssaultron: [ 1, 0 ]
             SyntheticSentryBot: [ 1, 0 ] # #Misfits Add: sentry bot late join slots

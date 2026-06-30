@@ -1,7 +1,7 @@
-job-name-caesar-legion = подчиняться Цезарю.
-job-name-caesar-legion-supervisors = подчиняйтесь Цезарю и легату.
-job-name-caesar-legion-other = подчиняйтесь Цезарю, Легату, Центуриону и Декану.
-job-supervisors-caesar-legion-slave = подчиняйтесь Цезарю, Легату, Центуриону, Декану и любому легионеру.
+# job-name-caesar-legion = подчиняться Цезарю.
+# job-name-caesar-legion-supervisors = подчиняйтесь Цезарю и Легату.
+# job-name-caesar-legion-other = подчиняйтесь Цезарю, Легату, Центуриону и Декану.
+# job-supervisors-caesar-legion-slave = подчиняйтесь Цезарю, Легату, Центуриону, Декану и любому легионеру.
 
 # Misfits Change /Comment-out/: Western BoS chapter removed.
 # # Western BoS

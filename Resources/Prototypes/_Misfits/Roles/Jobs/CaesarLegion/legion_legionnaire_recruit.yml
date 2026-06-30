@@ -22,7 +22,7 @@
   startingGear: CaesarLegionLegionnaireRecruitGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerRecruit"
-  supervisors: job-name-caesar-legion-other
+  supervisors: job-supervisor-caesar-legion-dean
   canBeAntag: false
   accessGroups:
   - CaesarLegionLegionnaireRecruit

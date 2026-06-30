@@ -26,7 +26,7 @@
   startingGear: CaesarLegionVeteranDecanusGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerDean"
-  supervisors: job-name-caesar-legion-supervisors
+  supervisors: job-supervisor-caesar-legion-centurion
   canBeAntag: false
   accessGroups:
   - CaesarLegionVeteranDecanus

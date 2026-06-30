@@ -179,3 +179,78 @@
       entity: ClothingNeckPinNCRPrivate1st
     - min: 216000  # 60 hours
       entity: ClothingNeckPinNCRCorporal
+
+### Enclave
+
+# Enclave Commander
+- type: ncrRankPinProgression
+  id: EnclaveCommanderPins
+  jobs:
+    - EnclaveCommander
+  tracker: EnclaveCommander
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinEnclaveLtColonel
+    - min: 72000  # 20 hours
+      entity: ClothingNeckPinEnclaveColonel
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinEnclaveGeneral
+
+# Enclave Senior Officer
+- type: ncrRankPinProgression
+  id: EnclaveSrOfficerPins
+  jobs:
+    - EnclaveSeniorOfficer
+  tracker: EnclaveSeniorOfficer
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinEnclaveCaptain
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinEnclaveMajor
+
+# Enclave Junior Officer
+- type: ncrRankPinProgression
+  id: EnclaveJrOfficerPins
+  jobs:
+    - EnclaveJuniorOfficer
+  tracker: EnclaveJuniorOfficer
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinEnclaveSecondLieutenant
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinEnclaveFirstLieutenant
+
+# Enclave NCO
+- type: ncrRankPinProgression
+  id: EnclaveSergeantPins
+  jobs:
+    - EnclaveNCO
+  tracker: EnclaveNCO
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinEnclaveSergeant
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinEnclaveStaffSergeant
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinEnclaveSFC
+    - min: 216000  # 60 hours
+      entity: ClothingNeckPinEnclaveMasterSergeant
+
+# Enclave Enlisted
+- type: ncrRankPinProgression
+  id: EnclaveEnlistedPins
+  jobs:
+    - EnclaveEnlisted
+  tracker: EnclaveEnlisted
+  departmentTracker: false
+  thresholds:
+    - min: 0
+      entity: ClothingNeckPinEnclavePrivate
+    - min: 72000   # 20 hours
+      entity: ClothingNeckPinEnclavePFC
+    - min: 144000  # 40 hours
+      entity: ClothingNeckPinEnclaveSpecialist

@@ -6,7 +6,7 @@
 - type: job
   id: CaesarLegionPriestessOfMars
   setPreference: true
-  hideWithoutJobWhitelist: false  # visible in all menus regardless of whitelist
+  hideWithoutJobWhitelist: true  # visible in all menus regardless of whitelist
   overrideConsoleVisibility: true # force display in crew manifest + job picker
   hideIfPlaytimeRequirementsNotMet: false
   jobWhitelistBypassesRoleTimers: true
@@ -30,7 +30,7 @@
   startingGear: CaesarLegionPriestessOfMarsGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerRecruit"
-  supervisors: job-name-caesar-legion-other
+  supervisors: job-supervisor-caesar-legion-centurion
   canBeAntag: false
   # Priestesses share base Legion access; they are not combatants and gain
   # no additional restricted-area access beyond a standard Recruit.

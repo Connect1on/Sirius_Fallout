@@ -19,7 +19,7 @@
   startingGear: CaesarLegionSlaveGear
   alwaysUseSpawner: true
   icon: "JobIconLegionSlave"
-  supervisors: job-supervisors-caesar-legion-slave
+  supervisors: job-supervisor-caesar-legion-slaves
   canBeAntag: false
   accessGroups:
   - CaesarLegionSlave

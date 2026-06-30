@@ -3,6 +3,7 @@
   setPreference: true
   hideIfPlaytimeRequirementsNotMet: false # #Misfits Tweak - all jobs visible in selection
   jobWhitelistBypassesRoleTimers: true # #Misfits Change
+  whitelisted: true # #Misfits Fix — allow job-whitelist fallback in lobby visibility filter
   weight: 110
   name: job-name-caesar-legion-frumentarii
   description: job-description-caesar-legion-frumentarii
@@ -21,7 +22,7 @@
   startingGear: CaesarLegionFrumentariiGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerVenator"
-  supervisors: job-name-caesar-legion-supervisors
+  supervisors: job-supervisor-caesar-legion-legate
   canBeAntag: false
   accessGroups:
   - CaesarLegionFrumentarii

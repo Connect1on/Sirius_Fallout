@@ -1,0 +1,101 @@
+- type: entity
+  parent: N14DoorRoomRepaired
+  id: SiriusDoorWoodSecureLockedLegion
+  suffix: Legion, Locked, Legion
+  components:
+  - type: AccessReader
+    access: [["CaesarLegion"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorRoomRepaired
+  id: SiriusDoorWoodSecureLockedLegionOrator
+  suffix: Legion, Locked, Legion Orator
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionOrator"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorRoomRepaired
+  id: SiriusDoorWoodSecureLockedLegionDean
+  suffix: Legion, Locked, Legion Dean
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionDean"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorRoomRepaired
+  id: SiriusDoorWoodSecureLockedLegionCenturion
+  suffix: Legion, Locked, Legion Centurion
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionCenturion"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorRoomRepaired
+  id: SiriusDoorWoodSecureLockedLegionLegate
+  suffix: Legion, Locked, Legion Legate
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionLegate"]]
+  - type: Wires
+    layoutId: AirlockService
+
+##
+
+- type: entity
+  parent: N14DoorMakeshift
+  id: SiriusDoorMakeshiftSecureLockedLegion
+  suffix: Legion, Locked, Legion
+  components:
+  - type: AccessReader
+    access: [["CaesarLegion"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorMakeshift
+  id: SiriusDoorMakeshiftSecureLockedLegionOrator
+  suffix: Legion, Locked, Legion Orator
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionOrator"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorMakeshift
+  id: SiriusDoorMakeshiftSecureLockedLegionDean
+  suffix: Legion, Locked, Legion Dean
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionDean"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorMakeshift
+  id: SiriusDoorMakeshiftSecureLockedLegionCenturion
+  suffix: Legion, Locked, Legion Centurion
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionCenturion"]]
+  - type: Wires
+    layoutId: AirlockService
+
+- type: entity
+  parent: N14DoorMakeshift
+  id: SiriusDoorMakeshiftSecureLockedLegionLegate
+  suffix: Legion, Locked, Legion Legate
+  components:
+  - type: AccessReader
+    access: [["CaesarLegionLegate"]]
+  - type: Wires
+    layoutId: AirlockService

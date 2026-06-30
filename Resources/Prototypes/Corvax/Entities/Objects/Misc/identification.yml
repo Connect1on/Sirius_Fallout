@@ -300,7 +300,7 @@
     nameLocId: n14-id-medallion-name
     fullNameLocId: n14-id-medallion-full-name
   - type: PresetIdCard
-    job: CaesarLegionDean
+    job: CaesarLegionPrimeDecanus
   #Misfits Add - IdCardLegion enables this medallion to appear on the Centurion's tactical map terminal
   - type: Tag
     tags:

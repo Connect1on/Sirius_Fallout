@@ -25,7 +25,7 @@
   startingGear: CaesarLegionVexillariusGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerVenator"
-  supervisors: job-name-caesar-legion-other
+  supervisors: job-supervisor-caesar-legion-centurion
   canBeAntag: false
   accessGroups:
   - CaesarLegionVexillarius
