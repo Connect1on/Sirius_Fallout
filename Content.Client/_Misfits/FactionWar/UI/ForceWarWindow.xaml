@@ -2,8 +2,8 @@
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                       Title="Force War (Admin)"
                       Resizable="False"
-                      SetSize="420 620"
-                      MinSize="400 580">
+                      SetSize="420 590"
+                      MinSize="400 550">
 
     <ScrollContainer HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="False">
     <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="0">
@@ -69,24 +69,19 @@
 
         <PanelContainer MinHeight="1" Modulate="#404040" Margin="10 4"/>
 
-        <!-- #Misfits Add - Admin Observe War ─────────────────────── -->
-        <Label Text="Admin Observe War" Margin="10 4 10 2" Modulate="#FFA500"
+        <!-- #Misfits Add - Admin Observe ───────────────────────── -->
+        <Label Text="Admin Observe" Margin="10 4 10 2" Modulate="#FFA500"
                StyleClasses="LabelBig"/>
 
-        <Label Text="See overlay tags without yourself getting an [ALLY]/[ENEMY] tag."
+        <Label Text="Observe a war from a participant's perspective. See [ALLY]/[ENEMY] tags without getting one yourself."
                Margin="10 0 10 4" Modulate="#AAAAAA" StyleClasses="LabelSubText"/>
 
         <BoxContainer Orientation="Horizontal" Margin="10 4 10 4" SeparationOverride="8">
-            <Label Text="Observer:" VerticalAlignment="Center" MinWidth="90"/>
-            <OptionButton Name="ObserverSelector" HorizontalExpand="True"/>
-        </BoxContainer>
-
-        <BoxContainer Orientation="Horizontal" Margin="10 0 10 4" SeparationOverride="8">
             <Label Text="War Participant:" VerticalAlignment="Center" MinWidth="90"/>
             <OptionButton Name="ObserveParticipantSelector" HorizontalExpand="True"/>
         </BoxContainer>
 
-        <Button Name="ForceObserveButton" Text="Admin Observe War"
+        <Button Name="ForceObserveButton" Text="Admin Observe"
                 Margin="10 2 10 6" HorizontalExpand="True"/>
 
         <RichTextLabel Name="ObserveResultLabel" Margin="10 4 10 8" HorizontalExpand="True"/>

@@ -374,12 +374,11 @@ public sealed class FactionWarSurrenderResultEvent : EntityEventArgs
 
 /// <summary>
 /// #Misfits Add - Client → server. Admin requests to observe a war from a participant's perspective.
-/// Observer sees overlay tags but does not get one rendered on them.
+/// The admin sending the request IS the observer — no need to specify separately.
 /// </summary>
 [Serializable, NetSerializable]
 public sealed class PlayerWarForceObserveRequestEvent : EntityEventArgs
 {
-    public NetUserId Observer;
     public NetUserId Participant;
 }
 

@@ -322,12 +322,11 @@ public sealed class FactionWarClientSystem : EntitySystem
             });
         };
 
-        // #Misfits Add - Admin observe war event.
-        _forceWarWindow.OnForceObserve += (observer, participant) =>
+        // #Misfits Add - Admin observe war. Observer is always the admin using the panel.
+        _forceWarWindow.OnForceObserve += participant =>
         {
             RaiseNetworkEvent(new PlayerWarForceObserveRequestEvent
             {
-                Observer = observer,
                 Participant = participant,
             });
         };

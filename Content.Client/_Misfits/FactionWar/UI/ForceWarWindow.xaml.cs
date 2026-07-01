@@ -24,8 +24,8 @@ public sealed partial class ForceWarWindow : FancyWindow
 
     public event Action<NetUserId, NetUserId>? OnForceCeasefire;
 
-    // #Misfits Add - Admin observe war event.
-    public event Action<NetUserId, NetUserId>? OnForceObserve;
+    // #Misfits Add - Admin observe war. Observer is always the admin using this panel.
+    public event Action<NetUserId>? OnForceObserve;
 
     private readonly List<OnlinePlayerInfo> _players = new();
 
@@ -83,15 +83,13 @@ public sealed partial class ForceWarWindow : FancyWindow
 
         AggressorSelector.Clear();
         TargetSelector.Clear();
-        // #Misfits Add - populate observe dropdowns too
-        ObserverSelector.Clear();
+        // #Misfits Add - populate observe dropdown too
         ObserveParticipantSelector.Clear();
 
         foreach (var player in _players)
         {
             AggressorSelector.AddItem(player.CharacterName);
             TargetSelector.AddItem(player.CharacterName);
-            ObserverSelector.AddItem(player.CharacterName);           // #Misfits Add
             ObserveParticipantSelector.AddItem(player.CharacterName); // #Misfits Add
         }
 
@@ -122,23 +120,11 @@ public sealed partial class ForceWarWindow : FancyWindow
 
     private void SubmitForceObserve()
     {
-        var obsIdx = ObserverSelector.SelectedId;
-        var partIdx = ObserveParticipantSelector.SelectedId;
-
-        if (obsIdx < 0 || obsIdx >= _players.Count ||
-            partIdx < 0 || partIdx >= _players.Count)
+        var idx = ObserveParticipantSelector.SelectedId;
+        if (idx < 0 || idx >= _players.Count)
             return;
 
-        var observer = _players[obsIdx];
-        var participant = _players[partIdx];
-
-        if (observer.UserId == participant.UserId)
-        {
-            ShowObserveResult(false, "Observer and participant cannot be the same.");
-            return;
-        }
-
-        OnForceObserve?.Invoke(observer.UserId, participant.UserId);
+        OnForceObserve?.Invoke(_players[idx].UserId);
     }
 
     private void SubmitForceWar()
