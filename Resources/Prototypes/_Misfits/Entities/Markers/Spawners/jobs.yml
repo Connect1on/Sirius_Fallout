@@ -218,11 +218,11 @@
 # #Misfits Add - Orator spawn point was missing, causing BoS base fallback
 - type: entity
   parent: MisfitsSpawnPointCaesarLegionCenturion
-  id: MisfitsSpawnPointCaesarLegionOptio
-  name: Legion Optio
+  id: MisfitsSpawnPointCaesarLegionOrator
+  name: Legion Orator
   components:
   - type: SpawnPoint
-    job_id: CaesarLegionOptio
+    job_id: CaesarLegionOrator
   - type: Sprite
     layers:
       - state: green

@@ -115,7 +115,7 @@
           CaesarLegionFrumentarii: [ 2, 2 ] # Forge-Legion # #Misfits Tweak - raised total and initial slots from 1 to 2
           CaesarLegionPrimeDecanus: [ 1, 1 ] # Misfits-Legion
           CaesarLegionExplorer: [ 1, 6 ] # Misfits-Legion
-          CaesarLegionOptio: [ 1, 1 ] # Misfits-Legion
+          CaesarLegionOrator: [ 1, 1 ] # Misfits-Legion
           CaesarLegionPriestessOfMars: [ 1, 1 ] # Misfits-Legion — Priestess of Mars late-join slot
           CaesarLegionAcolyteOfMars: [ 3, 3 ] # Misfits-Legion — Acolyte of Mars late-join slot
           CaesarLegionHoundmaster: [ 1, 1 ] # Forge-Legion

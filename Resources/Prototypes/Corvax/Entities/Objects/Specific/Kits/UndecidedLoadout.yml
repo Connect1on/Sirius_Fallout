@@ -103,7 +103,7 @@
     - ExplorerRaiderSet
 
 - type: entity
-  id: LegionOptioloadoutkits
+  id: LegionOratorloadoutkits
   name: kit
   description: "please only take one."
   parent: LegionCenturionloadoutkits
@@ -113,9 +113,9 @@
     state: base
   - type: UndecidedLoadoutBackpack
     possibleSets:
-    - OptioPreacherSet
-    - OptioDefenderSet
-    - OptioInquisitorSet
+    - OratorPreacherSet
+    - OratorDefenderSet
+    - OratorInquisitorSet
 
 - type: entity
   id: LegionHoundmasterloadoutkits
@@ -190,7 +190,7 @@
     possibleSets:
     - VeteranRiflemanSet
     - VeteranBerserkerSet
-    - VeteranGoliathSet # #Misfits Change /Add/: Legion veterans get a dedicated powerfist option.
+    - VeteranGoliathSet # #Misfits Change /Add/: Legion veterans get a dedicated powerfist Oratorn.
 
 - type: entity
   id: LegionWarriorloadoutkits
@@ -646,34 +646,34 @@
   - KitExplorerRaider
 
 - type: UndecidedLoadoutBackpackSet
-  id: OptioPreacherSet
-  name: undecided-loadout-category-corvax-optio-preacher-name
-  description: undecided-loadout-category-corvax-optio-preacher-description
+  id: OratorPreacherSet
+  name: undecided-loadout-category-corvax-Orator-preacher-name
+  description: undecided-loadout-category-corvax-Orator-preacher-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
   content:
-  - KitOptioPreacher
+  - KitOratorPreacher
 
 - type: UndecidedLoadoutBackpackSet
-  id: OptioDefenderSet
-  name: undecided-loadout-category-corvax-optio-defender-name
-  description: undecided-loadout-category-corvax-optio-defender-description
+  id: OratorDefenderSet
+  name: undecided-loadout-category-corvax-Orator-defender-name
+  description: undecided-loadout-category-corvax-Orator-defender-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
   content:
-  - KitOptioDefender
+  - KitOratorDefender
 
 - type: UndecidedLoadoutBackpackSet
-  id: OptioInquisitorSet
-  name: undecided-loadout-category-corvax-optio-inquisitor-name
-  description: undecided-loadout-category-corvax-optio-inquisitor-description
+  id: OratorInquisitorSet
+  name: undecided-loadout-category-corvax-Orator-inquisitor-name
+  description: undecided-loadout-category-corvax-Orator-inquisitor-description
   sprite:
     sprite: Corvax/Objects/Misc/kits.rsi
     state: base
   content:
-  - KitOptioInquisitor
+  - KitOratorInquisitor
 
 - type: UndecidedLoadoutBackpackSet
   id: HoundmasterHunterSet

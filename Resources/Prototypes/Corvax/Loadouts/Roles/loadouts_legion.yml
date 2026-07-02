@@ -139,7 +139,7 @@
         - CaesarLegionPrimeDecanus
         - CaesarLegionHoundmaster
         - CaesarLegionExplorer
-        - CaesarLegionOptio
+        - CaesarLegionOrator
         - CaesarLegionLegate
     - !type:CharacterPlaytimeRequirement
       tracker: CaesarLegionDean
@@ -169,7 +169,7 @@
         - CaesarLegionForgemaster
         - CaesarLegionHoundmaster
         - CaesarLegionExplorer
-        - CaesarLegionOptio
+        - CaesarLegionOrator
         - CaesarLegionLegate
     - !type:CharacterPlaytimeRequirement
       tracker: CaesarLegionFrumentarii
@@ -199,7 +199,7 @@
         - CaesarLegionFrumentarii
         - CaesarLegionHoundmaster
         - CaesarLegionExplorer
-        - CaesarLegionOptio
+        - CaesarLegionOrator
         - CaesarLegionLegate
     - !type:CharacterPlaytimeRequirement
       tracker: CaesarLegionCenturion
@@ -311,7 +311,7 @@
         - CaesarLegionFrumentarii
         - CaesarLegionHoundmaster
         - CaesarLegionExplorer
-        - CaesarLegionOptio
+        - CaesarLegionOrator
         - CaesarLegionLegate
   items:
     - N14ClothingUniformJumpsuitLegionnaireOther
