@@ -103,21 +103,6 @@
     - ExplorerRaiderSet
 
 - type: entity
-  id: LegionOratorloadoutkits
-  name: kit
-  description: "please only take one."
-  parent: LegionCenturionloadoutkits
-  components:
-  - type: Sprite
-    sprite: Corvax/Objects/Misc/kits.rsi
-    state: base
-  - type: UndecidedLoadoutBackpack
-    possibleSets:
-    - OratorPreacherSet
-    - OratorDefenderSet
-    - OratorInquisitorSet
-
-- type: entity
   id: LegionHoundmasterloadoutkits
   name: kit
   description: "please only take one."
@@ -644,36 +629,6 @@
     state: base
   content:
   - KitExplorerRaider
-
-- type: UndecidedLoadoutBackpackSet
-  id: OratorPreacherSet
-  name: undecided-loadout-category-corvax-Orator-preacher-name
-  description: undecided-loadout-category-corvax-Orator-preacher-description
-  sprite:
-    sprite: Corvax/Objects/Misc/kits.rsi
-    state: base
-  content:
-  - KitOratorPreacher
-
-- type: UndecidedLoadoutBackpackSet
-  id: OratorDefenderSet
-  name: undecided-loadout-category-corvax-Orator-defender-name
-  description: undecided-loadout-category-corvax-Orator-defender-description
-  sprite:
-    sprite: Corvax/Objects/Misc/kits.rsi
-    state: base
-  content:
-  - KitOratorDefender
-
-- type: UndecidedLoadoutBackpackSet
-  id: OratorInquisitorSet
-  name: undecided-loadout-category-corvax-Orator-inquisitor-name
-  description: undecided-loadout-category-corvax-Orator-inquisitor-description
-  sprite:
-    sprite: Corvax/Objects/Misc/kits.rsi
-    state: base
-  content:
-  - KitOratorInquisitor
 
 - type: UndecidedLoadoutBackpackSet
   id: HoundmasterHunterSet
