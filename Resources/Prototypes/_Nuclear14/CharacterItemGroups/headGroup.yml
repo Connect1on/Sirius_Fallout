@@ -149,7 +149,31 @@
       id: N14LoadoutUniversalHeadTribalCloakHood
     - type: loadout
       id: N14LoadoutUniversalHeadTribalCloakHoodBr
+
     - type: loadout
-      id: N14ClothingHeadHatNCRSlouch
+      id: MisfitsLoadoutClothingHeadHatBrotherhoodMidwestHelmet
     - type: loadout
-      id: MisfitsClothingHeadRedBandana
+      id: MisfitsLoadoutClothingHeadHatBrotherhoodMidwestHelmetVeteran
+    - type: loadout
+      id: MisfitsLoadoutClothingHeadHatBrotherhoodMidwestHelmetRecon
+    - type: loadout
+      id: MisfitsLoadoutClothingHeadHatCapkhighBoS
+    - type: loadout
+      id: MisfitsLoadoutClothingHeadHatBanganeBoS
+    - type: loadout
+      id: MisfitsLoadoutClothingHeadHatBeretknighBoS
+    - type: loadout
+      id: MisfitsLoadoutClothingScribeBeret
+    - type: loadout
+      id: MisfitsLoadoutClothingHeadHatHoodScribeTabard
+    - type: loadout
+      id: N14LoadoutClothingHeadHatNCRHelmetMetalDesert
+
+    - type: loadout
+      id: N14LoadoutClothingHeadHatEnclavePeacekeeperCap
+    - type: loadout
+      id: N14LoadoutClothingHeadHatEnclaveOfficer
+    - type: loadout
+      id: N14LoadoutClothingHeadHatEnclaveIntel
+    - type: loadout
+      id: N14LoadoutClothingHeadHatEnclaveScientist

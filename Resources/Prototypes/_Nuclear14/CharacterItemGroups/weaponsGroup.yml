@@ -1,133 +1,304 @@
+#MARK:"Оружия"
+#В "N14LoadoutGuns" записываются лазеры, пистолеты, винтовки, дробовики и всё что стреляет. А ЧУТЬ НИЖЕ, В "N14LoadoutMelee", ЗАПИСЫВАЕТСЯ БЛИЖНИЙ БОЙ!
 - type: characterItemGroup
   id: N14LoadoutGuns
   items:
-    - type: loadout
-      id: N14WeaponRevolver9mm
-    - type: loadout
-      id: N14WeaponPistol10mmPipe
-    - type: loadout
-      id: N14WeaponPistol9mm
-    - type: loadout
-      id: N14WeaponPistol22lr
-    - type: loadout
-      id: N14WeaponPistol10mm
-    - type: loadout
-      id: N14WeaponPistol12mm
-    - type: loadout
-      id: N14WeaponPistol9mmChinese
-    - type: loadout
-      id: N14WeaponPistolWebley
-    - type: loadout
-      id: N14WeaponRevolver44Magnun
-    - type: loadout
-      id: N14WeaponLaserPistol
-    - type: loadout
-      id: N14WeaponLaserRevolver
+
+## MARK: Огнестрельное.
 
 
-- type: characterItemGroup
-  id: N14LoadoutGunsBig
-  items:
+    ##MARK: Револьверы
     - type: loadout
-      id: N14WeaponShotgunDoubleBarrel
+      id: N14LoadoutWeaponRevolver9mm
     - type: loadout
-      id: N14WeaponRifle556Pipe
+      id: N14LoadoutWeaponRevolver44Magnun
     - type: loadout
-      id: N14WeaponLaserRifleMakeshift
+      id: N14LoadoutWeaponRevolver10mm
     - type: loadout
-      id: N14WeaponShotgunCaravan
+      id: N14LoadoutWeaponRevolver44Tribal
     - type: loadout
-      id: N14WeaponShotgun
+      id: N14LoadoutWeaponRevolver44TribalUpgraded
     - type: loadout
-      id: N14WeaponSMG9mm
+      id: N14LoadoutWeaponRevolver44TribalUpgradedExtra
     - type: loadout
-      id: N14WeaponSMG10mm
+      id: N14LoadoutWeaponRevolver45-70Handcannon
     - type: loadout
-      id: N14WeaponSMG10mmSuppressed
+      id: N14LoadoutWeaponRevolver45-70HandcannonUpgraded
     - type: loadout
-      id: N14WeaponSMG10mmChinese
+      id: N14LoadoutWeaponRevolver45-70Hunter
     - type: loadout
-      id: N14WeaponRifle556R91
-    - type: loadout
-      id: N14WeaponRifle556Service
-    - type: loadout
-      id: N14WeaponRifle556CarbineOld
-    - type: loadout
-      id: N14WeaponRifle762M14
-    - type: loadout
-      id: N14WeaponRifle762Fal
-    - type: loadout
-      id: N14WeaponRifle762SKS
-    - type: loadout
-      id: N14WeaponSniper556VarmintRifle
-    - type: loadout
-      id: N14WeaponSniperHunting
-    - type: loadout
-      id: N14WeaponSniper44LeverCarbine
+      id: N14LoadoutWeaponRevolverWebley
 
 
-- type: characterItemGroup
-  id: N14LoadoutAmmo
-  items:
-    - type: loadout
-      id: N14SpeedLoader9
-    - type: loadout
-      id: N14SpeedLoader44
-    - type: loadout
-      id: N14MagazinePistol9mm
-    - type: loadout
-      id: N14MagazinePistol22lr
-    - type: loadout
-      id: N14MagazinePistol10mm
-    - type: loadout
-      id: N14MagazinePistol45
-    - type: loadout
-      id: N14MagazinePistol12
-    - type: loadout
-      id: N14PowerCellSmall
 
-- type: characterItemGroup
-  id: N14LoadoutAmmoBig
-  items:
+    ##MARK: Пистолеты
     - type: loadout
-      id: N14MagazineSMG9mm
+      id: N14LoadoutWeaponPistol10mmPipe
     - type: loadout
-      id: N14BaseMagazine10mmSubMachineGun
+      id: N14LoadoutWeaponPistol9mm
     - type: loadout
-      id: Magazine762AmmoShort
+      id: N14LoadoutWeaponPistol9mmChinese
     - type: loadout
-      id: Magazine556Rifle
-
-- type: characterItemGroup
-  id: N14LoadoutAmmoBox
-  items:
+      id: N14LoadoutWeaponPistolWebley
     - type: loadout
-      id: MagazineBox12gauge
+      id: N14LoadoutWeaponPistol22lr
     - type: loadout
-      id: MagazineBox20gauge
+      id: N14LoadoutWeaponPistol45Colt
     - type: loadout
-      id: MagazineBox9mm
+      id: N14LoadoutWeaponDesertEagle44
     - type: loadout
-      id: MagazineBox10mm
-    - type: loadout
-      id: MagazineBox22
-    - type: loadout
-      id: MagazineBox45
-    - type: loadout
-      id: MagazineBox556
-    - type: loadout
-      id: MagazineBox12
-    - type: loadout
-      id: MagazineBox44
-    - type: loadout
-      id: MagazineBox762
-    - type: loadout
-      id: MagazineBox308
+      id: N14LoadoutWeaponPistol10mm
 
 
+
+
+    ##MARK: Дробовики
+    - type: loadout
+      id: N14LoadoutWeaponShotgunBoomstick
+    - type: loadout
+      id: N14LoadoutWeaponShotgunBloodyStick
+    - type: loadout
+      id: N14LoadoutWeaponShotgunAuto
+    - type: loadout
+      id: N14LoadoutWeaponShotgunDoubleBarrel
+    - type: loadout
+      id: N14LoadoutWeaponShotgun
+    - type: loadout
+      id: N14LoadoutWeaponShotgunShort
+    - type: loadout
+      id: N14LoadoutWeaponShotgunLever
+    - type: loadout
+      id: N14LoadoutWeaponShotgunNeostead
+    - type: loadout
+      id: N14LoadoutWeaponBlowback
+    - type: loadout
+      id: N14LoadoutWeaponShotgunCaravan
+    - type: loadout
+      id: N14LoadoutWeaponShotgunRiot
+    - type: loadout
+      id: N14LoadoutWeaponShotgunChinese
+    - type: loadout
+      id: N14LoadoutWeaponShotgunCanadian
+
+
+
+
+    ##MARK: СМГ
+    - type: loadout
+      id: N14LoadoutWeaponSMG9mm
+    - type: loadout
+      id: N14LoadoutWeaponSMG9mminfiltrator
+    - type: loadout
+      id: N14LoadoutWeaponSMG12mm
+    - type: loadout
+      id: N14LoadoutWeaponSMGGreaseGun
+    - type: loadout
+      id: N14LoadoutWeaponSMG12mmAdvancedChinese
+    - type: loadout
+      id: N14LoadoutWeaponSMG12mmAdvancedCanadian
+    - type: loadout
+      id: N14LoadoutWeaponSMG12mmAdvanced
+    - type: loadout
+      id: N14LoadoutWeaponSMG10mmChinese
+    - type: loadout
+      id: N14LoadoutWeaponSMG10mmPipe
+    - type: loadout
+      id: N14LoadoutWeaponSMG12mmPipe
+    - type: loadout
+      id: N14LoadoutWeaponSMG9mmCanadian
+    - type: loadout
+      id: N14LoadoutWeaponSMG10mm
+    - type: loadout
+      id: N14LoadoutWeaponSMG45
+
+
+
+    ##MARK: Автоматы и винтовки
+    - type: loadout
+      id: N14LoadoutWeaponSniper556Tribal
+    - type: loadout
+      id: N14LoadoutWeaponSniper556TribalUpgraded
+    - type: loadout
+      id: N14LoadoutWeaponRifle556Pipe
+    - type: loadout
+      id: N14LoadoutWeaponPistol12mm
+    - type: loadout
+      id: N14LoadoutWeaponRifle556Pipe
+    - type: loadout
+      id: N14LoadoutWeaponRifle556CarbineOld
+    - type: loadout
+      id: N14LoadoutWeaponRifle556Carbine
+    - type: loadout
+      id: N14LoadoutWeaponRifle556Butchered
+    - type: loadout
+      id: N14LoadoutWeaponRifle556Service
+    - type: loadout
+      id: N14LoadoutWeaponRifle556ServiceScoped
+    - type: loadout
+      id: N14LoadoutWeaponRifle556Scout
+    - type: loadout
+      id: N14LoadoutWeaponRifle762Marksman
+    - type: loadout
+      id: N14LoadoutWeaponRifle762Chinese
+    - type: loadout
+      id: N14LoadoutWeaponSniper556VarmintRifle
+    - type: loadout
+      id: N14LoadoutWeaponRifle762Canadian
+    - type: loadout
+      id: N14LoadoutWeaponRifle556SteirSirius
+    - type: loadout
+      id: N14LoadoutWeaponRifle762ClassicrifleSirius
+    - type: loadout
+      id: N14LoadoutWeaponRifle762SKS
+    - type: loadout
+      id: N14LoadoutWeaponRifle762M14
+    - type: loadout
+      id: N14LoadoutWeaponRifle556M16A1Sirius
+    - type: loadout
+      id: N14LoadoutWeaponRifle556R91
+    - type: loadout
+      id: N14LoadoutWeaponRifle556R82Sirius
+    - type: loadout
+      id: N14LoadoutWeaponRifle556EnfieldXL70E3Sirius
+    - type: loadout
+      id: N14LoadoutWeaponRifle556EM2
+    - type: loadout
+      id: N14LoadoutWeaponRifle762Fal
+    - type: loadout
+      id: N14LoadoutWeaponRifle556GalilSirius
+    - type: loadout
+      id: N14LoadoutWeaponRifleAk112
+
+
+
+    ##MARK: Пулемёты
+    - type: loadout
+      id: N14LoadoutWeaponRifleBozarGRA
+    - type: loadout
+      id: N14LoadoutWeaponLMG
+    - type: loadout
+      id: N14LoadoutWeaponM60GPMG
+    - type: loadout
+      id: N14LoadoutWeaponMinigun
+    - type: loadout
+      id: N14LoadoutWeaponLMGchinese
+    - type: loadout
+      id: N14LoadoutWeaponUSHMG
+    - type: loadout
+      id: N14LoadoutWeaponLMGBren
+    - type: loadout
+      id: N14LoadoutWeaponLMGAutoRifle
+    - type: loadout
+      id: N14LoadoutWeaponRifleAk112pn
+
+
+
+    ###MARK: Снайперки и рычажки
+    - type: loadout
+      id: N14LoadoutWeaponSniper308Ross
+    - type: loadout
+      id: N14LoadoutWeaponSniper308LeverRifle
+    - type: loadout
+      id: N14LoadoutWeaponRifle762MarksmanChinese
+    - type: loadout
+      id: N14LoadoutWeaponSniper308Canadian
+    - type: loadout
+      id: N14LoadoutWeaponRifle762MarksmanCanadian
+    - type: loadout
+      id: N14LoadoutWeaponSniper44LeverCarbine
+    - type: loadout
+      id: N14LoadoutWeaponRifleSKS
+    - type: loadout
+      id: N14LoadoutWeaponSniper308Tribal
+    - type: loadout
+      id: N14LoadoutWeaponSniper308TribalUpgraded
+    - type: loadout
+      id: N14LoadoutWeaponSniperHunting
+    - type: loadout
+      id: N14LoadoutWeaponRifle308SniperRifle
+    - type: loadout
+      id: N14LoadoutWeaponRifleM1GarandRepublicsDemise
+    - type: loadout
+      id: N14LoadoutWeaponSniper45-70BrushGun
+    - type: loadout
+      id: N14LoadoutWeaponSniper50NCRRifle
+    - type: loadout
+      id: N14LoadoutWeaponSniper50AntiMateriel
+    - type: loadout
+      id: N14LoadoutWeaponSniper50Pipe
+
+
+
+    #Гранатомёты
+    - type: loadout
+      id: N14LoadoutWeaponRifleGrenade
+    - type: loadout
+      id: N14LoadoutWeaponLauncherGrenade
+
+
+
+
+## MARK: Энергетическое.
+
+
+
+    ##MARK: Пистолеты
+    - type: loadout
+      id: N14LoadoutWeaponPistol2mmECPPK12Sirius
+    - type: loadout
+      id: N14LoadoutWeaponLaserPistol
+    - type: loadout
+      id: N14LoadoutWeaponLaserPistolRecharger
+    - type: loadout
+      id: N14LoadoutWeaponPlasmaDefender
+    - type: loadout
+      id: N14LoadoutWeaponLaserRevolver
+
+    ##MARK: Автоматы
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifleRecharger
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifleCrude
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifle
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifleAuto
+    - type: loadout
+      id: N14LoadoutWeaponSniperM72GaussRifleSirius
+    - type: loadout
+      id: N14LoadoutWeaponPlasmaRifle
+    - type: loadout
+      id: N14LoadoutWeaponPlasmaRifleUrban
+    - type: loadout
+      id: N14LoadoutWeaponPlasmaRifleAuto
+    - type: loadout
+      id: N14LoadoutWeaponPlasmaMultiplas
+    - type: loadout
+      id: N14LoadoutWeaponPlasmaCaster
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifleMakeshift
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifleYk42b
+    - type: loadout
+      id: N14LoadoutWeaponPlasmaRifleCrude
+
+      ##MARK: Снайперки
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifleWattz2000
+    - type: loadout
+      id: N14LoadoutWeaponLaserRifleWattz3000
+
+      ##MARK: Пулемёты
+    - type: loadout
+      id: N14LoadoutWeaponLaserGatling
+
+
+# Тут начинается новая группа, которая будет называться "Холодное оружие". В неё будут входить ножи, топоры, дубины, мечи и всё что не стреляет.
 - type: characterItemGroup
   id: N14LoadoutMelee
   items:
+
+## MARK: Холодное оружие.
     - type: loadout
       id: N14KitchenKnife
     - type: loadout
@@ -143,18 +314,16 @@
     - type: loadout
       id: N14TribalClub
     - type: loadout
-      id: N14PoliceBaton
+      id: N14LoadoutWastelandFlagSpear
     - type: loadout
-      id: N14TrenchClub
+      id: N14LoadoutSledgeHammer
     - type: loadout
-      id: N14LongSwordBoS
+      id: N14LoadoutFireAxe
     - type: loadout
-      id: N14GladiusLegion
+      id: N14LoadoutTribalBigClubDecorated
     - type: loadout
-      id: N14LongSword
+      id: LoadoutThrowingKnife
     - type: loadout
-      id: N14Gladius
+      id: N14LoadoutClothingHandsPowerFistGoliath
     - type: loadout
-      id: N14ChineseSword    
-    - type: loadout
-      id: N14CeremonialSwordCent
+      id: N14LoadoutWeaponThermospear

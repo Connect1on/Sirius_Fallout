@@ -1,0 +1,833 @@
+##MARK: "Магазины"
+
+#ВПИСЫВАЙТЕ ВСЁ СЮДА ПО РАЗДЕЛАМ, ЧТОБЫ ДРУГИЕ ПРОТОТИПЕРЫ СМОГЛИ ИХ НАЙТИ И В ДАЛЬНЕЙШИМ НАСТРОИТЬ.
+
+#ПОМЕТКА ДЛЯ ЛЮДЕЙ НЕ ЗНАЮЩИХ "category:" ДЛЯ АММУНИЦИИ. ВОТ: SmallСaliber, MediumCaliber, LargeCaliber,  Battery, Ammobox
+
+# See the following file for existing categories: Resources\Prototypes\Loadouts\categories.yml
+
+#  category: SmallCaliber. Cлабые патроны, что наносят одним снарядом мало урона - 22lr, 9mm, 10mm, 45, 12gauge, 20gauge.
+#  category: MediumCaliber. Средние патроны, что наносят удолетворительный урон за раз - 5mm, 5.56, 7.62, 12.7
+#  category: LargeCaliber. Мощные патроны с высоким разовым уроном - 44, 308, 45-70, 50
+
+# See the following file for existing categories: Resources\Prototypes\Loadouts\categories.yml
+
+
+
+##MARK: Спидлоадеры
+- type: loadout
+  id: N14LoadoutSpeedLoader9
+  category: SmallCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - SpeedLoader9
+    - SpeedLoader9
+    - SpeedLoader9
+
+- type: loadout
+  id: LoadoutSpeedLoader10
+  category: SmallCaliber
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - SpeedLoader10
+    - SpeedLoader10
+    - SpeedLoader10
+
+- type: loadout
+  id: N14LoadoutSpeedLoader44
+  category: LargeCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - SpeedLoader44
+
+- type: loadout
+  id: LoadoutSpeedLoader45-70
+  category: LargeCaliber
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - SpeedLoader45-70
+    - SpeedLoader45-70
+
+
+
+##MARK: Пистолетные магазины
+- type: loadout
+  id: N14LoadoutMagazinePistol9mm
+  category: SmallCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14MagazinePistol9mm
+    - N14MagazinePistol9mm
+
+- type: loadout
+  id: N14LoadoutMagazinePistol22lr
+  category: SmallCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14MagazinePistol22lr
+    - N14MagazinePistol22lr
+    - N14MagazinePistol22lr
+
+- type: loadout
+  id: N14LoadoutMagazinePistol10mm
+  category: SmallCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14MagazinePistol10mm
+    - N14MagazinePistol10mm
+
+- type: loadout
+  id: N14LoadoutMagazinePistol45
+  category: SmallCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14MagazinePistol45
+    - N14MagazinePistol45
+
+- type: loadout
+  id: N14LoadoutMagazinePistol12mm
+  category: MediumCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14MagazinePistol12mm
+    - N14MagazinePistol12mm
+
+
+
+##MARK: Барабаны дробовиков
+- type: loadout
+  id: N14LoadoutMagazineShotgun12
+  category: SmallCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - N14MagazineShotgun12
+    - N14MagazineShotgun12
+
+
+
+##MARK: ПП магазины
+- type: loadout
+  id: N14LoadoutMagazineSMG9mm
+  category: SmallCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14MagazineSMG9mm
+    - N14MagazineSMG9mm
+
+- type: loadout
+  id: N14LoadoutMagazineSMG12mm
+  category: MediumCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14MagazineSMG12mm
+    - N14MagazineSMG12mm
+
+- type: loadout
+  id: LoadoutMagazine45SubMachineGun
+  category: SmallCaliber
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - Magazine45SubMachineGun
+    - Magazine45SubMachineGun
+
+##MARK: Автоматные и винтовок магазины
+- type: loadout
+  id: LoadoutMagazine556Rifle
+  category: MediumCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - Magazine556Rifle
+    - Magazine556Rifle
+    - Magazine556Rifle
+
+- type: loadout
+  id: LoadoutLongMagazine556Rifle
+  category: MediumCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+        - CaesarLegion
+  items:
+    - LongMagazine556Rifle
+    - LongMagazine556Rifle
+    - LongMagazine556Rifle
+
+- type: loadout
+  id: LoadoutMagazine762Rifle
+  category: MediumCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+        - CaesarLegion
+  items:
+    - Magazine762Rifle
+    - Magazine762Rifle
+    - Magazine762Rifle
+
+##MARK: Пулемётные магазины
+- type: loadout
+  id: LoadoutLMGMagazine556Rifle
+  category: MediumCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - LMGMagazine556Rifle
+    - LMGMagazine556Rifle
+
+- type: loadout
+  id: N14LoadoutMagazine308M60Box
+  category: LargeCaliber
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - Magazine308M60Box
+    - Magazine308M60Box
+
+
+
+##MARK: Снайперские магазины
+- type: loadout
+  id: LoadoutSpeedLoader45-70Tube
+  category: LargeCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - SpeedLoader45-70Tube
+    - SpeedLoader45-70Tube
+
+- type: loadout
+  id: LoadoutSKSEnbloc308
+  category: LargeCaliber
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - SKSEnbloc308
+    - SKSEnbloc308
+    - SKSEnbloc308
+
+- type: loadout
+  id: LoadoutMagazine308RifleSniper
+  category: LargeCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - Magazine308RifleSniper
+    - Magazine308RifleSniper
+
+- type: loadout
+  id: LoadoutClipMagazine308Rifle
+  category: LargeCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+        - CaesarLegion
+  items:
+    - ClipMagazine308Rifle
+    - ClipMagazine308Rifle
+    - ClipMagazine308Rifle
+    - ClipMagazine308Rifle
+    - ClipMagazine308Rifle
+    - ClipMagazine308Rifle
+
+- type: loadout
+  id: N14LoadoutMagazine50AMR
+  category: LargeCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+
+  items:
+    - N14Magazine50AMR
+    - N14Magazine50AMR
+
+
+
+## MARK: "Батарейки"
+- type: loadout
+  id: N14LoadoutMicrofusionCell
+  category: Battery
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14MicrofusionCell
+    - N14MicrofusionCell
+    - N14MicrofusionCell
+
+- type: loadout
+  id: N14LoadoutPlasmaCartridge
+  category: Battery
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSPaladin
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14PlasmaCartridge
+    - N14PlasmaCartridge
+
+- type: loadout
+  id: N14LoadoutMagazineRifle2mmEC
+  category: Battery
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSWestElderCommander
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14MagazineRifle2mmEC
+    - N14MagazineRifle2mmEC
+    - N14MagazineRifle2mmEC
+
+- type: loadout
+  id: N14LoadoutMagazinePistol2mmEC
+  category: Battery
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSWestElderCommander
+        - BoSPaladin
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14MagazinePistol2mmEC
+    - N14MagazinePistol2mmEC
+
+- type: loadout
+  id: N14LoadoutFusionCore
+  category: Battery
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestElderCommander
+        - BoSMidPaladinCommander
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14FusionCore
+
+- type: loadout
+  id: N14LoadoutPowerCellSmall
+  category: Battery
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14PowerCellSmall
+
+- type: loadout
+  id: N14LoadoutPlasmaShell
+  category: Battery
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14PlasmaShell
+    - N14PlasmaShell
+
+
+
+#MARK: Гранаты.
+- type: loadout
+  id: Loadout40mmGrenadeFrag
+  category: LargeCaliber
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - 40mmGrenadeFrag
+    - 40mmGrenadeFrag
+    - 40mmGrenadeFrag
+    - 40mmGrenadeFrag
+
+
+
+## MARK: "Коробки патрон"
+- type: loadout
+  id: LoadoutMagazineBox9mm
+  category: Ammobox
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+        - NCR
+  items:
+    - MagazineBox9mm
+
+- type: loadout
+  id: LoadoutMagazineBox10mm
+  category: Ammobox
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - MagazineBox10mm
+
+- type: loadout
+  id: LoadoutMagazineBox45
+  category: Ammobox
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - MagazineBox45
+
+- type: loadout
+  id: N14LoadoutAmmoBox556
+  category: Ammobox
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - N14AmmoBox556
+
+- type: loadout
+  id: LoadoutMagazineBox762
+  category: Ammobox
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - MagazineBox762
+
+- type: loadout
+  id: LoadoutMagazineBox12
+  category: Ammobox
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - MagazineBox12
+
+- type: loadout
+  id: N14LoadoutAmmoBox12gauge
+  category: Ammobox
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - N14AmmoBox12gauge
+
+- type: loadout
+  id: N14LoadoutMagazineBox20gauge
+  category: Ammobox
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - MagazineBox20gauge
+
+- type: loadout
+  id: N14LoadoutAmmoBox44Magnum
+  category: Ammobox
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - N14AmmoBox44Magnum
+
+- type: loadout
+  id: N14LoadoutMagazineBox308
+  category: Ammobox
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+        - NCR
+  items:
+    - MagazineBox308
+
+- type: loadout
+  id: LoadoutMagazineBox45-70
+  category: Ammobox
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - MagazineBox45-70
+
+- type: loadout
+  id: LoadoutMagazineBox50
+  category: Ammobox
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutAmmo
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - MagazineBox50
+
+##MARK: Автоматные магазины и винтовок
+# - type: loadout
+#   id: LoadoutMagazine308Rifle
+#   category: LargeCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - Magazine308Rifle
+#     - Magazine308Rifle
+
+# - type: loadout
+#   id: LoadoutMagazine762AmmoShort
+#   category: MediumCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - Magazine762AmmoShort
+#     - Magazine762AmmoShort
+
+# - type: loadout
+#   id: LoadoutMagazine545Rifle
+#   category: MediumCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - Magazine545Rifle
+#     - Magazine545Rifle
+
+##MARK: Пулемётные ленты
+# - type: loadout
+#   id: N14LoadoutMagazineMinigun5mm
+#   category: MediumCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - N14MagazineMinigun5mm
+#     - N14MagazineMinigun5mm
+
+# - type: loadout
+#   id: LoadoutMagazineDrum545Rifle
+#   category: MediumCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - MagazineDrum545Rifle
+#     - MagazineDrum545Rifle
+
+# - type: loadout
+#   id: LoadoutMagazine308RifleLong
+#   category: LargeCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - Magazine308RifleLong
+#     - Magazine308RifleLong
+
+# - type: loadout
+#   id: LoadoutMagazine762AmmoBelt
+#   category: MediumCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - Magazine762AmmoBelt
+#     - Magazine762AmmoBelt
+
+##MARK: смг магазины
+# - type: loadout
+#   id: N14LoadoutMagazineSMG10mm
+#   category: SmallCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - N14MagazineSMG10mm
+#     - N14MagazineSMG10mm
+
+# - type: loadout
+#   id: N14LoadoutTopMagazineSMG12mm
+#   category: MediumCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - N14TopMagazineSMG12mm
+#     - N14TopMagazineSMG12mm
+
+##MARK: дробь
+# - type: loadout
+#   id: N14LoadoutMagazineShotgun20
+#   category: SmallCaliber
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutAmmo
+#   items:
+#     - N14MagazineShotgun20
+#     - N14MagazineShotgun20
+

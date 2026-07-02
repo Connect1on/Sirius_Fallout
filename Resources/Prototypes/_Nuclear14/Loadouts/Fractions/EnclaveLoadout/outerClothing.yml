@@ -1,0 +1,64 @@
+- type: loadout
+  id: N14LoadoutClothingOuterEnclaverOfficerCoat
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingOuterEnclaverOfficerCoat
+
+- type: loadout
+  id: N14LoadoutClothingOuterEnclavePeacekeeper
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingOuterEnclavePeacekeeper
+
+- type: loadout
+  id: N14LoadoutClothingOuterEnclaveArmor
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingOuterEnclaveArmor
+
+- type: loadout
+  id: N14LoadoutClothingOuterRadSuitEnclave
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingOuterRadSuitEnclave
+
+- type: loadout
+  id: N14LoadoutClothingOuterPowerArmorAdvanced1
+  category: Outer
+  cost: 14
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingOuterPowerArmorAdvanced1

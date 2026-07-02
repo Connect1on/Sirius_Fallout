@@ -1,0 +1,52 @@
+# See the following file for existing categories: Resources\Prototypes\Loadouts\categories.yml
+
+# Alphabetically ordered
+- type: loadoutCategory
+  id: Belt
+  root: true
+
+- type: loadoutCategory
+  id: Roles
+
+- type: loadoutCategory
+  id: Weapons
+  root: true
+  subCategories:
+  - Energy
+  - Firearms
+  - Melee
+
+- type: loadoutCategory
+  id: Energy
+
+- type: loadoutCategory
+  id: Firearms
+
+- type: loadoutCategory
+  id: Melee
+
+- type: loadoutCategory
+  id: Ammunition
+  root: true
+  subCategories:
+  - SmallCaliber
+  - MediumCaliber 
+  - LargeCaliber 
+  - Battery
+  - Ammobox
+
+- type: loadoutCategory
+  id: SmallCaliber
+
+- type: loadoutCategory
+  id: MediumCaliber
+
+- type: loadoutCategory
+  id: LargeCaliber
+
+- type: loadoutCategory
+  id: Battery
+
+- type: loadoutCategory
+  id: Ammobox
+

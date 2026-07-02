@@ -1,0 +1,164 @@
+- type: loadout
+  id: LoadoutNCRhatB
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead  
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingHeadHatRangerB
+
+- type: loadout
+  id: LoadoutNCRhatBeret
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingHeadHatNCRBeretRecon
+
+- type: loadout
+  id: LoadoutNCRN14ClothingHeadHatRangerHelmetFox2
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 72000 # 1200 minutes
+  items:
+    - N14ClothingHeadHatRangerHelmetFox
+
+- type: loadout
+  id: LoadoutNCRN14ClothingHeadHatRangerHelmetPrice2
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 72000 # 1200 minutes
+  items:
+    - N14ClothingHeadHatRangerHelmetPrice
+
+- type: loadout
+  id: LoadoutNCRN14ClothingHeadHatRangerHelmetModif2
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 216000 # 60 hours veterancy unlock "First Tour"
+  items:
+    - N14ClothingHeadHatRangerHelmetModif
+
+- type: loadout
+  id: LoadoutNCRN14ClothingHeadHatRangerHelmet2
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+  items:
+    - N14ClothingHeadHatRangerHelmet
+
+- type: loadout
+  id: LoadoutNCRRangerHelmetEliteOld1
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 216000 # 60 hours veterancy unlock "First Tour"
+  items:
+    - N14ClothingHeadHatRangerHelmetEliteOld
+
+- type: loadout
+  id: LoadoutNCRuniformHelmetDesert
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 216000 # 60 hours veterancy unlock "First Tour"
+  items:
+    - N14ClothingHeadHatRangerHelmetDesert
+
+# === Head: NCR Rangers ===
+
+- type: loadout
+  id: MisfitsLoadoutHeadArmyBeretRanger
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRPatrolRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRVeteranRanger
+        - NCRChiefRanger
+  items:
+    - N14ClothingHeadHatArmyBeretRanger
+
+- type: loadout
+  id: MisfitsLoadoutHeadRanger
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead 
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRPatrolRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRVeteranRanger
+        - NCRChiefRanger
+  items:
+    - N14ClothingHeadHatRanger

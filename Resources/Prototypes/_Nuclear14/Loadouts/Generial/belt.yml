@@ -1,0 +1,52 @@
+- type: loadout
+  id: N14LoadoutBeltUtility
+  category: Belt
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutBelt
+    - !type:OverallTimeRequirement
+      min: 3600
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingBeltUtilityFilled
+
+- type: loadout
+  id: N14LoadoutClothingBeltMedicalFilled
+  category: Belt
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutBelt
+    - !type:OverallTimeRequirement
+      min: 3600
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingBeltMedicalFilled
+
+- type: loadout
+  id: LoadoutClothingBeltQuiverSpear
+  category: Belt
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutBelt
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - ClothingBeltQuiverSpear
+    - baseThrowingSpear
+    - baseThrowingSpear
+    - baseThrowingSpear
+    - baseThrowingSpear

@@ -1,0 +1,18 @@
+- type: characterItemGroup
+  id: N14LoadoutBelt
+  items:
+    - type: loadout
+      id: N14LoadoutBeltUtility
+    - type: loadout
+      id: LoadoutClothingBeltNCRBandolier
+    - type: loadout
+      id: LoadoutClothingBeltNCRPouches
+    - type: loadout
+      id: LoadoutNCRBeltNCRHarness
+    - type: loadout
+      id: N14LoadoutClothingBeltMedicalFilled
+    - type: loadout
+      id: LoadoutClothingBeltQuiverSpear
+
+      
+

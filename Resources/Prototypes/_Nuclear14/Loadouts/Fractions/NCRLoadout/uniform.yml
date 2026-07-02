@@ -1,0 +1,159 @@
+- type: loadout
+  id: LoadoutNCRuniformDesertPantsFull
+  category: Uniform
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRMilitaryPoliceRecruit
+        - NCRMilitaryPoliceSergeant
+        - NCRMilitaryPoliceCaptain
+
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformDesertPantsFull
+
+- type: loadout
+  id: LoadoutNCRuniformPants
+  category: Uniform
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRMilitaryPoliceRecruit
+        - NCRMilitaryPoliceSergeant
+        - NCRMilitaryPoliceCaptain
+
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformDesertPants
+
+- type: loadout
+  id: N14LoadoutUniversalUniformNCRDesert
+  category: Uniform
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14ClothingUniformNCRDesert
+
+- type: loadout
+  id: N14LoadoutUniversalUniformNCRSnow
+  category: Uniform
+  cost: 0
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14ClothingUniformNCRSnow
+
+- type: loadout
+  id: N14LoadoutUniversalMPUniformNCRDesert
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - MilitaryPolice
+  items:
+    - N14ClothingMPUniformNCRDesert
+
+- type: loadout
+  id: N14LoadoutUniversalMPUniformNCRSnow
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - MilitaryPolice
+  items:
+    - N14ClothingMPUniformNCRSnow
+
+- type: loadout
+  id: N14LoadoutUniversalOfficerUniformNCRDesert
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+  items:
+    - N14ClothingOfficerUniformNCRDesert
+
+- type: loadout
+  id: N14LoadoutUniversalOfficerUniformNCRSnow
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+  items:
+    - N14ClothingOfficerUniformNCRSnow
+
+- type: loadout
+  id: LoadoutNCRClothingUniformNCRCFUniform
+  category: Uniform
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRPrisoner
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRPrisoner
+  items:
+    - N14ClothingUniformNCRCFUniform

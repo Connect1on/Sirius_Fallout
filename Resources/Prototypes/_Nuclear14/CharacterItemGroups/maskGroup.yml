@@ -45,3 +45,5 @@
       id: N14LoadoutUniversalMaskPatriotMask
     - type: loadout
       id: N14LoadoutUniversalMaskRedMask
+    - type: loadout
+      id: N14LoadoutClothingMaskPlate

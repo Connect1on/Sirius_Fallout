@@ -1,0 +1,161 @@
+- type: loadout
+  id: MisfitsLoadoutClothingHeadHatBrotherhoodMidwestHelmet
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidKnight
+        - BoSMidSquire
+        - BoSHeadKnight
+        - BoSInitiate
+        - BoSKnight
+  items:
+    - N14ClothingHeadHatBrotherhoodMidwestHelmet
+
+- type: loadout
+  id: MisfitsLoadoutClothingHeadHatBrotherhoodMidwestHelmetVeteran
+  category: Head
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSKnight
+  items:
+    - N14ClothingHeadHatBrotherhoodMidwestHelmetVeteran
+
+# - type: loadout
+#   id: MisfitsLoadoutClothingHeadHatBrotherhoodMidwestHelmetRecon
+#   category: Head
+#   cost: 4
+# 
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutHead
+#     - !type:CharacterJobRequirement
+#       jobs:
+#         - BoSMidPaladinCommander
+#         - BoSMidPaladin
+#         - BoSPaladin
+#   items:
+#     - N14ClothingHeadHatBrotherhoodMidwestHelmetRecon
+
+- type: loadout
+  id: MisfitsLoadoutClothingHeadHatCapkhighBoS
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel 
+  items:
+    - N14ClothingHeadHatCapkhighBoS
+
+- type: loadout
+  id: MisfitsLoadoutClothingHeadHatBanganeBoS
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel 
+  items:
+    - N14ClothingHeadHatBanganeBoS
+
+- type: loadout
+  id: MisfitsLoadoutClothingHeadHatBeretknighBoS
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel 
+  items:
+    - N14ClothingHeadHatBeretknighBoS
+
+- type: loadout
+  id: MisfitsLoadoutClothingScribeBeret
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestScribe
+        - BoSScribe
+        - BoSMidScribe        
+  items:
+    - N14ClothingScribeBeret
+
+- type: loadout
+  id: MisfitsLoadoutClothingHeadHatHoodScribeTabard
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestScribe
+        - BoSScribe
+        - BoSMidScribe
+  items:
+    - N14ClothingHeadHatHoodScribeTabard
+
+- type: loadout
+  id: MisfitsLoadoutHeadBrotherhoodCap  
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatBrotherhoodCap
+
+- type: loadout
+  id: MisfitsLoadoutHeadBrotherhoodBeret
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatBrotherhoodBeret
+
+- type: loadout
+  id: MisfitsLoadoutHeadBrotherhoodFieldCap
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatBrotherhoodFieldCap

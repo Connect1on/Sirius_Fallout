@@ -1,0 +1,13 @@
+- type: loadout
+  id: LoadoutNCRRangerMedkit
+  category: Items
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14MedkitCombatFilled
+

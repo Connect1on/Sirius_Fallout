@@ -1,0 +1,19 @@
+- type: loadout
+  id: N14LoadoutClothingEyesNCRNVGs
+  category: Eyes
+  cost: 10
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRWS
+        - NCRHeavyTrooper
+  items:
+    - N14ClothingEyesNCRNVGs
+
+
+

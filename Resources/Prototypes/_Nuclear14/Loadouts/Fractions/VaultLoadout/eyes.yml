@@ -1,0 +1,18 @@
+- type: loadout
+  id: ClothingEyesGlassesHipsterVault
+  category: Eyes
+  cost: 2
+  requirements:
+   - !type:CharacterPlaytimeRequirement
+      tracker: VaultDweller
+      min: 1200 # 20 hours
+   - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+   - !type:CharacterJobRequirement
+       jobs:
+       - VaultDweller
+       - Overseer
+       - VaultEngineer
+       - VaultDoctor
+  items:
+    - ClothingEyesGlassesHipster

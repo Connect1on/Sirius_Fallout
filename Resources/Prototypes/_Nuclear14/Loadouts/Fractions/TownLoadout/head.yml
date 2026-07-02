@@ -1,0 +1,22 @@
+- type: loadout
+  id: MisfitsLoadoutHeadDeputy
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - TownDeputy
+  items:
+    - N14ClothingHeadHatDeputy
+
+- type: loadout
+  id: MisfitsLoadoutHeadSheriff
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - TownSheriff
+        - TownMayor
+  items:
+    - N14ClothingHeadHatSheriff

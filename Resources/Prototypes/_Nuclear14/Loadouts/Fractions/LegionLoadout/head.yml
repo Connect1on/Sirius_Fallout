@@ -1,0 +1,14 @@
+- type: loadout
+  id: LoadoutLegionExplorerVeteranHelmet
+  category: Head
+  cost: 6
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionExplorer
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionExplorer
+      min: 30000
+  items:
+    - MisfitsExplorerAssasinHelmet

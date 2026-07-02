@@ -1,0 +1,36 @@
+- type: loadout
+  id: LoadoutNCRN14ClothingNeckCloakRanger
+  category: Neck
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+  items:
+    - N14ClothingNeckCloakRanger
+
+- type: loadout
+  id: LoadoutNCRNeckCloakRangerPoncho
+  category: Neck
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+  items:
+    - N14ClothingNeckCloakRangerPoncho
+
+- type: loadout
+  id: LoadoutNCRClothingNeckOldMantle
+  category: Neck
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - ClothingNeckOldMantle

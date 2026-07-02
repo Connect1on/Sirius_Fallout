@@ -1,0 +1,23 @@
+- type: loadout
+  id: LoadoutClothingHandsGlovesNCR
+  category: Hands
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingHandsGlovesNCR

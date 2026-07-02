@@ -1,0 +1,180 @@
+- type: loadout
+  id: LoadoutNCRWhiteBoonie
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingHeadHatWinterBoonie
+
+- type: loadout
+  id: LoadoutNCRGreenBoonie
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingHeadHatWoodBoonie
+
+- type: loadout
+  id: LoadoutNCRBrownBoonie
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingHeadHatDesertBoonie
+
+# === Head: NCR soldiers ===
+
+- type: loadout
+  id: MisfitsLoadoutHeadNCRSidecap
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCadet
+        - NCRSoldier
+        - NCRPrivateFirstClass
+        - NCRWS
+        - NCREngineer
+        - NCRMedic
+        - NCRNCO
+        - NCRFirstSergeant
+        - NCRHeavyTrooper
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRCommander
+        - NCRMajor
+        - NCRDoctor
+  items:
+    - N14ClothingHeadHatNCRSidecap
+
+- type: loadout
+  id: MisfitsLoadoutHeadNCRBeretOfficer
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRCommander
+        - NCRMajor
+  items:
+    - N14ClothingHeadHatNCRBeretOfficer
+
+- type: loadout
+  id: MisfitsLoadoutHeadNCRBeretMedic
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRDoctor
+  items:
+    - N14ClothingHeadHatNCRBeretMedic
+
+- type: loadout
+  id: MisfitsLoadoutHeadNCRBeretQM
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRWS
+        - NCREngineer
+        - NCRMedic
+        - NCRNCO
+        - NCRFirstSergeant
+        - NCRHeavyTrooper
+  items:
+    - N14ClothingHeadHatNCRBeretQM
+
+- type: loadout
+  id: N14LoadoutClothingHeadHatNCRHelmetMetalDesert
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14ClothingHeadHatNCRHelmetMetalDesert
+
+- type: loadout
+  id: LoadoutClothingNeckNCRMPBeret
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+    - NCRMilitaryPoliceCaptain
+  - !type:CharacterPlaytimeRequirement
+    tracker: NCRMilitaryPoliceCaptain
+    min: 72000 # 20 hours veterancy unlock
+  items:
+  - N14ClothingHeadHatNCRMPBeret

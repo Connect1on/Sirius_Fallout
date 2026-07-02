@@ -1,0 +1,38 @@
+- type: loadout
+  id: LoadoutNCRMaskBalaclava
+  category: Mask
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingMaskBrownBalaclava
+
+- type: loadout
+  id: N14LoadoutClothingMaskPlate
+  category: Mask
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14ClothingMaskPlate
+
+    

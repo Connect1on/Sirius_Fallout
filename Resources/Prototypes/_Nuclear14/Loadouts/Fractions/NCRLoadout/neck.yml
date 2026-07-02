@@ -1,0 +1,95 @@
+- type: loadout
+  id: LoadoutNCRCloakNCR
+  category: Neck
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingNeckCloakNCR
+
+- type: loadout
+  id: LoadoutNCRCloakNCRGhillie
+  category: Neck
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingNeckCloakGhillie
+
+- type: loadout
+  id: LoadoutNCRCloakNCRSnow
+  category: Neck
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingNeckCloakNCRSnow
+
+- type: loadout
+  id: LoadoutNCRCloakNCRWoods
+  category: Neck
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+
+        - NCRFieldRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingNeckCloakNCRWoods

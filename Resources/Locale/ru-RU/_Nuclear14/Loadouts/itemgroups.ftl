@@ -10,3 +10,4 @@ character-item-group-N14LoadoutMelee = Холодное оружие
 character-item-group-N14LoadoutNeck = Галстуки
 character-item-group-N14LoadoutOuter = Верхняя одежда
 character-item-group-N14LoadoutShoes = Обувь
+character-item-group-N14LoadoutBelt = Пояс

@@ -69,8 +69,6 @@
       id: N14ClothingOuterdrylandersimple
     - type: loadout
       id: N14LoadoutOuterCoatLeatherJacketVault
-    - type: loadout # #Misfits Add - Head Paladin veteran power armor choice
-      id: MisfitsLoadoutBoSMidwestCommanderPowerArmor
     - type: loadout
       id: ClothingOuterCoatInspector
     - type: loadout
@@ -107,4 +105,52 @@
       id: N14LoadoutUniversalOuterNCRQuartermaster
     - type: loadout
       id: N14LoadoutUniversalOuterRobeHubologist
+#NCR
+
+    - type: loadout
+      id: MisfitsLoadoutNCROfficerArmor
+    - type: loadout
+      id: MisfitsLoadoutNCRHeavyCombatArmor
+    - type: loadout
+      id: MisfitsLoadoutNCREliteCombatArmor
+    - type: loadout
+      id: MisfitsLoadoutNCRCommandArmor
+    - type: loadout
+      id: N14LoadoutClothingOuterNCRPlateDesert
+
+    #Bos
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterPowerArmorT45
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterPowerArmorT51
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterPowerArmorT60
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterPowerArmorT51BC
+    - type: loadout
+      id: MisfitsLoadoutNCClothingOuterBosReconArmor
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterMidwestReconArmor
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterBrotherhoodMidwestMedicalScribeRobes
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterBrotherhoodMedicalScribeRobes
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterBrotherhoodMidwestFieldScribeCoat
+    - type: loadout
+      id: MisfitsLoadoutClothingOuterMidwestBoSCoat
+
+#Enclave
+    - type: loadout
+      id: N14LoadoutClothingOuterEnclaverOfficerCoat
+    - type: loadout
+      id: N14LoadoutClothingOuterEnclavePeacekeeper
+    - type: loadout
+      id: N14LoadoutClothingOuterEnclaveArmor
+    - type: loadout
+      id: N14LoadoutClothingOuterRadSuitEnclave
+    - type: loadout
+      id: N14LoadoutClothingOuterPowerArmorAdvanced1
+
+
 
