@@ -67,7 +67,6 @@
 - type: ncrRankPinProgression
   id: NCRJuniorOfficerPins
   jobs:
-    - NCRExecutiveOfficer
     - NCRPlatoonLeader
     - NCRRO
   tracker: NCR
