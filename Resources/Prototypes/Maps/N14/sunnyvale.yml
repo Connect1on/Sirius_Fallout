@@ -51,7 +51,8 @@
             #NCRMajor: [ 0, 1 ] # #Misfits Add - whitelist-only command role; 0 active late-join slots
             NCRCommander: [ 1, 1 ] # #Sirius Add - whitelist-only command role; 0 active late-join slots
             NCRExecutiveOfficer: [ 1, 1 ]
-            NCRPlatoonLeader: [ 2, 2 ]
+            NCRPlatoonLeader: [ 1, 1 ]
+            NCRRO: [ 1, 1 ]
             NCRChiefRanger: [ 1, 1 ]  # #Misfits Change - admin-only Chief Ranger; renamed from ChiefRanger
             NCRVeteranRanger: [ 1, 1 ] # #Misfits Change - renamed from RangerVeteran
             NCRFieldRanger: [ 1, 1 ]   # #Misfits Add - Field Ranger slot
@@ -84,17 +85,17 @@
             # BoSWashingtonKnight: [ 2, 2 ]
             # BoSWashingtonInitiate: [ 0, 2 ]
             BoSMidPaladinCommander: [ 1, 1 ]
-            BoSHeadKnight: [ 1, 1 ]  #Misfits Change /Add/: New consolidated BoS jobs
-            BoSWestScribe: [ 1, 1 ] # Misfits Change
+            # BoSHeadKnight: [ 1, 1 ]  #Misfits Change /Add/: New consolidated BoS jobs
+            # BoSWestScribe: [ 1, 1 ] # Misfits Change
             BoSMidPaladin: [ 1, 1 ]  #Misfits Tweak: 1 slot — Senior Paladin is a rare rank
             BoSMidKnight: [ 1, 1 ]
             BoSMidScribe: [ 1, 1 ]
             BoSPaladin: [ 2, 2 ]  #Misfits Tweak: 3 slots — standard Paladin complement
             BoSKnight: [ 3, 3 ]  #Misfits Change /Add/
-            BoSScribe: [ 3, 3 ]  #Misfits Change /Add/
-            BoSMidSquire: [ 4, 4 ]
-            BoSInitiate: [ 3, 3 ]  #Misfits Change /Add/
-            BoSMidSerf: [ 6, 6 ]
+            BoSScribe: [ 2, 2 ]  #Misfits Change /Add/
+            BoSMidSquire: [ 3, 3 ]
+            BoSInitiate: [ 2, 2 ]  #Misfits Change /Add/
+            BoSMidSerf: [ 5, 5 ]
             # BoSWashingtonInitiate: [ 3, 3 ] #Misfits Change /Comment-out/: Washington BoS removed
             VaultManagement: [ 1, 1 ] # #Misfits Tweak - 0 active slots (admin-notify role)
             Overseer: [ 1, 1 ]
@@ -150,4 +151,4 @@
             EnclaveHeadScientist: [ 1, 1 ]
             EnclaveScientist: [ 3, 3 ]
             EnclaveJuniorScientist: [ 3, 3 ]
-            SuperMutantEnclave: [ 1, 1 ]
+            # SuperMutantEnclave: [ 1, 1 ]
