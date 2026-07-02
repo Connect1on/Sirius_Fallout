@@ -18,6 +18,15 @@ job-description-ncr-nco = Вы возглавляете отряд солдат 
 job-name-ncr-weapon-specialist = Оружейный специалист НКР
 job-description-ncr-weapon-specialist = Вы являетесь квалифицированным специалистом по вооружению НКР. Ваша цель — огневая мощь и боевая эффективность, а не командование. По мере накопления опыта ваш ранг повышается от PV2 до SPC.
 
+job-name-ncr-requisition-officer = Офицер снабжения НКР
+job-description-ncr-requisition-officer = Вы являетесь квартирмейстером и офицером по реквизиции НКР, обслуживаете армейское снаряжение и контролируете распределение ресурсов.
+
+job-name-ncr-citizen = Гражданин НКР
+job-description-ncr-citizen = Вы гражданин НКР, приехавший на восток на заработки, чтобы помогать военным в качестве гражданского подрядчика.
+
+job-name-ncr-trader = Торговец НКР
+job-description-ncr-trader = Вы - караванщик и гражданин НКР, обслуживающий торговые пути республики.
+
 # #Misfits Add - Enclave job locale (expanded 8-role hierarchy). Reformer is admin-only apex role.
 job-name-enclave-reformer = Губернатор Штата
 job-description-enclave-reformer = Вы — высший авторитет Анклава, губернатор этой земли. Формируйте доктрину ячейки, судите её членов и определяйте её будущее. Подотчётен только Президенту.
@@ -37,6 +46,10 @@ job-name-enclave-scientist = Учёный Анклава
 job-description-enclave-scientist = Проводите полевые исследования, обслуживайте современное оборудование и поддерживайте научную миссию ячейки.
 job-name-enclave-junior-scientist = Лаборант Анклава
 job-description-enclave-junior-scientist = Помогайте старшим ученым, изучайте протоколы Анклава и вносите вклад в текущие исследования.
+
+# #Misfits Add - EnclaveRecruit: hidden job for per-round recruitment tracking.
+job-name-enclave-recruit = Рекрут Анклава
+job-description-enclave-recruit = Набор в Анклав производится за каждый раунд. Игровое время здесь учитывается при подсчете времени отдела Анклава.
 
 # Synthetics
 # #Misfits Add - Chief Ranger: admin-only Rangers leadership role.
@@ -148,3 +161,14 @@ undecided-loadout-category-misfits-pal-wattz-description =
     Includes 1 Bozar, 3 rifle magazines, 1 12.7mm pistol,
     2 12.7mm pistol magazines, 1 roll of gauze, 1 stimpak,
     and 1 K ration MRE.
+	
+# Tribal Robot
+job-name-synthetic-protectron-tribal = Протектрон Душевный-Ткач
+job-description-synthetic-protectron-tribal = Сельскохозяйственный робот, который был принят местным племенем и модифицирован на протяжении десятилетий или столетий.
+
+# Legion Acolyte of Mars
+job-name-caesar-legion-Acolyte-of-mars = Послушница Марса
+job-description-caesar-legion-Acolyte-of-mars = Вы - преданная служительница Марса, вы подчиняетесь непосредственно Жрице.
+
+job-name-bos-off-duty = Внештатник Братства
+job-description-bos-off-duty = Вы являетесь членом Братства Стали, не состоящим на службе. От вас не требуется участия в боевых операциях, вы также не должны входить в бункер, если только вам не угрожает опасность.

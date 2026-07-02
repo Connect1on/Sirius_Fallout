@@ -6,6 +6,7 @@
   id: FollowersOfTheApocalypse
   description: department-FollowersOfTheApocalypse-description
   color: "#e8a838"
+  editorHidden: true
   uiCategory: MinorFaction
   roles:
   - FollowerHead
