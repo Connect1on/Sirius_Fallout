@@ -1461,6 +1461,7 @@
     whitelist:
       tags:
       - Ore
+      - RawMaterial # Misfits Add - Let it process wood/charcoal too
   - type: Lathe
     idleState: icon
     runningState: building
@@ -1478,6 +1479,16 @@
     - IngotGold1
     - IngotSilver1
     - MaterialBananium1
+    # Misfits Add - N14/Misfits ore processing recipes (more efficient than forge)
+    - N14OreProcessorIngotLead
+    - N14OreProcessorIngotCopper
+    - N14OreProcessorIngotGold
+    - N14OreProcessorIngotIron
+    - N14OreProcessorIngotSilver
+    - N14OreProcessorSheetSteel
+    - N14OreProcessorSulfurPowder
+    - N14OreProcessorCharcoal
+    - N14OreProcessorCharcoalToCoal
   - type: MaterialStorageMagnetPickup # Delta V - Summary: Adds magnet pull from Frontier
     magnetEnabled: True
     range: 0.30 # Delta V - End Magnet Pull
@@ -1516,6 +1527,16 @@
     - IngotSilver1
     - MaterialBananium1
     - MaterialDiamond
+    # Misfits Add - N14/Misfits ore processing recipes (more efficient than forge)
+    - N14OreProcessorIngotLead
+    - N14OreProcessorIngotCopper
+    - N14OreProcessorIngotGold
+    - N14OreProcessorIngotIron
+    - N14OreProcessorIngotSilver
+    - N14OreProcessorSheetSteel
+    - N14OreProcessorSulfurPowder
+    - N14OreProcessorCharcoal
+    - N14OreProcessorCharcoalToCoal
 
 - type: entity
   parent: [BaseLathe, BaseMaterialSiloUtilizer]

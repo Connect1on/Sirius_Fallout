@@ -16,6 +16,6 @@
   description: A pair of pants with some shards of metal sticking out of it.
   components:
   - type: Sprite
-    sprite: _Misfits/Clothing/80s/Uniforms/theblockpants.rsi
+    sprite: _Misfits/Clothing/80s/Uniforms/Theblockpants.rsi
   - type: Clothing
-    sprite: _Misfits/Clothing/80s/Uniforms/theblockpants.rsi
+    sprite: _Misfits/Clothing/80s/Uniforms/Theblockpants.rsi

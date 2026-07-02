@@ -28,7 +28,7 @@
 
 - type: accessLevel
   id: CaesarLegionOrator
-  name: id-card-access-level-legion-orator
+  name: id-card-access-level-legion-Orator
 
 - type: accessLevel
   id: CaesarLegionLegionnaireRecruit
@@ -195,6 +195,13 @@
 
 - type: accessGroup
   id: CaesarLegionPriestessOfMars
+  tags:
+  - CaesarLegion
+  - CaesarLegionSlave
+  - CaesarLegionRecruit
+
+- type: accessGroup
+  id: CaesarLegionAcolyteOfMars
   tags:
   - CaesarLegion
   - CaesarLegionSlave

@@ -11,14 +11,11 @@
           prob: 0.7
           orGroup: RandomMed
         - id: N14HealingPoultice  # uncommon tribal remedy (replaces antidote syringe)
-          prob: 0.2
-          orGroup: RandomMed
-        - id: N14Hydra            # rare stimulant (replaces super stimpak)
-          prob: 0.1
+          prob: 0.3
           orGroup: RandomMed
         - id: N14CleanGauze10
           amount: 1
-        # - id: N14RadXPill  #Misfits Fix: Legion doesn't use Rad-X (modern chem), removed
-        #   amount: 1
+        - id: N14CleansingPowder  #Misfits Fix: Legion doesn't use Rad-x, uses herbal remedies.
+          amount: 1
         - id: Flare
           amount: 2

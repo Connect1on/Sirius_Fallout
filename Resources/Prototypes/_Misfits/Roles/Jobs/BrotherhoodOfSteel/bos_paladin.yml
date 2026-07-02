@@ -58,6 +58,7 @@
   overrideConsoleVisibility: true
   canBeAntag: false
   name: job-name-bos-paladin
+  overwatchCategory: OverwatchBosPaladin
   description: job-description-bos-paladin
   playTimeTracker: BoSPaladin
   requirements:

@@ -5,6 +5,7 @@ using Content.Shared.Body.Events;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Pointing;
+using Content.Shared.Silicons.StationAi;
 
 // Shitmed Change
 using Content.Shared._Shitmed.Body.Organ;
@@ -99,6 +100,12 @@ namespace Content.Server.Body.Systems
         // Shitmed Change End
         private void OnPointAttempt(Entity<BrainComponent> ent, ref PointAttemptEvent args)
         {
+            // [Changed by MisfitsCrew/Operator] Station AI brains are the player-controlled
+            // AI entity while inserted into the core, so their pointing is handled by
+            // StationAiSystem's camera/core source resolver instead of the loose-brain block.
+            if (HasComp<StationAiHeldComponent>(ent.Owner))
+                return;
+
             args.Cancel();
         }
     }

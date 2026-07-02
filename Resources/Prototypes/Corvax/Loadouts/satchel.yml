@@ -13,6 +13,7 @@
       - Overseer
       - VaultDweller
       - VaultSecurity
+      - NCRPrisoner
     - !type:CharacterItemGroupRequirement
       group: N14LodaoutBags
   items:
@@ -35,6 +36,7 @@
       - Overseer
       - VaultDweller
       - VaultSecurity
+      - NCRPrisoner
     - !type:CharacterItemGroupRequirement
       group: N14LodaoutBags
   items:
@@ -50,6 +52,10 @@
   customName: false
   customDescription: false
   requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - NCRPrisoner
     - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
@@ -69,6 +75,10 @@
   customName: false
   customDescription: false
   requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - NCRPrisoner
     - !type:CharacterDepartmentRequirement
       inverted: true
       departments:
@@ -79,3 +89,51 @@
     - N14ClothingBackpackSatchelMilitary
   functions:
   - !type:LoadoutFiledStorage
+
+#Misfits additions
+- type: loadout
+  id: MisfitsClothingBackpackSatchelOld
+  category: Satchel
+  cost: 0
+  exclusive: true
+  customName: false
+  customDescription: false
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterItemGroupRequirement
+      group: N14LodaoutBags
+  items:
+    - M14OldSatchel
+  functions:
+  - !type:LoadoutFiledStorage
+
+- type: loadout
+  id: MisfitsClothingBackpackSatchelMarching
+  category: Satchel
+  cost: 0
+  exclusive: true
+  customName: false
+  customDescription: false
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterItemGroupRequirement
+      group: N14LodaoutBags
+  items:
+    - M14MarchingSatchel
+  functions:
+  - !type:LoadoutFiledStorage
+

@@ -25,5 +25,5 @@ public sealed partial class RuneSelectorPrototype : IPrototype
     ///     Damage dealt on the rune drawing.
     /// </summary>
     [DataField]
-    public DamageSpecifier DrawDamage = new() { DamageDict = new() { ["Slash"] = 15 } };
+    public DamageSpecifier DrawDamage = new() { DamageDict = new() { ["Brute"] = 15 } };
 }

@@ -17,12 +17,6 @@
           messageKeys:
           - drug-ambience-healing-mixture-1
           - drug-ambience-healing-mixture-2
-        - !type:GenericStatusEffect # Misfits Add: mark entity as having an active recovery drug — enables 2s crit stand-up
-          key: RecoveryDrugActive
-          component: RecoveryDrugActiveComponent
-          type: Add
-          time: 3
-          refresh: true
         - !type:HealthChange
           damage:
             groups:
@@ -31,17 +25,6 @@
               Airloss: -3
         - !type:ModifyBleedAmount
           amount: -2
-        - !type:HealthChange # Bonus for poison
-          conditions:
-          - !type:ReagentThreshold
-            min: 27
-          damage:
-            groups:
-              Burn: -1.0
-              Brute: -1.0
-              Airloss: -1.0
-            types:
-              Poison: 3
         - !type:GenericStatusEffect
           conditions:
           - !type:ReagentThreshold
@@ -81,7 +64,7 @@
             Brute: -2.0
             Airloss: -2.0
           types:
-            Radiation: 0.5
+            Radiation: 0.25
             Poison: 0.25
       - !type:ModifyBleedAmount
         amount: -1
@@ -146,6 +129,8 @@
         conditions:
         - !type:ReagentThreshold
           min: 30
+      - !type:SuppressChronicPainReagent
+        SuppressionTime: 300
 
 # Strong overtime healing
 - type: reagent
@@ -234,8 +219,8 @@
   name: reagent-name-robust-healing-mixture
   group: Chems
   desc: reagent-desc-robust-healing-mixture
-  physicalDesc: reagent-physical-desc-opaque
-  color: "#934435"
+  physicalDesc: reagent-physical-desc-gleaming
+  color: "#ff113a"
   metabolisms:
     Medicine:
       effects:
@@ -245,12 +230,6 @@
         messageKeys:
         - drug-ambience-robust-healing-mixture-1
         - drug-ambience-robust-healing-mixture-2
-      - !type:GenericStatusEffect # Misfits Add: mark entity as having an active recovery drug — enables 2s crit stand-up
-        key: RecoveryDrugActive
-        component: RecoveryDrugActiveComponent
-        type: Add
-        time: 3
-        refresh: true
       - !type:HealthChange
         damage:
           groups:
@@ -306,6 +285,8 @@
         damage:
           types:
             Radiation: -5
+      - !type:ModifyFeralization    # Misfits Add
+        delta: -1
 
 - type: reagent
   id: RadAwayDiluted
@@ -328,6 +309,8 @@
         damage:
           types:
             Radiation: -2.5
+      - !type:ModifyFeralization    # Misfits Add
+        delta: -0.5
 
 - type: reagent
   id: RadX
@@ -350,6 +333,9 @@
         damage:
           types:
             Radiation: -1
+      - !type:ModifyFeralization    # Misfits Add
+        delta: -0.2
+        minimumThreshold: 50
 
 # Other
 - type: reagent
@@ -526,6 +512,9 @@
         conditions:
         - !type:ReagentThreshold
           min: 25
+      - !type:ModifyFeralization  # Misfits Add
+        delta: -0.5
+        minimumThreshold: 80
 
 - type: reagent
   id: UltraRobustHealingMixture

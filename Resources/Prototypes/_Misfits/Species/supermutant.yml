@@ -27,6 +27,7 @@
   - Uncategorized
   - Auditory
   - Mental
+  - Physical
   - Speech
   - TraitsSpeechUncategorized
   - TraitsSpeechAccents
@@ -44,6 +45,7 @@
   - SuperMutantNCRTrooper
   - SuperMutantTribal
   - SuperMutantFollowerDoctor
+  - SuperMutantEnclave
   prototype: N14MobSuperMutant
   sprites: MobSuperMutantSprites
   markingLimits: MobSuperMutantMarkingLimits

@@ -100,6 +100,120 @@
   naming: First # #Misfits Add
 
 - type: species
+  id: RobotProtectronTribal
+  name: species-name-robot-protectron-tribal
+  roundStart: true
+  order: 21 # hidden from main selector, used by Robot Model picker
+  whitelistRequired: true
+  restrictedCustomization: true
+  jobWhitelistUnlock: SyntheticProtectronTribal
+  restrictedJobs:
+  - SyntheticProtectronTribal
+  sprites: RobotSprites
+  markingLimits: RobotMarkingLimits
+  prototype: N14PlayerSyntheticProtectronTribal
+  dollPrototype: N14PlayerSyntheticProtectronTribal
+  skinColoration: Hues
+  maleFirstNames: RobotProtectronFirst  # TODO tribal robot names?
+  femaleFirstNames: RobotProtectronFirst
+  naming: First
+
+- type: species
+  id: RobotSecuritron
+  name: species-name-robot-securitron-gray
+  roundStart: true
+  order: 22
+  whitelistRequired: true
+  restrictedCustomization: true
+  jobWhitelistUnlock: SyntheticProtectron
+  restrictedJobs:
+  - SyntheticProtectron
+  sprites: RobotSprites
+  markingLimits: RobotMarkingLimits
+  prototype: N14PlayerSyntheticSecuritronGray
+  dollPrototype: N14PlayerSyntheticSecuritronGray
+  skinColoration: Hues
+  maleFirstNames: RobotProtectronFirst
+  femaleFirstNames: RobotProtectronFirst
+  naming: First
+
+- type: species
+  id: RobotSecuritronBlue
+  name: species-name-robot-securitron-blue
+  roundStart: true
+  order: 23
+  whitelistRequired: true
+  restrictedCustomization: true
+  jobWhitelistUnlock: SyntheticProtectron
+  restrictedJobs:
+  - SyntheticProtectron
+  sprites: RobotSprites
+  markingLimits: RobotMarkingLimits
+  prototype: N14PlayerSyntheticSecuritronBlue
+  dollPrototype: N14PlayerSyntheticSecuritronBlue
+  skinColoration: Hues
+  maleFirstNames: RobotProtectronFirst
+  femaleFirstNames: RobotProtectronFirst
+  naming: First
+
+- type: species
+  id: RobotSecuritronBrown
+  name: species-name-robot-securitron-brown
+  roundStart: true
+  order: 24
+  whitelistRequired: true
+  restrictedCustomization: true
+  jobWhitelistUnlock: SyntheticProtectron
+  restrictedJobs:
+  - SyntheticProtectron
+  sprites: RobotSprites
+  markingLimits: RobotMarkingLimits
+  prototype: N14PlayerSyntheticSecuritronBrown
+  dollPrototype: N14PlayerSyntheticSecuritronBrown
+  skinColoration: Hues
+  maleFirstNames: RobotProtectronFirst
+  femaleFirstNames: RobotProtectronFirst
+  naming: First
+
+- type: species
+  id: RobotSecuritronRed
+  name: species-name-robot-securitron-red
+  roundStart: true
+  order: 25
+  whitelistRequired: true
+  restrictedCustomization: true
+  jobWhitelistUnlock: SyntheticProtectron
+  restrictedJobs:
+  - SyntheticProtectron
+  sprites: RobotSprites
+  markingLimits: RobotMarkingLimits
+  prototype: N14PlayerSyntheticSecuritronRed
+  dollPrototype: N14PlayerSyntheticSecuritronRed
+  skinColoration: Hues
+  maleFirstNames: RobotProtectronFirst
+  femaleFirstNames: RobotProtectronFirst
+  naming: First
+
+- type: species
+  id: RobotSecuritronYellow
+  name: species-name-robot-securitron-yellow
+  roundStart: true
+  order: 26
+  whitelistRequired: true
+  restrictedCustomization: true
+  jobWhitelistUnlock: SyntheticProtectron
+  restrictedJobs:
+  - SyntheticProtectron
+  sprites: RobotSprites
+  markingLimits: RobotMarkingLimits
+  prototype: N14PlayerSyntheticSecuritronYellow
+  dollPrototype: N14PlayerSyntheticSecuritronYellow
+  skinColoration: Hues
+  maleFirstNames: RobotProtectronFirst
+  femaleFirstNames: RobotProtectronFirst
+  naming: First
+
+- type: species
   id: RobotMrGutsy
   name: species-name-robot-mr-gutsy
   roundStart: true

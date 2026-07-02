@@ -207,6 +207,7 @@ public sealed class WastelandMapCartridgeSystem : EntitySystem
             state.BoundsRight,
             state.BoundsTop,
             merged,
-            state.SharedAnnotations);
+            state.SharedAnnotations,
+            state.Overwatch);
     }
 }

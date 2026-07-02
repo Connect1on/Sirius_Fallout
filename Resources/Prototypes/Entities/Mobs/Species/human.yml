@@ -8,10 +8,10 @@
   - type: Damageable
     damageTypeCaps:
       Poison: 100 # N14: Prevent unrecoverable 500+ toxin states
-      Heat: 100 # #Misfits Add - Cap burn damage at softcrit threshold; fire alone can't kill a player
-      Shock: 100 # #Misfits Add - Cap shock/burn at softcrit threshold
-      Cold: 100 # #Misfits Add - Cap cold/burn at softcrit threshold
-      Caustic: 100 # #Misfits Add - Cap caustic/burn at softcrit threshold
+      Heat: 226 # #Misfits Add - Cap burn damage at softcrit threshold; fire alone can't kill a player
+      Shock: 226 # #Misfits Add - Cap shock/burn at softcrit threshold
+      Cold: 226 # #Misfits Add - Cap cold/burn at softcrit threshold
+      Caustic: 226 # #Misfits Add - Cap caustic/burn at softcrit threshold
   - type: Perishable
     rotAfter: 1800 # Half an in-game day.
   - type: Hunger # Forge-Change
@@ -22,18 +22,24 @@
       Peckish: 0.5
       Starving: 0.4
       Dead: 0
-    starvationDamage:
+    starvationDamage:      # Misfits Change - use custom Starvation type
       types:
-        Cold: 0.15 # Misfits Change - use Cold damage for Malnutrition instead of custom Starvation type (no brute/bleed from hunger)
+        Starvation: 0.15
+    recoveryDamage:        # Misfits Add
+      types:
+        Starvation: -0.30
     starvingSlowdownModifier: 0.5
   - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.
     sprite: Mobs/Species/Human/parts.rsi
     state: full
   - type: Thirst
     baseDecayRate: 0.02 # Misfits Tweak - reduced from 0.1 (5x slower); first "Thirsty" ~1hr from typical start vs ~13min vanilla; not Parched until ~2hrs
-    dehydrationDamage:
+    dehydrationDamage:  # Misfits Add - Dehydration damage
       types:
-        Cold: 0.15 # Misfits Change - use Cold damage for Dehydration instead of custom Dehydration type (no brute/bleed from thirst)
+        Dehydration: 0.15
+    recoveryDamage:     # Misfits Add - Dehydration damage
+      types:
+        Dehydration: -0.30
   - type: Carriable # Carrying system from nyanotrasen.
   - type: Butcherable
     butcheringType: Spike

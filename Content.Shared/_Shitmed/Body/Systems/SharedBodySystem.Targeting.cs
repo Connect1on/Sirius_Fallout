@@ -35,7 +35,8 @@ public partial class SharedBodySystem
     [Dependency] private readonly StandingStateSystem _standing = default!;
 
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    private readonly string[] _severingDamageTypes = { "Slash", "Piercing", "Blunt" };
+    // Misfits Change: All physical damage types can sever
+    private readonly string[] _severingDamageTypes = { "Slash", "Piercing", "Blunt", "Heat", "Caustic", "Cold", };
     private const double IntegrityJobTime = 0.005;
     private readonly JobQueue _integrityJobQueue = new(IntegrityJobTime);
     public sealed class IntegrityJob : Job<object>
@@ -238,7 +239,7 @@ public partial class SharedBodySystem
             && partIdSlot is not null
             && delta != null
             && !HasComp<BodyPartReattachedComponent>(partEnt)
-            && !partEnt.Comp.Enabled
+            // && !partEnt.Comp.Enabled    // Misfits change for Bloody Mess perk. Functional limbs can be severed.
             && damageable.TotalDamage >= partEnt.Comp.SeverIntegrity
             && _severingDamageTypes.Any(damageType => delta.DamageDict.TryGetValue(damageType, out var value) && value > 0))
             severed = true;

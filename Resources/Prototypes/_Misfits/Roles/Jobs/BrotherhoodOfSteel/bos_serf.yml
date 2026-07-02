@@ -8,7 +8,8 @@
   overrideConsoleVisibility: true
   canBeAntag: false
   name: job-name-bos-mid-serf #Misfits Change
-  description: job-description-bos-mid-serf
+  overwatchCategory: OverwatchBosSupport
+  description: job-description-bos-mid-Serf
   playTimeTracker: BoSMidSerf
   requirements:
     - !type:MinPlayersRequirement

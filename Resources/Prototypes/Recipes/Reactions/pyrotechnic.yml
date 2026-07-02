@@ -2,13 +2,13 @@
   id: Napalm
   reactants:
     Oil:
-      amount: 1
+      amount: 20
     WeldingFuel:
-      amount: 1
+      amount: 20
     Ethanol:
-      amount: 1
+      amount: 20
   products:
-    Napalm: 3
+    Napalm: 5
 
 #- type: reaction # Corvax-Change
 #  id: Phlogiston

@@ -93,7 +93,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingHeadHatRangerB
@@ -106,7 +108,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingHeadHatNCRBeretRecon
@@ -131,7 +135,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingUniformRangerV1
@@ -144,7 +150,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingUniformRangerV2
@@ -157,7 +165,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingUniformRangerV3
@@ -170,7 +180,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingHandsGlovesNCR
@@ -237,7 +249,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingUniformRangerBlue
@@ -250,7 +264,9 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - N14ClothingUniformRangerModif
@@ -263,7 +279,8 @@
   requirements:
     - !type:CharacterJobRequirement
       jobs:
-        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRFieldRanger
+        - NCRPatrolRanger
         - NCRVeteranRanger
   items:
     - ClothingNeckOldMantle

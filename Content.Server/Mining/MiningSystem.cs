@@ -1,4 +1,5 @@
 using Content.Server.Mining.Components;
+using Content.Server.Stack;
 using Content.Shared.Destructible;
 using Content.Shared.Mining;
 using Content.Shared.Random;
@@ -15,6 +16,7 @@ public sealed class MiningSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly StackSystem _stackSystem = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -34,12 +36,14 @@ public sealed class MiningSystem : EntitySystem
         if (proto.OreEntity == null)
             return;
 
-        var coords = Transform(uid).Coordinates;
-        var toSpawn = _random.Next(proto.MinOreYield, proto.MaxOreYield);
-        for (var i = 0; i < toSpawn; i++)
+        var toSpawn = 0;
+        var stackCount = _stackSystem.GetCount(uid);
+        for (var i = 0; i < stackCount; i++)
         {
-            Spawn(proto.OreEntity, coords.Offset(_random.NextVector2(0.2f)));
+            toSpawn += _random.Next(proto.MinOreYield, proto.MaxOreYield);
         }
+
+        _stackSystem.SpawnMultiple(proto.OreEntity, toSpawn, Transform(uid).Coordinates.Offset(_random.NextVector2(0.2f)));
     }
 
     private void OnMapInit(EntityUid uid, OreVeinComponent component, MapInitEvent args)

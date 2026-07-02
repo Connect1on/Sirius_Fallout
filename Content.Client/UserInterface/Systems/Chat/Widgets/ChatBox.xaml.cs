@@ -322,7 +322,7 @@ public partial class ChatBox : UIWidget, ILinkClickHandler // #Misfits Change â€
         else if (link.StartsWith("chatghost:"))
         {
             var netEntity = link["chatghost:".Length..];
-            _console.ExecuteCommand($"follow {netEntity}");
+            _console.ExecuteCommand($"ghostfollow {netEntity}");
         }
     }
 

@@ -3,6 +3,7 @@ using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Server.Chat.Systems;
 using Content.Server.Chat.Managers;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Chat;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
@@ -29,6 +30,7 @@ public sealed class InjectorSystem : SharedInjectorSystem
     [Dependency] private readonly ReactiveSystem _reactiveSystem = default!;
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     private const ChatChannel BlockInjectionDenyChannel = ChatChannel.Emotes;
 
@@ -232,7 +234,7 @@ public sealed class InjectorSystem : SharedInjectorSystem
             }
         }
 
-        DoAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, actualDelay, new InjectorDoAfterEvent(), injector.Owner, target: target, used: injector.Owner)
+        DoAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, _special.GetIntelligenceMedicalActionDelay(user, actualDelay), new InjectorDoAfterEvent(), injector.Owner, target: target, used: injector.Owner)
         {
             BreakOnMove = true,
             BreakOnWeightlessMove = false,

@@ -8,6 +8,7 @@
   overrideConsoleVisibility: false
   canBeAntag: false
   name: job-name-ncr-weapon-specialist
+  overwatchCategory: OverwatchNcrEnlisted
   description: job-description-ncr-weapon-specialist
   playTimeTracker: NCRWeaponSpecialist
   requirements:

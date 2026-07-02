@@ -18,6 +18,15 @@ job-description-ncr-nco = You lead a squad of NCR troopers, responsible for a fi
 job-name-ncr-weapon-specialist = NCR Weapon Specialist
 job-description-ncr-weapon-specialist = You are a weapons-qualified specialist of the NCR. Your focus is firepower and combat effectiveness — not command. Your rank tracks PV2 through SPC as you accumulate experience.
 
+job-name-ncr-requisition-officer = NCR Requisition Officer
+job-description-ncr-requisition-officer = You are a Quartermaster and Requisition Officer of NCR, maintain the armies' equipment and supervise the allocation of its resources.
+
+job-name-ncr-citizen = NCR Citizen
+job-description-ncr-citizen = You are a citizen of the NCR coming east for work, to help the military as a Civilian contractor.
+
+job-name-ncr-trader = NCR Trader
+job-description-ncr-trader = You are a Caravaneer and a citizen of the NCR, supplying the republic's trade routes.
+
 # #Misfits Add - Enclave job locale (expanded 8-role hierarchy). Reformer is admin-only apex role.
 job-name-enclave-reformer = State Governor
 job-description-enclave-reformer = You are the Enclave's supreme authority on the field — its Reformer. Shape the cell's doctrine, judge its members, and determine its future. Answerable only to Eden.
@@ -36,7 +45,13 @@ job-description-enclave-head-scientist = Direct the Enclave's research programs,
 job-name-enclave-scientist = Enclave Scientist
 job-description-enclave-scientist = Conduct field research, maintain advanced equipment, and support the cell's scientific mission.
 job-name-enclave-junior-scientist = Enclave Junior Scientist
-job-description-enclave-junior-scientist = Assist senior scientists, learn Enclave protocols, and contribute to ongoing research.# Synthetics job names and descriptions (Misfits-specific)
+job-description-enclave-junior-scientist = Assist senior scientists, learn Enclave protocols, and contribute to ongoing research.
+
+# #Misfits Add - EnclaveRecruit: hidden job for per-round recruitment tracking.
+job-name-enclave-recruit = Enclave Recruit
+job-description-enclave-recruit = Per-round Enclave recruit. Playtime here counts toward Enclave department timers.
+
+# Synthetics job names and descriptions (Misfits-specific)
 
 # Synthetics
 # #Misfits Add - Chief Ranger: admin-only Rangers leadership role.
@@ -104,13 +119,22 @@ job-description-c27-ncr = You are a C-27 humanoid robot conscripted into the New
 job-name-c27-bos = C-27 Brotherhood Humanoid Robot
 job-description-c27-bos = You are a C-27 humanoid robot reclaimed by the Brotherhood of Steel — repainted in Brotherhood livery and issued a Brotherhood headset, Initiate holotag, and a light Brotherhood-pattern armor kit. Slow but durable, immune to flash and broken glass, and self-repairing. Serve the Codex.
 
+job-name-c27-zax = C-27 Z.A.X Humanoid Robot
+job-description-c27-zax = You are a C-27 humanoid robot rebuilt as a Z.A.X-linked chassis. Fast, fragile, and aggressively self-maintaining, you regenerate most damage rapidly but remain highly vulnerable to electrical disruption and EMP shock.
+
 # #Misfits Add - Followers of the Apocalypse ranked job locale.
 job-name-follower-head = Followers Head
 job-description-follower-head = You lead this chapter of the Followers. The sick, the curious, and the desperate look to you for direction. Set the example, protect your people, and keep the mission alive.
 job-name-follower-doctor = Followers Doctor
 job-description-follower-doctor = You are a trained Follower physician. Stitch the wounded, study the wastes, and push medicine into places NCR and Brotherhood dare not go.
+job-name-follower-guard = Followers Guard
+job-description-follower-guard = You protect the Followers' clinic, escort doctors into dangerous ground, and keep desperate people from turning the humanitarian mission into another battlefield.
 job-name-follower-volunteer = Followers Volunteer
 job-description-follower-volunteer = You are new to the Followers. You believe knowledge and compassion can outlast bullets and bombs. Prove it — learn from those above you and help anyone who needs it.
+
+# #Misfits Add - Supermutant Follower Doctor job locale.
+job-name-supermutant-follower-doctor = Supermutant Follower Doctor
+job-description-supermutant-follower-doctor = A SuperMutant trained in the ways of medicine.
 
 # #Misfits Add — Western BoS chapter command-tier jobs (Elder + Head Scribe).
 # These keys were commented out in the Corvax locale when the Corvax west-BoS chapter
@@ -131,6 +155,8 @@ job-name-bos-scribe = Brotherhood Scribe
 job-description-bos-scribe = Support the chapter with research, medicine, and technical expertise.
 job-name-bos-initiate = Brotherhood Initiate
 job-description-bos-initiate = Learn the Brotherhood's code, follow orders, and earn your place in the chapter.
+job-name-bos-eyebot = Brotherhood Eyebot
+job-description-bos-eyebot = Serve the Brotherhood of Steel as a loyal robotic companion.
 
 # #Misfits Add — Squire loadout kit locale for new Misfits_SqrBasic_Set.
 # #Misfits Tweak: Removed rank prefix so the kit name is role-neutral.
@@ -148,3 +174,14 @@ undecided-loadout-category-misfits-pal-wattz-description =
     Includes 1 Bozar, 1 LMG magazine, 1 12.7mm pistol,
     2 12.7mm pistol magazines, 1 roll of gauze, 1 stimpak,
     and 1 K ration MRE.
+
+# Tribal Robot
+job-name-synthetic-protectron-tribal = Protectron Spirit-Tender
+job-description-synthetic-protectron-tribal = An agricultural robot that has been adopted by the local tribe and modified over decades or centuries.
+
+# Legion Acolyte of Mars
+job-name-caesar-legion-Acolyte-of-mars = Acolyte of Mars
+job-description-caesar-legion-Acolyte-of-mars = You are a devoted Acolyte of Mars, you answer to the Priestess directly.
+
+job-name-bos-off-duty = Off Duty BOS
+job-description-bos-off-duty = You are an off-duty member of the Brotherhood of Steel. You are not expected to participate in combat operations, you are not to enter the bunker unless in danger either.

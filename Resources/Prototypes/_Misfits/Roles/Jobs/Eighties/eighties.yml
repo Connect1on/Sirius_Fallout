@@ -13,7 +13,11 @@
   name: job-name-eighties-the-block
   description: job-description-eighties-the-block
   playTimeTracker: EightiesTheBlock
-  whitelisted: true
+  whitelisted: false
+  access:
+  - 80sHead
+  - 80s
+  - 80sSlave
   requirements:
   - !type:MinPlayersRequirement
     min: 0
@@ -21,11 +25,10 @@
     species:
     - Human
     - Ghoul
+    - GhoulGlowing
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 144000 # 40 hours
-  access:
-  - 80sHead
   startingGear: EightiesTheBlockGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -37,29 +40,29 @@
       - type: NpcFactionMember
         factions:
           - PlayerRaider
+          - Wastelander
+  - !type:AddTraitSpecial
+    traits: [ N14RidingPerk ]
 
 - type: startingGear
   id: EightiesTheBlockGear
   equipment:
     bandage: NCClothingBandageRaiders
+    gloves: N14ClothingHandsGlovesBlackBiker
     jumpsuit: MisfitsClothingTheBlockPants
     outerClothing: MisfitsClothingOuterTheBlockArmor
     mask: MisfitsClothingTheBlockMask
-    shoes: N14ClothingShoesRaider
+    shoes: ClothingShoesBootsJack
     neck: ClothingNeckBlackScarf
     head: N14ClothingHeadHatBeanie
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetEighties
     back: N14ClothingBackpackMilitary
-    suitstorage: N14WeaponSMG45
-    pocket1: N14WeaponRevolver44TribalUpgraded
+    pocket1: EightiesTheBlockloadoutkits
     belt: ClothingBeltMilitary
     id: SiriusID80sDogtagBlock
   storage:
     back:
     - N14BoxPlasticFilledWastelander
-    belt:
-    - Magazine45SubMachineGun
-    - Magazine45SubMachineGun
 
 - type: playTimeTracker
   id: EightiesTheBlock
@@ -75,7 +78,9 @@
   name: job-name-eighties-cylinders
   description: job-description-eighties-cylinders
   playTimeTracker: EightiesCylinders
-  whitelisted: true
+  whitelisted: false
+  access:
+  - 80s
   requirements:
   - !type:MinPlayersRequirement
     min: 0
@@ -83,11 +88,10 @@
     species:
     - Human
     - Ghoul
+    - GhoulGlowing
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 54000 # 15 hours
-  access:
-  - 80s
   startingGear: EightiesCylindersGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -99,27 +103,28 @@
       - type: NpcFactionMember
         factions:
           - PlayerRaider
+          - Wastelander
+  - !type:AddTraitSpecial
+    traits: [ N14RidingPerk ]
 
 - type: startingGear
   id: EightiesCylindersGear
   equipment:
     bandage: NCClothingBandageRaiders
+    gloves: N14ClothingHandsGlovesBlackBiker
     jumpsuit: N14ClothingUniformJumpsuitBrahminFarmer
-    outerClothing: MisfitsClothingOuterEightiesArmor
-    shoes: N14ClothingShoesRaider
+    outerClothing: MisfitsClothingOuterEightiesArmorHeavyElite
+    ears: MisfitsClothingHeadsetEighties
+    shoes: ClothingShoesBootsJack
     neck: ClothingNeckBlackScarf
     head: N14ClothingHeadHatBeanie
-    ears: MisfitsClothingHeadsetWastelandScrap
     back: N14ClothingBackpackMilitary
-    suitstorage: N14WeaponSMG45
+    pocket1: EightiesCylindersloadoutkits
     belt: ClothingBeltMilitary
     id: SiriusID80sDogtagCylinder
   storage:
     back:
     - N14BoxPlasticFilledWastelander
-    belt:
-    - Magazine45SubMachineGun
-    - Magazine45SubMachineGun
 
 - type: playTimeTracker
   id: EightiesCylinders
@@ -134,7 +139,9 @@
   name: job-name-eighties-pistons
   description: job-description-eighties-pistons
   playTimeTracker: EightiesPistons
-  whitelisted: true
+  whitelisted: false
+  access:
+  - 80s
   requirements:
   - !type:MinPlayersRequirement
     min: 0
@@ -142,11 +149,10 @@
     species:
     - Human
     - Ghoul
+    - GhoulGlowing
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 21600 # 6 hours
-  access:
-  - 80s
   startingGear: EightiesPistonsGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -158,27 +164,28 @@
       - type: NpcFactionMember
         factions:
           - PlayerRaider
+          - Wastelander
+  - !type:AddTraitSpecial
+    traits: [ N14RidingPerk ]
 
 - type: startingGear
   id: EightiesPistonsGear
   equipment:
     bandage: NCClothingBandageRaiders
     jumpsuit: N14ClothingUniformJumpsuitBrahminFarmer
-    outerClothing: MisfitsClothingOuterEightiesArmor
-    shoes: N14ClothingShoesRaider
+    gloves: N14ClothingHandsGlovesBlackBiker
+    outerClothing: MisfitsClothingOuterEightiesArmorHeavy
+    shoes: ClothingShoesBootsJack
     neck: ClothingNeckBlackScarf
     head: N14ClothingHeadHatBeanie
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetEighties
     back: N14ClothingBackpackMilitary
-    suitstorage: N14WeaponSMG45
+    pocket1: EightiesPistonsloadoutkits
     belt: ClothingBeltMilitary
     id: SiriusID80sDogtagPiston
   storage:
     back:
     - N14BoxPlasticFilledWastelander
-    belt:
-    - Magazine45SubMachineGun
-    - Magazine45SubMachineGun
 
 - type: playTimeTracker
   id: EightiesPistons
@@ -193,7 +200,9 @@
   name: job-name-eighties-oilers
   description: job-description-eighties-oilers
   playTimeTracker: EightiesOilers
-  whitelisted: true
+  whitelisted: false
+  access:
+  - 80s
   requirements:
   - !type:MinPlayersRequirement
     min: 0
@@ -201,11 +210,10 @@
     species:
     - Human
     - Ghoul
+    - GhoulGlowing
   - !type:CharacterDepartmentTimeRequirement
     department: Eighties
     min: 7200 # 2 hours
-  access:
-  - 80s
   startingGear: EightiesOilersGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -217,27 +225,28 @@
       - type: NpcFactionMember
         factions:
           - PlayerRaider
+          - Wastelander
+  - !type:AddTraitSpecial
+    traits: [ N14RidingPerk ]
 
 - type: startingGear
   id: EightiesOilersGear
   equipment:
     bandage: NCClothingBandageRaiders
     jumpsuit: N14ClothingUniformJumpsuitBrahminFarmer
-    outerClothing: MisfitsClothingOuterEightiesArmor
-    shoes: N14ClothingShoesRaider
+    gloves: N14ClothingHandsGlovesBlackBiker
+    outerClothing: MisfitsClothingOuterEightiesArmorHeavyBoss
+    shoes: ClothingShoesBootsJack
     neck: ClothingNeckBlackScarf
     head: N14ClothingHeadHatBeanie
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetEighties
     back: N14ClothingBackpackMilitary
-    suitstorage: N14WeaponSMG45
+    pocket1: EightiesOilersloadoutkits
     belt: ClothingBeltMilitary
     id: SiriusID80sDogtagOilers
   storage:
     back:
     - N14BoxPlasticFilledWastelander
-    belt:
-    - Magazine45SubMachineGun
-    - Magazine45SubMachineGun
 
 - type: playTimeTracker
   id: EightiesOilers
@@ -252,7 +261,10 @@
   name: job-name-eighties-road-rash
   description: job-description-eighties-road-rash
   playTimeTracker: EightiesRoadRash
-  whitelisted: true
+  whitelisted: false
+  access:
+  - 80s
+  - 80sSlave
   requirements:
   - !type:MinPlayersRequirement
     min: 0
@@ -260,8 +272,10 @@
     species:
     - Human
     - Ghoul
-  access:
-  - 80s
+    - GhoulGlowing
+  - !type:CharacterPlaytimeRequirement
+    tracker: Wastelander
+    min: 7000
   startingGear: EightiesRoadRashGear
   alwaysUseSpawner: true
   icon: "JobIconEighties"
@@ -273,27 +287,26 @@
       - type: NpcFactionMember
         factions:
           - PlayerRaider
+          - Wastelander
 
 - type: startingGear
   id: EightiesRoadRashGear
   equipment:
     bandage: NCClothingBandageRaiders
     jumpsuit: N14ClothingUniformJumpsuitBrahminFarmer
+    gloves: N14ClothingHandsGlovesBlackBiker
     outerClothing: MisfitsClothingOuterEightiesArmor
-    shoes: N14ClothingShoesRaider
+    shoes: ClothingShoesBootsJack
     neck: ClothingNeckBlackScarf
     head: N14ClothingHeadHatBeanie
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetEighties
     back: N14ClothingBackpackMilitary
-    suitstorage: N14WeaponSMG45
+    pocket1: EightiesRoadRashloadoutkits
     belt: ClothingBeltMilitary
     id: SiriusID80sDogtagRoadRash
   storage:
     back:
     - N14BoxPlasticFilledWastelander
-    belt:
-    - Magazine45SubMachineGun
-    - Magazine45SubMachineGun
 
 - type: playTimeTracker
   id: EightiesRoadRash

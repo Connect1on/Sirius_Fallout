@@ -135,6 +135,7 @@
         - CaesarLegionAuxilia
         - CaesarLegionVexillarius
         - CaesarLegionVeteranDecanus
+        - CaesarLegionForgemaster
         - CaesarLegionPrimeDecanus
         - CaesarLegionHoundmaster
         - CaesarLegionExplorer
@@ -165,6 +166,7 @@
         - CaesarLegionVeteranDecanus
         - CaesarLegionPrimeDecanus
         - CaesarLegionDean
+        - CaesarLegionForgemaster
         - CaesarLegionHoundmaster
         - CaesarLegionExplorer
         - CaesarLegionOrator
@@ -193,6 +195,7 @@
         - CaesarLegionVeteranDecanus
         - CaesarLegionPrimeDecanus
         - CaesarLegionDean
+        - CaesarLegionForgemaster
         - CaesarLegionFrumentarii
         - CaesarLegionHoundmaster
         - CaesarLegionExplorer
@@ -215,7 +218,7 @@
         - CaesarLegionPrimeDecanus
     - !type:CharacterPlaytimeRequirement
       tracker: CaesarLegionPrimeDecanus
-      min: 72000 # unrobust primes should be filtered by the 20 hour mark
+      min: 180000 # unrobust primes should be filtered by the 50 hour mark
   items:
     - N14ClothingOuterPowerArmorLegion
 
@@ -230,7 +233,7 @@
         - CaesarLegionExplorer
     - !type:CharacterPlaytimeRequirement
       tracker: CaesarLegionExplorer
-      min: 30000
+      min: 180000
   items:
     - MisfitsExplorerAssasin
 
@@ -248,3 +251,67 @@
       min: 30000
   items:
     - MisfitsExplorerAssasinHelmet
+
+- type: loadout
+  id: LoadoutNeckLegionForgemaster
+  category: Roles
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionAuxilia
+        - CaesarLegionForgemaster
+  items:
+    - M14ClothingNeckLegionForgemaster
+
+- type: loadout
+  id: LoadoutNeckLegionMedicus
+  category: Roles
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionAuxilia
+  items:
+    - M14ClothingNeckLegionMedicus
+
+- type: loadout
+  id: LoadoutNeckLegionTreasurer
+  category: Roles
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionAuxilia
+  items:
+    - M14ClothingNeckLegionTreasurer
+
+- type: loadout
+  id: LoadoutUniformJumpsuitLegionnaireOther
+  category: Roles
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionCenturion
+        # #Misfits Change: CaesarLegionRecruit removed — Legionnaire covers entry-level.
+        - CaesarLegionLegionnaireRecruit
+        - CaesarLegionLegionnaireWarrior
+        - CaesarLegionLegionnaireVeteran
+        - CaesarLegionAuxilia
+        - CaesarLegionVexillarius
+        - CaesarLegionVeteranDecanus
+        - CaesarLegionPrimeDecanus
+        - CaesarLegionDean
+        - CaesarLegionForgemaster
+        - CaesarLegionFrumentarii
+        - CaesarLegionHoundmaster
+        - CaesarLegionExplorer
+        - CaesarLegionOrator
+        - CaesarLegionLegate
+  items:
+    - N14ClothingUniformJumpsuitLegionnaireOther

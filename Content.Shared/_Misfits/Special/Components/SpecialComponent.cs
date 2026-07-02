@@ -9,6 +9,8 @@ namespace Content.Shared._Misfits.Special.Components;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class SpecialComponent : Component
 {
+    // Base values are persistent character stats. Use SharedSpecialSystem to
+    // mutate them so clamping, networking, and change events stay consistent.
     [DataField, AutoNetworkedField]
     public int BaseStrength = SpecialProfile.DefaultValue;
 
@@ -30,6 +32,8 @@ public sealed partial class SpecialComponent : Component
     [DataField, AutoNetworkedField]
     public int BaseLuck = SpecialProfile.DefaultValue;
 
+    // Temporary modifiers are the networked sum of active timed/source entries.
+    // Individual entries are tracked by SharedSpecialSystem.
     [DataField, AutoNetworkedField]
     public int TemporaryStrengthModifier;
 
@@ -51,9 +55,20 @@ public sealed partial class SpecialComponent : Component
     [DataField, AutoNetworkedField]
     public int TemporaryLuckModifier;
 
+    // These cache reversible side effects applied by stat-specific systems.
+    // They prevent repeated recalculation from stacking the same adjustment.
     [DataField]
     public float AppliedStaminaCritThresholdModifier;
 
     [DataField]
     public float AppliedHealthThresholdModifier;
+
+    [DataField]
+    public float AppliedHungerDecayMultiplier = 1f;
+
+    [DataField]
+    public float AppliedThirstDecayMultiplier = 1f;
+
+    [DataField]
+    public float AppliedStaminaRecoveryMultiplier = 1f;
 }

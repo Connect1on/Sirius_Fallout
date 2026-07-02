@@ -14,6 +14,7 @@
       species:
       - Human
       - Ghoul
+      - GhoulGlowing
     - !type:CharacterDepartmentTimeRequirement # #Misfits Tweak - re-enable timelock, 10h Townsfolk requirement
       department: Townsfolk
       min: 36000 # 10 hours
@@ -38,7 +39,7 @@
   id: TownSheriffGear
   equipment:
     jumpsuit: N14ClothingUniformJumpsuitTownGuardLight
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetTown
     back: N14ClothingBackpackSatchelMilitary
     shoes: N14ClothingBootsLeatherFilled
     id: N14IDBadgeTownSheriff

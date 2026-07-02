@@ -28,6 +28,12 @@ public sealed partial class LayingDownComponent : Component
     public float LyingSpeedModifier = 0.10f, // Corvax-Change
                  CrawlingUnderSpeedModifier = 0.5f;
 
+    // Misfits Add: speed modifier applied when crawling while in Critical mob state.
+    // This stacks with LyingSpeedModifier (e.g. 0.05 * 0.10 = 0.5% of base speed).
+    // Set to 1.0 to use normal lying speed instead.
+    [DataField, AutoNetworkedField]
+    public float CritCrawlSpeedModifier = 0.5f;
+
     [DataField, AutoNetworkedField]
     public bool AutoGetUp;
 

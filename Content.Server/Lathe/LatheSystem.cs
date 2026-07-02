@@ -221,13 +221,15 @@ namespace Content.Server.Lathe
             if (!Resolve(uid, ref component))
                 return false;
 
-            if (!CanProduce(uid, recipe, 1, component))
+            var materialUseMultiplier = component.MaterialUseMultiplier;
+
+            if (!CanProduce(uid, recipe, 1, materialUseMultiplier, component))
                 return false;
 
             foreach (var (mat, amount) in recipe.Materials)
             {
                 var adjustedAmount = recipe.ApplyMaterialDiscount
-                    ? (int) (-amount * component.MaterialUseMultiplier)
+                    ? -SharedLatheSystem.AdjustMaterial(amount, true, materialUseMultiplier)
                     : -amount;
 
                 if (!_materialStorage.TryConsumeAvailableMaterial(uid, mat, -adjustedAmount))
@@ -454,6 +456,12 @@ namespace Content.Server.Lathe
             if (!HasComp<MaterialComponent>(args.Entity) && !HasComp<BlueprintComponent>(args.Entity))
                 return;
 
+            // #Misfits Fix - Rebuild material whitelist when a blueprint is inserted so
+            // materials from blueprint recipes (e.g. Brass for ammo bench BPs) are accepted
+            // into the internal MaterialStorage pool instead of being silently rejected.
+            if (HasComp<BlueprintComponent>(args.Entity))
+                _materialStorage.UpdateMaterialWhitelist(uid);
+
             UpdateUserInterfaceState(uid, component);
         }
 
@@ -465,6 +473,11 @@ namespace Content.Server.Lathe
             // disappear from the available list.
             if (!HasComp<MaterialComponent>(args.Entity) && !HasComp<BlueprintComponent>(args.Entity))
                 return;
+
+            // #Misfits Fix - Rebuild material whitelist when a blueprint is removed so
+            // materials exclusive to that blueprint are no longer accepted into storage.
+            if (HasComp<BlueprintComponent>(args.Entity))
+                _materialStorage.UpdateMaterialWhitelist(uid);
 
             UpdateUserInterfaceState(uid, component);
         }
@@ -549,12 +562,13 @@ namespace Content.Server.Lathe
                         if (i == 0)
                         {
                             var hasRecipe = HasRecipe(uid, recipe, component);
-                            var canProduce = CanProduce(uid, recipe, 1, component);
+                            var materialUseMultiplier = component.MaterialUseMultiplier;
+                            var canProduce = CanProduce(uid, recipe, 1, materialUseMultiplier, component);
                             var missing = string.Join(", ",
                                 recipe.Materials.Select(m =>
                                 {
                                     var needed = recipe.ApplyMaterialDiscount
-                                        ? (int) MathF.Ceiling(m.Value * component.MaterialUseMultiplier)
+                                        ? SharedLatheSystem.AdjustMaterial(m.Value, true, materialUseMultiplier)
                                         : m.Value;
                                     var available = _materialStorage.GetAvailableMaterialAmount(uid, m.Key);
                                     var shortfall = Math.Max(0, needed - available);
@@ -601,12 +615,10 @@ namespace Content.Server.Lathe
                 return baseTime;
 
             var intelligence = _special.GetEffective(user.Value, SpecialStat.Intelligence, special);
-            if (intelligence >= SpecialProfile.Maximum)
-                return TimeSpan.Zero;
-
-            var multiplier = intelligence >= SpecialProfile.DefaultValue
-                ? 1f - (intelligence - SpecialProfile.DefaultValue) * 0.2f
-                : 1f + (SpecialProfile.DefaultValue - intelligence) * 0.15f;
+            var tuning = _special.GetTuning();
+            var delta = SharedSpecialSystem.GetCurvedEffectDelta(intelligence);
+            var modifier = -delta * tuning.IntelligenceLatheTimeMultiplierPerPoint;
+            var multiplier = 1f + modifier;
 
             return baseTime * MathF.Max(0.1f, multiplier);
         }

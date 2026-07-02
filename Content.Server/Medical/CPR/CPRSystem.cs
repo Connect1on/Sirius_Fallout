@@ -6,6 +6,7 @@ using Content.Server.Chat.Systems;
 using Content.Server.DoAfter;
 using Content.Server.Nutrition.EntitySystems;
 using Content.Server.Popups;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Atmos.Rotting;
 using Content.Shared.Chat;
 using Content.Shared.Damage;
@@ -37,6 +38,7 @@ public sealed class CPRSystem : EntitySystem
     [Dependency] private readonly RottingSystem _rottingSystem = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     public override void Initialize()
     {
@@ -84,7 +86,7 @@ public sealed class CPRSystem : EntitySystem
         _popupSystem.PopupEntity(Loc.GetString("cpr-start-second-person-patient", ("user", performer)), target, target);
 
         var doAfterArgs = new DoAfterArgs(
-            EntityManager, performer, performer.Comp.DoAfterDuration, new CPRDoAfterEvent(), performer, target,
+            EntityManager, performer, _special.GetIntelligenceMedicalActionDelay(performer, performer.Comp.DoAfterDuration), new CPRDoAfterEvent(), performer, target,
             performer)
         {
             BreakOnMove = true,

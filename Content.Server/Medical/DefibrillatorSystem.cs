@@ -7,6 +7,7 @@ using Content.Server.Ghost;
 using Content.Server.Popups;
 using Content.Server.PowerCell;
 using Content.Server._Misfits.Medical;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Chat;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
@@ -50,6 +51,7 @@ public sealed class DefibrillatorSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly UseDelaySystem _useDelay = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -139,7 +141,7 @@ public sealed class DefibrillatorSystem : EntitySystem
             return false;
 
         _audio.PlayPvs(component.ChargeSound, uid);
-        var started = _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.DoAfterDuration, new DefibrillatorZapDoAfterEvent(),
+        var started = _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, _special.GetIntelligenceMedicalActionDelay(user, component.DoAfterDuration), new DefibrillatorZapDoAfterEvent(),
             uid, target, uid)
             {
                 BlockDuplicate = true,

@@ -12,6 +12,7 @@
   # #Misfits Tweak - Weight 130: above Captain (120) so Major is top-ranking for war system purposes
   weight: 130
   name: job-name-ncr-major
+  overwatchCategory: OverwatchNcrOfficers
   description: job-description-ncr-major
   playTimeTracker: NCRMajor
   requirements:

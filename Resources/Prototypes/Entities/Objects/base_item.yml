@@ -5,6 +5,8 @@
   components:
   - type: Item
     size: Small
+  # #Misfits Add: allow players to engrave ordinary items and weapons once.
+  - type: Engravable
   - type: Clickable
   - type: InteractionOutline
   - type: MovedByPressure

@@ -6,6 +6,7 @@
   jobWhitelistBypassesRoleTimers: true # #Misfits Change
   weight: 90
   name: job-name-bos-west-scribe
+  overwatchCategory: OverwatchBosScribe
   description: job-description-bos-west-scribe
   playTimeTracker: BoSWestScribe
   requirements:

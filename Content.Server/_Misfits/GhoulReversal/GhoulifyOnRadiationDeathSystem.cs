@@ -1,12 +1,12 @@
 // #Misfits Change
-using Content.Server._Misfits.GhoulReversal;
+
+using Content.Server._Misfits.Ghoul;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
-using Content.Server.Ghoul;
 using Content.Server.Humanoid;
+using Content.Shared._N14.Radiation.Components;
 using Content.Shared.Chat;
 using Content.Shared.Damage;
-using Content.Shared.Damage.Systems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs;
@@ -14,6 +14,8 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Robust.Server.Player;
 using Robust.Shared.Enums;
+using Robust.Shared.Random;
+
 
 namespace Content.Server._Misfits.GhoulReversal;
 
@@ -31,6 +33,9 @@ public sealed class GhoulifyOnRadiationDeathSystem : EntitySystem
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly IRobustRandom _random = default!;
+    
+    private const int FallbackCritThreshold = 100;
 
     public override void Initialize()
     {
@@ -64,10 +69,20 @@ public sealed class GhoulifyOnRadiationDeathSystem : EntitySystem
 
         // --- Transform into Ghoul player species ---
         _humanoid.SetSpecies(uid, component.GhoulSpecies);
+        damageable.DamageModifierSets.Add("Ghoul");
+        
+        // if no phoenix or dermal armor, 20% chance for gamma shield 
+        if (!damageable.DamageModifierSets.Contains("N14PhoenixArmor") 
+            && !damageable.DamageModifierSets.Contains("N14DermalArmor") 
+            && _random.Prob(component.GammaShieldChance))
+        {
+            damageable.DamageModifierSets.Add("N14GammaShield");
+        }
+        EnsureComp<RadiationHealingComponent>(uid);
 
-        // #Misfits Fix - Revive into soft crit instead of full heal.
+        // Revive just outside of crit instead of full heal.
         // Heal all damage first to leave Dead state, then re-apply enough damage
-        // to land exactly at the Critical threshold (soft crit).
+        // to land just outside of crit.
         if (TryComp<MobThresholdsComponent>(uid, out var thresholds))
         {
             _mobThreshold.SetAllowRevives(uid, true, thresholds);
@@ -75,11 +90,12 @@ public sealed class GhoulifyOnRadiationDeathSystem : EntitySystem
 
             // Read the crit threshold; fall back to 100 if not defined
             if (!_mobThreshold.TryGetThresholdForState(uid, MobState.Critical, out var critThreshold, thresholds))
-                critThreshold = FixedPoint2.New(100);
+                critThreshold = FixedPoint2.New(FallbackCritThreshold);
 
-            // Apply blunt damage equal to crit threshold so the player wakes in soft crit
+            // Apply airloss damage equal to crit threshold minus a little breathing room
+            // Changed from blunt to prevent Bloody Mess characters from getting all their limbs gibbed
             var critDamage = new DamageSpecifier();
-            critDamage.DamageDict["Blunt"] = critThreshold.Value;
+            critDamage.DamageDict["Asphyxiation"] = critThreshold.Value - component.Recovery;
             _damageable.TryChangeDamage(uid, critDamage, ignoreResistances: true);
 
             _mobThreshold.SetAllowRevives(uid, false, thresholds);
@@ -89,15 +105,18 @@ public sealed class GhoulifyOnRadiationDeathSystem : EntitySystem
             // No thresholds component — heal and apply a default crit amount
             _damageable.SetAllDamage(uid, damageable, FixedPoint2.Zero);
             var critDamage = new DamageSpecifier();
-            critDamage.DamageDict["Blunt"] = FixedPoint2.New(100);
+            critDamage.DamageDict["Asphyxiation"] = FixedPoint2.New(FallbackCritThreshold);
             _damageable.TryChangeDamage(uid, critDamage, ignoreResistances: true);
         }
 
         // Stamp the time component so Promethine chemistry can gatekeep reversal
         EnsureComp<GhoulificationTimeComponent>(uid);
 
-        // Add feral tracker — further radiation can still push them to feral
-        EnsureComp<FeralGhoulifyComponent>(uid);
+        // 10% chance the victim is already going feral
+        if (_random.Prob(component.FeralChance))
+        {
+            EnsureComp<FeralGhoulifyOverTimeComponent>(uid); 
+        }
 
         // Private message to the transforming player only.
         if (_playerManager.TryGetSessionByEntity(uid, out var session)

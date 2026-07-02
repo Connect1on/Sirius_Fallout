@@ -13,6 +13,7 @@
       species:
       - Human
       - Ghoul
+      - GhoulGlowing
     #- !type:CharacterDepartmentTimeRequirement # TEMP REMOVED
     #  department: Townsfolk
     #  min: 18000 # 5 hours
@@ -35,7 +36,7 @@
   id: TownDoctorGear
   equipment:
     jumpsuit: N14ClothingUniformJumpsuitWastelandDoc
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetTown
     back: N14ClothingBackpackExplorer # Corvax-Change
     shoes: N14ClothingShoesBlack
     gloves: N14ClothingHandsGlovesNitrile

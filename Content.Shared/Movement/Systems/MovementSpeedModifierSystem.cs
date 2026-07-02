@@ -1,3 +1,5 @@
+using Content.Shared.Vehicles;
+using Content.Shared._NC.Mountable.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Movement.Components;
 using Content.Shared.Traits.Assorted.Components;
@@ -23,6 +25,16 @@ namespace Content.Shared.Movement.Systems
 
             var ev = new RefreshMovementSpeedModifiersEvent(isImmune);
             RaiseLocalEvent(uid, ev);
+
+            // #Misfits Add - Global 135% speed cap, excludes bikes (Motorbike) and brahmin (Mountable)
+            if (!HasComp<MotorbikeComponent>(uid) && !HasComp<MountableComponent>(uid))
+            {
+                const float maxMod = 1.35f;
+                if (ev.WalkSpeedModifier > maxMod)
+                    ev.ModifySpeed(maxMod / ev.WalkSpeedModifier, 1f, bypassImmunity: true);
+                if (ev.SprintSpeedModifier > maxMod)
+                    ev.ModifySpeed(1f, maxMod / ev.SprintSpeedModifier, bypassImmunity: true);
+            }
 
             if (MathHelper.CloseTo(ev.WalkSpeedModifier, move.WalkSpeedModifier) &&
                 MathHelper.CloseTo(ev.SprintSpeedModifier, move.SprintSpeedModifier))

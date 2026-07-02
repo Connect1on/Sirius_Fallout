@@ -54,31 +54,32 @@
       - !type:PlaySoundBehavior
         sound:
           path: /Audio/Machines/AI/borg_death.ogg
-    - trigger:
-        !type:DamageTrigger
-        damage: 1000
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          PowerCellHyper:
-            min: 1
-            max: 1
-          N14Scrap1:
-            min: 2
-            max: 4
-          N14ScrapElectronic1:
-            min: 1
-            max: 3
-      - !type:EmptyContainersBehaviour
-        containers:
-        - borg_module
-        - cell_slot
-        # borg_brain intentionally omitted — player mind is destroyed with the chassis
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+      # Commented out to remove player bot gibbing.
+#    - trigger:
+#        !type:DamageTrigger
+#        damage: 1000
+#      behaviors:
+#      - !type:PlaySoundBehavior
+#        sound:
+#          collection: MetalBreak
+#      - !type:SpawnEntitiesBehavior
+#        spawn:
+#          PowerCellHyper:
+#            min: 1
+#            max: 1
+#          N14Scrap1:
+#            min: 2
+#            max: 4
+#          N14ScrapElectronic1:
+#            min: 1
+#            max: 3
+#      - !type:EmptyContainersBehaviour
+#        containers:
+#        - borg_module
+#        - cell_slot
+#        # borg_brain intentionally omitted — player mind is destroyed with the chassis
+#      - !type:DoActsBehavior
+#        acts: [ "Destruction" ]
 
 - type: entity
   parent: N14BasePlayerSynthetic
@@ -138,6 +139,7 @@
       types:
         Heat: -0.5
         Shock: -0.5
+        Caustic: -0.5
   - type: RobotSelfRepairAnnouncer # #Misfits Change: hull integrity warnings + self-repair popups
   - type: Sanitized # #Misfits Change: makes mr handy not do damage in surgery
 
@@ -245,6 +247,7 @@
       types:
         Heat: -0.5
         Shock: -0.5
+        Caustic: -0.5
   - type: RobotSelfRepairAnnouncer # #Misfits Change: hull integrity warnings + self-repair popups
 
   - type: Tag # #Misfits Change: Protectron walks, so it should have footstep sounds
@@ -328,13 +331,10 @@
       types:
         Heat: -0.5
         Shock: -0.5
+        Caustic: -0.5
   - type: RobotSelfRepairAnnouncer # #Misfits Change: hull integrity warnings + self-repair popups
 
   - type: Gun # #Misfits Add: built-in plasma caster — right-click in combat mode to fire
-    minAngle: 9
-    maxAngle: 18
-    angleIncrease: 3
-    angleDecay: 4
     fireRate: 2
     soundGunshot:
       collection: N14PlasmaPistolGunshot
@@ -520,6 +520,134 @@
       ears: # #Misfits Fix - vault comms: wasteland + vault radio for vault-assigned robot
         - MisfitsClothingHeadsetRobotVault
 
+# Tribal Protectron
+- type: entity
+  parent: N14PlayerSyntheticProtectron
+  id: N14PlayerSyntheticProtectronTribal
+  name: protectron spirit-tender
+  suffix: player, synthetic
+  description: A RobCo Industries Protectron civil service robot, adopted and decorated by the local tribe. Years of rust have accumulated on its chassis, and rudimentary modifications by the tribals have led this unit to deviate severely from its original model.
+  components:
+  - type: HumanoidAppearance
+    species: RobotProtectronTribal
+  - type: Sprite
+    sprite: _Misfits/Mobs/Robots/protectron-tribal.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base", "movement"]
+    - state: on # lit indicator; BorgSystem overrides at runtime
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: on # 'on' RSI state is the lit variant used as the flashlight glow overlay
+      shader: unshaded
+      map: ["light"]
+      visible: false
+    noMovementLayers:
+      movement:
+        state: icon
+  - type: NpcFactionMember
+    factions:
+    - Wastelander
+    - Tribal
+  - type: LanguageKnowledge
+    speaks:
+    - N14Robot
+    - English
+    - Tribal
+    understands:
+    - N14Robot
+    - English
+    - Tribal
+  - type: ContainerFill
+    containers:
+      borg_brain:
+      - PositronicBrain
+      borg_module: # tribal modifications: mostly agricultural tools
+      - MisfitsBorgModuleTribalSpirit  # The spirit-tender "module"
+      - MisfitsBorgModuleTribalHarvest # Harvest module
+      - MisfitsBorgModuleTribalConstruction # Tribal settlement construction module
+      id: # pre-load the nav module into the id inventory slot
+      - MisfitsRobotNavCardRobCo # RobCo Industries Navigation? TODO maybe an alternative
+      ears: # wasteland radio?
+      - MisfitsClothingHeadsetWastelandScrap
+  - type: BorgHands # this one only gets one functioning hand, it is decrepit
+    handCount: 1
+
+- type: entity
+  parent: N14PlayerSyntheticProtectron
+  id: N14PlayerSyntheticSecuritronGray
+  name: securitron
+  suffix: player, synthetic
+  description: A securitron chassis adapted for a living mind. This gray model uses the same general-purpose synthetic loadout as a baseline protectron.
+  components:
+  - type: HumanoidAppearance
+    species: RobotSecuritron
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-gray.rsi
+    layers:
+    - state: icon
+      map: ["enum.DamageStateVisualLayers.Base", "movement"]
+    - state: icon
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: icon
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: walking
+    noMovementLayers:
+      movement:
+        state: icon
+
+- type: entity
+  parent: N14PlayerSyntheticSecuritronGray
+  id: N14PlayerSyntheticSecuritronBlue
+  name: securitron
+  suffix: player, synthetic, blue
+  components:
+  - type: HumanoidAppearance
+    species: RobotSecuritronBlue
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-blue.rsi
+
+- type: entity
+  parent: N14PlayerSyntheticSecuritronGray
+  id: N14PlayerSyntheticSecuritronBrown
+  name: securitron
+  suffix: player, synthetic, brown
+  components:
+  - type: HumanoidAppearance
+    species: RobotSecuritronBrown
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-brown.rsi
+
+- type: entity
+  parent: N14PlayerSyntheticSecuritronGray
+  id: N14PlayerSyntheticSecuritronRed
+  name: securitron
+  suffix: player, synthetic, red
+  components:
+  - type: HumanoidAppearance
+    species: RobotSecuritronRed
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-red.rsi
+
+- type: entity
+  parent: N14PlayerSyntheticSecuritronGray
+  id: N14PlayerSyntheticSecuritronYellow
+  name: securitron
+  suffix: player, synthetic, yellow
+  components:
+  - type: HumanoidAppearance
+    species: RobotSecuritronYellow
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-yellow.rsi
+
 - type: entity
   parent: N14BasePlayerSynthetic
   id: N14PlayerSyntheticAssaultron
@@ -614,6 +742,7 @@
       types:
         Heat: -0.5
         Shock: -0.5
+        Caustic: -0.5
   - type: RobotSelfRepairAnnouncer # #Misfits Change: hull integrity warnings + self-repair popups
 
   - type: Tag # #Misfits Change: Assaultron walks, so it should have footstep sounds
@@ -790,6 +919,7 @@
       types:
         Heat: -0.5
         Shock: -0.5
+        Caustic: -0.5
   - type: RobotSelfRepairAnnouncer
   - type: Tag
     tags:
@@ -964,6 +1094,7 @@
       types:
         Heat: -0.5
         Shock: -0.5
+        Caustic: -0.5
   - type: RobotSelfRepairAnnouncer
   - type: Tag
     tags:

@@ -1,4 +1,5 @@
 using Robust.Shared.Serialization;
+using Robust.Shared.Map;
 
 namespace Content.Shared.Pointing;
 
@@ -16,6 +17,23 @@ public sealed class PointingAttemptEvent : EntityEventArgs
     {
         Target = target;
     }
+}
+
+/// <summary>
+/// [Changed by MisfitsCrew/Operator] Allows remote-vision systems to provide the visual
+/// point source and rotation behavior used by the server-side pointing action.
+/// </summary>
+[ByRefEvent]
+public record struct GetPointingSourceEvent(EntityUid Pointer, EntityCoordinates Coordinates, EntityUid Pointed)
+{
+    public readonly EntityUid Pointer = Pointer;
+    public readonly EntityCoordinates Coordinates = Coordinates;
+    public readonly EntityUid Pointed = Pointed;
+
+    public EntityUid Source = Pointer;
+    public bool RotateSource = true;
+    public bool Handled;
+    public bool Cancelled;
 }
 
 /// <summary>

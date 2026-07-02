@@ -7,6 +7,7 @@
   canBeAntag: false
   weight: 41
   name: job-name-ncr-engineer
+  overwatchCategory: OverwatchNcrSupport
   description: job-description-ncr-engineer
   playTimeTracker: NCREngineer
   requirements:
@@ -34,13 +35,14 @@
 - type: startingGear
   id: NCREngineerGear
   equipment:
-    head: N14ClothingHeadHatNCRHelmetMetalDesert # Corvax-Change
+    head: N14ClothingHeadHatNCRHelmetNoCover # Corvax-Change
     back: N14ClothingBackpackNCR # Corvax-Change
     jumpsuit: N14ClothingUniformNCRDesert # Corvax-Change
-    outerClothing: N14ClothingOuterNCRPouchedVestDesert # Forge-Change
+    outerClothing: N14ClothingOuterNCREngineerVest # Forge-Change #Misfits Add - Added a sidegrade engineer vest to give the role some unique flair.
     shoes: N14ClothingBootsLeatherFilled
     ears: N14ClothingHeadsetNCR # #Misfits Add - NCR radio earpiece
     hands: N14ClothingHandsGlovesCombat
+    eyes: N14ClothingEyesGlassesWelding
 
     id: N14IDNCRDogtagEngineer
     pocket1: NCRengineerloadoutkits

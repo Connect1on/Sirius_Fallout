@@ -7,6 +7,7 @@
   canBeAntag: false
   weight: 42
   name: job-name-ncr-medic
+  overwatchCategory: OverwatchNcrMedical
   description: job-description-ncr-medic
   playTimeTracker: NCRMedic
   requirements:
@@ -36,12 +37,12 @@
 - type: startingGear
   id: NCRMedicGear
   equipment:
-    jumpsuit: N14ClothingUniformNCRDesert # Corvax-Change
-    outerClothing: N14ClothingOuterNCRPouchedVestDesert # Forge-Change
+    jumpsuit: N14ClothingUniformNCRMedicVariant # Corvax-Change
+    #outerClothing: N14ClothingOuterNCRPouchedVestDesert # Forge-Change
     back: N14ClothingBackpackNCR # Corvax-Change
     shoes: N14ClothingBootsLeatherFilled
     ears: N14ClothingHeadsetNCR # #Misfits Add - NCR radio earpiece
-
+    head: N14ClothingHeadHatNCRBeretMedic #Misfits Add - Medics can spawn with a beret, since helmets are given in loadouts.
     belt: ClothingBeltNCR
     id: N14IDNCRDogtagDoctor
     pocket2: NCRmedicloadoutkits

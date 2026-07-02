@@ -286,6 +286,12 @@
 
 - type: Tag
   id: N14Cartridge2mmEC
+  
+- type: Tag
+  id: N14CartridgeOver308Rifle
+
+- type: Tag
+  id: N14MagazineOver308RifleSnipers
 
 #MARK: Ammo tags(Magazines).
 - type: Tag

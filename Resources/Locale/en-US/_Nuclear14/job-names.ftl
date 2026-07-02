@@ -10,18 +10,18 @@ job-description-bos-mid-scribe = Coordinate research, catalog technology, and ad
 job-name-bos-mid-squire = Brotherhood Squire
 job-description-bos-mid-squire = Train under the Brotherhood's veterans and prove you are ready for higher duties.
 
-#Misfits Change /Comment-out/: Washington BoS job names removed — will create new prototypes.
+# Misfits Change /Comment-out/: Washington BoS job names removed — will create new prototypes.
 ## Washington Brotherhood
-#job-name-bos-washington-commander = Brotherhood Head Knight
-#job-description-bos-washington-commander = Oversee the Brotherhood's knightly orders, logistics, and battlefield readiness.
-#job-name-bos-washington-initiate = Brotherhood Initiate
-#job-description-bos-washington-initiate = Learn the Brotherhood's code, follow orders, and earn your place in the chapter.
-#job-name-bos-washington-knight = Brotherhood Knight
-#job-description-bos-washington-knight = Protect the chapter, escort missions, and recover technology in the field.
-#job-name-bos-washington-paladin = Brotherhood Paladin
-#job-description-bos-washington-paladin = Fight as the Brotherhood's frontline heavy infantry and defend the chapter's interests.
-#job-name-bos-washington-scribe = Brotherhood Scribe
-#job-description-bos-washington-scribe = Support the chapter with research, medicine, and technical expertise.
+# job-name-bos-washington-commander = Brotherhood Head Knight
+# job-description-bos-washington-commander = Oversee the Brotherhood's knightly orders, logistics, and battlefield readiness.
+# job-name-bos-washington-initiate = Brotherhood Initiate
+# job-description-bos-washington-initiate = Learn the Brotherhood's code, follow orders, and earn your place in the chapter.
+# job-name-bos-washington-knight = Brotherhood Knight
+# job-description-bos-washington-knight = Protect the chapter, escort missions, and recover technology in the field.
+# job-name-bos-washington-paladin = Brotherhood Paladin
+# job-description-bos-washington-paladin = Fight as the Brotherhood's frontline heavy infantry and defend the chapter's interests.
+# job-name-bos-washington-scribe = Brotherhood Scribe
+# job-description-bos-washington-scribe = Support the chapter with research, medicine, and technical expertise.
 
 # Caravan
 job-name-caravan-leader = Caravan Leader
@@ -91,16 +91,16 @@ job-description-ranger-veteran-n14 = Lead Ranger operations in the region, choos
 job-name-ranger-veteran = Veteran Ranger
 job-description-ranger-veteran = Lead Ranger operations in the region, choose your methods, and answer only to your mission and your code.
 
-# #Misfits Change - rename tribe role display names to Yuma variants without changing job IDs.
+# #Misfits Change - rename tribe role display names to Willowers variants without changing job IDs.
 # Tribal
-job-name-tribal = Yuma Tribal
-job-description-tribal = Maintain the Yuma Tribe's way of life in the wasteland at all costs. Security, crafting, homelife, you do it all.
-job-name-tribal-elder = Yuma Chieftan
-job-description-tribal-elder = Lead the Yuma Tribe through good times and bad times and maintain your beliefs.
-job-name-tribal-farmer = Yuma Farmer
-job-description-tribal-farmer = Produce food and goods for the Yuma Tribe to sustain your living.
-job-name-tribal-shaman = Yuma Shaman
-job-description-tribal-shaman = Produce medicines and compounds for the Yuma Tribe, as is tradition.
+job-name-tribal = Willowers Tribal
+job-description-tribal = Maintain the Willowers' way of life in the wasteland at all costs. Security, crafting, homelife, you do it all.
+job-name-tribal-elder = Willowers Chieftan
+job-description-tribal-elder = Lead the Willowers through good times and bad times and maintain your beliefs.
+job-name-tribal-farmer = Willowers Farmer
+job-description-tribal-farmer = Produce food and goods for the Willowers to sustain your living.
+job-name-tribal-shaman = Willowers Shaman
+job-description-tribal-shaman = Produce medicines and compounds for the Willowers, as is tradition.
 
 # Vault
 job-name-overseer = Vault Overseer

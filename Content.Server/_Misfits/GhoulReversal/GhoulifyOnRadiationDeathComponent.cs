@@ -23,4 +23,25 @@ public sealed partial class GhoulifyOnRadiationDeathComponent : Component
     /// </summary>
     [DataField]
     public string GhoulSpecies = "Ghoul";
+    
+    /// <summary>
+    /// The amount of damage reimbursed from the crit threshold as a window of safety
+    /// to get away from the radiation source that ghoulfiied the player in the
+    /// first place 
+    /// </summary>
+    [DataField]
+    public float Recovery = 30f;
+
+    /// <summary>
+    /// The chance to obtain GammaShield on ghoulification.
+    /// (This is ignored if the entity has DermalArmor or PhoenixArmor).
+    /// </summary>
+    [DataField]
+    public float GammaShieldChance = 0.2f;
+
+    /// <summary>
+    /// The chance to obtain the FeralGhoulifyOverTimeComponent on ghoulification.
+    /// </summary>
+    [DataField]
+    public float FeralChance = 0.1f;
 }

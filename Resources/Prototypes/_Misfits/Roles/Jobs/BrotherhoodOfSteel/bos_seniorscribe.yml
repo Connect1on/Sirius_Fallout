@@ -7,6 +7,7 @@
   overrideConsoleVisibility: true
   canBeAntag: false
   name: job-name-bos-mid-scribe
+  overwatchCategory: OverwatchBosScribe
   description: job-description-bos-mid-scribe
   playTimeTracker: BoSMidScribe
   requirements:

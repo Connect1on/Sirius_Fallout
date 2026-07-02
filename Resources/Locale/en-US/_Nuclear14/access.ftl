@@ -59,7 +59,7 @@ id-card-access-level-legion-houndmaster = Legion Houndmaster Access
 id-card-access-level-legion-frumentarii = Legion Frumentarii Access
 id-card-access-level-legion-vexillarius = Legion Vexillarius Access
 id-card-access-level-legion-explorer = Legion Explorer Access
-id-card-access-level-legion-orator = Legion Orator Access
+id-card-access-level-legion-optio = Legion Optio Access
 id-card-access-level-legion-recruit-legionary = Legion Recruit Legionary Access
 id-card-access-level-legion-prime-legionary = Legion Prime Legionary Access
 id-card-access-level-legion-veteran-legionary = Legion Veteran Legionary Access
@@ -68,9 +68,9 @@ id-card-access-level-legion-veteran-decanus = Legion Veteran Decanus Access
 id-card-access-level-legion-centurion = Legion Centurion Access
 id-card-access-level-legion-legate = Legion Legate Access
 
-#Misfits Change /Comment-out/: Washington BoS access levels removed — will create new prototypes.
-#id-card-access-level-washington-commander = WBoS Office
-#id-card-access-level-washington-paladin = WBoS Suits
-#id-card-access-level-washington-knight = WBoS Armory
-#id-card-access-level-washington-scribe = WBoS Labs
-#id-card-access-level-washington-initiate = WBoS Gates
+# Misfits Change /Comment-out/: Washington BoS access levels removed — will create new prototypes.
+# id-card-access-level-washington-commander = WBoS Office
+# id-card-access-level-washington-paladin = WBoS Suits
+# id-card-access-level-washington-knight = WBoS Armory
+# id-card-access-level-washington-scribe = WBoS Labs
+# id-card-access-level-washington-initiate = WBoS Gates

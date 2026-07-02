@@ -87,6 +87,17 @@
   - type: Appearance
 
 - type: entity
+  parent: ClothingBeltNCR
+  id: ClothingBeltNCRShotgunner
+  name: NCR shotgun belt
+  description: An NCR belt variant set up for shotgun shells and close-range kit.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Belt/ncrshotgunner.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Belt/ncrshotgunner.rsi
+
+- type: entity
   parent: N14ClothingBeltStorageBase
   id: ClothingBeltNCRPouches
   name: NCR pouches bandolier

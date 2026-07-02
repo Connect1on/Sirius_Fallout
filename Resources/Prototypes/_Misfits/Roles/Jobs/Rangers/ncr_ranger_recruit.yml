@@ -7,6 +7,7 @@
   alwaysUseSpawner: true
   jobWhitelistBypassesRoleTimers: true
   name: job-name-ncr-ranger-recruit
+  overwatchCategory: OverwatchNcrRangers
   description: job-description-ncr-ranger-recruit
   playTimeTracker: NCRRangerRecruit
   weight: 4 # #Misfits Tweak - bottom of Rangers ladder
@@ -27,22 +28,9 @@
     - !type:CharacterOverallTimeRequirement # #Misfits Fix - entry-level ranger uses overall playtime, not Rangers dept time
       min: 43200 # 12 hours
     - !type:CharacterSpeciesRequirement # #Misfits Change - robots, super mutants, and glowing ghouls cannot be Rangers
-      inverted: true
       species:
-      - RobotMrHandy
-      - RobotProtectron
-      - RobotProtectronPolice
-      - RobotProtectronBuilder
-      - RobotProtectronFire
-      - RobotMrGutsy
-      - RobotAssaultron
-      - RobotAssaultronTesla
-      - RobotSentryBot
-      - RobotSentryBotLaser
-      - RobotRobobrain
-      - RobotRobobrainLaser
-      - SuperMutant
-      - GhoulGlowing # #Misfits Tweak - glowing ghouls not allowed in NCR Rangers
+      - Human
+      - Ghoul
 
 - type: startingGear
   id: NCRRangerRecruitGear
@@ -55,7 +43,7 @@
     shoes: N14ClothingBootsLeather
     belt: ClothingBeltRevolverdesertfilled
     pocket1: MagazineBox45-70
-    outerClothing: N14ClothingOuterNCRCombatArmor
+    outerClothing: N14ClothingOuterNCRFlakVestOpen # Misfits Change - recruit starts with a combat armor side grade flak vest.
     id: N14IDBadgeNCRDesertRangerRecruit
   innerClothingSkirt: N14ClothingUniformRangerV1
   satchel: N14ClothingBackpackSatchelMilitaryFilled

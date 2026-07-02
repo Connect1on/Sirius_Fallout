@@ -4,6 +4,8 @@ using Content.Server.Stack;
 using Content.Shared.Destructible.Thresholds;
 using Content.Shared.Prototypes;
 using Content.Shared.Stacks;
+using Content.Shared.RCD.Systems;
+using Content.Shared.Tag;
 using Robust.Server.GameObjects;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -31,6 +33,9 @@ namespace Content.Server.Destructible.Thresholds.Behaviors
 
         public void Execute(EntityUid owner, DestructibleSystem system, EntityUid? cause = null)
         {
+            if (system.EntityManager.System<TagSystem>().HasTag(owner, RCDSystem.RcdConstructedTag))
+                return;
+
             var tSys = system.EntityManager.System<TransformSystem>();
             var position = tSys.GetMapCoordinates(owner);
 
@@ -44,34 +49,43 @@ namespace Content.Server.Destructible.Thresholds.Behaviors
 
             foreach (var (entityId, minMax) in Spawn)
             {
+                var totalCount = 0;
+
                 for (var execution = 0; execution < executions; execution++)
                 {
-                    var count = minMax.Min >= minMax.Max
+                    totalCount += minMax.Min >= minMax.Max
                         ? minMax.Min
                         : system.Random.Next(minMax.Min, minMax.Max + 1);
+                }
 
-                    if (count == 0)
-                        continue;
+                if (totalCount == 0)
+                    continue;
 
-                    if (EntityPrototypeHelpers.HasComponent<StackComponent>(entityId, system.PrototypeManager, system.ComponentFactory))
+                if (EntityPrototypeHelpers.HasComponent<StackComponent>(entityId, system.PrototypeManager, system.ComponentFactory))
+                {
+                    while (totalCount > 0)
                     {
                         var spawned = SpawnInContainer
                             ? system.EntityManager.SpawnNextToOrDrop(entityId, owner)
                             : system.EntityManager.SpawnEntity(entityId, position.Offset(getRandomVector()));
-                        system.StackSystem.SetCount(spawned, count);
+
+                        var spawnedStack = system.EntityManager.GetComponent<StackComponent>(spawned);
+                        var count = Math.Min(totalCount, system.StackSystem.GetMaxCount(spawnedStack));
+                        system.StackSystem.SetCount(spawned, count, spawnedStack);
+                        totalCount -= count;
 
                         TransferForensics(spawned, system, owner);
                     }
-                    else
+                }
+                else
+                {
+                    for (var i = 0; i < totalCount; i++)
                     {
-                        for (var i = 0; i < count; i++)
-                        {
-                            var spawned = SpawnInContainer
-                                ? system.EntityManager.SpawnNextToOrDrop(entityId, owner)
-                                : system.EntityManager.SpawnEntity(entityId, position.Offset(getRandomVector()));
+                        var spawned = SpawnInContainer
+                            ? system.EntityManager.SpawnNextToOrDrop(entityId, owner)
+                            : system.EntityManager.SpawnEntity(entityId, position.Offset(getRandomVector()));
 
-                            TransferForensics(spawned, system, owner);
-                        }
+                        TransferForensics(spawned, system, owner);
                     }
                 }
             }

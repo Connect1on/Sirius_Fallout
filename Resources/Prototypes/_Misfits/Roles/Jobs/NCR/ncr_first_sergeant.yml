@@ -11,6 +11,7 @@
   overrideConsoleVisibility: false
   canBeAntag: false
   name: job-name-ncr-first-sergeant
+  overwatchCategory: OverwatchNcrNcos
   description: job-description-ncr-first-sergeant
   playTimeTracker: NCRFirstSergeant
   requirements:

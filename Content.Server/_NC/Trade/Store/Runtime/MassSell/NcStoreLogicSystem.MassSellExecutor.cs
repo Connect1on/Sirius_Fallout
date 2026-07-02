@@ -15,7 +15,7 @@ public sealed partial class NcStoreLogicSystem
         var cached = _inventory.GetOrBuildDeepItemsCacheCompacted(container);
         items.AddRange(cached);
 
-        var plan = ComputeMassSellPlanFromCachedItems(store, container, items);
+        var plan = ComputeMassSellPlanFromCachedItems(store, container, items, user);
         if (plan.Steps.Count == 0 || plan.IncomeByCurrency.Count == 0)
             return false;
 

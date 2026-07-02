@@ -22,6 +22,8 @@
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
+  # [Changed by MisfitsCrew/Operator] Enables Station AI to track selected ZAX units and issue command actions.
+  - type: StationAiNpcCommander
   - type: ShowElectrocutionHUD
   - type: ActionGrant
     actions:
@@ -29,6 +31,14 @@
     - ActionShowJobIcons
     - ActionSurvCameraLights
     - ActionAIViewLaws
+    # [Changed by MisfitsCrew/Operator] Grants the Station AI ZAX unit selection, movement, engagement, formation, and hold commands.
+    - ActionStationAiSelectNpc
+    - ActionStationAiClearNpcSelection
+    - ActionStationAiMoveNpcs
+    - ActionStationAiFormationMoveNpcs
+    - ActionStationAiMoveAndAttackNpcs
+    - ActionStationAiEngageNpcs
+    - ActionStationAiHoldNpcs
   - type: UserInterface
     interfaces:
       enum.RadarConsoleUiKey.Key:
@@ -327,8 +337,8 @@
 
 - type: entity
   id: PlayerStationAiEmpty
-  name: AI Core
-  description: The latest in Artificial Intelligences.
+  name: Z.A.X. Core
+  description: A pre-war Z.A.X. mainframe adapted as the station's central artificial intelligence core.
   parent:
   - BaseStructure
   - AiHolder
@@ -355,12 +365,10 @@
   - type: StationAiVision
   - type: InteractionOutline
   - type: Sprite
-    sprite: Mobs/Silicon/station_ai.rsi
+    sprite: _Misfits/Mobs/Silicon/zax_core.rsi
     layers:
-    - state: base
     - state: ai_empty
-      map: ["unshaded"]
-      shader: unshaded
+      map: ["core"]
   - type: Appearance
   - type: InteractionPopup
     interactSuccessString: petting-success-station-ai
@@ -371,7 +379,7 @@
   - type: GenericVisualizer
     visuals:
       enum.StationAiVisualState.Key:
-        unshaded:
+        core:
           Empty: { state: ai_empty }
           Occupied: { state: ai }
   - type: LanguageKnowledge
@@ -418,11 +426,10 @@
     containerId: station_ai_mind_slot
     job: StationAi
   - type: Sprite
-    sprite: Mobs/Silicon/station_ai.rsi
+    sprite: _Misfits/Mobs/Silicon/zax_core.rsi
     layers:
-    - state: base
     - state: ai
-      shader: unshaded
+      map: ["core"]
 
 # The actual brain inside the core
 - type: entity
@@ -492,6 +499,9 @@
   suffix: DO NOT MAP
   components:
   - type: NoFTL
+  # [Changed by MisfitsCrew/Operator] Lets AI eye-controlled interactions use
+  # Station AI camera range overrides instead of normal mob reach checks.
+  - type: StationAiOverlay
   - type: WarpPoint
     follow: true
   - type: Eye
@@ -529,6 +539,9 @@
   categories: [ HideSpawnMenu ]
   suffix: DO NOT MAP
   components:
+  # [Changed by MisfitsCrew/Operator] Lets local AI hologram interactions use
+  # Station AI camera range overrides instead of normal mob reach checks.
+  - type: StationAiOverlay
   - type: Transform
     anchored: true
   - type: WarpPoint

@@ -12,6 +12,7 @@
   overrideConsoleVisibility: false
   canBeAntag: false
   name: job-name-ncr-heavy-trooper
+  overwatchCategory: OverwatchNcrEnlisted
   description: job-description-ncr-heavy-trooper
   playTimeTracker: NCRHeavyTrooper
   requirements:

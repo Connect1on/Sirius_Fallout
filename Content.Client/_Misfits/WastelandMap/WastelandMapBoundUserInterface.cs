@@ -1,7 +1,11 @@
 // #Misfits Change - Wasteland Map Viewer BUI
+using Content.Client.Eye;
+using Content.Shared._Misfits.Overwatch;
 using Content.Shared._Misfits.WastelandMap;
 using JetBrains.Annotations;
+using Robust.Client.GameObjects;
 using Robust.Client.UserInterface;
+using Robust.Shared.Graphics;
 using Robust.Shared.Maths;
 using Robust.Shared.Utility;
 
@@ -10,10 +14,13 @@ namespace Content.Client._Misfits.WastelandMap;
 [UsedImplicitly]
 public sealed class WastelandMapBoundUserInterface : BoundUserInterface
 {
+    private readonly EyeLerpingSystem _eyeLerpingSystem;
     private WastelandMapWindow? _window;
+    private EntityUid? _currentOverwatchTarget;
 
     public WastelandMapBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
     {
+        _eyeLerpingSystem = EntMan.System<EyeLerpingSystem>();
     }
 
     protected override void Open()
@@ -23,6 +30,8 @@ public sealed class WastelandMapBoundUserInterface : BoundUserInterface
         _window.OnAddAnnotation += annotation => SendMessage(new WastelandMapAddAnnotationMessage(annotation));
         _window.OnRemoveAnnotation += index => SendMessage(new WastelandMapRemoveAnnotationMessage(index));
         _window.OnClearAnnotations += () => SendMessage(new WastelandMapClearAnnotationsMessage());
+        _window.OnOverwatchAction += (type, targetNumber) =>
+            SendMessage(new OverwatchConsoleMessage(type, targetNumber));
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)
@@ -35,6 +44,46 @@ public sealed class WastelandMapBoundUserInterface : BoundUserInterface
         var bounds = new Box2(mapState.BoundsLeft, mapState.BoundsBottom, mapState.BoundsRight, mapState.BoundsTop);
         var texturePath = new ResPath(mapState.MapTexturePath);
         _window?.SetMap(mapState.MapTitle, texturePath, bounds, mapState.TrackedBlips, mapState.SharedAnnotations, mapState.CompactHud);
+        _window?.UpdateOverwatch(mapState.Overwatch, ResolveOverwatchEye(mapState.Overwatch));
+    }
+
+    private IEye? ResolveOverwatchEye(OverwatchConsoleState? state)
+    {
+        var target = EntMan.GetEntity(state?.WatchedEntity);
+        if (target == null)
+        {
+            ClearOverwatchTarget();
+            return null;
+        }
+
+        if (_currentOverwatchTarget == null)
+        {
+            _eyeLerpingSystem.AddEye(target.Value);
+            _currentOverwatchTarget = target;
+        }
+        else if (_currentOverwatchTarget != target)
+        {
+            _eyeLerpingSystem.RemoveEye(_currentOverwatchTarget.Value);
+            _eyeLerpingSystem.AddEye(target.Value);
+            _currentOverwatchTarget = target;
+        }
+
+        return EntMan.TryGetComponent<EyeComponent>(target, out var eye) ? eye.Eye : null;
+    }
+
+    private void ClearOverwatchTarget()
+    {
+        if (_currentOverwatchTarget == null)
+            return;
+
+        _eyeLerpingSystem.RemoveEye(_currentOverwatchTarget.Value);
+        _currentOverwatchTarget = null;
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        ClearOverwatchTarget();
+        base.Dispose(disposing);
     }
 }
 

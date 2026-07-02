@@ -20,6 +20,10 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Content.Server.Ghoul;
+using Content.Server._Misfits.Ghoul;
+using Content.Shared._N14.Radiation.Components;
+using Content.Shared.Damage;
+
 
 namespace Content.Server._Misfits.EntityEffects.Effects.GhoulReversal;
 
@@ -43,11 +47,12 @@ public sealed partial class GhoulReversalEffect : EntityEffect
     [DataField]
     public string TargetSpecies = "Human";
 
+    // Do we ever have a need for this? We don't persist ghoulification across rounds...
     /// <summary>
     /// Whether to update the character's database profile so the reversal persists across rounds.
     /// </summary>
     [DataField]
-    public bool UpdateDatabaseProfile = true;
+    public bool UpdateDatabaseProfile = false;
 
     protected override string? ReagentEffectGuidebookText(IPrototypeManager prototype, IEntitySystemManager entSys)
         => Loc.GetString("reagent-effect-guidebook-ghoul-reversal", ("chance", Probability));
@@ -97,13 +102,21 @@ public sealed partial class GhoulReversalEffect : EntityEffect
         // Validate target species
         if (!IoCManager.Resolve<IPrototypeManager>().TryIndex<SpeciesPrototype>(TargetSpecies, out _))
             return;
-
+        
+        // Revert species and damage modifier sets
         var humanoidSys = entityManager.EntitySysManager.GetEntitySystem<HumanoidAppearanceSystem>();
         humanoidSys.SetSpecies(uid, TargetSpecies);
+        entityManager.TryGetComponent<DamageableComponent>(uid, out var damageable);
+        damageable?.DamageModifierSets.Remove("Ghoul");
+        damageable?.DamageModifierSets.Remove("N14GammaShield");
 
         // Remove the feral tracker so they don't go feral again
         entityManager.RemoveComponentDeferred<FeralGhoulifyComponent>(uid);
+        entityManager.RemoveComponentDeferred<FeralGhoulifyOverTimeComponent>(uid);
         entityManager.RemoveComponent<GhoulificationTimeComponent>(uid);
+        
+        // Remove radiation healing
+        entityManager.RemoveComponent<RadiationHealingComponent>(uid);
 
         // Private transformation message to the target only.
         if (playerManager.TryGetSessionByEntity(uid, out var session)
@@ -125,6 +138,7 @@ public sealed partial class GhoulReversalEffect : EntityEffect
             UpdateProfileAsync(uid, entityManager);
     }
 
+    // Note for future contributors: We do not use this currently
     private async void UpdateProfileAsync(EntityUid uid, IEntityManager entityManager)
     {
         try

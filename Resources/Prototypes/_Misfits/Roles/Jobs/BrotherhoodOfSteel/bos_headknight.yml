@@ -61,6 +61,7 @@
   overrideConsoleVisibility: false
   canBeAntag: false
   name: job-name-bos-headknight
+  overwatchCategory: OverwatchBosKnight
   description: job-description-bos-headknight
   playTimeTracker: BoSHeadKnight
   requirements:
@@ -86,6 +87,12 @@
       - type: NpcFactionMember
         factions:
           - BrotherhoodOfSteel
+      - type: LanguageKnowledge # #Misfits Add: Heads understand Brotherhood binary code by default.
+        speaks:
+        - English
+        understands:
+        - English
+        - N14BrotherBeep
 
 - type: startingGear
   id: BoSHeadKnightGear

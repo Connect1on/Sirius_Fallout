@@ -1,0 +1,64 @@
+- type: job
+  id: CaesarLegionAcolyteOfMars
+  setPreference: true
+  hideWithoutJobWhitelist: false  # visible in all menus regardless of whitelist
+  overrideConsoleVisibility: true # force display in crew manifest + job picker
+  hideIfPlaytimeRequirementsNotMet: false
+  jobWhitelistBypassesRoleTimers: true
+  weight: 160  # Underneath POM
+  name: job-name-caesar-legion-Acolyte-of-mars
+  description: job-description-caesar-legion-Acolyte-of-mars
+  playTimeTracker: CaesarLegionAcolyteOfMars
+  requirements:
+    - !type:CharacterDepartmentTimeRequirement
+      department: CaesarLegion
+      min: 28800 # 8 hours
+    - !type:CharacterSpeciesRequirement
+      species:
+        - Human
+    - !type:CharacterSexRequirement
+      sex: Female
+    - !type:CharacterGenderRequirement
+      gender: Female
+  startingGear: CaesarLegionAcolyteOfMarsGear
+  alwaysUseSpawner: true
+  icon: "JobIconlegionerRecruit"
+  supervisors: job-name-caesar-legion-other
+  canBeAntag: false
+  accessGroups:
+    - CaesarLegionAcolyteOfMars
+  special:
+    - !type:AddComponentSpecial
+      components:
+        - type: NpcFactionMember
+          factions:
+            - CaesarLegion
+        - type: ReplacementAccent
+          accent: latin
+        - type: CPRTraining # Taught by the POM
+    - !type:AddTraitSpecial
+      traits: [ LanguageLatin ]
+
+- type: startingGear
+  id: CaesarLegionAcolyteOfMarsGear
+  equipment:
+    jumpsuit: N14ClothingUniformJumpsuitLegionnaire
+    ears: N14ClothingHeadsetLegion
+    mask: N14ClothingMaskBrownMask
+    back: N14ClothingBackpackMilitary
+    shoes: N14ClothingBootsLeather
+    head: N14ClothingHeadHatTribalOutcastHood
+    gloves: N14ClothingHandsGlovesTribal
+    outerClothing: N14ClothingOuterLegionnaireRecruitArmor
+    id: N14IDLegionaryBadge
+  innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther
+  storage:
+    back:
+    - N14BoxPlasticFilledMilitaryLegion
+    - N14HealingPowder
+    - N14HealingPowder
+    - N14HealingPoultice
+    - N14HealingPoultice
+
+- type: playTimeTracker
+  id: CaesarLegionAcolyteOfMars

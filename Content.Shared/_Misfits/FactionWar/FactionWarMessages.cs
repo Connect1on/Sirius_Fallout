@@ -48,12 +48,16 @@ public enum WarPhase : byte
 
 /// <summary>
 /// A single active player-vs-player war, transmitted as part of <see cref="FactionWarStateUpdatedEvent"/>.
+/// Wars are character-bound: participants are tracked by their character entity, not account.
 /// </summary>
 [Serializable, NetSerializable]
 public sealed class PlayerWarEntry
 {
-    /// <summary>NetUserId of the player who declared the war.</summary>
+    /// <summary>NetUserId of the account that declared the war (kept for session lookup).</summary>
     public NetUserId DeclaredByPlayer;
+
+    /// <summary>Character entity of the declarer at time of declaration (character-bound).</summary>
+    public NetEntity DeclaredByEntity;
 
     /// <summary>Character name of declarer (at time of declaration).</summary>
     public string DeclaredByCharacterName = string.Empty;
@@ -61,8 +65,11 @@ public sealed class PlayerWarEntry
     /// <summary>Job name of declarer (at time of declaration).</summary>
     public string DeclaredByJobName = string.Empty;
 
-    /// <summary>NetUserId of the player war was declared against.</summary>
+    /// <summary>NetUserId of the account war was declared against (kept for session lookup).</summary>
     public NetUserId DeclaredAgainstPlayer;
+
+    /// <summary>Character entity of the target at time of declaration (character-bound).</summary>
+    public NetEntity DeclaredAgainstEntity;
 
     /// <summary>Character name of target player (at time of declaration).</summary>
     public string DeclaredAgainstCharacterName = string.Empty;
@@ -73,28 +80,33 @@ public sealed class PlayerWarEntry
     /// <summary>Custom name for the target player's side.</summary>
     public string SideName2 = string.Empty;
 
+    /// <summary>Auto-enlist faction ID for side 1 (null if declarer has no auto-enlist faction).</summary>
+    public string? Side1FactionId;
+
+    /// <summary>Auto-enlist faction ID for side 2 (null if target has no auto-enlist faction).</summary>
+    public string? Side2FactionId;
+
     /// <summary>Player-supplied reason for the war declaration.</summary>
     public string Reason = string.Empty;
 
     /// <summary>Current phase of this war (Pending during 5-min prep, Active after).</summary>
     public WarPhase Phase = WarPhase.Pending;
 
-    /// <summary>All participants in this war with their chosen sides (1 or 2).</summary>
-    public Dictionary<NetUserId, byte> Participants = new();
+    /// <summary>All participants in this war with their chosen sides (1 or 2), keyed by character entity.</summary>
+    public Dictionary<NetEntity, byte> Participants = new();
 
     /// <summary>War history events for admin audit trail.</summary>
     public List<WarHistoryEvent> History = new();
 
-    /// <summary>Unique identifier for this war (player1_id, player2_id) for lookups.</summary>
-    public string WarKey => GetWarKey(DeclaredByPlayer, DeclaredAgainstPlayer);
+    /// <summary>Unique identifier for this war, derived from the two character entities.</summary>
+    public string WarKey => GetWarKey(DeclaredByEntity, DeclaredAgainstEntity);
 
-    /// <summary>Generate canonical war key from two player IDs (order-independent).</summary>
-    public static string GetWarKey(NetUserId player1, NetUserId player2)
+    /// <summary>Generate canonical war key from two character entities (order-independent).</summary>
+    public static string GetWarKey(NetEntity e1, NetEntity e2)
     {
-        // Ensure consistent ordering regardless of who declared on whom
-        var id1 = player1.UserId.CompareTo(player2.UserId) < 0 ? player1 : player2;
-        var id2 = player1.UserId.CompareTo(player2.UserId) < 0 ? player2 : player1;
-        return $"{id1}_{id2}";
+        var id1 = e1.Id < e2.Id ? e1.Id : e2.Id;
+        var id2 = e1.Id < e2.Id ? e2.Id : e1.Id;
+        return $"e{id1}_e{id2}";
     }
 }
 
@@ -262,9 +274,8 @@ public sealed class PlayerWarJoinPanelDataEvent : EntityEventArgs
 [Serializable, NetSerializable]
 public sealed class PlayerWarJoinRequestEvent : EntityEventArgs
 {
-    public NetUserId Player1;  // Original declarer
-    public NetUserId Player2;  // Original target
-    public byte ChosenSide;    // 1 or 2
+    public string WarKey = string.Empty;  // War to join, identified by its key
+    public byte ChosenSide;               // 1 or 2
 }
 
 /// <summary>
@@ -278,13 +289,24 @@ public sealed class FactionWarJoinResultEvent : EntityEventArgs
 }
 
 /// <summary>
+/// Per-entity participant info for war overlays.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class FactionWarParticipantInfo
+{
+    public byte Side;
+    public string WarKey = string.Empty;
+    public bool Surrendered;
+}
+
+/// <summary>
 /// Server → all clients. Broadcast whenever the war-participant list changes.
-/// Maps each participant entity to their side (1 or 2).
+/// Maps each participant entity to their side and owning war.
 /// </summary>
 [Serializable, NetSerializable]
 public sealed class FactionWarParticipantsUpdatedEvent : EntityEventArgs
 {
-    public Dictionary<NetEntity, byte> Participants = new();
+    public Dictionary<NetEntity, FactionWarParticipantInfo> Participants = new();
 }
 
 // ── /forcewar admin network messages ──────────────────────────────────────
@@ -322,4 +344,23 @@ public sealed class PlayerWarForceCeasefireRequestEvent : EntityEventArgs
 {
     public NetUserId Player1;
     public NetUserId Player2;
+}
+
+// ── /surrender network messages ──────────────────────────────────────────
+
+/// <summary>
+/// Client → server. Player surrenders in an active war.
+/// Server will force them down, paralyze them, and mark them as surrendered.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class PlayerWarSurrenderRequestEvent : EntityEventArgs { }
+
+/// <summary>
+/// Server → client. Result of a surrender attempt.
+/// </summary>
+[Serializable, NetSerializable]
+public sealed class FactionWarSurrenderResultEvent : EntityEventArgs
+{
+    public bool   Success = false;
+    public string Message = string.Empty;
 }

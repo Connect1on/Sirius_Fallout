@@ -7,6 +7,7 @@
   overrideConsoleVisibility: false
   canBeAntag: true
   name: job-name-ncr-platoon-leader
+  overwatchCategory: OverwatchNcrOfficers
   description: job-description-ncr-platoon-leader
   playTimeTracker: NCRPlatoonLeader
   requirements:

@@ -14,6 +14,7 @@
       species:
       - Human
       - Ghoul
+      - GhoulGlowing
     #- !type:CharacterPlaytimeRequirement # TEMP REMOVED
     #  tracker: TownShopkeeperHelper
     #  min: 18000 # 5 hours
@@ -36,7 +37,7 @@
   id: TownShopkeeperGear
   equipment:
     jumpsuit: N14ClothingUniformJumpsuitMerchant
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetTown
     back: N14ClothingBackpackHiking # Corvax-Change
     shoes: N14ClothingShoesBlack
     id: N14IDShopkeeperTown

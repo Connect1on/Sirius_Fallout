@@ -21,6 +21,8 @@ loadout-name-N14ClothingBackpackSatchelExplorer = explorer satchel
 loadout-name-N14ClothingBackpackSatchelTribal = tribal satchel
 loadout-name-N14ClothingBackpackSatchelMilitary = military satchel
 loadout-name-N14ClothingBackpackSatchelTrekker = trekker satchel
+loadout-name-M14ClothingBackpackSatchelMarching = marching satchel
+loadout-name-M14ClothingBackpackSatchelOld = old satchel
 
 # Uniforms
 loadout-name-ClothingUniformJumpsuitOliveSweaterVault = olive sweater
@@ -222,6 +224,7 @@ loadout-name-N14LoadoutItemCigsRepublics = Republic's cigarettes
 loadout-name-N14LoadoutItemCigsSalem = Salem cigarettes
 loadout-name-N14LoadoutItemCigsWinston = Winston cigarettes
 loadout-name-N14LoadoutItemCigsMarlboro = Marlboro cigarettes
+loadout-name-N14LoadoutItemCigsLuckyStrike = Lucky Strike cigarettes
 loadout-name-N14LoadoutFoodPorkBeans = pork and beans
 loadout-name-N14CurrencyCap100 = 100 caps
 loadout-name-GeigerCounter = Geiger counter
@@ -237,6 +240,9 @@ loadout-name-N14InstrumentFlute = flute
 loadout-name-N14InstrumentClarinet = clarinet
 loadout-name-N14InstrumentTrumpet = trumpet
 loadout-name-N14InstrumentTrombone = trombone
+loadout-name-N14InstrumentElectricGuitar = electric guitar
+loadout-name-N14InstrumentBassGuitar = bass guitar
+loadout-name-N14InstrumentRockGuitar = rock guitar
 
 # Cosmetic loadouts (Misfits Add - drip expansion)
 loadout-name-MisfitsLoadoutNeckDesertScarf = desert scarf
@@ -302,6 +308,14 @@ loadout-name-LoadoutNCRuniformV3 = NCR uniform (v3)
 loadout-name-LoadoutNCRuniformPants = NCR uniform pants
 loadout-name-LoadoutNCRuniformCombatDesert = NCR combat uniform (desert)
 loadout-name-LoadoutNCRuniformDesertPantsFull = NCR desert pants (full)
+loadout-name-LoadoutNCRUniformNCRRecon = NCR recon uniform
+loadout-name-LoadoutNCRUniformNCRReconLongSleeve = NCR recon uniform (long sleeve)
+loadout-name-LoadoutNCRUniformNCRUtilityShirt = NCR utility shirt
+loadout-name-LoadoutNCRUniformNCRShorts = NCR shorts uniform
+loadout-name-LoadoutNCRUniformNCRFatigueShirt = NCR fatigue shirt
+loadout-name-LoadoutNCRUniformNCRFatiguePants = NCR fatigue pants
+loadout-name-LoadoutNCRStetson = NCR cavalry stetson
+loadout-name-LoadoutNCRGoggles = NCR goggles
 loadout-name-LoadoutNCRuniformHelmetDesert = NCR desert helmet
 loadout-name-LoadoutNCRuniformMaskDesert = NCR desert mask
 loadout-name-LoadoutNCRmaskDesert = NCR desert face mask
@@ -385,6 +399,135 @@ loadout-name-LoadoutClothingOuterMBoSSquireArmor = Brotherhood squire armor (Mid
 # loadout-name-LoadoutClothingHeadHatBoSInquisitorBattleHelmetHood = Brotherhood inquisitor battle helmet (hooded)
 # loadout-name-LoadoutClothingHeadHatBoSInquisitorBlackHat = Brotherhood inquisitor black hat
 # loadout-name-LoadoutClothingHeadHatBoSInquisitorHat = Brotherhood inquisitor hat
+
+# Misfits Add - N14 weapon loadout names
+loadout-name-N14WeaponBlowback = blowback
+loadout-name-N14WeaponLaserPistol = laser pistol
+loadout-name-N14WeaponLaserRevolver = laser revolver
+loadout-name-N14WeaponLaserRifleMakeshift = makeshift laser rifle
+loadout-name-N14WeaponPistol10mm = 10mm pistol
+loadout-name-N14WeaponPistol12mm = 12mm pistol
+loadout-name-N14WeaponRifle308Battle = .308 battle rifle
+loadout-name-N14WeaponRifle556Carbine = 5.56 carbine
+loadout-name-N14WeaponRifle556CarbineOld = 5.56 carbine (old)
+loadout-name-N14WeaponRifle556EM2 = EM-2 rifle
+loadout-name-N14WeaponRifle556R91 = R91 assault rifle
+loadout-name-N14WeaponRifle556Service = 5.56 service rifle
+loadout-name-N14WeaponRifle762Canadian = 7.62 Canadian rifle
+loadout-name-N14WeaponRifle762Chinese = 7.62 Chinese assault rifle
+loadout-name-N14WeaponRifle762Fal = FN FAL
+loadout-name-N14WeaponRifle762M14 = M14
+loadout-name-N14WeaponRifle762Marksman = 7.62 marksman rifle
+loadout-name-N14WeaponRifle762SKS = SKS
+loadout-name-N14WeaponShotgun = shotgun
+loadout-name-N14WeaponShotgunAuto = auto shotgun
+loadout-name-N14WeaponShotgunCanadian = Canadian shotgun
+loadout-name-N14WeaponShotgunCaravan = caravan shotgun
+loadout-name-N14WeaponShotgunChinese = Chinese shotgun
+loadout-name-N14WeaponShotgunLever = lever-action shotgun
+loadout-name-N14WeaponShotgunRiot = riot shotgun
+loadout-name-N14WeaponSMG10mm = 10mm SMG
+loadout-name-N14WeaponSMG10mmChinese = Chinese 10mm SMG
+loadout-name-N14WeaponSMG10mmPipe = 10mm pipe SMG
+loadout-name-N14WeaponSMG10mmSuppressed = 10mm SMG (suppressed)
+loadout-name-N14WeaponSMG12mm = 12mm SMG
+loadout-name-N14WeaponSMG12mmPipe = 12mm pipe SMG
+loadout-name-N14WeaponSMG45 = .45 SMG
+loadout-name-N14WeaponSMG9mm = 9mm SMG
+loadout-name-N14WeaponSMG9mmCanadian = Canadian 9mm SMG
+loadout-name-N14WeaponSniper44LeverCarbine = .44 lever carbine
+loadout-name-N14WeaponSniper556VarmintRifle = 5.56 varmint rifle
+loadout-name-N14WeaponSniperHunting = hunting rifle
+
+# Misfits Add - Magazine and ammo loadout names
+loadout-name-N14MagazinePistol12mm = 12mm pistol magazine
+loadout-name-N14MagazineShotgun12 = 12-gauge shotgun magazine
+loadout-name-N14MagazineShotgun20 = 20-gauge shotgun magazine
+loadout-name-N14MagazineSMG10mm = 10mm SMG magazine
+loadout-name-N14MagazineSMG12mm = 12mm SMG magazine
+loadout-name-N14MagazineSMG9mm = 9mm SMG magazine
+loadout-name-N14PowerCellSmall = small energy cell
+loadout-name-Magazine45SubMachineGun = .45 SMG magazine
+loadout-name-Magazine556Rifle = 5.56 rifle magazine
+loadout-name-LongMagazine556Rifle = 5.56 long rifle magazine
+loadout-name-Magazine762AmmoShort = 7.62 short magazine
+loadout-name-Magazine762Rifle = 7.62 rifle magazine
+loadout-name-ClipMagazine308Rifle = .308 rifle clip
+loadout-name-MagazineBox10mm = 10mm ammo box
+loadout-name-MagazineBox12 = 12-gauge ammo box
+loadout-name-MagazineBox12gauge = 12-gauge ammo box
+loadout-name-MagazineBox20gauge = 20-gauge ammo box
+loadout-name-MagazineBox22 = .22 ammo box
+loadout-name-MagazineBox308 = .308 ammo box
+loadout-name-MagazineBox44 = .44 ammo box
+loadout-name-MagazineBox45 = .45 ammo box
+loadout-name-MagazineBox556 = 5.56 ammo box
+loadout-name-MagazineBox762 = 7.62 ammo box
+loadout-name-MagazineBox9mm = 9mm ammo box
+
+# Misfits Add - Outer armor and clothing loadout names
+loadout-name-N14LoadoutOuterVestChinese = Chinese vest
+loadout-name-N14LoadoutOuterPoliceCombat = police combat armor
+loadout-name-N14LoadoutOuterPressArmor = press armor
+loadout-name-N14ClothingOuterCombatArmorChinese = Chinese combat armor
+loadout-name-N14LoadoutOuterCombatArmorPainspike = painspike combat armor
+loadout-name-N14LoadoutOuterCombatArmor = combat armor
+loadout-name-N14LoadoutOuterCoatCombatDuster = combat duster
+loadout-name-N14LoadoutOuterJacketBomber = bomber jacket
+loadout-name-N14LoadoutOuterCoatFollowersArmored = armored Followers coat
+loadout-name-N14LoadoutOuterCoatFollowersArmoredCheap = armored Followers coat (cheap)
+loadout-name-N14LoadoutOuterDuster = duster
+loadout-name-N14LoadoutOuterSoldierCoat = soldier coat
+loadout-name-N14LoadoutOuterZealotDuster = zealot duster
+loadout-name-N14LoadoutOuterRaiderCombat1 = raider combat armor
+loadout-name-N14LoadoutOuterCombatArmorRaider = raider combat armor
+
+# Misfits Add - Headgear loadout names
+loadout-name-LoadoutN14ClothingHatSaltRunnerMask = Salt Runner mask
+loadout-name-LoadoutN14ClothingHatSaltRunnerHelmet = Salt Runner helmet
+loadout-name-N14ClothingHeadHatLightBaseballHelmet = light baseball helmet
+loadout-name-N14ClothingHeadHatChineseHelmet = Chinese helmet
+loadout-name-N14ClothingHeadHatChineseHelmetMk2 = Chinese helmet Mk2
+loadout-name-N14ClothingHeadHatCombatHelmet = combat helmet
+loadout-name-N14ClothingHeadHatPressHelmet = press helmet
+loadout-name-N14ClothingHeadHatPrewarMilitaryHelmet = pre-war military helmet
+loadout-name-LoadoutN14ClothingHeadFourLeafRangerHelmet = Four Leaf ranger helmet
+loadout-name-LoadoutN14ClothingNeckHighlandRangerHelmet = Highland ranger helmet
+
+# Misfits Add - Neckwear loadout names
+loadout-name-LoadoutN14ClothingNeckRangerDuster = ranger duster
+loadout-name-LoadoutN14ClothingNeckHighlandRangerDuster = Highland ranger duster
+loadout-name-LoadoutN14ClothingNeckSaltRunnerDuster = Salt Runner duster
+loadout-name-LoadoutN14ClothingNeckCaliforniaGirlDuster = California girl duster
+loadout-name-LoadoutN14ClothingNeckFourLeafDuster = Four Leaf duster
+loadout-name-ClothingNeckBellCollar = bell collar
+
+# Misfits Add - Consumable loadout names
+loadout-name-LoadoutSprayPaintGreen = green spray paint
+loadout-name-LoadoutSprayPaintBlue = blue spray paint
+loadout-name-LoadoutSprayPaintOrange = orange spray paint
+loadout-name-LoadoutSprayPaintWhite = white spray paint
+loadout-name-LoadoutSprayPaintBlack = black spray paint
+loadout-name-LoadoutSprayPaintPurple = purple spray paint
+loadout-name-LoadoutSprayPaintRed = red spray paint
+loadout-name-LoadoutHealingPoutltice = healing poultice
+loadout-name-LoadoutHealingPowder = healing powder
+loadout-name-LoadoutPsycho = Psycho
+loadout-name-LoadoutStimpakDirty = dirty stimpak
+loadout-name-LoadoutStimpak = stimpak
+loadout-name-LoadoutTurbo = Turbo
+loadout-name-LoadoutJet = Jet
+
+# Misfits Add - Faction loadout names
+loadout-name-LoadoutBoSMidwestSilver = Brotherhood of Steel armor (Midwest silver)
+loadout-name-LoadoutBoSMidwest = Brotherhood of Steel armor (Midwest)
+loadout-name-LoadoutN14ClothingOuterVetRangerRiotArmor = veteran ranger riot armor
+
+# Misfits Add - Misfits-specific loadout names
+loadout-name-MisfitsLoadoutOuterCoatJacketBiker = biker jacket
+loadout-name-MisfitsLoadoutUniform80sPants = 80s pants
+loadout-name-MisfitsClothingBackpackSatchelMarching = marching satchel
+loadout-name-MisfitsClothingBackpackSatchelOld = old satchel
 #
 # # Brotherhood of Steel loadouts (Washington)
 # loadout-name-LoadoutBoSWashingtonSquire = Brotherhood squire armor (Washington)
@@ -410,6 +553,10 @@ loadout-name-LoadoutLegionCloakBlack = Legion black cloak
 loadout-name-LoadoutNeckCloakLegionWhite = Legion white cloak
 loadout-name-LoadoutNeckCloakLegionRed = Legion red cloak
 loadout-name-LoadoutLegionPrimeHeavyArmor = Legion Gravis pattern armor
+loadout-name-LoadoutNeckLegionForgemaster = blacksmith's apron
+loadout-name-LoadoutNeckLegionMedicus = medicus apron
+loadout-name-LoadoutNeckLegionTreasurer = treasurers mantle
+loadout-name-LoadoutUniformJumpsuitLegionnaireOther = legionnaire skirt
 
 # Miscellaneous eyes
 loadout-name-ClothingEyesGlassesChemist = chemist glasses
@@ -476,11 +623,14 @@ loadout-name-MisfitsLoadoutHeadDesertBoonie = desert boonie hat
 loadout-name-MisfitsLoadoutHeadArmyBeret = army beret
 loadout-name-MisfitsLoadoutHeadArmyBeretAirborne = airborne beret
 loadout-name-MisfitsLoadoutHeadArmyBeretSpecial = special forces beret
+loadout-name-MisfitsLoadoutHeadRedBandana = red bandana
 # Head — NCR soldiers
 loadout-name-MisfitsLoadoutHeadNCRSidecap = NCR sidecap
 loadout-name-MisfitsLoadoutHeadNCRBeretOfficer = NCR officer beret
 loadout-name-MisfitsLoadoutHeadNCRBeretMedic = NCR medic beret
 loadout-name-MisfitsLoadoutHeadNCRBeretQM = NCR quartermaster beret
+loadout-name-MisfitsLoadoutHeadNCRSlouch = NCR slouch hat
+loadout-name-N14ClothingHeadHatNCRSlouch = NCR slouch hat
 # Head — NCR Rangers
 loadout-name-MisfitsLoadoutHeadArmyBeretRanger = ranger beret
 loadout-name-MisfitsLoadoutHeadNCRBeretRecon = NCR recon beret
@@ -495,6 +645,14 @@ loadout-name-MisfitsLoadoutHeadEnclaveIntel = Enclave recon beret
 loadout-name-MisfitsLoadoutHeadEnclavePeacekeeperCap = Enclave peacekeeper cap
 loadout-name-MisfitsLoadoutHeadEnclaveOfficer = Enclave officer cap
 loadout-name-MisfitsLoadoutHeadEnclaveScientist = Enclave scientist beret
+# Head — Eighties bike helmets
+loadout-name-MisfitsLoadoutHeadEightiesHelmetBlue = blue bike helmet
+loadout-name-MisfitsLoadoutHeadEightiesHelmetWhite = white bike helmet
+loadout-name-MisfitsLoadoutHeadEightiesHelmetRed = red bike helmet
+loadout-name-MisfitsLoadoutHeadEightiesHelmetBlack = black bike helmet
+loadout-name-MisfitsLoadoutHeadEightiesHelmetYellow = yellow bike helmet
+loadout-name-MisfitsLoadoutHeadEightiesHelmetOlive = olive bike helmet
+loadout-name-MisfitsLoadoutHeadEightiesHelmetBeige = beige bike helmet
 # Head — Townsfolk
 loadout-name-MisfitsLoadoutHeadDeputy = deputy hat
 loadout-name-MisfitsLoadoutHeadSheriff = sheriff hat
@@ -509,3 +667,128 @@ loadout-name-MisfitsLoadoutNeckCloakNCRSnow = NCR winter cloak
 loadout-name-MisfitsLoadoutNeckMantleNCR = NCR squad leader mantle
 loadout-name-MisfitsLoadoutNeckCloakNCRWoods = NCR woods cloak
 loadout-name-MisfitsLoadoutNeckCloakTribal = tribal cloak
+
+# N14 loadout names (universal item group)
+# Headwear
+loadout-name-N14LoadoutUniversalHeadHatCaravan = railwayman's cap
+loadout-name-N14LoadoutUniversalHeadHatCaravanSuit = Blue Line Caravan Co. boss' hat
+loadout-name-N14LoadoutUniversalHeadHatCaravanUniform = Blue Line Caravan Co. employee hat
+loadout-name-N14LoadoutUniversalHeadHatChinese = chinese hat
+loadout-name-N14LoadoutUniversalHeadHatHoodBlackRobe = black robe hood
+loadout-name-N14LoadoutUniversalHeadHatHoodGhillieCloak = ghillie cloak hood
+loadout-name-N14LoadoutUniversalHeadHatHoodLeatherCloak = leather cloak hood
+loadout-name-N14LoadoutUniversalHeadHatHoodLeatherRobe = leather robe hood
+loadout-name-N14LoadoutUniversalHeadHatHoodScribeTabard = Scribe Tabard hood
+loadout-name-N14LoadoutUniversalHeadHatMountie = mountie hat
+loadout-name-N14LoadoutUniversalHeadHatTownGuard = the Guard's hat
+loadout-name-N14LoadoutUniversalHeadHatVancouver = vancouver preventor cap
+loadout-name-N14LoadoutUniversalHeadTribalCloakHood = tribal cloak hood
+loadout-name-N14LoadoutUniversalHeadTribalCloakHoodBr = tribal cloak hood
+loadout-name-M14ClothingHeadHatVaultCap = vault-tec cap
+
+# Masks
+loadout-name-N14LoadoutUniversalMaskBlackBalaclava = black balaclava
+loadout-name-N14LoadoutUniversalMaskBlueMask = blue mask
+loadout-name-N14LoadoutUniversalMaskBrownMask = brown mask
+loadout-name-N14LoadoutUniversalMaskGreenMask = green mask
+loadout-name-N14LoadoutUniversalMaskOrangeMask = orange mask
+loadout-name-N14LoadoutUniversalMaskPatriotMask = patriot mask
+loadout-name-N14LoadoutUniversalMaskRedMask = red mask
+
+# Neck
+loadout-name-N14LoadoutUniversalNeckCloakBrotherhoodWashington = Brotherhood of Steel cloak
+loadout-name-N14LoadoutUniversalNeckCloakDarkCloak = dark cloak
+loadout-name-N14LoadoutUniversalNeckCloakLeather = leather cloak
+loadout-name-N14LoadoutUniversalNeckCloakYaoguai = Yao Guai cloak
+loadout-name-N14LoadoutUniversalNeckMantleBrotherhoodWashington = Brotherhood of Steel mantle
+loadout-name-N14LoadoutUniversalNeckMantleLeather = leather mantle
+loadout-name-N14LoadoutUniversalNeckShawl = shawl
+loadout-name-N14LoadoutUniversalNeckTownGuardCloak = old cloak
+loadout-name-N14LoadoutUniversalNeckTribalCloak = tribal cloak
+loadout-name-N14LoadoutUniversalNeckTribalCloakBr = tribal cloak
+loadout-name-MisfitsLoadoutNeckNCRmantleQM = Requisitions Officer's mantle
+
+# Outer
+loadout-name-N14LoadoutUniversalOuterBlackRobes = black robe
+loadout-name-N14LoadoutUniversalOuterGhostEchoes = Ghost Echoes
+loadout-name-N14LoadoutUniversalOuterLeatherRobes = leather robe
+loadout-name-N14LoadoutUniversalOuterRobeHubologist = hubologist robes
+loadout-name-N14LoadoutUniversalOuterNCRCorrectional = NCR CF uniform
+loadout-name-N14LoadoutUniversalOuterNCRDressJacket = NCR dress jacket
+loadout-name-N14LoadoutUniversalOuterNCRDressJacketCO = NCR CO dress jacket
+loadout-name-N14LoadoutUniversalOuterNCRQuartermaster = NCR QM uniform
+loadout-name-N14LoadoutOuterCoatLeatherCoat = leather coat
+
+# Boots
+loadout-name-N14LoadoutUniversalBootsFire = firefighter boots
+loadout-name-N14LoadoutUniversalBootsCombatMK2 = combat boots MK2
+loadout-name-N14LoadoutUniversalBootsMountie = mountie leather boots
+
+# Uniforms
+loadout-name-N14LoadoutUniversalUniformNCRDesert = NCR trooper uniform
+loadout-name-N14LoadoutUniversalUniformNCRSnow = NCR trooper uniform
+loadout-name-N14LoadoutUniversalUniformJumpskirtBOSBlack = Black Brotherhood of Steel uniform
+loadout-name-N14LoadoutUniversalUniformJumpskirtBOSGold = Brotherhood of Steel uniform
+loadout-name-N14LoadoutUniversalUniformJumpskirtBOSSilver = Brotherhood of Steel uniform
+loadout-name-N14LoadoutUniversalUniformJumpskirtRDFormal = research director's formal dress
+loadout-name-N14LoadoutUniversalUniformJumpsuitBOSBlack = Black Washington BoS uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitBOSGreen = Brotherhood of Steel uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitBOSRed = Washington BoS undersuit
+loadout-name-N14LoadoutUniversalUniformJumpsuitBOSScribe = BoS Scribe uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitBOSSilver = Washington BoS uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitBOSWashingtonFieldScribe = Washington BoS Scribe uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitCaravanOveralls = Blue Line Caravan Co. overalls
+loadout-name-N14LoadoutUniversalUniformJumpsuitCaravanShirt = Blue Line Caravan Co. uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitCaravanSuit = Blue Line Caravan Co. suit
+loadout-name-N14LoadoutUniversalUniformJumpsuitEnclave = enclave uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitFudd = fudd clothes
+loadout-name-N14LoadoutUniversalUniformJumpsuitMilUniform = prewar military uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitRCMP = RCMP uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitRDFormal = research director's formal suit
+loadout-name-N14LoadoutUniversalUniformJumpsuitTownGuard = the Guard's uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitTownGuardLight = the Guard's uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitVancouver = vancouver preventor uniform
+loadout-name-N14LoadoutUniversalUniformJumpsuitVault = vault jumpsuit
+loadout-name-N14LoadoutUniversalUniformBosRecon = BoS Paladin uniform
+loadout-name-N14LoadoutUniversalOfficerUniformNCRDesert = field NCR officer uniform
+loadout-name-N14LoadoutUniversalOfficerUniformNCRSnow = field NCR officer uniform
+loadout-name-N14LoadoutUniversalMPUniformNCRDesert = NCR military police uniform
+loadout-name-N14LoadoutUniversalMPUniformNCRSnow = NCR military police uniform
+loadout-name-N14LoadoutUniversalUniformRangerPatrol = patrol ranger uniform
+loadout-name-N14ClothingUniformJumpsuittribalpantsf = tribal clothing
+loadout-name-N14ClothingUniformJumpsuittribalpantsm = tribal clothing
+loadout-name-N14ClothingUniformJumpsuittribalpantsnecklace = tribal clothing
+loadout-name-N14ClothingUniformJumpsuitdrylanderTribal = tribal clothing
+
+# Ammo and magazines
+loadout-name-N14MagazinePistol45 = pistol magazine (.45 auto)
+loadout-name-N14MagazinePistol9mm = pistol magazine (9mm)
+loadout-name-N14MagazinePistol22lr = pistol magazine (.22lr)
+loadout-name-N14MagazinePistol10mm = pistol magazine (10mm)
+loadout-name-N14SpeedLoader44 = speed loader (.44 magnum)
+loadout-name-N14ReagentContainerOliveoil = olive oil
+
+# Melee weapons
+loadout-name-N14Gladius = gladius
+loadout-name-N14GladiusLegion = gladius
+loadout-name-N14ChineseSword = chinese officer sword
+loadout-name-N14LongSword = longsword
+loadout-name-N14LongSwordBoS = longsword
+loadout-name-N14CeremonialSwordCent = ceremonial sword
+loadout-name-N14GoliathFistLeader = goliath power fist
+loadout-name-N14TrenchClub = trench club
+loadout-name-N14PoliceBaton = police baton
+
+# Firearms
+loadout-name-N14WeaponPistol9mmChinese = chinese pistol
+loadout-name-N14WeaponPistol45Colt = .45 colt handgun
+loadout-name-N14WeaponPistolWebley = webley pistol
+loadout-name-N14WeaponRevolver44Magnun = magnum revolver
+
+# Other loadouts
+loadout-name-LoadoutLegionExplorerVeteranArmor = veteran legion explorer armor
+loadout-name-LoadoutLegionExplorerVeteranHelmet = veteran legion explorer helmet
+loadout-name-LoadoutNCRRangerEliteArmor = elite ranger combat armor
+loadout-name-LoadoutNCRRangerFoxArmor = fox ranger combat armor
+loadout-name-MisfitsLoadoutHeadAntlerSkull = antler skullcap
+loadout-name-MisfitsLoadoutBoSMidwestCommanderPowerArmor = BoS Commander Power Armor

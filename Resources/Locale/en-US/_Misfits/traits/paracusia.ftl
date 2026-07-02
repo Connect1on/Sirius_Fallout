@@ -1,6 +1,7 @@
 # #Misfits Add - Paracusia perk localization. Kept thematically distinct from
 # stealthboy-hallucinations.ftl so the two systems don't produce overlapping lines.
 
+paracusia-hallucination-0 = Footsteps on metal. Coming closer. Then nothing.
 paracusia-hallucination-1 = Did someone just call your name?
 paracusia-hallucination-2 = A door creaks behind you, but no one is there.
 paracusia-hallucination-3 = You catch the tail end of a conversation that nobody is having.
@@ -12,7 +13,6 @@ paracusia-hallucination-8 = You think you heard your own voice, talking to itsel
 paracusia-hallucination-9 = A child laughs, very faintly, very far away.
 paracusia-hallucination-10 = Tap. Tap. Tap. Tap.
 paracusia-hallucination-11 = Was that a song? You can't quite remember it.
-paracusia-hallucination-12 = Footsteps on metal. Coming closer. Then nothing.
 
 paracusia-whisper-0 = ...behind you...
 paracusia-whisper-1 = ...stop pretending you can't hear us...

@@ -28,6 +28,8 @@
       - type: NpcFactionMember
         factions:
           - CaesarLegion
+      - type: FollowerCommander
+        innateFollowerCapacity: 3
       - type: ReplacementAccent
         accent: latin
   - !type:AddTraitSpecial
@@ -38,13 +40,13 @@
   equipment:
     jumpsuit: N14ClothingUniformJumpsuitLegionnaire
     ears: N14ClothingHeadsetLegion
+    neck: N14ClothingNeckCoyoteCloak
     mask: N14ClothingMaskBrownMask
     back: N14ClothingBackpackMilitary
     shoes: N14ClothingShoesKaligi
-    head: N14ClothingHeadHatTribalOutcastHood
     gloves: N14ClothingHandsGlovesTribal
+    outerClothing: N14ClothingLegionReconArmor
     belt: N14Gladius
-    outerClothing: N14ClothingOuterLegionnaireBaseArmor
     pocket1: LegionHoundmasterloadoutkits
     id: N14IDLegionaryMedalHoundmaster
   innerClothingSkirt: N14ClothingUniformJumpsuitLegionnaireOther

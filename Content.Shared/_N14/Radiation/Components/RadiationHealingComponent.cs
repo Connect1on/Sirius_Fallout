@@ -31,6 +31,14 @@ public sealed partial class RadiationHealingComponent : Component
     [DataField("healCap")] public float HealCap = 90f;
 
     /// <summary>
+    /// Amount of damage healed in each healable type per point of incoming Radiation damage.
+    ///
+    /// Replacement for the previous method of spreading evenly across each damage type.
+    /// </summary>
+    [DataField("healPerRad")]
+    public float HealPerRad = 0.25f;
+
+    /// <summary>
     /// Current accumulated radiation intensity in rads per second.
     /// </summary>
     [AutoNetworkedField] public float CurrentExposure;

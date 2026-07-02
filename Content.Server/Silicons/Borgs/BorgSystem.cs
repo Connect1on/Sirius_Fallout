@@ -22,6 +22,7 @@ using Content.Shared.PowerCell.Components;
 using Content.Shared.Roles;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.Silicons.StationAi;
 using Content.Shared.Throwing;
 using Content.Shared.Whitelist;
 using Content.Shared.Wires;
@@ -269,6 +270,12 @@ public sealed partial class BorgSystem : SharedBorgSystem
 
     private void OnBrainPointAttempt(EntityUid uid, BorgBrainComponent component, PointAttemptEvent args)
     {
+        // [Changed by MisfitsCrew/Operator] Station AI positronic brains inherit BorgBrain,
+        // but while inserted into an AI core they must be allowed to point through
+        // StationAiSystem's camera/core source resolver.
+        if (HasComp<StationAiHeldComponent>(uid))
+            return;
+
         args.Cancel();
     }
 

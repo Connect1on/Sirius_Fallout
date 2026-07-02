@@ -92,6 +92,7 @@
           collection: MeatLaserImpact
   - type: Stamina
   - type: MobState
+    allowMovementWhileCrit: true # Misfits Add: allow crawling while in crit state
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -111,6 +112,9 @@
     - Piercing
     - Heat
     - Shock
+    - Caustic       # Misfits Add
+    - Starvation    # Misfits Add
+    - Dehydration   # Misfits Add
   - type: DamageOnHighSpeedImpact
     damage:
       types:

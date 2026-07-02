@@ -13,6 +13,7 @@
       species:
       - Human
       - Ghoul
+      - GhoulGlowing
     #- !type:CharacterDepartmentTimeRequirement # TEMP REMOVED
     #  department: Townsfolk
     #  min: 18000 # 5 hours
@@ -34,7 +35,7 @@
 - type: startingGear
   id: TownShopkeeperHelperGear
   equipment:
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetTown
     jumpsuit: N14ClothingUniformJumpsuitMerchant
     back: N14ClothingBackpackHiking
     shoes: N14ClothingShoesBlack

@@ -71,6 +71,15 @@
     walkModifier: 0.975
     sprintModifier: 0.975
   - type: HeldSpeedModifier
+
+- type: entity
+  parent: N14ClothingBackpackNCR
+  id: N14ClothingBackpackRucksackNCR
+  name: NCR rucksack
+  description: A heavier NCR field rucksack for longer patrols.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Back/Backpacks/ncrrucksack.rsi
     
 # Tribals
 - type: entity

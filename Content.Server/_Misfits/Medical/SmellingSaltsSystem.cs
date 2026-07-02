@@ -1,6 +1,7 @@
 // #Misfits Change /Add/ - Smelling salts now perform a long resuscitation interaction instead of injecting a reagent.
 using Content.Server.Chat.Managers;
 using Content.Server.DoAfter;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Chat;
 using Content.Shared.DoAfter;
 using Content.Shared._Misfits.Medical;
@@ -18,6 +19,7 @@ public sealed class SmellingSaltsSystem : EntitySystem
     [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly ResuscitationSystem _resuscitation = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     public override void Initialize()
     {
@@ -44,7 +46,7 @@ public sealed class SmellingSaltsSystem : EntitySystem
         if (component.UseSound != null)
             _audio.PlayPvs(component.UseSound, uid);
 
-        var started = _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.DoAfterDuration, new SmellingSaltsDoAfterEvent(),
+        var started = _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, _special.GetIntelligenceMedicalActionDelay(user, component.DoAfterDuration), new SmellingSaltsDoAfterEvent(),
             uid, target, uid)
             {
                 BlockDuplicate = true,

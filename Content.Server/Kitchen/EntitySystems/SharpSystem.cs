@@ -1,8 +1,10 @@
 ﻿using Content.Server.Body.Systems;
 using Content.Server.Kitchen.Components;
 using Content.Server.Nutrition.EntitySystems;
+using Content.Server.Stack;
 using Content.Shared.Body.Components;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Body.Part;
 using Content.Shared.Database;
 using Content.Shared.Interaction;
 using Content.Shared.Nutrition.Components;
@@ -34,6 +36,7 @@ public sealed class SharpSystem : EntitySystem
     [Dependency] private readonly IRobustRandom _robustRandom = default!;
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
     [Dependency] private readonly SharedProjectileSystem _projectileSystem = default!; // #Misfits Fix - used to safely drop javelins/embedded projectiles before entity deletion
+    [Dependency] private readonly StackSystem _stackSystem = default!;
 
     public override void Initialize()
     {
@@ -104,13 +107,24 @@ public sealed class SharpSystem : EntitySystem
             return;
         }
 
-        var spawnEntities = EntitySpawnCollection.GetSpawns(butcher.SpawnedEntities, _robustRandom);
-        var coords = _transform.GetMapCoordinates(args.Args.Target.Value);
-        EntityUid popupEnt = default!;
-        foreach (var proto in spawnEntities)
+        var spawnCounts = new Dictionary<string, int>();
+        var targetStackCount = _stackSystem.GetCount(args.Args.Target.Value);
+        for (var i = 0; i < targetStackCount; i++)
         {
-            // distribute the spawned items randomly in a small radius around the origin
-            popupEnt = Spawn(proto, coords.Offset(_robustRandom.NextVector2(0.25f)));
+            foreach (var proto in EntitySpawnCollection.GetSpawns(butcher.SpawnedEntities, _robustRandom))
+            {
+                spawnCounts.GetOrNew(proto);
+                spawnCounts[proto]++;
+            }
+        }
+
+        var coords = Transform(args.Args.Target.Value).Coordinates;
+        EntityUid popupEnt = default!;
+        foreach (var (proto, count) in spawnCounts)
+        {
+            var spawned = _stackSystem.SpawnMultiple(proto, count, coords.Offset(_robustRandom.NextVector2(0.25f)));
+            if (spawned.Count > 0)
+                popupEnt = spawned[^1];
         }
 
         var hasBody = TryComp<BodyComponent>(args.Args.Target.Value, out var body);
@@ -129,6 +143,12 @@ public sealed class SharpSystem : EntitySystem
 
         if (hasBody)
             _bodySystem.GibBody(args.Args.Target.Value, body: body);
+
+        // Misfits Change for butchering severed body parts
+        if (TryComp<BodyPartComponent>(args.Args.Target.Value, out var bodyPart))
+        {
+            _bodySystem.GibPart(args.Args.Target.Value, bodyPart);
+        }
 
         _destructibleSystem.DestroyEntity(args.Args.Target.Value);
 

@@ -18,3 +18,5 @@
           conditions:
             - !type:ReagentThreshold
               min: 5
+        - !type:ModifyFeralization
+          delta: -10

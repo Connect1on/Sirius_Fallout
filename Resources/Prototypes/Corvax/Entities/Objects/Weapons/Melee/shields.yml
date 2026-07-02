@@ -7,12 +7,9 @@
     - type: Reflect # #Misfits Change Add: Metal heater shield deflects sub-5.56mm pistol rounds at 30%; degrades while moving.
       reflects:
         - SmallCaliber
-      reflectProb: 0.10 # It is incrediblly cheap as a shield.
+      reflectProb: 0.20 # Turned into a BP and increased in price significantly.
       spread: 90
     - type: SpearBlock # #Misfits Change Add: Legionnaire heater shield deflects thrown polearms.
-    - type: Construction
-      graph: N14LegionnaireShield #Misfits Change /Add/: make shield player-craftable
-      node: start
     - type: Sprite
       sprite: Corvax/Objects/Weapons/Melee/romanshield.rsi
       state: icon
@@ -28,16 +25,16 @@
     - type: Blocking
       passiveBlockModifier:
         coefficients:
-          Blunt: 0.5
-          Slash: 0.5
-          Piercing: 0.5
-          Heat: 0.5
+          Blunt: 0.95
+          Slash: 0.95
+          Piercing: 0.95
+          Heat: 0.95
       activeBlockModifier:
         coefficients:
-          Blunt: 0.8
-          Slash: 0.8
-          Piercing: 0.8
-          Heat: 0.8
+          Blunt: 0.7
+          Slash: 0.7
+          Piercing: 0.7
+          Heat: 0.7
         flatReductions:
           Blunt: 0.5
           Slash: 0.5
@@ -47,13 +44,7 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 150
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 60 #Weaker shield
+            damage: 200
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
@@ -104,7 +95,6 @@
           Blunt: 0.5
           Slash: 0.5
           Piercing: 0.5
-          Heat: 1
     - type: Destructible
       thresholds:
         - trigger:

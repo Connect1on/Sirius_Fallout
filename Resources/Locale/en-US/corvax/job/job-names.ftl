@@ -17,10 +17,12 @@ job-name-caesar-legion-vexillarius = Legion Vexillarius
 job-description-caesar-legion-vexillarius = Carry the Legion's standard into battle and rally Caesar's warriors wherever the line begins to falter.
 job-name-caesar-legion-explorer = Legion Explorer
 job-description-caesar-legion-explorer = Range ahead of the Legion's main force as a scout and hunter. Your eyes and your blade are Caesar's reach into the wilds.
-job-name-caesar-legion-orator = Legion Orator
-job-description-caesar-legion-orator = Give voice to Caesar's philosophy and spread the Legion's doctrine. The Orator fights with words as much as with steel.
+job-name-caesar-legion-optio = Legion Optio
+job-description-caesar-legion-optio = The second in command, manage the Legion's diplomacy and assist the Centurion on all matters, you are in training to become a Centurion yourself.
 job-name-caesar-legion-dean = Legion Decanus
 job-description-caesar-legion-dean = Lead a smaller fighting unit of the Legion and keep the legionaries beneath you battle-ready and obedient.
+job-name-caesar-legion-forgemaster = Legion Forgemaster
+job-description-caesar-legion-forgemaster = Oversee the Legion's forges and workshop to produce and maintain equipment for Caesar's war machine. Determine what orders to prioritize or reject, keep troublesome recruits from wasting all the steel.
 job-name-caesar-legion-legionnaire-veteran = Legion Veteran Legionnaire
 job-description-caesar-legion-legionnaire-veteran = Fight as a hardened veteran of Caesar's Legion, trusted with the front line's most brutal work.
 job-description-caesar-legionnaire-veteran = Fight as a hardened veteran of Caesar's Legion, trusted with the front line's most brutal work.
@@ -38,6 +40,10 @@ job-description-caesar-legion-priestess-of-mars = Serve as a sacred woman of the
 # #Misfits Change: Legion Recruit removed — replaced by Legionnaire as the entry-level rank.
 # job-name-caesar-legion-recruit = Legion Recruit
 # job-description-caesar-legion-recruit = Enter the Legion at its lowest free rank and prove you deserve to join the legionaries.
+job-name-caesar-legion-citizen = Legion Civilian
+job-description-caesar-legion-citizen = You are a citizen of a tribute town within Caesar's Legion. You follow legion law and Mars, but are neither a slave nor a Legionary.
+job-name-caesar-legion-trader = Legion Trader
+job-description-caesar-legion-trader = You are a caravaneer who works with and in Legion Territory. Its always been safer than the NCR routes.
 job-name-caesar-legion-slave = Legion Slave
 job-description-caesar-legion-slave = You are a slave of Caesar's Legion. Obey, survive, and remember that your life belongs to your masters.
 

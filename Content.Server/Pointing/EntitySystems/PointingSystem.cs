@@ -17,7 +17,9 @@ using Robust.Server.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.GameStates;
 using Robust.Shared.Input.Binding;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 using Robust.Shared.Player;
 using Robust.Shared.Replays;
 using Robust.Shared.Timing;
@@ -29,6 +31,7 @@ namespace Content.Server.Pointing.EntitySystems
     {
         [Dependency] private readonly IReplayRecordingManager _replay = default!;
         [Dependency] private readonly IMapManager _mapManager = default!;
+        [Dependency] private readonly SharedMapSystem _mapSystem = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly ITileDefinitionManager _tileDefinitionManager = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
@@ -135,26 +138,44 @@ namespace Content.Server.Pointing.EntitySystems
                 return false;
             }
 
-            if (!CanPoint(player))
-            {
-                return false;
-            }
+            // [Changed by MisfitsCrew/Operator] Lets systems such as Station AI replace
+            // the visual point source, validate remote-vision reach, and prevent proxy rotation.
+            var sourceEv = new GetPointingSourceEvent(player, coordsPointed, pointed);
+            // [Changed by MisfitsCrew/Operator] Broadcasts the source query as well so
+            // systems can resolve relayed actors such as AI cores, brains, and camera eyes.
+            RaiseLocalEvent(player, ref sourceEv, true);
 
-            if (!InRange(player, coordsPointed))
+            if (sourceEv.Cancelled)
             {
                 _popup.PopupEntity(Loc.GetString("pointing-system-try-point-cannot-reach"), player, player);
                 return false;
             }
 
+            var pointingSource = sourceEv.Handled ? sourceEv.Source : player;
+
+            if (!Exists(pointingSource) || !CanPoint(pointingSource))
+            {
+                return false;
+            }
+
+            if (!sourceEv.Handled && !InRange(pointingSource, coordsPointed))
+            {
+                _popup.PopupEntity(Loc.GetString("pointing-system-try-point-cannot-reach"), player, player);
+                return false;
+            }
+
+            // [Changed by MisfitsCrew/Operator] Uses the resolved visual source for arrow
+            // animation, visibility, and nearby-viewer checks while preserving actor identity.
             var mapCoordsPointed = coordsPointed.ToMap(EntityManager, _transform);
-            _rotateToFaceSystem.TryFaceCoordinates(player, mapCoordsPointed.Position);
+            if (sourceEv.RotateSource)
+                _rotateToFaceSystem.TryFaceCoordinates(pointingSource, mapCoordsPointed.Position);
 
             var arrow = EntityManager.SpawnEntity("PointingArrow", coordsPointed);
 
             if (TryComp<PointingArrowComponent>(arrow, out var pointing))
             {
-                if (TryComp(player, out TransformComponent? xformPlayer))
-                    pointing.StartPosition = EntityCoordinates.FromMap(arrow, xformPlayer.Coordinates.ToMap(EntityManager, _transform), _transform).Position;
+                if (TryComp(pointingSource, out TransformComponent? xformSource))
+                    pointing.StartPosition = EntityCoordinates.FromMap(arrow, xformSource.Coordinates.ToMap(EntityManager, _transform), _transform).Position;
 
                 pointing.EndTime = _gameTiming.CurTime + PointDuration;
 
@@ -170,7 +191,7 @@ namespace Content.Server.Pointing.EntitySystems
             }
 
             var layer = (int) VisibilityFlags.Normal;
-            if (TryComp(player, out VisibilityComponent? playerVisibility))
+            if (TryComp(pointingSource, out VisibilityComponent? playerVisibility))
             {
                 var arrowVisibility = EntityManager.EnsureComponent<VisibilityComponent>(arrow);
                 layer = playerVisibility.Layer;
@@ -186,7 +207,7 @@ namespace Content.Server.Pointing.EntitySystems
                     (eyeComp.VisibilityMask & layer) == 0)
                     return false;
 
-                return _transform.GetMapCoordinates(ent).InRange(_transform.GetMapCoordinates(player), PointingRange);
+                return _transform.GetMapCoordinates(ent).InRange(_transform.GetMapCoordinates(pointingSource), PointingRange);
             }
 
             var viewers = Filter.Empty()
@@ -226,8 +247,9 @@ namespace Content.Server.Pointing.EntitySystems
 
                 if (_mapManager.TryFindGridAt(mapCoordsPointed, out var gridUid, out var grid))
                 {
-                    position = $"EntId={gridUid} {grid.WorldToTile(mapCoordsPointed.Position)}";
-                    tileRef = grid.GetTileRef(grid.WorldToTile(mapCoordsPointed.Position));
+                    var tilePos = _mapSystem.WorldToTile(gridUid, grid, mapCoordsPointed.Position);
+                    position = $"EntId={gridUid} {tilePos}";
+                    tileRef = _mapSystem.GetTileRef(gridUid, grid, tilePos);
                 }
 
                 var tileDef = _tileDefinitionManager[tileRef?.Tile.TypeId ?? 0];

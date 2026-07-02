@@ -1,4 +1,5 @@
 using Content.Shared.StationAi;
+using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Threading;
@@ -117,6 +118,94 @@ public sealed class StationAiVisionSystem : EntitySystem
         _parallel.ProcessNow(_job, _job.Data.Count);
 
         return _job.VisibleTiles.Contains(tile);
+    }
+
+    /// <summary>
+    /// [Changed by MisfitsCrew/Operator] Finds the closest enabled Station AI vision source
+    /// that can see the target tile so remote pointing can originate from a camera/core.
+    /// </summary>
+    public bool TryGetNearestVisibleSource(
+        Entity<BroadphaseComponent, MapGridComponent> grid,
+        Vector2i tile,
+        MapCoordinates target,
+        out EntityUid source,
+        float expansionSize = 8.5f,
+        bool fastPath = false)
+    {
+        source = EntityUid.Invalid;
+
+        _viewportTiles.Clear();
+        _opaque.Clear();
+        _seeds.Clear();
+        _viewportTiles.Add(tile);
+
+        var localBounds = _lookup.GetLocalBounds(tile, grid.Comp2.TileSize);
+        var expandedBounds = localBounds.Enlarged(expansionSize);
+
+        _seedJob.Grid = (grid.Owner, grid.Comp2);
+        _seedJob.ExpandedBounds = expandedBounds;
+        _parallel.ProcessNow(_seedJob);
+        _job.Data.Clear();
+        FastPath = fastPath;
+
+        foreach (var seed in _seeds)
+        {
+            if (!seed.Comp.Enabled)
+                continue;
+
+            _job.Data.Add(seed);
+        }
+
+        if (_job.Data.Count == 0)
+            return false;
+
+        if (!fastPath)
+        {
+            var tileEnumerator = _maps.GetLocalTilesEnumerator(grid, grid, expandedBounds, ignoreEmpty: false);
+
+            while (tileEnumerator.MoveNext(out var tileRef))
+            {
+                if (IsOccluded(grid, tileRef.GridIndices))
+                    _opaque.Add(tileRef.GridIndices);
+            }
+        }
+
+        for (var i = _job.Vis1.Count; i < 1; i++)
+        {
+            _job.Vis1.Add(new Dictionary<Vector2i, int>());
+            _job.Vis2.Add(new Dictionary<Vector2i, int>());
+            _job.SeedTiles.Add(new HashSet<Vector2i>());
+            _job.BoundaryTiles.Add(new HashSet<Vector2i>());
+        }
+
+        _job.Grid = (grid.Owner, grid.Comp2);
+
+        var nearestDistance = float.MaxValue;
+
+        foreach (var seed in _job.Data)
+        {
+            _singleTiles.Clear();
+            _job.VisibleTiles = _singleTiles;
+
+            var previousData = _job.Data;
+            _job.Data = new List<Entity<StationAiVisionComponent>> { seed };
+            _parallel.ProcessNow(_job, 1);
+            _job.Data = previousData;
+
+            if (!_singleTiles.Contains(tile))
+                continue;
+
+            var seedPosition = _xforms.GetWorldPosition(Transform(seed.Owner));
+            var distance = (seedPosition - target.Position).LengthSquared();
+
+            if (distance >= nearestDistance)
+                continue;
+
+            nearestDistance = distance;
+            source = seed.Owner;
+        }
+
+        return source.IsValid();
     }
 
     private bool IsOccluded(Entity<BroadphaseComponent, MapGridComponent> grid, Vector2i tile)

@@ -12,6 +12,9 @@
     - !type:CharacterDepartmentTimeRequirement # #Misfits Tweak - T7 faction timelock (40h Legion)
       department: CaesarLegion
       min: 144000 # 40 hours
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionOrator
+      min: 28800 # 8 hrs
     - !type:CharacterSpeciesRequirement
       species:
       - Human
@@ -49,6 +52,7 @@
         - SuperMutantGladiator
         cautionPopup: true
         activatorJobs:
+        - CaesarLegionVexillarius
         - CaesarLegionDean
         - CaesarLegionPrimeDecanus
         - CaesarLegionVeteranDecanus
@@ -82,7 +86,6 @@
     back:
     - N14BoxPlasticFilledMilitaryLegion #Misfits Change /Tweak/: Legion uses tribal medicine, not stimpaks
     - N14HealingPowder
-    - N14WeaponPistol10mmPipe  # #Misfits Change - moved from pocket2 to storage; pocket2 now holds armor kit
 
 - type: playTimeTracker
   id: CaesarLegionCenturion

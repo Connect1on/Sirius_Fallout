@@ -3,6 +3,7 @@ using System.Linq;
 using System.Numerics;
 using System.Threading;
 using System.Threading.Tasks;
+using Content.Server._Misfits.NPC.Components; // #Misfit Add: new comp PathfindingCustomizableComponent
 using Content.Server.Administration.Managers;
 using Content.Server.Destructible;
 using Content.Server.NPC.Systems;
@@ -134,6 +135,12 @@ namespace Content.Server.NPC.Pathfinding
                 {
                     switch (request)
                     {
+                        /// Misfit Change: where <see cref="PathfindingSystem.UpdateAStarCustomPath"/> is coupled to
+                        /// <see cref="AStarCustomPathRequest"/> is returned from <see cref="GetRequest"/>
+                        case AStarCustomPathRequest astarCustom:
+                            results[i] = UpdateAStarCustomPath(astarCustom);
+                            break;
+                        // end change
                         case AStarPathRequest astar:
                             results[i] = UpdateAStarPath(astar);
                             break;
@@ -438,7 +445,14 @@ namespace Content.Server.NPC.Pathfinding
             {
                 (layer, mask) = _physics.GetHardCollision(entity, fixtures);
             }
-
+            // Misfit Change: coupling point for new pathfinding. So just remove this to prevent it from running
+            /// <see cref="PathfindingSystem.Update"/> calls <see cref="PathfindingSystem.UpdateAStarCustomPath"/>
+            if (TryComp<PathfindingCustomizableComponent>(entity, out var comp))
+            {
+                return new AStarCustomPathRequest(start, end, flags, range, layer,
+                                                         mask, comp, cancelToken);
+            }
+            // End Change
             return new AStarPathRequest(start, end, flags, range, layer, mask, cancelToken);
         }
 

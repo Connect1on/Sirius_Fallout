@@ -12,7 +12,7 @@
   description: A flag of the United States.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_us
   objectType: Structure
   placementMode: SnapgridCenter
@@ -27,7 +27,7 @@
   description: A Chinese flag.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_china
   objectType: Structure
   placementMode: SnapgridCenter
@@ -42,7 +42,7 @@
   description: A flag of California.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_cali
   objectType: Structure
   placementMode: SnapgridCenter
@@ -57,7 +57,7 @@
   description: A flag of Arizona.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_arizona
   objectType: Structure
   placementMode: SnapgridCenter
@@ -72,7 +72,7 @@
   description: An Enclave flag.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_enclave
   objectType: Structure
   placementMode: SnapgridCenter
@@ -87,7 +87,7 @@
   description: An NCR flag.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_ncr
   objectType: Structure
   placementMode: SnapgridCenter
@@ -102,7 +102,7 @@
   description: A Legion flag.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_legion
   objectType: Structure
   placementMode: SnapgridCenter
@@ -117,7 +117,7 @@
   description: A Rangers flag.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_rangers
   objectType: Structure
   placementMode: SnapgridCenter
@@ -162,7 +162,7 @@
   description: A flag for the state of Colorado.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_colorado
   objectType: Structure
   placementMode: SnapgridCenter
@@ -177,7 +177,7 @@
   description: A flag for the capital of Colorado.
   hide: false
   icon:
-    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor_flags.rsi
     state: flag_denver
   objectType: Structure
   placementMode: SnapgridCenter
@@ -364,6 +364,21 @@
   icon:
     sprite: _Nuclear14/Structures/Decoration/flags.rsi
     state: cotc
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  name: Willowers banner
+  id: MisfitsDecorationFlagTribe
+  graph: MisfitsFlagTribe
+  startNode: start
+  targetNode: FlagTribe
+  # category: construction-category-decorations
+  description: A banner depicting the tree of life.
+  hide: false
+  icon:
+    sprite: _Misfits/Structures/Decoration/tribal_banner.rsi
+    state: banner1
   objectType: Structure
   placementMode: SnapgridCenter
 

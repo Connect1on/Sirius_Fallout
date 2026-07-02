@@ -1,4 +1,5 @@
 // #Misfits Change - Ported from Delta-V surgery contamination system
+using Content.Shared._Misfits.Special;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.Forensics;
@@ -19,6 +20,7 @@ public sealed class SurgeryCleanSystem : EntitySystem
 {
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     public override void Initialize()
     {
@@ -90,7 +92,7 @@ public sealed class SurgeryCleanSystem : EntitySystem
         // #Misfits TODO: Same as above — convert progress feedback to private chat message.
         _popup.PopupClient(Loc.GetString("sanitization-cleaning", ("target", target)), user, user);
 
-        var doAfterArgs = new DoAfterArgs(EntityManager, user, ent.Comp.CleanDelay, new SurgeryCleanDirtDoAfterEvent(), ent, target: target)
+        var doAfterArgs = new DoAfterArgs(EntityManager, user, _special.GetIntelligenceMedicalActionDelay(user, TimeSpan.FromSeconds(ent.Comp.CleanDelay)), new SurgeryCleanDirtDoAfterEvent(), ent, target: target)
         {
             BreakOnMove = true,
             NeedHand = true,

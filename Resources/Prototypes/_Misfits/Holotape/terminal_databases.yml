@@ -14,6 +14,25 @@
 #                                     everything Leadership can do.
 #   adminLabel     (string) Faction-themed label for the Admin checkbox in the UI.
 
+# -- Followers of the Apocalypse: Open Archive --------------------------------
+# Volunteers can read and contribute under existing roots.
+# Doctors manage root records.
+# The Head can mark protected chapter records.
+- type: misfitsTerminalDatabase
+  id: fota-openarchive
+  displayName: Open Archive
+  accentColor: "#E8A838"
+  adminLabel: DIRECTOR
+  accessRead:
+  - FotA
+  accessWrite:
+  - FotA
+  leadershipJobs:
+  - FollowerDoctor
+  - SuperMutantFollowerDoctor
+  adminJobs:
+  - FollowerHead
+
 # ── Brotherhood of Steel: 509th Archive ──────────────────────────────────────
 # Leadership = Heads (Knight / Paladin Commander / Scribe).
 # Admin      = Elder Commander.
@@ -55,7 +74,7 @@
 
 # ── Caesar's Legion: Legio Vera ──────────────────────────────────────────────
 # #Misfits Tweak - Legion has no canonical "leadership tier"; using the closest
-# analogues: Centurion / Orator / Priestess / Houndmaster as Leadership, Legate
+# analogues: Centurion / Optio / Priestess / Houndmaster as Leadership, Legate
 # as Admin (HIGH FRUMENTARII). Adjust if Legion gets a dedicated rank pass.
 - type: misfitsTerminalDatabase
   id: legion-legiovera

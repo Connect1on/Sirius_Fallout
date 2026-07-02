@@ -16,7 +16,7 @@ public sealed class SpecialPenaltySystem : EntitySystem
 
     private const int LowCharismaThreshold = 5;
     private const int LowIntelligenceThreshold = 2;
-    private const int ClumsyLuckThreshold = 4;
+    private const float ClumsyLuckOneChance = 0.10f;
 
     public override void Initialize()
     {
@@ -59,8 +59,8 @@ public sealed class SpecialPenaltySystem : EntitySystem
         else
             ClearLowIntelligence(ent.Owner);
 
-        if (_special.GetEffective(ent.Owner, SpecialStat.Luck, ent.Comp) < ClumsyLuckThreshold)
-            ApplyLuckClumsy(ent.Owner);
+        if (_special.GetEffective(ent.Owner, SpecialStat.Luck, ent.Comp) == 1)
+            ApplyLuckClumsy(ent.Owner, ClumsyLuckOneChance);
         else
             ClearLuckClumsy(ent.Owner);
     }
@@ -86,9 +86,18 @@ public sealed class SpecialPenaltySystem : EntitySystem
         RemComp<LowIntelligenceAccentComponent>(uid);
     }
 
-    private void ApplyLuckClumsy(EntityUid uid)
+    private void ApplyLuckClumsy(EntityUid uid, float chance)
     {
-        EnsureComp<ClumsyComponent>(uid);
+        var hadClumsy = HasComp<ClumsyComponent>(uid);
+        var specialApplied = HasComp<SpecialAppliedClumsyComponent>(uid);
+
+        // Do not weaken or take ownership of clumsy from traits, species, or admin effects.
+        if (hadClumsy && !specialApplied)
+            return;
+
+        var clumsy = EnsureComp<ClumsyComponent>(uid);
+        clumsy.ClumsyDefaultCheck = chance;
+        Dirty(uid, clumsy);
         EnsureComp<SpecialAppliedClumsyComponent>(uid);
     }
 

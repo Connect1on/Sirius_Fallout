@@ -44,9 +44,16 @@
     worldBounds: "-517,-308,484,311"
     tacticalFeed: Brotherhood
     trackBrotherhoodHolotags: true
+  - type: OverwatchConsole
+    monitorTitle: overwatch-monitor-title-bos
+    trackedTags:
+    - IdCardBrotherhood
+  - type: AccessReader
+    access: [["BOS"]] # #Misfits Add - Overwatch feeds require base Brotherhood access
   - type: ActivatableUI
     key: enum.WastelandMapUiKey.Key
   - type: ActivatableUIRequiresPower
+  - type: ActivatableUIRequiresAccess
   - type: UserInterface
     interfaces:
       enum.WastelandMapUiKey.Key:
@@ -88,6 +95,10 @@
     # #Misfits Fix - Use the corrected Wendover AABB so NCR blips align with the rendered map image.
     worldBounds: "-517,-308,484,311"
     tacticalFeed: NCR
+  - type: OverwatchConsole
+    monitorTitle: overwatch-monitor-title-ncr
+    trackedTags:
+    - IdCardNCR
   - type: AccessReader
     access: [["NCR"]] # #Misfits Tweak - was [["NCRCaptain"]], opened to all NCR
   - type: ActivatableUIRequiresAccess

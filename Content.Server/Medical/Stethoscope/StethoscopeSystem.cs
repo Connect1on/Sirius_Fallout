@@ -2,6 +2,7 @@ using Content.Server.Body.Components;
 using Content.Server.Medical.Components;
 using Content.Server.Medical.Stethoscope.Components;
 using Content.Server.Popups;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Actions;
 using Content.Shared.Clothing;
 using Content.Shared.Damage;
@@ -21,6 +22,7 @@ namespace Content.Server.Medical.Stethoscope
         [Dependency] private readonly PopupSystem _popupSystem = default!;
         [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
         [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
+        [Dependency] private readonly SharedSpecialSystem _special = default!;
 
         public override void Initialize()
         {
@@ -98,7 +100,7 @@ namespace Content.Server.Medical.Stethoscope
         // construct the doafter and start it
         private void StartListening(EntityUid scope, EntityUid user, EntityUid target, StethoscopeComponent comp)
         {
-            _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, user, comp.Delay, new StethoscopeDoAfterEvent(), scope, target: target, used: scope)
+            _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, user, _special.GetIntelligenceMedicalActionDelay(user, TimeSpan.FromSeconds(comp.Delay)), new StethoscopeDoAfterEvent(), scope, target: target, used: scope)
             {
                 NeedHand = true,
                 BreakOnMove = true,

@@ -186,6 +186,7 @@ public sealed partial class LatheMenu : DefaultWindow
         RecipeList.Children.Clear();
         BlueprintRecipeList.Children.Clear();
         _entityManager.TryGetComponent(Entity, out LatheComponent? lathe);
+        var materialUseMultiplier = lathe?.MaterialUseMultiplier ?? 1f;
 
         foreach (var prototype in sortedItemRecipesToShow)
         {
@@ -193,8 +194,8 @@ public sealed partial class LatheMenu : DefaultWindow
             // materials physically stored in the workbench storage container (not just
             // the material pool) are counted, enabling the button correctly.
             var canProduce = ServerAvailableMaterials != null
-                ? _lathe.CanProduce(Entity, prototype, quantity, ServerAvailableMaterials, component: lathe)
-                : _lathe.CanProduce(Entity, prototype, quantity, component: lathe);
+                ? _lathe.CanProduce(Entity, prototype, quantity, ServerAvailableMaterials, materialUseMultiplier, component: lathe)
+                : _lathe.CanProduce(Entity, prototype, quantity, materialUseMultiplier, component: lathe);
 
             var control = new RecipeControl(_lathe, prototype, () => GenerateTooltipText(prototype), canProduce, GetRecipeDisplayControl(prototype));
             control.OnButtonPressed += s =>
@@ -210,8 +211,8 @@ public sealed partial class LatheMenu : DefaultWindow
         {
             // #Misfits Fix: Same server-material-amount check for blueprint recipes.
             var canProduce = ServerAvailableMaterials != null
-                ? _lathe.CanProduce(Entity, prototype, quantity, ServerAvailableMaterials, component: lathe)
-                : _lathe.CanProduce(Entity, prototype, quantity, component: lathe);
+                ? _lathe.CanProduce(Entity, prototype, quantity, ServerAvailableMaterials, materialUseMultiplier, component: lathe)
+                : _lathe.CanProduce(Entity, prototype, quantity, materialUseMultiplier, component: lathe);
 
             var control = new RecipeControl(_lathe, prototype, () => GenerateTooltipText(prototype), canProduce, GetRecipeDisplayControl(prototype));
             control.OnButtonPressed += s =>
@@ -239,6 +240,7 @@ public sealed partial class LatheMenu : DefaultWindow
 
         BuildableRecipeList.Children.Clear();
         _entityManager.TryGetComponent(Entity, out LatheComponent? lathe);
+        var materialUseMultiplier = lathe?.MaterialUseMultiplier ?? 1f;
 
         var buildable = new List<LatheRecipePrototype>();
         var itemSearch = SearchBar.Text.Trim().ToLowerInvariant();
@@ -268,8 +270,8 @@ public sealed partial class LatheMenu : DefaultWindow
             // Only include recipes the player can currently build
             // #Misfits Fix: Use server-provided material amounts when available.
             var canBuild = ServerAvailableMaterials != null
-                ? _lathe.CanProduce(Entity, proto, quantity, ServerAvailableMaterials, component: lathe)
-                : _lathe.CanProduce(Entity, proto, quantity, component: lathe);
+                ? _lathe.CanProduce(Entity, proto, quantity, ServerAvailableMaterials, materialUseMultiplier, component: lathe)
+                : _lathe.CanProduce(Entity, proto, quantity, materialUseMultiplier, component: lathe);
             if (canBuild)
                 buildable.Add(proto);
         }
@@ -302,7 +304,8 @@ public sealed partial class LatheMenu : DefaultWindow
     private string GenerateTooltipText(LatheRecipePrototype prototype)
     {
         StringBuilder sb = new();
-        var multiplier = _entityManager.GetComponent<LatheComponent>(Entity).MaterialUseMultiplier;
+        _entityManager.TryGetComponent(Entity, out LatheComponent? lathe);
+        var multiplier = lathe?.MaterialUseMultiplier ?? 1f;
 
         foreach (var (id, amount) in prototype.Materials)
         {
@@ -355,6 +358,7 @@ public sealed partial class LatheMenu : DefaultWindow
 
         return sb.ToString();
     }
+
 
     public void UpdateCategories()
     {

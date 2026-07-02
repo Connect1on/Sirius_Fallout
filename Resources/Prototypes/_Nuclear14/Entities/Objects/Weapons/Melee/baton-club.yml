@@ -61,7 +61,7 @@
     wideAnimationRotation: -135
     damage:
       types:
-        Blunt: 42
+        Blunt: 23 #NOT SO BROKEN NOW LOLOLOLOL -pierow
   - type: Sprite
     sprite: _Nuclear14/Objects/Weapons/Melee/pipe.rsi
     state: icon

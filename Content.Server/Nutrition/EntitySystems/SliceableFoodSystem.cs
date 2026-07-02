@@ -1,3 +1,4 @@
+using Content.Server.Construction;
 using Content.Server.DoAfter;
 using Content.Server.Nutrition.Components;
 using Content.Shared.Chemistry.EntitySystems;
@@ -30,7 +31,9 @@ public sealed class SliceableFoodSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<SliceableFoodComponent, InteractUsingEvent>(OnInteractUsing);
+        // #Misfits Fix - Run before ConstructionSystem so SliceableFood takes priority over construction graphs
+        SubscribeLocalEvent<SliceableFoodComponent, InteractUsingEvent>(OnInteractUsing,
+            before: new[] { typeof(ConstructionSystem) });
         SubscribeLocalEvent<SliceableFoodComponent, SliceFoodDoAfterEvent>(OnSlicedoAfter);
         SubscribeLocalEvent<SliceableFoodComponent, ComponentStartup>(OnComponentStartup);
     }
@@ -38,6 +41,10 @@ public sealed class SliceableFoodSystem : EntitySystem
     private void OnInteractUsing(Entity<SliceableFoodComponent> entity, ref InteractUsingEvent args)
     {
         if (args.Handled)
+            return;
+
+        // #Misfits Fix - Early validation: only start do-after if the used item can actually slice
+        if (!TryComp<UtensilComponent>(args.Used, out var utensil) || (utensil.Types & UtensilType.Knife) == 0)
             return;
 
         var doAfterArgs = new DoAfterArgs(EntityManager,
@@ -53,6 +60,9 @@ public sealed class SliceableFoodSystem : EntitySystem
             NeedHand = true,
         };
         _doAfter.TryStartDoAfter(doAfterArgs);
+
+        // #Misfits Fix - Mark as handled so other systems (UtensilSystem, ConstructionSystem) don't interfere
+        args.Handled = true;
     }
 
     private void OnSlicedoAfter(Entity<SliceableFoodComponent> entity, ref SliceFoodDoAfterEvent args)

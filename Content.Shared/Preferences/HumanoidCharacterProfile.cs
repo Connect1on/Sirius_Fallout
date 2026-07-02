@@ -591,8 +591,26 @@ public sealed partial class HumanoidCharacterProfile : ICharacterProfile
 
         var traits = TraitPreferences
             .Where(prototypeManager.HasIndex<TraitPrototype>)
+            .Where(t => !prototypeManager.Index<TraitPrototype>(t).Hidden)
             .Distinct()
             .ToList();
+
+        // #Misfits Fix - Strip traits for species with restricted customization that don't
+        // explicitly allow any trait categories (e.g. robot/assaultron species). Without this,
+        // players can select traits on a human, switch species to assaultron in char setup,
+        // and have those traits carry over.
+        if (speciesPrototype.RestrictedCustomization
+            && speciesPrototype.AllowedTraitCategories is not { Count: > 0 })
+        {
+            traits.Clear();
+        }
+        else if (speciesPrototype.AllowedTraitCategories is { Count: > 0 })
+        {
+            traits = traits
+                .Where(t => speciesPrototype.AllowedTraitCategories.Contains(
+                    prototypeManager.Index<TraitPrototype>(t).Category))
+                .ToList();
+        }
 
         var maxTraits = configManager.GetCVar(CCVars.GameTraitsMax);
         var defaultPoints = configManager.GetCVar(CCVars.GameTraitsDefaultPoints);

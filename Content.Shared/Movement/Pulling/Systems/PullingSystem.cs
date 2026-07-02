@@ -1,5 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Numerics;
+using Content.Shared._Misfits.Carrying;
+using Content.Shared._Misfits.SpecialStats;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Alert;
@@ -15,6 +17,7 @@ using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Events;
 using Content.Shared.Movement.Systems;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Projectiles;
 using Content.Shared.Pulling.Events;
 using Content.Shared.Standing;
@@ -275,7 +278,19 @@ public sealed class PullingSystem : EntitySystem
 
     private void OnRefreshMovespeed(EntityUid uid, PullerComponent component, RefreshMovementSpeedModifiersEvent args)
     {
+        if (component.Pulling != null &&
+            HasComp<CanFiremanCarryComponent>(uid) &&
+            HasComp<MobStateComponent>(component.Pulling.Value))
+            return;
+
         args.ModifySpeed(component.WalkSpeedModifier, component.SprintSpeedModifier);
+
+        if (component.Pulling == null)
+            return;
+
+        var specialEv = new SpecialCarryPullSpeedModifierEvent(uid);
+        RaiseLocalEvent(uid, ref specialEv, true);
+        args.ModifySpeed(specialEv.Multiplier);
     }
 
     private void OnPullableMoveInput(EntityUid uid, PullableComponent component, ref MoveInputEvent args)

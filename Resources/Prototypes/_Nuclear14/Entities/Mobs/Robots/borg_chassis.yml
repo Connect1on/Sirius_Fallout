@@ -182,6 +182,78 @@
     name: Friendly Protectron Police
     description: |
       Do as your masters say with a literal but reasonable level of logic.
+
+- type: entity
+  parent: N14RobotProtectron
+  id: N14RobotSecuritron
+  name: securitron
+  components:
+  - type: SpamEmitSound
+    minInterval: 12
+    maxInterval: 45
+    sound:
+      collection: N14SecuritronIdle
+      params:
+        volume: -7
+        maxDistance: 6
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-gray.rsi
+    layers:
+    - state: icon
+      map: ["movement"]
+    - state: icon
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: icon
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: walking
+    noMovementLayers:
+      movement:
+        state: icon
+  - type: GhostRole
+    prob: 1
+    makeSentient: true
+    name: Friendly Securitron
+    description: |
+      Do as your masters say with a literal but reasonable level of logic.
+
+- type: entity
+  parent: N14RobotSecuritron
+  id: N14RobotSecuritronBlue
+  name: securitron
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-blue.rsi
+
+- type: entity
+  parent: N14RobotSecuritron
+  id: N14RobotSecuritronBrown
+  name: securitron
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-brown.rsi
+
+- type: entity
+  parent: N14RobotSecuritron
+  id: N14RobotSecuritronRed
+  name: securitron
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-red.rsi
+
+- type: entity
+  parent: N14RobotSecuritron
+  id: N14RobotSecuritronYellow
+  name: securitron
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Mobs/Robots/securitron-yellow.rsi
         
 # Handy Gutsy
 - type: entity

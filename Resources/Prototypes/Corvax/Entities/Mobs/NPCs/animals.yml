@@ -4,6 +4,7 @@
   name: brahdo
   description: "Neigh? That thing has too many legs... Think it bites? Might ride it. Might eat it."
   components:
+  - type: Vehicle # for some reason this is the only comp that forces it to take just one hand.
   - type: Sprite
     drawdepth: Mobs
     layers:
@@ -20,8 +21,8 @@
         density: 50
         mask:
         - MobMask
-        layer:
-        - MobLayer
+#        layer:
+#        - MobLayer
   - type: DamageStateVisuals
     states:
       Alive:
@@ -37,6 +38,12 @@
       components:
       - HumanoidAppearance
       - RidingPerk
+    # #Misfits Fix - Super Mutants and Power Armor wearers are too heavy to ride
+    blacklist:
+      tags:
+      - CannotRide
+      components:
+      - PowerArmorWorn
     buckleSound:
       path: /Audio/_NC/Effects/lift-saddle.ogg
       params:

@@ -812,6 +812,9 @@
     sprite: _Nuclear14/Clothing/OuterClothing/Armor/falloutNCRvestcoatblack.rsi
   - type: Clothing
     sprite: _Nuclear14/Clothing/OuterClothing/Armor/falloutNCRvestcoatblack.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1.10
+    sprintModifier: 1.10
   - type: Armor
     modifiers:
       coefficients:
@@ -1113,8 +1116,8 @@
   - type: ExplosionResistance
     damageCoefficient: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 1.1 # same as legion recon armor
-    sprintModifier: 1.1
+    walkModifier: 1.05
+    sprintModifier: 1.05
 
 #MARK: Veteran
 
@@ -1141,6 +1144,17 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.1
     sprintModifier: 1.1
+
+- type: entity
+  parent: N14ClothingOuterRangerCoat
+  id: N14ClothingOuterRangerFieldArmor
+  name: NCR field ranger armor
+  description: A set of combat armor refurbished from old national guard stock, issued to Field Rangers.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/OuterClothing/Armor/falloutrangerfieldarmor.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/OuterClothing/Armor/falloutrangerfieldarmor.rsi
 
 - type: entity
   parent: N14ClothingOuterBase
@@ -1191,7 +1205,7 @@
   parent: N14ClothingOuterRangerCombat
   id: N14ClothingOuterRangerFox
   name: fox ranger combat armor
-  description: A customized and well-worn suit of riot gear with parts of the suit reinforced with leather armor and slain Centurion armor pieces by the wearer. A sniper's veil is wrapped around the neck.
+  description: A customized and well worn suit of riot gear reinforced with leather armor and pieces of a slain Centurion by the wearer. "A. Fox" is stenciled on the left breastplate.
   components:
   - type: Sprite
     sprite: _Nuclear14/Clothing/OuterClothing/Armor/falloutrangerfox.rsi
@@ -1601,8 +1615,8 @@
     priceMultiplier: 0.6
   - type: ExplosionResistance
     damageCoefficient: 0.8
-  - type: ClothingSpeedModifier #sirius change
-    walkModifier: 1.1
+  - type: ClothingSpeedModifier # Forge-Change
+    walkModifier: 1.1 # consistency and yes I know we don't have bluprints of these
     sprintModifier: 1.1
 
 # New Midwest BoS stuff after rework
@@ -1936,8 +1950,8 @@
   - type: Armor #sirius change
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
+        Blunt: 0.75
+        Slash: 0.75
         Piercing: 0.7
         Heat: 0.7
     priceMultiplier: 0.5

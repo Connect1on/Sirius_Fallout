@@ -1,4 +1,4 @@
-# Blueprint crafting recipes for Vault and Tribe factions.
+﻿# Blueprint crafting recipes for Vault and Tribe factions.
 # All recipes require a blueprint item in workbench storage.
 
 # =====================================================================
@@ -41,7 +41,7 @@
   materials:
     Steel: 1000
     Glass: 550
-    Circuitry: 500
+    Circuitry: 400
 
 # --- Vault Tier 2 Weapons (Advanced security) ---
 - type: latheRecipe
@@ -53,7 +53,7 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 1500
+    Steel: 3500
     Plastic: 100
     N14Iron: 500
 
@@ -81,9 +81,9 @@
   availableFaction:
   - Vault
   materials:
-    Steel: 600
+    Steel: 4000
     Glass: 375
-    Circuitry: 250
+    Circuitry: 200
     ScrapElectronic: 200
 
 - type: latheRecipe
@@ -97,7 +97,7 @@
   materials:
     Steel: 5000
     Glass: 575
-    Circuitry: 500
+    Circuitry: 400
     Plastic: 750
 
 - type: latheRecipe
@@ -111,7 +111,7 @@
   materials:
     Steel: 6000
     Glass: 500
-    Circuitry: 500
+    Circuitry: 400
     ScrapElectronic: 250
 
 # --- Vault Tier 4 Weapons (Experimental prototypes) ---
@@ -126,7 +126,7 @@
   materials:
     Steel: 4000
     Glass: 1500
-    Circuitry: 250
+    Circuitry: 200
     ScrapElectronic: 150
     Plastic: 500
     N14Gold: 200
@@ -158,7 +158,7 @@
   materials:
     Steel: 7000
     Glass: 1500
-    Circuitry: 575
+    Circuitry: 400
     ScrapElectronic: 500
     Plastic: 750
     N14Gold: 300
@@ -175,7 +175,7 @@
   materials:
     Steel: 6000
     Glass: 2500
-    Circuitry: 800
+    Circuitry: 700
     ScrapElectronic: 575
     Plastic: 750
     N14Gold: 500
@@ -230,7 +230,7 @@
     Cloth: 500
     Thread: 250
     Plastic: 250
-    Circuitry: 250
+    Circuitry: 200
 
 - type: latheRecipe
   id: N14BPVaultArmorPoliceCombat
@@ -259,7 +259,7 @@
     Steel: 7000
     Cloth: 500
     Thread: 200
-    Circuitry: 500
+    Circuitry: 400
     ScrapElectronic: 250
     Plastic: 500
 
@@ -275,7 +275,7 @@
     Steel: 8000
     Cloth: 1000
     Thread: 575
-    Circuitry: 450
+    Circuitry: 400
     ScrapElectronic: 900
     Plastic: 750
 
@@ -291,7 +291,7 @@
     Steel: 9000
     Cloth: 800
     Thread: 750
-    Circuitry: 500
+    Circuitry: 400
     ScrapElectronic: 1000
     N14Iron: 1500
 
@@ -336,10 +336,10 @@
   availableFaction:
   - Vault
   materials:
-    Glass: 100
+    Glass: 500
     Circuitry: 100
-    ScrapElectronic: 100
-    N14Gold: 100
+    ScrapElectronic: 200
+    N14Gold: 800
 
 - type: latheRecipe
   id: N14BPVaultAmmoMag10mmSMG
@@ -646,7 +646,7 @@
   availableFaction:
   - Tribe
   materials:
-    Wood: 1800
+    Wood: 3800
     N14Iron: 1200
     Leather: 500
     N14Gold: 250
@@ -688,7 +688,7 @@
   availableFaction:
   - Tribe
   materials:
-    Steel: 25000
+    Steel: 30000
     N14Iron: 3500
     Wood: 900
     Scrap: 5000
@@ -725,18 +725,6 @@
     Leather: 50
 
 # --- Tribe Tier 2 Armor ---
-- type: latheRecipe
-  id: TribalHelmetofPeace
-  result: TribalHelmetofPeace
-  category: N14BlueprintTribeArmorT2
-  completetime: 20
-  requiresBlueprint: true
-  availableFaction:
-  - Tribe
-  materials:
-    Leather: 1000
-    Cloth: 500
-
 - type: latheRecipe
   id: N14BPTribeArmorBandito
   result: N14ClothingOuterBandito
@@ -789,6 +777,33 @@
     Thread: 125
     Leather: 50
 
+- type: latheRecipe
+  id: N14BPTribeArmorHeadtaker
+  result: N14ClothingOuterheadtaker
+  category: N14BlueprintTribeArmorT2
+  completetime: 11
+  requiresBlueprint: true
+  availableFaction:
+  - Tribe
+  materials:
+    Leather: 275
+    N14Iron: 100
+    Cloth: 1750
+    Thread: 750
+
+- type: latheRecipe
+  id: N14BPTribeArmorShaman
+  result: N14ClothingOutershaman
+  category: N14BlueprintTribeArmorT2
+  completetime: 10
+  requiresBlueprint: true
+  availableFaction:
+  - Tribe
+  materials:
+    Cloth: 2000
+    Thread: 1750
+    Leather: 1500
+
 # --- Tribe Tier 3 Armor ---
 - type: latheRecipe
   id: N14BPTribeArmorTribalArmorHeavy
@@ -803,33 +818,6 @@
     N14Iron: 1200
     Cloth: 200
     Thread: 150
-
-- type: latheRecipe
-  id: N14BPTribeArmorHeadtaker
-  result: N14ClothingOuterheadtaker
-  category: N14BlueprintTribeArmorT3
-  completetime: 11
-  requiresBlueprint: true
-  availableFaction:
-  - Tribe
-  materials:
-    Leather: 275
-    N14Iron: 100
-    Cloth: 1750
-    Thread: 750
-
-- type: latheRecipe
-  id: N14BPTribeArmorShaman
-  result: N14ClothingOutershaman
-  category: N14BlueprintTribeArmorT3
-  completetime: 10
-  requiresBlueprint: true
-  availableFaction:
-  - Tribe
-  materials:
-    Cloth: 2000
-    Thread: 1750
-    Leather: 1500
 
 - type: latheRecipe
   id: N14BPTribeArmorCombatTribal
@@ -1145,9 +1133,35 @@
     Steel: 3000
     Cloth: 1000
     Leather: 500
-    Circuitry: 500
+    Circuitry: 400
 
 # --- Tribe Tier 1 Helmets (head wraps / drylander) ---
+- type: latheRecipe
+  id: N14BPTribeArmorHelmetRadstagSkull
+  result: N14ClothingTribalRadstagSkull
+  category: N14BlueprintTribeArmorT1
+  completetime: 8
+  requiresBlueprint: true
+  availableFaction:
+  - Tribe
+  materials:
+    Leather: 25
+    Thread: 8
+
+- type: latheRecipe
+  id: N14BPTribeArmorHelmetTribalShamanHeadband
+  result: N14ClothingTribalShamanHeadband
+  category: N14BlueprintTribeArmorT1
+  completetime: 5
+  requiresBlueprint: true
+  availableFaction:
+  - Tribe
+  materials:
+    Cloth: 12
+    Thread: 8
+    Leather: 5
+
+# --- Tribe Tier 2 Helmets (warrior wraps / hunter hood) ---
 - type: latheRecipe
   id: N14BPTribeArmorHelmetTribalHeadWraps
   result: N14ClothingTribalHeadWraps
@@ -1163,7 +1177,7 @@
 - type: latheRecipe
   id: N14BPTribeArmorHelmetDrylanderGoggles
   result: N14ClothingDrylanderGoggles
-  category: N14BlueprintTribeArmorT1
+  category: N14BlueprintTribeArmorT2
   completetime: 4
   requiresBlueprint: true
   availableFaction:
@@ -1173,7 +1187,6 @@
     Cloth: 4
     Glass: 100
 
-# --- Tribe Tier 2 Helmets (warrior wraps / hunter hood) ---
 - type: latheRecipe
   id: N14BPTribeArmorHelmetTribalShemagh
   result: N14ClothingTribalShemagh
@@ -1199,11 +1212,10 @@
     Thread: 8
     Leather: 5
 
-# --- Tribe Tier 3 Helmets (champion / shaman) ---
 - type: latheRecipe
   id: N14BPTribeArmorHelmetTribalShamanHat
   result: N14ClothingTribalShamanHat
-  category: N14BlueprintTribeArmorT3
+  category: N14BlueprintTribeArmorT2
   completetime: 6
   requiresBlueprint: true
   availableFaction:
@@ -1214,22 +1226,9 @@
     Leather: 11
 
 - type: latheRecipe
-  id: N14BPTribeArmorHelmetTribalShamanHeadband
-  result: N14ClothingTribalShamanHeadband
-  category: N14BlueprintTribeArmorT3
-  completetime: 5
-  requiresBlueprint: true
-  availableFaction:
-  - Tribe
-  materials:
-    Cloth: 12
-    Thread: 8
-    Leather: 5
-
-- type: latheRecipe
   id: N14BPTribeArmorHelmetHeadtakerwraps
   result: N14ClothingHeadTakerwraps
-  category: N14BlueprintTribeArmorT3
+  category: N14BlueprintTribeArmorT2
   completetime: 6
   requiresBlueprint: true
   availableFaction:
@@ -1239,19 +1238,34 @@
     Thread: 10
     Leather: 8
 
-# --- Tribe Tier 4 Helmets (sacred / elder) ---
 - type: latheRecipe
-  id: N14BPTribeArmorHelmetRadstagSkull
-  result: N14ClothingTribalRadstagSkull
-  category: N14BlueprintTribeArmorT4
+  id: MisfitsBPTribeArmorHelmetHelmetOfPeace
+  result: TribalHelmetofPeace
+  category: N14BlueprintTribeArmorT2
+  completetime: 10
+  requiresBlueprint: true
+  availableFaction:
+  - Tribe
+  materials: # TODO: use Broc and Xander in the actual construction, when Tribe gets its BP adjustments
+    Cloth: 15
+    Thread: 10
+    Leather: 11
+
+# --- Tribe Tier 3 Helmets (champion / shaman) ---
+- type: latheRecipe
+  id: MisfitsBPTribeArmorHelmetRadstagSkull
+  result: MisfitsClothingHeadRadstagHelmet
+  category: N14BlueprintTribeArmorT3
   completetime: 8
   requiresBlueprint: true
   availableFaction:
   - Tribe
   materials:
-    Leather: 25
-    Thread: 8
+    Leather: 20
+    Steel: 500
+    Thread: 10
 
+# --- Tribe Tier 4 Helmets (sacred / elder) ---
 - type: latheRecipe
   id: N14BPTribeArmorHelmetEdlerSkullhelm
   result: N14ClothingHeadHatEdlerSkullhelm
@@ -1264,4 +1278,3 @@
     Leather: 32
     Steel: 1500
     Thread: 10
-

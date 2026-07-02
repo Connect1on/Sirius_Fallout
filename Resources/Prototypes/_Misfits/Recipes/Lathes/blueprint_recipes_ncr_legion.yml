@@ -207,7 +207,7 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 4000
+    Steel: 5000
 
     Wood: 1500
 
@@ -301,13 +301,15 @@
   availableFaction:
   - NCR
   materials:
-    Steel: 4000
+    Steel: 6500
 
     Wood: 1500
 
     Glass: 1000
 
-    N14Iron: 500
+    N14Iron: 800
+
+    N14Brass: 300
 
 
 # --- NCR Tier 3 Weapons (Ranger/Veteran grade) ---
@@ -644,6 +646,20 @@
 
     Leather: 500
 
+- type: latheRecipe
+  id: MisfitsShackledBoots
+  result: MisfitsShackledBoots
+  category: N14BlueprintNCRArmorT1
+  completetime: 6
+  requiresBlueprint: true
+  availableFaction:
+  - NCR
+  materials:
+    Cloth: 800
+
+    Thread: 500
+
+    Steel: 500
 
 - type: latheRecipe
   id: N14BPNCRArmorVestWoods
@@ -1271,6 +1287,21 @@
 
     N14Gunpowder: 20
 
+- type: latheRecipe
+  id: N14BPNCRAmmo40mmGrenade
+  result: N14CartridgeGrenade40mm
+  category: N14BlueprintNCRAmmoT3
+  completetime: 8
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 800
+
+    N14Gunpowder: 1000
+
+    N14Iron: 500
+
 
 # --- NCR Tier 4 Ammo ---
 - type: latheRecipe
@@ -1356,6 +1387,21 @@
 
 
 - type: latheRecipe
+  id: N14BPNCRAmmoOverMag308
+  result: MagazineOver308RifleSniper
+  category: N14BlueprintNCRAmmoT4
+  completetime: 8
+  requiresBlueprint: true
+  availableFaction:
+  - NCR
+  materials:
+    Steel: 1000
+
+    Lead: 500
+
+    N14Gunpowder: 750
+
+- type: latheRecipe
   id: N14BPNCRAmmoMagTopSMG12mm
   result: N14TopMagazineSMG12mm
   category: N14BlueprintNCRAmmoT4
@@ -1403,35 +1449,6 @@
 
     Leather: 150
 
-
-- type: latheRecipe
-  id: N14BPLegionWeaponBrokenPipe
-  result: N14BrokenPipe
-  category: N14BlueprintLegionWeaponsT1
-  completetime: 2
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Scrap: 1000
-
-    ScrapSteel: 400
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponNailBoard
-  result: N14NailBoard
-  category: N14BlueprintLegionWeaponsT1
-  completetime: 2
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Wood: 1000
-
-    N14Iron: 200
-
-
 - type: latheRecipe
   id: N14BPLegionWeaponWastelandSpear
   result: N14WastelandSpear
@@ -1446,23 +1463,6 @@
     N14Iron: 700
 
     Leather: 100
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponRevolver44Tribal
-  result: N14WeaponRevolver44Tribal
-  category: N14BlueprintLegionWeaponsT1
-  completetime: 5
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    N14Iron: 500
-
-    Scrap: 100
-
-    Wood: 500
-
 
 # --- Legion Tier 2 Weapons (Legionnaire grade) ---
 - type: latheRecipe
@@ -1593,6 +1593,106 @@
     Leather: 20
 
 
+- type: latheRecipe
+  id: N14BPLegionWeaponSMGGreaseGun
+  result: N14WeaponSMGGreaseGun
+  category: N14BlueprintLegionWeaponsT2
+  completetime: 11
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 4500
+
+    N14Iron: 100
+
+    N14Brass: 150
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponRifle556EM2
+  result: N14WeaponRifle556EM2
+  category: N14BlueprintLegionWeaponsT2
+  completetime: 11
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 5000
+
+    N14Iron: 500
+
+    Scrap: 500
+
+    Wood: 2000
+
+    Glass: 500
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponLongSword
+  result: N14LongSword
+  category: N14BlueprintLegionWeaponsT2
+  completetime: 10
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 3000
+
+    N14Iron: 170
+
+    Leather: 70
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponSledgeHammer
+  result: N14SledgeHammer
+  category: N14BlueprintLegionWeaponsT2
+  completetime: 10
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 5000
+
+    Wood: 250
+
+    N14Iron: 120
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponTribalBigClub
+  result: N14TribalBigClub
+  category: N14BlueprintLegionWeaponsT2
+  completetime: 8
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Wood: 3500
+
+    N14Iron: 500
+
+    Leather: 100
+
+
+- type: latheRecipe
+  id: N14BPLegionnaireShield
+  result: N14LegionnaireShield
+  category: N14BlueprintLegionWeaponsT2
+  completetime: 10
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 1000
+
+    Wood: 2000
+
+    Leather: 200
+
+
 # --- Legion Tier 3 Weapons (Veteran grade) ---
 - type: latheRecipe
   id: N14BPLegionWeaponCeremonialSword
@@ -1613,54 +1713,6 @@
 
 
 - type: latheRecipe
-  id: N14BPLegionWeaponLongSword
-  result: N14LongSword
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 10
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 3000
-
-    N14Iron: 170
-
-    Leather: 70
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponSledgeHammer
-  result: N14SledgeHammer
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 10
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 5000
-
-    Wood: 250
-
-    N14Iron: 120
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponTribalBigClub
-  result: N14TribalBigClub
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 8
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Wood: 3500
-
-    N14Iron: 500
-
-    Leather: 100
-
-
-- type: latheRecipe
   id: N14BPLegionWeaponRevolver44TribalExtra
   result: N14WeaponRevolver44TribalUpgradedExtra
   category: N14BlueprintLegionWeaponsT3
@@ -1678,101 +1730,7 @@
     N14Brass: 100
 
 
-- type: latheRecipe
-  id: N14BPLegionWeaponHandcannon
-  result: N14WeaponRevolver45-70Handcannon
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 10
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 5000
-
-    N14Iron: 170
-
-    Scrap: 150
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponRifleM1Garand
-  result: N14WeaponRifleM1Garand
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 12
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 6000
-
-    Wood: 2000
-
-    N14Iron: 150
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponLauncherGrenade
-  result: N14WeaponLauncherGrenade
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 15
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 6000
-
-    N14Iron: 700
-
-    N14Brass: 150
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponBaseballBat
-  result: N14BaseBallBat
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 5
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Wood: 450
-
-    Leather: 50
-
-
 # #Misfits Add - T3 firearm parity: semi-auto shotgun, SMG, and carbine rifle to close gap with NCR
-- type: latheRecipe
-  id: N14BPLegionWeaponShotgunNeostead
-  result: N14WeaponShotgunNeostead
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 12
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 7500
-
-    N14Iron: 350
-
-    Leather: 100
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponSMGGreaseGun
-  result: N14WeaponSMGGreaseGun
-  category: N14BlueprintLegionWeaponsT3
-  completetime: 11
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 4500
-
-    N14Iron: 100
-
-    N14Brass: 150
-
-
 - type: latheRecipe
   id: N14BPLegionWeaponRifle762SKS
   result: N14WeaponRifle762SKS
@@ -1787,6 +1745,24 @@
     Wood: 200
 
     N14Iron: 120
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponSMG10mmSuppressed
+  result: N14WeaponSMG10mmSuppressed
+  category: N14BlueprintLegionWeaponsT3
+  completetime: 12
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 5000
+
+    Scrap: 1000
+
+    N14Iron: 500
+
+    Plastic: 500
 
 
 # #Misfits Add - M240B GPMG for Tier 3 Legion crafting
@@ -1808,6 +1784,104 @@
     Leather: 50
 
 
+- type: latheRecipe
+  id: N14BPLegionWeaponHandcannonUpgraded
+  result: N14WeaponRevolver45-70HandcannonUpgraded
+  category: N14BlueprintLegionWeaponsT3
+  completetime: 14
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 6500
+
+    N14Iron: 1000
+
+    N14Brass: 150
+
+    N14Gold: 500
+
+    N14Silver: 500
+
+    Leather: 500
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponRipper
+  result: N14ripper
+  category: N14BlueprintLegionWeaponsT3
+  completetime: 20
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 3500
+
+    N14Iron: 300
+
+    Circuitry: 200
+
+    ScrapElectronic: 300
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponShotgunAuto
+  result: N14WeaponShotgunAuto
+  category: N14BlueprintLegionWeaponsT3
+  completetime: 14
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 5500
+
+    Wood: 2000
+
+    Scrap: 1500
+
+    N14Iron: 500
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponRifle762Chinese
+  result: N14WeaponRifle762Chinese
+  category: N14BlueprintLegionWeaponsT3
+  completetime: 12
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 6500
+
+    Wood: 2000
+
+    N14Iron: 1000
+
+    Plastic: 500
+
+    N14Brass: 300
+
+
+- type: latheRecipe
+  id: N14BPLegionWeaponRifleSKS
+  result: N14WeaponRifleSKS
+  category: N14BlueprintLegionWeaponsT3
+  completetime: 12
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 6500
+
+    Wood: 1500
+
+    N14Iron: 500
+
+    Leather: 300
+
+    N14Brass: 200
+
+
 # --- Legion Tier 4 Weapons (Legate's elite) ---
 - type: latheRecipe
   id: N14BPLegionWeaponSuperSledgeHammer
@@ -1818,9 +1892,9 @@
   availableFaction:
   - CaesarLegion
   materials:
-    Steel: 12000
+    Steel: 17500
 
-    N14Iron: 3000
+    N14Iron: 5000
 
     Circuitry: 100
 
@@ -1836,49 +1910,17 @@
   availableFaction:
   - CaesarLegion
   materials:
-    Wood: 3000
+    Steel: 3000
 
-    N14Iron: 950
+    Wood: 5000
 
-    Leather: 170
+    N14Iron: 1000
 
-    N14Gold: 100
+    Leather: 500
 
+    N14Gold: 300
 
-- type: latheRecipe
-  id: N14BPLegionWeaponHandcannonUpgraded
-  result: N14WeaponRevolver45-70HandcannonUpgraded
-  category: N14BlueprintLegionWeaponsT4
-  completetime: 14
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 10000
-
-    N14Iron: 300
-
-    N14Brass: 300
-
-    N14Gold: 50
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponRipper
-  result: N14ripper
-  category: N14BlueprintLegionWeaponsT4
-  completetime: 20
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 5500
-
-    N14Iron: 270
-
-    Circuitry: 200
-
-    ScrapElectronic: 150
+    N14Silver: 300
 
 
 - type: latheRecipe
@@ -1890,13 +1932,29 @@
   availableFaction:
   - CaesarLegion
   materials:
-    Steel: 2000
+    Steel: 5000
 
-    N14Iron: 350
+    N14Iron: 1000
 
-    Wood: 2500
+    Wood: 3500
 
-    Leather: 120
+
+- type: latheRecipe
+  id: N14BPLegionWeaponLauncherGrenade
+  result: N14WeaponLauncherGrenade
+  category: N14BlueprintLegionWeaponsT4
+  completetime: 15
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 12000
+
+    N14Iron: 1000
+
+    N14Brass: 500
+
+    Wood: 2000
 
 
 - type: latheRecipe
@@ -1917,7 +1975,30 @@
     ScrapElectronic: 150
 
 
-# #Misfits Add - T4 firearm additions: Bren LMG (.308 FullAuto) and Auto Shotgun for DPS parity with NCR T4
+# #Misfits Add - T4 firearm additions: Bren LMG (.308 FullAuto) and Neostead for DPS parity with NCR T4
+- type: latheRecipe
+  id: N14BPLegionWeaponShotgunNeostead
+  result: N14WeaponShotgunNeostead
+  category: N14BlueprintLegionWeaponsT4
+  completetime: 12
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 8500
+
+    N14Iron: 500
+
+    Leather: 100
+
+    ScrapElectronic: 500
+
+    Circuitry: 200
+
+    N14Brass: 300
+
+
+
 - type: latheRecipe
   id: N14BPLegionWeaponBren
   result: N14WeaponLMGBren
@@ -1927,29 +2008,13 @@
   availableFaction:
   - CaesarLegion
   materials:
-    Steel: 11000
+    Steel: 13000
 
     N14Iron: 250
 
-    N14Brass: 300
+    N14Brass: 1000
 
     Wood: 2000
-
-
-- type: latheRecipe
-  id: N14BPLegionWeaponShotgunAuto
-  result: N14WeaponShotgunAuto
-  category: N14BlueprintLegionWeaponsT4
-  completetime: 14
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 7000
-
-    N14Iron: 150
-
-    N14Brass: 100
 
 
 # #Misfits Add - T5 Legion Weapons: Scorcher flamethrower (apex incendiary weapon)
@@ -1993,22 +2058,6 @@
     Thread: 200
 
 
-- type: latheRecipe
-  id: N14BPLegionArmorExplorerArmor
-  result: N14ClothingOuterLegionnaireExplorerArmor
-  category: N14BlueprintLegionArmorT1
-  completetime: 5
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Leather: 700
-
-    Cloth: 500
-
-    Thread: 200
-
-
 # --- Legion Tier 2 Armor ---
 - type: latheRecipe
   id: N14BPLegionArmorBaseArmor
@@ -2024,24 +2073,6 @@
     Cloth: 1200
 
     Thread: 700
-
-    N14Iron: 500
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorVexillariusArmor
-  result: N14ClothingOuterLegionnaireVexillariusArmor
-  category: N14BlueprintLegionArmorT2
-  completetime: 9
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Leather: 1700
-
-    Cloth: 1200
-
-    Thread: 1000
 
     N14Iron: 500
 
@@ -2076,51 +2107,13 @@
   materials:
     Leather: 700
 
-    Steel: 4500
+    Steel: 8500
 
     Cloth: 300
 
     Thread: 300
 
     N14Iron: 500
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorOratorArmor
-  result: N14ClothingOuterLegionnaireOratorArmor
-  category: N14BlueprintLegionArmorT3
-  completetime: 12
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Leather: 250
-
-    Cloth: 220
-
-    Thread: 170
-
-    N14Iron: 1000
-
-    N14Gold: 150
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorDeanRecruitArmor
-  result: N14ClothingOuterDeanLegionnaireRecruitArmor
-  category: N14BlueprintLegionArmorT3
-  completetime: 14
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 5000
-
-    Leather: 200
-
-    Cloth: 170
-
-    Thread: 150
 
 
 - type: latheRecipe
@@ -2142,62 +2135,24 @@
 
 
 # --- Legion Tier 4 Armor ---
+
+
 - type: latheRecipe
-  id: N14BPLegionArmorDeanVeteranArmor
-  result: N14ClothingOuterDeanLegionnaireVeteranArmor
+  id: N14BPLegionArmorDeanRecruitArmor
+  result: N14ClothingOuterDeanLegionnairePrimeArmor
   category: N14BlueprintLegionArmorT4
-  completetime: 18
+  completetime: 14
   requiresBlueprint: true
   availableFaction:
   - CaesarLegion
   materials:
     Steel: 10000
 
-    Leather: 350
+    N14Iron: 700
 
-    Cloth: 300
+    Leather: 500
 
-    Thread: 200
-
-    N14Iron: 200
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorDeanPrimeArmor
-  result: N14ClothingOuterDeanLegionnairePrimeArmor
-  category: N14BlueprintLegionArmorT4
-  completetime: 20
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 6500
-
-    Leather: 350
-
-    Cloth: 270
-
-    Thread: 200
-
-    N14Iron: 200
-
-
-- type: latheRecipe
-  id: N14BPLegionArmorHeavyCenturionArmor
-  result: N14ClothingOuterHeavyCenturionArmor
-  category: N14BlueprintLegionArmorT4
-  completetime: 22
-  requiresBlueprint: true
-  availableFaction:
-  - CaesarLegion
-  materials:
-    Steel: 10500
-
-    Leather: 450
-
-    N14Iron: 270
-
-    Cloth: 170
+    Cloth: 800
 
     Thread: 150
 
@@ -2336,6 +2291,20 @@
 
     N14Gunpowder: 15
 
+- type: latheRecipe
+  id: N14BPLegionAmmoSKSEnbloc308 # #Misfits Change - new SKSEnbloc308 rep
+  result: SKSEnbloc308
+  category: N14BlueprintLegionAmmoT3
+  completetime: 5
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 200
+
+    Lead: 50
+
+    N14Gunpowder: 50
 
 - type: latheRecipe
   id: N14BPLegionAmmoSpeedLoader45-70
@@ -2362,11 +2331,11 @@
   availableFaction:
   - CaesarLegion
   materials:
-    Steel: 2500
+    Steel: 800
 
-    N14Gunpowder: 200
+    N14Gunpowder: 1000
 
-    N14Iron: 100
+    N14Iron: 500
 
 
 # #Misfits Add - T3 ammo parity: 7.62mm for SKS, and craftable dynamite (Legion explosive doctrine)
@@ -2505,6 +2474,21 @@
     Lead: 1000
 
     N14Gunpowder: 900
+
+- type: latheRecipe
+  id: N14BPLegionAmmoOverMag308
+  result: MagazineOver308RifleSniper
+  category: N14BlueprintLegionAmmoT4
+  completetime: 8
+  requiresBlueprint: true
+  availableFaction:
+  - CaesarLegion
+  materials:
+    Steel: 1000
+
+    Lead: 500
+
+    N14Gunpowder: 750
 
 
 # =====================================================================

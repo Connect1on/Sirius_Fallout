@@ -56,6 +56,11 @@
   - BOS
 
 - type: accessGroup
+  id: BOSOffDuty
+  tags:
+  - BOS
+
+- type: accessGroup
   id: BOSInitiate
   tags:
   - BOS
@@ -91,8 +96,8 @@
   - BOSInitiate
   - BOSScribe
   - BOSSeniorScribe  # #Misfits Change - unified faction
-  - BOSKnight
-  - BOSSeniorKnight  # #Misfits Change - unified faction
+  #- BOSKnight
+  #- BOSSeniorKnight  # #Misfits Change - disallow regular paladin into armory
   - BOSPaladin
   - BOSSeniorPaladin  # #Misfits Change - unified faction: paladins open all paladin-wing doors
 

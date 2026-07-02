@@ -102,9 +102,13 @@
       collection: MetalThud
     activatedDamage:
         types:
-            Heat: 55
+            Heat: 60
+            Shock: 20
+            Structural: 150 # Can-opener. KILL THOSE FUCKING PA CHUDS RIP THEM OPEN AND GORE THEM!
   # Misfits Fix - WelderComponent restores fuel quantity display when held
   - type: Welder
+    fuelConsumption: 1
+    fuelLitCost: 0.5
   - type: RefillableSolution
     solution: Welder
   - type: SolutionContainerManager
@@ -112,8 +116,8 @@
       Welder:
         reagents:
         - ReagentId: WeldingFuel
-          Quantity: 250
-        maxVol: 250
+          Quantity: 60
+        maxVol: 60
   - type: PointLight
     enabled: false
     radius: 2
@@ -152,6 +156,8 @@
     quickEquip: false
     slots:
     - belt
+    - Back
+    - suitStorage
   - type: GenericVisualizer
     visuals:
       enum.ToggleVisuals.Toggled:

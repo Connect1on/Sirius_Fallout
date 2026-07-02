@@ -30,7 +30,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: BoxFolderGrey
+    - id: MisfitsBlueprintMotorbikeAssemblyManual
 
 
 - type: entity

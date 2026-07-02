@@ -8,6 +8,7 @@
   overrideConsoleVisibility: true
   canBeAntag: false
   name: job-name-ncr-doctor
+  overwatchCategory: OverwatchNcrOfficers
   description: job-description-ncr-doctor
   playTimeTracker: NCRMedicalDoctor
   requirements:

@@ -1,6 +1,7 @@
 using Content.Server.DoAfter;
 using Content.Server.Popups;
 using Content.Server.PowerCell;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
 using Content.Shared.Drugs;
@@ -26,6 +27,7 @@ public sealed class PenLightSystem : EntitySystem
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -87,7 +89,7 @@ public sealed class PenLightSystem : EntitySystem
             _popup.PopupEntity(Loc.GetString("penlight-cannot-examine-self"), uid, user);
             return false;
         }
-        return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.ExamSpeed, new PenLightDoAfterEvent(),
+        return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, _special.GetIntelligenceMedicalActionDelay(user, TimeSpan.FromSeconds(component.ExamSpeed)), new PenLightDoAfterEvent(),
             uid, target, uid)
         {
             BlockDuplicate = true,

@@ -78,3 +78,14 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.975
     sprintModifier: 0.975
+
+- type: entity
+  parent: N14ClothingEyesGlassesGoggles
+  id: N14ClothingEyesNCRGoggles
+  name: NCR goggles
+  description: Service goggles favored by NCR troops working under sand, glare, and gun smoke.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Clothing/Eyes/ncrgoggles.rsi
+  - type: Clothing
+    sprite: _Nuclear14/Clothing/Eyes/ncrgoggles.rsi

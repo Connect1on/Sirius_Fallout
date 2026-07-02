@@ -26,13 +26,13 @@
         - /Maps/Misfits/Vault.yml
       - type: StationJobs
         overflowJobs:
-        - Wastelander
+        - Townsperson # #Misfits Change - Townsperson is now the default starter overflow role
         availableJobs:
           SuperMutantEnclave : [ 0, 1 ] # #Misfits Add - Enclave-aligned supermutant latejoin slot.
           SuperMutantFollowerDoctor: [ 1, 1 ] # #Misfits Add: FOTA-aligned supermutant.
           Wastelander: [ -1, -1 ]
           SuperMutant: [ 3, 3 ] # #Misfits Change /Fix/: make the FEV Mutant role available for mid-round joins.
-          SuperMutantGladiator: [ 1, 1 ] # #Misfits Add: Gladiator variant.
+          SuperMutantGladiator: [ 2, 2 ] # #Misfits Add: Gladiator variant.
           SuperMutantNCRRanger: [ 1, 1 ] # #Misfits Add: NCR Ranger variant.
           SuperMutantNCRTrooper: [ 1, 1 ] # #Misfits Add: NCR Trooper variant.
           SuperMutantTribal: [ 1, 1 ] # #Misfits Add: Tribal variant.
@@ -45,27 +45,29 @@
           WastelandFarmer: [ 2, 3 ]
           WastelandChaplain: [ 1, 1 ]
           WastelandBartender: [ 1, 2 ]
-          TribalElder: [ 1, 1 ] # #Misfits Tweak - Yuma Tribe leadership stays singular while the faction expands to 16 total slots.
+          TribalElder: [ 1, 1 ] # #Misfits Tweak - Willowers leadership stays singular while the faction expands to 16 total slots.
           Tribal: [ 8, 8 ]
           TribalFarmer: [ 4, 4 ]
           TribalShaman: [ 3, 3 ] # #Misfits Change - renamed from TribalHealer
+          SyntheticProtectronTribal: [1, 1]
           TownMayor: [ 1, 1 ]
           TownSheriff: [ 1, 1 ]
-          TownDeputy: [ 1, 2 ]
+          TownDeputy: [ 4, 4 ]
           # TownDoctor: [ 1, 1 ] # #Misfits Tweak - disabled; FoTA FollowerDoctor slots replace town medical coverage.
           TownMechanic: [ 2, 2 ]
           TownShopkeeper: [ 1, 1 ]
           TownShopkeeperHelper: [ 1, 1 ] # Forge-Town
-          Townsperson: [ 5, 5 ]
+          Townsperson: [ -1, -1 ] # #Misfits Change - uncapped, now default starter role
           NCRMajor: [ 1, 0 ] # whitelist-only command role; 0 active late-join slots
           NCRCommander: [ 1, 1 ]
           NCRExecutiveOfficer: [ 1, 1 ]
           NCRPlatoonLeader: [ 1, 1 ]
+          NCRRO: [ 1, 1 ]
           NCRChiefRanger: [ 1, 0 ]  # #Misfits Change - admin-only Chief Ranger; renamed from ChiefRanger
           NCRVeteranRanger: [ 1, 1 ] # #Misfits Change - renamed from RangerVeteran
           NCRFieldRanger: [ 1, 1 ]   # #Misfits Add - Field Ranger slot
           NCRPatrolRanger: [ 1, 1 ]  # #Misfits Change - renamed from RangerRecruit (was Patrol Ranger by FTL)
-          NCRRangerRecruit: [ 1, 1 ] # #Misfits Add - entry-level Ranger Recruit slot
+          NCRRangerRecruit: [ 2, 2 ] # #Misfits Add - entry-level Ranger Recruit slot
           NCRFirstSergeant: [ 1, 1 ]
           #NCRStaffSergeant: [ 1, 1 ] # #Misfits Removed - replaced by NCRHeavyTrooper as T5 specialist slot
           NCRHeavyTrooper: [ 2, 2 ]
@@ -77,20 +79,13 @@
           NCRPrivateFirstClass: [ 4, 4 ]
           NCRSoldier: [ 4, 4 ]
           NCRCadet: [ 7, 7 ]
-          NCRPisoner : [ 2, 2 ]
+          NCRPrisoner : [ 2, 2 ]
+          NCRCitizen : [ 4, 4 ]
+          NCRTrader : [ 1, 1 ]
           NCRMilitaryPoliceSergeant: [ 1, 1 ]
           NCRMilitaryPoliceRecruit: [ 2, 2 ]
           NCRMilitaryPoliceCaptain: [ 1, 1 ]
-          # CaravanLeader: [ 1, 1 ]
-          # CaravanTrader: [ 1, 1 ]
-          # CaravanGuard: [ 2, 2 ]
           BoSWestElderCommander: [ 1, 0 ] # Misfits Change # #Misfits Tweak - 0 active slots (admin-notify role)
-          #Misfits Change /Comment-out/: Washington BoS map spawners removed.
-          # BoSWashingtonCommander: [ 1, 1 ]
-          # BoSWashingtonPaladin: [ 1, 1 ]
-          # BoSWashingtonScribe: [ 2, 1 ]
-          # BoSWashingtonKnight: [ 2, 2 ]
-          # BoSWashingtonInitiate: [ 0, 2 ]
           BoSMidPaladinCommander: [ 1, 1 ]
           BoSHeadKnight: [ 1, 1 ]  #Misfits Change /Add/: New consolidated BoS jobs
           BoSWestScribe: [ 1, 1 ] # Misfits Change
@@ -102,7 +97,7 @@
           BoSScribe: [ 3, 3 ]  #Misfits Change /Add/
           BoSMidSquire: [ 3, 3 ]
           BoSInitiate: [ 3, 3 ]  #Misfits Change /Add/
-          # BoSWashingtonInitiate: [ 3, 3 ] #Misfits Change /Comment-out/: Washington BoS removed
+          BoSOffDuty: [4, 4] # Misfits Change - new off-duty BoS role for non-combatants and latejoiners
           Overseer: [ 1, 1 ]
           VaultDoctor: [ 2, 3 ]
           VaultDweller: [ 8, 10 ]
@@ -112,38 +107,43 @@
           CaesarLegionCenturion: [ 1, 1 ] # Forge-Legion
           CaesarLegionVeteranDecanus: [ 1, 1 ] # Forge-Legion
           CaesarLegionDean: [ 1, 1 ] # Forge-Legion
-          CaesarLegionLegionnaireVeteran: [ 4, 4 ] # Forge-Legion
-          CaesarLegionLegionnaireWarrior: [ 4, 4 ] # Forge-Legion
+          CaesarLegionForgemaster: [ 1, 1] # Forge-Legion. heh, get it? FORGE legion
+          CaesarLegionLegionnaireVeteran: [ 2, 2 ] # Forge-Legion
+          CaesarLegionLegionnaireWarrior: [ 2, 2 ] # Forge-Legion
           CaesarLegionLegionnaireRecruit: [ 4, 4 ] # Forge-Legion
-          CaesarLegionVexillarius: [ 1, 1 ] # Forge-Legion
+          CaesarLegionVexillarius: [ 3, 3 ] # Forge-Legion
           CaesarLegionFrumentarii: [ 2, 2 ] # Forge-Legion # #Misfits Tweak - raised total and initial slots from 1 to 2
           CaesarLegionPrimeDecanus: [ 1, 1 ] # Misfits-Legion
-          CaesarLegionExplorer: [ 1, 2 ] # Misfits-Legion
+          CaesarLegionExplorer: [ 1, 6 ] # Misfits-Legion
           CaesarLegionOrator: [ 1, 1 ] # Misfits-Legion
           CaesarLegionPriestessOfMars: [ 1, 1 ] # Misfits-Legion — Priestess of Mars late-join slot
+          CaesarLegionAcolyteOfMars: [ 3, 3 ] # Misfits-Legion — Acolyte of Mars late-join slot
           CaesarLegionHoundmaster: [ 1, 1 ] # Forge-Legion
           # #Misfits Change: CaesarLegionRecruit slot removed — CaesarLegionLegionnaireRecruit (line 103) already covers entry-level.
           CaesarLegionAuxilia: [ 4, 4 ] # #Misfits Change - activated
+          CaesarLegionCitizen: [ 4, 4 ] #
+          CaesarLegionTrader: [ 1, 1 ] #
           CaesarLegionSlave: [ 4, 4 ] # Forge-Legion
           # #Misfits Change - Khan removed (deactivated); Eighties expanded to 5-rank department.
-          EightiesTheBlock:  [ 0, 1 ] # leader, 1 slot
-          EightiesCylinders: [ 0, 2 ] # officer tier, 2 slots
-          EightiesPistons:   [ 0, 3 ] # NCO tier, 3 slots
-          EightiesOilers:    [ 0, 4 ] # specialist tier, 4 slots
-          EightiesRoadRash:  [ 0, 4 ] # recruit tier, 4 slots
+          EightiesTheBlock:  [ 1, 1 ] # leader, 1 slot. set to 1 when ready.
+          EightiesCylinders: [ 2, 2 ] # officer tier, 2 slots. set to 2 when ready.
+          EightiesPistons:   [ 3, 3 ] # NCO tier, 3 slots. set to 3 when ready.
+          EightiesOilers:    [ 4, 4 ] # specialist tier, 4 slots. set to 4 when ready.
+          EightiesRoadRash:  [ 4, 4 ] # recruit tier, 4 slots. set to 4 when ready.
           WhiteLegs: [ 16, 16 ] # #Misfits Change - keep the compatible White Legs base role live at 16 slots until ranked markers are placed.
           WhiteLegsWarChief: [ 0, 0 ] # #Misfits Add - prototype-ready rank, no placed map marker yet.
           WhiteLegsBoneBreaker: [ 0, 0 ] # #Misfits Add - prototype-ready rank, no placed map marker yet.
           WhiteLegsStormDrummer: [ 0, 0 ] # #Misfits Add - prototype-ready rank, no placed map marker yet.
           # WhiteLegsPainMaker: [ 0, 0 ] # #Misfits Change - legacy hidden rank removed from join rotation; WhiteLegs now covers the visible tribal entry slot.
           FollowerVolunteer: [ 2, 2 ] # #Misfits Change - Followers job replaced by ranked hierarchy
-          FollowerDoctor: [ 1, 1 ]   # #Misfits Add - Doctor rank slot
+          FollowerGuard: [ 2, 2 ]      # #Misfits Add - FOTA compound guards
+          FollowerDoctor: [ 2, 2 ]   # #Misfits Add - Doctor rank slot
           FollowerHead: [ 1, 1 ]     # #Misfits Fix - allow Head to round-start as well as latejoin
           SyntheticMrHandy: [ 1, 3 ]
           SyntheticProtectron: [ 1, 3 ]
           SyntheticMrGutsy: [ 1, 3 ]
           SyntheticAssaultron: [ 1, 3 ]
-          SyntheticSentryBot: [ 1, 3 ] # #Misfits Add: sentry bot late join slots
+          SyntheticSentryBot: [ 0, 0 ] # #Misfits Add: sentry bot late join slots
           SyntheticRobobrain: [ 1, 3 ] # #Misfits Add: robobrain late join slots
           # #Misfits Add - Enclave faction activation: whitelist-only roles. Spawns at Vault bunker (~-92.5, 50.5).
           EnclaveReformer: [ 1, 0 ]      # admin-only leader (The Reformer); 0 active latejoin slots

@@ -7,14 +7,19 @@ using Content.Server.NPC.Queries.Queries;
 using Content.Server.Nutrition.Components;
 using Content.Server.Nutrition.EntitySystems;
 using Content.Server.Storage.Components;
+using Content.Server.Weather;
+using Content.Shared._Misfits.C27;
+using Content.Shared._Misfits.Silicon;
 using Content.Shared.Examine;
 using Content.Shared.Fluids.Components;
 using Content.Shared.Hands.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.NPC.Components;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Nutrition.Components;
 using Content.Shared.Nutrition.EntitySystems;
+using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Tools.Systems;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Ranged.Components;
@@ -22,6 +27,7 @@ using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Whitelist;
 using Microsoft.Extensions.ObjectPool;
 using Robust.Server.Containers;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using System.Linq;
@@ -48,6 +54,7 @@ public sealed class NPCUtilitySystem : EntitySystem
     [Dependency] private readonly WeldableSystem _weldable = default!;
     [Dependency] private readonly ExamineSystemShared _examine = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private readonly WeatherSystem _weather = default!;
 
     private EntityQuery<PuddleComponent> _puddleQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -301,12 +308,18 @@ public sealed class NPCUtilitySystem : EntitySystem
             {
                 var radius = blackboard.GetValueOrDefault<float>(blackboard.GetVisionRadiusKey(EntityManager), EntityManager);
 
-                return _examine.InRangeUnOccluded(owner, targetUid, radius + 0.5f, null) ? 1f : 0f;
+                return _weather.CanSeeThroughWeather(owner, targetUid) &&
+                    _examine.InRangeUnOccluded(owner, targetUid, radius + 0.5f, null)
+                        ? 1f
+                        : 0f;
             }
             case TargetInLOSOrCurrentCon:
             {
                 var radius = blackboard.GetValueOrDefault<float>(blackboard.GetVisionRadiusKey(EntityManager), EntityManager);
                 const float bufferRange = 0.5f;
+
+                if (!_weather.CanSeeThroughWeather(owner, targetUid))
+                    return 0f;
 
                 if (blackboard.TryGetValue<EntityUid>("Target", out var currentTarget, EntityManager) &&
                     currentTarget == targetUid &&
@@ -440,6 +453,12 @@ public sealed class NPCUtilitySystem : EntitySystem
             {
                 foreach (var ent in _npcFaction.GetNearbyHostiles(owner, vision))
                 {
+                    if (!CanUseNearbyHostile(owner, ent, blackboard))
+                        continue;
+
+                    if (!_weather.CanSeeThroughWeather(owner, ent))
+                        continue;
+
                     entities.Add(ent);
                 }
                 break;
@@ -447,6 +466,42 @@ public sealed class NPCUtilitySystem : EntitySystem
             default:
                 throw new NotImplementedException();
         }
+    }
+
+    private bool CanUseNearbyHostile(EntityUid owner, EntityUid target, NPCBlackboard blackboard)
+    {
+        if (!HasComp<ZaxUnitComponent>(owner))
+            return true;
+
+        if (blackboard.TryGetValue<EntityUid>(NPCBlackboard.CurrentOrderedTarget, out var orderedTarget, EntityManager) &&
+            orderedTarget == target)
+        {
+            return true;
+        }
+
+        if (IsProtectedZaxNaturalTarget(target))
+        {
+            return false;
+        }
+
+        // #Misfits Change - ZAX opportunistic targeting only considers naturally hostile NPC factions.
+        // Current ordered targets are reserved for explicit Station AI engage orders and direct retaliation.
+        if (!TryComp<NpcFactionMemberComponent>(owner, out var ownerFaction) ||
+            !TryComp<NpcFactionMemberComponent>(target, out var targetFaction))
+        {
+            return false;
+        }
+
+        return targetFaction.Factions.Any(faction => _npcFaction.IsFactionHostile(faction, (owner, ownerFaction))) &&
+            !_npcFaction.IsEntityFriendly(owner, target);
+    }
+
+    private bool IsProtectedZaxNaturalTarget(EntityUid target)
+    {
+        return HasComp<ActorComponent>(target) ||
+            HasComp<BorgChassisComponent>(target) ||
+            HasComp<ZaxUnitComponent>(target) ||
+            HasComp<MisfitsC27Component>(target);
     }
 
     private void RecursiveAdd(EntityUid uid, HashSet<EntityUid> entities)

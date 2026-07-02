@@ -7,6 +7,7 @@
   overrideConsoleVisibility: false
   canBeAntag: false
   name: job-name-ncr-staff-sergeant
+  overwatchCategory: OverwatchNcrNcos
   description: job-description-ncr-staff-sergeant
   playTimeTracker: NCRStaffSergeant
   requirements:

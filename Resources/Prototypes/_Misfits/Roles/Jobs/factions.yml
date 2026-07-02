@@ -12,6 +12,7 @@
   - SyntheticProtectron
   - SyntheticMrGutsy
   - SyntheticRobobrain
+  - SyntheticProtectronTribal
 
 # #Misfits Change
 - type: department
@@ -52,6 +53,7 @@
   - EnclaveJuniorScientist
   - EnclaveNCO
   - EnclaveEnlisted
+  - EnclaveRecruit       # #Misfits Add - hidden job for per-round recruitment playtime tracking
   - SuperMutantEnclave
 
 # #Misfits Add — Caesar's Legion department. Groups all Legion roles for the
@@ -70,6 +72,7 @@
 #  - CaesarLegionPrimeDecanus
 #  - CaesarLegionVeteranDecanus
 #  - CaesarLegionDean
+#  - CeasarLegionForgemaster
 #  - CaesarLegionVexillarius
 #  - CaesarLegionHoundmaster
 #  - CaesarLegionFrumentarii
@@ -80,6 +83,8 @@
 #  - CaesarLegionAuxilia
 #  - CaesarLegionRecruit
 #  - CaesarLegionSlave
+#  - CaesarLegionCitizen
+#  - CaesarLegionTrader
 
 # #Misfits Change — Outlaws/Raider department dissolved. The Eighties gang is now its own
 # full department with 5 ranked roles. Khan deactivated. Raider placeholder removed.

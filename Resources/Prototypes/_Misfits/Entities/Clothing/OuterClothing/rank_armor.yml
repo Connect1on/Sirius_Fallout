@@ -181,7 +181,7 @@
   parent: N14ClothingOuterDeanLegionnairePrimeArmor
   id: MisfitsLegionPrimeDecanusArmor
   name: prime decanus armor
-  description: Reinforced Decanus armor bearing the insignia of a Prime Decanus; heavier than standard Decanus plating.
+  description: Reinforced Decanus armor bearing the insignia of a Prime Decanus; it has refined craftsmanship compared to a regular Decanus' armor.
   components:
   - type: Armor
     modifiers:
@@ -191,6 +191,9 @@
         Piercing: 0.60
         Heat: 0.60
     priceMultiplier: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 1.00
+    sprintModifier: 1.00
   - type: ExplosionResistance
     damageCoefficient: 0.70
 
@@ -209,6 +212,9 @@
         Piercing: 0.55
         Heat: 0.55
     priceMultiplier: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 1.00
+    sprintModifier: 1.00
   - type: ExplosionResistance
     damageCoefficient: 0.65
 

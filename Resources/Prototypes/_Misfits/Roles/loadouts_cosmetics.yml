@@ -20,7 +20,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - ClothingNeckDesertMask
 
@@ -37,7 +37,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - ClothingNeckRedScarf
 
@@ -54,7 +54,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - ClothingNeckBlueScarf
 
@@ -71,7 +71,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - ClothingNeckGreenScarf
 
@@ -88,7 +88,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - ClothingNeckOrangeScarf
 
@@ -105,7 +105,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - ClothingNeckBrownScarf
 
@@ -122,7 +122,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - ClothingNeckPatriotScarf
 
@@ -145,7 +145,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingNeckTownGuardMantle
 
@@ -163,7 +163,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingEyesGlassesPilot
 
@@ -181,7 +181,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
         - VaultDweller   # Vault gets their own gated version (N14LoadoutHandsGlovesDriver)
         - VaultSecurity
         - VaultEngineer
@@ -204,7 +204,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHandsGlovesBlackBiker
 
@@ -220,7 +220,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHandsGlovesBrownBiker
 
@@ -240,7 +240,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHandsGlovesMountie
 
@@ -256,7 +256,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
         - VaultDweller
         - VaultEngineer
         - Overseer
@@ -275,7 +275,7 @@
 #      jobs:
 #        - BoSMidSerf
 #        - CaesarLegionSlave
-#        - NCRPisoner
+#        - NCRPrisoner
 #  items:
 #   - N14ClothingHandsGlovesNitrile
 
@@ -291,7 +291,7 @@
 #      jobs:
 #        - BoSMidSerf
 #        - CaesarLegionSlave
-#        - NCRPisoner
+#        - NCRPrisoner
 # items:
 #    - N14ClothingHandsGlovesNitrilePurple
 
@@ -311,7 +311,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHandsGlovesPatrol
 
@@ -340,6 +340,7 @@
         - NCRCommander
         - NCRMajor
         - NCRDoctor
+        - NCRRO
   items:
     - N14ClothingHandsGlovesNCR
 
@@ -373,7 +374,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingEyesGlassesGoggles
 
@@ -393,7 +394,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHeadHatWoodBoonie
 
@@ -411,7 +412,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHeadHatWinterBoonie
 
@@ -429,7 +430,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHeadHatDesertBoonie
 
@@ -447,7 +448,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHeadHatArmyBeret
 
@@ -465,7 +466,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHeadHatArmyBeretAirborne
 
@@ -483,7 +484,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingHeadHatArmyBeretSpecial
 
@@ -500,7 +501,7 @@
       jobs:
       - BoSMidSerf
       - CaesarLegionSlave
-      - NCRPisoner
+      - NCRPrisoner
     - !type:CharacterDepartmentRequirement
        inverted: true
        departments:
@@ -508,6 +509,24 @@
   items:
     - MisfitsClothingHeadAntlerSkull
 
+- type: loadout
+  id: MisfitsLoadoutHeadRedBandana
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - MisfitsClothingHeadRedBandana
 
 # === Head: NCR soldiers ===
 
@@ -532,6 +551,7 @@
         - NCRCommander
         - NCRMajor
         - NCRDoctor
+        - NCRRO
   items:
     - N14ClothingHeadHatNCRSidecap
 
@@ -571,10 +591,52 @@
         - NCREngineer
         - NCRMedic
         - NCRNCO
+        - NCRRO
         - NCRFirstSergeant
         - NCRHeavyTrooper
   items:
     - N14ClothingHeadHatNCRBeretQM
+
+- type: loadout
+  id: MisfitsLoadoutNeckNCRmantleQM
+  category: Accessories
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRRO
+  items:
+    - N14ClothingNeckROmantleNCR
+
+- type: loadout
+  id: MisfitsLoadoutHeadNCRSlouch
+  category: Accessories
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRDoctor
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+        - NCRNCO
+        - NCREngineer
+        - NCRMedic
+        - NCRWS
+        - NCRHeavyTrooper
+        - NCRCadet
+        - NCRMilitaryPoliceRecruit
+        - NCRMilitaryPoliceSergeant
+        - NCRMilitaryPoliceCaptain
+        - NCRRangerRecruit
+        - NCRFieldRanger
+        - NCRPatrolRanger
+        - NCRVeteranRanger
+        - NCRCitizen
+        - NCRTrader
+        - NCRRO
+  items:
+    - N14ClothingHeadHatNCRSlouch
 
 # === Head: NCR Rangers ===
 
@@ -706,6 +768,32 @@
   items:
     - N14ClothingHeadHatBrotherhoodFieldCap
 
+# #Misfits Add - Belt: Brotherhood of Steel Squire webbing.
+
+- type: loadout
+  id: MisfitsLoadoutSquireWebbingBlack
+  category: Roles
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidSquire
+  items:
+    - MisfitsClothingBeltSquireWebbingBlack
+
+- type: loadout
+  id: MisfitsLoadoutSquireWebbingBrown
+  category: Roles
+  cost: 0
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidSquire
+  items:
+    - MisfitsClothingBeltSquireWebbingBrown
+
 # === Head: Enclave ===
 
 - type: loadout
@@ -807,7 +895,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
         - VaultDoctor
         - VaultSecurity
         - VaultEngineer
@@ -828,7 +916,7 @@
       jobs:
         - BoSMidSerf
         - CaesarLegionSlave
-        - NCRPisoner
+        - NCRPrisoner
   items:
     - N14ClothingBootsLeather
 
@@ -869,6 +957,174 @@
   items:
     - N14ClothingShoesRaider
 
+# === Head: Eighties bike helmets (color variants) ===
+# #Misfits Add - Eighties faction can pick a spiked bike helmet color via loadout
+
+- type: loadout
+  id: MisfitsLoadoutHeadEightiesHelmetBlue
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingHeadBikeHelmet
+
+- type: loadout
+  id: MisfitsLoadoutHeadEightiesHelmetWhite
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingHeadBikeHelmetWhite
+
+- type: loadout
+  id: MisfitsLoadoutHeadEightiesHelmetRed
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingHeadBikeHelmetRed
+
+- type: loadout
+  id: MisfitsLoadoutHeadEightiesHelmetBlack
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingHeadBikeHelmetBlack
+
+- type: loadout
+  id: MisfitsLoadoutHeadEightiesHelmetYellow
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingHeadBikeHelmetYellow
+
+- type: loadout
+  id: MisfitsLoadoutHeadEightiesHelmetOlive
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingHeadBikeHelmetOlive
+
+- type: loadout
+  id: MisfitsLoadoutHeadEightiesHelmetBeige
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingHeadBikeHelmetBeige
+
+# === Uniform: Oiled Pants and Jacket ===
+
+- type: loadout
+  id: MisfitsLoadoutUniform80sPants
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - MisfitsClothingUniform80sPants
+
+- type: loadout
+  id: MisfitsLoadoutOuterCoatJacketBiker
+  category: Outer
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - EightiesTheBlock
+        - EightiesCylinders
+        - EightiesPistons
+        - EightiesOilers
+        - EightiesRoadRash
+  items:
+    - ClothingOuterCoatJacketBiker
+
+
 # === Neck: NCR faction cloaks and mantles ===
 
 - type: loadout
@@ -895,6 +1151,7 @@
         - NCRCommander
         - NCRMajor
         - NCRDoctor
+        - NCRRO
   items:
     - N14ClothingNeckCloakNCR
 
@@ -922,6 +1179,7 @@
         - NCRCommander
         - NCRMajor
         - NCRDoctor
+        - NCRRO
   items:
     - N14ClothingNeckCloakNCRSnow
 

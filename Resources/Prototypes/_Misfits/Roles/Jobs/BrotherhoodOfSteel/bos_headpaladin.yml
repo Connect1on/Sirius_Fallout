@@ -9,6 +9,7 @@
   overrideConsoleVisibility: false
   canBeAntag: true
   name: job-name-bos-mid-paladin-comm
+  overwatchCategory: OverwatchBosPaladin
   description: job-description-bos-mid-paladin-comm
   playTimeTracker: BoSMidPaladinCommander
   requirements:
@@ -37,6 +38,12 @@
         factions:
           - BrotherhoodOfSteel
       - type: PowerArmorProficiency
+      - type: LanguageKnowledge # #Misfits Add: Heads understand Brotherhood binary code by default.
+        speaks:
+        - English
+        understands:
+        - English
+        - N14BrotherBeep
 
 - type: startingGear
   id: BoSMidPaladinCommanderGear

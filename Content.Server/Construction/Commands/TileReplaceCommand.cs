@@ -1,6 +1,7 @@
 using Content.Server.Administration;
 using Content.Shared.Administration;
 using Robust.Shared.Console;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 
@@ -19,6 +20,7 @@ sealed class TileReplaceCommand : IConsoleCommand
 
     public void Execute(IConsoleShell shell, string argStr, string[] args)
     {
+        var mapSystem = _entManager.System<SharedMapSystem>();
         var player = shell.Player;
         EntityUid? gridId;
         string tileIdA;
@@ -70,12 +72,12 @@ sealed class TileReplaceCommand : IConsoleCommand
         }
 
         var changed = 0;
-        foreach (var tile in grid.GetAllTiles())
+        foreach (var tile in mapSystem.GetAllTiles(gridId.Value, grid))
         {
             var tileContent = tile.Tile;
             if (tileContent.TypeId == tileA.TileId)
             {
-                grid.SetTile(tile.GridIndices, new Tile(tileB.TileId));
+                mapSystem.SetTile(gridId.Value, grid, tile.GridIndices, new Tile(tileB.TileId));
                 changed++;
             }
         }

@@ -65,3 +65,15 @@
     sprite: _Nuclear14/Objects/Decoration/Flags/wbos_flagpole.rsi
     state: icon
     noRot: true
+
+- type: entity
+  parent: N14DecorationFlagpoleNCR
+  id: N14DecorationLegionCross
+  name: legioncross
+  description: A brutal Legion crucifixion post built from scavenged timber.
+  suffix: Mapping
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Decoration/Flags/legioncross.rsi
+    state: icon
+    noRot: true

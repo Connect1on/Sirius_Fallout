@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Content.Server.Atmos.EntitySystems;
 using Content.Shared._Misfits.TribalHunt;
 using Content.Shared.Maps;
 using Content.Shared.Mobs;
@@ -44,6 +45,7 @@ public sealed partial class LegendaryCreatureSpawnerSystem : EntitySystem
         ("N14MobYaoguai", "yao guai", 2, 2),
     };
 
+    [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly MobThresholdSystem _mobThreshold = default!;
@@ -211,7 +213,12 @@ public sealed partial class LegendaryCreatureSpawnerSystem : EntitySystem
         var gridCoords = _mapSystem.GridTileToLocal(gridUid, gridComp, tileIndices);
         var tileRef = _mapSystem.GetTileRef(gridUid, gridComp, gridCoords);
 
-        if (tileRef.Tile.IsSpace() || _turf.IsTileBlocked(tileRef, CollisionGroup.MobMask))
+        // #Misfits Fix - Also reject air-blocked tiles (inside walls, sealed rooms) and
+        // space tiles. Using only IsTileBlocked with MobMask missed fully enclosed areas
+        // where no mob-collidable fixture overlaps the exact tile center.
+        if (tileRef.Tile.IsSpace()
+            || _turf.IsTileBlocked(tileRef, CollisionGroup.MobMask)
+            || _atmosphere.IsTileAirBlocked(gridUid, tileIndices, mapGridComp: gridComp))
             return false;
 
         spawnCoords = gridCoords;

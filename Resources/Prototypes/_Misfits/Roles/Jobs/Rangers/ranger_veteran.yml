@@ -4,6 +4,7 @@
   alwaysUseSpawner: true
   jobWhitelistBypassesRoleTimers: true
   name: job-name-ranger-veteran-n14
+  overwatchCategory: OverwatchNcrRangers
   description: job-description-ranger-veteran-n14
   playTimeTracker: NCRVeteranRanger
   weight: 10
@@ -30,23 +31,9 @@
       department: Rangers
       min: 144000 # 40 hours
     - !type:CharacterSpeciesRequirement # #Misfits Change - robots, super mutants, and glowing ghouls cannot be Rangers
-      inverted: true
       species:
-      - RobotMrHandy
-      - RobotProtectron
-      - RobotProtectronPolice # #Misfits Fix - missing variant species
-      - RobotProtectronBuilder # #Misfits Fix - missing variant species
-      - RobotProtectronFire # #Misfits Fix - missing variant species
-      - RobotMrGutsy
-      - RobotAssaultron
-      - RobotAssaultronTesla # #Misfits Fix - missing variant species
-      - RobotSentryBot # #Misfits Fix - missing robot chassis
-      - RobotSentryBotLaser # #Misfits Fix - missing variant species
-      - RobotRobobrain # #Misfits Fix - missing robot chassis
-      - RobotRobobrainLaser # #Misfits Fix - missing variant species
-      - SuperMutant
-      - GhoulGlowing # #Misfits Tweak - glowing ghouls not allowed in NCR Rangers
-      - Nightkin
+      - Human
+      - Ghoul
 
 - type: startingGear
   id: NCRVeteranRangerGear

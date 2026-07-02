@@ -14,6 +14,7 @@ using Content.Server.NodeContainer.Nodes;
 using Content.Server.Power.Components;
 using Content.Server.Temperature.Components;
 using Content.Shared.Atmos;
+using Content.Shared._Misfits.Special;
 using Content.Shared.UserInterface;
 using Content.Shared.Chemistry;
 using Content.Shared.Chemistry.Components;
@@ -54,6 +55,7 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
     [Dependency] private readonly ReactiveSystem _reactiveSystem = default!;
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly NodeContainerSystem _nodeContainer = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     public override void Initialize()
     {
@@ -140,7 +142,7 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         if (entity.Comp.BodyContainer.ContainedEntity != null)
             return;
 
-        var doAfterArgs = new DoAfterArgs(EntityManager, args.User, entity.Comp.EntryDelay, new CryoPodDragFinished(), entity, target: args.Dragged, used: entity)
+        var doAfterArgs = new DoAfterArgs(EntityManager, args.User, _special.GetIntelligenceMedicalActionDelay(args.User, TimeSpan.FromSeconds(entity.Comp.EntryDelay)), new CryoPodDragFinished(), entity, target: args.Dragged, used: entity)
         {
             BreakOnDamage = true,
             BreakOnMove = true,
@@ -217,7 +219,7 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         if (args.Handled || !entity.Comp.Locked || entity.Comp.BodyContainer.ContainedEntity == null)
             return;
 
-        args.Handled = _toolSystem.UseTool(args.Used, args.User, entity.Owner, entity.Comp.PryDelay, "Prying", new CryoPodPryFinished());
+        args.Handled = _toolSystem.UseTool(args.Used, args.User, entity.Owner, (float) _special.GetIntelligenceMedicalActionDelay(args.User, TimeSpan.FromSeconds(entity.Comp.PryDelay)).TotalSeconds, "Prying", new CryoPodPryFinished());
     }
 
     private void OnExamined(Entity<CryoPodComponent> entity, ref ExaminedEvent args)

@@ -85,10 +85,13 @@
       Peckish: 200
       Starving: 100
       Dead: 0
-    baseDecayRate: 0.09
-    starvationDamage:
+    baseDecayRate: 0.024 # #Misfits Add - 3x human default (0.008) to reflect massive size / accelerated metabolism
+    starvationDamage:    # Misfits Change - use custom Starvation type
       types:
-        Cold: 0.15
+        Starvation: 0.15
+    recoveryDamage:      # Misfits Add
+      types:
+        Starvation: -0.30
     starvingSlowdownModifier: 0.5
   - type: Thirst #sirius-change
     thresholds:
@@ -98,9 +101,12 @@
       Parched: 100
       Dead: 0
     baseDecayRate: 0.15
-    dehydrationDamage:
+    dehydrationDamage:   # Misfits Add - Dehydration damage
       types:
-        Cold: 0.15 # Misfits Change - use Cold damage for Dehydration instead of custom Dehydration type (no brute/bleed from thirst)
+        Dehydration: 0.15
+    recoveryDamage:      # Misfits Add - Dehydration damage
+      types:
+        Dehydration: -0.30
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: SuperMutant
@@ -202,6 +208,16 @@
       groups:
         Brute: -0.5
         Genetic: -10
+  - type: Tag # #Misfits Add - Super Mutants cannot ride mounts (too heavy)
+    tags:
+    - CannotRide
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+  # #Misfits Add - Super Mutants are big stompy bois. Loud footsteps.
+  - type: FootstepVolumeModifier
+    sprintVolumeModifier: 15
+    walkVolumeModifier: 15
 
 - type: entity
   save: false

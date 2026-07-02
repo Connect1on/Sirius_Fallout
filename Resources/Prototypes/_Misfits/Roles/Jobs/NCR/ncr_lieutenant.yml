@@ -7,6 +7,7 @@
   overrideConsoleVisibility: false
   canBeAntag: true
   name: job-name-ncr-executive-officer
+  overwatchCategory: OverwatchNcrOfficers
   description: job-description-ncr-executive-officer
   playTimeTracker: NCRExecutiveOfficer
   requirements:

@@ -3,6 +3,7 @@
   setPreference: false
   alwaysUseSpawner: true
   name: job-name-ranger-chief
+  overwatchCategory: OverwatchNcrRangers
   description: job-description-ranger-chief
   playTimeTracker: RangerChief
   # #Misfits Tweak - Weight set to 0; rank not actively used, prevents blocking war declarations
@@ -26,22 +27,9 @@
   requirements:
     - !type:CharacterWhitelistRequirement
     - !type:CharacterSpeciesRequirement # #Misfits Change - robots and super mutants cannot be Rangers
-      inverted: true
       species:
-      - RobotMrHandy
-      - RobotProtectron
-      - RobotProtectronPolice # #Misfits Fix - missing variant species
-      - RobotProtectronBuilder # #Misfits Fix - missing variant species
-      - RobotProtectronFire # #Misfits Fix - missing variant species
-      - RobotMrGutsy
-      - RobotAssaultron
-      - RobotAssaultronTesla # #Misfits Fix - missing variant species
-      - RobotSentryBot # #Misfits Fix - missing robot chassis
-      - RobotSentryBotLaser # #Misfits Fix - missing variant species
-      - RobotRobobrain # #Misfits Fix - missing robot chassis
-      - RobotRobobrainLaser # #Misfits Fix - missing variant species
-      - SuperMutant
-      - Nightkin
+      - Human
+      - Ghoul
 
 - type: startingGear
   id: RangerChiefGear

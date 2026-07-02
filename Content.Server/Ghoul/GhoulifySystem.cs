@@ -4,13 +4,15 @@ using Content.Shared.Radiation.Events;
 using Content.Server.Polymorph.Systems;
 using Content.Shared.Popups;
 using Content.Shared.Examine;
-using Robust.Shared.Utility;
 using Robust.Shared.Random;
 using Content.Server._Misfits.GhoulReversal; // #Misfits Change
-using Content.Shared._N14.Radiation.Components; // #Misfits Tweak: RadiationHealing immunity check
 
 namespace Content.Server.Ghoul;
 
+/// <summary>
+/// Misfits Note: we no longer use any of this really. Instead, see <see cref="GhoulifyOnRadiationDeathSystem"/>
+/// and <see cref="Content.Server._Misfits.Ghoul.FeralGhoulifyOverTimeSystem"/>.
+/// </summary>
 public sealed partial class GhoulifySystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
@@ -110,11 +112,6 @@ public sealed partial class GhoulifySystem : EntitySystem
     private void OnFeralIrradiated(EntityUid uid, FeralGhoulifyComponent comp, OnIrradiatedEvent args)
     {
         if (args.TotalRads <= 0)
-            return;
-
-        // #Misfits Tweak: Ghouls with RadiationHealing are radiation-resistant; radiation heals them
-        // rather than harming them, so it should not push them toward feral state.
-        if (HasComp<RadiationHealingComponent>(uid))
             return;
 
         comp.AccumulatedRads += args.TotalRads;

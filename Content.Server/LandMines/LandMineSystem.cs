@@ -2,6 +2,7 @@
 using Content.Server.DoAfter;
 using Content.Server.Explosion.EntitySystems;
 using Content.Shared._Misfits.LandMines;
+using Content.Shared._Misfits.Special;
 using Robust.Shared.GameObjects;
 using Content.Shared.Audio;
 using Content.Shared.Construction.Components;
@@ -30,6 +31,7 @@ public sealed class LandMineSystem : EntitySystem
     [Dependency] private readonly SharedAmbientSoundSystem _ambientSound = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     public override void Initialize()
     {
@@ -133,7 +135,7 @@ public sealed class LandMineSystem : EntitySystem
                         Loc.GetString("land-mine-disarm-start", ("mine", uid)),
                         uid, args.User);
 
-                    var da = new DoAfterArgs(EntityManager, args.User, TimeSpan.FromSeconds(4),
+                    var da = new DoAfterArgs(EntityManager, args.User, GetPerceptionMineDelay(args.User, 4f),
                         new LandMineDisarmDoAfterEvent(), uid, target: uid)
                     {
                         BreakOnDamage = true,
@@ -162,7 +164,7 @@ public sealed class LandMineSystem : EntitySystem
                         Loc.GetString("land-mine-arm-start", ("mine", uid)),
                         uid, args.User);
 
-                    var da = new DoAfterArgs(EntityManager, args.User, TimeSpan.FromSeconds(2),
+                    var da = new DoAfterArgs(EntityManager, args.User, GetPerceptionMineDelay(args.User, 2f),
                         new LandMineArmDoAfterEvent(), uid, target: uid)
                     {
                         BreakOnDamage = true,
@@ -235,5 +237,17 @@ public sealed class LandMineSystem : EntitySystem
             _transform.Unanchor(uid, xform);
 
         _hands.TryPickupAnyHand(args.User, uid);
+    }
+
+    private TimeSpan GetPerceptionMineDelay(EntityUid user, float baseSeconds)
+    {
+        var tuning = _special.GetTuning();
+        var modifier = _special.GetCurvedEffectModifier(
+            user,
+            SpecialStat.Perception,
+            -tuning.PerceptionMineDelayMultiplierPerPoint);
+        var seconds = MathF.Max(0.5f, baseSeconds * (1f + modifier));
+
+        return TimeSpan.FromSeconds(seconds);
     }
 }

@@ -4,6 +4,7 @@
   overrideConsoleVisibility: false
   canBeAntag: false
   name: job-name-ncr-ranger
+  overwatchCategory: OverwatchNcrRangers
   description: job-description-ncr-ranger
   playTimeTracker: NCRRanger
   requirements:

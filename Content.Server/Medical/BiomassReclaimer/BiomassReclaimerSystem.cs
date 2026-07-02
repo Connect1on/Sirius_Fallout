@@ -6,6 +6,7 @@ using Content.Server.Fluids.EntitySystems;
 using Content.Server.Materials;
 using Content.Server.Power.Components;
 using Content.Shared.Administration.Logs;
+using Content.Shared._Misfits.Special;
 using Content.Shared.Audio;
 using Content.Shared.CCVar;
 using Content.Shared.Chemistry.Components;
@@ -50,6 +51,7 @@ namespace Content.Server.Medical.BiomassReclaimer
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly MaterialStorageSystem _material = default!;
         [Dependency] private readonly SharedMindSystem _minds = default!;
+        [Dependency] private readonly SharedSpecialSystem _special = default!;
 
         [ValidatePrototypeId<MaterialPrototype>]
         public const string BiomassPrototype = "Biomass";
@@ -156,7 +158,7 @@ namespace Content.Server.Medical.BiomassReclaimer
             var delay = reclaimer.Comp.BaseInsertionDelay * (TryComp<PhysicsComponent>(args.Used, out var physics)
                 ? physics.FixturesMass
                 : 1);
-            _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, delay, new ReclaimerDoAfterEvent(), reclaimer, target: args.Target, used: args.Used)
+            _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, _special.GetIntelligenceMedicalActionDelay(args.User, TimeSpan.FromSeconds(delay)), new ReclaimerDoAfterEvent(), reclaimer, target: args.Target, used: args.Used)
             {
                 NeedHand = true,
                 BreakOnMove = true

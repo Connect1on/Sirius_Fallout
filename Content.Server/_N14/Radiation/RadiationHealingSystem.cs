@@ -13,7 +13,7 @@ public sealed partial class RadiationHealingSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
 
-    private static readonly string[] HealableTypes = { "Blunt", "Slash", "Piercing", "Heat" };
+    private static readonly string[] HealableTypes = { "Blunt", "Slash", "Piercing", "Heat", "Cold", "Caustic",};
 
     public override void Update(float frameTime)
     {
@@ -91,21 +91,36 @@ public sealed partial class RadiationHealingSystem : EntitySystem
     /// Intercepts any Radiation damage (including from reagents with ignoreResistances=true)
     /// and converts it to healing instead. Radiation is stripped from the damage specifier so
     /// it never reaches the health pool or body parts.
+    ///
+    /// Misfits Change: Radiation damage will still happen, but will also trigger radiation healing
     /// </summary>
-    private void OnBeforeRadiationDamage(EntityUid uid, RadiationHealingComponent component, ref BeforeDamageChangedEvent args)
+    private void OnBeforeRadiationDamage(
+        EntityUid uid, RadiationHealingComponent component, ref BeforeDamageChangedEvent args
+        )
     {
-        if (!args.Damage.DamageDict.TryGetValue("Radiation", out var radDamage) || radDamage <= FixedPoint2.Zero)
+        if (!args.Damage.DamageDict.TryGetValue("Radiation", out var radDamage) 
+            || radDamage <= FixedPoint2.Zero)
             return;
 
         // Remove radiation — it won't be applied as damage
-        args.Damage.DamageDict.Remove("Radiation");
+        // args.Damage.DamageDict.Remove("Radiation");
 
         // Convert the intercepted radiation into healing spread across physical damage types
-        var healAmount = radDamage.Float() / HealableTypes.Length;
-        DamageSpecifier spec = new();
+        var healAmount = radDamage.Float() * component.HealPerRad;
+        // DamageSpecifier spec = new();
         foreach (var type in HealableTypes)
-            spec.DamageDict[type] = FixedPoint2.New(-healAmount);
+            if (args.Damage.DamageDict.TryGetValue(type, out var damage))
+            {
+                var total = damage - healAmount;
+                args.Damage.DamageDict.Remove(type);
+                args.Damage.DamageDict.Add(type, total);
+            }
+            else
+            {
+                args.Damage.DamageDict.Add(type, -healAmount);
+            }
+            // spec.DamageDict[type] = FixedPoint2.New(-healAmount);
 
-        _damageable.TryChangeDamage(uid, spec, interruptsDoAfters: false);
+        // _damageable.TryChangeDamage(uid, spec, interruptsDoAfters: false);
     }
 }

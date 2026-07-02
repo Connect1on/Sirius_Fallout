@@ -207,6 +207,24 @@
     - /Audio/_Misfits/Mobs/Protectron/taunt2.ogg
     - /Audio/_Misfits/Mobs/Protectron/taunt3.ogg
 
+- type: soundCollection
+  id: N14SecuritronAttack
+  files:
+    - /Audio/_Misfits/Mobs/Securitron/aggro1.ogg
+    - /Audio/_Misfits/Mobs/Securitron/aggro2.ogg
+    - /Audio/_Misfits/Mobs/Securitron/aggro3.ogg
+
+- type: soundCollection
+  id: N14SecuritronIdle
+  files:
+    - /Audio/_Misfits/Mobs/Securitron/idle1.ogg
+    - /Audio/_Misfits/Mobs/Securitron/idle2.ogg
+    - /Audio/_Misfits/Mobs/Securitron/idle3.ogg
+    - /Audio/_Misfits/Mobs/Securitron/idle4.ogg
+    - /Audio/_Misfits/Mobs/Securitron/taunt1.ogg
+    - /Audio/_Misfits/Mobs/Securitron/taunt2.ogg
+    - /Audio/_Misfits/Mobs/Securitron/taunt3.ogg
+
 # Mr. Gutsy aggro/attack sounds
 - type: soundCollection
   id: N14GutsyAttack

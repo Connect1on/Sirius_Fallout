@@ -51,6 +51,7 @@
   - BoSScribe                    # Scribe         | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_scribe.yml  #Misfits Change /Add/
   # Recruits
   - BoSMidSquire                 # Squire         | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_squire.yml
+  - BoSOffDuty                   # Off-duty       | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_off_duty.yml
   #- BoSWashingtonInitiate        # Initiate (old Washington)
   - BoSInitiate                  # Initiate       | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_initiate.yml  #Misfits Change /Add/
   - BoSMidSerf                  # Serf       | _Misfits/Roles/Jobs/BrotherhoodOfSteel/bos_serf.yml  #Misfits Change /Add/
@@ -76,6 +77,7 @@
   # Junior Officers (2LT/1LT pins) — repurposed from NCRLT
   - NCRExecutiveOfficer  # NCR Executive Officer   | _Misfits/Roles/Jobs/NCR/ncr_lieutenant.yml
   - NCRPlatoonLeader     # NCR Platoon Leader      | _Misfits/Roles/Jobs/NCR/ncr_platoon_leader.yml
+  - NCRRO                # NCR Requisition Officer | _Misfits/Roles/Jobs/NCR/ncr_requisition_officer.yml
   # NCOs — 4 map slots, one job (CPL/SGT/SSG/SFC pins)
   - NCRNCO               # NCR NCO (4 slots)       | _Misfits/Roles/Jobs/NCR/ncr_sergeant.yml
   # Specialists (PV2/PFC/SPC pins)
@@ -87,7 +89,9 @@
   # Entry
   - NCRCadet             # NCR Recruit             | _Misfits/Roles/Jobs/NCR/ncr_recruit.yml
   # Special
-  - NCRPisoner           # NCR Prisoner            | _Misfits/Roles/Jobs/NCR/ncr_prisoner.yml
+  - NCRPrisoner           # NCR Prisoner            | _Misfits/Roles/Jobs/NCR/ncr_prisoner.yml
+  - NCRCitizen           # NCR Citizen             | _Misfits/Roles/Jobs/NCR/ncr_citizen.yml # Misfits Add
+  - NCRTrader            # NCR Trader              | _Misfits/Roles/Jobs/NCR/ncr_trader.yml # Misfits Add
   # Special roles outside the visible ladder (hidden from character creation):
   # Hidden — kept for compatibility, not visible in character creation:
   #- NCRMajor            # Superseded — Major is now a loadout pin for NCRCommander
@@ -132,6 +136,7 @@
   - TribalShaman # #Misfits Change - renamed from TribalHealer
   - TribalFarmer
   - Tribal
+  - SyntheticProtectronTribal # Misfits Change
 
 - type: department
   id: Vault
@@ -207,12 +212,13 @@
   - CaesarLegionLegate          # Legate              | _Misfits/Roles/Jobs/CaesarLegion/legion_legate.yml # #Misfits Add
   - CaesarLegionCenturion       # Centurion           | _Misfits/Roles/Jobs/CaesarLegion/legion_centurion.yml # #Misfits Add
   # Support Officers #Misfits Add: Orator and Priestess sit in their own tier between Command and NCOs.
-  - CaesarLegionOrator          # Orator              | _Misfits/Roles/Jobs/CaesarLegion/legion_orator.yml # #Misfits Add
+  - CaesarLegionOrator          # Orator                | _Misfits/Roles/Jobs/CaesarLegion/legion_Orator.yml # #Misfits Add
   - CaesarLegionPriestessOfMars # Priestess of Mars   | _Misfits/Roles/Jobs/CaesarLegion/legion_priestess_of_mars.yml # #Misfits Add
   # Senior NCOs
   - CaesarLegionVeteranDecanus  # Veteran Decanus     | _Misfits/Roles/Jobs/CaesarLegion/legion_veteran_decanus.yml # #Misfits Add
   - CaesarLegionPrimeDecanus    # Prime Decanus       | _Misfits/Roles/Jobs/CaesarLegion/legion_prime_decanus.yml # #Misfits Add
   - CaesarLegionDean            # Decanus             | _Misfits/Roles/Jobs/CaesarLegion/legion_decanus.yml # #Misfits Add
+  - CaesarLegionForgemaster     # Forgemaster         | _Misfits/Roles/Jobs/CaesarLegion/legion_forgemaster.yml # #Misfits Add
   # Warriors
   - CaesarLegionLegionnaireVeteran  # Veteran Legionnaire | _Misfits/Roles/Jobs/CaesarLegion/legion_legionnaire_veteran.yml # #Misfits Add
   - CaesarLegionLegionnaireWarrior  # Legionnaire Warrior | _Misfits/Roles/Jobs/CaesarLegion/legion_legionnaire_warrior.yml # #Misfits Add
@@ -228,3 +234,6 @@
   # - CaesarLegionRecruit         # Recruit             | _Misfits/Roles/Jobs/CaesarLegion/legion_recruit.yml
   - SuperMutantGladiator        # Mutant Gladiator    | _Misfits/Roles/Jobs/SuperMutant/supermutant.yml   # Misfits Add
   - CaesarLegionSlave           # Slave               | _Misfits/Roles/Jobs/CaesarLegion/legion_slave.yml # #Misfits Add
+  - CaesarLegionCitizen         # Civilian            | _Misfits/Roles/Jobs/CaesarLegion/legion_civilian.yml # #Misfits Add
+  - CaesarLegionTrader          # Trader              | _Misfits/Roles/Jobs/CaesarLegion/legion_trader.yml # #Misfits Add
+  - CaesarLegionAcolyteOfMars      # Acolyte of Mars     | _Misfits/Roles/Jobs/CaesarLegion/legion_Acolyte.yml # #Misfits Add

@@ -4,6 +4,8 @@ using Content.Server.Destructible.Thresholds.Behaviors;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Destructible.Thresholds;
+using Content.Shared.Stacks;
+using Content.Shared.Tag;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 using static Content.IntegrationTests.Tests.Destructible.DestructibleTestPrototypes;
@@ -89,6 +91,73 @@ namespace Content.IntegrationTests.Tests.Destructible
 
                 Assert.That(found, Is.True, $"Unable to find {SpawnedEntityId} nearby for destructible test; found {entitiesInRange.Count} entities.");
             });
+            await pair.CleanReturnAsync();
+        }
+
+        [Test]
+        public async Task RcdConstructedEntityDoesNotSpawnSalvage()
+        {
+            await using var pair = await PoolManager.GetServerClient();
+            var server = pair.Server;
+            var testMap = await pair.CreateTestMap();
+
+            var entityManager = server.ResolveDependency<IEntityManager>();
+            var prototypeManager = server.ResolveDependency<IPrototypeManager>();
+            var destructible = EntityUid.Invalid;
+
+            await server.WaitPost(() =>
+            {
+                destructible = entityManager.SpawnEntity(DestructibleDestructionEntityId, testMap.GridCoords);
+                entityManager.System<TagSystem>().AddTag(destructible, RcdConstructedTag);
+            });
+
+            await server.WaitAssertion(() =>
+            {
+                var damage = new DamageSpecifier(prototypeManager.Index<DamageGroupPrototype>("TestBrute"), 50);
+                entityManager.System<DamageableSystem>().TryChangeDamage(destructible, damage, true);
+
+                var nearby = entityManager.System<EntityLookupSystem>()
+                    .GetEntitiesInRange(testMap.GridCoords, 3, LookupFlags.All | LookupFlags.Approximate);
+                var spawned = nearby.Any(entity =>
+                    entityManager.GetComponent<MetaDataComponent>(entity).EntityPrototype?.ID == SpawnedEntityId);
+                Assert.That(spawned, Is.False);
+            });
+
+            await pair.CleanReturnAsync();
+        }
+
+        [Test]
+        public async Task DestroyedStackSpawnsStackedDrops()
+        {
+            await using var pair = await PoolManager.GetServerClient();
+            var server = pair.Server;
+            var testMap = await pair.CreateTestMap();
+
+            var entityManager = server.ResolveDependency<IEntityManager>();
+            var prototypeManager = server.ResolveDependency<IPrototypeManager>();
+            var destructible = EntityUid.Invalid;
+
+            await server.WaitPost(() =>
+            {
+                destructible = entityManager.SpawnEntity(DestructibleStackEntityId, testMap.GridCoords);
+            });
+
+            await server.WaitAssertion(() =>
+            {
+                var damage = new DamageSpecifier(prototypeManager.Index<DamageGroupPrototype>("TestBrute"), 50);
+                entityManager.System<DamageableSystem>().TryChangeDamage(destructible, damage, true);
+
+                var nearby = entityManager.System<EntityLookupSystem>()
+                    .GetEntitiesInRange(testMap.GridCoords, 3, LookupFlags.All | LookupFlags.Approximate);
+                var stacks = nearby
+                    .Where(entity => entityManager.GetComponent<MetaDataComponent>(entity).EntityPrototype?.ID == SpawnedStackEntityId)
+                    .Select(entity => entityManager.GetComponent<StackComponent>(entity).Count)
+                    .OrderByDescending(count => count)
+                    .ToArray();
+
+                Assert.That(stacks, Is.EqualTo(new[] { 3, 2 }));
+            });
+
             await pair.CleanReturnAsync();
         }
     }

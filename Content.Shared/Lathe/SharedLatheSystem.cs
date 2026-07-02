@@ -77,12 +77,37 @@ public abstract class SharedLatheSystem : EntitySystem
     {
         if (!Resolve(uid, ref component))
             return false;
+
+        return CanProduce(uid, recipe, amount, availableMaterials, component.MaterialUseMultiplier, component);
+    }
+
+    public bool CanProduce(EntityUid uid, LatheRecipePrototype recipe, int amount, float materialUseMultiplier, LatheComponent? component = null)
+    {
+        if (!Resolve(uid, ref component))
+            return false;
         if (!HasRecipe(uid, recipe, component))
             return false;
 
         foreach (var (material, needed) in recipe.Materials)
         {
-            var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, component.MaterialUseMultiplier);
+            var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, materialUseMultiplier);
+
+            if (_materialStorage.GetAvailableMaterialAmount(uid, material) < adjustedAmount * amount)
+                return false;
+        }
+        return true;
+    }
+
+    public bool CanProduce(EntityUid uid, LatheRecipePrototype recipe, int amount, Dictionary<ProtoId<MaterialPrototype>, int> availableMaterials, float materialUseMultiplier, LatheComponent? component = null)
+    {
+        if (!Resolve(uid, ref component))
+            return false;
+        if (!HasRecipe(uid, recipe, component))
+            return false;
+
+        foreach (var (material, needed) in recipe.Materials)
+        {
+            var adjustedAmount = AdjustMaterial(needed, recipe.ApplyMaterialDiscount, materialUseMultiplier);
             var available = availableMaterials.GetValueOrDefault(material, 0);
             if (available < adjustedAmount * amount)
                 return false;

@@ -40,6 +40,12 @@ humanoid-profile-editor-robot-model-protectron-standard = Standard
 humanoid-profile-editor-robot-model-protectron-police = Police
 humanoid-profile-editor-robot-model-protectron-builder = Builder
 humanoid-profile-editor-robot-model-protectron-fire = Firefighter
+humanoid-profile-editor-robot-model-protectron-tribal = Tribal Spirit-Tender
+humanoid-profile-editor-robot-model-securitron-gray = Gray
+humanoid-profile-editor-robot-model-securitron-blue = Blue
+humanoid-profile-editor-robot-model-securitron-brown = Brown
+humanoid-profile-editor-robot-model-securitron-red = Red
+humanoid-profile-editor-robot-model-securitron-yellow = Yellow
 
 # Robot model selector labels for Assaultron variants.
 humanoid-profile-editor-robot-model-assaultron-beam = Beam
@@ -57,6 +63,7 @@ humanoid-profile-editor-robot-model-robobrain-laser = Laser
 humanoid-profile-editor-robot-model-c27-generic = Generic Chassis
 humanoid-profile-editor-robot-model-c27-ncr = NCR Issue
 humanoid-profile-editor-robot-model-c27-bos = Brotherhood Issue
+humanoid-profile-editor-robot-model-c27-zax = Z.A.X Chassis
 
 # #Misfits Add - Job selection tab labels (Late Join + Profile Editor).
 job-tab-wasteland = Wasteland

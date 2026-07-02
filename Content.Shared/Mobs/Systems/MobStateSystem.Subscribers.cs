@@ -166,16 +166,22 @@ public partial class MobStateSystem
                 // leave them on the ground — player must press ToggleStanding to get up manually
                 if (!HasComp<LayingDownComponent>(target) || !_standing.IsDown(target))
                     _standing.Stand(target);
+                // #Misfits Add - refresh speed when exiting crit (remove CritCrawlSpeedModifier)
+                _movementSpeed.RefreshMovementSpeedModifiers(target);
                 _appearance.SetData(target, MobStateVisuals.State, MobState.Alive);
                 break;
             case MobState.Critical:
                 if (component.DownWhenCrit)
                     _standing.Down(target);
+                // #Misfits Add - refresh speed when entering crit (LayingDownComponent applies CritCrawlSpeedModifier)
+                _movementSpeed.RefreshMovementSpeedModifiers(target);
                 _appearance.SetData(target, MobStateVisuals.State, MobState.Critical);
                 break;
             case MobState.SoftCritical:
                 if (component.DownWhenSoftCrit)
                     _standing.Down(target);
+                // #Misfits Add - refresh speed when entering soft-crit
+                _movementSpeed.RefreshMovementSpeedModifiers(target);
                 _appearance.SetData(target, MobStateVisuals.State, MobState.Critical);
                 break;
             case MobState.Dead:

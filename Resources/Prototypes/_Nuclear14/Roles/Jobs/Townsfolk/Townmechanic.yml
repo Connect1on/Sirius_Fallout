@@ -12,6 +12,7 @@
       species:
       - Human
       - Ghoul
+      - GhoulGlowing
     #- !type:CharacterDepartmentTimeRequirement # TEMP REMOVED
     #  department: Townsfolk
     #  min: 0 # 2 hours
@@ -33,7 +34,7 @@
   id: TownMechanicGear
   equipment:
     jumpsuit: N14ClothingUniformJumpsuitMechanic
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetTown
     back: N14ClothingBackpackExplorer # Forge-Change
     shoes: N14ClothingShoesBlack
     id: N14IDPassportTownMechanic # Forge-Change

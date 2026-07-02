@@ -1,3 +1,4 @@
+using Content.Shared._Misfits.SpecialStats;
 using Content.Shared.Movement.Systems;
 using Robust.Shared.GameStates;
 
@@ -41,6 +42,13 @@ namespace Content.Shared.Carrying
         private void OnRefreshMoveSpeed(EntityUid uid, CarryingSlowdownComponent component, RefreshMovementSpeedModifiersEvent args)
         {
             args.ModifySpeed(component.WalkModifier, component.SprintModifier);
+
+            if (component.WalkModifier >= 1f && component.SprintModifier >= 1f)
+                return;
+
+            var specialEv = new SpecialCarryPullSpeedModifierEvent(uid);
+            RaiseLocalEvent(uid, ref specialEv, true);
+            args.ModifySpeed(specialEv.Multiplier);
         }
     }
 }

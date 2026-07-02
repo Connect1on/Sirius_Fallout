@@ -20,15 +20,15 @@ using Robust.Shared.Containers;
 using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Hands.Components;
+using Content.Shared.Inventory.VirtualItem;
 
 // Goobstation additions
 using Content.Shared.CCVar;
 using Content.Shared._Goobstation.CCVar;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Weapons.Ranged.Events;
-using Content.Shared.Hands.Components;
-using Content.Shared.Hands.EntitySystems;
-using Content.Shared.Inventory.VirtualItem;
 using Robust.Shared.Configuration;
 using Content.Shared.Vehicles; // for HornActionEvent, SirenActionEvent // sirius-change
 
@@ -50,9 +50,9 @@ public abstract class SharedMechSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!; // Goobstation Change
-    [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!; // Goobstation Change
     [Dependency] private readonly IConfigurationManager _config = default!; // Goobstation Change
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
+    [Dependency] private readonly SharedVirtualItemSystem _virtualItem = default!;
 
     // Goobstation: Local variable for checking if mech guns can be used out of them.
     private bool _canUseMechGunOutside;
@@ -75,6 +75,8 @@ public abstract class SharedMechSystem : EntitySystem
         SubscribeLocalEvent<MechPilotComponent, GetMeleeWeaponEvent>(OnGetMeleeWeapon);
         SubscribeLocalEvent<MechPilotComponent, CanAttackFromContainerEvent>(OnCanAttackFromContainer);
         SubscribeLocalEvent<MechPilotComponent, AttackAttemptEvent>(OnAttackAttempt);
+        SubscribeLocalEvent<MechPilotComponent, AccessibleOverrideEvent>(OnAccessibleOverride);
+        SubscribeLocalEvent<MechPilotComponent, InRangeOverrideEvent>(OnInRangeOverride);
         SubscribeLocalEvent<MechPilotComponent, EntGotRemovedFromContainerMessage>(OnEntGotRemovedFromContainer);
         SubscribeLocalEvent<MechEquipmentComponent, ShotAttemptedEvent>(OnShotAttempted); // Goobstation
 
@@ -437,7 +439,6 @@ public abstract class SharedMechSystem : EntitySystem
         SetupUser(uid, toInsert.Value);
         _container.Insert(toInsert.Value, component.PilotSlot);
         UpdateAppearance(uid, component);
-        UpdateHands(toInsert.Value, uid, true); // Goobstation
         return true;
     }
 
@@ -458,7 +459,6 @@ public abstract class SharedMechSystem : EntitySystem
         RemoveUser(uid, pilot.Value);
         _container.RemoveEntity(uid, pilot.Value);
         UpdateAppearance(uid, component);
-        UpdateHands(pilot.Value, uid, false); // Goobstation
         return true;
     }
  // sirius-change-start
@@ -521,7 +521,7 @@ public abstract class SharedMechSystem : EntitySystem
     {
         return GetPassengerSlots(component).Any(slot => slot.ContainedEntity == uid);
     }
- // sirius-change-end
+    // sirius-change-end
     // Goobstation Change Start
     private void UpdateHands(EntityUid uid, EntityUid mech, bool active)
     {
@@ -588,6 +588,32 @@ public abstract class SharedMechSystem : EntitySystem
     {
         if (args.Target == component.Mech)
             args.Cancel();
+    }
+
+    private void OnAccessibleOverride(EntityUid uid, MechPilotComponent component, ref AccessibleOverrideEvent args)
+    {
+        if (args.User != uid ||
+            !TryComp<MechComponent>(component.Mech, out var mech) ||
+            mech.CurrentSelectedEquipment != null)
+        {
+            return;
+        }
+
+        args.Handled = true;
+        args.Accessible = _interaction.IsAccessible(component.Mech, args.Target);
+    }
+
+    private void OnInRangeOverride(EntityUid uid, MechPilotComponent component, ref InRangeOverrideEvent args)
+    {
+        if (args.User != uid ||
+            !TryComp<MechComponent>(component.Mech, out var mech) ||
+            mech.CurrentSelectedEquipment != null)
+        {
+            return;
+        }
+
+        args.Handled = true;
+        args.InRange = _interaction.InRangeUnobstructed(component.Mech, args.Target);
     }
 
     // Goobstation: Prevent guns being used out of mechs if CCVAR is set.

@@ -22,7 +22,7 @@
   - type: Appearance
   - type: Sprite
     netsync: false
-    sprite: _Misfits/Objects/Weapons/Guns/Ammunition/Magazines/22lrdrum.rsi
+    sprite: _Nuclear14/Objects/Weapons/Guns/Ammunition/Magazines/22lr/smgmag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

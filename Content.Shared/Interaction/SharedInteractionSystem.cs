@@ -17,6 +17,7 @@ using Content.Shared.Interaction.Events;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
+using Content.Shared.Mech.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Pulling.Components;
 using Content.Shared.Movement.Pulling.Systems;
@@ -63,6 +64,7 @@ namespace Content.Shared.Interaction
         [Dependency] private readonly RotateToFaceSystem _rotateToFaceSystem = default!;
         [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
         [Dependency] private readonly SharedPhysicsSystem _broadphase = default!;
+        [Dependency] private readonly SharedMapSystem _mapSystem = default!;
         [Dependency] private readonly SharedTransformSystem _transform = default!;
         [Dependency] private readonly SharedVerbSystem _verbSystem = default!;
         [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
@@ -391,6 +393,14 @@ namespace Content.Shared.Interaction
         {
             if (_relayQuery.TryComp(user, out var relay) && relay.RelayEntity is not null)
             {
+                if (TryComp<MechPilotComponent>(user, out var mechPilot) &&
+                    relay.RelayEntity.Value == mechPilot.Mech &&
+                    TryComp<MechComponent>(mechPilot.Mech, out var mechComp) &&
+                    mechComp.CurrentSelectedEquipment == null)
+                {
+                    goto SkipRelay;
+                }
+
                 // TODO this needs to be handled better. This probably bypasses many complex can-interact checks in weird roundabout ways.
                 if (_actionBlockerSystem.CanInteract(user, target))
                 {
@@ -404,6 +414,8 @@ namespace Content.Shared.Interaction
                     return;
                 }
             }
+
+        SkipRelay:
 
             if (target != null && Deleted(target.Value))
                 return;
@@ -866,8 +878,8 @@ namespace Content.Shared.Interaction
                     ignoreAnchored = angleDelta < wallMount.Arc / 2 || Math.Tau - angleDelta < wallMount.Arc / 2;
                 }
 
-                if (ignoreAnchored && _mapManager.TryFindGridAt(targetCoords, out _, out var grid))
-                    ignored.UnionWith(grid.GetAnchoredEntities(targetCoords));
+                if (ignoreAnchored && _mapManager.TryFindGridAt(targetCoords, out var gridUid, out var grid))
+                    ignored.UnionWith(_mapSystem.GetAnchoredEntities(gridUid, grid, targetCoords));
             }
 
             Ignored combinedPredicate = e => e == target || (predicate?.Invoke(e) ?? false) || ignored.Contains(e);

@@ -62,3 +62,7 @@
 
 - type: Tag
   id: Brick
+
+# Shared no-ride tag used by vehicles and large creature species to block mounting logic.
+- type: Tag
+  id: CannotRide

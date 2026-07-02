@@ -30,7 +30,3 @@ mapping-hide-left-side-tooltip = Свернуть левый блок
 mapping-hide-right-side-tooltip = Свернуть правый блок
 mapping-collapse-all-tooltip = Свернуть всё
 mapping-clear-search-tooltip = Очистить поиск
-
-mapping-replace = Заменить
-mapping-erase-entity = Стереть сущность
-mapping-erase-decal = Стереть декаль

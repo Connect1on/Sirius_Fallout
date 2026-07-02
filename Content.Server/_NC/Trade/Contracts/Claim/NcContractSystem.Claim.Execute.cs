@@ -102,7 +102,7 @@ public sealed partial class NcContractSystem : EntitySystem
             switch (reward.Type)
             {
                 case StoreRewardType.Currency:
-                    _logic.GiveCurrency(ctx.User, reward.Id, reward.Amount);
+                    _logic.GiveCurrency(ctx.User, reward.Id, _logic.ApplyCharismaSellReward(ctx.User, reward.Amount));
                     break;
 
                 case StoreRewardType.Item:

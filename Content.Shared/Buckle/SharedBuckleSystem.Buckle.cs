@@ -44,6 +44,7 @@ public abstract partial class SharedBuckleSystem
 
         SubscribeLocalEvent<BuckleComponent, StartPullAttemptEvent>(OnPullAttempt);
         SubscribeLocalEvent<BuckleComponent, BeingPulledAttemptEvent>(OnBeingPulledAttempt);
+        SubscribeLocalEvent<BuckleComponent, PullAttemptEvent>(OnBucklePullAttempt); // Goobstation
         SubscribeLocalEvent<BuckleComponent, PullStartedMessage>(OnPullStarted);
 
         SubscribeLocalEvent<BuckleComponent, InsertIntoEntityStorageAttemptEvent>(OnBuckleInsertIntoEntityStorageAttempt);
@@ -53,6 +54,13 @@ public abstract partial class SharedBuckleSystem
         SubscribeLocalEvent<BuckleComponent, StandAttemptEvent>(OnBuckleStandAttempt);
         SubscribeLocalEvent<BuckleComponent, ThrowPushbackAttemptEvent>(OnBuckleThrowPushbackAttempt);
         SubscribeLocalEvent<BuckleComponent, UpdateCanMoveEvent>(OnBuckleUpdateCanMove);
+        SubscribeLocalEvent<BuckleComponent, UnbuckleDoAfterEvent>(OnUnbuckleDoAfter); // WD EDIT
+
+        SubscribeLocalEvent<BuckleComponent, BuckleDoAfterEvent>(OnBuckleDoafter);
+        SubscribeLocalEvent<BuckleComponent, DoAfterAttemptEvent<BuckleDoAfterEvent>>((uid, comp, ev) =>
+        {
+            BuckleDoafterEarly((uid, comp), ev.Event, ev);
+        });
     }
 
     private void OnBuckleComponentShutdown(Entity<BuckleComponent> ent, ref ComponentShutdown args)
@@ -73,8 +81,42 @@ public abstract partial class SharedBuckleSystem
             return;
 
         if (!CanUnbuckle(ent!, args.Puller, false))
+        {
             args.Cancel();
+            return;
+        }
+
+        // Goobstation - cancel pull entirely if others are not allowed to unbuckle
+        if (args.Puller != ent.Owner
+            && TryComp<StrapComponent>(ent.Comp.BuckledTo, out var strap)
+            && !strap.AllowOthersToUnbuckle)
+        {
+            args.Cancel();
+
+        }
+        // Goobstation
     }
+    // Goobstation - start unbuckle do-after only on actual pull initiation, not on CanPull checks
+    private void OnBucklePullAttempt(Entity<BuckleComponent> ent, ref PullAttemptEvent args)
+    {
+        if (args.Cancelled || !ent.Comp.Buckled || args.PullerUid == ent.Owner)
+            return;
+
+        if (!TryComp<StrapComponent>(ent.Comp.BuckledTo, out var strap) || strap.UnbuckleDoafterTime <= 0)
+            return;
+
+        if (!CanUnbuckle(ent!, args.PullerUid, false))
+            return;
+
+        args.Cancelled = true;
+        var doAfter = new DoAfterArgs(EntityManager, args.PullerUid, TimeSpan.FromSeconds(strap.UnbuckleDoafterTime), new UnbuckleDoAfterEvent(), ent.Owner, target: ent.Owner)
+        {
+            BreakOnMove = true,
+            BreakOnDamage = true,
+        };
+        _doAfter.TryStartDoAfter(doAfter);
+    }
+    // Goobstation
 
     private void OnPullStarted(Entity<BuckleComponent> ent, ref PullStartedMessage args)
     {
@@ -173,6 +215,13 @@ public abstract partial class SharedBuckleSystem
             args.Cancel();
     }
 
+    private void OnUnbuckleDoAfter(EntityUid uid, BuckleComponent component, UnbuckleDoAfterEvent args)
+    {
+        if (args.Cancelled || !CanUnbuckle((uid, component), args.User, true, out var strap)) // Goobstation
+            return;
+
+        Unbuckle((uid, component), strap, args.User); // Goobstation
+    }
     public bool IsBuckled(EntityUid uid, BuckleComponent? component = null)
     {
         return Resolve(uid, ref component, false) && component.Buckled;
@@ -420,6 +469,26 @@ public abstract partial class SharedBuckleSystem
         if (!CanUnbuckle(buckle, user, popup, out var strap))
             return false;
 
+        // WD EDIT START
+        if (buckle.Owner == user && strap.Comp.SelfUnBuckleDelay != TimeSpan.Zero)
+        {
+            var doAfter = new DoAfterArgs(EntityManager, buckle.Owner, strap.Comp.SelfUnBuckleDelay, new UnbuckleDoAfterEvent(), buckle.Owner);
+            return _doAfter.TryStartDoAfter(doAfter);
+        }
+        // WD EDIT END
+
+        // Goobstation - doafter for unbuckle by others
+        if (user != null && buckle.Owner != user && strap.Comp.UnbuckleDoafterTime > 0)
+        {
+            var doAfter = new DoAfterArgs(EntityManager, user.Value, TimeSpan.FromSeconds(strap.Comp.UnbuckleDoafterTime), new UnbuckleDoAfterEvent(), buckle.Owner, target: buckle.Owner)
+            {
+                BreakOnMove = true,
+                BreakOnDamage = true,
+            };
+            return _doAfter.TryStartDoAfter(doAfter);
+        }
+        // Goobstation
+
         Unbuckle(buckle!, strap, user);
         return true;
     }
@@ -528,6 +597,33 @@ public abstract partial class SharedBuckleSystem
         var unstrapAttempt = new UnstrapAttemptEvent(strap, buckle!, user, popup);
         RaiseLocalEvent(strap, ref unstrapAttempt);
         return !unstrapAttempt.Cancelled;
+    }
+    private void OnBuckleDoafter(Entity<BuckleComponent> entity, ref BuckleDoAfterEvent args)
+    {
+        if (args.Cancelled || args.Handled || args.Target == null || args.Used == null)
+            return;
+
+        args.Handled = TryBuckle(args.Target.Value, args.User, args.Used.Value, popup: false);
+    }
+
+    /// <summary>
+    /// If the target being buckled to a chair/bed goes crit or is cuffed
+    /// Cancel the do-after time and try to buckle the target immediately
+    /// </summary>
+    /// <param name="args.Target"> The person being put in the chair/bed</param>
+    /// <param name="args.User"> The person putting a person in a chair/bed</param>
+    /// <param name="args.Used"> The chair/bed </param>
+    private void BuckleDoafterEarly(Entity<BuckleComponent> entity, BuckleDoAfterEvent args, CancellableEntityEventArgs ev)
+    {
+        if (args.Target == null || args.Used == null)
+            return;
+
+        if (TryComp<CuffableComponent>(args.Target, out var targetCuffableComp) && targetCuffableComp.CuffedHandCount > 0
+            || _mobState.IsIncapacitated(args.Target.Value))
+        {
+            ev.Cancel();
+            TryBuckle(args.Target.Value, args.User, args.Used.Value, popup: false);
+        }
     }
 
 }

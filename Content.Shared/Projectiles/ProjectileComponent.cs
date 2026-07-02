@@ -33,6 +33,13 @@ public sealed partial class ProjectileComponent : Component
     public EntityUid? Weapon;
 
     /// <summary>
+    ///     Optional extra entity to ignore for collision. Used for mech shells so pilot-held weapons
+    ///     do not immediately collide with the mech itself.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public EntityUid? ExtraIgnoredEntity;
+
+    /// <summary>
     ///     The projectile spawns inside the shooter most of the time, this prevents entities from shooting themselves.
     /// </summary>
     [DataField, AutoNetworkedField]
@@ -77,6 +84,6 @@ public sealed partial class ProjectileComponent : Component
     /// <summary>
     ///     Whether this projectile has already damaged an entity.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool DamagedEntity;
 }

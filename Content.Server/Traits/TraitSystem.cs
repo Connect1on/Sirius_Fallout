@@ -60,7 +60,7 @@ public sealed class TraitSystem : EntitySystem
     {
         var pointsTotal = _configuration.GetCVar(CCVars.GameTraitsDefaultPoints);
         var traitSelections = _configuration.GetCVar(CCVars.GameTraitsMax);
-        if (jobId is not null && !_prototype.TryIndex(jobId, out var jobPrototype)
+        if (jobId is not null && _prototype.TryIndex(jobId, out var jobPrototype)
             && jobPrototype is not null && !jobPrototype.ApplyTraits)
             return;
 
@@ -73,6 +73,9 @@ public sealed class TraitSystem : EntitySystem
                 DebugTools.Assert($"No trait found with ID {traitId}!");
                 return;
             }
+
+            if (traitPrototype.Hidden)
+                continue;
 
             if (!_characterRequirements.CheckRequirementsValid(
                 traitPrototype.Requirements,

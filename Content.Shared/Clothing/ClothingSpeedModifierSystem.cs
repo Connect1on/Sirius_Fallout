@@ -1,3 +1,7 @@
+using Content.Shared._Misfits.Special;
+using Content.Shared._Misfits.Special.Components;
+using Content.Shared._Misfits.SpecialStats;
+using Content.Shared._Misfits.SpecialStats.Components;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Examine;
 using Content.Shared.Inventory;
@@ -21,6 +25,7 @@ public sealed class ClothingSpeedModifierSystem : EntitySystem
     [Dependency] private readonly MovementSpeedModifierSystem _movementSpeed = default!;
     [Dependency] private readonly ItemToggleSystem _toggle = default!;
     [Dependency] private readonly SharedPowerCellSystem _powerCell = default!;
+    [Dependency] private readonly SharedSpecialSystem _special = default!;
 
     public override void Initialize()
     {
@@ -60,7 +65,37 @@ public sealed class ClothingSpeedModifierSystem : EntitySystem
     private void OnRefreshMoveSpeed(EntityUid uid, ClothingSpeedModifierComponent component, InventoryRelayedEvent<RefreshMovementSpeedModifiersEvent> args)
     {
         if (_toggle.IsActivated(uid))
-            args.Args.ModifySpeed(component.WalkModifier, component.SprintModifier);
+        {
+            var walkModifier = component.WalkModifier;
+            var sprintModifier = component.SprintModifier;
+
+            // #Misfits Add - strong wearers can keep configurable partial slowdown on heavy bags.
+            ApplyStrengthSlowdown(uid, ref walkModifier, ref sprintModifier);
+
+            args.Args.ModifySpeed(walkModifier, sprintModifier);
+        }
+    }
+
+    /// <summary>
+    /// #Misfits Add - Applies Strength-gated slowdown relief for worn clothing.
+    /// </summary>
+    private void ApplyStrengthSlowdown(EntityUid clothing, ref float walkModifier, ref float sprintModifier)
+    {
+        if (!TryComp<StrengthIgnoreClothingSlowdownComponent>(clothing, out var ignore) ||
+            !_container.TryGetContainingContainer((clothing, null, null), out var container))
+        {
+            return;
+        }
+
+        var wearer = container.Owner;
+        if (!TryComp<SpecialComponent>(wearer, out var special))
+            return;
+
+        if (_special.GetEffective(wearer, SpecialStat.Strength, special) < ignore.MinimumStrength)
+            return;
+
+        walkModifier = ignore.ApplyStrengthModifier(walkModifier, sprint: false);
+        sprintModifier = ignore.ApplyStrengthModifier(sprintModifier, sprint: true);
     }
 
     private void OnClothingVerbExamine(EntityUid uid, ClothingSpeedModifierComponent component, GetVerbsEvent<ExamineVerb> args)

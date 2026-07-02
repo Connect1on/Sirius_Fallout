@@ -33,10 +33,11 @@ public sealed class FactionWarClientSystem : EntitySystem
 
     public IReadOnlyList<PlayerWarEntry> ActiveWars => _activeWars;
     public byte? LocalWarJoinSide { get; private set; }
-    public IReadOnlyDictionary<NetEntity, byte> WarParticipants => _warParticipants;
+    public string? LocalWarKey { get; private set; }
+    public IReadOnlyDictionary<NetEntity, FactionWarParticipantInfo> WarParticipants => _warParticipants;
 
     private List<PlayerWarEntry> _activeWars = new();
-    private Dictionary<NetEntity, byte> _warParticipants = new();
+    private Dictionary<NetEntity, FactionWarParticipantInfo> _warParticipants = new();
     private AllyTagOverlay?    _overlay;
     private FactionWarWindow?  _window;
     private WarJoinWindow?     _warJoinWindow;
@@ -73,6 +74,12 @@ public sealed class FactionWarClientSystem : EntitySystem
             "Open the admin Force War panel.",
             "forcewar",
             OpenForceWarPanel);
+
+        _conHost.RegisterCommand(
+            "surrender",
+            "Surrender in an active war. You will be forced down, incapacitated, and marked as [SURRENDERED].",
+            "surrender",
+            OpenSurrender);
     }
 
     public override void Shutdown()
@@ -92,6 +99,7 @@ public sealed class FactionWarClientSystem : EntitySystem
     private void OnWarStateUpdated(FactionWarStateUpdatedEvent msg)
     {
         _activeWars = msg.ActiveWars;
+        UpdateLocalWarContext();
         UpdateOverlayVisibility();
 
         // Refresh war panel if open so Active Wars list repopulates after respawn/state change.
@@ -109,6 +117,8 @@ public sealed class FactionWarClientSystem : EntitySystem
     private void OnPanelData(PlayerWarPanelDataEvent msg)
     {
         _activeWars = msg.ActiveWars;
+
+        UpdateLocalWarContext();
 
         UpdateOverlayVisibility();
 
@@ -136,17 +146,7 @@ public sealed class FactionWarClientSystem : EntitySystem
 
         _warJoinWindow.UpdateState(msg);
 
-        if (_playerManager.LocalSession?.UserId is { } userId)
-        {
-            LocalWarJoinSide = null;
-            foreach (var war in _activeWars)
-            {
-                if (!war.Participants.TryGetValue(userId, out var side))
-                    continue;
-                LocalWarJoinSide = side;
-                break;
-            }
-        }
+        UpdateLocalWarContext();
 
         UpdateOverlayVisibility();
     }
@@ -163,14 +163,16 @@ public sealed class FactionWarClientSystem : EntitySystem
     private void OnParticipantsUpdated(FactionWarParticipantsUpdatedEvent msg)
     {
         _warParticipants = msg.Participants;
+        UpdateLocalWarContext();
         UpdateOverlayVisibility();
     }
 
     private void OnCeasefireProposal(CeasefireProposalEvent msg)
     {
         _pendingCeasefireProposal = msg;
-        if (_window != null)
-            RaiseNetworkEvent(new FactionWarOpenPanelRequestEvent());
+        EnsureWarWindow();
+        _window!.OpenCentered();
+        RaiseNetworkEvent(new FactionWarOpenPanelRequestEvent());
     }
 
     private void OnForceWarResult(FactionWarForceResultEvent msg)
@@ -212,6 +214,13 @@ public sealed class FactionWarClientSystem : EntitySystem
 
         // Populate the admin panel with the latest online players and active wars.
         RaiseNetworkEvent(new FactionWarOpenPanelRequestEvent());
+    }
+
+    // ── /surrender client command ──────────────────────────────────────────
+
+    private void OpenSurrender(IConsoleShell shell, string argStr, string[] args)
+    {
+        RaiseNetworkEvent(new PlayerWarSurrenderRequestEvent());
     }
 
     // ── Window lifecycle ───────────────────────────────────────────────────
@@ -267,12 +276,11 @@ public sealed class FactionWarClientSystem : EntitySystem
         _warJoinWindow = new WarJoinWindow();
         _warJoinWindow.OnClose += () => _warJoinWindow = null;
 
-        _warJoinWindow.OnJoinWar += (player1, player2, chosenSide) =>
+        _warJoinWindow.OnJoinWar += (warKey, chosenSide) =>
         {
             RaiseNetworkEvent(new PlayerWarJoinRequestEvent
             {
-                Player1 = player1,
-                Player2 = player2,
+                WarKey = warKey,
                 ChosenSide = chosenSide,
             });
         };
@@ -359,5 +367,26 @@ public sealed class FactionWarClientSystem : EntitySystem
     public void RefreshOverlay()
     {
         UpdateOverlayVisibility();
+    }
+
+    private void UpdateLocalWarContext()
+    {
+        LocalWarKey = null;
+        LocalWarJoinSide = null;
+
+        if (_playerManager.LocalSession?.AttachedEntity is not { } localEntity)
+            return;
+
+        var localNetEntity = GetNetEntity(localEntity);
+
+        foreach (var war in _activeWars)
+        {
+            if (!war.Participants.TryGetValue(localNetEntity, out var side))
+                continue;
+
+            LocalWarKey = war.WarKey;
+            LocalWarJoinSide = side;
+            return;
+        }
     }
 }

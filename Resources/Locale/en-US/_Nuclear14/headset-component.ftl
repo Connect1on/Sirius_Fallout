@@ -10,8 +10,8 @@ chat-radio-vault-security = Vault Security
 chat-radio-vault-common = Vault
 chat-radio-caravan = CC
 # #Misfits Change - Old BoS radio names commented out, consolidated channel added
-#chat-radio-bosmidwest = BoS
-#chat-radio-boswashington = WBoS
+# chat-radio-bosmidwest = BoS
+# chat-radio-boswashington = WBoS
 chat-radio-bos = BoS
 chat-radio-enclave = Enclave
 chat-radio-ncr = NCR
@@ -22,3 +22,4 @@ chat-radio-bazaar = Bazaar
 chat-radio-wasteland = Wasteland
 chat-radio-wasteland-global = Wasteland
 chat-radio-followers = Followers
+chat-radio-zax-binary = ZAX Binary

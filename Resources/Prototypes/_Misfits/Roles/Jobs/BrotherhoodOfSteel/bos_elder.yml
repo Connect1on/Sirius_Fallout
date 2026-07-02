@@ -6,6 +6,7 @@
   jobWhitelistBypassesRoleTimers: true # #Misfits Change
   weight: 120
   name: job-name-bos-west-elder-comm
+  overwatchCategory: OverwatchBosElder
   description: job-description-bos-west-elder-comm
   playTimeTracker: BoSWestElderCommander
   requirements:
@@ -35,6 +36,38 @@
         factions:
           - BrotherhoodOfSteel
       - type: PowerArmorProficiency # #Misfits Add: Elder can equip power armor.
+      - type: LanguageKnowledge # #Misfits Add: Elders speak and understand Brotherhood binary code by default.
+        speaks:
+        - English
+        - N14BrotherBeep
+        understands:
+        - English
+        - N14BrotherBeep
+      - type: Warcry
+        action: ActionBrotherhoodWarcry
+        targetDepartment: BrotherhoodOfSteel
+        range: 8
+        speedBonus: 0.30
+        duration: 15 # Elders are pretty insparational
+        overlayColor: "#3B72BF"
+        speechVerb: MisfitsBrotherhoodWarcry
+        warcryMessage: warcry-message-brotherhood
+        warcryMessageCount: 6
+        buffPopup: warcry-popup-buffed-brotherhood
+        cautionPopup: true
+        activatorJobs:
+        - BoSWestElderCommander
+        - BoSHeadKnight
+        - BoSMidPaladinCommander
+        - BoSWestScribe
+        - BoSInitiate
+        - BoSKnight
+        - BoSPaladin
+        - BoSScribe
+        - BoSMidKnight
+        - BoSMidPaladin
+        - BoSMidScribe
+        - BoSMidSquire
 
 - type: startingGear
   id: BoSWestElderCommanderGear

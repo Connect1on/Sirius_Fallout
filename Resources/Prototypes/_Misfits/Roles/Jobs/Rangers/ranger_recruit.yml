@@ -5,6 +5,7 @@
   jobWhitelistBypassesRoleTimers: true
   weight: 6 # #Misfits Add - position below Field Ranger, above Recruit
   name: job-name-ranger-patrol
+  overwatchCategory: OverwatchNcrRangers
   description: job-description-ranger-patrol
   playTimeTracker: NCRPatrolRanger
   startingGear: NCRPatrolRangerGear
@@ -23,40 +24,27 @@
   requirements:
     - !type:CharacterDepartmentTimeRequirement
       department: Rangers
-      min: 57600 # 16 hours
+      min: 28800 # Misfits Change - Patrol Ranger only needs 8 hours
     - !type:CharacterSpeciesRequirement # #Misfits Change - robots, super mutants, and glowing ghouls cannot be Rangers
-      inverted: true
       species:
-      - RobotMrHandy
-      - RobotProtectron
-      - RobotProtectronPolice # #Misfits Fix - missing variant species
-      - RobotProtectronBuilder # #Misfits Fix - missing variant species
-      - RobotProtectronFire # #Misfits Fix - missing variant species
-      - RobotMrGutsy
-      - RobotAssaultron
-      - RobotAssaultronTesla # #Misfits Fix - missing variant species
-      - RobotSentryBot # #Misfits Fix - missing robot chassis
-      - RobotSentryBotLaser # #Misfits Fix - missing variant species
-      - RobotRobobrain # #Misfits Fix - missing robot chassis
-      - RobotRobobrainLaser # #Misfits Fix - missing variant species
-      - SuperMutant
-      - Nightkin
-      - GhoulGlowing # #Misfits Tweak - glowing ghouls not allowed in NCR Rangers
+      - Human
+      - Ghoul
 
 - type: startingGear
   id: NCRPatrolRangerGear
   equipment:
-    head: N14ClothingHeadHatRanger # Misfits Tweak - patrol rangers use the standard ranger hat
+    head: N14ClothingHeadHatNCRPatrolRangerCampaign # Misfits Tweak - patrol rangers are given a campaign hat.
     back: N14ClothingBackpackMilitary # Corvax-Change
-    jumpsuit: N14ClothingUniformRangerV1
+    jumpsuit: N14ClothingUniformNCRPatrolRanger
     ears: N14ClothingHeadsetNCR
     shoes: N14ClothingBootsLeather
     belt: ClothingBeltRevolverdesertfilled
+    gloves: N14ClothingHandsGlovesBlackLeather
     pocket1: MagazineBox45-70
     eyes: ClothingEyesGlassesSunglasses
-    outerClothing: N14ClothingOuterRangerCoat # Misfits Tweak - patrol rangers should start in NCR combat armor, not ranger combat armor
+    outerClothing: N14ClothingOuterNCRPatrolRangerArmorVariant # Misfits Change - patrol rangers will start with a unique sidegrade.
     id: N14IDBadgeNCRDesertRangerRecruit
-  innerClothingSkirt: N14ClothingUniformRangerV1 #placeholder
+  innerClothingSkirt: N14ClothingUniformNCRPatrolRanger #placeholder
   satchel: N14ClothingBackpackSatchelMilitaryFilled
   duffelbag: N14ClothingBackpackDuffelMilitaryFilled
   storage: # Corvax-Change

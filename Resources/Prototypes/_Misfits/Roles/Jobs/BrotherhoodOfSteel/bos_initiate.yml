@@ -59,6 +59,7 @@
   overrideConsoleVisibility: true
   canBeAntag: false
   name: job-name-bos-initiate
+  overwatchCategory: OverwatchBosAspirant
   description: job-description-bos-initiate
   playTimeTracker: BoSInitiate
   requirements:

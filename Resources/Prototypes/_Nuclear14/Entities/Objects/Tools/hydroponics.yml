@@ -54,3 +54,5 @@
     state: icon
   - type: Item
     sprite: _Nuclear14/Objects/Specific/Hydroponics/tools_rozetka/lopata.rsi  # sirius-change
+  - type: BoneSetter  # Misfits Add
+    speed: 0.5

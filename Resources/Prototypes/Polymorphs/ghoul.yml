@@ -3,7 +3,7 @@
   configuration:
     entity: N14MobGhoulFeral
     forced: true
-    inventory: Transfer
+    inventory: None    # Misfits Bugfix
     transferName: true
     transferDamage: true
     allowRepeatedMorphs: false

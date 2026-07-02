@@ -3,6 +3,7 @@ using Content.Server.Administration;
 using Content.Shared.Administration;
 using Content.Shared.Maps;
 using Robust.Shared.Console;
+using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 
@@ -44,6 +45,7 @@ namespace Content.Server.Interaction
             }
 
             var mapManager = IoCManager.Resolve<IMapManager>();
+            var mapSystem = _entities.System<SharedMapSystem>();
             var xform = _entities.GetComponent<TransformComponent>(attached);
             var playerGrid = xform.GridUid;
 
@@ -57,14 +59,14 @@ namespace Content.Server.Interaction
             {
                 for (var j = -radius; j <= radius; j++)
                 {
-                    var tile = mapGrid.GetTileRef(playerPosition.Offset(new Vector2(i, j)));
-                    var coordinates = mapGrid.GridTileToLocal(tile.GridIndices);
+                    var tile = mapSystem.GetTileRef(playerGrid!.Value, mapGrid, playerPosition.Offset(new Vector2(i, j)));
+                    var coordinates = mapSystem.GridTileToLocal(playerGrid.Value, mapGrid, tile.GridIndices);
                     var tileDef = (ContentTileDefinition) tileDefinitionManager[tile.Tile.TypeId];
 
                     if (!tileDef.CanCrowbar) continue;
 
                     var plating = tileDefinitionManager["Plating"];
-                    mapGrid.SetTile(coordinates, new Tile(plating.TileId));
+                    mapSystem.SetTile(playerGrid.Value, mapGrid, coordinates, new Tile(plating.TileId));
                 }
             }
         }

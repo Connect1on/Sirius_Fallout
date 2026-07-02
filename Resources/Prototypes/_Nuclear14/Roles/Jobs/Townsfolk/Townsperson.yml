@@ -1,7 +1,7 @@
 - type: job
   id: Townsperson
   setPreference: true
-  weight: 10
+  weight: 0 # #Misfits Change - default starter role (was 10)
   overrideConsoleVisibility: false
   canBeAntag: false
   name: job-name-townsperson
@@ -12,6 +12,7 @@
       species:
       - Human
       - Ghoul
+      - GhoulGlowing
     #- !type:CharacterOverallTimeRequirement # TEMP REMOVED
     #  min: 0 # 1 hour
   startingGear: TownspersonGear
@@ -31,7 +32,7 @@
   id: TownspersonGear
   equipment:
     jumpsuit: N14ClothingUniformJumpsuitSettlerRags
-    ears: MisfitsClothingHeadsetWastelandScrap
+    ears: MisfitsClothingHeadsetTown
     back: N14ClothingBackpackExplorer # Corvax-Change
     shoes: N14ClothingShoesBlack
     id: N14IDPassportTownsfolk

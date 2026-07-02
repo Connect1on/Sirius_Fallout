@@ -493,36 +493,6 @@ public sealed partial class StoreStructuredSystem : EntitySystem
         if (!_ui.IsUiOpen(store, StoreUiKey.Key, user))
             return;
 
-        if (_catalogCache.TryGetValue(store, out var cached) && cached.Revision == comp.CatalogRevision)
-        {
-            var cachedList = cached.List;
-
-            var hasBuy = false;
-            var hasSell = false;
-
-            foreach (var l in cachedList)
-            {
-                if (l.Mode == StoreMode.Buy)
-                    hasBuy = true;
-                else if (l.Mode == StoreMode.Sell)
-                    hasSell = true;
-
-                if (hasBuy && hasSell)
-                    break;
-            }
-
-            var msg = new StoreCatalogMessage(
-                comp.CatalogRevision,
-                cachedList,
-                hasBuy,
-                hasSell,
-                comp.ContractPresets.Count > 0
-            );
-            _ui.ServerSendUiMessage((store, null), StoreUiKey.Key, msg, user);
-            return;
-        }
-
-
         var list = new List<StoreListingStaticData>(comp.Listings.Count);
 
         foreach (var l in comp.Listings)
@@ -532,7 +502,7 @@ public sealed partial class StoreStructuredSystem : EntitySystem
 
             var cat = l.Categories.Count > 0 ? l.Categories[0] : Loc.GetString("nc-store-category-fallback");
 
-            if (!TryPickUiCurrencyAndPrice(comp, l, out var cur, out var price))
+            if (!TryPickUiCurrencyAndPrice(comp, l, user, out var cur, out var price))
                 continue;
 
             list.Add(
@@ -546,8 +516,6 @@ public sealed partial class StoreStructuredSystem : EntitySystem
                     l.UnitsPerPurchase
                 ));
         }
-
-        _catalogCache[store] = (comp.CatalogRevision, list);
 
         {
             var hasBuy = false;
@@ -675,6 +643,7 @@ public sealed partial class StoreStructuredSystem : EntitySystem
     private bool TryPickUiCurrencyAndPrice(
         NcStoreComponent comp,
         NcStoreListingDef listing,
+        EntityUid user,
         out string currencyId,
         out int price
     )
@@ -690,7 +659,7 @@ public sealed partial class StoreStructuredSystem : EntitySystem
             if (listing.Cost.TryGetValue(cur, out var p) && p > 0)
             {
                 currencyId = cur;
-                price = p;
+                price = ApplyUiCharismaPrice(listing, user, p);
                 return true;
             }
         }
@@ -709,11 +678,21 @@ public sealed partial class StoreStructuredSystem : EntitySystem
             return false;
 
         currencyId = best.Value.Key;
-        price = best.Value.Value;
+        price = ApplyUiCharismaPrice(listing, user, best.Value.Value);
         return true;
     }
 
-    private ContractClientData MapContractToClient(ContractServerData c)
+    private int ApplyUiCharismaPrice(NcStoreListingDef listing, EntityUid user, int price)
+    {
+        return listing.Mode switch
+        {
+            StoreMode.Buy => _logic.ApplyCharismaBuyPrice(user, price),
+            StoreMode.Sell or StoreMode.Exchange => _logic.ApplyCharismaSellReward(user, price),
+            _ => price,
+        };
+    }
+
+    private ContractClientData MapContractToClient(ContractServerData c, EntityUid user)
     {
         var targets = new List<ContractTargetClientData>();
 
@@ -740,9 +719,17 @@ public sealed partial class StoreStructuredSystem : EntitySystem
                 });
         }
 
-        var rewards = c.Rewards is { Count: > 0, }
-            ? new(c.Rewards)
-            : new List<ContractRewardData>();
+        var rewards = new List<ContractRewardData>();
+        if (c.Rewards is { Count: > 0, })
+        {
+            foreach (var reward in c.Rewards)
+            {
+                var amount = reward.Type == StoreRewardType.Currency
+                    ? _logic.ApplyCharismaSellReward(user, reward.Amount)
+                    : reward.Amount;
+                rewards.Add(reward with { Amount = amount });
+            }
+        }
 
         return new(
             c.Id,

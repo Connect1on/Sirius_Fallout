@@ -1,27 +1,20 @@
 # #Misfits Change - Consolidated undecided loadout locale owner after retiring active Corvax loadout keys.
 
 # Corvax explorer kits
-undecided-loadout-category-explorer-scout-name = Explorer Scout
-undecided-loadout-category-explorer-scout-description =
-    Includes a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    2 bolas, night vision goggles, a healing powder,
-    a healing poultice, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-explorer-tracker-name = Explorer Tracker
 undecided-loadout-category-explorer-tracker-description =
-    Includes a hunting rifle, a box of .308 ammo,
+    Includes a Legion SKS with 3 clips, 2 bolas,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     night vision goggles, a healing powder,
     a healing poultice, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-explorer-raider-name = Explorer Raider
 undecided-loadout-category-explorer-raider-description =
-    Includes a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a lever shotgun,
-    a machete, 2 boxes of 20 gauge ammo, a rope belt,
-    2 bolas, 2 healing powder, 2 K rations,
-    and a ceramic flask.
+    Includes a FAL Rifle with 3 magazines, 2 bolas,
+    a .45 Colt pistol, 2 .45 magazines, a rope belt,
+    night vision goggles, a healing powder,
+    a healing poultice, 2 K rations, and a ceramic flask.
 
 # Migrated Corvax legacy Legion keys
 undecided-loadout-category-bestiary-name = Centurion-Bestiary Kit
@@ -151,7 +144,7 @@ undecided-loadout-category-warrior-firearm-description =
     A box with everything needed for firefights in open terrain.
     Contains: 1 legion armor, 1 rope belt, 1 machete,
     1 hunting rifle, 1 box of ammunition (.308),
-    1 .45 Colt revolver, 2 pistol magazines (.45 ACP),
+    1 .45 pistol, 2 pistol magazines (.45 ACP),
     1 healing powder, 2 K-rations,
     1 bottle of water, and 1 mustard.
 
@@ -169,10 +162,9 @@ undecided-loadout-category-recruit-base-name = Regular Legionary Recruit Kit
 undecided-loadout-category-recruit-base-description =
     A box with everything needed for a novice warrior.
     Contains: 1 light legion armor, 1 spear quiver belt,
-    1 9mm SMG, 2 SMG magazines (9mm),
-    1 box of ammunition (9mm), 1 legion buckler,
-    1 tribal machete, 1 healing powder,
-    2 K-rations, and 1 ceramic flask.
+    1 M3A1 grease gun, 2 .45 SMG magazines,
+    1 legion buckler, 1 tribal machete,
+    1 healing powder, 2 K-rations, and 1 ceramic flask.
 
 undecided-loadout-category-recruit-spear-name = Legionary Recruit Spearman Kit
 undecided-loadout-category-recruit-spear-description =
@@ -266,8 +258,8 @@ undecided-loadout-category-corvax-centurion-marksman-description =
 
 undecided-loadout-category-corvax-centurion-vanquisher-name = Centurion Vanquisher
 undecided-loadout-category-corvax-centurion-vanquisher-description =
-    Includes a sledgehammer, a rope belt, an Assault Carbine, 4 mags of 5.56,
-    2 healing pooultice, 2 K rations, and a ceramic flask.
+    Includes a Thermic Lance, a rope belt, an Assault Carbine, 4 mags of 5.56,
+    2 healing poultice, 2 K rations, and a ceramic flask.
 
 # #Misfits Add - Centurion armor selection kit locale strings (for LegionCenturionArmorloadoutkits)
 undecided-loadout-category-misfits-centurion-armor-standard-name = Centurion Armor: Standard
@@ -315,124 +307,117 @@ undecided-loadout-category-misfits-centurion-armor-unbroken-description =
 undecided-loadout-category-corvax-venator-marksman-name = Venator Marksman
 undecided-loadout-category-corvax-venator-marksman-description =
     Includes a .308 sniper rifle, a rope belt,
-    2 mags of .308, night vision goggles,
-    2 healing powder, 2 K rations,
+    4 mags of Overpressure .308, night vision goggles,
+    2 healing poultice, 2 K rations,
     a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-venator-stalker-name = Venator Stalker
 undecided-loadout-category-corvax-venator-stalker-description =
-    Includes a lever shotgun, a 10mm revolver,
-    a box of 20 gauge ammo, 2 10mm speedloaders,
-    a box of 10mm ammo, a rope belt, night vision goggles,
-    a healing powder, a healing poultice, 2 K rations,
-    and a ceramic flask.
+    Includes an advanced 12.7mm SMG, 3 spare 12.7 magazines,
+    a rope belt, night vision goggles, 2 healing poultice,
+    2 K rations, a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-venator-executioner-name = Venator Executioner
 undecided-loadout-category-corvax-venator-executioner-description =
     Includes a blowback shotgun, a rope belt,
     2 boxes of 12 gauge shells, a ceremonial sword,
-    night vision goggles, 2 healing powder, 2 K rations,
+    night vision goggles, 2 healing poultice, 2 K rations,
     a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-vexillarius-standard-name = Vexillarius Standard Bearer
 undecided-loadout-category-corvax-vexillarius-standard-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
+    Includes a ceremonial sword, a goliath power fist,
     a .45 Colt pistol, 2 .45 magazines, a Legion shield,
-    a rope belt, 2 pilum spears, a bola, a healing poultice,
+    a spear quiver, 3 pilum spears, a bola, a healing poultice,
     a healing powder, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-vexillarius-herald-name = Vexillarius Herald
 undecided-loadout-category-corvax-vexillarius-herald-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
+    Includes a legion SKS, 3 .308 SKS clips,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a smoke grenade, 2 bandages, 2 healing poultices,
+    a smoke grenade, 2 bandages, a healing poultice,
     a healing powder, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-vexillarius-skirmisher-name = Vexillarius Skirmisher
 undecided-loadout-category-corvax-vexillarius-skirmisher-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
+    Includes a 10mm SMG, 3 10mm SMG mags,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     a buckler, a pilum spear, a healing poultice,
-    2 K rations, and a ceramic flask.
+    a healing powder, 2 K rations, and a ceramic flask.
 
-undecided-loadout-category-corvax-orator-preacher-name = Orator Preacher
-undecided-loadout-category-corvax-orator-preacher-description =
-    Includes a hunting rifle, a box of .308 ammo,
+undecided-loadout-category-corvax-optio-preacher-name = Optio Preacher
+undecided-loadout-category-corvax-optio-preacher-description =
+    Includes a Neostead, 2 12 Gauge ammo boxes,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     2 smoke grenades, 2 bandages, 2 healing poultices,
     a healing powder, 2 K rations, and a ceramic flask.
 
-undecided-loadout-category-corvax-orator-defender-name = Orator Defender
-undecided-loadout-category-corvax-orator-defender-description =
-    Includes a hunting rifle, a box of .308 ammo,
+undecided-loadout-category-corvax-optio-defender-name = Optio Defender
+undecided-loadout-category-corvax-optio-defender-description =
+    Includes a Decorated tribal heavy club,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     a smoke grenade, 2 healing poultices, a healing powder,
     2 K rations, and a ceramic flask.
 
-undecided-loadout-category-corvax-orator-inquisitor-name = Orator Inquisitor
-undecided-loadout-category-corvax-orator-inquisitor-description =
-    Includes a hunting rifle, a box of .308 ammo,
+undecided-loadout-category-corvax-optio-inquisitor-name = Optio Inquisitor
+undecided-loadout-category-corvax-optio-inquisitor-description =
+    Includes an SKS, three en-block clips,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     a ceremonial sword, a bola, handcuffs,
     2 healing powder, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-houndmaster-hunter-name = Houndmaster Hunter
 undecided-loadout-category-corvax-houndmaster-hunter-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
+    Includes a Brush Gun with 2 speedloaders,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
     a whip, 2 bolas, a healing poultice,
     2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-houndmaster-tamer-name = Houndmaster Tamer
 undecided-loadout-category-corvax-houndmaster-tamer-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
+    Includes a Legion SKS with 4 clips,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a short shotgun, a box of 12 gauge shells,
     a whip, 2 zipties, a healing poultice,
     2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-houndmaster-medic-name = Houndmaster Handler Medic
 undecided-loadout-category-corvax-houndmaster-medic-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
+    Includes a Hunting Rifle, a box of .308 ammo,
+    a .45 Colt pistol, 2 .45 magazines, a medical belt,
     2 bandages, 2 healing poultices, hydra,
-    a healing powder, 2 K rations, and a ceramic flask.
+    2 healing powder, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-auxilia-skirmisher-name = Auxilia Skirmisher
 undecided-loadout-category-corvax-auxilia-skirmisher-description =
-    Includes recruit armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a buckler, 2 K rations, and a ceramic flask.
+    Includes a hunting rifle, a box of .308 ammo,
+    a .45 Colt pistol, 2 .45 magazines, a rope belt, a buckler,
+    a healing poultice, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-auxilia-spearman-name = Auxilia Spearman
 undecided-loadout-category-corvax-auxilia-spearman-description =
-    Includes recruit armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a spear quiver belt,
-    3 pilum spears, a buckler, a healing pooultice,
-    2 K rations, and a ceramic flask.
+    Includes a hunting rifle, a box of .308 ammo,
+    a spear quiver belt, 3 pilum spears, a buckler,
+    a healing poultice, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-auxilia-medic-name = Auxilia Medic
 undecided-loadout-category-corvax-auxilia-medic-description =
-    Includes recruit armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a health analyzer,
+    Includes a 9mm SMG with 2 mags, a health analyzer,
     a medical belt, 2 bandages, 2 healing poultices,
     hydra, 2 healing powder, a tribal machete,
     2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-veteran-decanus-command-name = Veteran Decanus Command
 undecided-loadout-category-corvax-veteran-decanus-command-description =
-    Includes a Legion shield, a neostead with two boxes of 12g,
-    a rope belt, a .45 Colt pistol, 2 .45 magazines,
-    a box of .45 ammo, a handcuff box, a bola,
+    Includes a Legion shield, a blowback shotgun,
+    3 boxes of 12 gauge, a rope belt, a .45 Colt pistol,
+    2 .45 magazines, a handcuff box, a bola,
     2 healing poultice, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-veteran-decanus-hunter-name = Veteran Decanus Hunter
 undecided-loadout-category-corvax-veteran-decanus-hunter-description =
     Includes a Legion buckler, a .50 pipe rifle with 2 spare boxes,
     a .45 M3A1, 2 .45 SMG magazines, a rope belt,
-    a short shotgun, a box of 12 gauge shells,
-    2 healing poultices, a healing powder,
-    2 K rations, and a ceramic flask.
+    2 healing poultices, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-veteran-decanus-crusher-name = Veteran Decanus Crusher
 undecided-loadout-category-corvax-veteran-decanus-crusher-description =
@@ -451,99 +436,72 @@ undecided-loadout-category-corvax-decanus-gladiator-description =
 undecided-loadout-category-corvax-decanus-sagitaria-name = Decanus Sagitaria
 undecided-loadout-category-corvax-decanus-sagitaria-description =
     Includes a salvaged M60 with a single extra box,
-    a .45 revolver with 2 spare magazines, a rope belt,
+    a .45 Colt pistol, 2 .45 magazines, a rope belt,
     a smoke grenade, 2 healing poultice, 2 K rations,
     a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-decanus-berserker-name = Decanus Berserker
 undecided-loadout-category-corvax-decanus-berserker-description =
-    Includes a Legion SKS with 4 clips,
-    a .45 revolver with 2 spare magazines, a pair of power fists,
+    Includes a 12mm SMG with 4 magazines,
+    a .45 Colt pistol, 2 .45 magazines, a pair of power fists,
     a rope belt, 3 throwing knives, 2 healing poultice,
     2 K rations, a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-veteran-rifleman-name = Veteran Rifleman
 undecided-loadout-category-corvax-veteran-rifleman-description =
-    Includes veteran armor, a Legion SKS with 4 clips,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a gladius, a smoke grenade, 2 healing poultice,
+    Includes a M14 rifle with 4 mags, a .45 Colt pistol,
+    2 .45 magazines, a rope belt, a gladius,
+    a smoke grenade, 2 healing poultice,
     2 K rations, a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-veteran-berserker-name = Veteran Berserker
 undecided-loadout-category-corvax-veteran-berserker-description =
-    Includes veteran armor, a Legion SKS with 4 clips,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a gladius, a fire axe, 3 throwing knives,
-    2 healing poultice, 2 K rations,
-    a ceramic flask, and mustard.
+    Includes a .45 SMG with 4 mags, a .45 Colt pistol,
+    2 .45 magazines, a rope belt, a fire axe,
+    3 throwing knives, 2 healing poultice,
+    2 K rations, a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-veteran-goliath-name = Veteran Goliath
 undecided-loadout-category-corvax-veteran-goliath-description =
-    Includes veteran armor, a Legion SKS with 4 clips,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a goliath power fist, 3 throwing knives,
-    2 healing poultice, 2 K rations,
-    a ceramic flask, and mustard.
-
-undecided-loadout-category-corvax-veteran-shieldbearer-name = Veteran Shieldbearer
-undecided-loadout-category-corvax-veteran-shieldbearer-description =
-    Includes veteran armor, a Legion SKS with 4 clips,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a Legion shield, 2 healing poultice,
-    2 K rations, and a ceramic flask.
-
-undecided-loadout-category-corvax-warrior-skirmisher-name = Warrior Skirmisher
-undecided-loadout-category-corvax-warrior-skirmisher-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a gladius, a Legion buckler, 2 healing powder,
-    2 K rations, a ceramic flask, and mustard.
-
-undecided-loadout-category-corvax-warrior-slaver-name = Warrior Slaver
-undecided-loadout-category-corvax-warrior-slaver-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a whip, a stunprod, 2 zipties,
+    Includes a goliath power fist, a Hunting Revolver,
+    2 45-70 speedloaders, a box of 45-70 ammo, a rope belt,
+    3 throwing knives, 2 healing poultice,
     2 K rations, a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-warrior-medic-name = Warrior Medic
 undecided-loadout-category-corvax-warrior-medic-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
+    Includes a M3A1 Grease Gun with 2 mags, a rope belt,
     a tribal machete, 2 healing powder, 2 healing poultices,
     2 bandages, ointment, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-warrior-gunman-name = Warrior Gunman
 undecided-loadout-category-corvax-warrior-gunman-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
+    Includes a Hunting Rifle, a box of .308 ammo,
     a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a tribal machete, a healing powder,
+    a tribal machete, a healing powder, a healing poultice,
     2 K rations, a ceramic flask, and mustard.
 
-undecided-loadout-category-corvax-warrior-shieldbearer-name = Warrior Shieldbearer
+undecided-loadout-category-corvax-warrior-shieldbearer-name = Warrior Charger
 undecided-loadout-category-corvax-warrior-shieldbearer-description =
-    Includes base armor, a hunting rifle, a box of .308 ammo,
-    a .45 Colt pistol, 2 .45 magazines, a rope belt,
-    a trench club, a Legion shield, a healing powder,
-    a healing poultice, 2 K rations,
-    a ceramic flask, and mustard.
+    Includes a .45 Colt pistol with 4 mags, a rope belt,
+    a tribal big club, a healing powder, a healing poultice,
+    2 K rations, a ceramic flask, and mustard. Sweet sweet mustard.
 
 undecided-loadout-category-corvax-recruit-skirmisher-name = Legionnaire Recruit Skirmisher
 undecided-loadout-category-corvax-recruit-skirmisher-description =
-    Includes recruit armor, a spear quiver belt, a 9mm SMG,
-    2 9mm SMG magazines, a box of 9mm ammo,
-    a tribal machete, a Legion buckler, a healing powder,
-    2 K rations, and a ceramic flask.
+    Includes a 9mm SMG and 2 mags for it,
+    a tribal machete, a Legion buckler,
+    a healing powder, 2 K rations, and a ceramic flask.
 
 undecided-loadout-category-corvax-recruit-spearman-name = Legionnaire Recruit Spearman
 undecided-loadout-category-corvax-recruit-spearman-description =
-    Includes recruit armor, a spear quiver belt, 4 pilum spears,
+    Includes a spear quiver belt, 4 pilum spears,
     a Legion buckler, a healing powder, a healing poultice,
     2 K rations, a ceramic flask, and mustard.
 
 undecided-loadout-category-corvax-recruit-medic-name = Legionnaire Recruit Medic
 undecided-loadout-category-corvax-recruit-medic-description =
-    Includes recruit armor, a tribal machete, a medical belt,
+    Includes a tribal machete, a medical belt,
     2 bandages, 2 healing poultices, ointment,
     a healing powder, 2 K rations, and a ceramic flask.
 
@@ -766,15 +724,97 @@ c27-armor-set-bos-heavy-description =
 
 undecided-loadout-category-misfits-priestess-healing-name = Priestess of Restoration
 undecided-loadout-category-misfits-priestess-healing-desc =
-    Keep the Legion healthy until medical production is up.
-    4 Smelling Salts, 1 health analyzer, 2 Bitter Drinks,
+    Includes 4 Smelling Salts, 1 health analyzer, 2 Bitter Drinks,
     2 Poultices, 2 Powders, 2 Hydras, 3 bandages,
     a medical belt, 2 K rations, and a ceramic flask.
 
-undecided-loadout-category-misfits-priestess-order-name = Priestess of Order
-undecided-loadout-category-misfits-priestess-order-desc =
-    Run the camp with an iron fist.
-    A sawed off shotgun with a box of beanbag shells.
-    2 Bolas, a box of handcuffs, 2 muzzles.
-    2 Collars, with keys, a police baton,
+undecided-loadout-category-misfits-priestess-zealot-name = Priestess of Zealotry
+undecided-loadout-category-misfits-priestess-zealot-desc =
+    Includes a Ceremonial Sword, Legionnaire Shield,
+    spear quiver, 3 pilum, 2 Bolas, 2 Cazador acid sacs,
     2 K rations, and a ceramic flask.
+
+undecided-loadout-category-misfits-eighties-block-road-captain-name = Road Captain Kit
+undecided-loadout-category-misfits-eighties-block-road-captain-description =
+    A kit filled with everything a block needs to rip them apart.
+    Comes with a 12.7 SMG, a heavy ripper sword, and some meds with various other
+    looted equipment. Includes a 45-70 hunter and a shitload of meds.
+
+undecided-loadout-category-misfits-eighties-block-boss-brawler-name = Boss Brawler Kit
+undecided-loadout-category-misfits-eighties-block-boss-brawler-description =
+    A homemade stash filled with what the block needs to brawl with armor.
+    Comes with a .50 pipe, a 45-70 hunter, and assorted meds and food.
+    A smoke and a frag are included. Also comes with a massive club.
+
+undecided-loadout-category-misfits-eighties-block-lead-foot-name = Lead Foot Kit
+undecided-loadout-category-misfits-eighties-block-lead-foot-description =
+    Includes a 10mm SMG with 4 magazines, a combat knife,
+    a radio, a smoke grenade, Psycho, a stimpak, gauze, and a flare.
+
+undecided-loadout-category-misfits-eighties-cylinders-tommy-name = Cylinders Tommy Kit
+undecided-loadout-category-misfits-eighties-cylinders-tommy-description =
+    Everything a cylinder would need to kill from his bike, and on foot.
+    Comes with an american 180, some turbo, some meds, some food.
+    Two smoke grenades included.
+
+undecided-loadout-category-misfits-eighties-cylinders-shotcaller-name = Cylinders Shotcaller Kit
+undecided-loadout-category-misfits-eighties-cylinders-shotcaller-description =
+    A looted stash with extra meds for a cylinder, including a super stim.
+    Comes with a 10mm, a 44 revolver, some smoke grenades, the extra meds,
+    and gauze.
+
+undecided-loadout-category-misfits-eighties-cylinders-road-marshal-name = Cylinders Road Marshal Kit
+undecided-loadout-category-misfits-eighties-cylinders-road-marshal-description =
+    Includes a 10mm SMG with 3 magazines, a hatchet,
+    a smoke grenade, a stimpak, gauze, and a flare.
+
+undecided-loadout-category-misfits-eighties-pistons-skirmisher-name = Pistons Skirmisher Kit
+undecided-loadout-category-misfits-eighties-pistons-skirmisher-description =
+    A small pile of gear for a piston to beat the wasties with.
+    Comes with a 10mm SMG, some assorted meds, a tribal club,
+    a light shield, spare 44 revolver, and bolas for capturing.
+
+undecided-loadout-category-misfits-eighties-pistons-scattergun-name = Pistons Scattergun Kit
+undecided-loadout-category-misfits-eighties-pistons-scattergun-description =
+    A kit meant to spray down enemies of the 80s from afar.
+    Comes with an old carbine, a 44 revolver, some meds, some smokes,
+    and a lot of extra ammo.
+
+undecided-loadout-category-misfits-eighties-pistons-blade-name = Pistons Blade Kit
+undecided-loadout-category-misfits-eighties-pistons-blade-description =
+    Includes a machete, a 9mm pistol with 3 magazines,
+    Psycho, a stimpak, gauze, and a flare.
+
+undecided-loadout-category-misfits-eighties-oilers-mechanic-name = Oilers Mechanic Kit
+undecided-loadout-category-misfits-eighties-oilers-mechanic-description =
+    A supply of looted gear and a filled toolbox. Worth more than you.
+    Comes with a lever action 20g, a 44, some meds, some food,
+    and a shield.
+
+undecided-loadout-category-misfits-eighties-oilers-firebug-name = Oilers Firebug Kit
+undecided-loadout-category-misfits-eighties-oilers-firebug-description =
+    Everything a trusted oiler needs to cave a skull and bash a tin.
+    Comes with a precious psycho syringe, two puffs of jet, a heavy
+    club, some meds, and a 10mm for the black-top.
+
+undecided-loadout-category-misfits-eighties-oilers-patch-name = Oilers Patch Kit
+undecided-loadout-category-misfits-eighties-oilers-patch-description =
+    Scrap SMG, scrap pistol, scrap shield, the only thing that isn't
+    scrap is the tribal club and the meds included. Good luck.
+
+undecided-loadout-category-misfits-eighties-road-rash-runner-name = Road Rash Runner Kit
+undecided-loadout-category-misfits-eighties-road-rash-runner-description =
+    Includes a 9mm pistol with 2 magazines, a combat knife,
+    a stimpak, gauze, and a flare.
+
+undecided-loadout-category-misfits-eighties-road-rash-scrapper-name = Road Rash Scrapper Kit
+undecided-loadout-category-misfits-eighties-road-rash-scrapper-description =
+    Equipment for a man that likely won't survive first contact.
+    Scrap machete, a 10mm scrap shooter, shit meds, the only thing
+    to save you is the two puffs of jet you get.
+
+undecided-loadout-category-misfits-eighties-road-rash-lookout-name = Road Rash Lookout Kit
+undecided-loadout-category-misfits-eighties-road-rash-lookout-description =
+    A simple mans loot stash. Barely worth more than a couple caps.
+    Includes a 9mm pistol, a box of 9mm ammo, a tribal knife,
+    a smoke grenade, 2 flares, a stimpak, and gauze. Good for looting.

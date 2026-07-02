@@ -4,11 +4,6 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
-  - type: FlyBySound
-    sound:
-      collection: EnergyMiss
-      params:
-        volume: 5
   - type: Sprite #Misfits Fix — was using stretched ballistic bullet sprite (projectiles2.rsi 'bullet' scale 1.2,0.5). Now uses the proper plasma bolt from plasma.rsi.
     sprite: _Nuclear14/Objects/Weapons/Guns/Ammunition/Projectiles/plasma.rsi
     layers:
@@ -24,15 +19,6 @@
         mask:
         - Impassable
         - BulletImpassable
-      fly-by: &flybyfixture
-        shape: !type:PhysShapeCircle
-          radius: 1.5
-        layer:
-        - Impassable
-        - MidImpassable
-        - HighImpassable
-        - LowImpassable
-        hard: False
   - type: Ammo
     muzzleFlash: PlasmaMuzzleFlashEffect
   - type: Projectile
@@ -86,11 +72,6 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
-  - type: FlyBySound
-    sound:
-      collection: EnergyMiss
-      params:
-        volume: 5
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -106,7 +87,6 @@
         hard: false
         mask:
         - Opaque
-      fly-by: *flybyfixture
   - type: Projectile
     impactEffect: BulletImpactEffect
     damage:
@@ -121,11 +101,6 @@
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
   components:
-  - type: FlyBySound
-    sound:
-      collection: EnergyMiss
-      params:
-        volume: 5
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -141,7 +116,6 @@
         hard: false
         mask:
         - Opaque
-      fly-by: *flybyfixture
   - type: Projectile
     impactEffect: BulletImpactEffect
     damage:

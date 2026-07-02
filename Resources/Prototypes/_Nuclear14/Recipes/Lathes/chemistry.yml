@@ -32,14 +32,14 @@
     Glass: 200
     Plastic: 100
 
-- type: latheRecipe
-  id: N14Syringe
-  result: N14ChemicalSyringe
-  completetime: 2
-  category: N14Chemistry
-  materials:
-    Plastic: 100
-    Steel: 25
+#- type: latheRecipe
+#  id: N14Syringe
+#  result: N14ChemicalSyringe
+#  completetime: 2
+#  category: N14Chemistry
+#  materials:
+#    Plastic: 100
+#    Steel: 25
 
 - type: latheRecipe
   id: N14SyringeInjectable
@@ -117,6 +117,22 @@
 - type: latheRecipe
   id: N14PsychoSyringe
   result: N14PsychoSyringe
+  completetime: 2
+  category: N14Chemistry
+  materials:
+    Glass: 100
+
+- type: latheRecipe
+  id: N14CombatInjector
+  result: N14CombatInjector
+  completetime: 2
+  category: N14Chemistry
+  materials:
+    Glass: 100
+
+- type: latheRecipe
+  id: N14Med-XInjector
+  result: N14Med-XInjector
   completetime: 2
   category: N14Chemistry
   materials:

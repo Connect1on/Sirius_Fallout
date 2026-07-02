@@ -1,0 +1,37 @@
+special-low-charisma-examine-very-low = { CAPITALIZE(SUBJECT($user)) } seems hard to approach and uncomfortable to talk to.
+special-low-charisma-examine-low = { CAPITALIZE(SUBJECT($user)) } seems a little awkward to approach.
+
+special-low-charisma-opener-0 = Ну,
+special-low-charisma-opener-1 = Ух,
+special-low-charisma-opener-2 = Зырь,
+special-low-charisma-opener-3 = Бля,
+special-low-charisma-opener-4 = Типа,
+special-low-charisma-opener-5 = Короче,
+special-low-charisma-opener-6 = Умм,
+special-low-charisma-opener-7 = Ой жёске,
+special-low-charisma-opener-8 = Слухай,
+special-low-charisma-opener-9 = Ну значит,
+special-low-charisma-opener-10 = Погодь,
+special-low-charisma-opener-11 = Этова, как его,
+special-low-charisma-opener-12 = Знаешь,
+special-low-charisma-opener-13 = Аыы,
+special-low-charisma-opener-14 = Честно,
+special-low-charisma-opener-15 = Сорян,
+special-low-charisma-opener-16 = Я полагаю,
+
+special-low-charisma-closer-0 = , я думаю
+special-low-charisma-closer-1 = , я полагаю
+special-low-charisma-closer-2 = , ну или нахуй
+special-low-charisma-closer-3 = , нахуй
+special-low-charisma-closer-4 = , шаришь?
+special-low-charisma-closer-5 = , или типа того
+special-low-charisma-closer-6 = , возможно
+special-low-charisma-closer-7 = , я думаю
+special-low-charisma-closer-8 = , чёт такое
+special-low-charisma-closer-9 = , хуё-моё
+special-low-charisma-closer-10 = , я хз
+special-low-charisma-closer-11 = , честно
+special-low-charisma-closer-12 = , ну или я хз
+special-low-charisma-closer-13 = , ёпта
+special-low-charisma-closer-14 = , походу
+special-low-charisma-closer-15 = , така хуйня, малята
