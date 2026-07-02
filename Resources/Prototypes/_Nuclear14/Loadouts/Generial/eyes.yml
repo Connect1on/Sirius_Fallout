@@ -1,0 +1,111 @@
+- type: loadout
+  id: N14ClothingEyesGlassesWelding
+  category: Eyes
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingEyesGlassesWelding
+
+- type: loadout
+  id: N14ClothingEyesSunGlasses
+  category: Eyes
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingEyesSunGlasses
+
+- type: loadout
+  id: N14ClothingEyesGlasses
+  category: Eyes
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingEyesGlasses
+
+- type: loadout
+  id: N14LoadoutEyesEyepatch
+  category: Eyes
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - ClothingEyesEyepatch
+
+- type: loadout # Corvax-Change
+  id: ClothingEyesGlassesChemist
+  category: Eyes
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - ClothingEyesGlassesChemist
+
+- type: loadout
+  id: MisfitsLoadoutEyesPilotGoggles
+  category: Eyes
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingEyesGlassesPilot
+
+- type: loadout
+  id: MisfitsLoadoutEyesGoggles
+  category: Eyes
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutEyes
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingEyesGlassesGoggles

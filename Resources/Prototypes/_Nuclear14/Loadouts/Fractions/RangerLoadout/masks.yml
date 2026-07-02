@@ -1,0 +1,99 @@
+- type: loadout
+  id: LoadoutNCRmaskDesert
+  category: Mask
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+  items:
+    - N14ClothingMaskDesertMask
+
+- type: loadout
+  id: LoadoutNCRuniformMaskDesert
+  category: Mask
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 216000 # 60 hours veterancy unlock "First Tour"
+  items:
+    - ClothingMaskGasRangerDesert
+
+# Corvax-Add Start
+- type: loadout
+  id: LoadoutNCRClothingMaskGasRangerElite2
+  category: Mask
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 216000 # 60 hours veterancy unlock "First Tour"
+  items:
+    - ClothingMaskGasRangerElite
+
+- type: loadout
+  id: LoadoutNCRClothingMaskGasRangerPrice2
+  category: Mask
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 72000 # 1200 minutes
+  items:
+    - ClothingMaskGasRangerPrice
+
+- type: loadout
+  id: LoadoutNCRClothingMaskGasRangerModif2
+  category: Mask
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 72000 # 1200 minutes
+  items:
+    - ClothingMaskGasRangerModif
+
+- type: loadout
+  id: LoadoutNCRClothingMaskGasRanger2
+  category: Mask
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRVeteranRanger
+      min: 216000 # 60 hours veterancy unlock "First Tour"
+  items:
+    - ClothingMaskGasRanger
+
+- type: loadout
+  id: LoadoutNCRClothingMaskGasRiot2
+  category: Mask
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRVeteranRanger
+  items:
+    - ClothingMaskGasRiot

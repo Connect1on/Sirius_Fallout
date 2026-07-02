@@ -1,0 +1,277 @@
+- type: loadout
+  id: MisfitsLoadoutClothingOuterPowerArmorT45
+  category: Outer
+  cost: 4
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSKnight
+
+  items:
+    - N14ClothingOuterPowerArmorT45
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterPowerArmorT51
+  category: Outer
+  cost: 10
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestElderCommander
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSPaladin
+  items:
+    - N14ClothingOuterPowerArmorT51
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterPowerArmorT60
+  category: Outer
+  cost: 8
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestElderCommander
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSPaladin
+  items:
+    - N14ClothingOuterPowerArmorT60
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterPowerArmorT51BC
+  category: Outer
+  cost: 12
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestElderCommander # Misfits Change /Add/: expand access to all BoS roles
+  items:
+    - N14ClothingOuterPowerArmorT51BC
+
+- type: loadout
+  id: MisfitsLoadoutNCClothingOuterBosReconArmor
+  category: Outer
+  cost: 4
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidKnight
+        - BoSMidSquire
+        - BoSHeadKnight
+        - BoSInitiate
+        - BoSKnight
+  items:
+    - NCClothingOuterBosReconArmor
+
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterMidwestReconArmor
+  category: Outer
+  cost: 6
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSPaladin
+  items:
+    - N14ClothingOuterMidwestReconArmor
+    - N14ClothingHeadHatBrotherhoodMidwestHelmetRecon
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterBrotherhoodMidwestMedicalScribeRobes
+  category: Outer
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestScribe
+        - BoSScribe
+        - BoSMidScribe
+  items:
+    - N14ClothingOuterBrotherhoodMidwestMedicalScribeRobes
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterBrotherhoodMedicalScribeRobes
+  category: Outer
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestScribe
+        - BoSScribe
+        - BoSMidScribe
+  items:
+    - N14ClothingOuterBrotherhoodMedicalScribeRobes
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterBrotherhoodMidwestFieldScribeCoat
+  category: Outer
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestScribe
+        - BoSScribe
+        - BoSMidScribe
+  items:
+    - N14ClothingOuterBrotherhoodMidwestFieldScribeCoat
+
+- type: loadout
+  id: MisfitsLoadoutClothingOuterMidwestBoSCoat
+  category: Outer
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestScribe
+        - BoSScribe
+        - BoSMidScribe
+  items:
+    - N14ClothingOuterMidwestBoSCoat
+
+# Misfits Change - Disabled: armor/weapons removed from roundstart loadout menu
+#- type: loadout
+#  id: LoadoutBoSMidwestSeniorKnight
+#  category: Outer
+#  cost: 6 # Forge-Change
+#  exclusive: true
+#  requirements:
+#    - !type:CharacterJobRequirement
+#      jobs:
+#        - BoSMidKnight
+#    - !type:CharacterPlaytimeRequirement
+#      tracker: BoSMidKnight
+#      min: 144000 # 40 hours veterancy unlock
+#  items:
+#    - N14ClothingOuterMBoSSeniorKArmor
+#
+
+# - type: loadout #! Forge-Change
+#   id: LoadoutBoSMidwestPA
+#   category: Outer
+#   cost: 9
+#   exclusive: true
+#   requirements:
+#     - !type:CharacterJobRequirement
+#       jobs:
+#         - BoSMidPaladin
+#         - BoSMidPaladinCommander
+#   items:
+#     - N14ClothingOuterPowerArmorMidwest
+
+# - type: loadout #! Forge-Change
+#   id: LoadoutBoSMidwestPACommander
+#   category: Outer
+#   cost: 10
+#   exclusive: true
+#   requirements:
+#     - !type:CharacterJobRequirement
+#       jobs:
+#         - BoSMidPaladinCommander
+#   items:
+#     - N14ClothingOuterPowerArmorMidwestCommander
+
+# - type: loadout
+#   id: MisfitsLoadoutBoSMidwestCommanderPowerArmor
+#   category: Outer
+#   cost: 12
+#   exclusive: true
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutOuter
+#     - !type:CharacterJobRequirement
+#       jobs:
+#         - BoSMidPaladinCommander
+#     - !type:CharacterPlaytimeRequirement
+#       tracker: BoSMidPaladinCommander
+#       min: 180000 # 50 hours as Head Paladin
+#   items:
+#     - N14ClothingOuterPowerArmorMidwestCommander
+
+# Misfits Change - Disabled: armor/weapons removed from roundstart loadout menu
+#- type: loadout
+#  id: LoadoutClothingOuterMBoSSquireArmor
+#  category: Outer
+#  cost: 10
+#  exclusive: true
+#  requirements:
+#    - !type:CharacterJobRequirement
+#      jobs:
+#        - BoSMidSquire
+#    - !type:CharacterPlaytimeRequirement
+#      tracker: BoSMidSquire
+#      min: 72000 # 20 hours veterancy unlock
+#  items:
+#    - N14ClothingOuterMBoSSquireArmor
+
+
+# N14ClothingOuterMBoSInitiateArmor (оруженосец)
+# N14ClothingOuterMBoSKnightArmor (рыдцор)
+# N14ClothingOuterMBoSSeniorKArmor (крутой рыдцор)
+# N14ClothingOuterMidwestArmor (комбат армор)
+# N14ClothingOuterMidwestArmorMK2 (комбат армор мк2)
+# N14ClothingOuterMBoSPaladinArmor (паладин армор лайт)

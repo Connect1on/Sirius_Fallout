@@ -19,3 +19,5 @@
       id: ClothingMaskGasMinerVault
     - type: loadout
       id: ClothingEyesGlassesChemist
+    - type: loadout
+      id: N14LoadoutClothingEyesNCRNVGs

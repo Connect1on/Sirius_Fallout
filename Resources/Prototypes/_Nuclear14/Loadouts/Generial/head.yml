@@ -1,0 +1,356 @@
+- type: loadout
+  id: N14LoadoutHeadHatBaseball
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingHeadHatBaseball
+
+- type: loadout
+  id: N14LoadoutHeadHatTrucker
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingHeadHatTrucker
+
+- type: loadout
+  id: N14LoadoutHeadHatBeanie
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingHeadHatBeanie
+
+- type: loadout
+  id: N14LoadoutHeadHatHeadscarf
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - Vault
+       - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatHeadscarf
+
+- type: loadout
+  id: N14LoadoutHeadHatBandit
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingHeadHatBandit
+
+- type: loadout
+  id: N14LoadoutHeadHatTribalOutcastHood
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - Vault
+       - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatTribalOutcastHood
+
+- type: loadout
+  id: N14LoadoutHeadHatArmyCap
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingHeadHatArmyCap
+
+- type: loadout
+  id: N14ClothingHeadHatCowboyGrey
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatCowboyGrey
+
+- type: loadout
+  id: N14ClothingHeadHatCowboyGreyBanded
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatCowboyGreyBanded
+
+- type: loadout
+  id: N14ClothingHeadHatCowboyBrown
+  category: Head
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - BrotherhoodOfSteel
+  items:
+    - N14ClothingHeadHatCowboyBrown
+
+- type: loadout
+  id: N14ClothingTribalMuffaloskull
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingTribalMuffaloskull
+
+- type: loadout
+  id: N14ClothingTribalRadstagSkull
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingTribalRadstagSkull
+
+- type: loadout
+  id: MisfitsLoadoutHeadArmyBeret
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingHeadHatArmyBeret
+
+- type: loadout
+  id: MisfitsLoadoutHeadArmyBeretAirborne
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingHeadHatArmyBeretAirborne
+
+- type: loadout
+  id: MisfitsLoadoutHeadArmyBeretSpecial
+  category: Head
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
+        - BrotherhoodOfSteel
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingHeadHatArmyBeretSpecial
+
+- type: loadout
+  id: MisfitsLoadoutHeadAntlerSkull
+  category: Head
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - MisfitsClothingHeadAntlerSkull
+
+- type: loadout
+  id: N14LoadoutUniversalHeadHatCaravan
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingHeadHatCaravan
+
+- type: loadout
+  id: N14LoadoutUniversalHeadHatCaravanSuit
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingHeadHatCaravanSuit
+
+- type: loadout
+  id: N14LoadoutUniversalHeadHatCaravanUniform
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingHeadHatCaravanUniform
+
+- type: loadout
+  id: N14LoadoutUniversalHeadHatChinese
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14ClothingHeadHatChinese
+
+- type: loadout
+  id: N14LoadoutUniversalHeadHatTownGuard
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Townsfolk
+        - Wastelander
+  items:
+    - N14ClothingHeadHatTownGuard

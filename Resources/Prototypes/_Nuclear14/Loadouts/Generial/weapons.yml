@@ -1,0 +1,1880 @@
+#ВПИСЫВАЙТЕ ВСЁ СЮДА ПО РАЗДЕЛАМ, ЧТОБЫ ДРУГИЕ ПРОТОТИПЕРЫ СМОГЛИ ИХ НАЙТИ И В ДАЛЬНЕЙШИМ НАСТРОИТЬ.
+
+#ПОМЕТКА ДЛЯ ЛЮДЕЙ НЕ ЗНАЮЩИХ "category:" ДЛЯ ОРУЖИЯ. ВОТ: Energy, Firearms, Melee
+
+# See the following file for existing categories: Resources\Prototypes\Loadouts\categories.yml
+
+##MARK: Pistols
+- type: loadout
+  id: N14LoadoutWeaponPistol22lr
+  category: Firearms
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14WeaponPistol22lr
+
+- type: loadout
+  id: N14LoadoutWeaponPistol10mmPipe
+  category: Firearms
+  cost: 2
+  requirements:
+     - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+     - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14WeaponPistol10mmPipe
+
+- type: loadout
+  id: N14LoadoutWeaponPistol9mm
+  category: Firearms
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement # Corvax-Change
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14WeaponPistol9mm
+
+- type: loadout
+  id: N14LoadoutWeaponPistol45Colt
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14WeaponPistol45Colt
+
+- type: loadout
+  id: N14LoadoutWeaponPistol9mmChinese
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterTraitRequirement
+      traits:
+      - LanguageChinese
+      - LanguageNerd
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14WeaponPistol9mmChinese
+
+- type: loadout
+  id: N14LoadoutWeaponPistolWebley
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14WeaponPistolWebley
+
+- type: loadout
+  id: N14LoadoutWeaponPistol12mm
+  category: Firearms
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponPistol12mm
+
+
+
+##MARK: Revolvers
+- type: loadout
+  id: N14LoadoutWeaponRevolver9mm
+  category: Firearms
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14WeaponRevolver9mm
+
+- type: loadout
+  id: N14LoadoutWeaponRevolver10mm
+  category: Firearms
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponRevolver10mm
+
+- type: loadout
+  id: N14LoadoutWeaponRevolver44Tribal
+  category: Firearms
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponRevolver44Tribal
+
+- type: loadout
+  id: N14LoadoutWeaponRevolver44TribalUpgraded
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponRevolver44TribalUpgraded
+
+- type: loadout
+  id: N14LoadoutWeaponRevolver44Magnun
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:OverallTimeRequirement
+      min: 6800
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14WeaponRevolver44Magnun
+
+- type: loadout
+  id: N14LoadoutWeaponRevolver44TribalUpgradedExtra
+  category: Firearms
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponRevolver44TribalUpgradedExtra
+
+- type: loadout
+  id: N14LoadoutWeaponRevolver45-70Handcannon
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponRevolver45-70Handcannon
+
+- type: loadout
+  id: N14LoadoutWeaponRevolver45-70HandcannonUpgraded
+  category: Firearms
+  cost: 8
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponRevolver45-70HandcannonUpgraded
+
+
+
+##MARK: Shotguns
+- type: loadout
+  id: N14LoadoutWeaponShotgunBoomstick
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponShotgunBoomstick
+
+- type: loadout
+  id: N14LoadoutWeaponShotgunBloodyStick
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponShotgunBloodyStick
+
+- type: loadout
+  id: N14LoadoutWeaponShotgunDoubleBarrel
+  category: Firearms
+  cost: 2
+  requirements:
+    - !type:OverallTimeRequirement
+      min: 3600
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14WeaponShotgunDoubleBarrel
+
+- type: loadout
+  id: N14LoadoutWeaponShotgunLever
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponShotgunLever
+
+- type: loadout
+  id: N14LoadoutWeaponShotgun
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponShotgun
+
+- type: loadout
+  id: N14LoadoutWeaponShotgunShort
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponShotgunShort
+
+- type: loadout
+  id: N14LoadoutWeaponShotgunAuto
+  category: Firearms
+  cost: 8
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - NCR
+  items:
+    - N14WeaponShotgunAuto
+
+- type: loadout
+  id: N14LoadoutWeaponShotgunNeostead
+  category: Firearms
+  cost: 8
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponShotgunNeostead
+
+- type: loadout
+  id: N14LoadoutWeaponBlowback
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponBlowback
+
+
+
+##MARK: SMG
+- type: loadout
+  id: N14LoadoutWeaponSMG9mm
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+        - CaesarLegion
+  items:
+    - N14WeaponSMG9mm
+
+- type: loadout
+  id: N14LoadoutWeaponSMG9mminfiltrator
+  category: Firearms
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponSMG9mminfiltrator
+
+- type: loadout
+  id: N14LoadoutWeaponSMGGreaseGun
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponSMGGreaseGun
+
+- type: loadout
+  id: N14LoadoutWeaponSMG12mm
+  category: Firearms
+  cost: 10
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponSMG12mm
+
+##MARK: Rifles
+- type: loadout
+  id: N14LoadoutWeaponSniper556Tribal
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponSniper556Tribal
+
+- type: loadout
+  id: N14LoadoutWeaponSniper556TribalUpgraded
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponSniper556TribalUpgraded
+
+- type: loadout
+  id: N14LoadoutWeaponRifle556Pipe
+  category: Firearms
+  cost: 5
+  requirements:
+    - !type:OverallTimeRequirement
+      min: 6800
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14WeaponRifle556Pipe
+
+- type: loadout
+  id: N14LoadoutWeaponRifle556CarbineOld
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidSquire
+        - BoSInitiate
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponRifle556CarbineOld
+
+- type: loadout
+  id: N14LoadoutWeaponRifle556Carbine
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSKnight
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - CaesarLegion
+  items:
+    - N14WeaponRifle556Carbine
+
+- type: loadout
+  id: N14LoadoutWeaponRifle556Service
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponRifle556Service
+
+- type: loadout
+  id: N14LoadoutWeaponRifle556Butchered
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponRifle556Butchered
+
+- type: loadout
+  id: N14LoadoutWeaponRifle556ServiceScoped
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponRifle556ServiceScoped
+
+- type: loadout
+  id: N14LoadoutWeaponRifle556Scout
+  category: Firearms
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRChiefRanger
+  items:
+    - N14WeaponRifle556Scout
+
+- type: loadout
+  id: N14LoadoutWeaponRifle762Chinese
+  category: Firearms
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponRifle762Chinese
+
+- type: loadout
+  id: N14LoadoutWeaponRifle762Marksman
+  category: Firearms
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+        - CaesarLegion
+        - Enclave
+  items:
+    - N14WeaponRifle762Marksman
+
+##MARK: Sniper Rifles
+- type: loadout
+  id: N14LoadoutWeaponSniper44LeverCarbine
+  category: Firearms
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponSniper44LeverCarbine
+
+- type: loadout
+  id: N14LoadoutWeaponSniper308Tribal
+  category: Firearms
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponSniper308Tribal
+
+- type: loadout
+  id: N14LoadoutWeaponSniper308TribalUpgraded
+  category: Firearms
+  cost: 8
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+        - Tribe
+        - CaesarLegion
+  items:
+    - N14WeaponSniper308TribalUpgraded
+
+- type: loadout
+  id: N14LoadoutWeaponRifleSKS
+  category: Firearms
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponRifleSKS
+
+- type: loadout
+  id: N14LoadoutWeaponSniperHunting
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponSniperHunting
+
+- type: loadout
+  id: N14LoadoutWeaponRifle308SniperRifle
+  category: Firearms
+  cost: 7
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponRifle308SniperRifle
+
+- type: loadout
+  id: N14LoadoutWeaponRifleM1GarandRepublicsDemise
+  category: Firearms
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponRifleM1GarandRepublicsDemise
+
+- type: loadout
+  id: N14LoadoutWeaponSniper45-70BrushGun
+  category: Firearms
+  cost: 7
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Rangers
+  items:
+    - N14WeaponSniper45-70BrushGun
+
+- type: loadout
+  id: N14LoadoutWeaponSniper50NCRRifle
+  category: Firearms
+  cost: 7
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponSniper50NCRRifle
+
+- type: loadout
+  id: N14LoadoutWeaponSniper50Pipe
+  category: Firearms
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponSniper50Pipe
+
+- type: loadout
+  id: N14LoadoutWeaponSniper50AntiMateriel
+  category: Firearms
+  cost: 10
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRChiefRanger
+  items:
+    - N14WeaponSniper50AntiMateriel
+
+
+
+##MARK: Machine gun
+- type: loadout
+  id: N14LoadoutWeaponRifleBozarGRA
+  category: Firearms
+  cost: 10
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSKnight
+        - BoSPaladin
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponRifleBozarGRA
+
+- type: loadout
+  id: N14LoadoutWeaponLMG
+  category: Firearms
+  cost: 8
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WeaponLMG
+
+- type: loadout
+  id: N14LoadoutWeaponM60GPMG
+  category: Firearms
+  cost: 8
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponM60GPMG
+
+
+
+##MARK: Grenadelaucher
+- type: loadout
+  id: N14LoadoutWeaponRifleGrenade
+  category: Firearms
+  cost: 12
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRWS
+        - NCRHeavyTrooper
+  items:
+    - N14WeaponRifleGrenade
+
+##MARK: Energy pistols
+- type: loadout
+  id: N14LoadoutWeaponLaserPistol
+  category: Energy
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14WeaponLaserPistol
+
+- type: loadout
+  id: N14WeaponPistol2mmECPPK12Sirius
+  category: Energy
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSWestElderCommander # Misfits Change /Add/: expand access to all BoS roles
+        - BoSPaladin
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14WeaponPistol2mmECPPK12Sirius
+
+- type: loadout
+  id: N14LoadoutWeaponLaserPistolRecharger
+  category: Energy
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14WeaponLaserPistolRecharger
+
+- type: loadout
+  id: N14LoadoutWeaponPlasmaDefender
+  category: Energy
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14WeaponPlasmaDefender
+
+
+##MARK: Energy Rifles
+- type: loadout
+  id: N14LoadoutWeaponLaserRifleRecharger
+  category: Energy
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14WeaponLaserRifleRecharger
+
+
+- type: loadout
+  id: N14LoadoutWeaponLaserRifleCrude
+  category: Energy
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidKnight
+        - BoSMidSquire
+        - BoSHeadKnight
+        - BoSInitiate
+        - BoSKnight
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponLaserRifleCrude
+
+- type: loadout
+  id: N14LoadoutWeaponLaserRifle
+  category: Energy
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSHeadKnight
+        - BoSMidKnight
+        - BoSKnight
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponLaserRifle
+
+- type: loadout
+  id: N14LoadoutWeaponLaserRifleAuto
+  category: Energy
+  exclusive: true
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladin
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSKnight
+        - BoSPaladin
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14WeaponLaserRifleAuto
+
+- type: loadout
+  id: N14LoadoutWeaponSniperM72GaussRifleSirius
+  category: Energy
+  exclusive: true
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSWestElderCommander
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14WeaponSniperM72GaussRifleSirius
+
+- type: loadout
+  id: N14LoadoutWeaponLaserRifleWattz2000
+  category: Energy
+  exclusive: true
+  cost: 7
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladin
+        - BoSPaladin
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponLaserRifleWattz2000
+
+- type: loadout
+  id: N14LoadoutWeaponLaserRifleWattz3000
+  category: Energy
+  exclusive: true
+  cost: 8
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSWestElderCommander
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14WeaponLaserRifleWattz3000
+
+- type: loadout
+  id: N14LoadoutWeaponLaserGatling
+  category: Energy
+  exclusive: true
+  cost: 6
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSWestElderCommander
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponLaserGatling
+
+- type: loadout
+  id: N14LoadoutWeaponPlasmaRifle
+  category: Energy
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSKnight
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14WeaponPlasmaRifle
+
+- type: loadout
+  id: N14LoadoutWeaponPlasmaRifleUrban
+  category: Energy
+  exclusive: true
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidPaladinCommander
+        - BoSMidPaladin
+        - BoSMidKnight
+        - BoSHeadKnight
+        - BoSKnight
+        - BoSPaladin
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+        - Enclave
+  items:
+    - N14WeaponPlasmaRifleUrban
+
+- type: loadout
+  id: N14LoadoutWeaponPlasmaRifleAuto
+  category: Energy
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14WeaponPlasmaRifleAuto
+
+- type: loadout
+  id: N14LoadoutWeaponPlasmaMultiplas
+  category: Energy
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14WeaponPlasmaMultiplas
+
+- type: loadout
+  id: N14LoadoutWeaponPlasmaCaster
+  category: Energy
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutGuns
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14WeaponPlasmaCaster
+
+
+
+##MARK: Melee
+- type: loadout
+  id: N14KitchenKnife
+  category: Melee
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Townsfolk
+  items:
+    - N14KitchenKnife
+
+- type: loadout
+  id: N14BrassKnife
+  category: Melee
+  cost: 3
+  customColorTint: true
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement # Corvax-Change
+      inverted: true
+      departments:
+      - Vault
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14BrassKnife
+
+- type: loadout
+  id: N14WastelandTribalSpear
+  category: Melee
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Wastelander
+        - Tribe
+  items:
+    - N14WastelandTribalSpear
+
+# Misfits Change - Added: Tribe club, hatchet, machete, Tribe sword
+# Misfits Fix - N14TribeClub loadout already defined in _Nuclear14/Loadouts/Roles/loadouts_tribe.yml
+#- type: loadout
+#  id: N14TribeClub
+#  category: Weapons
+#  cost: 2
+#  requirements:
+#    - !type:CharacterItemGroupRequirement
+#      group: N14LoadoutMelee
+#  items:
+#    - N14TribeClub
+
+- type: loadout
+  id: N14Hatchet
+  category: Melee
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14Hatchet
+
+- type: loadout
+  id: N14PoliceBaton
+  category: Melee
+  exclusive: true
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14PoliceBaton
+
+
+- type: loadout
+  id: N14TrenchClub
+  category: Melee
+  exclusive: true
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14TrenchClub
+
+- type: loadout
+  id: N14Machete
+  category: Melee
+  exclusive: true
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14Machete
+
+- type: loadout
+  id: N14GladiusLegion
+  category: Melee
+  exclusive: true
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion # Basically free for some roles, others don't get that
+  items:
+    - N14Gladius
+
+- type: loadout
+  id: N14LongSword
+  category: Melee
+  exclusive: true
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14LongSword
+
+- type: loadout
+  id: N14ChineseSword
+  category: Melee
+  exclusive: true
+  cost: 5
+  requirements:
+    - !type:CharacterTraitRequirement
+      traits:
+      - LanguageChinese
+      - LanguageNerd
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14ChineseSword
+
+
+- type: loadout
+  id: N14CeremonialSwordCent
+  category: Melee
+  exclusive: true
+  cost: 5
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+      - CaesarLegionCenturion
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14CeremonialSword
+
+
+- type: loadout
+  id: N14LoadoutWastelandFlagSpear
+  category: Melee
+  exclusive: true
+  cost: 5
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14WastelandFlagSpear
+
+- type: loadout
+  id: N14LoadoutSledgeHammer
+  category: Melee
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14SledgeHammer
+
+- type: loadout
+  id: N14LoadoutFireAxe
+  category: Melee
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14FireAxe
+
+- type: loadout
+  id: N14LoadoutTribalBigClubDecorated
+  category: Melee
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14TribalBigClubDecorated
+
+- type: loadout
+  id: LoadoutThrowingKnife
+  category: Melee
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - ThrowingKnife
+    - ThrowingKnife
+    - ThrowingKnife
+
+- type: loadout
+  id: N14LoadoutClothingHandsPowerFistGoliath
+  category: Melee
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14ClothingHandsPowerFistGoliath
+
+- type: loadout
+  id: N14LoadoutWeaponThermospear
+  category: Melee
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - CaesarLegion
+  items:
+    - N14WeaponThermospear
+
+
+
+##MARK: САМИ ЕБИТЕСЬ
+
+#MARK: Pistols
+# - type: loadout
+#   id: N14LoadoutWeaponDesertEagle44
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponDesertEagle44
+
+# - type: loadout
+#   id: N14LoadoutWeaponPistol10mm
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponPistol10mm
+
+#MARK: REVolver
+# - type: loadout
+#   id: N14LoadoutWeaponRevolver45-70Hunter
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRevolver45-70Hunter
+
+# - type: loadout
+#   id: N14LoadoutWeaponRevolverWebley
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRevolverWebley
+
+#MARK: SMG
+# - type: loadout
+#   id: N14LoadoutWeaponSMG12mmAdvancedChinese
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG12mmAdvancedChinese
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG12mmAdvancedCanadian
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG12mmAdvancedCanadian
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG12mmAdvanced
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG12mmAdvanced
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG10mmChinese
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG10mmChinese
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG10mmPipe
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG10mmPipe
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG12mmPipe
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG12mmPipe
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG9mmCanadian
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG9mmCanadian
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG10mm
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG10mm
+
+# - type: loadout
+#   id: N14LoadoutWeaponSMG45
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSMG45
+
+#MARK: Shotguns
+# - type: loadout
+#   id: N14LoadoutWeaponShotgunCaravan
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponShotgunCaravan
+
+# - type: loadout
+#   id: N14LoadoutWeaponShotgunRiot
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponShotgunRiot
+
+# - type: loadout
+#   id: N14LoadoutWeaponShotgunChinese
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponShotgunChinese
+
+# - type: loadout
+#   id: N14LoadoutWeaponShotgunCanadian
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponShotgunCanadian
+
+#MARK: Machine guns
+
+# - type: loadout
+#   id: N14LoadoutWeaponMinigun
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponMinigun
+
+# - type: loadout
+#   id: N14LoadoutWeaponLMGchinese
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponLMGchinese
+
+# - type: loadout
+#   id: N14LoadoutWeaponUSHMG
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponUSHMG
+
+# - type: loadout
+#   id: N14LoadoutWeaponLMGBren
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponLMGBren
+
+# - type: loadout
+#   id: N14LoadoutWeaponLMGAutoRifle
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponLMGAutoRifle
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifleAk112pn
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifleAk112pn
+
+##MARK: SNIPERS
+# - type: loadout
+#   id: N14LoadoutWeaponSniper308Ross
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSniper308Ross
+
+# - type: loadout
+#   id: N14LoadoutWeaponSniper308LeverRifle
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSniper308LeverRifle
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle762MarksmanChinese
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle762MarksmanChinese
+
+# - type: loadout
+#   id: N14LoadoutWeaponSniper308Canadian
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSniper308Canadian
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle762MarksmanCanadian
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle762MarksmanCanadian
+
+##MARK: Rifles
+# - type: loadout
+#   id: N14LoadoutWeaponSniper556VarmintRifle
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponSniper556VarmintRifle
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle762Canadian
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle762Canadian
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle556SteirSirius
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle556SteirSirius
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle762ClassicrifleSirius
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle762ClassicrifleSirius
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle762SKS
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle762SKS
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle762M14
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle762M14
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle556M16A1Sirius
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle556M16A1Sirius
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle556R91
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle556R91
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle556R82Sirius
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle556R82Sirius
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle556EnfieldXL70E3Sirius
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle556EnfieldXL70E3Sirius
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle556EM2
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle556EM2
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle762Fal
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle762Fal
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifle556GalilSirius
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifle556GalilSirius
+
+# - type: loadout
+#   id: N14LoadoutWeaponRifleAk112
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponRifleAk112
+
+## MARK: Energy Rifles
+# - type: loadout
+#   id: N14LoadoutWeaponLaserRifleMakeshift
+#   category: Energy
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponLaserRifleMakeshift
+
+# - type: loadout
+#   id: N14LoadoutWeaponLaserRifleYk42b
+#   category: Energy
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponLaserRifleYk42b
+
+# - type: loadout
+#   id: N14LoadoutWeaponPlasmaRifleCrude
+#   category: Energy
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponPlasmaRifleCrude
+
+
+## MARK: Energy PISTOLS
+# - type: loadout
+#   id: N14LoadoutWeaponLaserRevolver
+#   category: Energy
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponLaserRevolver
+
+## MARK: Grenade Launcher
+# - type: loadout
+#   id: N14LoadoutWeaponLauncherGrenade
+#   category: Firearms
+#   cost: 2
+#   requirements:
+#     - !type:CharacterItemGroupRequirement
+#       group: N14LoadoutGuns
+#   items:
+#     - N14WeaponLauncherGrenade
+

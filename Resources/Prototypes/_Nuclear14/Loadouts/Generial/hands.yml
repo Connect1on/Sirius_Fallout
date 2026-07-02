@@ -1,0 +1,257 @@
+- type: loadout
+  id: N14LoadoutHandsGlovesCloth
+  category: Hands
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - Vault
+  items:
+    - N14ClothingHandsGlovesCloth
+
+- type: loadout
+  id: N14LoadoutHandsGlovesLeather
+  category: Hands
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingHandsGlovesLeather
+
+- type: loadout
+  id: N14LoadoutHandsGlovesFur
+  category: Hands
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+       inverted: true
+       departments:
+       - Vault
+  items:
+    - N14ClothingHandsGlovesFur
+
+- type: loadout
+  id: N14LoadoutHandsGlovesBlackLeather
+  category: Hands
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+  items:
+    - N14ClothingHandsGlovesBlackLeather
+
+- type: loadout
+  id: N14LoadoutHandsGlovesNitrile
+  category: Hands
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+      - VaultDweller
+      - VaultSecurity
+      - VaultEngineer
+      - Overseer
+  items:
+    - N14ClothingHandsGlovesNitrile
+
+- type: loadout
+  id: N14LoadoutHandsGlovesNitrilePurple
+  category: Hands
+  cost: 3
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+      - BoSMidSerf
+      - CaesarLegionSlave
+      - NCRPrisoner
+      - VaultDweller
+      - VaultSecurity
+      - VaultEngineer
+      - Overseer
+  items:
+    - N14ClothingHandsGlovesNitrilePurple
+
+
+# MARK: ХУЙНЯ ИЗ ПОД НОГТЯ
+- type: loadout
+  id: N14GoliathFistLeader
+  category: Hands
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionCenturion
+        - TribalElder
+  items:
+    - N14ClothingHandsPowerFistGoliath
+#
+
+
+- type: loadout
+  id: MisfitsLoadoutHandsGlovesDriver
+  category: Hands
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+        - VaultDweller   # Vault gets their own gated version (N14LoadoutHandsGlovesDriver)
+        - VaultSecurity
+        - VaultEngineer
+        - Overseer
+  items:
+    - N14ClothingHandsGlovesDriver
+
+- type: loadout
+  id: MisfitsLoadoutHandsBlackBiker
+  category: Hands
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingHandsGlovesBlackBiker
+
+- type: loadout
+  id: MisfitsLoadoutHandsBrownBiker
+  category: Hands
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingHandsGlovesBrownBiker
+
+- type: loadout
+  id: MisfitsLoadoutHandsMountie
+  category: Hands
+  cost: 1
+  requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingHandsGlovesMountie
+
+- type: loadout
+  id: MisfitsLoadoutHandsCombat
+  category: Hands
+  cost: 4
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+        - VaultDweller
+        - VaultEngineer
+        - Overseer
+  items:
+    - N14ClothingHandsGlovesCombat
+
+- type: loadout
+  id: MisfitsLoadoutHandsPatrol
+  category: Hands
+  cost: 1
+  requirements:
+    - !type:CharacterDepartmentRequirement
+        inverted: true
+        departments:
+        - Vault
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+  items:
+    - N14ClothingHandsGlovesPatrol
+
+- type: loadout
+  id: MisfitsLoadoutHandsTribal
+  category: Hands
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHands
+    - !type:CharacterJobRequirement
+      jobs:
+        - Tribal
+        - TribalFarmer
+        - TribalShaman
+        - TribalElder
+  items:
+    - N14ClothingHandsGlovesTribal
+

@@ -157,5 +157,7 @@
       id: N14LoadoutUniversalUniformNCRSnow
     - type: loadout
       id: N14LoadoutUniversalUniformRangerPatrol
-    - type: loadout # Misfits 80s
-      id: MisfitsLoadoutUniform80sPants
+    - type: loadout
+      id: N14LoadoutClothingUniformJumpsuitEnclaveGrey
+    - type: loadout
+      id: N14LoadoutClothingUniformJumpsuitEnclaveBlue

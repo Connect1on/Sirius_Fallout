@@ -21,7 +21,7 @@
   - Shoes
   - Head
   - Mask
-  - Accessories
+#  - Accessories
   allowedTraitCategories: # #Misfits Change: allow traits via same mechanism as loadouts
   - Uncategorized
   - Auditory

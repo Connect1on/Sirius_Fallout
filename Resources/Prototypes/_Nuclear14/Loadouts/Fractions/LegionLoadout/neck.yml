@@ -1,0 +1,86 @@
+- type: loadout
+  id: LoadoutLegionCloakBlack
+  category: Neck
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionCenturion
+        - CaesarLegionFrumentarii
+        - CaesarLegionDean
+        # #Misfits Change: CaesarLegionRecruit removed — Legionnaire covers entry-level.
+        - CaesarLegionLegionnaireRecruit
+        - CaesarLegionLegionnaireWarrior
+        - CaesarLegionLegionnaireVeteran
+        - CaesarLegionAuxilia
+        - CaesarLegionVexillarius
+        - CaesarLegionVeteranDecanus
+        - CaesarLegionPrimeDecanus
+        - CaesarLegionHoundmaster
+        - CaesarLegionExplorer
+        - CaesarLegionOrator
+        - CaesarLegionLegate
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionDean
+      min: 72000
+  items:
+    - N14ClothingNeckCloakLegionBlack
+
+- type: loadout
+  id: LoadoutNeckCloakLegionWhite
+  category: Neck
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionCenturion
+        - CaesarLegionFrumentarii
+        # #Misfits Change: CaesarLegionRecruit removed — Legionnaire covers entry-level.
+        - CaesarLegionLegionnaireRecruit
+        - CaesarLegionLegionnaireWarrior
+        - CaesarLegionLegionnaireVeteran
+        - CaesarLegionAuxilia
+        - CaesarLegionVexillarius
+        - CaesarLegionVeteranDecanus
+        - CaesarLegionPrimeDecanus
+        - CaesarLegionDean
+        - CaesarLegionHoundmaster
+        - CaesarLegionExplorer
+        - CaesarLegionOrator
+        - CaesarLegionLegate
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionFrumentarii
+      min: 72000
+  items:
+    - N14ClothingNeckCloakLegionWhite
+
+- type: loadout
+  id: LoadoutNeckCloakLegionRed
+  category: Neck
+  cost: 2
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CaesarLegionCenturion
+        # #Misfits Change: CaesarLegionRecruit removed — Legionnaire covers entry-level.
+        - CaesarLegionLegionnaireRecruit
+        - CaesarLegionLegionnaireWarrior
+        - CaesarLegionLegionnaireVeteran
+        - CaesarLegionAuxilia
+        - CaesarLegionVexillarius
+        - CaesarLegionVeteranDecanus
+        - CaesarLegionPrimeDecanus
+        - CaesarLegionDean
+        - CaesarLegionFrumentarii
+        - CaesarLegionHoundmaster
+        - CaesarLegionExplorer
+        - CaesarLegionOrator
+        - CaesarLegionLegate
+    - !type:CharacterPlaytimeRequirement
+      tracker: CaesarLegionCenturion
+      min: 72000
+  items:
+    - N14ClothingNeckCloakLegionRed

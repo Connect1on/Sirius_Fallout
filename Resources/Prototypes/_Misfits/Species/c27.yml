@@ -12,7 +12,7 @@
   restrictedCustomization: true # #Misfits Add - keep marking choices controlled per faction skin
   allowedLoadoutCategories: # #Misfits Add - show loadout tab despite restrictedCustomization (armor from kit; accessories/weapons still selectable)
   - Weapons
-  - Accessories
+#  - Accessories
   - Bags
   - Backpacks
   - Duffel
@@ -123,7 +123,7 @@
   restrictedCustomization: true
   allowedLoadoutCategories: # #Misfits Add - show loadout tab for NCR variant
   - Weapons
-  - Accessories
+#  - Accessories
   - Bags
   - Backpacks
   - Duffel
@@ -160,7 +160,7 @@
   restrictedCustomization: true
   allowedLoadoutCategories: # #Misfits Add - show loadout tab for BoS variant
   - Weapons
-  - Accessories
+#  - Accessories
   - Bags
   - Backpacks
   - Duffel
@@ -196,7 +196,7 @@
   restrictedCustomization: true
   allowedLoadoutCategories:
   - Weapons
-  - Accessories
+#  - Accessories
   - Bags
   - Backpacks
   - Duffel

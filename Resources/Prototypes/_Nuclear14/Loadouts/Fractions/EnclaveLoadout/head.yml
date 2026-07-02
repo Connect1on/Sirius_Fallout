@@ -1,0 +1,51 @@
+- type: loadout
+  id: N14LoadoutClothingHeadHatEnclavePeacekeeperCap
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingHeadHatEnclavePeacekeeperCap
+
+- type: loadout
+  id: N14LoadoutClothingHeadHatEnclaveOfficer
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingHeadHatEnclaveOfficer
+
+- type: loadout
+  id: N14LoadoutClothingHeadHatEnclaveIntel
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingHeadHatEnclaveIntel
+
+- type: loadout
+  id: N14LoadoutClothingHeadHatEnclaveScientist
+  category: Head
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutHead
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingHeadHatEnclaveScientist

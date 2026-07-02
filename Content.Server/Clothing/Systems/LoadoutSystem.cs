@@ -7,7 +7,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.Loadouts.Prototypes;
 using Content.Shared.Clothing.Loadouts.Systems;
-using Content.Shared.Hands.EntitySystems; // #Misfits Fix - hand fallback for failed loadout equips
+using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
 using Content.Shared.Item;
 using Content.Shared.Mind.Components;
@@ -42,33 +42,28 @@ public sealed class LoadoutSystem : EntitySystem
     [Dependency] private readonly ILogManager _log = default!;
     [Dependency] private readonly SharedJobSystem _job = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!; // #Misfits Fix - hand fallback for failed loadout equips
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
 
     private ISawmill _sawmill = default!;
 
-    // #Misfits Fix - Slot priority for placing failed loadout items into worn storage.
-    // Tried in order; first slot whose equipped item has a StorageComponent that accepts the
-    // loadout entity wins. Order favors larger/more-appropriate containers first.
+    // Приоритет хранилищ для неудавшихся предметов: сначала рюкзак, потом пояс, потом хранилище скафандра
     private static readonly string[] FallbackStorageSlots =
     {
-        "back",         // backpacks, satchels, duffels
-        "suitstorage",  // hardsuit storage
-        "belt",         // tool belts, holsters
+        "back",
+        "belt",
+        "suitstorage",
     };
-
 
     public override void Initialize()
     {
         _sawmill = _log.GetSawmill("loadouts");
-
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnPlayerSpawnComplete);
     }
-
 
     private void OnPlayerSpawnComplete(PlayerSpawnCompleteEvent ev)
     {
         if (ev.JobId == null || Deleted(ev.Mob) || !Exists(ev.Mob)
-            || !HasComp<MetaDataComponent>(ev.Mob) // TODO: FIND THE STUPID RACE CONDITION THAT IS MAKING ME CHECK FOR THIS.
+            || !HasComp<MetaDataComponent>(ev.Mob)
             || !_protoMan.TryIndex<JobPrototype>(ev.JobId, out var job)
             || !_configurationManager.GetCVar(CCVars.GameLoadoutsEnabled))
             return;
@@ -82,8 +77,6 @@ public sealed class LoadoutSystem : EntitySystem
             jobProto: job);
     }
 
-
-    /// Equips every loadout, then puts whatever extras it can in inventories
     public void ApplyCharacterLoadout(
         EntityUid uid,
         ProtoId<JobPrototype> job,
@@ -93,28 +86,10 @@ public sealed class LoadoutSystem : EntitySystem
         bool deleteFailed = false,
         JobPrototype? jobProto = null)
     {
-        // Spawn the loadout, get a list of items that failed to equip
         var (failedLoadouts, allLoadouts) =
             _loadout.ApplyCharacterLoadout(uid, job, profile, playTimes, whitelisted, out var heirlooms);
 
-        // #Misfits Fix - Cascading fallback for loadout items that couldn't equip to their natural
-        // slot (slot collision with job startingGear, or non-clothing items like weapons that have
-        // no slot at all). Previously we only tried the "back" slot's storage; if that slot was
-        // occupied by the job's default backpack the loadout backpack would be stuffed inside the
-        // wrong container and follow-up items (e.g. a Double-Barreled Shotgun) would silently fall
-        // on the spawn floor and get walked off. New order: worn storage slots in priority order →
-        // any empty hand → leave on the ground (existing behavior, items already spawned at
-        // player coords by SharedLoadoutSystem). deleteFailed is honored only after every fallback
-        // is exhausted.
-        // # #Misfits Removed - replaced with cascading fallback below.
-        // if (_inventory.TryGetSlotEntity(uid, "back", out var item) &&
-        //     EntityManager.TryGetComponent<StorageComponent>(item, out var inventory))
-        //     foreach (var loadout in failedLoadouts)
-        //         if ((!EntityManager.TryGetComponent<ItemComponent>(loadout, out var itemComp)
-        //                 || !_storage.CanInsert(item.Value, loadout, out _, inventory, itemComp)
-        //                 || !_storage.Insert(item.Value, loadout, out _, playSound: false))
-        //             && deleteFailed)
-        //             EntityManager.QueueDeleteEntity(loadout);
+        // Обработка неудавшихся предметов
         foreach (var loadout in failedLoadouts)
         {
             if (!Exists(loadout) || Deleted(loadout))
@@ -126,12 +101,11 @@ public sealed class LoadoutSystem : EntitySystem
             if (_hands.TryPickupAnyHand(uid, loadout, checkActionBlocker: false, animate: false))
                 continue;
 
-            // All fallbacks exhausted - the entity remains on the ground at the player's spawn
-            // coordinates (where SharedLoadoutSystem spawned it). Only delete if explicitly asked.
             if (deleteFailed)
                 EntityManager.QueueDeleteEntity(loadout);
         }
 
+        // Применение дополнительных свойств к успешно экипированным предметам
         foreach (var loadout in allLoadouts)
         {
             if (loadout.Item1 == EntityUid.Invalid
@@ -140,7 +114,6 @@ public sealed class LoadoutSystem : EntitySystem
             {
                 _sawmill.Warning($"Loadout {loadout.Item2.LoadoutName} failed to load properly, deleting.");
                 EntityManager.QueueDeleteEntity(loadout.Item1);
-
                 continue;
             }
 
@@ -166,7 +139,7 @@ public sealed class LoadoutSystem : EntitySystem
                 function.OnPlayerSpawn(uid, loadout.Item1, _componentFactory, EntityManager, _serialization);
         }
 
-        // Pick the heirloom
+        // Выбор наследственной реликвии
         if (heirlooms.Any())
         {
             var heirloom = _random.Pick(heirlooms);
@@ -178,15 +151,11 @@ public sealed class LoadoutSystem : EntitySystem
             Dirty(heirloom.Item1, comp);
         }
 
-        if (jobProto != null ||
-            _protoMan.TryIndex(job, out jobProto))
+        if (jobProto != null || _protoMan.TryIndex(job, out jobProto))
             foreach (var special in jobProto.AfterLoadoutSpecial)
                 special.AfterEquip(uid);
     }
 
-    // #Misfits Fix - Walk the player's worn slots in priority order and try to insert the failed
-    // loadout entity into the first slot whose equipped item has a StorageComponent that accepts
-    // it. Returns true if successfully stored anywhere.
     private bool TryStashInWornStorage(EntityUid wearer, EntityUid loadout)
     {
         if (!EntityManager.TryGetComponent<ItemComponent>(loadout, out var itemComp))
@@ -213,8 +182,7 @@ public sealed class LoadoutSystem : EntitySystem
     // Corvax-Change-Start
     public void InsertBack(EntityUid uid, EntityUid loadout)
     {
-        if (!TryComp(loadout, out ClothingComponent? clothing) ||
-            clothing.Slots != SlotFlags.BACK)
+        if (!TryComp(loadout, out ClothingComponent? clothing) || clothing.Slots != SlotFlags.BACK)
             return;
 
         if (!TryComp(uid, out MindContainerComponent? mind) || mind.Mind == null)
@@ -242,32 +210,27 @@ public sealed class LoadoutSystem : EntitySystem
                     continue;
 
                 foreach (var ent in entProtos)
-                {
                     ents.Add(Spawn(ent, coords));
-                }
 
                 if (inventoryComp != null &&
                     _inventory.TryGetSlotEntity(uid, slot, out var slotEnt, inventoryComponent: inventoryComp) &&
                     TryComp(slotEnt, out StorageComponent? storageComp))
                 {
                     foreach (var ent in ents)
-                    {
                         _storage.Insert(slotEnt.Value, ent, out _, storageComp: storageComp, playSound: false);
-                    }
                 }
                 ents.Clear();
             }
         }
     }
-    
+
     public void DeleteHelmet(EntityUid uid)
     {
         if (!_inventory.TryGetSlotEntity(uid, "head", out var helmet))
         {
             _sawmill.Error("Helmet not found");
             return;
-        }    
-
+        }
         EntityManager.DeleteEntity(helmet);
     }
     // Corvax-Change-End

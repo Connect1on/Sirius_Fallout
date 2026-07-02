@@ -1,0 +1,107 @@
+- type: loadout
+  id: LoadoutBoSMidwestFieldScribe
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - BoSMidScribe
+        - BoSWestScribe # Misfits Change /Add/: also accessible to West BoS scribes
+        - BoSScribe
+    - !type:CharacterPlaytimeRequirement
+      tracker: BoSMidScribe
+      min: 72000 # 20 hours veterancy unlock
+  items:
+    - N14ClothingUniformJumpsuitBOSFieldScribe
+
+- type: loadout
+  id: N14LoadoutUniversalUniformBosRecon
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingUniformBosRecon
+
+- type: loadout
+  id: N14LoadoutUniversalUniformJumpskirtBOSBlack
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingUniformJumpskirtBOSBlack
+
+- type: loadout
+  id: N14LoadoutUniversalUniformJumpskirtBOSGold
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingUniformJumpskirtBOSGold
+
+- type: loadout
+  id: N14LoadoutUniversalUniformJumpskirtBOSSilver
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingUniformJumpskirtBOSSilver
+
+- type: loadout
+  id: N14LoadoutUniversalUniformJumpsuitBOSBlack
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingUniformJumpsuitBOSBlack
+
+- type: loadout
+  id: N14LoadoutUniversalUniformJumpsuitBOSGreen
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingUniformJumpsuitBOSGreen
+
+- type: loadout
+  id: N14LoadoutUniversalUniformJumpsuitBOSScribe
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - BrotherhoodOfSteel
+  items:
+    - N14ClothingUniformJumpsuitBOSScribe

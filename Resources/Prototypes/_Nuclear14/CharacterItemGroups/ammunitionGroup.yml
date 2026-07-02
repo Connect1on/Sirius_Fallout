@@ -1,0 +1,152 @@
+#MARK:"Аммуниция"
+# Для записи предметов в группу "Аммуниция" - сюда записываются коробки с патронами, магазины, батареи и всё что питает оружие.
+- type: characterItemGroup
+  id: N14LoadoutAmmo
+  items:
+
+
+  #MARK: Пульки.
+
+
+
+  ##MARK: Спидлоадеры 
+    - type: loadout
+      id: N14LoadoutSpeedLoader9
+    - type: loadout
+      id: N14LoadoutSpeedLoader44
+    - type: loadout
+      id: LoadoutSpeedLoader10
+    - type: loadout
+      id: LoadoutSpeedLoader45-70
+
+
+
+  ##MARK: Пистолетные магазины    
+    - type: loadout
+      id: N14LoadoutMagazinePistol9mm
+    - type: loadout
+      id: N14LoadoutMagazinePistol22lr
+    - type: loadout
+      id: N14LoadoutMagazinePistol10mm
+    - type: loadout
+      id: N14LoadoutMagazinePistol45
+    - type: loadout
+      id: N14LoadoutMagazinePistol12mm
+
+
+    ##MARK: Барабаны дробовиков
+    - type: loadout
+      id: N14LoadoutMagazineShotgun12
+    - type: loadout
+      id: N14LoadoutMagazineShotgun20
+
+   
+
+    ##MARK: Пистолеты-пулемёты магазины
+    - type: loadout
+      id: N14LoadoutMagazineSMG12mm
+    - type: loadout
+      id: N14LoadoutMagazineSMG9mm
+    - type: loadout
+      id: LoadoutMagazine45SubMachineGun
+    - type: loadout
+      id: N14LoadoutMagazineSMG10mm
+    - type: loadout
+      id: N14LoadoutTopMagazineSMG12mm
+
+
+
+    ##MARK: Автоматные магазины и винтовок
+    - type: loadout
+      id: LoadoutMagazine556Rifle
+    - type: loadout
+      id: LoadoutLongMagazine556Rifle
+    - type: loadout
+      id: LoadoutMagazine762Rifle
+    - type: loadout
+      id: LoadoutMagazine308Rifle
+    - type: loadout
+      id: LoadoutMagazine762AmmoShort
+    - type: loadout
+      id: LoadoutMagazine545Rifle
+
+
+
+    ##MARK: Пулемётные магазины  
+    - type: loadout
+      id: LoadoutLMGMagazine556Rifle
+    - type: loadout
+      id: LoadoutMagazine308M60Box
+    - type: loadout
+      id: N14LoadoutMagazineMinigun5mm
+    - type: loadout
+      id: LoadoutMagazineDrum545Rifle
+    - type: loadout
+      id: LoadoutMagazine308RifleLong
+    - type: loadout
+      id: LoadoutMagazine762AmmoBelt
+
+
+
+    ##MARK: Снайперские магазины
+    - type: loadout
+      id: LoadoutSKSEnbloc308    
+    - type: loadout
+      id: LoadoutMagazine308RifleSniper
+    - type: loadout
+      id: LoadoutClipMagazine308Rifle
+    - type: loadout
+      id: LoadoutSpeedLoader45-70Tube
+    - type: loadout
+      id: N14LoadoutMagazine50AMR
+
+
+      
+    #MARK: Батареи.
+    - type: loadout
+      id: N14LoadoutPowerCellSmall
+    - type: loadout
+      id: N14LoadoutMicrofusionCell
+    - type: loadout
+      id: N14LoadoutPlasmaCartridge
+    - type: loadout
+      id: N14LoadoutMagazineRifle2mmEC
+    - type: loadout
+      id: N14LoadoutMagazinePistol2mmEC
+    - type: loadout
+      id: N14LoadoutFusionCore
+    - type: loadout
+      id: N14LoadoutPlasmaShell
+
+
+
+    #MARK: Коробки патрон.
+    - type: loadout
+      id: LoadoutMagazineBox9mm
+    - type: loadout
+      id: LoadoutMagazineBox10mm
+    - type: loadout
+      id: LoadoutMagazineBox45
+    - type: loadout
+      id: N14LoadoutAmmoBox556
+    - type: loadout
+      id: LoadoutMagazineBox762
+    - type: loadout
+      id: LoadoutMagazineBox12
+    - type: loadout
+      id: LoadoutMagazineBox20gauge
+    - type: loadout
+      id: N14LoadoutAmmoBox12gauge
+    - type: loadout
+      id: N14LoadoutAmmoBox44Magnum
+    - type: loadout
+      id: LoadoutMagazineBox308
+    - type: loadout
+      id: LoadoutMagazineBox45-70
+    - type: loadout
+      id: LoadoutMagazineBox50
+      
+
+    #MARK: Гранаты.
+    - type: loadout
+      id: Loadout40mmGrenadeFrag

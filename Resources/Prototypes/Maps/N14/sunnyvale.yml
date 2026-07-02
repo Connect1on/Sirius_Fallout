@@ -68,7 +68,7 @@
             #NCRPrivateFirstClass: [ 0, 0 ]
             #NCRSoldier: [ 0, 0 ]
             NCRCadet: [ 15, 15 ]
-            #NCRPisoner : [ 5, 5 ]
+            #NCRPrisoner : [ 5, 5 ]
             #NCRMPinvestigator : [ 1, 1 ]
             NCRMilitaryPoliceSergeant: [ 2, 2 ]
             NCRMilitaryPoliceRecruit: [ 3, 3 ]

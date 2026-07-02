@@ -1,0 +1,135 @@
+- type: loadout
+  id: LoadoutNCRuniformV1
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerV1
+
+- type: loadout
+  id: LoadoutNCRuniformV2
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerV2
+
+- type: loadout
+  id: LoadoutNCRuniformV3
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerV3
+
+# Corvax-Add Start
+- type: loadout
+  id: LoadoutNCRN14ClothingUniformRangerVeteranRed
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerVeteranRed
+
+- type: loadout
+  id: LoadoutNCRN14ClothingUniformRangerVeteran
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerVeteran
+
+- type: loadout
+  id: LoadoutNCRN14ClothingUniformRangerVeteranBlack
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerVeteranBlack
+
+- type: loadout
+  id: LoadoutNCRN14ClothingUniformRangerBlue
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerBlue
+
+- type: loadout
+  id: LoadoutNCRN14ClothingUniformRangerModif
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+  items:
+    - N14ClothingUniformRangerModif
+
+- type: loadout
+  id: LoadoutNCRRangerRoman
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+        - NCRVeteranRanger
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+      min: 216000 # 60 hours veterancy unlock "First Tour"
+  items:
+    - N14ClothingUniformJumpsuitRangerRoman
+    
+# Corvax-Add End
+
+- type: loadout
+  id: N14LoadoutUniversalUniformRangerPatrol
+  category: Uniform
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Rangers
+  items:
+    - N14ClothingUniformRangerPatrol

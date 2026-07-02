@@ -1,0 +1,292 @@
+- type: loadout
+  id: N14LoadoutUniversalOuterNCRCorrectional
+  category: Outer
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRPrisoner
+    - !type:CharacterPlaytimeRequirement
+      tracker: NCRPrisoner
+  items:
+    - N14ClothingOuterNCRCorrectional
+
+- type: loadout
+  id: N14LoadoutUniversalOuterNCRDressJacket
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+  items:
+    - N14ClothingOuterNCRDressJacket
+
+- type: loadout
+  id: N14LoadoutUniversalOuterNCRDressJacketCO
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+  items:
+    - N14ClothingOuterNCRDressJacketCO
+
+- type: loadout
+  id: N14LoadoutUniversalOuterNCRQuartermaster
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement # Forge-Change
+      inverted: true
+      jobs:
+        - BoSMidSerf
+        - CaesarLegionSlave
+        - NCRPrisoner
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14ClothingOuterNCRQuartermaster
+
+- type: loadout
+  id: MisfitsLoadoutNCROfficerArmor
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - MisfitsNCROfficerArmor
+
+- type: loadout
+  id: MisfitsLoadoutNCRHeavyCombatArmor
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - MisfitsNCRHeavyCombatArmor
+
+- type: loadout
+  id: MisfitsLoadoutNCREliteCombatArmor
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - MisfitsNCREliteCombatArmor
+
+- type: loadout
+  id: MisfitsLoadoutNCRCommandArmor
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterJobRequirement
+      jobs:
+        - NCRCommander
+        - NCRExecutiveOfficer
+        - NCRPlatoonLeader
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - MisfitsNCRCommandArmor
+
+- type: loadout
+  id: N14LoadoutClothingOuterNCRPlateDesert
+  category: Outer
+  cost: 1
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutOuter
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - NCR
+  items:
+    - N14ClothingOuterNCRPlateDesert
+
+- type: loadout
+  id: LoadoutClothingOuterNCRPouchedVestDesert
+  category: Outer
+  cost: 2
+  exclusive: true
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+    - NCRSoldier
+    #- NCREngineer #Misfits Change /Comment-out/: consolidated into Specialist
+    #- NCRMedic #Misfits Change /Comment-out/: consolidated into Specialist
+    - NCRWS # #Misfits Add - Specialist absorbs former Engineer/Medic
+    - NCRCadet # Misfits Change /Add/: expand access to all NCR roles
+    - NCRPrivateFirstClass
+    - NCRMedic
+    - NCREngineer
+    - NCRDoctor
+    - NCRNCO
+    - NCRStaffSergeant
+    - NCRFirstSergeant
+    - NCRExecutiveOfficer
+    - NCRPlatoonLeader
+    - NCRCommander
+    - NCRMajor
+
+    - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+    - NCRVeteranRanger #Misfits Change - consolidated NCRRangerVeteran into RangerVeteran
+  - !type:CharacterPlaytimeRequirement
+    tracker: NCRSoldier
+    min: 12000 # 5 hours veterancy unlock
+  items:
+  - N14ClothingOuterNCRPouchedVestDesert
+
+- type: loadout
+  id: LoadoutClothingOuterNCRVestpaddedWebDesert
+  category: Outer
+  cost: 3
+  exclusive: true
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+    - NCRSoldier
+    #- NCREngineer #Misfits Change /Comment-out/: consolidated into Specialist
+    #- NCRMedic #Misfits Change /Comment-out/: consolidated into Specialist
+    - NCRWS
+    - NCRCadet # Misfits Change /Add/: expand access to all NCR roles
+    - NCRPrivateFirstClass
+    - NCRMedic
+    - NCREngineer
+    - NCRDoctor
+    - NCRNCO
+    - NCRStaffSergeant
+    - NCRFirstSergeant
+    - NCRExecutiveOfficer
+    - NCRPlatoonLeader
+    - NCRRO
+    - NCRCommander
+    - NCRMajor
+
+    - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+    - NCRVeteranRanger #Misfits Change - consolidated NCRRangerVeteran into RangerVeteran
+  - !type:CharacterPlaytimeRequirement
+    tracker: NCRSoldier
+    min: 36000 # 10 hours veterancy unlock
+  items:
+  - N14ClothingOuterNCRVestpaddedWebDesert
+
+- type: loadout
+  id: LoadoutClothingOuterNCRVeteranArmorDesert
+  category: Outer
+  cost: 4
+  exclusive: true
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+    - NCRSoldier
+    #- NCREngineer #Misfits Change /Comment-out/: consolidated into Specialist
+    #- NCRMedic #Misfits Change /Comment-out/: consolidated into Specialist
+    - NCRWS
+    - NCRCadet # Misfits Change /Add/: expand access to all NCR roles
+    - NCRPrivateFirstClass
+    - NCRMedic
+    - NCREngineer
+    - NCRDoctor
+    - NCRNCO
+    - NCRStaffSergeant
+    - NCRFirstSergeant
+    - NCRExecutiveOfficer
+    - NCRPlatoonLeader
+    - NCRCommander
+    - NCRMajor
+
+    - NCRFieldRanger # #Misfits Fix - renamed from NCRRanger
+    - NCRVeteranRanger #Misfits Change - consolidated NCRRangerVeteran into RangerVeteran
+  - !type:CharacterPlaytimeRequirement
+    tracker: NCRSoldier
+    min: 72000 # 20 hours veterancy unlock
+  items:
+  - N14ClothingOuterNCRVeteranArmorDesert
+
+- type: loadout
+  id: LoadoutClothingOuterNCRCombatVeteranArmorDesert
+  category: Outer
+  cost: 4
+  exclusive: true
+  requirements:
+  - !type:CharacterJobRequirement
+    inverted: true
+    jobs:
+    - SuperMutant
+    - Nightkin
+    - SuperMutantGladiator
+    - SuperMutantRanger
+    - SuperMutantTrooper
+    - SuperMutantTribal
+  - !type:CharacterJobRequirement
+    jobs:
+    - NCRNCO
+    - NCRStaffSergeant
+    - NCRFirstSergeant
+    - NCRExecutiveOfficer
+    - NCRPlatoonLeader
+    - NCRCommander
+    - NCRMajor
+  - !type:CharacterPlaytimeRequirement
+    tracker: NCRSquadLeader
+    min: 72000 # 20 hours veterancy unlock
+  items:
+  - N14ClothingOuterNCRCombatVeteranArmorDesert
+
+- type: loadout
+  id: LoadoutClothingNeckNCRMPCoat
+  category: Outer
+  cost: 4
+  exclusive: true
+  requirements:
+  - !type:CharacterJobRequirement
+    jobs:
+    - NCRMilitaryPoliceCaptain
+  - !type:CharacterPlaytimeRequirement
+    tracker: NCRMilitaryPoliceCaptain
+    min: 72000 # 20 hours veterancy unlock
+  items:
+  - N14ClothingNeckNCRMPCoat

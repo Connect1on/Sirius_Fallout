@@ -1,0 +1,27 @@
+- type: loadout
+  id: N14LoadoutClothingUniformJumpsuitEnclaveGrey
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingUniformJumpsuitEnclaveGrey
+
+- type: loadout
+  id: N14LoadoutClothingUniformJumpsuitEnclaveBlue
+  category: Uniform
+  cost: 1
+  exclusive: true
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutUniform
+    - !type:CharacterDepartmentRequirement
+      departments:
+        - Enclave
+  items:
+    - N14ClothingUniformJumpsuitEnclaveBlue

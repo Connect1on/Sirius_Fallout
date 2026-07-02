@@ -17,6 +17,16 @@ loadout-category-Bags = Сумки
 loadout-category-Duffel = Спортивные сумки
 loadout-category-Satchel = Ранцы
 
+loadout-category-Ammunition = Боеприпасы 
+loadout-category-Energy = Энергетическое
+loadout-category-Firearms = Огнестрельное
+loadout-category-Melee = Ближний бой
+loadout-category-SmallCaliber = Малый калибр
+loadout-category-MediumCaliber = Средний калибр
+loadout-category-LargeCaliber = Крупный калибр
+loadout-category-Battery = Батареи
+loadout-category-Ammobox = Коробки патронов
+
 # Character item groups
 character-item-group-N14LodaoutBags = Сумки
 character-item-group-N14LoadoutUniform = Униформа
