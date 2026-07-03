@@ -6,7 +6,7 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _Horizon\Objects\Specific\Medical\implants.rsi
+      sprite: _Horizon/Objects/Specific/Medical/implants.rsi
       state: eyes_night
     event: !type:NVInstantActionEvent
     useDelay: 0.5
@@ -20,7 +20,7 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _Horizon\Objects\Specific\Medical\implants.rsi
+      sprite: _Horizon/Objects/Specific/Medical/implants.rsi
       state: eyes_thermal
     event: !type:NVInstantActionEvent
     useDelay: 0.5
