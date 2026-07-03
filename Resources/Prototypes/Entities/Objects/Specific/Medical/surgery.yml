@@ -433,7 +433,7 @@
     speedModifier: 1.5
   - type: SurgeryTool
     startSound:
-      path: /Audio/Medical/Surgery/saw.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
   - type: BoneSaw
     speed: 1.25
 
@@ -636,9 +636,9 @@
   - type: SurgeryTool
     speed: 0.5
     startSound:
-      path: /Audio/_Horizon/Medical/Surgery/cautery1.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/cautery1.ogg
     endSound:
-      path: /Audio/_Horizon/Medical/Surgery/cautery2.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/cautery2.ogg
 
 - type: entity
   name: cybernetic drill
@@ -652,7 +652,7 @@
   - type: SurgeryTool
     speed: 0.5
     startSound:
-      path: /Audio/_Horizon/Medical/Surgery/saw.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
 
 - type: entity
   name: cybernetic scalpel
@@ -666,9 +666,9 @@
   - type: SurgeryTool
     speed: 0.3
     startSound:
-      path: /Audio/_Horizon/Medical/Surgery/scalpel1.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/scalpel1.ogg
     endSound:
-      path: /Audio/_Horizon/Medical/Surgery/scalpel2.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/scalpel2.ogg
 
 - type: entity
   name: cybernetic retractor
@@ -682,9 +682,9 @@
   - type: SurgeryTool
     speed: 0.4
     startSound:
-      path: /Audio/_Horizon/Medical/Surgery/retractor1.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/retractor1.ogg
     endSound:
-      path: /Audio/_Horizon/Medical/Surgery/retractor2.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/retractor2.ogg
 
 - type: entity
   name: cybernetic hemostat
@@ -698,7 +698,7 @@
   - type: SurgeryTool
     speed: 0.4
     startSound:
-      path: /Audio/_Horizon/Medical/Surgery/hemostat1.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/hemostat1.ogg
 
 - type: entity
   name: cybernetic bone setter
@@ -712,7 +712,7 @@
   - type: SurgeryTool
     speed: 0.4
     startSound:
-      path: /Audio/_Horizon/Medical/Surgery/bone_setter.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/bone_setter.ogg
 
 - type: entity
   name: cybernetic saw
@@ -726,7 +726,6 @@
   - type: SurgeryTool
     speed: 0.2
     startSound:
-      path: /Audio/_Horizon/Medical/Surgery/saw.ogg
+      path: /Audio/_Shitmed/Medical/Surgery/saw.ogg
     endSound:
       path: /Audio/Items/drill_hit.ogg
-      # i hate fucking horizon
